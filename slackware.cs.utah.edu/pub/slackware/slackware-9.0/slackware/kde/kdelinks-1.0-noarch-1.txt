@@ -1,0 +1,11 @@
+kdelinks: kdelinks (additional KDE menu links)
+kdelinks:
+kdelinks: This package adds additional KDE menu entries for additional X and
+kdelinks: GNOME programs.
+kdelinks:
+kdelinks:
+kdelinks:
+kdelinks:
+kdelinks:
+kdelinks:
+kdelinks:

@@ -1,0 +1,11 @@
+libtiff: libtiff
+libtiff:
+libtiff: This library provides support for the Tag Image File Format (TIFF),
+libtiff: a widely used format for storing image data.  A small assortment of
+libtiff: TIFF-related software for UNIX is also included.
+libtiff:
+libtiff:
+libtiff:
+libtiff:
+libtiff:
+libtiff:

@@ -1,0 +1,11 @@
+xfree86-xvfb: xfree86-xvfb (virtual framebuffer X server)
+xfree86-xvfb:
+xfree86-xvfb: Xvfb is an X server that can run on machines with no display hardware
+xfree86-xvfb: and no physical input devices.  It emulates a dumb framebuffer using 
+xfree86-xvfb: virtual memory.  The primary use of this server is intended to be 
+xfree86-xvfb: server testing.  The mfb or cfb code for any depth can be exercised
+xfree86-xvfb: with this server without the need for real hardware that supports the
+xfree86-xvfb: desired depths.  A secondary use is testing clients against unusual
+xfree86-xvfb: depths and screen configurations.
+xfree86-xvfb:
+xfree86-xvfb:

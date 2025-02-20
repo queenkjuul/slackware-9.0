@@ -1,0 +1,11 @@
+libgsf: libgsf
+libgsf:
+libgsf: libgsf aims to provide an efficient extensible i/o abstraction for
+libgsf: dealing with different structured file formats.
+libgsf:
+libgsf: libgsf is used by gnumeric.
+libgsf:
+libgsf:
+libgsf:
+libgsf:
+libgsf:

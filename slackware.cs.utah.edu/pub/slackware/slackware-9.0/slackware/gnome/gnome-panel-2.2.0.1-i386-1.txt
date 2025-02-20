@@ -1,0 +1,11 @@
+gnome-panel: gnome-panel
+gnome-panel:
+gnome-panel: This is the GNOME panel, which houses many applets and menus, and is
+gnome-panel: one of the most visible and easily recognized GNOME components.
+gnome-panel:
+gnome-panel:
+gnome-panel:
+gnome-panel:
+gnome-panel:
+gnome-panel:
+gnome-panel:

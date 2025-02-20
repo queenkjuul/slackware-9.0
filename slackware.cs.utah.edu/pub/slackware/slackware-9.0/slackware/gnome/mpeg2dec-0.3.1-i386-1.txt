@@ -1,0 +1,11 @@
+mpeg2dec: mpeg2dec
+mpeg2dec:
+mpeg2dec: The mpeg2dec utility is used to decode MPEG video streams.  This
+mpeg2dec: package also includes libmpeg2, a free (GPLed) library for decoding
+mpeg2dec: MPEG2 and MPEG1 video streams.
+mpeg2dec:
+mpeg2dec:
+mpeg2dec:
+mpeg2dec:
+mpeg2dec:
+mpeg2dec:

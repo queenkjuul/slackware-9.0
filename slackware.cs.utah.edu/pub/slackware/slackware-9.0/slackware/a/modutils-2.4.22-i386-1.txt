@@ -1,0 +1,11 @@
+modutils: modutils (kernel module utilities)
+modutils:
+modutils: Utilities to use kernel modules.  These tools are used for loading
+modutils: and unloading chunks of kernel code on the fly, to add support for a
+modutils: CD-ROM drive or ethernet card, for instance.
+modutils:
+modutils: Many Linux drivers are provided as kernel modules, and some packages
+modutils: (like the PCMCIA package) require the module utilities to work, so you
+modutils: probably want to install these.
+modutils:
+modutils:

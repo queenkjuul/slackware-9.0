@@ -1,0 +1,11 @@
+gnuchess: gnuchess (GNU chess and xboard)
+gnuchess:
+gnuchess: This is the GNU chess playing program, which plays a game of chess
+gnuchess: against the user or against itself.
+gnuchess:
+gnuchess: This package also includes xboard, a graphical interface to GNU chess.
+gnuchess:
+gnuchess:
+gnuchess:
+gnuchess:
+gnuchess:

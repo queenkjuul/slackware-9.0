@@ -1,0 +1,11 @@
+textutils: textutils (text file processing utilities)
+textutils:
+textutils: These are the GNU text file (actually, file contents) processing
+textutils: utilities.  Most of these programs have significant advantages over
+textutils: their Unix counterparts, such as greater speed, additional options,
+textutils: and fewer arbitrary limits.
+textutils:
+textutils: The programs in this package are: cat, cksum, comm, csplit, cut, 
+textutils: expand, fold, head, join, md5sum, nl, od, paste, pr, ptx, sort, split,
+textutils: sum, tac, tail, tr, tsort, unexpand, uniq, and wc.
+textutils:

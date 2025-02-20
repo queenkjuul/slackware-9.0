@@ -1,0 +1,11 @@
+koffice-i18n-de: koffice-i18n-de
+koffice-i18n-de:
+koffice-i18n-de: German language support for KOffice.
+koffice-i18n-de:
+koffice-i18n-de:
+koffice-i18n-de:
+koffice-i18n-de:
+koffice-i18n-de:
+koffice-i18n-de:
+koffice-i18n-de:
+koffice-i18n-de:

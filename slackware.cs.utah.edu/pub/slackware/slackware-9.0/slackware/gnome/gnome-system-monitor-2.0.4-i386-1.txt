@@ -1,0 +1,11 @@
+gnome-system-monitor: gnome-system-monitor
+gnome-system-monitor:
+gnome-system-monitor: The gnome-system-monitor is a nicer, simpler, easier to use
+gnome-system-monitor: replacement for gtop.
+gnome-system-monitor:
+gnome-system-monitor:
+gnome-system-monitor:
+gnome-system-monitor:
+gnome-system-monitor:
+gnome-system-monitor:
+gnome-system-monitor:

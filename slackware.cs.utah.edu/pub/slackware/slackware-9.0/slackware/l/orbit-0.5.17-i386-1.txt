@@ -1,0 +1,11 @@
+orbit: orbit
+orbit:
+orbit: ORBit is a high-performance CORBA (Common Object Request Broker
+orbit: Architecture) ORB (object request broker). It allows programs to send
+orbit: requests and receive replies from other programs, regardless of the
+orbit: locations of the two programs. CORBA is an architecture that enables
+orbit: communication between program objects, regardless of the programming
+orbit: language they're written in or the operating system they run on.
+orbit:
+orbit: ORBit is required by GNOME, and is needed to build Mozilla.
+orbit:

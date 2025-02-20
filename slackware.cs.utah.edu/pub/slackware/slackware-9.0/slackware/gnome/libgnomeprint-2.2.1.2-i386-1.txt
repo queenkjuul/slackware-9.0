@@ -1,0 +1,11 @@
+libgnomeprint: libgnomeprint
+libgnomeprint:
+libgnomeprint: Libgnomeprint is the non-gui part of the printing libraries for GNOME
+libgnomeprint: applications.
+libgnomeprint:
+libgnomeprint:
+libgnomeprint:
+libgnomeprint:
+libgnomeprint:
+libgnomeprint:
+libgnomeprint:

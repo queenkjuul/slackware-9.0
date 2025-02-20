@@ -1,0 +1,11 @@
+libwnck: libwnck
+libwnck:
+libwnck: The Window Navigator Construction Kit library, used by GNOME for
+libwnck: handling window management tasks.
+libwnck:
+libwnck:
+libwnck:
+libwnck:
+libwnck:
+libwnck:
+libwnck:

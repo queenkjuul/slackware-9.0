@@ -1,0 +1,11 @@
+koffice-i18n-fr: koffice-i18n-fr
+koffice-i18n-fr:
+koffice-i18n-fr: French language support for KOffice.
+koffice-i18n-fr:
+koffice-i18n-fr:
+koffice-i18n-fr:
+koffice-i18n-fr:
+koffice-i18n-fr:
+koffice-i18n-fr:
+koffice-i18n-fr:
+koffice-i18n-fr:

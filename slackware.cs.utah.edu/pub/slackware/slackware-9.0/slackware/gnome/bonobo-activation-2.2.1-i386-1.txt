@@ -1,0 +1,11 @@
+bonobo-activation: bonobo-activation
+bonobo-activation:
+bonobo-activation: bonobo-activation is the object activation framework for GNOME.
+bonobo-activation:
+bonobo-activation:
+bonobo-activation:
+bonobo-activation:
+bonobo-activation:
+bonobo-activation:
+bonobo-activation:
+bonobo-activation:

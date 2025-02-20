@@ -1,0 +1,11 @@
+ifhp: ifhp (Almost Universal LPRng Print Filter)
+ifhp:
+ifhp: ifhp is a highly versatile print filter for BSD based print spoolers.
+ifhp: It can be configured to handle text, PostScript, PJL, PCL, and raster
+ifhp: printers, supports conversion from one format to another, and can be
+ifhp: used as a stand-alone print utility.  It is the primary supported
+ifhp: print filter for the LPRng print spooler.
+ifhp:
+ifhp:
+ifhp:
+ifhp:

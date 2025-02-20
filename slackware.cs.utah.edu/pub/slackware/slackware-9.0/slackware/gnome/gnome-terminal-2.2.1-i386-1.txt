@@ -1,0 +1,11 @@
+gnome-terminal: gnome-terminal
+gnome-terminal:
+gnome-terminal: An xterm-like application for GNOME.
+gnome-terminal:
+gnome-terminal:
+gnome-terminal:
+gnome-terminal:
+gnome-terminal:
+gnome-terminal:
+gnome-terminal:
+gnome-terminal:

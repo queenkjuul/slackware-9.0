@@ -1,0 +1,102 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES GNOME" \
+--checklist "Please select the packages you wish to install \
+from series GNOME. Use the UP/DOWN keys to scroll through the \
+list, and the SPACE key to select the packages you wish to \
+install. Recommended packages have already been selected for \
+you, but you may unselect them if you wish.  Note that there \
+are many interdependencies in GNOME, so it's safest to install \
+all the packages.  Press ENTER \
+when you are done." 22 70 9 \
+"acme" "Assign multimedia keys" "on" \
+"at-spi" "Gnome Accessibility library" "on" \
+"bonobo-activation" "GNOME Object activation library" "on" \
+"bug-buddy" "GNOME Desktop bug reporting tool" "on" \
+"control-center" "The GNOME control center" "on" \
+"eel" "Eazel Extensions Library" "on" \
+"eog" "Eye of GNOME image viewer" "on" \
+"file-roller" "GNOME archive tool" "on" \
+"gail" "GAIL accessibility utility library" "on" \
+"gal2" "GNOME Application Library" "on" \
+"gconf" "Configuration database library" "on" \
+"gconf-editor" "GNOME 'registry' editor" "on" \
+"gdm" "GNOME Display Manager" "on" \
+"gedit" "Text editor for GNOME" "on" \
+"gftp" "A multithreaded FTP client" "on" \
+"ggv" "GNOME PostScript viewer" "on" \
+"ghex" "GNOME hex editor" "on" \
+"glade" "Glade -- a GUI builder for GTK+" "on" \
+"gnome-applets" "Small programs for GNOME" "on" \
+"gnome-audio" "Extra sound files for GNOME" "on" \
+"gnome-desktop" "GNOME desktop library" "on" \
+"gnome-extra-themes" "Extra themes for GNOME" "on" \
+"gnome-games" "Games for GNOME" "on" \
+"gnome-icon-theme" "Default icons for GNOME" "on" \
+"gnome-media" "GNOME multimedia programs" "on" \
+"gnome-mime-data" "The GNOME MIME types database" "on" \
+"gnome-panel" "GNOME menu panel" "on" \
+"gnome-session" "GNOME session manager" "on" \
+"gnome-system-monitor" "top-like system monitor utility" "on" \
+"gnome-terminal" "GNOME xterm replacement" "on" \
+"gnome-themes" "Accessibility themes for GNOME" "on" \
+"gnome-utils" "Some utilities for GNOME" "on" \
+"gnome-vfs" "GNOME virtual file system library" "on" \
+"gnome2-user-docs" "GNOME2 documentation" "on" \
+"gnomeicu" "Clone of ICQ for GNOME" "on" \
+"gnumeric" "GNOME spreadsheet program" "on" \
+"gst-plugins" "Media plugins for GStreamer" "on" \
+"gstreamer" "GStreamer multimedia library" "on" \
+"gthumb" "Image indexing and viewing program" "on" \
+"gtk-engines" "Graphical engines for GTK+ themes" "on" \
+"libbonobo" "GNOME component library" "on" \
+"libbonoboui" "GNOME component UI library" "on" \
+"libexif" "EXIF (image information) library" "on" \
+"libgail-gnome" "GNOME Accessibility Interface Library" "on" \
+"libgnome" "GNOME core library" "on" \
+"libgnomecanvas" "GNOME Canvas library" "on" \
+"libgnomeprint" "GNOME printing library" "on" \
+"libgnomeprintui" "GNOME printer interface library" "on" \
+"libgnomeui" "GNOME UI library" "on" \
+"libgsf" "File I/O library for Gnumeric" "on" \
+"libgtkhtml" "HTML rendering library" "on" \
+"libgtop" "A system information library" "on" \
+"libidl" "Interface Definition Language library" "on" \
+"libmikmod" "MOD audio library" "on" \
+"librsvg" "Scalable Vector Graphics library" "on" \
+"libwnck" "Window construction library" "on" \
+"linc" "ORBit message library" "on" \
+"metacity" "GNOME Window Manager" "on" \
+"metacity-setup" "Setup tool for Metacity" "on" \
+"mpeg2dec" "MPEG22 library" "on" \
+"nautilus" "The GNOME file browser" "on" \
+"nautilus-cd-burner" "CD burning support for Nautilus" "on" \
+"nautilus-media" "Multimedia plugins for Nautilus" "on" \
+"orbit2" "GNOME object architecture library" "on" \
+"scrollkeeper" "GNOME documentation subsystem" "on" \
+"startup-notification" "Busy cursor library" "on" \
+"vte" "Terminal emulator library" "on" \
+"yelp" "GNOME help browser" "on" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+  rm -f $TMP/SeTpkgs
+  cat /dev/null > $TMP/SeTnewtag
+  for PKG in acme at-spi bonobo-activation bug-buddy control-center eel eog file-roller gail gal2 gconf gconf-editor gdm gedit gftp ggv ghex glade gnome-applets gnome-audio gnome-desktop gnome-extra-themes gnome-games gnome-icon-theme gnome-media gnome-mime-data gnome-panel gnome-session gnome-system-monitor gnome-terminal gnome-themes gnome-utils gnome-vfs gnome2-user-docs gnomeicu gnumeric gst-plugins gstreamer gthumb gtk-engines libbonobo libbonoboui libexif libgail-gnome libgnome libgnomecanvas libgnomeprint libgnomeprintui libgnomeui libgsf libgtkhtml libgtop libidl libmikmod librsvg libwnck linc metacity metacity-setup mpeg2dec nautilus nautilus-cd-burner nautilus-media orbit2 scrollkeeper startup-notification vte yelp ; do
+    echo "$PKG: SKP" >> $TMP/SeTnewtag
+  done
+  exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PKG in acme at-spi bonobo-activation bug-buddy control-center eel eog file-roller gail gal2 gconf gconf-editor gdm gedit gftp ggv ghex glade gnome-applets gnome-audio gnome-desktop gnome-extra-themes gnome-games gnome-icon-theme gnome-media gnome-mime-data gnome-panel gnome-session gnome-system-monitor gnome-terminal gnome-themes gnome-utils gnome-vfs gnome2-user-docs gnomeicu gnumeric gst-plugins gstreamer gthumb gtk-engines libbonobo libbonoboui libexif libgail-gnome libgnome libgnomecanvas libgnomeprint libgnomeprintui libgnomeui libgsf libgtkhtml libgtop libidl libmikmod librsvg libwnck linc metacity metacity-setup mpeg2dec nautilus nautilus-cd-burner nautilus-media orbit2 scrollkeeper startup-notification vte yelp ; do
+  if grep \"$PKG\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+    echo "$PKG: ADD" >> $TMP/SeTnewtag
+  else
+    echo "$PKG: SKP" >> $TMP/SeTnewtag
+  fi
+done
+rm -f $TMP/SeTpkgs

@@ -1,0 +1,80 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES AP (APPLICATIONS)" \
+       --checklist "Please select the packages you wish to install \
+from series AP. Use the \
+UP/DOWN keys to scroll through the list, and the SPACE key to select \
+the packages you wish to install. Recommended packages have \
+already been selected for you, but you may unselect them if you wish. \
+Press ENTER when you are \
+done." 22 72 11 \
+"a2ps" "Any to .ps filter (required by APSfilter)" "on" \
+"acct" "Process accounting utilities" "off" \
+"amp" "A command-line MP3 player" "on" \
+"apsfilter" "Apsfilter - very useful printer utility" "on" \
+"ash" "A small /bin/sh type shell" "off" \
+"at" "Schedule commands to execute at a later time" "off" \
+"bc" "GNU bc - arbitrary precision math language" "off" \
+"cdparanoia" "Cdparanoia CD audio ripper" "off" \
+"cdrdao" "Tool for burning audio CDRs" "off" \
+"cdrtools" "CD-R mastering/burning tools" "off" \
+"diffutils" "GNU diffutils - find file differences" "on" \
+"enscript" "A text to PostScript utility" "off" \
+"espgs" "ESP Ghostscript PS/PDF interpreter" "on" \
+"flac" "Free Lossless Audio Codec" "on" \
+"gimp-print" "Additional printer drivers for gs and CUPS" "on" \
+"gnu-gs-fonts" "Ghostscript fonts" "on" \
+"groff" "GNU groff document formatting system" "on" \
+"hpijs" "Hewlett-Packard inkjet drivers for Ghostscript" "on" \
+"ifhp" "A print filter for LPRng (apsfilter alternate)" "off" \
+"ispell" "The International version of ispell" "off" \
+"jed" "JED programmer's editor" "on" \
+"joe" "joe text editor" "on" \
+"jove" "Jonathan's Own Version of Emacs text editor" "off" \
+"ksh93" "KornShell language and interactive shell" "on" \
+"lsof" "A tool to list open files" "on" \
+"lvm" "LVM (Logical Volume Manager)" "off" \
+"mad" "MPEG audio library and decoder" "off" \
+"man" "Primary tool for reading online documentation" "on" \
+"man-pages" "Online documentation (requires groff)" "on" \
+"mc" "The Midnight Commander file manager" "on" \
+"mpg321" "A command-line MP3 player" "on" \
+"mt-st" "mt ported from BSD - controls tape drive" "on" \
+"mysql" "MySQL database server" "off" \
+"oggutils" "Ogg Vorbis encoder, player, and libraries" "on" \
+"quota" "User disk quota utilities" "on" \
+"raidtools" "MD (RAID) utilities" "on" \
+"rexima" "Small console audio mixer" "on" \
+"rpm" "RPM package tool (unsupported)" "on" \
+"sc" "The 'sc' spreadsheet" "off" \
+"screen" "ANSI/vt100 virtual terminal emulator" "on" \
+"seejpeg" "An SVGAlib image viewer" "on" \
+"sox" "Sound utilities" "on" \
+"sudo" "Allow special users limited root access" "off" \
+"texinfo" "GNU texinfo documentation system" "on" \
+"vim" "Improved vi clone" "on" \
+"workbone" "a text-based audio CD player" "on" \
+"zsh" "Zsh - a custom *nix shell" "on" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+ rm -f $TMP/SeTpkgs
+ > $TMP/SeTnewtag
+ for pkg in amp a2ps acct apsfilter ash at bc cdparanoia cdrdao cdrtools diffutils enscript espgs flac gimp-print groff gnu-gs-fonts hpijs ifhp ispell jed joe jove ksh93 lsof lvm mad man man-pages mc mpg321 mt-st mysql oggutils quota raidtools rexima rpm sc screen seejpeg sox sudo texinfo vim workbone zsh ; do
+  echo "$pkg: SKP" >> $TMP/SeTnewtag
+ done
+ exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PACKAGE in amp a2ps acct apsfilter ash at bc cdparanoia cdrdao cdrtools diffutils enscript espgs flac gimp-print groff gnu-gs-fonts hpijs ifhp ispell jed joe jove ksh93 lsof lvm mad man man-pages mc mpg321 mt-st mysql oggutils quota raidtools rexima rpm sc screen seejpeg sox sudo texinfo vim workbone zsh ; do
+ if fgrep \"$PACKAGE\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+  echo "$PACKAGE: ADD" >> $TMP/SeTnewtag
+ else
+  echo "$PACKAGE: SKP" >> $TMP/SeTnewtag
+ fi
+done
+rm -f $TMP/SeTpkgs

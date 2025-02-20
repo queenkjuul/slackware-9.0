@@ -1,0 +1,11 @@
+tetex-doc: tetex-doc (Documentation for teTeX)
+tetex-doc:
+tetex-doc: This package contains documentation for AMSTeX, BibTeX, extended plain
+tetex-doc: format, font packages, format files (babel, texdraw, pstricks, xypic),
+tetex-doc: LaTeX, MetaPost, Makeindex, pdftex, the Kpathsea library, as well as
+tetex-doc: general information about TeX such as a list of ftp servers, a draft
+tetex-doc: for the TeX Directory Standard (TDS), The TeX and LaTeX Catalogue, and
+tetex-doc: TeX FAQs.  
+tetex-doc:
+tetex-doc:
+tetex-doc:

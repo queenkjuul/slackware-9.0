@@ -1,0 +1,11 @@
+atk: atk
+atk:
+atk: atk is a library of accessability functions used by GNOME.
+atk:
+atk:
+atk:
+atk:
+atk:
+atk:
+atk:
+atk:

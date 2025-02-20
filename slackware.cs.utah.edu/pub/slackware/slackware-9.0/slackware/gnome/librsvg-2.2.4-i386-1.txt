@@ -1,0 +1,11 @@
+librsvg: librsvg
+librsvg:
+librsvg: Library used by Nautilus to handle Scalable Vector Graphics.
+librsvg:
+librsvg:
+librsvg:
+librsvg:
+librsvg:
+librsvg:
+librsvg:
+librsvg:

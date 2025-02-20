@@ -1,0 +1,11 @@
+gstreamer: gstreamer
+gstreamer:
+gstreamer: This is GStreamer, a framework for streaming media.  The fundamental
+gstreamer: design comes from the video pipeline at Oregon Graduate Institute, as
+gstreamer: well as some ideas from DirectMedia.  It's based on plugins that will
+gstreamer: provide the various codecs and other functionality. 
+gstreamer:
+gstreamer:
+gstreamer:
+gstreamer:
+gstreamer:

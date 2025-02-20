@@ -1,0 +1,11 @@
+xvim: xvim (X/GTK+ enabled version of vim)
+xvim:
+xvim: Vim is an almost compatible version of the UNIX editor vi.  Many new
+xvim: features have been added:  multi level undo, command line history,
+xvim: filename completion, block operations, and more.
+xvim:
+xvim:
+xvim:
+xvim:
+xvim:
+xvim:

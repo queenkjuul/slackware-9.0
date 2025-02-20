@@ -1,0 +1,11 @@
+orbit2: orbit2
+orbit2:
+orbit2: ORBit is a high-performance CORBA (Common Object Request Broker
+orbit2: Architecture) ORB (object request broker).  It allows programs to
+orbit2: send requests and receive replies from other programs, regardless
+orbit2: of the locations of the two programs.  CORBA is an architecture that
+orbit2: enables communication between program objects, regardless of the
+orbit2: programming language they're written in or the operating system they
+orbit2: run on.
+orbit2:
+orbit2:

@@ -1,0 +1,11 @@
+koffice-i18n-es: koffice-i18n-es
+koffice-i18n-es:
+koffice-i18n-es: Spanish language support for KOffice.
+koffice-i18n-es:
+koffice-i18n-es:
+koffice-i18n-es:
+koffice-i18n-es:
+koffice-i18n-es:
+koffice-i18n-es:
+koffice-i18n-es:
+koffice-i18n-es:

@@ -1,0 +1,11 @@
+koffice-i18n-cs: koffice-i18n-cs
+koffice-i18n-cs:
+koffice-i18n-cs: Czech language support for KOffice.
+koffice-i18n-cs:
+koffice-i18n-cs:
+koffice-i18n-cs:
+koffice-i18n-cs:
+koffice-i18n-cs:
+koffice-i18n-cs:
+koffice-i18n-cs:
+koffice-i18n-cs:

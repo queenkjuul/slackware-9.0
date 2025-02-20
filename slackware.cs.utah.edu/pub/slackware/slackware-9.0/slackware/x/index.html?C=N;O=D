@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/slackware/x</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/slackware/x</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/slackware/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-xvfb-4.3.0-i386-1.txt">xfree86-xvfb-4.3.0-i386-1.txt</a></td><td align="right">2003-03-02 08:20  </td><td align="right">645 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-xvfb-4.3.0-i386-1.tgz.asc">xfree86-xvfb-4.3.0-i386-1.tgz.asc</a></td><td align="right">2003-03-02 08:20  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-xvfb-4.3.0-i386-1.tgz">xfree86-xvfb-4.3.0-i386-1.tgz</a></td><td align="right">2003-03-02 08:20  </td><td align="right">1.3M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-xprt-4.3.0-i386-1.txt">xfree86-xprt-4.3.0-i386-1.txt</a></td><td align="right">2003-03-02 08:20  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-xprt-4.3.0-i386-1.tgz.asc">xfree86-xprt-4.3.0-i386-1.tgz.asc</a></td><td align="right">2003-03-02 08:20  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-xprt-4.3.0-i386-1.tgz">xfree86-xprt-4.3.0-i386-1.tgz</a></td><td align="right">2003-03-02 08:20  </td><td align="right">920K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-xnest-4.3.0-i386-1.txt">xfree86-xnest-4.3.0-i386-1.txt</a></td><td align="right">2003-03-02 08:20  </td><td align="right">547 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-xnest-4.3.0-i386-1.tgz.asc">xfree86-xnest-4.3.0-i386-1.tgz.asc</a></td><td align="right">2003-03-02 08:20  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-xnest-4.3.0-i386-1.tgz">xfree86-xnest-4.3.0-i386-1.tgz</a></td><td align="right">2003-03-02 08:20  </td><td align="right">1.2M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-scale-4.3.0-noarch-1.txt">xfree86-fonts-scale-4.3.0-noarch-1.txt</a></td><td align="right">2003-03-02 08:31  </td><td align="right">356 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-scale-4.3.0-noarch-1.tgz.asc">xfree86-fonts-scale-4.3.0-noarch-1.tgz.asc</a></td><td align="right">2003-03-02 08:31  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-scale-4.3.0-noarch-1.tgz">xfree86-fonts-scale-4.3.0-noarch-1.tgz</a></td><td align="right">2003-03-02 08:31  </td><td align="right">2.2M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-misc-4.3.0-noarch-1.txt">xfree86-fonts-misc-4.3.0-noarch-1.txt</a></td><td align="right">2003-03-02 08:34  </td><td align="right">325 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-misc-4.3.0-noarch-1.tgz.asc">xfree86-fonts-misc-4.3.0-noarch-1.tgz.asc</a></td><td align="right">2003-03-02 08:34  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-misc-4.3.0-noarch-1.tgz">xfree86-fonts-misc-4.3.0-noarch-1.tgz</a></td><td align="right">2003-03-02 08:34  </td><td align="right"> 16M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-cyrillic-4.3.0-noarch-1.txt">xfree86-fonts-cyrillic-4.3.0-noarch-1.txt</a></td><td align="right">2003-03-02 08:28  </td><td align="right">365 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-cyrillic-4.3.0-noarch-1.tgz.asc">xfree86-fonts-cyrillic-4.3.0-noarch-1.tgz.asc</a></td><td align="right">2003-03-02 08:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-cyrillic-4.3.0-noarch-1.tgz">xfree86-fonts-cyrillic-4.3.0-noarch-1.tgz</a></td><td align="right">2003-03-02 08:28  </td><td align="right">366K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-100dpi-4.3.0-noarch-1.txt">xfree86-fonts-100dpi-4.3.0-noarch-1.txt</a></td><td align="right">2003-03-02 08:27  </td><td align="right">367 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-100dpi-4.3.0-noarch-1.tgz.asc">xfree86-fonts-100dpi-4.3.0-noarch-1.tgz.asc</a></td><td align="right">2003-03-02 08:27  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-100dpi-4.3.0-noarch-1.tgz">xfree86-fonts-100dpi-4.3.0-noarch-1.tgz</a></td><td align="right">2003-03-02 08:27  </td><td align="right"> 12M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-docs-html-4.3.0-noarch-1.txt">xfree86-docs-html-4.3.0-noarch-1.txt</a></td><td align="right">2003-03-02 08:25  </td><td align="right">372 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-docs-html-4.3.0-noarch-1.tgz.asc">xfree86-docs-html-4.3.0-noarch-1.tgz.asc</a></td><td align="right">2003-03-02 08:25  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-docs-html-4.3.0-noarch-1.tgz">xfree86-docs-html-4.3.0-noarch-1.tgz</a></td><td align="right">2003-03-02 08:25  </td><td align="right">1.1M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-docs-4.3.0-noarch-1.txt">xfree86-docs-4.3.0-noarch-1.txt</a></td><td align="right">2003-03-02 08:24  </td><td align="right">290 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-docs-4.3.0-noarch-1.tgz.asc">xfree86-docs-4.3.0-noarch-1.tgz.asc</a></td><td align="right">2003-03-02 08:24  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-docs-4.3.0-noarch-1.tgz">xfree86-docs-4.3.0-noarch-1.tgz</a></td><td align="right">2003-03-02 08:24  </td><td align="right">210K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-devel-4.3.0-i386-1.txt">xfree86-devel-4.3.0-i386-1.txt</a></td><td align="right">2003-03-02 08:46  </td><td align="right">450 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-devel-4.3.0-i386-1.tgz.asc">xfree86-devel-4.3.0-i386-1.tgz.asc</a></td><td align="right">2003-03-02 08:46  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-devel-4.3.0-i386-1.tgz">xfree86-devel-4.3.0-i386-1.tgz</a></td><td align="right">2003-03-02 08:46  </td><td align="right">4.9M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-4.3.0-i386-2.txt">xfree86-4.3.0-i386-2.txt</a></td><td align="right">2003-03-16 21:37  </td><td align="right">278 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-4.3.0-i386-2.tgz.asc">xfree86-4.3.0-i386-2.tgz.asc</a></td><td align="right">2003-03-16 21:37  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-4.3.0-i386-2.tgz">xfree86-4.3.0-i386-2.tgz</a></td><td align="right">2003-03-16 21:37  </td><td align="right"> 15M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tagfile">tagfile</a></td><td align="right">2002-03-09 07:58  </td><td align="right">231 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag.ez">maketag.ez</a></td><td align="right">2003-03-05 21:05  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag">maketag</a></td><td align="right">2003-03-05 21:05  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install.end">install.end</a></td><td align="right">2001-02-19 05:10  </td><td align="right">457 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install-packages">install-packages</a></td><td align="right">2002-04-09 20:17  </td><td align="right">2.8K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

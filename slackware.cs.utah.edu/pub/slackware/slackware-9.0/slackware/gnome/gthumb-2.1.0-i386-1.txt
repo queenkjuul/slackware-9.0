@@ -1,0 +1,11 @@
+gthumb: gthumb
+gthumb:
+gthumb: gThumb is an image viewing program that supports thumbnail views and
+gthumb: slideshows.
+gthumb:
+gthumb:
+gthumb:
+gthumb:
+gthumb:
+gthumb:
+gthumb:

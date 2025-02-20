@@ -1,0 +1,11 @@
+koffice-i18n-mt: koffice-i18n-mt
+koffice-i18n-mt:
+koffice-i18n-mt: Maltese language support for KOffice.
+koffice-i18n-mt:
+koffice-i18n-mt:
+koffice-i18n-mt:
+koffice-i18n-mt:
+koffice-i18n-mt:
+koffice-i18n-mt:
+koffice-i18n-mt:
+koffice-i18n-mt:

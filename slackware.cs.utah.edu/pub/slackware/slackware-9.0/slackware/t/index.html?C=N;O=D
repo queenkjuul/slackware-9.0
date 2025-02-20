@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/slackware/t</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/slackware/t</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/slackware/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfig-3.2.3d-i386-1.txt">xfig-3.2.3d-i386-1.txt</a></td><td align="right">2002-02-26 01:41  </td><td align="right">404 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfig-3.2.3d-i386-1.tgz.asc">xfig-3.2.3d-i386-1.tgz.asc</a></td><td align="right">2002-02-26 01:41  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfig-3.2.3d-i386-1.tgz">xfig-3.2.3d-i386-1.tgz</a></td><td align="right">2002-02-26 01:41  </td><td align="right">2.2M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="transfig-3.2.4-i386-1.txt">transfig-3.2.4-i386-1.txt</a></td><td align="right">2003-03-04 04:04  </td><td align="right">421 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="transfig-3.2.4-i386-1.tgz.asc">transfig-3.2.4-i386-1.tgz.asc</a></td><td align="right">2003-03-04 04:04  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="transfig-3.2.4-i386-1.tgz">transfig-3.2.4-i386-1.tgz</a></td><td align="right">2003-03-04 04:04  </td><td align="right">227K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tetex-doc-2.0.2-i386-1.txt">tetex-doc-2.0.2-i386-1.txt</a></td><td align="right">2003-03-09 01:47  </td><td align="right">520 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tetex-doc-2.0.2-i386-1.tgz.asc">tetex-doc-2.0.2-i386-1.tgz.asc</a></td><td align="right">2003-03-09 01:47  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tetex-doc-2.0.2-i386-1.tgz">tetex-doc-2.0.2-i386-1.tgz</a></td><td align="right">2003-03-09 01:47  </td><td align="right"> 22M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tetex-2.0.2-i386-1.txt">tetex-2.0.2-i386-1.txt</a></td><td align="right">2003-03-09 01:48  </td><td align="right">338 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tetex-2.0.2-i386-1.tgz.asc">tetex-2.0.2-i386-1.tgz.asc</a></td><td align="right">2003-03-09 01:48  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tetex-2.0.2-i386-1.tgz">tetex-2.0.2-i386-1.tgz</a></td><td align="right">2003-03-09 01:48  </td><td align="right"> 32M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tagfile">tagfile</a></td><td align="right">2002-08-28 22:37  </td><td align="right"> 50 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag.ez">maketag.ez</a></td><td align="right">2002-08-28 22:37  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag">maketag</a></td><td align="right">2002-08-28 22:37  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install.end">install.end</a></td><td align="right">1999-09-29 19:20  </td><td align="right">457 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install-packages">install-packages</a></td><td align="right">2002-04-09 20:17  </td><td align="right">2.8K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

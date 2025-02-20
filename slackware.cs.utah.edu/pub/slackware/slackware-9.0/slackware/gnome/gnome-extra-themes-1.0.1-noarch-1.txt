@@ -1,0 +1,11 @@
+gnome-extra-themes: gnome-extra-themes
+gnome-extra-themes:
+gnome-extra-themes: A collection of high-quality GNOME themes for Metacity and GTK+.
+gnome-extra-themes:
+gnome-extra-themes:
+gnome-extra-themes:
+gnome-extra-themes:
+gnome-extra-themes:
+gnome-extra-themes:
+gnome-extra-themes:
+gnome-extra-themes:

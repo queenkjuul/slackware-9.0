@@ -1,0 +1,11 @@
+bug-buddy: bug-buddy
+bug-buddy:
+bug-buddy: Utility to ease the reporting of bugs within the GNOME Desktop
+bug-buddy: Environment.
+bug-buddy:
+bug-buddy:
+bug-buddy:
+bug-buddy:
+bug-buddy:
+bug-buddy:
+bug-buddy:

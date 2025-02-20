@@ -1,0 +1,11 @@
+kdebase: kdebase (KDE base package)
+kdebase:
+kdebase: Core applications for the K Desktop Environment.  Included are: kdm
+kdebase: (replacement for xdm), kwin (window manager), konqueror (filemanager,
+kdebase: web browser, ftp client), konsole (xterm replacement), kicker
+kdebase: (application starter and desktop pager), kaudio (audio server),
+kdebase: kdehelp (viewer for kde help files, info and man pages), kthememgr
+kdebase: (system for managing alternate theme packages) plus other KDE
+kdebase: components like kcheckpass, kikbd, kscreensaver, kcontrol, kfind,
+kdebase: kfontmanager, kmenuedit, and kappfinder.
+kdebase:

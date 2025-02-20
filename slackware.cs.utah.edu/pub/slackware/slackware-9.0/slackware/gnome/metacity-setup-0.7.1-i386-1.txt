@@ -1,0 +1,11 @@
+metacity-setup: metacity-setup
+metacity-setup:
+metacity-setup: A setup menu for the Metacity window manager.
+metacity-setup:
+metacity-setup:
+metacity-setup:
+metacity-setup:
+metacity-setup:
+metacity-setup:
+metacity-setup:
+metacity-setup:

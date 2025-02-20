@@ -1,0 +1,67 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES XAP (X APPLICATIONS)" \
+       --checklist "Please select the packages you wish to install \
+from series XAP. Use the \
+UP/DOWN keys to scroll through the list, and the SPACE key to select \
+the packages you wish to install. Recommended packages have \
+already been selected for you, but you may unselect them if you wish. \
+Press ENTER when you are \
+done." 21 70 10 \
+"abiword" "AbiWord Personal word processor" "on" \
+"fvwm" "FVWM window manager" "on" \
+"fvwm95" "A Win95-like window manager for X" "on" \
+"gaim" "GTK+ based messaging program" "on" \
+"gimp" "GNU Image Manipulation Program" "on" \
+"gnuchess" "GNU chess and xboard" "on" \
+"gnuplot" "Gnuplot function plotting utility" "off" \
+"gv" ".ps/.pdf viewer based on Ghostview" "on" \
+"imagemagick" "ImageMagick image utilities" "on" \
+"mozilla" "Mozilla web browser" "on" \
+"netscape" "Netscape Communicator Internet browser" "on" \
+"pan" "Pan newsreader (good for Reading News)" "on" \
+"rxvt" "Lightweight xterm alternative" "on" \
+"sane" "Scanner Access Now Easy" "on" \
+"seyon" "A complete telecommunications package" "off" \
+"windowmaker" "GNU window manager for X" "on" \
+"xfm" "xfm, a filemanager for X" "off" \
+"x3270" "x3270 - IBM host access tool" "off" \
+"xchat" "IRC client for X" "on" \
+"xgames" "A collection of games for X" "on" \
+"xfce" "A lightweight desktop environment for X" "on" \
+"xfractint" "Fractint for X" "on" \
+"xmms" "An audio player similar to WinAmp" "on" \
+"xpaint" "A color painting/image editing program" "off" \
+"xpdf" "Portable Document Format (PDF) viewer" "off" \
+"xsane" "X interface to Scanner Access Now Easy" "on" \
+"xscreensaver" "screen saver and locker for X" "on" \
+"xv" "XV GIF/TIFF/JPEG/PostScript Image Viewer" "on" \
+"xvim" "X/GTK+ version of Vi Improved editor" "on" \
+"xxgdb" "X frontend for the GNU gdb debugger" "on" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+ rm -f $TMP/SeTpkgs
+ > $TMP/SeTnewtag
+ for pkg in \
+   abiword fvwm fvwm95 gaim gimp gnuchess gnuplot gv imagemagick mozilla netscape pan rxvt sane seyon windowmaker x3270 xchat xfm xfce xfractint xmms xgames xpaint xpdf xsane xscreensaver xv xvim xxgdb \
+  ; do
+  echo "$pkg: SKP" >> $TMP/SeTnewtag
+ done
+ exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PACKAGE in \
+  abiword fvwm fvwm95 gaim gimp gnuchess gnuplot gv imagemagick mozilla netscape pan rxvt sane seyon windowmaker x3270 xchat xfm xfce xfractint xmms xgames xpaint xpdf xsane xscreensaver xv xvim xxgdb \
+ ; do
+ if fgrep \"$PACKAGE\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+  echo "$PACKAGE: ADD" >> $TMP/SeTnewtag
+ else
+  echo "$PACKAGE: SKP" >> $TMP/SeTnewtag
+ fi
+done
+rm -f $TMP/SeTpkgs

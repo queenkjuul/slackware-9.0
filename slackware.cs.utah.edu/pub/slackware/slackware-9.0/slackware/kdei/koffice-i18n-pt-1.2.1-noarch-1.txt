@@ -1,0 +1,11 @@
+koffice-i18n-pt: koffice-i18n-pt
+koffice-i18n-pt:
+koffice-i18n-pt: Portuguese language support for KOffice.
+koffice-i18n-pt:
+koffice-i18n-pt:
+koffice-i18n-pt:
+koffice-i18n-pt:
+koffice-i18n-pt:
+koffice-i18n-pt:
+koffice-i18n-pt:
+koffice-i18n-pt:

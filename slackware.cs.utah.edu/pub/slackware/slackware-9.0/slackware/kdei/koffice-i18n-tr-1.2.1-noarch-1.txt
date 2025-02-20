@@ -1,0 +1,11 @@
+koffice-i18n-tr: koffice-i18n-tr
+koffice-i18n-tr:
+koffice-i18n-tr: Turkish language support for KOffice.
+koffice-i18n-tr:
+koffice-i18n-tr:
+koffice-i18n-tr:
+koffice-i18n-tr:
+koffice-i18n-tr:
+koffice-i18n-tr:
+koffice-i18n-tr:
+koffice-i18n-tr:

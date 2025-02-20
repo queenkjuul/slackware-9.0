@@ -1,0 +1,11 @@
+gail: gail
+gail:
+gail: This directory contains GAIL (GNOME Accessibility Interface) utility
+gail: library.  For more information about accessibility in GNOME, see:
+gail:
+gail:   http://developer.gnome.org/projects/gap
+gail:
+gail:
+gail:
+gail:
+gail:

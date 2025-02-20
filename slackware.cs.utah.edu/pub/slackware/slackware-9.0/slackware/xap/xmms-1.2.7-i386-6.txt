@@ -1,0 +1,11 @@
+xmms: xmms (audio player)
+xmms:
+xmms: XMMS is a cross-platform multimedia player.  Since it uses the WinAmp
+xmms: GUI, it can use WinAmp skins. It can play audio formats such as mp3,
+xmms: mod, s3m, and ogg.  It has support for input, output, general, and
+xmms: visualization plugins.
+xmms:
+xmms:
+xmms:
+xmms:
+xmms:

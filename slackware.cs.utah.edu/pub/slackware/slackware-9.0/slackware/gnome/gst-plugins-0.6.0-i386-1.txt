@@ -1,0 +1,11 @@
+gst-plugins: gst-plugins
+gst-plugins:
+gst-plugins: This is gst-plugins, a set of multimedia plugins for GStreamer.
+gst-plugins:
+gst-plugins:
+gst-plugins:
+gst-plugins:
+gst-plugins:
+gst-plugins:
+gst-plugins:
+gst-plugins:

@@ -1,0 +1,84 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES L (Libraries)" \
+       --checklist "Please select the packages you wish to install \
+from series L. Use the \
+UP/DOWN keys to scroll through the list, and the SPACE key to select \
+the packages you wish to install. Recommended packages have \
+already been selected for you, but you may unselect them if you wish. \
+Keep in mind that many of these libraries are required by KDE, GNOME, \
+or other parts of the system.  It's safest to install these packages \
+if you aren't sure if you need them. \
+Press ENTER when you are \
+done." 22 74 9 \
+"aalib" "ASCII Art library" "on" \
+"arts" "Analog Realtime Synthesizer (sound support)" "on" \
+"aspell" "Spell checking library" "on" \
+"aspell-en" "English word list for Aspell" "on" \
+"atk" "Accessability library for GNOME" "on" \
+"audiofile" "SGI's Audio File sound library" "on" \
+"db1" "Berkeley DB library, version 1" "on" \
+"db2" "Berkeley DB library, version 2" "on" \
+"db3" "Berkeley DB library, version 3" "on" \
+"esound" "Enlightened Sound Daemon" "on" \
+"expat" "XML parser library" "on" \
+"gdbm" "The GNU gdbm database library" "on" \
+"gdk-pixbuf" "Image library used by GTK+ and GNOME" "on" \
+"glib" "Support library used by GTK+ and GNOME" "on" \
+"glib2" "GLib version 2" "on" \
+"glibc" "Libraries for developing ELF binaries" "on" \
+"glibc-i18n" "Internationalization support for glibc" "off" \
+"gmp" "A library for arithmetic" "on" \
+"gnet" "A network socket library" "on" \
+"gtk+" "A graphical toolkit library" "on" \
+"gtk+2" "GTK+ version 2" "on" \
+"lesstif" "A Motif clone" "on" \
+"libart_lgpl" "2D graphics library used by KDE and GNOME" "on" \
+"libglade" "An interface library used by GNOME" "on" \
+"libgr" "Various graphics libraries and tools" "on" \
+"libieee1284" "Library to identify parallel port devices" "on" \
+"libjpeg" "JPEG image library and tools" "on" \
+"libpng" "Portable Network Graphics library" "on" \
+"libtermcap" "GNU terminal control library" "on" \
+"libtiff" "Tag Image File format library" "on" \
+"libungif" "GIF extraction library" "on" \
+"libusb" "A library for accessing USB devices" "on" \
+"libxml2" "XML parser library v2" "on" \
+"libxslt" "XML transformation library" "on" \
+"mpeg_lib" "MPEG-1 video decoding library" "off" \
+"ncurses" "CRT screen handling package" "on" \
+"orbit" "CORBA ORB (object request broker)" "on" \
+"pango" "Text rendering library" "on" \
+"pcre" "Perl-compatible regular expression library" "on" \
+"pilot-link" "PalmOS communication library" "on" \
+"popt" "Command line parsing library" "on" \
+"readline" "Input library with editing" "on" \
+"sdl" "Simple DirectMedia Layer library" "on" \
+"slang" "S-Lang interpreted language and library" "on" \
+"svgalib" "Super-VGA Graphics Library" "on" \
+"t1lib" "Library for handling Type 1 fonts" "on" \
+"xaw3d" "A replacement for libXaw with a 3D look" "on" \
+"zlib" "general purpose data compression library" "on" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+  rm -f $TMP/SeTpkgs
+  cat /dev/null > $TMP/SeTnewtag
+  for PKG in aalib arts aspell aspell-en atk audiofile db1 db2 db3 esound expat gdbm gdk-pixbuf glib glib2 glibc glibc-i18n gmp gnet gtk+ gtk+2 lesstif libart_lgpl libglade libgr libieee1284 libjpeg libpng libtermcap libtiff libungif libusb libxml2 libxslt mpeg_lib ncurses orbit pango pcre pilot-link popt readline sdl slang svgalib t1lib xaw3d zlib ; do
+    echo "$PKG: SKP" >> $TMP/SeTnewtag
+  done
+  exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PKG in aalib arts aspell aspell-en atk audiofile db1 db2 db3 esound expat gdbm gdk-pixbuf glib glib2 glibc glibc-i18n gmp gnet gtk+ gtk+2 lesstif libart_lgpl libglade libgr libieee1284 libjpeg libpng libtermcap libtiff libungif libusb libxml2 libxslt mpeg_lib ncurses orbit pango pcre pilot-link popt readline sdl slang svgalib t1lib xaw3d zlib ; do
+  if grep \"$PKG\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+    echo "$PKG: ADD" >> $TMP/SeTnewtag
+  else
+    echo "$PKG: SKP" >> $TMP/SeTnewtag
+  fi
+done
+rm -f $TMP/SeTpkgs

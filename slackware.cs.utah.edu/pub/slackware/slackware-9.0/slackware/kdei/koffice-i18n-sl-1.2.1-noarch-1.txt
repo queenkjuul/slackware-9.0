@@ -1,0 +1,11 @@
+koffice-i18n-sl: koffice-i18n-sl
+koffice-i18n-sl:
+koffice-i18n-sl: Slovenian language support for KOffice.
+koffice-i18n-sl:
+koffice-i18n-sl:
+koffice-i18n-sl:
+koffice-i18n-sl:
+koffice-i18n-sl:
+koffice-i18n-sl:
+koffice-i18n-sl:
+koffice-i18n-sl:

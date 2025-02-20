@@ -1,0 +1,11 @@
+xfsprogs: xfsprogs (Utilities for SGI's XFS filesystem)
+xfsprogs:
+xfsprogs: XFS is a high performance journaling filesystem which originated on
+xfsprogs: the SGI IRIX platform.  It is completely multi-threaded, can support
+xfsprogs: large files and large filesystems, extended attributes, variable block
+xfsprogs: sizes, is extent based, and makes extensive use of Btrees
+xfsprogs: (directories, extents, free space) to aid both performance and
+xfsprogs: scalability.
+xfsprogs:
+xfsprogs:
+xfsprogs:

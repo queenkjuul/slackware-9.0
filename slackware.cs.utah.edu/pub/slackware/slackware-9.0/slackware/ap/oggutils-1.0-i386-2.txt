@@ -1,0 +1,11 @@
+oggutils: oggutils (Ogg Vorbis libraries and tools)
+oggutils:
+oggutils: Ogg Vorbis is a fully Open, non-proprietary, patent-and-royalty-free,
+oggutils: general-purpose compressed audio format for high quality
+oggutils: (44.1-48.0kHz, 16+ bit, polyphonic) audio and music at fixed and
+oggutils: variable bitrates from 16 to 128 kbps/channel. This places Vorbis in
+oggutils: the same class as audio representations including MPEG-1 audio layer
+oggutils: 3, MPEG-4 audio (AAC and TwinVQ), and PAC.  This package includes
+oggutils: an encoder and player, as well as programming libraries for developing
+oggutils: programs that use the Ogg Vorbis CODEC.
+oggutils:

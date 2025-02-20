@@ -1,0 +1,11 @@
+links: links (lynx-like character mode WWW browser)
+links:
+links: links is a text mode WWW browser, supporting colors, correct table
+links: rendering, background downloading, and a menu driven configuration
+links: interface.  Frames are supported.  You can have different file formats
+links: associated with external viewers.  mailto: and telnet: are supported
+links: via external clients.  links can handle local (file://) or remote
+links: (http://, ftp:// or https://) URLs.
+links:
+links: links was written by Mikulas Patocka.
+links:

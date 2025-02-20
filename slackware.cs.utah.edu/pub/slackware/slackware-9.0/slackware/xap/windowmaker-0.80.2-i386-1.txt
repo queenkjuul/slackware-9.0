@@ -1,0 +1,11 @@
+windowmaker: windowmaker
+windowmaker:
+windowmaker: Window Maker is the GNU window manager for the X Window System. It
+windowmaker: was designed to emulate the look and feel of part of the NEXTSTEP(tm)
+windowmaker: GUI. It's supposed to be relatively fast and small, feature rich,
+windowmaker: easy to configure and easy to use, with a simple and elegant 
+windowmaker: appearance borrowed from NEXTSTEP(tm).  Window Maker was designed
+windowmaker: keeping integration with GNUstep in mind and is the "official" window
+windowmaker: manager for it.
+windowmaker:
+windowmaker:

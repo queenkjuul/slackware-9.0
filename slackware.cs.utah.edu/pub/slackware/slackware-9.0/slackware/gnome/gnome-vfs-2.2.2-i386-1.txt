@@ -1,0 +1,11 @@
+gnome-vfs: gnome-vfs
+gnome-vfs:
+gnome-vfs: This is the GNOME Virtual File System, currently used as one of the
+gnome-vfs: foundations of the Nautilus file manager.
+gnome-vfs:
+gnome-vfs: Also includes gnome-vfs-extras, which contains SMB and Icecast
+gnome-vfs: support.
+gnome-vfs:
+gnome-vfs:
+gnome-vfs:
+gnome-vfs:

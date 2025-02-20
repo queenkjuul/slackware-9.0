@@ -1,0 +1,11 @@
+koffice: koffice (KDE office productivity suite)
+koffice:
+koffice: KOffice office productivity applications, including:
+koffice: - KWord (Professional text editing)
+koffice: - KSpread (Professional number cruncher/spreadsheet)
+koffice: - KPresenter (Professional presentation program)
+koffice: - KChart (Graphing of your abstract data)
+koffice: - Kontour (Vector graphics tool)
+koffice: - Kugar (Database report creation)
+koffice: - Kivio (Flowcharting program)
+koffice: - KOffice Workspace (A combination of all of the above)

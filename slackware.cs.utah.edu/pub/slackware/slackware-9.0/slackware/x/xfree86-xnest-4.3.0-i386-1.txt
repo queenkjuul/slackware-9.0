@@ -1,0 +1,11 @@
+xfree86-xnest: xfree86-xnest (a nested X server)
+xfree86-xnest:
+xfree86-xnest: Xnest is an experimental nested server for X that acts as both a 
+xfree86-xnest: client and a server.  Xnest is a client of the real server which
+xfree86-xnest: manages windows and graphics requests on its behalf.  Xnest is a
+xfree86-xnest: server to its own clients.  Xnest manages windows and graphics 
+xfree86-xnest: requests on their behalf.  To these clients Xnest appears to be a 
+xfree86-xnest: conventional server.
+xfree86-xnest:
+xfree86-xnest:
+xfree86-xnest:

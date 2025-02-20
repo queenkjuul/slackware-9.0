@@ -1,0 +1,11 @@
+gnome-applets: gnome-applets
+gnome-applets:
+gnome-applets: This package contains applets for use with the GNOME panel.
+gnome-applets:
+gnome-applets:
+gnome-applets:
+gnome-applets:
+gnome-applets:
+gnome-applets:
+gnome-applets:
+gnome-applets:

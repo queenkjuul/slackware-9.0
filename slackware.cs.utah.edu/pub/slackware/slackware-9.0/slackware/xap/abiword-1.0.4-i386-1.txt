@@ -1,0 +1,11 @@
+abiword: abiword (AbiWord Personal)
+abiword:
+abiword: AbiWord Personal is a lean and fast full-featured word processor.
+abiword: It can import many formats including Word97/2000 and RTF, Palm, Psion,
+abiword: DocBook and XHTML documents, and can export to RTF, Palm, Psion,
+abiword: XHTML, Text, and LaTeX formats.
+abiword:
+abiword: Linux Journal calls it "an elegant, open source word processor that
+abiword: delivers the Word functionality most people use."
+abiword:
+abiword:

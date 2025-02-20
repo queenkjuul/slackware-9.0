@@ -1,0 +1,11 @@
+sdl: sdl (Simple DirectMedia Layer library)
+sdl:
+sdl: This is the Simple DirectMedia Layer, a generic API that provides low
+sdl: level access to audio, keyboard, mouse, joystick, 3D hardware via
+sdl: OpenGL, and 2D framebuffer across multiple platforms.
+sdl:
+sdl: This library links against libaudiofile (L series), libartsc (KDE
+sdl: series), libesd (GNOME series), and the X11 libraries.  Make sure all
+sdl: of these are installed if you're planning to use SDL (a full
+sdl: installation will cover all of the prerequisites).
+sdl:

@@ -1,0 +1,11 @@
+linc: linc
+linc:
+linc: linc is a library that eases the task of writing networked servers and
+linc: clients.  It takes care of connection initiation and maintainance, and
+linc: the details of various transports.  It is used by the new ORBit to
+linc: handle message transmission and receipt.
+linc:
+linc:
+linc:
+linc:
+linc:

@@ -1,0 +1,11 @@
+kdelibs: kdelibs (KDE libraries)
+kdelibs:
+kdelibs: System libraries and other resources required by KDE:  kdecore (KDE
+kdelibs: core library), kdeui (user interface), kimgio (image formats), kfile
+kdelibs: (file dialog), kspell (spelling checker), khtml (HTML widget), kab
+kdelibs: (addressbook), arts (sound, mixing and animation), kstyles, kparts,
+kdelibs: kjs (JavaScript), kio (URL fetcher), kdesu, dcop (desktop
+kdelibs: communication program), kssl (OpenSSL integration), kinit, libkmid,
+kdelibs: interfaces, libtldl, mimetypes, pics, and ksgmltools.
+kdelibs:
+kdelibs:

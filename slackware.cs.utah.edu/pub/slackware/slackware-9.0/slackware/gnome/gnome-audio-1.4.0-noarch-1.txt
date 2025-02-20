@@ -1,0 +1,11 @@
+gnome-audio: gnome-audio
+gnome-audio:
+gnome-audio: This package contains extra sound files useful for customizing the
+gnome-audio: sounds that the GNOME desktop environment makes.  If you use the 
+gnome-audio: GNOME desktop environment, you may want to install this package of
+gnome-audio: complementary sounds.
+gnome-audio:
+gnome-audio:
+gnome-audio:
+gnome-audio:
+gnome-audio:

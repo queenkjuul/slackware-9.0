@@ -1,0 +1,11 @@
+koffice-i18n-nn: koffice-i18n-nn
+koffice-i18n-nn:
+koffice-i18n-nn: Norwegian (Nynorsk) language support for KOffice.
+koffice-i18n-nn:
+koffice-i18n-nn:
+koffice-i18n-nn:
+koffice-i18n-nn:
+koffice-i18n-nn:
+koffice-i18n-nn:
+koffice-i18n-nn:
+koffice-i18n-nn:

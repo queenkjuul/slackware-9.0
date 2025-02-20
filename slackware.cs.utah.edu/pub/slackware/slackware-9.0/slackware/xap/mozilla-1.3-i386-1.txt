@@ -1,0 +1,11 @@
+mozilla: mozilla (an open-source web browser)
+mozilla:
+mozilla: The Mozilla web browser.  Mozilla is a cousin to Netscape
+mozilla: Communicator that is being developed by the Free Software Community
+mozilla: with the cooperation and support of Netscape.  Mozilla uses a next-
+mozilla: generation browser engine known as Gecko.
+mozilla:
+mozilla:
+mozilla:
+mozilla:
+mozilla:

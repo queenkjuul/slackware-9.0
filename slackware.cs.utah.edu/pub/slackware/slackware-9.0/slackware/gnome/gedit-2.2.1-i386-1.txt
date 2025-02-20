@@ -1,0 +1,11 @@
+gedit: gedit
+gedit:
+gedit: gEdit is a small but powerful text editor designed for GNOME.  It
+gedit: includes such features as split-screen mode, a plugin API, which
+gedit: allows gEdit to be extended to support many features while remaining
+gedit: small at its core, multiple document editing through the use of a
+gedit: 'tabbed' notebook and many more functions.
+gedit:
+gedit:
+gedit:
+gedit:

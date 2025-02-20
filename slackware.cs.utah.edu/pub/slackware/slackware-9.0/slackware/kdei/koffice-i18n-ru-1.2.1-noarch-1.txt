@@ -1,0 +1,11 @@
+koffice-i18n-ru: koffice-i18n-ru
+koffice-i18n-ru:
+koffice-i18n-ru: Russian language support for KOffice.
+koffice-i18n-ru:
+koffice-i18n-ru:
+koffice-i18n-ru:
+koffice-i18n-ru:
+koffice-i18n-ru:
+koffice-i18n-ru:
+koffice-i18n-ru:
+koffice-i18n-ru:

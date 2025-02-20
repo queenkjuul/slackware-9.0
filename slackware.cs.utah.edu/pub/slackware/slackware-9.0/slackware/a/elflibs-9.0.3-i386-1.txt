@@ -1,0 +1,11 @@
+elflibs: elflibs (shared libraries needed by many programs)
+elflibs:
+elflibs: This is a collection of shared libraries needed to run Linux programs.
+elflibs: ELF (Executable and Linking Format) is the standard Linux binary 
+elflibs: format.  These libraries are gathered from other Slackware packages
+elflibs: and are intended to give a fairly complete set of runtime ELF
+elflibs: libraries without having to install every package these libraries come
+elflibs: from.  If you're doing a full installation, these libraries are
+elflibs: redundant, but installing them doesn't hurt.
+elflibs:
+elflibs:

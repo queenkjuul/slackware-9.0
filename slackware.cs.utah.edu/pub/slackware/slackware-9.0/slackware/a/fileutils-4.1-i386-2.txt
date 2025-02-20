@@ -1,0 +1,11 @@
+fileutils: fileutils (file management utilities)
+fileutils:
+fileutils: These are the GNU file management utilities.  Most of these programs
+fileutils: have significant advantages over their Unix counterparts, such as
+fileutils: greater speed, additional options, and fewer arbitrary limits.
+fileutils:
+fileutils: These utilities are included:
+fileutils:     chgrp chmod chown cp dd df dircolors du ginstall ln ls 
+fileutils:     mkdir mkfifo mknod mv rm rmdir shred sync touch
+fileutils:
+fileutils:

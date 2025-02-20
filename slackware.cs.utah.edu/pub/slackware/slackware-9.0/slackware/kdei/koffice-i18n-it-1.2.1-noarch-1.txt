@@ -1,0 +1,11 @@
+koffice-i18n-it: koffice-i18n-it
+koffice-i18n-it:
+koffice-i18n-it: Italian language support for KOffice.
+koffice-i18n-it:
+koffice-i18n-it:
+koffice-i18n-it:
+koffice-i18n-it:
+koffice-i18n-it:
+koffice-i18n-it:
+koffice-i18n-it:
+koffice-i18n-it:

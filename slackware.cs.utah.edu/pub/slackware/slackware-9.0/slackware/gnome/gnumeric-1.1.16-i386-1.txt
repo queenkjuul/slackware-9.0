@@ -1,0 +1,11 @@
+gnumeric: gnumeric
+gnumeric:
+gnumeric: This is Gnumeric, the GNOME spreadsheet program.  It aims to be a
+gnumeric: drop-in replacement for commercial spreadsheets.  It provides import
+gnumeric: and export from MS Excel files and many other formats (csv, latex,
+gnumeric: xbase, applix).
+gnumeric:
+gnumeric:
+gnumeric:
+gnumeric:
+gnumeric:

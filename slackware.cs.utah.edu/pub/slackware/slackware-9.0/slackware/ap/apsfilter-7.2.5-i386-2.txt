@@ -1,0 +1,11 @@
+apsfilter: apsfilter (printer filter and configuration tool)
+apsfilter:
+apsfilter: Apsfilter is a printer input filter.  With apsfilter installed and
+apsfilter: configured, you can print many different file types (like ASCII,
+apsfilter: PostScript, and DVI, as well as compressed versions of all of these)
+apsfilter: directly with 'lpr', and apsfilter will automatically handle the
+apsfilter: conversion process on the fly.  What does apsfilter stand for?
+apsfilter: Apsfilter Prints So Fine, It Leads To Extraordinary Results ;-)
+apsfilter:
+apsfilter: To configure apsfilter, run the SETUP program in /usr/share/apsfilter.
+apsfilter:

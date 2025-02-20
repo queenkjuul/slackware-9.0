@@ -1,0 +1,11 @@
+libgtkhtml: libgtkhtml
+libgtkhtml:
+libgtkhtml: GtkHTML is a lightweight HTML rendering/printing/editing engine.  It
+libgtkhtml: was originally based on KHTMLW, part of the KDE project.
+libgtkhtml:
+libgtkhtml:
+libgtkhtml:
+libgtkhtml:
+libgtkhtml:
+libgtkhtml:
+libgtkhtml:

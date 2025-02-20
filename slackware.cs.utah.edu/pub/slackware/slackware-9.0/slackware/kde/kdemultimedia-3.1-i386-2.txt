@@ -1,0 +1,11 @@
+kdemultimedia: kdemultimedia
+kdemultimedia:
+kdemultimedia: Multimedia applications for KDE, including:
+kdemultimedia:   aktion (video player)
+kdemultimedia:   kmid (a midi/karaoke player)
+kdemultimedia:   kmidi (a midi-to-wav player/converter)
+kdemultimedia:   kmix (a mixer)
+kdemultimedia:   kscd (an audio CD player)
+kdemultimedia:   timidity (synth application)
+kdemultimedia:
+kdemultimedia:

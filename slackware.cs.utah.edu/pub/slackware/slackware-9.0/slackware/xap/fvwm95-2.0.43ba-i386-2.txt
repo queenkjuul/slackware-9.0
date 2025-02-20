@@ -1,0 +1,11 @@
+fvwm95: fvwm95 (window manager for X with a Win95 look and feel)
+fvwm95:
+fvwm95: This is fvwm2 modified for a look and feel similar to Windows95.
+fvwm95:
+fvwm95:
+fvwm95:
+fvwm95:
+fvwm95:
+fvwm95:
+fvwm95:
+fvwm95:

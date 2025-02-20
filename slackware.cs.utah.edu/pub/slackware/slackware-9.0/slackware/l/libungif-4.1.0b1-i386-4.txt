@@ -1,0 +1,11 @@
+libungif: libungif
+libungif:
+libungif: GIF loading and saving shared library.  (Saving uses an uncompressed
+libungif: GIF algorithm that does not use LZW compression.)
+libungif:
+libungif:
+libungif:
+libungif:
+libungif:
+libungif:
+libungif:

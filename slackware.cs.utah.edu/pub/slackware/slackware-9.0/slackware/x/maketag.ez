@@ -1,0 +1,45 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES X (XFree86 4.3.0)" \
+       --checklist "Please select the packages you wish to install \
+from series X. Recommended packages have already been selected. \
+Required packages are marked with a *. \
+Press ENTER when you are done." 20 74 11 \
+"xfree86-docs" "Documentation for XFree86 4.3.0" "on" \
+"xfree86-docs-html" "HTML documentation for XFree86 4.3.0" "off" \
+"xfree86-devel" "Libraries and headers for X programming" "on" \
+"xfree86-fonts-misc" "* Basic fonts needed to run X" "on" \
+"xfree86-fonts-100dpi" "100dpi screen fonts" "off" \
+"xfree86-fonts-scale" "Scalable Speedo/Type1 fonts" "on" \
+"xfree86-fonts-cyrillic" "Cyrillic fonts" "off" \
+"xfree86" "* XFree86 4.3.0 main package" "on" \
+"xfree86-xnest" "Experimental nested X server" "off" \
+"xfree86-xprt" "Print-only X server" "off" \
+"xfree86-xvfb" "Virtual framebuffer X server" "off" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+  rm -f $TMP/SeTpkgs
+  > $TMP/SeTnewtag
+  for pkg in xfree86-docs xfree86-docs-html xfree86-devel \
+    xfree86-fonts-misc xfree86-fonts-100dpi xfree86-fonts-scale \
+    xfree86-fonts-cyrillic xfree86 xfree86-xnest xfree86-xprt xfree86-xvfb ; do
+    echo "$pkg: SKP" >> $TMP/SeTnewtag
+  done
+  exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PACKAGE in xfree86-docs xfree86-docs-html xfree86-devel xfree86-fonts-misc \
+  xfree86-fonts-100dpi xfree86-fonts-scale xfree86-fonts-cyrillic xfree86 \
+  xfree86-xnest xfree86-xprt xfree86-xvfb ; do
+  if fgrep \"$PACKAGE\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+    echo "$PACKAGE: ADD" >> $TMP/SeTnewtag
+  else
+    echo "$PACKAGE: SKP" >> $TMP/SeTnewtag
+  fi
+done
+rm -f $TMP/SeTpkgs

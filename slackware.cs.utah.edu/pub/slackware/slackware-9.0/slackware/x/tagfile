@@ -1,0 +1,11 @@
+xfree86: ADD
+xfree86-devel: ADD
+xfree86-docs: REC
+xfree86-docs-html: OPT
+xfree86-fonts-100dpi: OPT
+xfree86-fonts-cyrillic: OPT
+xfree86-fonts-misc: ADD
+xfree86-fonts-scale: ADD
+xfree86-xnest: OPT
+xfree86-xprt: OPT
+xfree86-xvfb: OPT

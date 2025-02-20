@@ -1,0 +1,11 @@
+libgail-gnome: libgail-gnome
+libgail-gnome:
+libgail-gnome: The GNOME Accessibility Interface library.
+libgail-gnome: For more information about accessibility in GNOME, see:
+libgail-gnome:
+libgail-gnome:   http://developer.gnome.org/projects/gap
+libgail-gnome:
+libgail-gnome:
+libgail-gnome:
+libgail-gnome:
+libgail-gnome:

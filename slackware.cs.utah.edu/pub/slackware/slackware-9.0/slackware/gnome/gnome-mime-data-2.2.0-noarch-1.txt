@@ -1,0 +1,11 @@
+gnome-mime-data: gnome-mime-data
+gnome-mime-data:
+gnome-mime-data: The GNOME MIME database contains a basic set of applications and MIME
+gnome-mime-data: types for a GNOME system.
+gnome-mime-data:
+gnome-mime-data:
+gnome-mime-data:
+gnome-mime-data:
+gnome-mime-data:
+gnome-mime-data:
+gnome-mime-data:

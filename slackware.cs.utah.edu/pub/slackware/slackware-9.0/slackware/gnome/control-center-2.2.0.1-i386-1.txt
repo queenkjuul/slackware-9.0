@@ -1,0 +1,11 @@
+control-center: control-center
+control-center:
+control-center: The GNOME control center.  Control-center is a configuration tool for
+control-center: easily setting up your GNOME environment.
+control-center:
+control-center:
+control-center:
+control-center:
+control-center:
+control-center:
+control-center:

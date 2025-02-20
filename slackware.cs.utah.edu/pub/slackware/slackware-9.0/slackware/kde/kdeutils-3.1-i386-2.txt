@@ -1,0 +1,11 @@
+kdeutils: kdeutils
+kdeutils:
+kdeutils: Utilities for the K Desktop Environment.  
+kdeutils:
+kdeutils: Includes: ark (tar/gzip archive  manager), kab (address book), karm
+kdeutils: (personal time tracker), kcalc (scientific calculator), kedit (simple
+kdeutils: text editor), kfloppy (floppy formatting tool), khexedit (hex editor),
+kdeutils: kjots (note taker), klipper (clipboard tool), kljettool(HP printer
+kdeutils: configuration tool), klpq (print queue manager), knotes (sticky notes
+kdeutils: for the desktop), kpm (process manager similar to 'top', but more
+kdeutils: advanced), kwrite (improved text editor).

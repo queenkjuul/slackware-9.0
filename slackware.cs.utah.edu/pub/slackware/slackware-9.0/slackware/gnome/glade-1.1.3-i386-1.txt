@@ -1,0 +1,11 @@
+glade: glade
+glade:
+glade: Glade is a GUI builder for GTK+ that quick & easy development of user
+glade: interfaces for the GTK+ toolkit and the Gnome desktop environment. It
+glade: also contains built-in support for generating the C source code needed
+glade: to recreate the interfaces.  The user interfaces designed in Glade are
+glade: stored in the well-known XML format, enabling easy integration with
+glade: external tools.
+glade:
+glade:
+glade:

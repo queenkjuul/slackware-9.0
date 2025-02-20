@@ -1,0 +1,11 @@
+scrollkeeper: scrollkeeper
+scrollkeeper:
+scrollkeeper: ScrollKeeper is a cataloging system for documentation. It manages
+scrollkeeper: documentation metadata as specified by the Open Source Metadata
+scrollkeeper: Framework (OMF) and provides a simple API to allow help browsers to
+scrollkeeper: find, sort, and search the document catalog. It will also be able to
+scrollkeeper: communicate with catalog servers on the Net to search for documents
+scrollkeeper: which are not on the local system.
+scrollkeeper:
+scrollkeeper:
+scrollkeeper:

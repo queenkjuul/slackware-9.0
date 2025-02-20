@@ -1,0 +1,11 @@
+ghex: ghex
+ghex:
+ghex: GHex allows the user to load data from any file, view and edit it in
+ghex: either hex or ASCII. A must for anyone playing games that use
+ghex: non-ASCII format for saving.  ;^)
+ghex:
+ghex:
+ghex:
+ghex:
+ghex:
+ghex:

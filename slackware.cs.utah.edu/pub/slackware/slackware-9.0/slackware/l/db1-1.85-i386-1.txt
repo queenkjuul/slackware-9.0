@@ -1,0 +1,11 @@
+db1: db1 (Berkeley database library version 1)
+db1:
+db1: The Berkeley Database (Berkeley DB) library provides embedded database
+db1: support for both traditional and client/server applications.
+db1:
+db1: This package should be installed if compatibility is needed with
+db1: databases created with the Berkeley DB version 1.
+db1:
+db1: This library used to be part of the glibc package.
+db1:
+db1:

@@ -1,0 +1,11 @@
+libidl: libIDL
+libidl:
+libidl: libIDL is a library licensed under the GNU LGPL for creating trees of
+libidl: CORBA Interface Definition Language (IDL) files, which is a
+libidl: specification for defining portable interfaces.  libIDL was initially
+libidl: written for ORBit (the ORB from the GNOME project, and the primary
+libidl: means of libIDL distribution).
+libidl:
+libidl:
+libidl:
+libidl:

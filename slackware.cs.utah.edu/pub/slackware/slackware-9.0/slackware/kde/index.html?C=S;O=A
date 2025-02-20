@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/slackware/kde</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/slackware/kde</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/slackware/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdeedu-3.1-i386-2.txt">kdeedu-3.1-i386-2.txt</a></td><td align="right">2003-03-16 06:56  </td><td align="right">129 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdeadmin-3.1-i386-2.txt">kdeadmin-3.1-i386-2.txt</a></td><td align="right">2003-03-16 05:51  </td><td align="right">152 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdepim-3.1-i386-2.txt">kdepim-3.1-i386-2.txt</a></td><td align="right">2003-03-16 09:23  </td><td align="right">164 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdevelop-3.0a3-i386-2.txt">kdevelop-3.0a3-i386-2.txt</a></td><td align="right">2003-03-16 08:16  </td><td align="right">186 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdeaddons-3.1-i386-2.tgz.asc">kdeaddons-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 08:36  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdeaddons-3.1-i386-2.txt">kdeaddons-3.1-i386-2.txt</a></td><td align="right">2003-03-16 08:36  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdeadmin-3.1-i386-2.tgz.asc">kdeadmin-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 05:51  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdeartwork-3.1-i386-2.tgz.asc">kdeartwork-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 05:59  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdebase-3.1-i386-4.tgz.asc">kdebase-3.1-i386-4.tgz.asc</a></td><td align="right">2003-03-16 03:54  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdebindings-3.1-i386-2.tgz.asc">kdebindings-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-17 01:41  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdeedu-3.1-i386-2.tgz.asc">kdeedu-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 06:56  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdegames-3.1-i386-2.tgz.asc">kdegames-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 06:27  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdegraphics-3.1-i386-2.tgz.asc">kdegraphics-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 07:17  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdelibs-3.1-i386-3.tgz.asc">kdelibs-3.1-i386-3.tgz.asc</a></td><td align="right">2003-03-16 02:27  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdelinks-1.0-noarch-1.tgz.asc">kdelinks-1.0-noarch-1.tgz.asc</a></td><td align="right">2003-01-30 00:07  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdemultimedia-3.1-i386-2.tgz.asc">kdemultimedia-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 05:00  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdenetwork-3.1-i386-2.tgz.asc">kdenetwork-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 05:36  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdepim-3.1-i386-2.tgz.asc">kdepim-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 09:23  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdesdk-3.1-i386-2.tgz.asc">kdesdk-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 07:35  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdetoys-3.1-i386-2.tgz.asc">kdetoys-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 06:31  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdeutils-3.1-i386-2.tgz.asc">kdeutils-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 04:10  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdevelop-3.0a3-i386-2.tgz.asc">kdevelop-3.0a3-i386-2.tgz.asc</a></td><td align="right">2003-03-16 08:16  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-1.2.1-i386-3.tgz.asc">koffice-1.2.1-i386-3.tgz.asc</a></td><td align="right">2003-03-16 10:58  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="qt-3.1.2-i386-2.tgz.asc">qt-3.1.2-i386-2.tgz.asc</a></td><td align="right">2003-03-16 00:10  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="quanta-3.1-i386-2.tgz.asc">quanta-3.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 08:53  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdenetwork-3.1-i386-2.txt">kdenetwork-3.1-i386-2.txt</a></td><td align="right">2003-03-16 05:36  </td><td align="right">200 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdeartwork-3.1-i386-2.txt">kdeartwork-3.1-i386-2.txt</a></td><td align="right">2003-03-16 05:59  </td><td align="right">215 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdelinks-1.0-noarch-1.txt">kdelinks-1.0-noarch-1.txt</a></td><td align="right">2003-01-30 00:07  </td><td align="right">230 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tagfile">tagfile</a></td><td align="right">2003-01-29 23:08  </td><td align="right">278 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdesdk-3.1-i386-2.txt">kdesdk-3.1-i386-2.txt</a></td><td align="right">2003-03-16 07:35  </td><td align="right">294 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdetoys-3.1-i386-2.txt">kdetoys-3.1-i386-2.txt</a></td><td align="right">2003-03-16 06:31  </td><td align="right">388 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdemultimedia-3.1-i386-2.txt">kdemultimedia-3.1-i386-2.txt</a></td><td align="right">2003-03-16 05:00  </td><td align="right">395 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdegames-3.1-i386-2.txt">kdegames-3.1-i386-2.txt</a></td><td align="right">2003-03-16 06:27  </td><td align="right">442 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install.end">install.end</a></td><td align="right">2001-03-02 02:04  </td><td align="right">457 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdegraphics-3.1-i386-2.txt">kdegraphics-3.1-i386-2.txt</a></td><td align="right">2003-03-16 07:17  </td><td align="right">493 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="koffice-1.2.1-i386-3.txt">koffice-1.2.1-i386-3.txt</a></td><td align="right">2003-03-16 10:58  </td><td align="right">527 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="qt-3.1.2-i386-2.txt">qt-3.1.2-i386-2.txt</a></td><td align="right">2003-03-16 00:10  </td><td align="right">534 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="quanta-3.1-i386-2.txt">quanta-3.1-i386-2.txt</a></td><td align="right">2003-03-16 08:53  </td><td align="right">563 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdelibs-3.1-i386-3.txt">kdelibs-3.1-i386-3.txt</a></td><td align="right">2003-03-16 02:27  </td><td align="right">575 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdeutils-3.1-i386-2.txt">kdeutils-3.1-i386-2.txt</a></td><td align="right">2003-03-16 04:10  </td><td align="right">616 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdebase-3.1-i386-4.txt">kdebase-3.1-i386-4.txt</a></td><td align="right">2003-03-16 03:54  </td><td align="right">626 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="kdebindings-3.1-i386-2.txt">kdebindings-3.1-i386-2.txt</a></td><td align="right">2003-03-17 01:41  </td><td align="right">690 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag">maketag</a></td><td align="right">2003-02-18 20:55  </td><td align="right">2.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag.ez">maketag.ez</a></td><td align="right">2003-02-18 20:55  </td><td align="right">2.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install-packages">install-packages</a></td><td align="right">2002-04-09 20:17  </td><td align="right">2.8K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdelinks-1.0-noarch-1.tgz">kdelinks-1.0-noarch-1.tgz</a></td><td align="right">2003-01-30 00:07  </td><td align="right"> 30K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdeaddons-3.1-i386-2.tgz">kdeaddons-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 08:36  </td><td align="right">1.1M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdeadmin-3.1-i386-2.tgz">kdeadmin-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 05:51  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdetoys-3.1-i386-2.tgz">kdetoys-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 06:31  </td><td align="right">1.6M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdeutils-3.1-i386-2.tgz">kdeutils-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 04:10  </td><td align="right">1.6M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdebindings-3.1-i386-2.tgz">kdebindings-3.1-i386-2.tgz</a></td><td align="right">2003-03-17 01:41  </td><td align="right">1.8M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdesdk-3.1-i386-2.tgz">kdesdk-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 07:35  </td><td align="right">2.6M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="quanta-3.1-i386-2.tgz">quanta-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 08:53  </td><td align="right">2.6M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdepim-3.1-i386-2.tgz">kdepim-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 09:23  </td><td align="right">2.8M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdegraphics-3.1-i386-2.tgz">kdegraphics-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 07:17  </td><td align="right">3.6M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdevelop-3.0a3-i386-2.tgz">kdevelop-3.0a3-i386-2.tgz</a></td><td align="right">2003-03-16 08:16  </td><td align="right">4.5M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdenetwork-3.1-i386-2.tgz">kdenetwork-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 05:36  </td><td align="right">5.5M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdemultimedia-3.1-i386-2.tgz">kdemultimedia-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 05:00  </td><td align="right">7.0M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdegames-3.1-i386-2.tgz">kdegames-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 06:27  </td><td align="right">8.8M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="koffice-1.2.1-i386-3.tgz">koffice-1.2.1-i386-3.tgz</a></td><td align="right">2003-03-16 10:58  </td><td align="right"> 12M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdeartwork-3.1-i386-2.tgz">kdeartwork-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 05:59  </td><td align="right"> 12M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdelibs-3.1-i386-3.tgz">kdelibs-3.1-i386-3.tgz</a></td><td align="right">2003-03-16 02:27  </td><td align="right"> 12M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdeedu-3.1-i386-2.tgz">kdeedu-3.1-i386-2.tgz</a></td><td align="right">2003-03-16 06:56  </td><td align="right"> 15M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="qt-3.1.2-i386-2.tgz">qt-3.1.2-i386-2.tgz</a></td><td align="right">2003-03-16 00:10  </td><td align="right"> 17M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="kdebase-3.1-i386-4.tgz">kdebase-3.1-i386-4.tgz</a></td><td align="right">2003-03-16 03:54  </td><td align="right"> 18M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

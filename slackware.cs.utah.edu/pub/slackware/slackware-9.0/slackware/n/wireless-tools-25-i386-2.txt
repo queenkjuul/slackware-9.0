@@ -1,0 +1,12 @@
+wireless-tools: wireless-tools (utilities for wireless networking)
+wireless-tools:
+wireless-tools: This package contains tools used for configuring wireless networking
+wireless-tools: interfaces.
+wireless-tools:
+wireless-tools:   iwconfig;  manipulate the basic wireless parameters
+wireless-tools:   iwlist;  to list addresses, frequencies, and bit-rates
+wireless-tools:   iwspy;  query the per node link quality
+wireless-tools:   iwpriv;  set the private parameters of a wireless network interface
+wireless-tools:
+wireless-tools: The wireless-tools were written by Jean Tourrilhes.
+wireless-tools:

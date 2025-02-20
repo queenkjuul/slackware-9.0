@@ -1,0 +1,11 @@
+eog: eog
+eog:
+eog: This is the Eye of Gnome, an image viewer program.  It is meant to be
+eog: a fast and functional image viewer as well as an image cataloging
+eog: program.
+eog:
+eog:
+eog:
+eog:
+eog:
+eog:

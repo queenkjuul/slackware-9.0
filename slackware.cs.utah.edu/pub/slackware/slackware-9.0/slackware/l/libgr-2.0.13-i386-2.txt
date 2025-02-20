@@ -1,0 +1,11 @@
+libgr: libgr (various graphics libraries)
+libgr:
+libgr: Shared and static graphics-related libraries and header files.
+libgr:
+libgr: Includes several graphic libraries (libpbm, libpgm, libppm, libpnm,
+libgr: libfbm, librle), and a collection of graphics utilities.
+libgr:
+libgr:
+libgr:
+libgr:
+libgr:

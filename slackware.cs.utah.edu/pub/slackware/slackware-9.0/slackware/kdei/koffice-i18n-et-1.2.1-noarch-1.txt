@@ -1,0 +1,11 @@
+koffice-i18n-et: koffice-i18n-et
+koffice-i18n-et:
+koffice-i18n-et: Estonian language support for KOffice.
+koffice-i18n-et:
+koffice-i18n-et:
+koffice-i18n-et:
+koffice-i18n-et:
+koffice-i18n-et:
+koffice-i18n-et:
+koffice-i18n-et:
+koffice-i18n-et:

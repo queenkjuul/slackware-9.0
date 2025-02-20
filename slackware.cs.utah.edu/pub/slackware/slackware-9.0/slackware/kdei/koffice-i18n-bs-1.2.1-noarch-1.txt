@@ -1,0 +1,11 @@
+koffice-i18n-bs: koffice-i18n-bs
+koffice-i18n-bs:
+koffice-i18n-bs: Bosnian language support for KOffice.
+koffice-i18n-bs:
+koffice-i18n-bs:
+koffice-i18n-bs:
+koffice-i18n-bs:
+koffice-i18n-bs:
+koffice-i18n-bs:
+koffice-i18n-bs:
+koffice-i18n-bs:

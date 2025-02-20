@@ -1,0 +1,11 @@
+ipchains: ipchains
+ipchains:
+ipchains: These are tools for setting up a firewall or masquerading with a 
+ipchains: 2.2.x Linux kernel, or a 2.4.x kernel with the ipchains module.  This
+ipchains: might be useful if you have old ipchains or ipfwadm based firewall
+ipchains: scripts that you'd like to continue using, but most users should use
+ipchains: iptables instead.
+ipchains:
+ipchains:
+ipchains:
+ipchains:

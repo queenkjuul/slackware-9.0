@@ -1,0 +1,11 @@
+koffice-i18n-ja: koffice-i18n-ja
+koffice-i18n-ja:
+koffice-i18n-ja: Japanese language support for KOffice.
+koffice-i18n-ja:
+koffice-i18n-ja:
+koffice-i18n-ja:
+koffice-i18n-ja:
+koffice-i18n-ja:
+koffice-i18n-ja:
+koffice-i18n-ja:
+koffice-i18n-ja:

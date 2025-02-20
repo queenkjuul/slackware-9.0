@@ -1,0 +1,11 @@
+linux-mini-howtos: linux-mini-howtos (Linux Mini-HOWTOs)
+linux-mini-howtos:
+linux-mini-howtos: Short documentation files explaining many common Linux tasks.
+linux-mini-howtos:
+linux-mini-howtos: These files will be installed in /usr/doc/Linux-mini-HOWTOs/.
+linux-mini-howtos:
+linux-mini-howtos:
+linux-mini-howtos:
+linux-mini-howtos:
+linux-mini-howtos:
+linux-mini-howtos:

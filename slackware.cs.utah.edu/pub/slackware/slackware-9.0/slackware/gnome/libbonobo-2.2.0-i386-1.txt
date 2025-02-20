@@ -1,0 +1,11 @@
+libbonobo: libbonobo
+libbonobo:
+libbonobo: The bonobo library supports independant CORBA interfaces for creating
+libbonobo: reusable components.  It provides GNOME with a framework for handling
+libbonobo: compound documents, such as embedding a spreadsheet in a word
+libbonobo: processor document.
+libbonobo:
+libbonobo:
+libbonobo:
+libbonobo:
+libbonobo:

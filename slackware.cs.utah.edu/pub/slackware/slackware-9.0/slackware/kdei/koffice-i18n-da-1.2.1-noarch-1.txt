@@ -1,0 +1,11 @@
+koffice-i18n-da: koffice-i18n-da
+koffice-i18n-da:
+koffice-i18n-da: Danish language support for KOffice.
+koffice-i18n-da:
+koffice-i18n-da:
+koffice-i18n-da:
+koffice-i18n-da:
+koffice-i18n-da:
+koffice-i18n-da:
+koffice-i18n-da:
+koffice-i18n-da:

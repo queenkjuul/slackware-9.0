@@ -1,0 +1,11 @@
+devfsd: devfsd (Device Filesystem Daemon)
+devfsd:
+devfsd: This package contains the devfsd daemon, which provides intelligent
+devfsd: management of device entries in the Device Filesystem (devfs).
+devfsd:
+devfsd: devfs and devfsd are the work of Richard Gooch (rgooch@atnf.csiro.au).
+devfsd:
+devfsd:
+devfsd:
+devfsd:
+devfsd:

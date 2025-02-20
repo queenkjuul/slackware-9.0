@@ -1,0 +1,11 @@
+kde-i18n-fa: kde-i18n-fa
+kde-i18n-fa:
+kde-i18n-fa: Farsi language support for KDE.
+kde-i18n-fa:
+kde-i18n-fa:
+kde-i18n-fa:
+kde-i18n-fa:
+kde-i18n-fa:
+kde-i18n-fa:
+kde-i18n-fa:
+kde-i18n-fa:

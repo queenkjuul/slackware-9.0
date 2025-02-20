@@ -1,0 +1,11 @@
+vte: vte
+vte:
+vte: VTE is a library (libvte) which implements a terminal emulator widget
+vte: for GTK+. 
+vte:
+vte:
+vte:
+vte:
+vte:
+vte:
+vte:

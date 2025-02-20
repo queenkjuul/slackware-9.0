@@ -1,0 +1,11 @@
+gnomeicu: gnomeicu
+gnomeicu:
+gnomeicu: GnomeICU is a clone of Mirabilis' popular ICQ written with GTK+.  The
+gnomeicu: original source was taken from Matt Smith's mICQ.  This is meant as a
+gnomeicu: replacement for the JavaICQ, which is slow and buggy.  If you would
+gnomeicu: like to contribute, please contact Jeremy Wise <jwise@pathwaynet.com>.
+gnomeicu:
+gnomeicu:
+gnomeicu:
+gnomeicu:
+gnomeicu:

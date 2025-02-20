@@ -1,0 +1,11 @@
+koffice-i18n-ca: koffice-i18n-ca
+koffice-i18n-ca:
+koffice-i18n-ca: Catalan language support for KOffice.
+koffice-i18n-ca:
+koffice-i18n-ca:
+koffice-i18n-ca:
+koffice-i18n-ca:
+koffice-i18n-ca:
+koffice-i18n-ca:
+koffice-i18n-ca:
+koffice-i18n-ca:

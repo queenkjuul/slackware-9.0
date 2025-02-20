@@ -1,0 +1,11 @@
+gnome2-user-docs: gnome2-user-docs
+gnome2-user-docs:
+gnome2-user-docs: This package contains the GNOME User's Guide and other general GNOME
+gnome2-user-docs: documentation.
+gnome2-user-docs:
+gnome2-user-docs:
+gnome2-user-docs:
+gnome2-user-docs:
+gnome2-user-docs:
+gnome2-user-docs:
+gnome2-user-docs:

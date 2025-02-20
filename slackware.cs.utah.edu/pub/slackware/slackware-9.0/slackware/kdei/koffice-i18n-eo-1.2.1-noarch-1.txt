@@ -1,0 +1,11 @@
+koffice-i18n-eo: koffice-i18n-eo
+koffice-i18n-eo:
+koffice-i18n-eo: Esperanto language support for KOffice.
+koffice-i18n-eo:
+koffice-i18n-eo:
+koffice-i18n-eo:
+koffice-i18n-eo:
+koffice-i18n-eo:
+koffice-i18n-eo:
+koffice-i18n-eo:
+koffice-i18n-eo:

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/slackware/tcl</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/slackware/tcl</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/slackware/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tcl-8.4.2-i386-1.tgz">tcl-8.4.2-i386-1.tgz</a></td><td align="right">2003-03-07 02:39  </td><td align="right">2.0M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tk-8.4.2-i386-1.tgz">tk-8.4.2-i386-1.tgz</a></td><td align="right">2003-03-07 02:50  </td><td align="right">1.8M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tix-8.1.4-i386-1.tgz">tix-8.1.4-i386-1.tgz</a></td><td align="right">2003-02-21 03:21  </td><td align="right">1.0M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tclx-8.3.5-i386-1.tgz">tclx-8.3.5-i386-1.tgz</a></td><td align="right">2003-02-21 03:49  </td><td align="right">600K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="expect-5.38-i386-2.tgz">expect-5.38-i386-2.tgz</a></td><td align="right">2003-02-28 00:05  </td><td align="right">502K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="hfsutils-3.2.6-i386-2.tgz">hfsutils-3.2.6-i386-2.tgz</a></td><td align="right">2002-10-23 04:18  </td><td align="right">206K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install-packages">install-packages</a></td><td align="right">2002-04-09 20:17  </td><td align="right">2.8K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tagfile">tagfile</a></td><td align="right">1999-04-13 02:36  </td><td align="right">1.6K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag.ez">maketag.ez</a></td><td align="right">2002-03-27 21:56  </td><td align="right">1.3K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag">maketag</a></td><td align="right">2002-03-27 21:56  </td><td align="right">1.3K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tclx-8.3.5-i386-1.txt">tclx-8.3.5-i386-1.txt</a></td><td align="right">2003-02-21 03:49  </td><td align="right">555 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="expect-5.38-i386-2.txt">expect-5.38-i386-2.txt</a></td><td align="right">2003-02-28 00:05  </td><td align="right">482 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install.end">install.end</a></td><td align="right">1999-09-29 19:20  </td><td align="right">457 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="hfsutils-3.2.6-i386-2.txt">hfsutils-3.2.6-i386-2.txt</a></td><td align="right">2002-10-23 04:18  </td><td align="right">446 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tix-8.1.4-i386-1.txt">tix-8.1.4-i386-1.txt</a></td><td align="right">2003-02-21 03:21  </td><td align="right">406 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tcl-8.4.2-i386-1.txt">tcl-8.4.2-i386-1.txt</a></td><td align="right">2003-03-07 02:39  </td><td align="right">259 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="tk-8.4.2-i386-1.txt">tk-8.4.2-i386-1.txt</a></td><td align="right">2003-03-07 02:50  </td><td align="right">198 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tk-8.4.2-i386-1.tgz.asc">tk-8.4.2-i386-1.tgz.asc</a></td><td align="right">2003-03-07 02:50  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tix-8.1.4-i386-1.tgz.asc">tix-8.1.4-i386-1.tgz.asc</a></td><td align="right">2003-02-21 03:21  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tclx-8.3.5-i386-1.tgz.asc">tclx-8.3.5-i386-1.tgz.asc</a></td><td align="right">2003-02-21 03:49  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tcl-8.4.2-i386-1.tgz.asc">tcl-8.4.2-i386-1.tgz.asc</a></td><td align="right">2003-03-07 02:39  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="hfsutils-3.2.6-i386-2.tgz.asc">hfsutils-3.2.6-i386-2.tgz.asc</a></td><td align="right">2002-10-23 04:18  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="expect-5.38-i386-2.tgz.asc">expect-5.38-i386-2.tgz.asc</a></td><td align="right">2003-02-28 00:05  </td><td align="right">189 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

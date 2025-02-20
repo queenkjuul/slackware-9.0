@@ -1,0 +1,11 @@
+gnome-utils: gnome-utils
+gnome-utils:
+gnome-utils: This package will install some GNOME utilities, such as the 
+gnome-utils: calculator, search tool, and system information overview tool.
+gnome-utils:
+gnome-utils:
+gnome-utils:
+gnome-utils:
+gnome-utils:
+gnome-utils:
+gnome-utils:

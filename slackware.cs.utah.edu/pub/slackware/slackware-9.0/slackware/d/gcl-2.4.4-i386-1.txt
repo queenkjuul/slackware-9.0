@@ -1,0 +1,11 @@
+gcl: gcl (GNU Common LISP)
+gcl:
+gcl: The GNU Common LISP system.  The GCL system contains C and Lisp source
+gcl: files to build a Common Lisp system.  The original KCL system was
+gcl: written by Taiichi Yuasa and Masami Hagiya in 1984.  The AKCL system
+gcl: work was begun in 1987 by William Schelter and continued through 1994.
+gcl: In 1994 AKCL was released as GCL (GNU Common Lisp) under the GNU
+gcl: Public Library License.  
+gcl:
+gcl: A number of people have contributed ports and pieces.
+gcl:

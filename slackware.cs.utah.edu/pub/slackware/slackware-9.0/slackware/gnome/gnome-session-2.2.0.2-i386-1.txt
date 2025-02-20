@@ -1,0 +1,11 @@
+gnome-session: gnome-session
+gnome-session:
+gnome-session: gnome-session includes the GNOME session manager, the GNOME session
+gnome-session: manager configuration program, and several other session management
+gnome-session: related utilities.
+gnome-session:
+gnome-session:
+gnome-session:
+gnome-session:
+gnome-session:
+gnome-session:

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/slackware/l</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/slackware/l</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/slackware/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-2.3.1-i386-3.tgz">glibc-2.3.1-i386-3.tgz</a></td><td align="right">2003-03-05 07:10  </td><td align="right"> 14M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-i18n-2.3.1-noarch-1.tgz">glibc-i18n-2.3.1-noarch-1.tgz</a></td><td align="right">2002-10-11 23:29  </td><td align="right">6.4M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="ncurses-5.3-i386-1.tgz">ncurses-5.3-i386-1.tgz</a></td><td align="right">2003-01-03 21:18  </td><td align="right">4.8M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gtk+2-2.2.1-i386-1.tgz">gtk+2-2.2.1-i386-1.tgz</a></td><td align="right">2003-02-05 02:35  </td><td align="right">3.6M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="aspell-en-0.51_0-noarch-1.tgz">aspell-en-0.51_0-noarch-1.tgz</a></td><td align="right">2003-01-14 00:27  </td><td align="right">1.9M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="lesstif-0.93.40-i386-1.tgz">lesstif-0.93.40-i386-1.tgz</a></td><td align="right">2003-02-27 00:21  </td><td align="right">1.8M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gtk+-1.2.10-i386-3.tgz">gtk+-1.2.10-i386-3.tgz</a></td><td align="right">2002-10-22 05:14  </td><td align="right">1.5M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libxml2-2.5.4-i386-1.tgz">libxml2-2.5.4-i386-1.tgz</a></td><td align="right">2003-02-25 21:47  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="arts-1.1-i386-2.tgz">arts-1.1-i386-2.tgz</a></td><td align="right">2003-03-16 01:21  </td><td align="right">1.3M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="db3-3.3.11-i386-3.tgz">db3-3.3.11-i386-3.tgz</a></td><td align="right">2003-03-08 20:25  </td><td align="right">1.3M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="svgalib-1.4.3-i386-2.tgz">svgalib-1.4.3-i386-2.tgz</a></td><td align="right">2002-10-22 03:48  </td><td align="right">910K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="t1lib-1.3.1-i386-2.tgz">t1lib-1.3.1-i386-2.tgz</a></td><td align="right">2002-10-22 02:13  </td><td align="right">897K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glib2-2.2.1-i386-1.tgz">glib2-2.2.1-i386-1.tgz</a></td><td align="right">2003-02-05 02:20  </td><td align="right">813K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libgr-2.0.13-i386-2.tgz">libgr-2.0.13-i386-2.tgz</a></td><td align="right">2002-10-22 02:19  </td><td align="right">761K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="orbit-0.5.17-i386-1.tgz">orbit-0.5.17-i386-1.tgz</a></td><td align="right">2002-06-08 21:09  </td><td align="right">690K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="slang-1.4.5-i386-2.tgz">slang-1.4.5-i386-2.tgz</a></td><td align="right">2002-10-22 01:52  </td><td align="right">681K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="sdl-1.2.5-i386-1.tgz">sdl-1.2.5-i386-1.tgz</a></td><td align="right">2003-01-11 05:03  </td><td align="right">656K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libtiff-3.5.7-i386-3.tgz">libtiff-3.5.7-i386-3.tgz</a></td><td align="right">2002-10-14 00:26  </td><td align="right">615K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="pilot-link-0.11.5-i386-1.tgz">pilot-link-0.11.5-i386-1.tgz</a></td><td align="right">2003-01-10 22:32  </td><td align="right">592K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libxslt-1.0.27-i386-1.tgz">libxslt-1.0.27-i386-1.tgz</a></td><td align="right">2003-02-25 22:04  </td><td align="right">546K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="pango-1.2.1-i386-2.tgz">pango-1.2.1-i386-2.tgz</a></td><td align="right">2003-03-03 00:22  </td><td align="right">447K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libpng-1.2.5-i386-1.tgz">libpng-1.2.5-i386-1.tgz</a></td><td align="right">2002-10-14 00:17  </td><td align="right">420K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="aspell-0.50.3-i386-3.tgz">aspell-0.50.3-i386-3.tgz</a></td><td align="right">2003-02-10 07:18  </td><td align="right">419K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libjpeg-6b-i386-4.tgz">libjpeg-6b-i386-4.tgz</a></td><td align="right">2003-02-13 23:20  </td><td align="right">376K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gmp-4.1.2-i386-1.tgz">gmp-4.1.2-i386-1.tgz</a></td><td align="right">2003-01-12 19:51  </td><td align="right">366K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="readline-4.3-i386-2.tgz">readline-4.3-i386-2.tgz</a></td><td align="right">2002-10-16 23:22  </td><td align="right">345K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gdk-pixbuf-0.17.0-i386-1.tgz">gdk-pixbuf-0.17.0-i386-1.tgz</a></td><td align="right">2002-05-06 01:30  </td><td align="right">330K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="db2-2.4.14-i386-1.tgz">db2-2.4.14-i386-1.tgz</a></td><td align="right">2002-10-12 07:56  </td><td align="right">302K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="aalib-1.4rc5-i386-1.tgz">aalib-1.4rc5-i386-1.tgz</a></td><td align="right">2002-10-22 03:05  </td><td align="right">195K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glib-1.2.10-i386-2.tgz">glib-1.2.10-i386-2.tgz</a></td><td align="right">2002-10-22 04:48  </td><td align="right">181K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xaw3d-1.5-i386-3.tgz">xaw3d-1.5-i386-3.tgz</a></td><td align="right">2002-10-22 02:47  </td><td align="right">166K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="audiofile-0.2.3-i386-3.tgz">audiofile-0.2.3-i386-3.tgz</a></td><td align="right">2002-10-22 02:57  </td><td align="right">160K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="pcre-3.9-i386-2.tgz">pcre-3.9-i386-2.tgz</a></td><td align="right">2002-10-14 00:37  </td><td align="right">149K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="atk-1.2.2-i386-1.tgz">atk-1.2.2-i386-1.tgz</a></td><td align="right">2003-01-20 21:14  </td><td align="right">147K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="expat-1.95.5-i386-1.tgz">expat-1.95.5-i386-1.tgz</a></td><td align="right">2003-01-11 00:16  </td><td align="right">147K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libglade-2.0.1-i386-1.tgz">libglade-2.0.1-i386-1.tgz</a></td><td align="right">2003-01-16 22:20  </td><td align="right">141K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gnet-1.1.8-i386-1.tgz">gnet-1.1.8-i386-1.tgz</a></td><td align="right">2003-01-17 09:06  </td><td align="right">133K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="esound-0.2.29-i386-1.tgz">esound-0.2.29-i386-1.tgz</a></td><td align="right">2002-10-24 23:03  </td><td align="right">123K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libart_lgpl-2.3.11-i386-1.tgz">libart_lgpl-2.3.11-i386-1.tgz</a></td><td align="right">2003-01-09 22:58  </td><td align="right">123K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libungif-4.1.0b1-i386-4.tgz">libungif-4.1.0b1-i386-4.tgz</a></td><td align="right">2002-10-22 02:43  </td><td align="right">116K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="mpeg_lib-1.3.1-i386-2.tgz">mpeg_lib-1.3.1-i386-2.tgz</a></td><td align="right">2002-10-22 02:10  </td><td align="right"> 89K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="db1-1.85-i386-1.tgz">db1-1.85-i386-1.tgz</a></td><td align="right">2002-10-12 07:58  </td><td align="right"> 88K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="zlib-1.1.4-i386-3.tgz">zlib-1.1.4-i386-3.tgz</a></td><td align="right">2002-12-12 20:10  </td><td align="right"> 79K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libieee1284-0.2.6-i386-2.tgz">libieee1284-0.2.6-i386-2.tgz</a></td><td align="right">2003-02-10 07:30  </td><td align="right"> 75K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libtermcap-1.2.3-i386-5.tgz">libtermcap-1.2.3-i386-5.tgz</a></td><td align="right">2003-02-27 19:44  </td><td align="right"> 60K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gdbm-1.8.0-i386-3.tgz">gdbm-1.8.0-i386-3.tgz</a></td><td align="right">2002-10-22 02:23  </td><td align="right"> 58K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="popt-1.7-i386-1.tgz">popt-1.7-i386-1.tgz</a></td><td align="right">2003-02-22 21:51  </td><td align="right"> 51K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libusb-0.1.7-i386-1.tgz">libusb-0.1.7-i386-1.tgz</a></td><td align="right">2003-01-10 20:30  </td><td align="right"> 39K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag.ez">maketag.ez</a></td><td align="right">2003-03-05 21:04  </td><td align="right">4.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="maketag">maketag</a></td><td align="right">2003-03-05 21:04  </td><td align="right">4.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install-packages">install-packages</a></td><td align="right">2002-04-09 20:17  </td><td align="right">2.8K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="aalib-1.4rc5-i386-1.txt">aalib-1.4rc5-i386-1.txt</a></td><td align="right">2002-10-22 03:05  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libjpeg-6b-i386-4.txt">libjpeg-6b-i386-4.txt</a></td><td align="right">2003-02-13 23:20  </td><td align="right">662 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="svgalib-1.4.3-i386-2.txt">svgalib-1.4.3-i386-2.txt</a></td><td align="right">2002-10-22 03:48  </td><td align="right">616 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="popt-1.7-i386-1.txt">popt-1.7-i386-1.txt</a></td><td align="right">2003-02-22 21:51  </td><td align="right">592 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="tagfile">tagfile</a></td><td align="right">2003-03-19 23:08  </td><td align="right">578 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="gdk-pixbuf-0.17.0-i386-1.txt">gdk-pixbuf-0.17.0-i386-1.txt</a></td><td align="right">2002-05-06 01:30  </td><td align="right">562 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="readline-4.3-i386-2.txt">readline-4.3-i386-2.txt</a></td><td align="right">2002-10-16 23:22  </td><td align="right">559 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="orbit-0.5.17-i386-1.txt">orbit-0.5.17-i386-1.txt</a></td><td align="right">2002-06-08 21:09  </td><td align="right">548 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="sdl-1.2.5-i386-1.txt">sdl-1.2.5-i386-1.txt</a></td><td align="right">2003-01-11 05:03  </td><td align="right">532 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="lesstif-0.93.40-i386-1.txt">lesstif-0.93.40-i386-1.txt</a></td><td align="right">2003-02-27 00:21  </td><td align="right">526 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xaw3d-1.5-i386-3.txt">xaw3d-1.5-i386-3.txt</a></td><td align="right">2002-10-22 02:47  </td><td align="right">519 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="slang-1.4.5-i386-2.txt">slang-1.4.5-i386-2.txt</a></td><td align="right">2002-10-22 01:52  </td><td align="right">507 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="esound-0.2.29-i386-1.txt">esound-0.2.29-i386-1.txt</a></td><td align="right">2002-10-24 23:03  </td><td align="right">505 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libpng-1.2.5-i386-1.txt">libpng-1.2.5-i386-1.txt</a></td><td align="right">2002-10-14 00:17  </td><td align="right">492 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install.end">install.end</a></td><td align="right">1999-09-29 19:20  </td><td align="right">457 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libtermcap-1.2.3-i386-5.txt">libtermcap-1.2.3-i386-5.txt</a></td><td align="right">2003-02-27 19:44  </td><td align="right">455 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libart_lgpl-2.3.11-i386-1.txt">libart_lgpl-2.3.11-i386-1.txt</a></td><td align="right">2003-01-09 22:58  </td><td align="right">433 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="arts-1.1-i386-2.txt">arts-1.1-i386-2.txt</a></td><td align="right">2003-03-16 01:21  </td><td align="right">422 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libglade-2.0.1-i386-1.txt">libglade-2.0.1-i386-1.txt</a></td><td align="right">2003-01-16 22:20  </td><td align="right">403 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ncurses-5.3-i386-1.txt">ncurses-5.3-i386-1.txt</a></td><td align="right">2003-01-03 21:18  </td><td align="right">399 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="db3-3.3.11-i386-3.txt">db3-3.3.11-i386-3.txt</a></td><td align="right">2003-03-08 20:25  </td><td align="right">395 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="db2-2.4.14-i386-1.txt">db2-2.4.14-i386-1.txt</a></td><td align="right">2002-10-12 07:56  </td><td align="right">395 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="db1-1.85-i386-1.txt">db1-1.85-i386-1.txt</a></td><td align="right">2002-10-12 07:58  </td><td align="right">395 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="pango-1.2.1-i386-2.txt">pango-1.2.1-i386-2.txt</a></td><td align="right">2003-03-03 00:22  </td><td align="right">392 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="glibc-2.3.1-i386-3.txt">glibc-2.3.1-i386-3.txt</a></td><td align="right">2003-03-05 07:10  </td><td align="right">389 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="pilot-link-0.11.5-i386-1.txt">pilot-link-0.11.5-i386-1.txt</a></td><td align="right">2003-01-10 22:32  </td><td align="right">387 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="gtk+-1.2.10-i386-3.txt">gtk+-1.2.10-i386-3.txt</a></td><td align="right">2002-10-22 05:14  </td><td align="right">386 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="gmp-4.1.2-i386-1.txt">gmp-4.1.2-i386-1.txt</a></td><td align="right">2003-01-12 19:51  </td><td align="right">377 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="pcre-3.9-i386-2.txt">pcre-3.9-i386-2.txt</a></td><td align="right">2002-10-14 00:37  </td><td align="right">364 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="zlib-1.1.4-i386-3.txt">zlib-1.1.4-i386-3.txt</a></td><td align="right">2002-12-12 20:10  </td><td align="right">359 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="t1lib-1.3.1-i386-2.txt">t1lib-1.3.1-i386-2.txt</a></td><td align="right">2002-10-22 02:13  </td><td align="right">357 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libieee1284-0.2.6-i386-2.txt">libieee1284-0.2.6-i386-2.txt</a></td><td align="right">2003-02-10 07:30  </td><td align="right">356 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="glibc-i18n-2.3.1-noarch-1.txt">glibc-i18n-2.3.1-noarch-1.txt</a></td><td align="right">2002-10-11 23:29  </td><td align="right">333 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="audiofile-0.2.3-i386-3.txt">audiofile-0.2.3-i386-3.txt</a></td><td align="right">2002-10-22 02:57  </td><td align="right">315 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="gtk+2-2.2.1-i386-1.txt">gtk+2-2.2.1-i386-1.txt</a></td><td align="right">2003-02-05 02:35  </td><td align="right">306 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libgr-2.0.13-i386-2.txt">libgr-2.0.13-i386-2.txt</a></td><td align="right">2002-10-22 02:19  </td><td align="right">300 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libtiff-3.5.7-i386-3.txt">libtiff-3.5.7-i386-3.txt</a></td><td align="right">2002-10-14 00:26  </td><td align="right">292 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="glib-1.2.10-i386-2.txt">glib-1.2.10-i386-2.txt</a></td><td align="right">2002-10-22 04:48  </td><td align="right">277 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="gnet-1.1.8-i386-1.txt">gnet-1.1.8-i386-1.txt</a></td><td align="right">2003-01-17 09:06  </td><td align="right">274 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="aspell-0.50.3-i386-3.txt">aspell-0.50.3-i386-3.txt</a></td><td align="right">2003-02-10 07:18  </td><td align="right">251 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libxslt-1.0.27-i386-1.txt">libxslt-1.0.27-i386-1.txt</a></td><td align="right">2003-02-25 22:04  </td><td align="right">248 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libusb-0.1.7-i386-1.txt">libusb-0.1.7-i386-1.txt</a></td><td align="right">2003-01-10 20:30  </td><td align="right">246 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libungif-4.1.0b1-i386-4.txt">libungif-4.1.0b1-i386-4.txt</a></td><td align="right">2002-10-22 02:43  </td><td align="right">238 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="expat-1.95.5-i386-1.txt">expat-1.95.5-i386-1.txt</a></td><td align="right">2003-01-11 00:16  </td><td align="right">236 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="glib2-2.2.1-i386-1.txt">glib2-2.2.1-i386-1.txt</a></td><td align="right">2003-02-05 02:20  </td><td align="right">235 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="mpeg_lib-1.3.1-i386-2.txt">mpeg_lib-1.3.1-i386-2.txt</a></td><td align="right">2002-10-22 02:10  </td><td align="right">222 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="aspell-en-0.51_0-noarch-1.txt">aspell-en-0.51_0-noarch-1.txt</a></td><td align="right">2003-01-14 00:27  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="zlib-1.1.4-i386-3.tgz.asc">zlib-1.1.4-i386-3.tgz.asc</a></td><td align="right">2002-12-12 20:10  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xaw3d-1.5-i386-3.tgz.asc">xaw3d-1.5-i386-3.tgz.asc</a></td><td align="right">2002-10-22 02:47  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="t1lib-1.3.1-i386-2.tgz.asc">t1lib-1.3.1-i386-2.tgz.asc</a></td><td align="right">2002-10-22 02:13  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="svgalib-1.4.3-i386-2.tgz.asc">svgalib-1.4.3-i386-2.tgz.asc</a></td><td align="right">2002-10-22 03:48  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slang-1.4.5-i386-2.tgz.asc">slang-1.4.5-i386-2.tgz.asc</a></td><td align="right">2002-10-22 01:52  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sdl-1.2.5-i386-1.tgz.asc">sdl-1.2.5-i386-1.tgz.asc</a></td><td align="right">2003-01-11 05:03  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="readline-4.3-i386-2.tgz.asc">readline-4.3-i386-2.tgz.asc</a></td><td align="right">2002-10-16 23:22  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="popt-1.7-i386-1.tgz.asc">popt-1.7-i386-1.tgz.asc</a></td><td align="right">2003-02-22 21:51  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="pilot-link-0.11.5-i386-1.tgz.asc">pilot-link-0.11.5-i386-1.tgz.asc</a></td><td align="right">2003-01-10 22:32  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="pcre-3.9-i386-2.tgz.asc">pcre-3.9-i386-2.tgz.asc</a></td><td align="right">2002-10-14 00:37  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="pango-1.2.1-i386-2.tgz.asc">pango-1.2.1-i386-2.tgz.asc</a></td><td align="right">2003-03-03 00:22  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="orbit-0.5.17-i386-1.tgz.asc">orbit-0.5.17-i386-1.tgz.asc</a></td><td align="right">2002-06-08 21:09  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ncurses-5.3-i386-1.tgz.asc">ncurses-5.3-i386-1.tgz.asc</a></td><td align="right">2003-01-03 21:18  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="mpeg_lib-1.3.1-i386-2.tgz.asc">mpeg_lib-1.3.1-i386-2.tgz.asc</a></td><td align="right">2002-10-22 02:10  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libxslt-1.0.27-i386-1.tgz.asc">libxslt-1.0.27-i386-1.tgz.asc</a></td><td align="right">2003-02-25 22:04  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libxml2-2.5.4-i386-1.tgz.asc">libxml2-2.5.4-i386-1.tgz.asc</a></td><td align="right">2003-02-25 21:47  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libusb-0.1.7-i386-1.tgz.asc">libusb-0.1.7-i386-1.tgz.asc</a></td><td align="right">2003-01-10 20:30  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libungif-4.1.0b1-i386-4.tgz.asc">libungif-4.1.0b1-i386-4.tgz.asc</a></td><td align="right">2002-10-22 02:43  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libtiff-3.5.7-i386-3.tgz.asc">libtiff-3.5.7-i386-3.tgz.asc</a></td><td align="right">2002-10-14 00:26  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libtermcap-1.2.3-i386-5.tgz.asc">libtermcap-1.2.3-i386-5.tgz.asc</a></td><td align="right">2003-02-27 19:44  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libpng-1.2.5-i386-1.tgz.asc">libpng-1.2.5-i386-1.tgz.asc</a></td><td align="right">2002-10-14 00:17  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libjpeg-6b-i386-4.tgz.asc">libjpeg-6b-i386-4.tgz.asc</a></td><td align="right">2003-02-13 23:20  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libieee1284-0.2.6-i386-2.tgz.asc">libieee1284-0.2.6-i386-2.tgz.asc</a></td><td align="right">2003-02-10 07:30  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libgr-2.0.13-i386-2.tgz.asc">libgr-2.0.13-i386-2.tgz.asc</a></td><td align="right">2002-10-22 02:19  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libglade-2.0.1-i386-1.tgz.asc">libglade-2.0.1-i386-1.tgz.asc</a></td><td align="right">2003-01-16 22:20  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="libart_lgpl-2.3.11-i386-1.tgz.asc">libart_lgpl-2.3.11-i386-1.tgz.asc</a></td><td align="right">2003-01-09 22:58  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="lesstif-0.93.40-i386-1.tgz.asc">lesstif-0.93.40-i386-1.tgz.asc</a></td><td align="right">2003-02-27 00:21  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gtk+2-2.2.1-i386-1.tgz.asc">gtk+2-2.2.1-i386-1.tgz.asc</a></td><td align="right">2003-02-05 02:35  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gtk+-1.2.10-i386-3.tgz.asc">gtk+-1.2.10-i386-3.tgz.asc</a></td><td align="right">2002-10-22 05:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gnet-1.1.8-i386-1.tgz.asc">gnet-1.1.8-i386-1.tgz.asc</a></td><td align="right">2003-01-17 09:06  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gmp-4.1.2-i386-1.tgz.asc">gmp-4.1.2-i386-1.tgz.asc</a></td><td align="right">2003-01-12 19:51  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glibc-i18n-2.3.1-noarch-1.tgz.asc">glibc-i18n-2.3.1-noarch-1.tgz.asc</a></td><td align="right">2002-10-11 23:29  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glibc-2.3.1-i386-3.tgz.asc">glibc-2.3.1-i386-3.tgz.asc</a></td><td align="right">2003-03-05 07:10  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glib2-2.2.1-i386-1.tgz.asc">glib2-2.2.1-i386-1.tgz.asc</a></td><td align="right">2003-02-05 02:20  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glib-1.2.10-i386-2.tgz.asc">glib-1.2.10-i386-2.tgz.asc</a></td><td align="right">2002-10-22 04:48  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gdk-pixbuf-0.17.0-i386-1.tgz.asc">gdk-pixbuf-0.17.0-i386-1.tgz.asc</a></td><td align="right">2002-05-06 01:30  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gdbm-1.8.0-i386-3.tgz.asc">gdbm-1.8.0-i386-3.tgz.asc</a></td><td align="right">2002-10-22 02:23  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="expat-1.95.5-i386-1.tgz.asc">expat-1.95.5-i386-1.tgz.asc</a></td><td align="right">2003-01-11 00:16  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="esound-0.2.29-i386-1.tgz.asc">esound-0.2.29-i386-1.tgz.asc</a></td><td align="right">2002-10-24 23:03  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="db3-3.3.11-i386-3.tgz.asc">db3-3.3.11-i386-3.tgz.asc</a></td><td align="right">2003-03-08 20:25  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="db2-2.4.14-i386-1.tgz.asc">db2-2.4.14-i386-1.tgz.asc</a></td><td align="right">2002-10-12 07:56  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="db1-1.85-i386-1.tgz.asc">db1-1.85-i386-1.tgz.asc</a></td><td align="right">2002-10-12 07:58  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="audiofile-0.2.3-i386-3.tgz.asc">audiofile-0.2.3-i386-3.tgz.asc</a></td><td align="right">2002-10-22 02:57  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="atk-1.2.2-i386-1.tgz.asc">atk-1.2.2-i386-1.tgz.asc</a></td><td align="right">2003-01-20 21:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="aspell-en-0.51_0-noarch-1.tgz.asc">aspell-en-0.51_0-noarch-1.tgz.asc</a></td><td align="right">2003-01-14 00:27  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="aspell-0.50.3-i386-3.tgz.asc">aspell-0.50.3-i386-3.tgz.asc</a></td><td align="right">2003-02-10 07:18  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="arts-1.1-i386-2.tgz.asc">arts-1.1-i386-2.tgz.asc</a></td><td align="right">2003-03-16 01:21  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="aalib-1.4rc5-i386-1.tgz.asc">aalib-1.4rc5-i386-1.tgz.asc</a></td><td align="right">2002-10-22 03:05  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="gdbm-1.8.0-i386-3.txt">gdbm-1.8.0-i386-3.txt</a></td><td align="right">2002-10-22 02:23  </td><td align="right">186 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="libxml2-2.5.4-i386-1.txt">libxml2-2.5.4-i386-1.txt</a></td><td align="right">2003-02-25 21:47  </td><td align="right">184 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="atk-1.2.2-i386-1.txt">atk-1.2.2-i386-1.txt</a></td><td align="right">2003-01-20 21:14  </td><td align="right">118 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>
