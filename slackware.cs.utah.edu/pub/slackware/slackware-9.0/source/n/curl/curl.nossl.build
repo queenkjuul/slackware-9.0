@@ -1,0 +1,21 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+
+VERSION=7.10.3
+
+cd $TMP
+tar xjvf $CWD/curl-$VERSION.tar.bz2
+cd curl-$VERSION
+CFLAGS=-O2 ./configure --prefix=/usr --without-ssl
+make
+make install
+mkdir -p /usr/doc/curl-$VERSION
+cp -a CHANGES COPYING README UPGRADE /usr/doc/curl-$VERSION
+( cd docs
+  rm -rf Makefile* curl-config.1 curl-config.html curl.1 curl.html libcurl
+  cp -a BUGS CONTRIBUTE FAQ FEATURES INSTALL INTERNALS MANUAL README.win32 RESOURCES THANKS TODO examples \
+  /usr/doc/curl-$VERSION )
+chown -R root.root /usr/doc/curl-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

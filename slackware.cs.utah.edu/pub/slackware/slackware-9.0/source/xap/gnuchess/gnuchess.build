@@ -1,0 +1,45 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=4.0.pl80
+XBOARD=4.0.7
+# Build/install GNU chess:
+cd /tmp
+tar xzvf $CWD/gnuchess-$VERSION.tar.gz
+cd gnuchess-$VERSION
+zcat $CWD/gnuchess.booksize.diff.gz | patch -p1 --backup --suffix=.orig --verbose
+( cd src
+  ./configure --prefix=/usr --libdir=/usr/share/games/gnuchess
+  make LIBDIR=/usr/share/games/gnuchess
+  mkdir -p /usr/share/games/gnuchess
+  make LIBDIR=/usr/share/games/gnuchess install
+  mkdir -p /usr/doc/gnuchess-$VERSION )
+( cd doc
+  cp -a ARTICLE ARTICLE.2 CHANGES CHESSTOOL COPYING ChangeLog FAQ GENERAL \
+  HEURISTICS INSTALL.to.delete MOVE-GEN PORTING README.font README.output \
+  TODO /usr/doc/gnuchess-$VERSION
+  cat game.6 > /usr/man/man6/game.6
+  cat gnuan.6 > /usr/man/man6/gnuan.6
+  cat gnuchess.6 > /usr/man/man6/gnuchess.6
+  cat postprint.6 > /usr/man/man6/postprint.6 )
+chown root.root /usr/doc/gnuchess-$VERSION/*
+chmod 644 /usr/doc/gnuchess-$VERSION/*
+chmod 644 /usr/share/games/gnuchess/*
+# Build/install xboard:
+cd /tmp
+tar xzvf $CWD/xboard-$XBOARD.tar.gz
+cd xboard-$XBOARD
+./configure --prefix=/usr/X11R6 --infodir=/usr/info --enable-zippy
+make install
+mkdir -p /usr/doc/xboard-$XBOARD
+cp -a \
+  COPYING COPYRIGHT FAQ FAQ.html INSTALL READ_ME ToDo zippy.README \
+  /usr/doc/xboard-$XBOARD
+chmod 644 /usr/doc/xboard-$XBOARD/*
+chown root.root /usr/doc/xboard-$XBOARD/*
+# Grrrr!
+rm /usr/X11R6/info/dir
+mv /usr/X11R6/info/xboard.info /usr/info
+rmdir /usr/X11R6/info 2> /dev/null
+gzip -9 --force /usr/info/xboard.info
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

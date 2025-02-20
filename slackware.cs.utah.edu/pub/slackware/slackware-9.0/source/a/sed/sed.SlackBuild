@@ -1,0 +1,64 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-sed
+
+VERSION=4.0.5
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+cd $TMP
+tar xjvf $CWD/sed-$VERSION.tar.bz2
+cd sed-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr i386-slackware-linux
+make
+strip sed/sed
+mkdir -p $PKG/bin
+cat sed/sed > $PKG/bin/sed
+chown -R root.bin $PKG/bin
+chmod 755 $PKG/bin/sed
+mkdir -p $PKG/usr/bin
+( cd $PKG/usr/bin
+  ln -sf /bin/sed .
+)
+mkdir -p $PKG/usr/info
+for file in sed.info sed.info-1 sed.info-2 ; do
+  cat doc/$file | gzip -9c > $PKG/usr/info/$file.gz
+done
+( cd po
+  for locale in *.gmo ; do
+    mkdir -p $PKG/usr/share/locale/`basename $locale .gmo`/LC_MESSAGES
+    cat $locale > $PKG/usr/share/locale/`basename $locale .gmo`/LC_MESSAGES/sed.mo
+  done
+)
+mkdir -p $PKG/usr/man/man1
+cat doc/sed.1 | gzip -9c > $PKG/usr/man/man1/sed.1.gz
+mkdir -p $PKG/usr/doc/sed-$VERSION
+cp -a \
+  ANNOUNCE AUTHORS BUGS COPYING* INSTALL NEWS README README.boot THANKS TODO \
+  $PKG/usr/doc/sed-$VERSION
+chmod 644 $PKG/usr/doc/sed-$VERSION/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/sed-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/sed-$VERSION
+  rm -rf $PKG
+fi

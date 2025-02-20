@@ -1,0 +1,36 @@
+CWD=`pwd`
+PKG=/tmp/package-aspell
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=0.50.3
+ARCH=i386
+BUILD=3
+
+cd /tmp
+tar xzvf $CWD/aspell-$VERSION.tar.gz
+cd aspell-$VERSION
+chown -R root.root .
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr
+make
+make install
+ldconfig
+make install DESTDIR=$PKG
+chown -R root.bin $PKG/usr/bin
+( cd $PKG
+  find . | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+mkdir -p $PKG/usr/doc/aspell-$VERSION
+cp -a \
+  COPYING README TODO \
+  $PKG/usr/doc/aspell-$VERSION
+mv $PKG/usr/share/doc/aspell/*html $PKG/usr/doc/aspell-$VERSION
+rm -rf $PKG/usr/share/doc
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-aspell
+makepkg -l y -c n ../aspell-$VERSION-$ARCH-$BUILD.tgz

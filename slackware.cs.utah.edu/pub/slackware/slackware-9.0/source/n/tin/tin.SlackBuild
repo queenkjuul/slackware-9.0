@@ -1,0 +1,69 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-tin
+
+VERSION=1.5.16
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_tin.tar.gz
+
+echo "+===========+"
+echo "| tin-$VERSION |"
+echo "+===========+"
+cd $TMP
+tar xjvf $CWD/tin-$VERSION.tar.bz2
+cd tin-$VERSION
+./configure --prefix=/usr \
+  --with-metamail=/usr/bin/metamail \
+  --with-ispell=/usr/bin/ispell \
+  --with-ncurses \
+  --with-defaults-dir=/etc/tin \
+  --with-libdir=/var/lib/news
+  #--enable-color (shouldn't be needed)
+make clean
+make build
+strip src/tin
+cat src/tin > $PKG/usr/bin/tin
+cat doc/tin.1 | gzip -9c > $PKG/usr/man/man1/tin.1.gz
+mkdir -p $PKG/usr/man/man4
+cat doc/tin.5 | gzip -9c > $PKG/usr/man/man5/tin.5.gz
+cat doc/tin.defaults > $PKG/etc/tin/tin.defaults
+mkdir -p $PKG/usr/doc/tin-$VERSION
+cp -a MANIFEST README* doc/* $PKG/usr/doc/tin-$VERSION
+chown root.root $PKG/usr/doc/tin-$VERSION/*
+chmod 644 $PKG/usr/doc/tin-$VERSION/*
+mkdir -p $PKG/usr/doc/tin-$VERSION/tools
+( cd tools
+  cp -a metamutt opt-case.pl url_handler.sh w2r.pl $PKG/usr/doc/tin-$VERSION/tools
+  chown root.root $PKG/usr/doc/tin-$VERSION/tools/*
+  chmod 755 $PKG/usr/doc/tin-$VERSION/tools/* )
+( cd $PKG/usr/doc/tin-$VERSION
+  mv opt-case.pl.1 w2r.pl.1 tools )
+# These are elsewhere:
+rm $PKG/usr/doc/tin-$VERSION/tin.{1,5}
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/tin-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/tin-$VERSION
+  rm -rf $PKG
+fi

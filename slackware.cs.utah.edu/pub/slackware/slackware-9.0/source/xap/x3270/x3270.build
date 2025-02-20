@@ -1,0 +1,19 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=3.2.18p11
+cd /tmp
+tar xzvf $CWD/x3270-$VERSION.tar.gz
+cd `echo x3270-$VERSION | cut -f 1-2 -d .`
+./configure --prefix=/usr/X11R6
+make
+make install
+for file in x3270-script.man x3270.man x3270if.man ; do
+  cat $file | gzip -9c > /usr/X11R6/man/man1/`basename $file .man`.1.gz
+done
+cat ibm_hosts.man | gzip -9c > /usr/X11R6/man/man5/ibm_hosts.5.gz
+cat X3270.xad > /etc/X11/app-defaults/X3270
+mkdir -p /usr/doc/x3270-$VERSION
+cp -a README* Examples html /usr/doc/x3270-$VERSION
+chown -R root.root /usr/doc/x3270-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

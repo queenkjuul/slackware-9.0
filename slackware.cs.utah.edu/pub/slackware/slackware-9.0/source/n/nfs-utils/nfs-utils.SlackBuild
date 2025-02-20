@@ -1,0 +1,90 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-nfs-utils
+
+VERSION=1.0.1
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_nfs-utils.tar.gz
+
+echo "+=================+"
+echo "| nfs-utils-$VERSION |"
+echo "+=================+"
+cd $TMP
+tar xzvf $CWD/nfs-utils-$VERSION.tar.gz
+cd nfs-utils-$VERSION
+CFLAGS=-O2 ./configure \
+  --prefix=/usr \
+  --with-statedir=/var/lib/nfs \
+  --enable-nfsv3 \
+  --enable-secure-statd \
+  --program-prefix= \
+  --program-suffix= \
+  i386-slackware-linux
+make
+strip utils/exportfs/exportfs
+cat utils/exportfs/exportfs > $PKG/usr/sbin/exportfs
+cat utils/exportfs/exportfs.man | gzip -9c > $PKG/usr/man/man8/exportfs.8.gz
+cat utils/exportfs/exports.man | gzip -9c > $PKG/usr/man/man5/exports.5.gz
+strip utils/lockd/lockd
+cat utils/lockd/lockd > $PKG/usr/sbin/rpc.lockd
+cat utils/lockd/lockd.man | gzip -9c > $PKG/usr/man/man8/lockd.8.gz
+strip utils/mountd/mountd
+cat utils/mountd/mountd > $PKG/usr/sbin/rpc.mountd
+cat utils/mountd/mountd.man | gzip -9c > $PKG/usr/man/man8/mountd.8.gz
+strip utils/nfsd/nfsd
+cat utils/nfsd/nfsd > $PKG/usr/sbin/rpc.nfsd
+cat utils/nfsd/nfsd.man | gzip -9c > $PKG/usr/man/man8/nfsd.8.gz
+strip utils/nfsstat/nfsstat
+cat utils/nfsstat/nfsstat > $PKG/usr/sbin/nfsstat
+cat utils/nfsstat/nfsstat.man | gzip -9c > $PKG/usr/man/man8/nfsstat.8.gz
+strip utils/nhfsstone/nhfsstone
+cat utils/nhfsstone/nhfsgraph > $PKG/usr/sbin/nhfsgraph
+cat utils/nhfsstone/nhfsnums > $PKG/usr/sbin/nhfsnums
+cat utils/nhfsstone/nhfsrun > $PKG/usr/sbin/nhfsrun
+cat utils/nhfsstone/nhfsstone > $PKG/usr/sbin/nhfsstone
+cat utils/nhfsstone/nhfsgraph.man | gzip -9c > $PKG/usr/man/man8/nhfsgraph.8.gz
+cat utils/nhfsstone/nhfsnums.man | gzip -9c > $PKG/usr/man/man8/nhfsnums.8.gz
+cat utils/nhfsstone/nhfsrun.man | gzip -9c > $PKG/usr/man/man8/nhfsrun.8.gz
+cat utils/nhfsstone/nhfsstone.man | gzip -9c > $PKG/usr/man/man8/nhfsstone.8.gz
+mkdir -p $PKG/usr/doc/nfs-utils-$VERSION/nhfsstone
+cp -a utils/nhfsstone/DISCLAIMER utils/nhfsstone/README utils/nhfsstone/README.linux \
+  $PKG/usr/doc/nfs-utils-$VERSION/nhfsstone
+strip utils/showmount/showmount
+cat utils/showmount/showmount > $PKG/usr/sbin/showmount
+cat utils/showmount/showmount.man | gzip -9c > $PKG/usr/man/man8/showmount.8.gz
+strip utils/statd/statd
+cat utils/statd/statd > $PKG/usr/sbin/rpc.statd
+cat utils/statd/statd.man | gzip -9c > $PKG/usr/man/man8/statd.8.gz
+mkdir -p $PKG/usr/doc/nfs-utils-$VERSION/statd
+cp -a utils/statd/COPYING utils/statd/COPYRIGHT utils/statd/TODO $PKG/usr/doc/nfs-utils-$VERSION/statd
+cp -a COPYING ChangeLog README linux-nfs $PKG/usr/doc/nfs-utils-$VERSION
+find $PKG/usr/doc/nfs-utils-$VERSION -type d -exec chmod 755 {} \;
+find $PKG/usr/doc/nfs-utils-$VERSION -type f -exec chmod 644 {} \;
+chown -R root.root $PKG/usr/doc/nfs-utils-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/nfs-utils-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+ rm -rf $TMP/nfs-utils-$VERSION
+ rm -rf $PKG
+fi

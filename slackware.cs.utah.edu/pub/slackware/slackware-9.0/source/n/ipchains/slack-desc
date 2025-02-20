@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+ipchains: ipchains
+ipchains:
+ipchains: These are tools for setting up a firewall or masquerading with a 
+ipchains: 2.2.x Linux kernel, or a 2.4.x kernel with the ipchains module.  This
+ipchains: might be useful if you have old ipchains or ipfwadm based firewall
+ipchains: scripts that you'd like to continue using, but most users should use
+ipchains: iptables instead.
+ipchains:
+ipchains:
+ipchains:
+ipchains:

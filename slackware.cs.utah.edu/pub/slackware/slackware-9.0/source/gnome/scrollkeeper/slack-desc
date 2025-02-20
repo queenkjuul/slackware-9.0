@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+            |-----handy-ruler------------------------------------------------------|
+scrollkeeper: scrollkeeper
+scrollkeeper:
+scrollkeeper: ScrollKeeper is a cataloging system for documentation. It manages
+scrollkeeper: documentation metadata as specified by the Open Source Metadata
+scrollkeeper: Framework (OMF) and provides a simple API to allow help browsers to
+scrollkeeper: find, sort, and search the document catalog. It will also be able to
+scrollkeeper: communicate with catalog servers on the Net to search for documents
+scrollkeeper: which are not on the local system.
+scrollkeeper:
+scrollkeeper:
+scrollkeeper:

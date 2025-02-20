@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+           |-----handy-ruler------------------------------------------------------|
+gnome-audio: gnome-audio
+gnome-audio:
+gnome-audio: This package contains extra sound files useful for customizing the
+gnome-audio: sounds that the GNOME desktop environment makes.  If you use the 
+gnome-audio: GNOME desktop environment, you may want to install this package of
+gnome-audio: complementary sounds.
+gnome-audio:
+gnome-audio:
+gnome-audio:
+gnome-audio:
+gnome-audio:

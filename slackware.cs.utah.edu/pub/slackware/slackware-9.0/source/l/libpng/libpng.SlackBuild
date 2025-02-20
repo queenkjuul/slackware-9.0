@@ -1,0 +1,28 @@
+CWD=`pwd`
+PKG=/tmp/package-libpng
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=1.2.5
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xjvf $CWD/libpng-$VERSION.tar.bz2
+cd libpng-$VERSION
+ln -s scripts/makefile.linux ./Makefile
+make prefix=/usr
+make install prefix=/usr DESTDIR=/tmp/package-libpng
+chown -R root.bin /tmp/package-libpng/usr/bin
+gzip -9 /tmp/package-libpng/usr/man/man?/*
+mkdir -p /tmp/package-libpng/usr/doc/libpng-$VERSION
+cp -a ANNOUNCE CHANGES INSTALL KNOWNBUG LICENSE README TODO Y2KINFO libpng.txt \
+  example.c /tmp/package-libpng/usr/doc/libpng-$VERSION
+chmod 644 /tmp/package-libpng/usr/doc/libpng-$VERSION/*
+chown root.root /tmp/package-libpng/usr/doc/libpng-$VERSION/*
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-libpng
+makepkg -l y -c n ../libpng-$VERSION-$ARCH-$BUILD.tgz

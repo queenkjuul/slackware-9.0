@@ -1,0 +1,81 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-ppp
+
+VERSION=2.4.1
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_ppp.tar.gz
+
+echo "+============+"
+echo "| ppp-$VERSION |"
+echo "+============+"
+cd $TMP
+tar xzvf $CWD/ppp-$VERSION.tar.gz
+cd ppp-$VERSION
+# Add callback support:
+zcat $CWD/ppp-cbcp.diff.gz | patch -p0 --backup --suffix=.orig
+zcat $CWD/ppp.time.diff.gz | patch -p1 --backup --suffix=.orig
+mkdir -p $PKG/usr/doc/ppp-$VERSION
+cp -a FAQ README* SETUP scripts $PKG/usr/doc/ppp-$VERSION
+chmod 644 $PKG/usr/doc/ppp-$VERSION/README*
+chown -R root.root $PKG/usr/doc/ppp-$VERSION
+./configure
+zcat $CWD/options.dist.gz > $PKG/etc/ppp/options.dist
+# make HAS_SHADOW=1
+make
+cd pppd
+strip pppd
+cat pppd > $PKG/usr/sbin/pppd
+cat pppd.8 | gzip -9c > $PKG/usr/man/man8/pppd.8.gz
+cd ../chat
+strip chat
+cat chat > $PKG/usr/sbin/chat
+cat chat.8 | gzip -9c > $PKG/usr/man/man8/chat.8.gz
+cd ../pppstats
+strip pppstats
+cat pppstats > $PKG/usr/sbin/pppstats
+cat pppstats.8 | gzip -9c > $PKG/usr/man/man8/pppstats.8.gz
+
+echo "+===============+"
+echo "| pppsetup-1.98 |"
+echo "+===============+"
+cd $TMP
+tar xzvf $CWD/pppsetup-1.98.tar.gz
+cd pppsetup-1.98
+zcat $CWD/pppsetup-1.98.slack.diff.gz | patch -p1 --backup
+zcat $CWD/pppsetup-1.98.pppoff.diff.gz | patch -p0 --backup
+zcat $CWD/pppsetup-1.98.moredevs.diff.gz | patch -p1 --backup
+zcat $CWD/pppsetup-1.98.backupfiles.diff.gz | patch -p1 --backup
+chown root.bin ppp-off pppsetup
+chmod 755 ppp-off pppsetup
+cp -a ppp-off pppsetup $PKG/usr/sbin
+mkdir $PKG/usr/doc/pppsetup
+cp -a README.pppsetup ppp-compile.txt pppsetup-1.98.README pppsetup-1.98.lsm $PKG/usr/doc/pppsetup
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/ppp-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/ppp-$VERSION
+  rm -rf $TMP/pppsetup-1.98
+  rm -rf $PKG
+fi

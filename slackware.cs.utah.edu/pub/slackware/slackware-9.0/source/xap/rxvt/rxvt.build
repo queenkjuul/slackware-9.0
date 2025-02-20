@@ -1,0 +1,30 @@
+TMP=/tmp
+CWD=`pwd`
+cd $TMP
+VERSION=2.6.4
+
+tar xjvf $CWD/rxvt-$VERSION.tar.bz2
+cd rxvt-$VERSION
+zcat $CWD/rxvt.locale.diff.gz | patch -p1 --verbose --backup --suffix=.orig 
+zcat $CWD/rxvt.overflow.diff.gz | patch -p1 --verbose --backup --suffix=.orig
+./configure --prefix=/usr/X11R6 \
+            --enable-utmp \
+            --enable-wtmp \
+            --enable-xim \
+            --enable-xpm-background
+make
+make install
+chown root.bin /usr/X11R6/bin/rclock
+chown root.bin /usr/X11R6/bin/rxvt
+# You can do this later, at your own risk:
+#chmod 4711 /usr/X11R6/bin/rxvt
+# Meanwhile, here's a more sane setting.
+# If this bugs you, there's always xterm.
+chmod 755 /usr/X11R6/bin/rxvt
+mkdir -p /usr/doc/rxvt-$VERSION
+cp -a \
+  rxvt-$VERSION.lsm doc rclock/rclock.html \
+  /usr/doc/rxvt-$VERSION
+chown -R root.root /usr/doc/rxvt-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

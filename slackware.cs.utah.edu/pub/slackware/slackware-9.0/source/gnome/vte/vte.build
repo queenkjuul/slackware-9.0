@@ -1,0 +1,30 @@
+CWD=`pwd`
+
+VERSION=0.10.25
+
+cd /tmp
+tar xjvf $CWD/vte-$VERSION.tar.bz2
+cd vte-$VERSION
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --localstatedir=/var/lib \
+            --disable-static \
+            i386-slackware-linux
+make
+make install
+mkdir -p $PKG/usr/lib/pkgconfig
+if [ ! -r /usr/lib/pkgconfig/vte.pc ]; then
+  cp vte.pc /usr/lib/pkgconfig
+fi
+mkdir -p /usr/doc/vte-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  /usr/doc/vte-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+

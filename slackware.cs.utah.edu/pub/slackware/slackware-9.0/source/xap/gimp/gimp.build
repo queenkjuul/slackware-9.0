@@ -1,0 +1,49 @@
+#!/bin/sh
+GIMP_VER=1.2.3
+EXTRAS_VER=1.2.0
+
+# Build the GIMP:
+CWD=`pwd`
+cd /tmp
+tar xjvf $CWD/gimp-${GIMP_VER}.tar.bz2
+cd gimp-${GIMP_VER}
+# This needs to go into /usr or aclocal files are misplaced.
+CFLAGS=-O2 ./configure \
+            --prefix=/usr \
+            --sysconfdir=/etc \
+            --localstatedir=/var/lib \
+            --with-gtk-prefix=/usr \
+            --enable-threads
+make
+make install
+ldconfig
+cp -a $CWD/wilber-icon.png /usr/share/gimp/1.2
+chown root.root /usr/share/gimp/1.2/wilber-icon.png
+chmod 644 /usr/share/gimp/1.2/wilber-icon.png
+mkdir -p /usr/share/applications
+cat $CWD/gimp-1.2.desktop > /usr/share/applications/gimp-1.2.desktop
+mkdir -p /usr/doc/gimp-${GIMP_VER}
+cp -a \
+  ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL MAINTAINERS NEWS PLUGIN_MAINTAINERS README README.i18n README.perl README.win32 TODO \
+  docs \
+  /usr/doc/gimp-${GIMP_VER}
+chown -R root.root /usr/doc/gimp-${GIMP_VER}
+chmod -R 644 /usr/doc/gimp-${GIMP_VER}
+find /usr/doc/gimp-${GIMP_VER} -type d -exec chmod 755 {} \;
+
+# Add gimp-data-extras addons:
+cd /tmp
+tar xjvf $CWD/gimp-data-extras-${EXTRAS_VER}.tar.bz2
+cd gimp-data-extras-${EXTRAS_VER}
+./configure \
+   --prefix=/usr
+make install
+mkdir -p /usr/doc/gimp-data-extras-${EXTRAS_VER}
+cp -a AUTHORS COPYING ChangeLog INSTALL NEWS README \
+  /usr/doc/gimp-data-extras-${EXTRAS_VER}
+chown root.root /usr/doc/gimp-data-extras-${EXTRAS_VER}/*
+chmod 644 /usr/doc/gimp-data-extras-${EXTRAS_VER}/*
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a/dcron</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a/dcron</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/a/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="SlackBuild">SlackBuild</a></td><td align="right">2002-04-16 02:08  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="_dcron.tar.gz">_dcron.tar.gz</a></td><td align="right">2002-04-16 02:08  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="dcron-2.3.3.version.diff.gz">dcron-2.3.3.version.diff.gz</a></td><td align="right">2002-04-09 08:07  </td><td align="right">168 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-02-21 22:50  </td><td align="right">815 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="dcron-2.3.3.crontab.diff4.gz">dcron-2.3.3.crontab.diff4.gz</a></td><td align="right">2002-02-20 22:33  </td><td align="right">350 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="dcron-2.3.3.diff3.gz">dcron-2.3.3.diff3.gz</a></td><td align="right">2001-05-30 21:13  </td><td align="right">192 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="dcron-2.3.3.diff2.gz">dcron-2.3.3.diff2.gz</a></td><td align="right">2000-05-12 22:10  </td><td align="right">3.9K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="dcron-2.3.3.diff.gz">dcron-2.3.3.diff.gz</a></td><td align="right">1999-08-26 21:57  </td><td align="right">544 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="dcron.tmpdir.diff.gz">dcron.tmpdir.diff.gz</a></td><td align="right">1999-04-05 02:13  </td><td align="right">198 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="dcron-2.3.3.lsm">dcron-2.3.3.lsm</a></td><td align="right">1998-02-16 19:35  </td><td align="right">594 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="dcron-2.3.3.tar.gz">dcron-2.3.3.tar.gz</a></td><td align="right">1998-02-16 19:35  </td><td align="right"> 22K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

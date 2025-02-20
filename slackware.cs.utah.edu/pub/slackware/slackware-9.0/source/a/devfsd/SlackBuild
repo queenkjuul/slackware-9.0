@@ -1,0 +1,49 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-devfsd
+
+VERSION=1.3.25
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_devfsd.tar.gz
+
+echo "+================+"
+echo "| devfsd-v$VERSION |"
+echo "+================+"
+cd $TMP
+tar xzvf $CWD/devfsd-v$VERSION.tar.gz
+cd devfsd
+make CEXTRAS="-march=$ARCH -mcpu=i686"
+strip devfsd
+cat devfsd > $PKG/sbin/devfsd
+cat devfsd.conf > $PKG/etc/devfsd.conf.new
+cat modules.devfs > $PKG/etc/modules.devfs
+cat devfsd.8 | gzip -9c > $PKG/usr/man/man8/devfsd.8.gz
+mkdir -p $PKG/usr/doc/devfsd-v$VERSION
+( cd $PKG/usr/doc/devfsd-v$VERSION ; wget http://www.atnf.csiro.au/~rgooch/linux/docs/devfs.html )
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/devfsd-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/devfsd-v$VERSION
+  rm -rf $PKG
+fi

@@ -1,0 +1,21 @@
+CWD=`pwd`
+TMP=/tmp
+echo "+============+"
+echo "| asapm-2.11 |"
+echo "+============+"
+cd $TMP
+tar xzvf $CWD/asapm-2.11.tar.gz
+cd asapm-2.11
+./configure --prefix=/usr i386-slackware-linux
+make
+strip asapm
+cat asapm > /usr/X11R6/bin/asapm
+chown root.bin /usr/X11R6/bin/asapm
+chmod 755 /usr/X11R6/bin/asapm
+cat asapm.man | gzip -9c > /usr/X11R6/man/man1/asapm.1.gz
+mkdir -p /usr/doc/asapm-2.11
+cp -a LICENSE NOTES README TODO /usr/doc/asapm-2.11
+chown root.root /usr/doc/asapm-2.11/*
+chmod 644 /usr/doc/asapm-2.11/*
+
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=3.5
+cd /tmp
+tar xzvf $CWD/rp-pppoe-$VERSION.tar.gz
+cd rp-pppoe-$VERSION/src
+CFLAGS=-O2 ./configure --prefix=/usr
+make
+make install
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

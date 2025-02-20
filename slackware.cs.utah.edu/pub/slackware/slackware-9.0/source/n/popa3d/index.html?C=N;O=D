@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/n/popa3d</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/n/popa3d</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/n/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-23 23:51  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="popa3d.diff.gz">popa3d.diff.gz</a></td><td align="right">2003-02-02 06:46  </td><td align="right">877 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="popa3d.SlackBuild">popa3d.SlackBuild</a></td><td align="right">2003-03-05 09:25  </td><td align="right">1.3K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="popa3d-0.6.1.tar.gz.sign">popa3d-0.6.1.tar.gz.sign</a></td><td align="right">2003-03-04 17:59  </td><td align="right">331 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="popa3d-0.6.1.tar.gz">popa3d-0.6.1.tar.gz</a></td><td align="right">2003-03-04 17:59  </td><td align="right"> 29K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="doinst.sh">doinst.sh</a></td><td align="right">2002-03-16 01:16  </td><td align="right">291 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

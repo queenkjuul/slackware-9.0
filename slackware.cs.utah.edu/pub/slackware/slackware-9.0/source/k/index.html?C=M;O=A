@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/k</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/k</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="speakup-1.00.tar.gz">speakup-1.00.tar.gz</a></td><td align="right">2002-05-30 00:34  </td><td align="right">100K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux-2.4.20.tar.bz2">linux-2.4.20.tar.bz2</a></td><td align="right">2002-11-28 23:53  </td><td align="right"> 26M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux-2.4.20.tar.bz2.sign">linux-2.4.20.tar.bz2.sign</a></td><td align="right">2002-11-28 23:53  </td><td align="right">248 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="speakup-1.00-2.4.20.diff.gz">speakup-1.00-2.4.20.diff.gz</a></td><td align="right">2003-02-23 03:56  </td><td align="right">110K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.orig">slack-desc.orig</a></td><td align="right">2003-03-08 20:58  </td><td align="right">781 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2003-03-08 20:59  </td><td align="right">766 </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="ext3-patches/">ext3-patches/</a></td><td align="right">2003-03-08 21:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="README">README</a></td><td align="right">2003-03-09 22:10  </td><td align="right">1.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="speakup-cvs-20030310.tar.gz">speakup-cvs-20030310.tar.gz</a></td><td align="right">2003-03-10 21:01  </td><td align="right">107K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="speakup-cvs-20030310-2.4.20.diff.gz">speakup-cvs-20030310-2.4.20.diff.gz</a></td><td align="right">2003-03-10 21:09  </td><td align="right">110K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="xfs/">xfs/</a></td><td align="right">2003-03-12 03:22  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux-2.2.25.tar.bz2">linux-2.2.25.tar.bz2</a></td><td align="right">2003-03-17 14:16  </td><td align="right"> 15M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux-2.2.25.tar.bz2.sign">linux-2.2.25.tar.bz2.sign</a></td><td align="right">2003-03-17 14:16  </td><td align="right">248 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="linux-2.4.20.ptrace.diff.gz">linux-2.4.20.ptrace.diff.gz</a></td><td align="right">2003-03-18 05:39  </td><td align="right">3.8K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

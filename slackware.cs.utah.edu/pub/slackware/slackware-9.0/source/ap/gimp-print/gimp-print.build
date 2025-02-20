@@ -1,0 +1,46 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+
+GIMPPRINT_VERSION=4.2.5
+
+# Let GIMP use the plug-in it comes with or it's a messy dependancy.
+# This comes with some ghostscript patches that already seem to be
+# built into ghostscript now :-)
+echo "+=================================+"
+echo "| gimp-print-${GIMPPRINT_VERSION} |"
+echo "+=================================+"
+cd $TMP
+tar xjvf $CWD/gimp-print-${GIMPPRINT_VERSION}.tar.bz2
+cd gimp-print-${GIMPPRINT_VERSION}
+./configure --prefix=/usr \
+  --infodir=/usr/info \
+  --with-ijs \
+  --with-cups \
+  --without-gimp \
+  --without-samples \
+  --without-user-guide \
+  --enable-escputil \
+  --disable-static \
+  --disable-nls \
+  i386-slackware-linux
+make
+make install
+GPDOC=/usr/doc/gimp-print-${GIMPPRINT_VERSION}
+mkdir -p $GPDOC
+cp -a ABOUT-NLS AUTHORS COPYING NEWS README $GPDOC
+cp -a src/ghost/README $GPDOC/README.ghostscript
+chmod 644 $GPDOC/*
+chown -R root.root $GPDOC
+rmdir /usr/share/gimp-print/samples/
+rmdir /usr/share/gimp-print/
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

@@ -1,0 +1,79 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-bzip2
+
+VERSION=1.0.2
+ARCH=i386
+BUILD=4
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+
+# place for the package to be built
+rm -rf $PKG
+mkdir -p $PKG
+
+echo "+=============+"
+echo "| bzip2-$VERSION |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/bzip2-$VERSION.tar.gz
+cd bzip2-$VERSION
+chown -R root.root .
+make -f Makefile-libbz2_so
+make
+mkdir -p $PKG/usr/include
+cp -a bzlib.h $PKG/usr/include
+chown root.root $PKG/usr/include/bzlib.h
+chmod 644 $PKG/usr/include/bzlib.h
+mkdir -p $PKG/usr/lib
+cp -a libbz2.a $PKG/usr/lib/libbz2.a
+mkdir -p $PKG/lib
+cp -a libbz2.so.$VERSION $PKG/lib/libbz2.so.$VERSION
+chmod 644 $PKG/usr/lib/libbz2.a
+chmod 755 $PKG/lib/libbz2.so.$VERSION
+strip bzip2-shared bzip2recover
+mkdir -p $PKG/bin
+cat bzip2-shared > $PKG/bin/bzip2
+cat bzip2recover > $PKG/bin/bzip2recover
+mkdir -p $PKG/usr/man/man1
+cat bzip2.1 | gzip -9c > $PKG/usr/man/man1/bzip2.1.gz
+echo '.so man1/bzip2.1' | gzip -9c > $PKG/usr/man/man1/bzip2recover.1.gz
+mkdir -p $PKG/usr/doc/bzip2-$VERSION
+cp -a CHANGES LICENSE README README.COMPILATION.PROBLEMS Y2K_INFO bzip2.txt *.html $PKG/usr/doc/bzip2-$VERSION
+chmod 644 $PKG/usr/doc/bzip2-$VERSION/*
+# Link up them links
+( cd $PKG
+( cd lib ; ln -sf libbz2.so.1.0.2 libbz2.so.1.0 )
+( cd usr/lib ; ln -sf ../../lib/libbz2.so.1.0 libbz2.so )
+( cd bin ; ln -sf bzip2 bunzip2 )
+( cd bin ; ln -sf bzip2 bzcat )
+mkdir -p $PKG/usr/bin
+( cd usr/bin ; ln -sf ../../bin/bzip2 . )
+( cd usr/bin ; ln -sf ../../bin/bzip2 bunzip2 )
+( cd usr/bin ; ln -sf ../../bin/bzip2 bzcat )
+)
+# Here are some optional scripts:
+for file in bzdiff bzgrep bzmore ; do
+  cat $file > $PKG/usr/bin/$file
+  cat ${file}.1 | gzip -9c > $PKG/usr/man/man1/${file}.1.gz
+done
+chmod 755 $PKG/bin/* $PKG/usr/bin/*
+chown -R root.bin $PKG/bin $PKG/usr/bin
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/bzip2-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/bzip2-$VERSION
+  rm -rf $PKG
+fi

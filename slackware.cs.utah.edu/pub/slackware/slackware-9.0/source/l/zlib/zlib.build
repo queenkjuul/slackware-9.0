@@ -1,0 +1,25 @@
+CWD=`pwd`
+
+VERSION=1.1.4
+
+cd /tmp
+tar xzvf $CWD/zlib-$VERSION.tar.gz
+cd zlib-$VERSION
+# I don't know if this is still required, but it doesn't hurt.
+zcat $CWD/zlib.glibc.patch.gz | patch -p1 -E --backup --verbose --suffix=.orig
+mkdir -p /usr/doc/zlib-$VERSION
+cp -a \
+  ChangeLog FAQ INDEX README \
+  /usr/doc/zlib-$VERSION
+chmod 644 /usr/doc/zlib-$VERSION/*
+chown root.root /usr/doc/zlib-$VERSION/*
+./configure --prefix=/usr
+make clean
+make
+make install
+./configure --prefix=/usr --shared
+make clean
+make
+make install
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

@@ -1,0 +1,34 @@
+#!/bin/sh
+# Set initial variables:
+
+VERSION=4.0.6
+
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+
+cd $TMP
+tar xjvf $CWD/zsh-$VERSION.tar.bz2
+tar xjvf $CWD/zsh-$VERSION-doc.tar.bz2
+cd zsh-$VERSION
+chown -R root.root .
+./configure --prefix=/usr i386-slackware-linux
+make
+make install
+mkdir /install
+cat $CWD/doinst.sh > /install/doinst.sh
+rm /usr/bin/zsh-$VERSION # extra...
+mv /usr/bin/zsh /bin/zsh
+mkdir -p /usr/doc/zsh-$VERSION/html-docs
+cp -a INSTALL LICENCE META-FAQ README /usr/doc/zsh-$VERSION
+chown -R root.root Doc
+cp -a Doc/*.html /usr/doc/zsh-$VERSION/html-docs
+mkdir -p /usr/info
+cp -a Doc/*info* /usr/info
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

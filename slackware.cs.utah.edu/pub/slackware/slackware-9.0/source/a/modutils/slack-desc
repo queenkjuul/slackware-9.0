@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+modutils: modutils (kernel module utilities)
+modutils:
+modutils: Utilities to use kernel modules.  These tools are used for loading
+modutils: and unloading chunks of kernel code on the fly, to add support for a
+modutils: CD-ROM drive or ethernet card, for instance.
+modutils:
+modutils: Many Linux drivers are provided as kernel modules, and some packages
+modutils: (like the PCMCIA package) require the module utilities to work, so you
+modutils: probably want to install these.
+modutils:
+modutils:

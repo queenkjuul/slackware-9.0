@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a/kbd</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a/kbd</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/a/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="extraf.tgz">extraf.tgz</a></td><td align="right">2001-05-26 05:49  </td><td align="right"> 24K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="speakupmap.map.gz">speakupmap.map.gz</a></td><td align="right">2001-10-05 13:14  </td><td align="right">2.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="speakup-jfw.tar.gz">speakup-jfw.tar.gz</a></td><td align="right">2002-05-24 21:22  </td><td align="right">3.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kbd-1.08.tar.bz2">kbd-1.08.tar.bz2</a></td><td align="right">2002-10-13 01:56  </td><td align="right">589K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kbd-1.08.tar.bz2.sign">kbd-1.08.tar.bz2.sign</a></td><td align="right">2002-10-13 01:56  </td><td align="right">248 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="setconsolefont">setconsolefont</a></td><td align="right">2003-02-15 20:52  </td><td align="right"> 11K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="nl.diff.gz">nl.diff.gz</a></td><td align="right">2003-02-27 06:57  </td><td align="right">461 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kbd.build">kbd.build</a></td><td align="right">2003-02-27 06:58  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="setup.setconsolefont">setup.setconsolefont</a></td><td align="right">2003-02-27 07:04  </td><td align="right"> 78 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2003-02-27 23:42  </td><td align="right">919 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

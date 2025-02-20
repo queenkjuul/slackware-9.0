@@ -1,0 +1,26 @@
+#!/bin/sh
+CWD=`pwd`
+cd /tmp
+tar xzvf $CWD/elvis-2.1_4.tar.gz
+cd elvis-2.1_4
+./configure --with-x=no \
+            --bindir=/usr/bin \
+            --datadir=/usr/share/elvis-2.1_4 \
+            --verbose \
+            i386-slackware-linux
+make install
+cp -a BUGS COPYING INSTALL README.html /usr/share/elvis-2.1_4
+cd lib
+# Let's not lose those original timestamps:
+cp -a * /usr/share/elvis-2.1_4
+chown root.root /usr/share/elvis-2.1_4/*
+chmod 644 /usr/share/elvis-2.1_4/*
+# Remove /var/man/cat?/ pages.
+# Add /usr/bin/ex and /usr/bin/vi symlinks.
+( cd /usr/bin ; ln -sf elvis ex ; ln -sf elvis vi )
+# Make symlink from /usr/share/elvis-2.1_4 to /usr/doc/elvis-2.1_4.
+( cd /usr/doc ; ln -sf /usr/share/elvis-2.1_4 . )
+# Don't want this fmt:
+rm -f /usr/bin/fmt /usr/man/man1/fmt.1.gz
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

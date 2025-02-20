@@ -1,0 +1,65 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-portmap
+
+VERSION=4.0
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+===========+"
+echo "| portmap_4 |"
+echo "+===========+"
+cd $TMP
+tar xzvf $CWD/portmap_4.tar.gz
+cd portmap_4
+zcat $CWD/portmap_4.diff.gz | patch -p1 --backup --suffix=.orig
+mkdir -p $PKG/usr/doc/portmap-4.0
+cp -a BLURB CHANGES README $PKG/usr/doc/portmap-4.0
+chmod 644 $PKG/usr/doc/portmap-4.0/*
+chown root.root $PKG/usr/doc/portmap-4.0/*
+make FACILITY=LOG_AUTH ZOMBIES='-DIGNORE_SIGCHLD -Dlint' LIBS="-lnsl"
+strip portmap pmap_dump pmap_set
+mkdir -p $PKG/sbin
+cat portmap > $PKG/sbin/rpc.portmap
+chmod 755 $PKG/sbin/rpc.portmap
+chown -R root.bin $PKG/sbin
+mkdir -p $PKG/usr/sbin
+cat pmap_dump > $PKG/usr/sbin/pmap_dump
+cat pmap_set > $PKG/usr/sbin/pmap_set
+chmod 755 $PKG/usr/sbin/*
+chown -R root.bin $PKG/usr/sbin
+mkdir -p $PKG/usr/man/man8
+cat $CWD/portmap.8.gz > $PKG/usr/man/man8/portmap.8.gz
+# Now let's add a recent version of /etc/rpc for good measure:
+if [ -r /etc/rpc ]; then
+  mkdir -p $PKG/etc
+  cp -a /etc/rpc $PKG/etc/rpc
+else
+  echo "WARNING: no /etc/rpc on this system, can't include!"
+  echo -n "hit enter..."
+  read errorfodder
+  echo
+fi
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/portmap-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+ rm -rf $TMP/portmap_4
+ rm -rf $PKG
+fi

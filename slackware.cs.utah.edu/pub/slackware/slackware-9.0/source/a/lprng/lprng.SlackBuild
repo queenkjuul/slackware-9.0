@@ -1,0 +1,90 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=/tmp/package-lprng
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+rm -rf $PKG
+mkdir -p $PKG
+
+VERSION=3.8.20
+ARCH=i386
+BUILD=2
+
+echo "+==================+"
+echo "| LPRng-$VERSION |"
+echo "+==================+"
+cd $TMP
+tar xjvf $CWD/LPRng-$VERSION.tar.bz2
+cd LPRng-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr --enable-nls --with-userid=lp --with-groupid=lp --disable-static --sysconfdir=/etc
+make
+make install DESTDIR=$PKG
+# This isn't installed automatically, but the manpage is.  Must be an oversight.
+cat src/monitor > $PKG/usr/sbin/monitor
+chmod 755 $PKG/usr/sbin/monitor
+mkdir -p $PKG/usr/doc/LPRng-$VERSION
+cp -a ABOUT-NLS.LPRng CONTRIBUTORS COOKBOOK COPYRIGHT \
+  INSTALL LICENSE LINK MIRRORS README README.ports VERSION Y2KCompliance \
+  $PKG/usr/doc/LPRng-$VERSION
+cat CHANGES | head -1000 > $PKG/usr/doc/LPRng-$VERSION/CHANGES
+cp -a PrintingCookbook/HTML $PKG/usr/doc/LPRng-$VERSION/PrintingCookbook
+cp -a HOWTO/*.jpg HOWTO/LPRng-HOWTO.html $PKG/usr/doc/LPRng-$VERSION
+chown -R root.root $PKG/usr/doc/LPRng-$VERSION
+find $PKG/usr/doc/LPRng-$VERSION -type f -exec chmod 644 {} \;
+mkdir -p $PKG/var/spool/lpd
+chown lp.lp $PKG/var/spool/lpd
+chmod 700 $PKG/var/spool/lpd
+mkdir -p $PKG/install
+# This was replaced by REALLY buggy code. :-)
+#cd po
+#for file in *.gmo ; do
+#  mkdir -p $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES
+#  cat $file > $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES/LPRng.mo
+#done
+# Clean up after the buggy Makefile in po/:
+mv $PKG$PKG/usr/share/locale $PKG/usr/share
+rmdir $PKG$PKG/usr/share
+rmdir $PKG$PKG/usr
+rmdir $PKG$PKG
+rmdir $PKG/tmp
+cd $PKG
+( cd etc
+  rm -r rc.d
+  rm *.sample
+  mv lpd.conf lpd.conf.new
+  mv lpd.perms lpd.perms.new
+  mv printcap printcap.new )
+( cd usr/bin
+  strip *
+  chown -R root:bin . )
+( cd usr/lib ; strip --strip-unneeded *.so )
+strip usr/libexec/filters/* 2> /dev/null
+gzip -9 usr/man/man?/*
+( cd usr/sbin
+  strip *
+  chown -R root:bin . )
+chmod 755 $PKG/usr/bin/* $PKG/usr/sbin/* $PKG/usr/libexec/filters/*
+mkdir -p $PKG/install
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
+cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/printcap.new > $PKG/etc/printcap.new
+
+# Build the package:
+cd $PKG
+echo "y
+n" | makepkg ../lprng-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/LPRng-$VERSION
+  rm -rf $PKG
+fi
+

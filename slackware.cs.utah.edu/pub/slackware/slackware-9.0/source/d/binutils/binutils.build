@@ -1,0 +1,119 @@
+#!/bin/sh
+
+VERSION=2.13.90.0.18
+ARCH=i386
+BUILD=1
+
+# Save these, since we don't use these versions:
+CWD=`pwd`
+TMP=/tmp
+cd $TMP
+mkdir savebin
+cp -a /usr/bin/strings /usr/bin/c++filt savebin
+tar xjvf $CWD/binutils-$VERSION.tar.bz2
+cd binutils-$VERSION
+chown -R root.root .
+find . -perm 777 -exec chmod 755 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+
+# Build for a standard glibc2-based Linux system:
+CFLAGS="-O2 -march=i386 -mcpu=i686" LDFLAGS=-s ./configure --prefix=/usr \
+  --enable-shared \
+  --enable-targets=i386-slackware-linux,i386-slackware-linux-gnulibc1,i386-slackware-linux-gnuaout \
+  --enable-64-bit-bfd \
+  i386-slackware-linux
+make clean
+make
+make info
+make install
+
+# "make install" skips this, but binutils.spec doesn't.  Sneaky, huh?
+cp -a include/libiberty.h /usr/include/libiberty.h
+
+mkdir /usr/doc/binutils-$VERSION
+cp -a $CWD/release.binutils-* /usr/doc/binutils-$VERSION
+chown root.root /usr/doc/binutils-$VERSION/release.binutils-*
+chmod 644 /usr/doc/binutils-$VERSION/release.binutils-*
+cp -a COPYING* ChangeLog.linux MAI* README* /usr/doc/binutils-$VERSION
+find . -name "as.info*" -exec cp -a {} /usr/info \;
+find . -name "bfd.info*" -exec cp -a {} /usr/info \;
+find . -name "ld.info*" -exec cp -a {} /usr/info \;
+find . -name "gasp.info*" -exec cp -a {} /usr/info \;
+find . -name "gprof.info*" -exec cp -a {} /usr/info \;
+find . -name "binutils.info*" -exec cp -a {} /usr/info \;
+( cd /usr/bin ; mv strings strings-GNU )
+( cd /usr/man/man1 ; mv strings.1 strings-GNU.1 )
+rm /usr/man/man1/c++filt.1
+
+# Put default versions back:
+cp -a $TMP/savebin/* /usr/bin
+
+# Add slack-desc:
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+
+# Now we must remember to adjust ldscripts (real dir is /usr/lib/ldscripts/,
+# links go in /usr/*-linux/lib/ ), and the bin links:
+mkdir -p /usr/i386-slackware-linux/bin
+mkdir -p /usr/i386-slackware-linux/lib
+( cd /usr/i386-slackware-linux/lib ; rm -rf ldscripts ; ln -sf /usr/lib/ldscripts . )
+( cd /usr/i386-slackware-linux/bin
+  for file in * ; do
+    if [ -r "/usr/bin/$file" ]; then
+      rm $file
+      ln -sf /usr/bin/$file .
+    fi
+  done )
+
+# Docs adjustment:
+( cd /usr/man/man1
+  rm -f dlltool.1 windres.1
+  for file in addr2line.1 ar.1 as.1 gprof.1 ld.1 nlmconv.1 nm.1 objcopy.1 objdump.1 ranlib.1 readelf.1 size.1 strings-GNU.1 strip.1 ; do
+    gzip -9 --force $file
+  done )
+
+# By adding ksymoops to the binutils package, we can use the dynamic
+libbfd and make the binary about 500K smaller.
+
+cd $CWD
+./ksymoops.build
+
+### CRUFT follows
+##  These instructions are also obsolete, until such time as we need
+##  multiple default targets again...  (still move ldscripts, though)
+# Now, make symlinks for the binaries in /usr/i386*/bin to the utils
+# in /usr/bin.  EXCEPT:  Don't link 'as' and 'ld' in non-default
+# targets (libc4 and libc5).
+# Move ldscripts to /usr/lib/ldscripts.
+# Link /usr/i386-slackware-linux/lib/ldscripts/ to /usr/lib/ldscripts.
+# Link /usr/i386-slackware-linux-gnuaout/lib/ldscripts/ to /usr/lib/ldscripts.
+# Don't link the libc5 stuff.  It'll have to be changed.
+# Make sure the ldscripts search the full library path for libc6, and only
+# the /usr/i386-*/lib/ path for non-default targets.
+# Whew! :)
+## a.out and ELF/libc5 are now depricated:
+## Install the old a.out stuff for libc4.  (yes, we still support compiling for that :)
+#./configure --prefix=/usr \
+#  --enable-shared \
+#  --enable-targets=i386-slackware-linux-gnuaout \
+#  i386-slackware-linux-gnuaout
+#make CFLAGS=-O2 LDFLAGS=-s
+#make CFLAGS=-O2 LDFLAGS=-s install
+## Now we'll install the gnulibc1 target for libc5 compatibility:
+#make clean
+#./configure --prefix=/usr \
+#  --enable-shared \
+#  --enable-targets=i386-slackware-linux-gnulibc1 \
+#  i386-slackware-linux-gnulibc1
+#make CFLAGS=-O2 LDFLAGS=-s
+#make CFLAGS=-O2 LDFLAGS=-s install
+## Now install the default ELF target.  We'll use this target for libc6, but will enable all the
+## supported targets to make sure the various binutils utilities that are symlinked to in /bin are
+## cross platform.
+#make clean
+#./configure --prefix=/usr \
+#  --enable-shared \
+#  --enable-targets=i386-slackware-linux,i386-slackware-linux-gnulibc1,i386-slackware-linux-gnuaout \
+#  i386-slackware-linux
+#make CFLAGS=-O2 LDFLAGS=-s
+#make CFLAGS=-O2 LDFLAGS=-s install

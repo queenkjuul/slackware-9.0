@@ -1,0 +1,28 @@
+#!/bin/sh
+CWD=`pwd`
+cd /tmp
+
+VERSION=B0.99-15
+PKGVER=B0.99_15
+
+tar xjvf $CWD/jed-$VERSION.tar.bz2
+cd jed-$VERSION
+zcat $CWD/jed.mouse.diff.gz | patch -p1 --verbose --backup --suffix=.orig
+CFLAGS=-O2 JED_ROOT=/usr/lib/jed ./configure --prefix=/usr
+make clean
+make
+make install
+( cd /usr/doc ; rm -f jed-$VERSION )
+( cd /usr/doc ; ln -sf /usr/lib/jed jed-$VERSION )
+mkdir -p /usr/lib/jed
+( cd /usr/lib/jed ; rm -rf info )
+( cd /usr/lib/jed ; ln -sf /usr/info info )
+cp -a COPYING COPYRIGHT INSTALL INSTALL.unx README changes.txt \
+  /usr/lib/jed
+cp -a bin doc lib /usr/lib/jed
+chown -R root.root /usr/lib/jed
+for file in info/jed* ; do
+  cat $file | gzip -9c > /usr/$file.gz
+done
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

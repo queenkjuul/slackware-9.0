@@ -1,0 +1,83 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+
+PKG=$TMP/package-ncftp
+
+VERSION=3.1.5
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_ncftp.tar.gz
+
+#echo "+=============+"
+#echo "| ncftp-2.4.3 |"
+#echo "+=============+"
+#cd $TMP
+#tar xzvf $CWD/ncftp-2.4.3.tar.gz
+#cd ncftp-2.4.3
+#mkdir -p $PKG/usr/doc/ncftp-2.4.3
+#cp -a CHANGELOG COPYING README $PKG/usr/doc/ncftp-2.4.3
+#chown root.root $PKG/usr/doc/ncftp-2.4.3/*
+#chmod 644 $PKG/usr/doc/ncftp-2.4.3/*
+#zcat $CWD/ncftp-2.4.3.diff.gz | patch -p0 --backup
+#./configure --prefix=/usr --enable-readline i386-slackware-linux
+#make CFLAGS=-O2 LDFLAGS=-s
+#strip ncftp
+#cat ncftp > $PKG/usr/bin/ncftp2
+#cat ncftp.1 | gzip -9c > $PKG/usr/man/man1/ncftp2.1.gz
+
+rm -f $PKG/usr/bin/ncftp2
+
+echo "+=============+"
+echo "| ncftp-$VERSION |"
+echo "+=============+"
+cd $TMP
+tar xjvf $CWD/ncftp-$VERSION-src.tar.bz2
+cd ncftp-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr i386-slackware-linux
+make
+( cd bin
+  strip ncftp ncftpbatch ncftpbookmarks ncftpget ncftpls ncftpput
+  cat ncftp > $PKG/usr/bin/ncftp
+  cat ncftpbatch > $PKG/usr/bin/ncftpbatch
+  cat ncftpbookmarks > $PKG/usr/bin/ncftpbookmarks
+  cat ncftpget > $PKG/usr/bin/ncftpget
+  cat ncftpls > $PKG/usr/bin/ncftpls
+  cat ncftpput > $PKG/usr/bin/ncftpput )
+( cd $PKG/usr/bin ; rm -f ncftpspooler ; ln -sf ncftpbatch ncftpspooler )
+( cd doc/man
+  for file in *.1 ; do
+    cat $file | gzip -9c > $PKG/usr/man/man1/$file.gz
+  done )
+mkdir -p $PKG/usr/doc/ncftp-$VERSION
+cp -a doc/* $PKG/usr/doc/ncftp-$VERSION
+rm -r $PKG/usr/doc/ncftp-$VERSION/man
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/ncftp-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+ for dir in ncftp-2.4.3 ncftp-$VERSION ; do
+  rm -rf $TMP/$dir
+ done
+ rm -rf $PKG
+fi

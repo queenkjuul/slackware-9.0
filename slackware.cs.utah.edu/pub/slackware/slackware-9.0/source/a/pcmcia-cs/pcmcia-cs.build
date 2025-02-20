@@ -1,0 +1,46 @@
+#!/bin/sh
+
+CWD=`pwd`
+
+VERSION=3.2.4
+ARCH=i386
+
+# This appears obsolete (8/2002)
+#cat << EOF
+#
+#Before building this, get a non-APM kernel running, and a non-APM kernel tree
+#in /usr/src/linux, otherwise the binaries will *require* APM, and everyone
+#will complain.
+#
+#Modules are now bundled in with the other kernel modules, not in this package
+#(makes more sense, especially with two very different kernels in this release)
+#
+#EOF
+#sleep 15
+
+cd /tmp
+tar xzvf $CWD/pcmcia-cs-$VERSION.tar.gz
+cd pcmcia-cs-$VERSION
+chown -R root.root .
+zcat $CWD/pcmcia-cs.dhcpcd.diff.gz | patch -p1 --verbose
+mkdir -p /usr/doc/pcmcia-cs-$VERSION
+cp -a BUGS CHANGES COPYING LICENSE MAINTAINERS doc/PCMCIA-HOWTO \
+  doc/PCMCIA-PROG README* SUPPORTED.CARDS /usr/doc/pcmcia-cs-$VERSION
+chmod 644 /usr/doc/pcmcia-cs-$VERSION/*
+make clean
+./Configure --noapm --nopnp --trust --kernel=/usr/src/linux --noprompt --current --bsd
+make all
+make install
+# I see no good reason to make this setuid root.
+chmod 755 /sbin/cardctl
+# This version of rc.pcmcia has been modified to probe for the proper PCIC.
+zcat $CWD/rc.pcmcia.gz > /etc/rc.d/rc.pcmcia
+# Patch the config.opts for the correct WebGear wireless defaults:
+( cd /etc/pcmcia ; zcat $CWD/config.opts.diff.gz | patch -p0 )
+# This seems like a dumb idea.
+#mkdir -p /usr/include/pcmcia
+#cp -a include/pcmcia/* /usr/include/pcmcia
+#chmod 644 /usr/include/pcmcia/*
+#chown root.root /usr/include/pcmcia/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

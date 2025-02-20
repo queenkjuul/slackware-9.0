@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/n/openssl</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/n/openssl</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/n/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="openssl.SlackBuild">openssl.SlackBuild</a></td><td align="right">2003-03-11 18:50  </td><td align="right">3.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="openssl-0.9.7a-soname.diff.gz">openssl-0.9.7a-soname.diff.gz</a></td><td align="right">2003-02-24 21:28  </td><td align="right">341 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="openssl-0.9.7a-opts.diff.gz">openssl-0.9.7a-opts.diff.gz</a></td><td align="right">2003-02-24 21:25  </td><td align="right">419 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="openssl-0.9.7a.tar.bz2">openssl-0.9.7a.tar.bz2</a></td><td align="right">2003-02-19 13:12  </td><td align="right">2.1M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.openssl">slack-desc.openssl</a></td><td align="right">2002-04-06 20:23  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.openssl-solibs">slack-desc.openssl-solibs</a></td><td align="right">2002-03-23 22:11  </td><td align="right">1.1K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

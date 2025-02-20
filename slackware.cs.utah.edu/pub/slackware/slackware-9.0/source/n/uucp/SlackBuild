@@ -1,0 +1,63 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-uucp
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_uucp.tar.gz
+
+echo "+=============+"
+echo "| uucp-1.06.2 |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/uucp-1.06.2.tar.gz
+cd uucp-1.06.1
+zcat $CWD/policy.h.diff.gz | patch -p0 --backup --verbose
+zcat $CWD/uucp-1.06.2-vettargs.patch.gz | patch -p1 --backup --verbose
+./configure --prefix=/usr
+zcat $CWD/Makefile.diff.gz | patch -p0 --backup --verbose
+make CFLAGS=-O2 LDFLAGS=-s
+cat cu > $PKG/usr/bin/cu
+cat uucp > $PKG/usr/bin/uucp
+cat uuname > $PKG/usr/bin/uuname
+cat uustat > $PKG/usr/bin/uustat
+cat uux > $PKG/usr/bin/uux
+cat uuchk > $PKG/usr/lib/uucp/uuchk
+cat uucico > $PKG/usr/lib/uucp/uucico
+cat uuconv > $PKG/usr/lib/uucp/uuconv
+cat uuxqt > $PKG/usr/lib/uucp/uuxqt
+cat cu.1 | gzip -9c > $PKG/usr/man/man1/cu.1.gz
+cat uucp.1 | gzip -9c > $PKG/usr/man/man1/uucp.1.gz
+cat uustat.1 | gzip -9c > $PKG/usr/man/man1/uustat.1.gz
+cat uux.1 | gzip -9c > $PKG/usr/man/man1/uux.1.gz
+cat uucico.8 | gzip -9c > $PKG/usr/man/man8/uucico.8.gz
+cat uuxqt.8 | gzip -9c > $PKG/usr/man/man8/uuxqt.8.gz
+cd doc
+mkdir -p $PKG/usr/info
+cat uucp.info | gzip -9c > $PKG/usr/info/uucp.info.gz
+for file in uucp.info-? ; do
+  cat $file | gzip -9c > $PKG/usr/info/$file.gz
+done
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/uucp-1.06.2-i386-2.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/uucp-1.06.2
+  rm -rf $PKG
+fi

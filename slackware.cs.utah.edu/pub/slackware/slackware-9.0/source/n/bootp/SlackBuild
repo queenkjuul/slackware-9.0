@@ -1,0 +1,57 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-bootp
+
+VERSION=2.4.3
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_bootp.tar.gz
+
+echo "+===============+"
+echo "| bootp-$VERSION |"
+echo "+===============+"
+cd $TMP
+tar xzvf $CWD/bootp_$VERSION.orig.tar.gz
+cd bootp-$VERSION
+zcat $CWD/bootp_2.4.3-3.diff.gz | patch -p1
+mkdir -p $PKG/usr/doc/bootp-$VERSION
+cp -a Announce Announce.old Changes ConvOldTab.sh Installation Problems README ToDo bootptab.cmu bootptab.mcs $PKG/usr/doc/bootp-$VERSION
+chown -R root.root $PKG/usr/doc/bootp-$VERSION
+chmod 644 $PKG/usr/doc/bootp-$VERSION/*
+chmod 755 $PKG/usr/doc/bootp-$VERSION/ConvOldTab.sh
+make
+strip bootpd bootpef bootpgw bootptest
+for file in bootpd bootpef bootpgw bootptest ; do
+  cat $file > $PKG/usr/sbin/$file
+done
+gzip -9c bootptab.5 > $PKG/usr/man/man5/bootptab.5.gz
+for file in bootpd.8 bootpef.8 bootptest.8 ; do
+  gzip -9c $file > $PKG/usr/man/man8/$file.gz
+done
+zcat $CWD/bootptab.gz > $PKG/etc-incoming/bootptab
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/bootp-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+ rm -rf $TMP/bootp-$VERSION
+ rm -rf $PKG
+fi

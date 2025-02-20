@@ -1,0 +1,20 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+                  |-----handy-ruler------------------------------------------------------|
+nautilus-cd-burner: nautilus-cd-burner
+nautilus-cd-burner:
+nautilus-cd-burner: nautilus-cd-burner is an extension to Nautilus that makes it easy to
+nautilus-cd-burner: write files to a CD burner.  The user uses Nautilus (or another
+nautilus-cd-burner: application supporting gnome-vfs) to copy the files to burn:///, and
+nautilus-cd-burner: then nautilus-cd-burner is launched to write the files to the CD.
+nautilus-cd-burner:
+nautilus-cd-burner:
+nautilus-cd-burner:
+nautilus-cd-burner:
+nautilus-cd-burner:
+

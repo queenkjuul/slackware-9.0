@@ -1,0 +1,69 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-joe
+
+VERSION=2.9.7
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_joe.tar.gz
+
+echo "+===========+"
+echo "| joe-$VERSION |"
+echo "+===========+"
+cd $TMP
+tar xzvf $CWD/joe-$VERSION.tar.gz
+cd joe-$VERSION
+./configure --prefix=/usr --sysconfdir=/etc/joe i386-slackware-linux
+make
+strip joe termidx
+mkdir -p $PKG/usr/bin
+cat joe > $PKG/usr/bin/joe
+cat termidx > $PKG/usr/bin/termidx
+( cd $PKG
+  ( cd usr/bin ; rm -rf jstar )
+  ( cd usr/bin ; ln -sf joe jstar )
+  ( cd usr/bin ; rm -rf jmacs )
+  ( cd usr/bin ; ln -sf joe jmacs )
+  ( cd usr/bin ; rm -rf jpico )
+  ( cd usr/bin ; ln -sf joe jpico )
+  ( cd usr/bin ; rm -rf rjoe )
+  ( cd usr/bin ; ln -sf joe rjoe )
+)
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/etc/joe
+cat joerc > $PKG/etc/joe/joerc
+cat jstarrc > $PKG/etc/joe/jstarrc
+cat jmacsrc > $PKG/etc/joe/jmacsrc
+cat jpicorc > $PKG/etc/joe/jpicorc
+cat rjoerc > $PKG/etc/joe/rjoerc
+mkdir -p $PKG/usr/doc/joe-$VERSION
+cp -a ChangeLog INFO LIST NEWS README* TODO docs/help-system.html $PKG/usr/doc/joe-$VERSION
+chmod 644 $PKG/usr/doc/joe-$VERSION/*
+chown root.root $PKG/usr/doc/joe-$VERSION/*
+cat joe.1 | gzip -9c > $PKG/usr/man/man1/joe.1.gz
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/joe-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/joe-$VERSION
+  rm -rf $PKG
+fi

@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+kdeutils: kdeutils
+kdeutils:
+kdeutils: Utilities for the K Desktop Environment.  
+kdeutils:
+kdeutils: Includes: ark (tar/gzip archive  manager), kab (address book), karm
+kdeutils: (personal time tracker), kcalc (scientific calculator), kedit (simple
+kdeutils: text editor), kfloppy (floppy formatting tool), khexedit (hex editor),
+kdeutils: kjots (note taker), klipper (clipboard tool), kljettool(HP printer
+kdeutils: configuration tool), klpq (print queue manager), knotes (sticky notes
+kdeutils: for the desktop), kpm (process manager similar to 'top', but more
+kdeutils: advanced), kwrite (improved text editor).

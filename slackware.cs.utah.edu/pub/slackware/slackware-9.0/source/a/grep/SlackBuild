@@ -1,0 +1,93 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-grep
+
+VERSION=2.5
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+rm -rf $PKG
+mkdir -p $PKG # place for the package to be built
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_grep.tar.gz
+
+# @#$%
+if [ -r /usr/lib/libpcre.la ]; then #$%@
+  mv /usr/lib/libpcre.so /tmp
+  mv /usr/lib/libpcre.la /tmp
+fi
+
+echo "+============+"
+echo "| grep-$VERSION |"
+echo "+============+"
+cd $TMP
+tar xjvf $CWD/grep-$VERSION.tar.bz2
+cd grep-$VERSION
+CFLAGS=-O2 ./configure --prefix=/usr
+make
+strip src/grep
+mkdir -p $PKG/bin
+cat src/grep > $PKG/bin/grep
+( cd $PKG/bin
+  ln -sf grep egrep
+  ln -sf grep fgrep
+)
+chmod 755 $PKG/bin/*
+chown -R root.bin $PKG/bin
+mkdir -p $PKG/usr/bin
+( cd $PKG/usr/bin
+  ln -sf ../../bin/grep .
+  ln -sf ../../bin/egrep .
+  ln -sf ../../bin/fgrep .
+)
+chmod 755 $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/man/man1
+( cd doc
+  cat grep.1 | gzip -9c > $PKG/usr/man/man1/grep.1.gz
+  cat egrep.1 | gzip -9c > $PKG/usr/man/man1/egrep.1.gz
+  cat fgrep.1 | gzip -9c > $PKG/usr/man/man1/fgrep.1.gz
+  mkdir -p $PKG/usr/info
+  for file in *.info* ; do
+    cat $file | gzip -9c > $PKG/usr/info/$file.gz
+  done
+)
+( cd po
+  for file in *.gmo ; do
+    LOC=`basename $file .gmo`
+    mkdir -p $PKG/usr/share/locale/$LOC/LC_MESSAGES
+    cat $file > $PKG/usr/share/locale/$LOC/LC_MESSAGES/grep.mo
+  done )
+mkdir -p $PKG/usr/doc/grep-$VERSION
+cp -a \
+  ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README README-alpha README.DOS THANKS TODO \
+  $PKG/usr/doc/grep-$VERSION
+chown root.root $PKG/usr/doc/grep-$VERSION/*
+chmod 644 $PKG/usr/doc/grep-$VERSION/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# @#$%
+if [ -r /tmp/libpcre.la ]; then
+  mv /tmp/libpcre.so /usr/lib
+  mv /tmp/libpcre.la /usr/lib
+fi
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/grep-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/grep-$VERSION
+  rm -rf $PKG
+fi

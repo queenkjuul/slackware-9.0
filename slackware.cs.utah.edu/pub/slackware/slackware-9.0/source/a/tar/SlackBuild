@@ -1,0 +1,96 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-tar
+
+VERSION=1.13.25
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# This old version is the only one that won't clobber synlinks, e.g.:
+# someone moves /opt to /usr/opt and makes a symlink.  With newer
+# versions of tar, installing any new package will remove the /opt
+# symlink and plop down a new directory there.
+# Well, there's a lot of other bugs (the remote stuff particularly I'm
+# told is flaky) in tar-1.13, so it'll only be here now for use by the
+# Slackware package utils.  And, we'll even let people remove it and
+# the pkgutils will still try to work (but eventually they'll pay the
+# price :)
+cd $TMP
+tar xvzf $CWD/tar-1.13.tar.gz
+cd tar-1.13
+zcat $CWD/bzip2-tar.diff.gz | patch -p1
+CFLAGS=-O2 ./configure --prefix=/usr --disable-nls i386-slackware-linux
+make
+strip src/tar
+mkdir -p $PKG/bin
+cat src/tar > $PKG/bin/tar-1.13
+chmod 755 $PKG/bin/tar-1.13
+
+echo "+==========+"
+echo "| tar-$VERSION |"
+echo "+==========+"
+cd $TMP
+tar xzvf $CWD/tar-$VERSION.tar.gz
+cd tar-$VERSION
+CFLAGS=-O2 ./configure --prefix=/usr i386-slackware-linux
+make
+mkdir -p $PKG/install
+echo "mv bin/tar-incoming bin/tar" > $PKG/install/doinst.sh
+( cd src
+  strip tar rmt
+  mkdir -p $PKG/bin
+  cat tar > $PKG/bin/tar-incoming
+  chown -R root.bin $PKG/bin
+  chmod 755 $PKG/bin/tar-incoming
+  mkdir -p $PKG/usr/libexec
+  cat rmt > $PKG/usr/libexec/rmt
+  chmod 755 $PKG/usr/libexec/rmt
+  ( cd $PKG/bin
+    ln -sf tar tar-$VERSION )
+  ( mkdir -p $PKG/etc
+    cd $PKG/etc
+    ln -sf /usr/libexec/rmt . )
+  ( mkdir -p $PKG/sbin
+    cd $PKG/sbin
+    ln -sf /usr/libexec/rmt .
+    chown -R root.bin $PKG/sbin ))
+mkdir -p $PKG/usr/info
+cat doc/tar.info | gzip -9c > $PKG/usr/info/tar.info.gz
+( cd po
+  for file in *.gmo ; do
+    mkdir -p $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES
+    cat $file > $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES/tar.mo
+  done )
+mkdir -p $PKG/usr/doc/tar-$VERSION
+cp -a ABOUT-NLS AUTHORS COPYING NEWS PORTS README README-alpha THANKS TODO \
+  scripts $PKG/usr/doc/tar-$VERSION
+rm -f $PKG/usr/doc/tar-$VERSION/scripts/Makefile*
+chown -R root.root $PKG/usr/doc/tar-$VERSION
+mkdir -p $PKG/usr/man/man{1,8}
+cat $CWD/tar.1.gz > $PKG/usr/man/man1/tar.1.gz
+cat $CWD/rmt.8.gz > $PKG/usr/man/man8/rmt.8.gz
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+
+# Build the package:
+cd $PKG
+echo "y
+n" | makepkg $TMP/tar-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/tar-$VERSION
+  rm -rf $PKG
+fi

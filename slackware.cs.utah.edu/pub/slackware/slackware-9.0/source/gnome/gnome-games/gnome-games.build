@@ -1,0 +1,55 @@
+CWD=`pwd`
+
+VERSION=2.2.0
+
+cd /tmp
+tar xjvf $CWD/gnome-games-$VERSION.tar.bz2
+cd gnome-games-$VERSION
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --with-ncurses=/usr \
+            --sysconfdir=/etc \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/gnome-games-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  /usr/doc/gnome-games-$VERSION
+mkdir -p /install
+cat << EOF > /install/doinst.sh
+if [ -d var/lib/games/tmp ]; then
+  ( cd var/lib/games/tmp
+    for file in * ; do
+      if [ ! -r ../\$file ]; then
+        mv \$file ..
+      fi
+    done )
+  rm -rf var/lib/games/tmp
+fi
+EOF
+# Fix directory perms:
+chown root:games /var/lib/games
+chmod 2775 /var/lib/games
+cat $CWD/../scrollkeeper/doinst.sh >> /install/doinst.sh
+cat $CWD/slack-desc > /install/slack-desc
+( cd /var/lib/games
+  mkdir tmp
+  mv --verbose *.* tmp )
+( cd /usr/bin
+  chown root:bin ctali freecell gataxx gnect sol
+)
+cat << EOF
+
+
+Check these dir perms!
+
+drwxrwsr-x    3 root     games        4096 Jan 22 15:21 /var/lib/games/
+
+
+EOF

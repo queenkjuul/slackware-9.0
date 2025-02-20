@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+gnomeicu: gnomeicu
+gnomeicu:
+gnomeicu: GnomeICU is a clone of Mirabilis' popular ICQ written with GTK+.  The
+gnomeicu: original source was taken from Matt Smith's mICQ.  This is meant as a
+gnomeicu: replacement for the JavaICQ, which is slow and buggy.  If you would
+gnomeicu: like to contribute, please contact Jeremy Wise <jwise@pathwaynet.com>.
+gnomeicu:
+gnomeicu:
+gnomeicu:
+gnomeicu:
+gnomeicu:

@@ -1,0 +1,73 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-xv
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+=========+"
+echo "| xv-3.10 |"
+echo "+=========+"
+cd $TMP
+tar xzvf $CWD/xv-3.10.tar.gz
+cd xv-3.10
+zcat $CWD/xv-3.10a.patch.gz | patch -p0
+zcat $CWD/xv-3.10a.diff.gz | patch -p0
+zcat $CWD/xv-3.10-errlist.diff.gz | patch -p1
+zcat $CWD/xv-3.10a.USE_GETCWD.patch.gz | patch -p1
+mkdir pngdiffs
+# XV [John Bradley] (Unix/X, VMS/X) - version 3.10a and later with Alexander Lehmann and Andreas Dilger's unofficial
+# PNG patch version 1.2d (requires libpng 0.89 or later and zlib) and Greg Roelofs' unofficial fix #3 to the
+# unofficial patch;
+( cd pngdiffs ; tar xzvf $CWD/xv-3.10a-png-1.2d.tar.gz )
+cp -a pngdiffs/xvpng.c .
+cp -a pngdiffs/bits/br_png bits/br_png
+cat pngdiffs/xcmap.diff | patch -p1
+cat pngdiffs/xvpng.diff | patch -p1
+cat pngdiffs/xvjpeg.diff | patch -p1
+cat pngdiffs/xvtiff.diff | patch -p1
+zcat $CWD/xvpng-1.2d-fix3.txt.gz | patch -p0
+zcat $CWD/xv-3.10a-finalcleanup.diff.gz | patch -p0
+zcat $CWD/xv-pngfix.diff.gz | patch -p1
+make -f Makefile.std
+strip bggen vdcomp xcmap xv xvpictoppm
+mkdir -p $PKG/usr/X11R6/bin
+cat bggen > $PKG/usr/X11R6/bin/bggen
+cat vdcomp > $PKG/usr/X11R6/bin/vdcomp
+cat xcmap > $PKG/usr/X11R6/bin/xcmap
+cat xv > $PKG/usr/X11R6/bin/xv
+cat xvpictoppm > $PKG/usr/X11R6/bin/xvpictoppm
+chown -R root.bin $PKG/usr/X11R6/bin
+chmod 755 $PKG/usr/X11R6/bin/*
+mkdir -p $PKG/usr/X11R6/man/man1
+for page in docs/xv.man docs/bggen.man docs/xcmap.man docs/xvp2p.man ; do
+  cat $page | gzip -9c > $PKG/usr/X11R6/man/man1/`basename $page .man`.1.gz
+done
+mkdir -p $PKG/usr/doc/xv-3.10a
+cp -a README $PKG/usr/doc/xv-3.10a
+( cd docs
+  cp -a \
+    penn.policy xv.blurb xv.ann xvdocs.ps \
+    $PKG/usr/doc/xv-3.10a
+    gzip -9 $PKG/usr/doc/xv-3.10a/xvdocs.ps )
+chown -R root.root $PKG/usr/doc/xv-3.10a
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/xv-3.10a-i386-1.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/xv-3.10
+  rm -rf $PKG
+fi

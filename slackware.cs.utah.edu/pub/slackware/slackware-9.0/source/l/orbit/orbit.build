@@ -1,0 +1,21 @@
+CWD=`pwd`
+VERSION=0.5.17
+cd /tmp
+tar xjvf $CWD/ORBit-$VERSION.tar.bz2
+cd ORBit-$VERSION
+chown -R root.root .
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/ORBit-$VERSION/libIDL
+cp -a \
+  AUTHORS COPYING ChangeLog INSTALL NEWS README TODO \
+/usr/doc/ORBit-$VERSION
+( cd libIDL
+  cp -a \
+    AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README \
+    /usr/doc/ORBit-$VERSION/libIDL )
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

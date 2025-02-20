@@ -1,0 +1,24 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+VERSION=1.1.7
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+cd $TMP
+tar xjvf $CWD/cdrdao-$VERSION.src.tar.bz2
+cd cdrdao-$VERSION
+chown -R root.root .
+mkdir -p /usr/doc/cdrdao-$VERSION
+cp -a COPYING CREDITS INSTALL README README.FreeBSD README.PlexDAE README.Win32 \
+  Release-1.* \
+  contrib \
+  /usr/doc/cdrdao-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            i386-slackware-linux
+make
+make install
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

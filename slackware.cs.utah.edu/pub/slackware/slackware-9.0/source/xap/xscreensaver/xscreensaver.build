@@ -1,0 +1,23 @@
+CWD=`pwd` 
+cd /tmp
+VERSION=4.08
+tar xjvf $CWD/xscreensaver-$VERSION.tar.bz2
+cd xscreensaver-$VERSION
+chown -R root.root .
+xml_config=/usr/bin/xml-config xml2_config=/usr/bin/xml2-config \
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr/X11R6 \
+            --with-shadow \
+            --with-jpeg \
+            --with-gl \
+            i386-slackware-linux
+# We use '-i' because xscreensaver's NLS support has always been horribly broken
+make -i
+make -i install
+# This is needed for the menus:
+cp -a /usr/share/xscreensaver/xscreensaver.xpm /usr/share/pixmaps/xscreensaver.xpm
+mkdir -p /usr/doc/xscreensaver-$VERSION
+cp -a README README.debugging /usr/doc/xscreensaver-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

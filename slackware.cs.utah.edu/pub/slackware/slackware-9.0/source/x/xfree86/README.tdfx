@@ -1,0 +1,5 @@
+tdfx_dri.so:  This is the DRI module for Voodoo3/4/5 cards.
+              You must also have DRI-capable Glide3 installed.
+
+Glide library packages for Slackware may be found in /contrib/3dfx/.
+

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/kde</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/kde</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="KDE-VERSION">KDE-VERSION</a></td><td align="right">2003-01-27 21:30  </td><td align="right">  4 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="KDE.SlackBuild">KDE.SlackBuild</a></td><td align="right">2003-03-16 00:41  </td><td align="right">2.0K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="arts/">arts/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdeaddons/">kdeaddons/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdeadmin/">kdeadmin/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdeartwork/">kdeartwork/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdebase/">kdebase/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdebindings/">kdebindings/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdeedu/">kdeedu/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdegames/">kdegames/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdegraphics/">kdegraphics/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdelibs/">kdelibs/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdemultimedia/">kdemultimedia/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdenetwork/">kdenetwork/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdepim/">kdepim/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdesdk/">kdesdk/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdetoys/">kdetoys/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdeutils/">kdeutils/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kdevelop/">kdevelop/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="koffice/">koffice/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="qt/">qt/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="quanta/">quanta/</a></td><td align="right">2003-03-16 11:01  </td><td align="right">  - </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

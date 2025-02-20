@@ -1,0 +1,26 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+
+VERSION=1.4.3
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+echo "+=============+"
+echo "| libtool-$VERSION |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/libtool-$VERSION.tar.gz
+cd libtool-$VERSION
+CFLAGS=-O2 ./configure --prefix=/usr i386-slackware-linux
+make install
+mkdir -p /usr/doc/libtool-$VERSION
+cp -a AUTHORS COPYING INSTALL NEWS README THANKS TODO /usr/doc/libtool-$VERSION
+chown root.root /usr/doc/libtool-$VERSION/*
+mkdir /install
+cp $CWD/doinst.sh /install
+cat $CWD/slack-desc > /install/slack-desc

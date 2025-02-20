@@ -1,0 +1,72 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+PKG1=$TMP/package-gettext
+PKG2=$TMP/package-gettext-tools
+rm -rf $PKG1 $PKG2
+mkdir -p $PKG1 $PKG2
+
+VERSION=0.11.5
+ARCH=i386
+BUILD=1
+
+# Build $PKG2 (full version):
+cd $TMP
+tar xjvf $CWD/gettext-$VERSION.tar.bz2
+cd gettext-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr
+make
+make install DESTDIR=$PKG2
+# Quoth the PACKAGING file:
+#      $prefix/lib/libintl.*               (not installed on glibc systems)
+#      $prefix/lib/charset.alias           (not installed on glibc systems)
+#      $prefix/share/locale/locale.alias   (not installed on glibc systems)
+#      $prefix/include/libintl.h           (not installed on glibc systems)
+rm -f $PKG2/usr/lib/libintl.* $PKG2/usr/share/locale/locale.alias $PKG2/usr/include/libintl.h
+rmdir $PKG2/usr/include
+chown -R root.bin $PKG2/usr/bin
+mv $PKG2/usr/doc/gettext $PKG2/usr/doc/gettext-$VERSION
+( cd $PKG2/usr/info
+  rm -f dir
+  gzip -9 *
+)
+gzip -9 $PKG2/usr/man/man?/*
+for file in ABOUT-NLS AUTHORS BUGS COPYING ChangeLog DISCLAIM INSTALL NEWS PACKAGING README README.gemtext THANKS TODO ; do
+  cp -a $file $PKG2/usr/doc/gettext-$VERSION/$file
+done
+
+# Build $PKG1:
+mkdir -p $PKG1/usr/bin
+cat $PKG2/usr/bin/gettext > $PKG1/usr/bin/gettext
+cat $PKG2/usr/bin/ngettext > $PKG1/usr/bin/ngettext
+chown -R root.bin $PKG1/usr/bin
+chmod 755 $PKG1/usr/bin/*
+mkdir -p $PKG1/usr/share/gettext
+cp -a ABOUT-NLS $PKG1/usr/share/gettext/ABOUT-NLS
+mkdir -p $PKG1/usr/man/man1
+cat man/gettext.1 | gzip -9c > $PKG1/usr/man/man1/gettext.1.gz
+cat man/ngettext.1 | gzip -9c > $PKG1/usr/man/man1/ngettext.1.gz
+mkdir -p $PKG1/usr/doc/gettext-$VERSION
+cat man/gettext.1.html > $PKG1/usr/doc/gettext-$VERSION/gettext.1.html
+cat man/ngettext.1.html > $PKG1/usr/doc/gettext-$VERSION/ngettext.1.html
+
+mkdir -p $PKG1/install
+cat $CWD/slack-desc.gettext > $PKG1/install/slack-desc
+mkdir -p $PKG2/install
+cat $CWD/slack-desc.gettext-tools > $PKG2/install/slack-desc
+
+# Strip stuff:
+( cd $PKG1
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+  cd $PKG2
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+  find . | xargs file | grep "ELF 32-bit LSB shared object" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+
+cd $PKG1
+echo "n" | makepkg $TMP/gettext-$VERSION-$ARCH-$BUILD.tgz
+
+cd $PKG2
+echo "n" | makepkg $TMP/gettext-tools-$VERSION-$ARCH-$BUILD.tgz
+

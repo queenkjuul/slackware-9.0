@@ -1,0 +1,76 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-xfsprogs
+
+# Wow, it's been years since Slackware had an xfsprogs package. ;-)
+
+VERSION=2.3.5
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+===================+"
+echo "| xfsprogs-$VERSION |"
+echo "+===================+"
+cd $TMP
+tar xzvf $CWD/xfsprogs-$VERSION.src.tar.gz
+cd xfsprogs-$VERSION
+OPTIMIZER=-O1 DEBUG=-DNDEBUG ./configure --prefix=/usr i386-slackware-linux
+make
+strip fsck/fsck.xfs mkfs/mkfs.xfs repair/xfs_repair
+mkdir -p $PKG/sbin
+cat fsck/fsck.xfs > $PKG/sbin/fsck.xfs
+cat mkfs/mkfs.xfs > $PKG/sbin/mkfs.xfs
+cat repair/xfs_repair > $PKG/sbin/xfs_repair
+chmod 755 $PKG/sbin/*
+chown -R root.bin $PKG/sbin
+strip bmap/xfs_bmap db/xfs_db freeze/xfs_freeze growfs/xfs_growfs logprint/xfs_logprint mkfile/xfs_mkfile rtcp/xfs_rtcp
+mkdir -p $PKG/usr/sbin
+cat db/xfs_admin.sh > $PKG/usr/sbin/xfs_admin
+cat bmap/xfs_bmap > $PKG/usr/sbin/xfs_bmap
+cat db/xfs_check.sh > $PKG/usr/sbin/xfs_check
+cat db/xfs_db > $PKG/usr/sbin/xfs_db
+cat freeze/xfs_freeze > $PKG/usr/sbin/xfs_freeze
+cat growfs/xfs_growfs > $PKG/usr/sbin/xfs_growfs
+cat growfs/xfs_info.sh > $PKG/usr/sbin/xfs_info
+cat logprint/xfs_logprint > $PKG/usr/sbin/xfs_logprint
+cat mkfile/xfs_mkfile > $PKG/usr/sbin/xfs_mkfile
+cat db/xfs_ncheck.sh > $PKG/usr/sbin/xfs_ncheck
+cat rtcp/xfs_rtcp > $PKG/usr/sbin/xfs_rtcp
+chmod 755 $PKG/usr/sbin/*
+chown -R root.bin $PKG/usr/sbin
+mkdir -p $PKG/usr/man/man5
+( cd man/man5
+  cat xfs.5 | gzip -9c > $PKG/usr/man/man5/xfs.5.gz )
+mkdir -p $PKG/usr/man/man8
+( cd man/man8
+  for file in *.8 ; do
+    cat $file | gzip -9c > $PKG/usr/man/man8/$file.gz
+  done )
+mkdir -p $PKG/usr/doc/xfsprogs-$VERSION
+( cd doc
+  cp -a CHANGES COPYING CREDITS PORTING README.LVM README.quota $PKG/usr/doc/xfsprogs-$VERSION )
+chmod 644 $PKG/usr/doc/xfsprogs-$VERSION/*
+chown -R root.root $PKG/usr/doc/xfsprogs-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/xfsprogs-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/xfsprogs-$VERSION
+  rm -rf $PKG
+fi

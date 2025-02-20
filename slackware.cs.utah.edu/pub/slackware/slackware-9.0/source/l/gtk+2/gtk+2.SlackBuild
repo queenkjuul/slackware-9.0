@@ -1,0 +1,41 @@
+CWD=`pwd`
+PKG=/tmp/package-gtk+
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=2.2.1
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xjvf $CWD/gtk+-$VERSION.tar.bz2
+cd gtk+-$VERSION
+chown -R root.root .
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --sysconfdir=/etc
+make
+make install DESTDIR=$PKG
+# I'm spamming your root partition
+make install
+mkdir -p $PKG/etc/gtk-2.0
+cp -a /etc/gtk-2.0/* $PKG/etc/gtk-2.0
+strip $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+( cd $PKG
+  find . | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+gzip -9 $PKG/usr/man/man?/*
+mkdir -p $PKG/usr/doc/gtk+-$VERSION
+cp -a \
+  AUTHORS COPYING ChangeLog NEWS README TODO \
+  $PKG/usr/doc/gtk+-$VERSION
+mkdir -p $PKG/etc/profile.d
+cp -a $CWD/profile.d/* $PKG/etc/profile.d
+chmod 755 $PKG/etc/profile.d/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-gtk+
+makepkg -l y -c n ../gtk+2-$VERSION-$ARCH-$BUILD.tgz

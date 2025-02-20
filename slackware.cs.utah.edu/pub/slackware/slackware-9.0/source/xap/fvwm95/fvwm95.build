@@ -1,0 +1,47 @@
+#!/bin/sh
+CWD=`pwd`
+# Build asapm first:
+sh asapm.build
+cd /tmp
+rm -rf fvwm95-2.0.43ba.orig
+tar xjvf $CWD/fvwm95_2.0.43ba.orig.tar.bz2
+cd fvwm95-2.0.43ba.orig
+bzip2 -dc $CWD/fvwm95_2.0.43ba-15.diff.bz2 | patch -p1 -E --verbose --backup --suffix=.orig
+bzip2 -dc $CWD/fvwm95.colormap.slack.diff.bz2 | patch -p1 -E --verbose --backup --suffix=.orig
+zcat $CWD/fvwm95.glibc.time.diff.gz | patch -p1 -E --verbose --backup --suffix=.orig
+CFLAGS=-O2 ./configure --prefix=/usr/X11R6
+make
+make install
+cat $CWD/fvwm95-menu.xpm > /usr/X11R6/include/X11/pixmaps/fvwm95-menu.xpm
+mkdir -p /etc/X11/fvwm95
+mv /usr/X11R6/lib/X11/fvwm95/system.fvwm95rc \
+  /etc/X11/fvwm95/system.fvwm95rc.orig
+cat $CWD/system.fvwm95rc > /etc/X11/fvwm95/system.fvwm95rc
+cat $CWD/system.fvwm95rc-apm-battery \
+  > /etc/X11/fvwm95/system.fvwm95rc-apm-battery
+( cd /usr/X11R6/lib/X11/fvwm95 ; rm -rf system.fvwm95rc ; ln -sf ../../../../../etc/X11/fvwm95/system.fvwm95rc . )
+mkdir -p /usr/doc/fvwm95-2.0.43ba
+cp -a Changelog FvwmTaskBar-plugins.patch.README GPL INSTALL README fvwm95-2.xx.lsm \
+  docs/col* docs/err* docs/example* docs/fvwm* docs/m4* docs/modul* /usr/doc/fvwm95-2.0.43ba
+mkdir -p /usr/doc/fvwm95-2.0.43ba/FvwmButtons
+( cd modules/FvwmButtons
+  cp -a BUGS CHANGES INSTALL README TODO samplebuttonrc \
+    /usr/doc/fvwm95-2.0.43ba/FvwmButtons )
+chown -R root.root /usr/doc/fvwm95-2.0.43ba
+mkdir -p /etc/X11/xinit
+cp $CWD/xinitrc.fvwm95 /etc/X11/xinit
+chown root.root /etc/X11/xinit/xinitrc.fvwm95
+chmod 755 /etc/X11/xinit/xinitrc.fvwm95
+mkdir -p /install
+#cat $CWD/doinst.sh > /install/doinst.sh
+mkdir -p /usr/X11R6/man/man1
+for file in `find . -type f -name "*.man"` ; do
+  cat $file | gzip -9c > /usr/X11R6/man/man1/`basename $file .man`.1.gz
+done
+# Gross:
+mkdir -p /usr/X11R6/include/X11/pixmaps
+mv /usr/X11R6/lib/X11/mini-icons/* /usr/X11R6/include/X11/pixmaps
+mv /usr/X11R6/lib/X11/icons/* /usr/X11R6/include/X11/pixmaps
+rmdir /usr/X11R6/lib/X11/{icons,mini-icons}
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

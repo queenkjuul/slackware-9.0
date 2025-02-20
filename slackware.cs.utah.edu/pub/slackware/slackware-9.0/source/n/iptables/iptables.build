@@ -1,0 +1,18 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=1.2.7a
+cd /tmp
+tar xjvf $CWD/iptables-$VERSION.tar.bz2
+cd iptables-$VERSION
+chown -R root.root .
+zcat $CWD/iptables.prefix.diff.gz | patch -p1
+make
+make install
+make install-devel
+make experimental
+make install-experimental
+mkdir -p /usr/doc/iptables-$VERSION
+cp -a COPYING INSTALL KNOWN_BUGS /usr/doc/iptables-$VERSION
+chmod 644 /usr/doc/iptables-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

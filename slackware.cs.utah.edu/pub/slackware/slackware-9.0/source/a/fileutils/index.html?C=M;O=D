@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a/fileutils</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a/fileutils</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/a/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="SlackBuild">SlackBuild</a></td><td align="right">2002-05-28 03:52  </td><td align="right">3.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fileutils-4.1.rm.diff.gz">fileutils-4.1.rm.diff.gz</a></td><td align="right">2002-05-28 03:52  </td><td align="right">2.6K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-23 21:55  </td><td align="right">959 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="_fileutils.tar.gz">_fileutils.tar.gz</a></td><td align="right">2001-05-26 03:35  </td><td align="right">876 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fileutils.man.diff.gz">fileutils.man.diff.gz</a></td><td align="right">2001-05-26 03:21  </td><td align="right">217 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fileutils-4.1.tar.gz">fileutils-4.1.tar.gz</a></td><td align="right">2001-04-29 14:24  </td><td align="right">1.7M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="DIR_COLORS.gz">DIR_COLORS.gz</a></td><td align="right">2001-04-12 04:17  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fileutils.man.tar.gz">fileutils.man.tar.gz</a></td><td align="right">1998-04-01 23:08  </td><td align="right"> 16K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fileutils.dircolors.diff.gz">fileutils.dircolors.diff.gz</a></td><td align="right">1998-04-01 22:11  </td><td align="right">3.6K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

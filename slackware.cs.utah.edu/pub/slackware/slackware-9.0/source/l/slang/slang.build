@@ -1,0 +1,21 @@
+#!/bin/sh
+CWD=`pwd`
+cd /tmp
+tar xjvf $CWD/slang-1.4.5.tar.bz2
+cd slang-1.4.5
+./configure --prefix=/usr --includedir=/usr/include/slang
+make CFLAGS=-O2
+make CFLAGS=-O2 install
+make elf
+make install-elf
+rm -r /usr/doc/slang
+mkdir -p /usr/doc/slang-1.4.5
+cp -a COPY* README UPGRADE.txt changes.txt doc/text /usr/doc/slang-1.4.5
+chmod 755 /usr/lib/libslang.so.1.4.5
+( cd /usr/lib ; ldconfig . )
+# ADD OLD DOX:
+tar xjvf $CWD/slang1.4.3-doc.tar.bz2
+cp -a doc/html /usr/doc/slang-1.4.5
+chown -R root.root /usr/doc/slang-1.4.5
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

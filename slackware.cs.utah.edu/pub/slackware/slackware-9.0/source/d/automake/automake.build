@@ -1,0 +1,38 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+
+VERSION=1.7.3
+linkup() {
+( cd /usr/bin ; rm -rf aclocal )
+( cd /usr/bin ; ln -sf aclocal-1.7 aclocal )
+( cd /usr/bin ; rm -rf automake )
+( cd /usr/bin ; ln -sf automake-1.7 automake )
+}
+
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+cd $TMP
+tar xjvf $CWD/automake-$VERSION.tar.bz2
+cd automake-$VERSION
+chown -R root.root .
+find . -perm 664 | xargs chmod 644
+./configure --prefix=/usr
+make
+make install
+# Change hard links to symlinks:
+linkup;
+# Create local aclocal dir:
+mkdir -p /usr/share/aclocal
+touch /usr/share/aclocal
+mkdir -p /usr/doc/automake-$VERSION
+cp -a \
+  AUTHORS COPYING INSTALL NEWS README THANKS TODO \
+  /usr/doc/automake-$VERSION
+mkdir -p /install
+zcat $CWD/doinst.sh.gz > /install/doinst.sh
+cat $CWD/slack-desc > /install/slack-desc

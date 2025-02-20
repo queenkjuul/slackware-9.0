@@ -1,0 +1,60 @@
+#!/bin/sh
+# Build RPM (of all things) for Slackware.
+CWD=`pwd`
+cd /tmp
+tar xzvf $CWD/rpm-4.0.2.tar.gz
+cd rpm-4.0.2
+zcat $CWD/rpm-4.0.2.diff.gz | patch -p1
+# Install the docs before mangling them with our filters:
+mkdir -p /usr/doc/rpm-4.0.2
+cp -a ABOUT-NLS CHANGES COPYING CREDITS GROUPS INSTALL README \
+  README.amiga RPM-GPG-KEY RPM-PGP-KEY TODO /usr/doc/rpm-4.0.2
+cp -a doc/manual /usr/doc/rpm-4.0.2
+chown -R root.root /usr/doc/rpm-4.0.2
+find /usr/doc/rpm-4.0.2 -type d | xargs chmod 755
+find /usr/doc/rpm-4.0.2 -type f | xargs chmod 644
+# Change the /usr/src/redhat path to /usr/src/rpm.  This ain't redhat.
+find . -name "*.orig" | xargs rm --verbose
+for file in `find . -type f` ; do
+  echo "Filtering /src/redhat path in $file..."
+  cp -a $file $file.orig
+  cat $file.orig | sed "/\/src\/redhat/s//\/src\/rpm/" > $file
+done
+for file in `find . -type f` ; do
+  echo "Filtering {_usrsrc}/redhat path in $file..."
+  cp -a $file $file.orig
+  cat $file.orig | sed "/{_usrsrc}\/redhat/s//{_usrsrc}\/rpm/" > $file
+done
+find . -name "*.orig" | xargs rm --verbose
+# Using "rpm" for the vendor name cures the /usr/src bug.
+./configure --prefix=/usr i386-rpm-linux
+# No, no.  Do a plain build, and then strip things by hand.
+#make CFLAGS="-O2 -D_GNU_SOURCE -Wall -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes -Wno-char-subscripts"
+make
+make install
+gzip -9 --force /usr/man/man3/popt.3 \
+  /usr/man/man8/rpm.8 \
+  /usr/man/man8/rpm2cpio.8
+strip /bin/rpm /usr/bin/rpm2cpio
+# .so and .a libs will still require striping...
+mkdir -p /var/lib/rpm/tmp
+zcat $CWD/Packages.gz > /var/lib/rpm/tmp/Packages
+mkdir -p /install
+zcat $CWD/doinst.sh.gz > /install/doinst.sh
+cat $CWD/slack-desc > /install/slack-desc
+# Remove popt from the system.  Yeah, this is messy, but so is a lot of RPM.  ;-)
+# If they would provide a way to build/install using the existing system popt, this
+# hack would not be neccessary.
+
+rm -f /usr/include/popt.h
+rm -f /usr/man/man3/popt.3.gz
+rm -f /usr/lib/libpopt.*
+rm -f /usr/share/locale/*/LC_MESSAGES/popt.mo
+
+cat << EOF
+
+***************************************************
+*popt REMOVED!  You'll need to replace it later...*
+***************************************************
+
+EOF

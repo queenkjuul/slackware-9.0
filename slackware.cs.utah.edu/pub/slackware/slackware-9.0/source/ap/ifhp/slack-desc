@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+    |-----handy-ruler------------------------------------------------------|
+ifhp: ifhp (Almost Universal LPRng Print Filter)
+ifhp:
+ifhp: ifhp is a highly versatile print filter for BSD based print spoolers.
+ifhp: It can be configured to handle text, PostScript, PJL, PCL, and raster
+ifhp: printers, supports conversion from one format to another, and can be
+ifhp: used as a stand-alone print utility.  It is the primary supported
+ifhp: print filter for the LPRng print spooler.
+ifhp:
+ifhp:
+ifhp:
+ifhp:

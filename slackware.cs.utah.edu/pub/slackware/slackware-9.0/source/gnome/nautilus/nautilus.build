@@ -1,0 +1,46 @@
+CWD=`pwd`
+
+VERSION=2.2.2
+
+cd /tmp
+tar xjvf $CWD/nautilus-$VERSION.tar.bz2
+cd nautilus-$VERSION
+# It's only fair that Slackware should get a link, too.
+zcat $CWD/nautilus.bookmarks.diff.gz | patch -p1
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+#
+# Disabling the Mozilla component.  As a replacement, Galeon can be compiled so that
+# it can function as the Nautilus web view component.  This removes the Nautilus
+# dependency on Mozilla, which is a good thing, and improves stability since Galeon
+# follows Mozilla changes more closely (also a good thing).  The only drawback is that
+# compiling Galeon with the Nautilus view makes it link to all the Nautilus libraries.
+# In fact, I find that messy enough that I'm not compiling Galeon that way, so Nautilus
+# will be a file browser only, not a web browser.
+#
+# Whenever Nautilus-1.0.7 ships the Mozilla-view-component will be gone anyway, lest
+# anyone thinks I've lost my mind.  ;-)
+#
+CFLAGS="-O2 -march=i386 -mcpu=i686" CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --mandir=/usr/man \
+            --infodir=/usr/info \
+            --localstatedir=/var/lib \
+            --disable-more-warnings \
+            --disable-mozilla-component \
+            i386-slackware-linux
+make
+make install
+## [useless with gnome2...]
+## This is the Scalable SVG theme that was recently announced on www.gnome.org,
+## but with the non-redistributable trademarked logos removed:
+#( cd /usr/share/pixmaps/nautilus ; tar xzf $CWD/nautilus-gorilla.tar.gz )
+mkdir -p /usr/doc/nautilus-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  /usr/doc/nautilus-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+

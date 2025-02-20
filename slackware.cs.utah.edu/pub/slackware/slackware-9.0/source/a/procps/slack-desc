@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+      |-----handy-ruler------------------------------------------------------|
+procps: procps (utilities for displaying process information)
+procps:
+procps: Utilities for displaying process and memory information written by
+procps: Michael K. Johnson, Werner Almesberger, Charles Blake, Branko
+procps: Lankester, Robert Nation, David Engel, Larry Greenfield, Roger Binns,
+procps: Sander van Malssen, Brian Edmonds, George Staikos, and Jim Warner.
+procps:
+procps:
+procps:
+procps:
+procps:

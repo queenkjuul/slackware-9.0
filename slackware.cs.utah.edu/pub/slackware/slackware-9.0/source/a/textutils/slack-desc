@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+textutils: textutils (text file processing utilities)
+textutils:
+textutils: These are the GNU text file (actually, file contents) processing
+textutils: utilities.  Most of these programs have significant advantages over
+textutils: their Unix counterparts, such as greater speed, additional options,
+textutils: and fewer arbitrary limits.
+textutils:
+textutils: The programs in this package are: cat, cksum, comm, csplit, cut, 
+textutils: expand, fold, head, join, md5sum, nl, od, paste, pr, ptx, sort, split,
+textutils: sum, tac, tail, tr, tsort, unexpand, uniq, and wc.
+textutils:

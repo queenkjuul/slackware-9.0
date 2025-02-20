@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+     |-----handy-ruler------------------------------------------------------|
+orbit: orbit
+orbit:
+orbit: ORBit is a high-performance CORBA (Common Object Request Broker
+orbit: Architecture) ORB (object request broker). It allows programs to send
+orbit: requests and receive replies from other programs, regardless of the
+orbit: locations of the two programs. CORBA is an architecture that enables
+orbit: communication between program objects, regardless of the programming
+orbit: language they're written in or the operating system they run on.
+orbit:
+orbit: ORBit is required by GNOME, and is needed to build Mozilla.
+orbit:

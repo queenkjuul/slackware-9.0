@@ -1,0 +1,90 @@
+#!/bin/sh
+## build glibc-$VERSION for Slackware
+## by Patrick J. Volkerding <volkerdi@slackware.com>
+CWD=`pwd`
+export PKG=/tmp/package-glibc
+
+VERSION=2.3.1
+
+# Empty this first:
+rm -rf $PKG
+mkdir -p $PKG/lib
+mkdir -p $PKG/sbin
+mkdir -p $PKG/usr/bin
+mkdir -p $PKG/usr/lib
+mkdir -p $PKG/usr/sbin
+mkdir -p $PKG/usr/include
+mkdir -p $PKG/usr/doc
+mkdir -p $PKG/usr/man
+mkdir -p $PKG/usr/share
+
+cd /tmp
+tar xjvf $CWD/glibc-$VERSION.tar.bz2
+cd glibc-$VERSION
+
+tar xjvf $CWD/glibc-linuxthreads-$VERSION.tar.bz2
+
+# Fix compatibility problems with old binaries/libraries [for now]:
+zcat $CWD/glibc-2.3.1-ctype-compat-v2.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-libc_wait-compat.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-prelinkfix.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-stack_end-compat.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-dl-runtime.diff.gz | patch -p1
+
+CFLAGS="-O2 -g -march=i386 -mcpu=i686" ./configure --prefix=/usr \
+            --enable-add-ons=linuxthreads \
+            --without-cvs \
+            i386-slackware-linux
+
+make
+make install install_root=$PKG
+make localedata/install-locales install_root=$PKG
+
+# The prevailing standard seems to be putting unstripped libraries in
+# /usr/lib/debug/ and stripping the debugging symbols from all the other
+# libraries except the profiling ones:
+mkdir $PKG/usr/lib/debug
+cp -a $PKG/lib/l*.so* $PKG/usr/lib/debug
+cp -a $PKG/usr/lib/*.a $PKG/usr/lib/debug
+# Now strip all other libraries:
+strip -g $PKG/lib/lib*
+strip -g $PKG/usr/lib/l*.so*
+strip -g $PKG/usr/lib/lib*.a
+# Put back unstripped profiling libraries:
+mv $PKG/usr/lib/debug/*_p.a $PKG/usr/lib
+# it might be best to put the unstripped and profiling libraries in glibc-debug and glibc-profile
+
+# We'll automatically install the config file for the Name Server Cache Daemon.
+# Perhaps this should also have some commented-out startup code in rc.inet2...
+mkdir -p $PKG/etc
+cat nscd/nscd.conf > $PKG/etc/nscd.conf.new
+
+# Not a bad idea to have this here as well:
+( cd $PKG ; tar xzvf $CWD/timezone-scripts.tar.gz )
+
+## Install docs:
+( mkdir -p $PKG/usr/doc/glibc-$VERSION
+  cp -a BUGS CONFORMANCE COPYING COPYING.LIB FAQ INSTALL INTERFACE LICENSES \
+    NAMESPACE NEWS NOTES PROJECTS README README.libm $PKG/usr/doc/glibc-$VERSION
+  cd linuxthreads
+  mkdir -p $PKG/usr/doc/glibc-$VERSION/linuxthreads
+  cp -a Banner FAQ.html LICENSE README README.Xfree3.2 linuxthreads.texi \
+    Examples $PKG/usr/doc/glibc-$VERSION/linuxthreads
+  cd man
+  mkdir $PKG/usr/man/man3
+  for file in *.man ; do
+    cat $file | gzip -9c > $PKG/usr/man/man3/`basename $file .man`.3.gz
+  done 
+  chown -R root.root $PKG/usr/doc/glibc-$VERSION 
+  find $PKG/usr/doc/glibc-$VERSION -type d | xargs chmod 755 
+  find $PKG/usr/doc/glibc-$VERSION -type f | xargs chmod 644 )
+
+### If you want glibc-$VERSION installed, uncomment the lines below.
+### NOTE:  This isn't required to make the package(s); we build into $TMP/package-glibc/
+#make install
+#make localedata/install-locales
+
+# Don't forget to add the /usr/share/zoneinfo/localtime -> /etc/localtime symlink! :)
+if [ ! -r $PKG/usr/share/zoneinfo/localtime ]; then
+  ( cd $PKG/usr/share/zoneinfo ; ln -sf /etc/localtime . )
+fi

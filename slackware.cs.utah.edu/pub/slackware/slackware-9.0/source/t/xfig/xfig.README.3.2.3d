@@ -1,0 +1,212 @@
+May 29, 2001
+
+Xfig is a menu-driven tool that allows the user to draw and manipulate objects
+interactively in an X window.  The resulting pictures can be saved, printed
+on postscript printers or converted to a variety of other formats (e.g. to
+allow inclusion in LaTeX documents).
+
+xfig 3.2.3d is available from ftp://www-epb.lbl.gov/xfig and usually from any CTAN
+(Comprehensive TeX Archive Network) site such as ftp://ftp.cdrom.com/pub/tex/ctan/.
+See http://math.nmu.edu/Web/TeXArchives/ctansite.html for a long list of CTAN sites.
+
+Be sure to set binary mode when transferring.
+
+These are the files:
+
+xfig.3.2.3d.full.tar.gz			tar file with everything
+xfig.3.2.3d.code_only.tar.gz		tar file with source only
+xfig.3.2.3d.docs_only.tar.gz		tar file with docs only (man pages, html)
+xfig.3.2.3d.libraries_only.tar.gz	tar file with only Fig Object Libraries
+
+You also need to get TransFig version 3.2.3d.  TransFig contains the post-
+processor needed by xfig to convert fig files to one of several output formats,
+such as PostScript, pic, LaTeX etc.  The TransFig package can always be found
+at the same site as xfig.
+
+Please send email about any questions/bug fixes/contributions etc. about
+TransFig or xfig to xfig-bugs@epb1.lbl.gov.
+
+Brian V. Smith
+Lawrence Berkeley National Laboratory
+I don't speak for LBNL; they don't pay me enough for that.
+
+*****************************************************************************
+Following is a description of the CHANGES for 3.2.3d.
+
+NEW FEATURES:
+
+	o New Imakefile variable XFIGDOCDIR points to directory for xfig doc
+	  files, which may be different from XFIGLIBDIR
+	o New aircraft from Carlo Kopp in Examples directory.  These may be
+	  reproduced for educational and other non-commercial use only.
+	o Support for importing PNG image files added
+	o GIF transparency for imported images honored by fig2dev now
+	o New option to print only active layers when exporting or printing (see
+	  printing/exporting section in html docs).
+	o When loading a compressed Fig file that is either read-only, or is on
+	  a read-only file system (e.g. a CDROM), xfig uncompresses it into the
+	  temp directory (env TMPDIR, or /tmp if TMPDIR environvment variable is
+	  undefined).
+	o New Maps library - currently contains Most Canadian provinces, USA
+	  coast and states, most of the continents and a world outline
+	  World outline map and United States by Steve Eichblatt
+	  (eichblatt@fnal.gov)
+	o I had forgotten to credit Kai-MartinKnaak for his Mechanical_DIN
+	  library of mechanical drawing symbols from July 1998
+	o New Chemical Process Flowsheet library by Volker Siepmann
+	  (volkers@pors.hit.no)
+	o New Laptop computer and Ericsson R320 cell phone in Libraries/Computers
+	  from Dirko van Schalkwyk (dvschalk@ing.sun.ac.za)
+	o New PMOS FET (Field Effect Transistors) and NMOS FET library objects
+	  in Electrical/Schematic library - from Min Xu (mxu@Horse.ece.wisc.edu)
+	o New network devices in Networks library from Bill Chimiak:
+		atmswitch.fig	- generic ATM switch
+		dsu-csu.fig	- Digital Service Unit/Channel Service Unit
+		smartbit.fig	- Netcom Smartbit network tester
+	o New Catalan flag in Flags library from Francesc Burrull i Mestres.
+	o New office building (office2.fig) in Buildings library from Brian
+	  V. Smith
+	o New variable PRINTCAP in Imakefile to specify where the printer
+	  capabilities file is (default /etc/printcap)
+	o New drawing: plan view of house and backyard (Examples/house_plans.fig)
+	  from Scott Gordon (gordon@physics.uq.edu.au).  It may not be used for
+	  profit without express written permission from Scott.
+	o xfig recalculates the bounds of compound objects read in from the file,
+	  ignoring the bounds values in the file.  This makes it easier for Fig
+	  file generators to produce compound objects since they don't have to
+	  know how to calculate the bounds themselves. fig2dev doesn't even use
+	  those values but recalculates them upon reading the file.
+	o New VA Linux machines in Computers library
+	  from Yazz Atlas (yazz@osdn.com)
+	o Increased maximum number of libraries to 100
+	o New and improved library object Computers/film_digitizer (and in
+	  Hospital/film_digitizer) from Bill Chimiak
+
+BUGS FIXED:
+
+	o New cascaded menu for the Fig object libraries.  This reduces the
+	  height of the menu to allow many more libraries, by arranging them
+	  hierarchically.  This required writing a subclass of the SmeBSB Athena
+	  widget.
+	o When browsing libraries or merging figures, identical user colors were
+	  multiply defined
+	o Fig library objects may use imported images because the absolute path
+	  is forced in those cases 
+	o When modifying an existing centered or right-justified text, pressing
+	  enter moved the cursor to the X position of the beginning of the
+	  string just modified instead of its anchor point
+	o "Delete Unused" button sensitivity not reset when loading subsequent
+	  Fig files
+	o If -library_dir (Fig.library_dir resource) pointed to a *file* of Fig
+	  library directories, sub-directories weren't added to library list
+	o If a bad Fig file was previewed in a library, xfig would display a bad
+	  preview and segfault of the object was selected
+	o Incorrect dx/dy distance reported when moving object/point
+	o Better support for Cygwin - Importing eps files changes to the
+	  directory of the file to avoid pathname differences between Windows
+	  and Unix/Linux/etc
+	  From Pierre Humblet
+	o Can now rotate boxes and arcboxes by -90, -180 and 180 degrees in
+	  addition to 90 degrees
+	o A compressed .fig file is only uncompressed if the directory is
+	  writable
+	o When reading a Fig file, if there was a bad object inside a compound,
+	  xfig would discard the entire compound.
+	o When reading a Fig file, if there was an incomplete or bad object,
+	  the storage wasn't freed in some cases.
+	o xfig would stop reading a Fig file as soon as it encountered a bad
+	  object
+	o xfig now uses its own my_strdup() so it will compile on those machines
+	  that don't have strdup()
+	o "Minitower" computer in Fig object library of computers had an illegal
+	  Fig object
+	o Typo in Doc/FORMAT3.2 file in the join style descriptions.  Round and
+	  bevel values were reversed (correct values: Round = 1, Bevel = 2)
+	  Also, fill pattern list was incomplete and incorrect, and arc subtypes
+	  were switched.
+	o When cancelling modification of text using text tool, refreshing of
+	  original text wasn't done
+	o Comments longer than 200 characters caused problems.  They may be
+	  unlimited in length now.
+	o Some functions inconsistently declared static/non-static
+	o Wasn't allowing negative rotation angle in indicator panel
+	o Typographical error in xfig.man - resources "canvasBackground" and
+	  "canvasForeground" should be "canvasbackground" and "canvasforeground"
+	  respectively (no uppercase letters)
+	o Updating objects didn't refresh the updated object correctly if the
+	  bounds changed
+	o The lengths and lines drawn when "showlengths" is enabled has been
+	  cleaned up to remove detritus left behind
+	o There was a bug in sizing of imported EPS images.  They were too small
+	  by the equivalent of one pixel in width and height.  Strangely, this
+	  also affected the background color in some cases.
+	o When merging or pasting a figure of opposite unit system (metric vs
+	  imperial), xfig used the wrong scale factor.
+	o If malloc fails when xfig tries to create a Fig object, the null
+	  pointer was subsequently dereferenced
+	o Objects at MAX_DEPTH (999) were sometimes unaccounted for, meaning
+	  they wouldn't be refreshed in some cases.
+	o Balloon delay value wasn't visible in  Global Settings panel
+	o When updating depths in a compound, xfig didn't check for depths
+	  exceeding the maximum depth (999)
+	o Grid calculations didn't coerce types properly, resulting in strange
+	  grid in negative canvas region
+	o Empty lines in the ~/.xfigrc file were causing xfig to segfault
+	o Updated fig-format.html to correctly reflect Doc/FORMAT3.2
+	o If a region was deleted (middle mouse button) and undone, the
+	  recovered objects were invisible except for their grab corners
+	o If an object was selected from a library while it was still loading
+	  and placed on the canvas after the library finished loading, xfig
+	  would segfault
+	o When pasting or merging objects, xfig would recompute colors of
+	  already imported pictures in current figure even if merged/pasted
+	  objects didn't contain any pictures
+	o When scaling a compound containg text, text size may have exceeded
+	  MIN_FONT_SIZE or MAX_FONT_SIZE limits
+	o Font name list was freed when it shouldn't have been, when using
+	  -noscalablefonts
+	o Changing depth of an object in the edit panel didn't always update the
+	  depth manager correctly
+	o Actual message was missing from "Error during ..." export message
+	o Undefined user color in Libraries/Knitting/Symbols/purl-dash.fig
+	o Removed unused user colors in various Library symbols
+	o Bug when merging or pasting figures with user-defined colors.
+	o No more than 100 points are  displayed for polylines, polygons in
+	  popup edit panel to prevent system meltdown.  This doesn't affect the
+	  maximum number of points *allowed* in a polygon/polyline, only the
+	  number displayed.
+	o Quotes around definition of MKDIRHIER should not be there in Imakefile
+	o Made all references to Xaw header files use #ifdef Xaw3d to include
+	  3d header files
+	o Added back requirement that fonts (except Zapf Dingbats and Symbol)
+	  are iso8859 encoded
+	o When editing a compound object containing text, and the canvas zoom
+	  is != 1.0, the zoomed text size was used instead of the unzoomed
+	o Printer choice menu now discards any empty or duplicate printers that
+	  are in /etc/printcap
+	o A more robust algorithm for finding the center of an arc given three
+	  points on the radius is in place. The old algorithm gave up too often,
+	  making some operations on arcs (e.g. rotate) fail.
+	o Rounding error in zoom-to-fit-canvas produced bad centering of figure
+	o Maximum number of printers increased to 1000 for lprng systems, and is
+	  now checked for exceeding maximum
+	o Export to PDF now disables page size, orientation, etc. since PDF is
+	  meant to be imported into pdflatex or other processors
+	o Fixed a bug introduced in 3.2.3b which made selecting objects
+	  difficult at higher zooms
+	o When editing a compound, if either the width or height was made 0,
+	  divide by 0 would occur
+	o Line lengths weren't erased after creating arc box (showlengths on)
+	o Doesn't allow coincident consecutive points in objects or boxes with
+	  zero dimensions (coincident corners).  Also, doesn't allow box or
+	  arcbox with zero x- or y-dimension.
+	o Line width indicator didn't always update on some systems
+	o Temporary files weren't closed before deleting them in read_gif,
+	  read_tif and read_ppm
+	o Undoing the conversion of a spline<->line or line<->spline would crash
+	o When loading a figure from the recent files list in the File menu, imported
+	  pictures with relative paths would not load
+	o Illegal box object removed from Examples/lidar.fig
+	o Typo on html docs - button 3 cancels constrained copy, not button 2
+	o Keyboard accelerators mislabeled - <Shift-f> flips objects left/right,
+	  unshifted <f> flips them up/down

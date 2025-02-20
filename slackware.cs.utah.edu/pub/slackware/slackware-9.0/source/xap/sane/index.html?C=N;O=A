@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/xap/sane</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/xap/sane</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/xap/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doinst.sh.gz">doinst.sh.gz</a></td><td align="right">2003-01-10 20:53  </td><td align="right">285 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sane-backends-1.0.11.lsm">sane-backends-1.0.11.lsm</a></td><td align="right">2003-02-09 15:14  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sane-backends-1.0.11.tar.bz2">sane-backends-1.0.11.tar.bz2</a></td><td align="right">2003-02-09 15:11  </td><td align="right">1.9M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sane-frontends-1.0.10.lsm">sane-frontends-1.0.10.lsm</a></td><td align="right">2003-02-01 16:30  </td><td align="right">1.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sane-frontends-1.0.10.tar.bz2">sane-frontends-1.0.10.tar.bz2</a></td><td align="right">2003-02-01 16:30  </td><td align="right">148K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sane.build">sane.build</a></td><td align="right">2003-02-14 05:04  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-04-04 02:41  </td><td align="right">776 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

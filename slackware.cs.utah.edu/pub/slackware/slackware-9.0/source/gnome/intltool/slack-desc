@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+intltool: intltool
+intltool:
+intltool: The intltool package is used to:
+intltool:
+intltool: o Extract translatable strings from various source files.
+intltool: o Collect the extracted strings together with messages from traditional
+intltool:   source files.
+intltool: o Merge back the translations from .po files into .xml, .desktop and
+intltool:   .oaf files.
+intltool:
+intltool:

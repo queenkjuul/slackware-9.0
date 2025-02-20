@@ -1,0 +1,13 @@
+# This generates the GNOME docs:
+#BLURB="Update GNOME documentation database"
+if [ -x usr/bin/scrollkeeper-update ]; then
+  if [ "$COLOR" = "on" -o -r $TMP/SeTcolor ]; then
+    dialog --title "UPDATING GNOME DOCUMENTATION" --infobox \
+  "Please wait while we run scrollkeeper-update to bring the scrollkeeper \
+database up-to-date.  This database is used by the GNOME help browser to \
+locate documentation." 6 53
+  else
+    echo "Generating GNOME documentation.  One moment please."
+  fi
+  chroot . /usr/bin/scrollkeeper-update 2> /dev/null
+fi

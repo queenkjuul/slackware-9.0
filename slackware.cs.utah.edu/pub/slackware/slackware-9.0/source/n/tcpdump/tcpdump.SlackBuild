@@ -1,0 +1,75 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-tcpdump
+
+VERSION=3.7.2
+LIBVER=0.7.2
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+================+"
+echo "| libpcap-$LIBVER |"
+echo "+================+"
+cd $TMP
+tar xzvf $CWD/libpcap-$LIBVER.tar.gz
+cd libpcap-$LIBVER
+./configure --prefix=/usr --enable-ipv6 i386-slackware-linux
+make
+mkdir -p $PKG/usr/lib
+cat libpcap.a > $PKG/usr/lib/libpcap.a
+mkdir -p $PKG/usr/include
+cat pcap.h > $PKG/usr/include/pcap.h
+cat pcap-namedb.h > $PKG/usr/include/pcap-namedb.h
+mkdir -p $PKG/usr/include/net
+cat net/bpf.h > $PKG/usr/include/net/bpf.h
+mkdir -p $PKG/usr/doc/libpcap-$LIBVER
+cp -a \
+  CHANGES CREDITS FILES INSTALL.txt LICENSE README README.aix README.linux README.tru64 SUNOS4 TODO VERSION \
+  $PKG/usr/doc/libpcap-$LIBVER
+chown -R root.root $PKG/usr/doc/libpcap-$LIBVER
+mkdir -p $PKG/usr/man/man3
+cat pcap.3 | gzip -9c > $PKG/usr/man/man3/pcap.3.gz
+
+echo "+================+"
+echo "| tcpdump-$VERSION |"
+echo "+================+"
+cd $TMP
+tar xzvf $CWD/tcpdump-$VERSION.tar.gz
+cd tcpdump-$VERSION
+./configure --prefix=/usr --enable-ipv6 i386-slackware-linux
+make
+strip tcpdump
+mkdir -p $PKG/usr/sbin
+cat tcpdump > $PKG/usr/sbin/tcpdump
+chown -R root.bin $PKG/usr/sbin
+chmod 755 $PKG/usr/sbin/*
+mkdir $PKG/usr/man/man1
+cat tcpdump.1 | gzip -9c > $PKG/usr/man/man1/tcpdump.1.gz
+mkdir -p $PKG/usr/doc/tcpdump-$VERSION
+cp -a CHANGES FILES INSTALL README $PKG/usr/doc/tcpdump-$VERSION
+chown -R root.root $PKG/usr/doc/tcpdump-$VERSION
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/tcpdump-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/libpcap-$LIBVER
+  rm -rf $TMP/tcpdump-$VERSION
+  rm -rf $PKG
+fi

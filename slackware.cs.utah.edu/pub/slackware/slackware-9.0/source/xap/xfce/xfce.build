@@ -1,0 +1,26 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+VERSION=3.8.18
+cd $TMP
+tar xjvf $CWD/xfce-$VERSION.tar.bz2
+cd xfce-$VERSION
+chown -R root.root .
+zcat $CWD/xfce.setup.diff.gz | patch -p1 --verbose
+XFCE_DIR=/usr/share/xfce \
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --sysconfdir=/etc/X11 \
+            --with-data-dir=/usr/share/xfce \
+            --enable-xft
+make
+make install
+mkdir -p /usr/doc/xfce-$VERSION
+cp -a \
+  ABOUT-NLS AUTHORS COPYING INSTALL NEWS README README.UPGRADE-3.2.0 README.UPGRADE-3.5.0 TODO \
+  /usr/doc/xfce-$VERSION
+chmod 644 /usr/doc/xfce-$VERSION/*
+cat other/xinitrc > /etc/X11/xinit/xinitrc.xfce
+chmod 755 /etc/X11/xinit/xinitrc.xfce
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

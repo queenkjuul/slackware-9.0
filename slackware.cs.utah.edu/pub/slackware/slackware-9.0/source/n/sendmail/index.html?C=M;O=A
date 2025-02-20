@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/n/sendmail</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/n/sendmail</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/n/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux.smtp-rbl+.mc">linux.smtp-rbl+.mc</a></td><td align="right">2002-02-14 01:48  </td><td align="right">538 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux.smtp-rbl.mc">linux.smtp-rbl.mc</a></td><td align="right">2002-02-14 01:48  </td><td align="right">155 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux.smtp.mc">linux.smtp.mc</a></td><td align="right">2002-02-14 01:48  </td><td align="right">142 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux.uucp.mc">linux.uucp.mc</a></td><td align="right">2002-02-14 01:48  </td><td align="right">224 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="SlackBuild">SlackBuild</a></td><td align="right">2002-05-06 05:25  </td><td align="right"> 63 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="linux.smtp.access.mc">linux.smtp.access.mc</a></td><td align="right">2002-05-17 20:07  </td><td align="right">197 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.sendmail">slack-desc.sendmail</a></td><td align="right">2002-06-01 20:17  </td><td align="right">962 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.sendmail-cf">slack-desc.sendmail-cf</a></td><td align="right">2002-06-01 20:19  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="_sendmail.tar.gz">_sendmail.tar.gz</a></td><td align="right">2002-06-04 21:09  </td><td align="right">5.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="sendmail.8.12.8.tar.gz">sendmail.8.12.8.tar.gz</a></td><td align="right">2003-03-03 17:00  </td><td align="right">1.8M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sendmail.8.12.8.tar.gz.sig">sendmail.8.12.8.tar.gz.sig</a></td><td align="right">2003-03-03 17:00  </td><td align="right">152 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="SlackBuild-sendmail">SlackBuild-sendmail</a></td><td align="right">2003-03-03 18:09  </td><td align="right">3.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="SlackBuild-sendmail-cf">SlackBuild-sendmail-cf</a></td><td align="right">2003-03-03 18:10  </td><td align="right">1.0K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="aaa_base/">aaa_base/</a></td><td align="right">2003-03-10 19:18  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="acpid/">acpid/</a></td><td align="right">2003-02-20 22:23  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="apmd/">apmd/</a></td><td align="right">2002-10-22 04:19  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="bash/">bash/</a></td><td align="right">2002-09-22 20:07  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="bin/">bin/</a></td><td align="right">2003-03-05 09:03  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="bzip2/">bzip2/</a></td><td align="right">2002-08-29 17:27  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="cpio/">cpio/</a></td><td align="right">2002-08-28 01:10  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="cxxlibs/">cxxlibs/</a></td><td align="right">2002-02-20 22:08  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="dcron/">dcron/</a></td><td align="right">2002-04-16 02:08  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="devfsd/">devfsd/</a></td><td align="right">2002-05-14 19:12  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="devs/">devs/</a></td><td align="right">2003-03-09 17:32  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="e2fsprogs/">e2fsprogs/</a></td><td align="right">2002-12-02 22:37  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="elflibs/">elflibs/</a></td><td align="right">2002-03-15 06:29  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="elvis/">elvis/</a></td><td align="right">2002-02-19 04:17  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="etc/">etc/</a></td><td align="right">2003-03-10 03:31  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="fileutils/">fileutils/</a></td><td align="right">2002-05-28 03:53  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="findutils/">findutils/</a></td><td align="right">2002-04-07 10:23  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="floppy/">floppy/</a></td><td align="right">2002-05-01 02:28  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="gawk/">gawk/</a></td><td align="right">2002-08-29 19:58  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="genpower/">genpower/</a></td><td align="right">2002-04-11 05:06  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="gettext/">gettext/</a></td><td align="right">2003-02-02 23:58  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="getty-ps/">getty-ps/</a></td><td align="right">2003-02-20 22:49  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="gpm/">gpm/</a></td><td align="right">2003-03-08 08:14  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="grep/">grep/</a></td><td align="right">2002-04-07 21:16  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="gzip/">gzip/</a></td><td align="right">2003-03-05 21:14  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="hdparm/">hdparm/</a></td><td align="right">2003-02-21 00:12  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="hotplug/">hotplug/</a></td><td align="right">2003-03-10 21:30  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="infozip/">infozip/</a></td><td align="right">2002-02-19 03:54  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="isapnptools/">isapnptools/</a></td><td align="right">2002-02-22 02:07  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="jfsutils/">jfsutils/</a></td><td align="right">2003-02-16 21:21  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kbd/">kbd/</a></td><td align="right">2003-02-27 07:06  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kernel-ide/">kernel-ide/</a></td><td align="right">2003-03-18 06:03  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kernel-modules/">kernel-modules/</a></td><td align="right">2003-03-17 17:46  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="less/">less/</a></td><td align="right">2003-02-14 07:37  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="lilo/">lilo/</a></td><td align="right">2003-03-10 03:49  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="loadlin/">loadlin/</a></td><td align="right">2002-04-17 04:23  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="logrotate/">logrotate/</a></td><td align="right">2002-04-16 06:47  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="lprng/">lprng/</a></td><td align="right">2003-01-23 19:58  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="minicom/">minicom/</a></td><td align="right">2002-02-24 22:51  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="modutils/">modutils/</a></td><td align="right">2003-02-16 19:59  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="pciutils/">pciutils/</a></td><td align="right">2003-02-21 22:40  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="pcmcia-cs/">pcmcia-cs/</a></td><td align="right">2003-03-06 06:57  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="pkgtools/">pkgtools/</a></td><td align="right">2003-03-16 23:57  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="procps/">procps/</a></td><td align="right">2003-02-18 00:20  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="reiserfsprogs/">reiserfsprogs/</a></td><td align="right">2002-12-02 22:53  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="sed/">sed/</a></td><td align="right">2003-02-20 23:13  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="sh-utils/">sh-utils/</a></td><td align="right">2002-02-19 06:57  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="shadow/">shadow/</a></td><td align="right">2003-03-10 02:19  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="slocate/">slocate/</a></td><td align="right">2003-02-12 00:47  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="smartmontools/">smartmontools/</a></td><td align="right">2003-02-21 00:50  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="sysklogd/">sysklogd/</a></td><td align="right">2003-03-14 22:32  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="syslinux/">syslinux/</a></td><td align="right">2003-02-10 00:51  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="sysvinit/">sysvinit/</a></td><td align="right">2003-03-09 20:07  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="tar/">tar/</a></td><td align="right">2002-02-22 04:37  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="tcsh/">tcsh/</a></td><td align="right">2003-02-14 07:25  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="textutils/">textutils/</a></td><td align="right">2002-02-19 06:59  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="umsdos-progs/">umsdos-progs/</a></td><td align="right">2002-02-20 20:34  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="usbutils/">usbutils/</a></td><td align="right">2002-08-29 22:41  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="util-linux/">util-linux/</a></td><td align="right">2003-02-19 01:40  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="xfsprogs/">xfsprogs/</a></td><td align="right">2003-02-16 22:21  </td><td align="right">  - </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

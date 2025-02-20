@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+  |-----handy-ruler------------------------------------------------------|
+m4: m4 (an implementation of the Unix macro processor)
+m4:
+m4: This is GNU m4, a program which copies its input to the output,
+m4: expanding macros as it goes.  m4 has built-in functions for including
+m4: named files, running Unix commands, doing integer arithmetic,
+m4: manipulating text in various ways, recursion, etc...  Macros can also
+m4: be user-defined, and can take any number of arguments.  GNU 'm4' was
+m4: originally written by Rene Seindal, from Denmark.
+m4:
+m4:
+m4:

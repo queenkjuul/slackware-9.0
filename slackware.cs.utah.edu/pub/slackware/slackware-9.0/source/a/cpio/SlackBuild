@@ -1,0 +1,59 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-cpio
+
+VERSION=2.5
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+============+"
+echo "| cpio-$VERSION |"
+echo "+============+"
+cd $TMP
+tar xzvf $CWD/cpio-$VERSION.tar.gz
+cd cpio-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr
+make
+mkdir -p $PKG/bin
+strip cpio mt
+cat cpio > $PKG/bin/cpio
+cat mt > $PKG/bin/mt-GNU
+chmod 755 $PKG/bin/*
+chown -R root.bin $PKG/bin
+mkdir -p $PKG/usr/man/man1
+for page in cpio.1 mt.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/$page.gz
+done
+makeinfo cpio.texi
+mkdir -p $PKG/usr/info
+cat cpio.info | gzip -9c > $PKG/usr/info/cpio.info.gz
+mkdir -p $PKG/usr/doc/cpio-$VERSION
+cp -a \
+  COPYING COPYING.LIB ChangeLog INSTALL NEWS README \
+  $PKG/usr/doc/cpio-$VERSION
+chmod 644 $PKG/usr/doc/cpio-$VERSION/*
+chown -R root.root $PKG/usr/doc/cpio-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+echo "n" | makepkg $TMP/cpio-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/cpio-$VERSION
+  rm -rf $PKG
+fi

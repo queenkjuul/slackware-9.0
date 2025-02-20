@@ -1,0 +1,27 @@
+CWD=`pwd`
+
+VERSION=2.2.4
+CD=2.2.4
+
+cd /tmp
+tar xjvf $CWD/librsvg-$VERSION.tar.bz2
+cd librsvg-$CD
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/librsvg-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  doc/html \
+  /usr/doc/librsvg-$VERSION
+rm -rf /usr/doc/librsvg
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+

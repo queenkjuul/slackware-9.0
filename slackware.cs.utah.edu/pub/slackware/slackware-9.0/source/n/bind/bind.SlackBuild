@@ -1,0 +1,150 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-bind
+
+VERSION=9.2.2
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_bind.tar.gz
+
+echo "+============+"
+echo "| bind-$VERSION |"
+echo "+============+"
+cd $TMP
+tar xzvf $CWD/bind-$VERSION.tar.gz
+cd bind-$VERSION
+chown -R root.root .
+# We want to use /var/run/named/, not just /var/run/.
+# This allows changing the ownership of that directory if we want to run
+# named as a non-root user.
+zcat $CWD/bind.var.run.named.diff.gz | patch -p1 --verbose --backup --suffix=.orig
+# Threads break '-u' on Linux (for now)
+CFLAGS="-O2 -march=i386 -mcpu=i686" LDFLAGS=-s ./configure \
+       --prefix=/usr \
+       --sysconfdir=/etc \
+       --localstatedir=/var \
+       --with-libtool \
+       --enable-shared \
+       --disable-threads \
+       --with-openssl=/usr \
+       i386-slackware-linux
+make
+cat isc-config.sh > $PKG/usr/bin/isc-config.sh
+chmod 755 $PKG/usr/bin/isc-config.sh
+chown root.bin $PKG/usr/bin/isc-config.sh
+cat contrib/named-bootconf/named-bootconf.sh > $PKG/usr/sbin/named-bootconf.sh
+cd bin/check/.libs
+strip named-checkconf named-checkzone
+cat named-checkconf > $PKG/usr/sbin/named-checkconf
+cat named-checkzone > $PKG/usr/sbin/named-checkzone
+cd ../../dig/.libs
+strip dig host nslookup
+cat dig > $PKG/usr/bin/dig
+cat host > $PKG/usr/bin/host
+cat nslookup > $PKG/usr/bin/nslookup
+cd ../../dnssec/.libs
+strip dnssec-keygen dnssec-makekeyset dnssec-signkey dnssec-signzone
+cat dnssec-keygen > $PKG/usr/sbin/dnssec-keygen
+cat dnssec-makekeyset > $PKG/usr/sbin/dnssec-makekeyset
+cat dnssec-signkey > $PKG/usr/sbin/dnssec-signkey
+cat dnssec-signzone > $PKG/usr/sbin/dnssec-signzone
+cd ../../named/.libs
+#rm lwresd
+strip named
+cat named > $PKG/usr/sbin/named
+( cd $PKG/usr/sbin ; ln -sf named lwresd )
+cd ../../nsupdate/.libs
+strip nsupdate
+cat nsupdate > $PKG/usr/bin/nsupdate
+cd ../../rndc/.libs
+strip rndc rndc-confgen
+cat rndc > $PKG/usr/sbin/rndc
+cat rndc-confgen > $PKG/usr/sbin/rndc-confgen
+cd ..
+mkdir -p $PKG/usr/doc/bind-$VERSION/misc
+cat rndc.conf > $PKG/usr/doc/bind-$VERSION/misc/rndc.conf-sample
+chmod 600 $PKG/usr/doc/bind-$VERSION/misc/rndc.conf-sample
+cd ../../lib/dns/.libs
+strip libdns.so.8.0.1
+cat libdns.so.8.0.1 > $PKG/usr/lib/libdns.so.8.0.1
+chmod 755 $PKG/usr/lib/libdns.so.8.0.1
+( cd $PKG/usr/lib ; rm -rf libdns.so.8 ; ln -sf libdns.so.8.0.1 libdns.so.8 )
+cd ../../isc/.libs
+strip libisc.so.4.2.0
+cat libisc.so.4.2.0 > $PKG/usr/lib/libisc.so.4.2.0
+chmod 755 $PKG/usr/lib/libisc.so.4.2.0
+( cd $PKG/usr/lib ; rm -rf libisc.so.4 ; ln -sf libisc.so.4.2.0 libisc.so.4 )
+cd ../../isccc/.libs
+strip libisccc.so.0.0.1
+cat libisccc.so.0.0.1 > $PKG/usr/lib/libisccc.so.0.0.1
+chmod 755 $PKG/usr/lib/libisccc.so.0.0.1
+( cd $PKG/usr/lib ; rm -rf libisccc.so.0 ; ln -sf libisccc.so.0.0.1 libisccc.so.0 )
+cd ../../isccfg/.libs
+strip libisccfg.so.0.0.4
+cat libisccfg.so.0.0.4 > $PKG/usr/lib/libisccfg.so.0.0.4
+chmod 755 $PKG/usr/lib/libisccfg.so.0.0.4
+( cd $PKG/usr/lib ; rm -rf libisccfg.so.0 ; ln -sf libisccfg.so.0.0.4 libisccfg.so.0 )
+cd ../../lwres/.libs
+strip liblwres.so.1.1.1
+cat liblwres.so.1.1.1 > $PKG/usr/lib/liblwres.so.1.1.1
+chmod 755 $PKG/usr/lib/liblwres.so.1.1.1
+( cd $PKG/usr/lib ; rm -rf liblwres.so.1 ; ln -sf liblwres.so.1.1.1 liblwres.so.1 )
+mkdir -p $PKG/usr/man/man{1,5,8}
+cd ../../../bin
+cat dig/dig.1 | gzip -9c > $PKG/usr/man/man1/dig.1.gz
+cat dig/host.1 | gzip -9c > $PKG/usr/man/man1/host.1.gz
+cat rndc/rndc.conf.5 | gzip -9c > $PKG/usr/man/man5/rndc.conf.5.gz
+cat check/named-checkconf.8 | gzip -9c > $PKG/usr/man/man8/named-checkconf.8.gz
+cat check/named-checkzone.8 | gzip -9c > $PKG/usr/man/man8/named-checkzone.8.gz
+cat dnssec/dnssec-keygen.8 | gzip -9c > $PKG/usr/man/man8/dnssec-keygen.8.gz
+cat dnssec/dnssec-makekeyset.8 | gzip -9c > $PKG/usr/man/man8/dnssec-makekeyset.8.gz
+cat dnssec/dnssec-signkey.8 | gzip -9c > $PKG/usr/man/man8/dnssec-signkey.8.gz
+cat dnssec/dnssec-signzone.8 | gzip -9c > $PKG/usr/man/man8/dnssec-signzone.8.gz
+cat named/lwresd.8 | gzip -9c > $PKG/usr/man/man8/lwresd.8.gz
+cat named/named.8 | gzip -9c > $PKG/usr/man/man8/named.8.gz
+cat nsupdate/nsupdate.8 | gzip -9c > $PKG/usr/man/man8/nsupdate.8.gz
+cat rndc/rndc-confgen.8 | gzip -9c > $PKG/usr/man/man8/rndc-confgen.8.gz
+cat rndc/rndc.8 | gzip -9c > $PKG/usr/man/man8/rndc.8.gz
+cd ../doc
+mkdir -p $PKG/usr/doc/bind-$VERSION
+cp -a arm misc $PKG/usr/doc/bind-$VERSION
+cd ..
+cp -a CHANGES COPYRIGHT FAQ README $PKG/usr/doc/bind-$VERSION
+( cd $PKG/usr/doc/bind-$VERSION
+  find . -type f | xargs chmod 644
+  # This one should have the correct perms of the config file:
+  chmod 600 misc/rndc.conf-sample )
+
+# Add sample config files for a simple caching nameserver:
+
+cat $CWD/caching-example/named.conf > $PKG/etc/named.conf-sample
+cat $CWD/caching-example/localhost.zone > $PKG/var/named/caching-example/localhost.zone
+cat $CWD/caching-example/named.ca > $PKG/var/named/caching-example/named.ca
+cat $CWD/caching-example/named.local > $PKG/var/named/caching-example/named.local
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/bind-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/bind-$VERSION
+  rm -rf $PKG
+fi

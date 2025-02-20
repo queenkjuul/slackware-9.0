@@ -1,0 +1,33 @@
+#!/bin/sh
+CWD=`pwd` 
+PKG=/tmp/package-wireless-tools
+rm -rf $PKG
+mkdir -p $PKG
+
+VERSION=25
+ARCH=i386
+BUILD=2
+
+cd /tmp
+tar xzvf $CWD/wireless_tools.$VERSION.tar.gz
+cd wireless_tools.$VERSION
+zcat $CWD/wireless_tools.nowhine.diff.gz | patch -p1 --verbose --suffix=.orig --backup
+chown -R root.root .
+make
+strip iwconfig iwevent iwgetid iwlist iwpriv iwspy
+mkdir -p $PKG/usr/sbin
+cp -a iwconfig iwevent iwgetid iwlist iwpriv iwspy $PKG/usr/sbin
+chown -R root.bin $PKG/usr/sbin
+chmod 755 $PKG/usr/sbin/*
+mkdir -p $PKG/usr/man/man8
+for file in *.8 ; do
+  cat $file | gzip -9c > $PKG/usr/man/man8/$file.gz
+done
+mkdir -p $PKG/usr/doc/wireless-tools-$VERSION
+cp -a CHANGELOG.h COPYING INSTALL PCMCIA.txt README $PKG/usr/doc/wireless-tools-$VERSION
+chmod 644 $PKG/usr/doc/wireless-tools-$VERSION/*
+mkdir $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+makepkg -l y -c n ../wireless-tools-$VERSION-$ARCH-$BUILD.tgz

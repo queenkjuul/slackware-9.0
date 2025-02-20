@@ -1,0 +1,57 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-genpower
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+VERSION=1.0.1
+ARCH=i386
+BUILD=1
+
+echo "+===============+"
+echo "| genpower-$VERSION |"
+echo "+===============+"
+cd $TMP
+tar xzvf $CWD/genpower-$VERSION.tar.gz
+cd genpower-$VERSION
+zcat $CWD/genpower_1.0.1-13.diff.gz | patch -p1 -E
+zcat $CWD/genpower.var.diff.gz | patch -p1 -E
+zcat $CWD/genpower.cflags.diff.gz | patch -p1 -E
+make
+strip genpowerd gentest
+mkdir -p $PKG/sbin
+cat genpowerd > $PKG/sbin/genpowerd
+cat gentest > $PKG/sbin/gentest
+cat genpowerfail > $PKG/sbin/genpowerfail
+chown -R root.bin $PKG/sbin
+chmod 755 $PKG/sbin/*
+mkdir -p $PKG/usr/man/man8
+cat genpowerd.8 | gzip -9c > $PKG/usr/man/man8/genpowerd.8.gz
+cat gentest.8 | gzip -9c > $PKG/usr/man/man8/gentest.8.gz
+mkdir -p $PKG/usr/doc/genpower-$VERSION
+cp -a \
+  COPYING Change.Log Packing.List README TODO genpower.docs debian/*cable \
+  $PKG/usr/doc/genpower-$VERSION
+chown -R root.root $PKG/usr/doc/genpower-$VERSION
+chmod 644 $PKG/usr/doc/genpower-$VERSION/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/genpower-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/genpower-$VERSION
+  rm -rf $PKG
+fi

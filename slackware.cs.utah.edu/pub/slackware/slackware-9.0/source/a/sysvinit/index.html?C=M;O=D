@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a/sysvinit</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a/sysvinit</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/a/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="_sysvinit.tar.gz">_sysvinit.tar.gz</a></td><td align="right">2003-03-09 20:07  </td><td align="right">9.9K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sysvinit.SlackBuild">sysvinit.SlackBuild</a></td><td align="right">2003-03-09 19:52  </td><td align="right">2.3K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-22 05:59  </td><td align="right">972 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sysvinit-2.84.lsm">sysvinit-2.84.lsm</a></td><td align="right">2001-11-27 12:17  </td><td align="right">466 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="sysvinit-2.84.tar.gz">sysvinit-2.84.tar.gz</a></td><td align="right">2001-11-27 12:17  </td><td align="right"> 89K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="sysvinit.diff.gz">sysvinit.diff.gz</a></td><td align="right">2000-05-13 01:32  </td><td align="right">1.3K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

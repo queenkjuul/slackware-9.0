@@ -1,0 +1,44 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+BACKVER=1.0.11
+FRONTVER=1.0.10
+
+cd $TMP
+tar xjvf $CWD/sane-backends-$BACKVER.tar.bz2
+cd sane-backends-$BACKVER
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr --sysconfdir=/etc
+make
+make install
+#mkdir -p /usr/doc/sane-backends-$BACKVER
+#cp -a \
+#  AUTHORS COPYING ChangeLog LEVEL2 LICENSE NEWS PROBLEMS PROJECTS README README.linux TODO sane-backends.lsm \
+#  /usr/doc/sane-backends-$BACKVER
+#chown -R root.root /usr/doc/sane-backends-$BACKVER
+#chmod 644 /usr/doc/sane-backends-$BACKVER/*
+
+cd $TMP 
+tar xjvf $CWD/sane-frontends-$FRONTVER.tar.bz2
+cd sane-frontends-$FRONTVER
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr --sysconfdir=/etc
+make
+make install
+#mkdir -p /usr/doc/sane-frontends-$FRONTVER
+#cp -a \
+#  AUTHORS COPYING Changelog INSTALL NEWS PROBLEMS README TODO sane-frontends.lsm \
+#  /usr/doc/sane-frontends-$FRONTVER
+#chown -R root.root /usr/doc/sane-frontends-$FRONTVER
+#chmod 644 /usr/doc/sane-frontends-$FRONTVER/*
+
+# Move config files:
+( cd /etc/sane.d
+  for file in *.conf ; do
+    mv $file ${file}.new
+  done
+)
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+zcat $CWD/doinst.sh.gz > /install/doinst.sh

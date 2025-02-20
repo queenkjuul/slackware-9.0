@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/kdei/slack-desc</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/kdei/slack-desc</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/kdei/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-af">slack-desc.kde-i18n-af</a></td><td align="right">2002-02-08 22:28  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ar">slack-desc.kde-i18n-ar</a></td><td align="right">2002-03-27 07:27  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-az">slack-desc.kde-i18n-az</a></td><td align="right">2002-02-08 22:28  </td><td align="right">193 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-be">slack-desc.kde-i18n-be</a></td><td align="right">2002-03-27 07:34  </td><td align="right">192 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-bg">slack-desc.kde-i18n-bg</a></td><td align="right">2002-02-08 22:28  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-br">slack-desc.kde-i18n-br</a></td><td align="right">2002-03-27 07:21  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-bs">slack-desc.kde-i18n-bs</a></td><td align="right">2002-03-27 07:35  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ca">slack-desc.kde-i18n-ca</a></td><td align="right">2002-03-27 07:35  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-cs">slack-desc.kde-i18n-cs</a></td><td align="right">2002-02-08 22:28  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-cy">slack-desc.kde-i18n-cy</a></td><td align="right">2002-03-27 07:37  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-da">slack-desc.kde-i18n-da</a></td><td align="right">2002-02-08 22:28  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-de">slack-desc.kde-i18n-de</a></td><td align="right">2002-02-08 22:28  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-el">slack-desc.kde-i18n-el</a></td><td align="right">2002-02-08 22:28  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-en_GB">slack-desc.kde-i18n-en_GB</a></td><td align="right">2002-02-08 22:28  </td><td align="right">230 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-eo">slack-desc.kde-i18n-eo</a></td><td align="right">2002-02-08 22:28  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-es">slack-desc.kde-i18n-es</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-et">slack-desc.kde-i18n-et</a></td><td align="right">2002-02-08 22:28  </td><td align="right">190 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-eu">slack-desc.kde-i18n-eu</a></td><td align="right">2002-03-27 07:37  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-fa">slack-desc.kde-i18n-fa</a></td><td align="right">2002-11-11 00:58  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-fi">slack-desc.kde-i18n-fi</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-fr">slack-desc.kde-i18n-fr</a></td><td align="right">2002-02-08 22:28  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ga">slack-desc.kde-i18n-ga</a></td><td align="right">2002-03-27 07:38  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-gl">slack-desc.kde-i18n-gl</a></td><td align="right">2002-03-27 07:38  </td><td align="right">190 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-he">slack-desc.kde-i18n-he</a></td><td align="right">2002-02-08 22:28  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-hr">slack-desc.kde-i18n-hr</a></td><td align="right">2002-03-27 07:38  </td><td align="right">190 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-hu">slack-desc.kde-i18n-hu</a></td><td align="right">2002-02-08 22:28  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-id">slack-desc.kde-i18n-id</a></td><td align="right">2002-03-27 07:38  </td><td align="right">192 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-is">slack-desc.kde-i18n-is</a></td><td align="right">2002-02-08 22:28  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-it">slack-desc.kde-i18n-it</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ja">slack-desc.kde-i18n-ja</a></td><td align="right">2002-02-08 22:28  </td><td align="right">190 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ko">slack-desc.kde-i18n-ko</a></td><td align="right">2002-02-08 22:28  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ku">slack-desc.kde-i18n-ku</a></td><td align="right">2002-03-27 07:39  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-lt">slack-desc.kde-i18n-lt</a></td><td align="right">2002-02-08 22:28  </td><td align="right">192 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-lv">slack-desc.kde-i18n-lv</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-mi">slack-desc.kde-i18n-mi</a></td><td align="right">2002-03-27 07:39  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-mk">slack-desc.kde-i18n-mk</a></td><td align="right">2002-03-27 07:39  </td><td align="right">192 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-mt">slack-desc.kde-i18n-mt</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-nb">slack-desc.kde-i18n-nb</a></td><td align="right">2002-03-27 07:39  </td><td align="right">201 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-nl">slack-desc.kde-i18n-nl</a></td><td align="right">2002-02-08 22:28  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-nn">slack-desc.kde-i18n-nn</a></td><td align="right">2002-03-27 07:40  </td><td align="right">201 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-nso">slack-desc.kde-i18n-nso</a></td><td align="right">2002-11-11 00:59  </td><td align="right">208 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-oc">slack-desc.kde-i18n-oc</a></td><td align="right">2002-03-27 07:40  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-pl">slack-desc.kde-i18n-pl</a></td><td align="right">2002-02-08 22:28  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-pt">slack-desc.kde-i18n-pt</a></td><td align="right">2002-02-08 22:28  </td><td align="right">192 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-pt_BR">slack-desc.kde-i18n-pt_BR</a></td><td align="right">2002-02-08 22:28  </td><td align="right">235 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ro">slack-desc.kde-i18n-ro</a></td><td align="right">2002-02-08 22:28  </td><td align="right">190 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ru">slack-desc.kde-i18n-ru</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-sk">slack-desc.kde-i18n-sk</a></td><td align="right">2002-02-08 22:28  </td><td align="right">188 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-sl">slack-desc.kde-i18n-sl</a></td><td align="right">2002-02-08 22:28  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-sr">slack-desc.kde-i18n-sr</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-sv">slack-desc.kde-i18n-sv</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ta">slack-desc.kde-i18n-ta</a></td><td align="right">2002-02-08 22:28  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-th">slack-desc.kde-i18n-th</a></td><td align="right">2002-02-08 22:28  </td><td align="right">186 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-tr">slack-desc.kde-i18n-tr</a></td><td align="right">2002-02-08 22:28  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-uk">slack-desc.kde-i18n-uk</a></td><td align="right">2002-02-08 22:28  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-ven">slack-desc.kde-i18n-ven</a></td><td align="right">2002-03-27 07:40  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-vi">slack-desc.kde-i18n-vi</a></td><td align="right">2002-03-27 07:40  </td><td align="right">192 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-wa">slack-desc.kde-i18n-wa</a></td><td align="right">2002-03-27 07:40  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-xh">slack-desc.kde-i18n-xh</a></td><td align="right">2002-02-08 22:28  </td><td align="right">187 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-zh_CN">slack-desc.kde-i18n-zh_CN</a></td><td align="right">2002-03-27 07:34  </td><td align="right">236 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-zh_TW">slack-desc.kde-i18n-zh_TW</a></td><td align="right">2002-03-27 07:42  </td><td align="right">225 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.kde-i18n-zu">slack-desc.kde-i18n-zu</a></td><td align="right">2002-03-27 07:41  </td><td align="right">186 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

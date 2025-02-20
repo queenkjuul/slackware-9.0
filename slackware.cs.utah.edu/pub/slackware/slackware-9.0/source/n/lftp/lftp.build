@@ -1,0 +1,22 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=2.6.5
+rm -f /etc/lftp.conf
+cd /tmp
+tar xjvf $CWD/lftp-$VERSION.tar.bz2
+cd lftp-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr
+make
+make install
+mv /etc/lftp.conf /etc/lftp.conf.new
+mkdir -p /usr/doc/lftp-$VERSION
+cp -a \
+  ABOUT-NLS BUGS COPYING ChangeLog FAQ FEATURES INSTALL MIRRORS NEWS README README.debug-levels README.modules THANKS TODO lftp.lsm \
+  /usr/doc/lftp-$VERSION
+chown -R root.root /usr/doc/lftp-$VERSION
+chmod 644 /usr/doc/lftp-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+zcat $CWD/doinst.sh.gz > /install/doinst.sh

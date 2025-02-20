@@ -1,0 +1,21 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+VERSION=0.90
+
+cd $TMP
+tar xzvf $CWD/xsane-$VERSION.tar.gz
+cd xsane-$VERSION
+chown -R root.root .
+find . -perm 600 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr
+make
+make install
+mkdir -p /usr/doc/xsane-$VERSION
+cp -a \
+  xsane.* \
+  /usr/doc/xsane-$VERSION
+rm -f /usr/doc/xsane-$VERSION/*.spec*
+chmod 644 /usr/doc/xsane-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

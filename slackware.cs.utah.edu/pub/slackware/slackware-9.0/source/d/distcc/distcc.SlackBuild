@@ -1,0 +1,56 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-distcc
+
+VERSION=1.2.3
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+cd $TMP
+tar xjvf $CWD/distcc-$VERSION.tar.bz2
+cd distcc-$VERSION
+chown -R root.root .
+./configure --prefix=/usr
+make
+make install DESTDIR=$PKG docdir=/usr/doc pkgdocdir=/usr/doc/distcc-$VERSION
+chown -R root.bin $PKG/usr/bin
+gzip -9 $PKG/usr/man/man?/*
+gzip -9 $PKG/usr/info/*
+mv $PKG/usr/doc/distcc-$VERSION/manual/html/* $PKG/usr/doc/distcc-$VERSION/manual
+rmdir $PKG/usr/doc/distcc-$VERSION/manual/html
+# Restore original timestamps on the doc files:
+for file in * ; do
+  if [ -f $file ]; then
+    if [ -r $PKG/usr/doc/distcc-$VERSION/$file ]; then
+      cp -a $file $PKG/usr/doc/distcc-$VERSION/$file
+      chmod 644 $PKG/usr/doc/distcc-$VERSION/$file
+    fi
+  fi
+done
+# Strip binaries:
+( cd $PKG
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/distcc-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/distcc-$VERSION
+  rm -rf $PKG
+fi

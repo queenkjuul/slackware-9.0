@@ -1,0 +1,56 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-slocate
+
+VERSION=2.7
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_slocate.tar.gz
+
+echo "+=============+"
+echo "| slocate-$VERSION |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/slocate-$VERSION.tar.gz
+cd slocate-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr
+# Developers SHOULD NOT require a certain version of autoconf/make!
+make -i clean
+make -i
+strip slocate
+cat slocate > $PKG/usr/bin/slocate
+mkdir -p $PKG/usr/man/man1
+zcat doc/slocate.1.linux.gz | gzip -9c > $PKG/usr/man/man1/slocate.1.gz
+zcat doc/updatedb.1.gz | gzip -9c > $PKG/usr/man/man1/updatedb.1.gz
+mkdir -p $PKG/usr/doc/slocate-$VERSION
+cp -a \
+  AUTHORS ChangeLog INSTALL LICENSE README \
+  $PKG/usr/doc/slocate-$VERSION
+chmod 644 $PKG/usr/doc/slocate-$VERSION/*
+chown -R root.root $PKG/usr/doc/slocate-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/slocate-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/slocate-$VERSION
+  rm -rf $PKG
+fi

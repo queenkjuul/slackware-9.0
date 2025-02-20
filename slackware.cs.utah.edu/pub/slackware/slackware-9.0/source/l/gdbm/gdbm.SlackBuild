@@ -1,0 +1,46 @@
+#!/bin/sh
+# Build gdbm-$VERSION for Slackware
+# by volkerdi@slackware.com, 2/2001
+CWD=`pwd`
+
+VERSION=1.8.0
+ARCH=i386
+BUILD=3
+
+PKG=/tmp/package-gdbm
+( cd /tmp ; rm -rf package-gdbm ; mkdir package-gdbm )
+cd /tmp
+tar xzvf $CWD/gdbm-$VERSION.tar.gz
+cd gdbm-$VERSION
+
+# Configure/build:
+./configure --prefix=/usr
+make CFLAGS=-O2
+mkdir -p $PKG/usr/{lib,include,info,man/man3}
+# Fix libgdbm.la bug:
+zcat $CWD/gdbm.la.diff.gz | patch -p1
+make CFLAGS=-O2 install prefix=$PKG/usr
+
+# I think at least ndbm.h conflicts with glibc2... not sure
+# about dbm.h.  If you think these should have been included,
+# complain to volkerdi@slackware.com :)
+#cp -a ndbm.h dbm.h $PKG/usr/include
+#chown root.root $PKG/usr/include/{ndbm.h,dbm.h}
+
+# Install docs:
+mkdir -p $PKG/usr/doc/gdbm-$VERSION
+cp -a COPYING ChangeLog INSTALL NEWS README $PKG/usr/doc/gdbm-$VERSION
+chown root.root $PKG/usr/doc/gdbm-$VERSION/*
+chmod 644 $PKG/usr/doc/gdbm-$VERSION/*
+chown root.root $PKG/usr/info/gdbm.info
+gzip -9 $PKG/usr/info/gdbm.info
+chown root.root $PKG/usr/man/man3/gdbm.3
+gzip -9 $PKG/usr/man/man3/gdbm.3
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n ../gdbm-$VERSION-$ARCH-$BUILD.tgz
+

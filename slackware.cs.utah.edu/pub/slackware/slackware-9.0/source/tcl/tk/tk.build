@@ -1,0 +1,49 @@
+# Build/install Tk the way Slackware's binary package is made:
+CWD=`pwd`
+
+VERSION=8.4.2
+# Don't forget the "8.4" symlinks down there...
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xzvf $CWD/tk$VERSION-src.tar.gz
+cd tk$VERSION
+mkdir -p /usr/doc/tk$VERSION
+cp -a README changes license.terms /usr/doc/tk$VERSION
+chown root.root /usr/doc/tk$VERSION/*
+cd unix
+./configure --prefix=/usr --disable-shared
+make install
+make clean
+./configure --prefix=/usr --enable-shared
+make install
+
+( cd /usr/bin
+  rm -f wish
+  ln -sf wish8.4 wish )
+( cd /usr/lib
+  rm -f libtk.a libtk.so libtkstub.a
+  ln -sf libtk8.4.a libtk.a
+  ln -sf libtk8.4.so libtk.so
+  ln -sf libtkstub8.4.a libtkstub.a )
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+
+# Make a script to produce symlinks to gzipped man pages (used when packing later):
+cat mkLinks | perl -pi -e 's|\.3|foo3foo3|' | perl -pi -e 's|\.3|foo3foo3|' | \
+  perl -pi -e 's|foo3foo3|.3.gz|' | perl -pi -e 's|foo3foo3|.3.gz|' | \
+  perl -pi -e 's|\.n|foonfoon|' | perl -pi -e 's|\.n|foonfoon|' | \
+  perl -pi -e 's|foonfoon|.n.gz|' | perl -pi -e 's|foonfoon|.n.gz|' | \
+  perl -pi -e 's|ln |ln -sf |' > $CWD/mkgzLinks.sh
+
+# Briefly, to use the above generated script, you go into say /usr/man/man3/
+# of the extracted package and do this:
+# mkdir tmp
+# cp *.* tmp
+# mv tmp/* .
+# rm -r tmp
+# gzip -9 *
+# sh /path/to/mkgzLinks.sh .
+

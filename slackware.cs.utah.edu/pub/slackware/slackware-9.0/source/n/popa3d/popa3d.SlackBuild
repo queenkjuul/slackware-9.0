@@ -1,0 +1,59 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-popa3d
+
+VERSION=0.6.1
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+===========+"
+echo "| popa3d-$VERSION |"
+echo "+===========+"
+cd $TMP
+tar xzvf $CWD/popa3d-$VERSION.tar.gz
+cd popa3d-$VERSION
+zcat $CWD/popa3d.diff.gz | patch -p1 --verbose --backup --suffix=.orig
+make
+# already stripped
+mkdir -p $PKG/usr/sbin
+cat popa3d > $PKG/usr/sbin/popa3d
+chmod 755 $PKG/usr/sbin/popa3d
+chown -R root.bin $PKG/usr/sbin
+mkdir -p $PKG/usr/man/man8
+cat popa3d.8 | gzip -9c > $PKG/usr/man/man8/popa3d.8.gz
+# Empty directory to chroot() into:
+mkdir -p $PKG/var/spool/pop
+# Docs:
+mkdir -p $PKG/usr/doc/popa3d-$VERSION
+cp -a \
+  DESIGN INSTALL LICENSE VIRTUAL \
+  $PKG/usr/doc/popa3d-$VERSION
+chmod 644 $PKG/usr/doc/popa3d-$VERSION/*
+chown root.root $PKG/usr/doc/popa3d-$VERSION/*
+# Add install script -- this ensures pop user/group are there:
+mkdir -p $PKG/install
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
+# Description:
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/popa3d-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/popa3d-$VERSION
+  rm -rf $PKG
+fi
+

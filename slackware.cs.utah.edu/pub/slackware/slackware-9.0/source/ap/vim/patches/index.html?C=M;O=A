@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/ap/vim/patches</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/ap/vim/patches</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/ap/vim/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.1-100.gz">6.1.1-100.gz</a></td><td align="right">2002-06-18 19:41  </td><td align="right"> 84K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.101-200.gz">6.1.101-200.gz</a></td><td align="right">2002-09-28 10:36  </td><td align="right">126K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.201-300.gz">6.1.201-300.gz</a></td><td align="right">2003-01-19 20:29  </td><td align="right"> 97K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.301.gz">6.1.301.gz</a></td><td align="right">2003-01-23 21:10  </td><td align="right">835 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.302.gz">6.1.302.gz</a></td><td align="right">2003-01-26 21:43  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.303.gz">6.1.303.gz</a></td><td align="right">2003-01-28 20:23  </td><td align="right">1.5K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.305.gz">6.1.305.gz</a></td><td align="right">2003-01-28 20:43  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.306.gz">6.1.306.gz</a></td><td align="right">2003-01-28 20:48  </td><td align="right">902 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.307.gz">6.1.307.gz</a></td><td align="right">2003-01-28 20:52  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.308.gz">6.1.308.gz</a></td><td align="right">2003-01-28 21:18  </td><td align="right">2.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.309.gz">6.1.309.gz</a></td><td align="right">2003-01-28 21:30  </td><td align="right"> 30K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.310.gz">6.1.310.gz</a></td><td align="right">2003-01-29 09:15  </td><td align="right">807 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.304.gz">6.1.304.gz</a></td><td align="right">2003-01-29 09:55  </td><td align="right">1.6K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.311.gz">6.1.311.gz</a></td><td align="right">2003-01-29 21:09  </td><td align="right">4.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.312.gz">6.1.312.gz</a></td><td align="right">2003-01-30 21:22  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.313.gz">6.1.313.gz</a></td><td align="right">2003-02-01 15:44  </td><td align="right">3.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.314.gz">6.1.314.gz</a></td><td align="right">2003-02-01 16:14  </td><td align="right">5.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.315.gz">6.1.315.gz</a></td><td align="right">2003-02-01 17:51  </td><td align="right">1.3K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.316.gz">6.1.316.gz</a></td><td align="right">2003-02-02 12:41  </td><td align="right">916 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.317.gz">6.1.317.gz</a></td><td align="right">2003-02-02 20:44  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.318.gz">6.1.318.gz</a></td><td align="right">2003-02-03 20:48  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.319.gz">6.1.319.gz</a></td><td align="right">2003-02-04 19:09  </td><td align="right">964 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.320.gz">6.1.320.gz</a></td><td align="right">2003-02-04 21:34  </td><td align="right">1.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.321.gz">6.1.321.gz</a></td><td align="right">2003-02-16 18:44  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.322.gz">6.1.322.gz</a></td><td align="right">2003-02-16 19:09  </td><td align="right">947 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.323.gz">6.1.323.gz</a></td><td align="right">2003-02-16 19:15  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.324.gz">6.1.324.gz</a></td><td align="right">2003-02-16 19:31  </td><td align="right">3.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.325.gz">6.1.325.gz</a></td><td align="right">2003-02-16 20:23  </td><td align="right">799 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.326.gz">6.1.326.gz</a></td><td align="right">2003-02-16 20:47  </td><td align="right">786 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.327.gz">6.1.327.gz</a></td><td align="right">2003-02-16 20:56  </td><td align="right">1.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.328.gz">6.1.328.gz</a></td><td align="right">2003-02-16 21:04  </td><td align="right">830 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.329.gz">6.1.329.gz</a></td><td align="right">2003-02-16 21:09  </td><td align="right">1.3K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.330.gz">6.1.330.gz</a></td><td align="right">2003-02-16 21:14  </td><td align="right">1.5K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.331.gz">6.1.331.gz</a></td><td align="right">2003-02-16 21:17  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.332.gz">6.1.332.gz</a></td><td align="right">2003-02-16 21:22  </td><td align="right">2.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.333.gz">6.1.333.gz</a></td><td align="right">2003-02-16 21:28  </td><td align="right">5.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.334.gz">6.1.334.gz</a></td><td align="right">2003-02-16 21:32  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.335.gz">6.1.335.gz</a></td><td align="right">2003-02-16 21:46  </td><td align="right">901 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.336.gz">6.1.336.gz</a></td><td align="right">2003-02-16 21:48  </td><td align="right">851 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.337.gz">6.1.337.gz</a></td><td align="right">2003-02-16 21:50  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.338.gz">6.1.338.gz</a></td><td align="right">2003-02-16 21:53  </td><td align="right">944 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.339.gz">6.1.339.gz</a></td><td align="right">2003-02-16 21:59  </td><td align="right">874 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.340.gz">6.1.340.gz</a></td><td align="right">2003-02-17 09:22  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.341.gz">6.1.341.gz</a></td><td align="right">2003-02-17 20:26  </td><td align="right">2.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.342.gz">6.1.342.gz</a></td><td align="right">2003-02-18 20:43  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.343.gz">6.1.343.gz</a></td><td align="right">2003-02-19 10:23  </td><td align="right">1.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.346.gz">6.1.346.gz</a></td><td align="right">2003-02-20 22:30  </td><td align="right">2.5K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.347.gz">6.1.347.gz</a></td><td align="right">2003-02-20 22:30  </td><td align="right">1.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.348.gz">6.1.348.gz</a></td><td align="right">2003-02-20 22:30  </td><td align="right">1.6K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.349.gz">6.1.349.gz</a></td><td align="right">2003-02-20 22:30  </td><td align="right">4.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.345.gz">6.1.345.gz</a></td><td align="right">2003-02-20 22:30  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.350.gz">6.1.350.gz</a></td><td align="right">2003-02-20 22:30  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.344.gz">6.1.344.gz</a></td><td align="right">2003-02-20 22:30  </td><td align="right">795 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.351.gz">6.1.351.gz</a></td><td align="right">2003-02-21 21:25  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.352.gz">6.1.352.gz</a></td><td align="right">2003-02-22 13:07  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.353.gz">6.1.353.gz</a></td><td align="right">2003-02-22 13:10  </td><td align="right">1.3K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.354.gz">6.1.354.gz</a></td><td align="right">2003-02-23 16:15  </td><td align="right">936 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.356.gz">6.1.356.gz</a></td><td align="right">2003-02-23 16:48  </td><td align="right">1.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.357.gz">6.1.357.gz</a></td><td align="right">2003-02-23 16:53  </td><td align="right">910 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.355.gz">6.1.355.gz</a></td><td align="right">2003-02-24 10:36  </td><td align="right">4.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.358.gz">6.1.358.gz</a></td><td align="right">2003-02-24 21:56  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.359.gz">6.1.359.gz</a></td><td align="right">2003-02-25 18:56  </td><td align="right">1.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.360.gz">6.1.360.gz</a></td><td align="right">2003-02-25 20:14  </td><td align="right">2.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.361.gz">6.1.361.gz</a></td><td align="right">2003-02-25 20:42  </td><td align="right">1.5K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.362.gz">6.1.362.gz</a></td><td align="right">2003-02-25 20:51  </td><td align="right">2.3K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.363.gz">6.1.363.gz</a></td><td align="right">2003-02-26 20:06  </td><td align="right">926 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.364.gz">6.1.364.gz</a></td><td align="right">2003-02-26 20:13  </td><td align="right">1.9K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.365.gz">6.1.365.gz</a></td><td align="right">2003-03-03 19:17  </td><td align="right">780 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.366.gz">6.1.366.gz</a></td><td align="right">2003-03-08 19:35  </td><td align="right"> 47K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.367.gz">6.1.367.gz</a></td><td align="right">2003-03-08 21:45  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.369.gz">6.1.369.gz</a></td><td align="right">2003-03-09 13:10  </td><td align="right">6.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.370.gz">6.1.370.gz</a></td><td align="right">2003-03-09 13:20  </td><td align="right">4.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.371.gz">6.1.371.gz</a></td><td align="right">2003-03-09 13:25  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.372.gz">6.1.372.gz</a></td><td align="right">2003-03-09 13:36  </td><td align="right">2.6K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.373.gz">6.1.373.gz</a></td><td align="right">2003-03-09 14:06  </td><td align="right">2.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.374.gz">6.1.374.gz</a></td><td align="right">2003-03-09 14:09  </td><td align="right">2.3K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.375.gz">6.1.375.gz</a></td><td align="right">2003-03-09 14:12  </td><td align="right">885 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.376.gz">6.1.376.gz</a></td><td align="right">2003-03-09 14:14  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.377.gz">6.1.377.gz</a></td><td align="right">2003-03-09 14:16  </td><td align="right">824 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.378.gz">6.1.378.gz</a></td><td align="right">2003-03-09 14:20  </td><td align="right">1.4K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.379.gz">6.1.379.gz</a></td><td align="right">2003-03-09 14:26  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.380.gz">6.1.380.gz</a></td><td align="right">2003-03-09 14:46  </td><td align="right">786 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.381.gz">6.1.381.gz</a></td><td align="right">2003-03-09 14:49  </td><td align="right">858 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.382.gz">6.1.382.gz</a></td><td align="right">2003-03-09 15:22  </td><td align="right">2.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.383.gz">6.1.383.gz</a></td><td align="right">2003-03-09 16:50  </td><td align="right">4.9K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.368.gz">6.1.368.gz</a></td><td align="right">2003-03-09 16:55  </td><td align="right">1.5K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.384.gz">6.1.384.gz</a></td><td align="right">2003-03-09 21:28  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="6.1.385.gz">6.1.385.gz</a></td><td align="right">2003-03-09 21:39  </td><td align="right">794 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

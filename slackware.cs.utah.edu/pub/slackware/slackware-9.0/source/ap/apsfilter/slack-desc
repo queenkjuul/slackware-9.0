@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+apsfilter: apsfilter (printer filter and configuration tool)
+apsfilter:
+apsfilter: Apsfilter is a printer input filter.  With apsfilter installed and
+apsfilter: configured, you can print many different file types (like ASCII,
+apsfilter: PostScript, and DVI, as well as compressed versions of all of these)
+apsfilter: directly with 'lpr', and apsfilter will automatically handle the
+apsfilter: conversion process on the fly.  What does apsfilter stand for?
+apsfilter: Apsfilter Prints So Fine, It Leads To Extraordinary Results ;-)
+apsfilter:
+apsfilter: To configure apsfilter, run the SETUP program in /usr/share/apsfilter.
+apsfilter:

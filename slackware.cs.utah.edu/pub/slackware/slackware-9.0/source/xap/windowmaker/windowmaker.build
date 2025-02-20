@@ -1,0 +1,38 @@
+#!/bin/sh
+CWD=`pwd` 
+VERSION=0.80.2
+cd /tmp
+tar xjvf $CWD/WindowMaker-$VERSION.tar.bz2
+cd WindowMaker-$VERSION
+chown -R root.root .
+# This should be non-interactive where possible.
+zcat $CWD/wmaker.inst.diff.gz | patch -p1 --verbose
+LINGUAS="`cd po ; /bin/ls *.po | sed 's/.po//g'`" \
+CFLAGS="-O2 -march=i386 -mcpu=i686" NLSDIR=/usr/share/locale ./configure \
+            --prefix=/usr \
+            --sysconfdir=/etc/X11 \
+	    --enable-gnome \
+            --enable-kde \
+	    --enable-usermenu \
+            --with-appspath=/usr/lib/GNUstep/Apps \
+            i386-slackware-linux
+# NLS bugs like -i
+make -i
+make -i install
+mkdir -p /usr/doc/WindowMaker-$VERSION
+cp -a AUTHORS BUGFORM BUGS COPYING COPYING.OPL FAQ \
+   FAQ.I18N NEWS README README.GNOME TODO \
+   /usr/doc/WindowMaker-$VERSION
+cd /tmp
+tar xzvf $CWD/WindowMaker-extra-0.1.tar.gz
+cd WindowMaker-extra-0.1
+CFLAGS=-O2 ./configure --prefix=/usr \
+	    --with-iconsdir=/usr/share/pixmaps \
+            i386-slackware-linux
+make
+make install
+cp $CWD/xinitrc.wmaker /etc/X11/xinit/xinitrc.wmaker
+chown root.root /etc/X11/xinit/xinitrc.wmaker
+chmod 755 /etc/X11/xinit/xinitrc.wmaker
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

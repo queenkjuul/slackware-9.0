@@ -1,0 +1,50 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-usbutils
+
+VERSION=0.11
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+================+"
+echo "| usbutils-$VERSION |"
+echo "+================+"
+cd $TMP
+tar xzvf $CWD/usbutils-$VERSION.tar.gz
+cd usbutils-$VERSION
+chown -R root.root .
+find . -perm 664 | xargs chmod 644
+./configure --prefix=/usr
+make
+make install DESTDIR=$PKG
+strip $PKG/usr/sbin/*
+chown -R root.bin $PKG/usr/sbin
+mv $PKG/usr/sbin $PKG/sbin
+gzip -9 $PKG/usr/man/man8/*
+mkdir -p $PKG/usr/doc/usbutils-$VERSION
+cp -a \
+  AUTHORS COPYING ChangeLog NEWS README \
+  $PKG/usr/doc/usbutils-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/usbutils-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/usbutils-$VERSION
+  rm -rf $PKG
+fi

@@ -1,0 +1,84 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-dhcp
+
+VERSION=3.0pl2
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_dhcp.tar.gz
+
+echo "+=============+"
+echo "| dhcp-$VERSION |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/dhcp-$VERSION.tar.gz
+cd dhcp-$VERSION
+./configure linux-2.2
+make DEBUG="-O2 -march=i386 -mcpu=i686"
+mkdir -p $PKG/usr/doc/dhcp-$VERSION
+cp -a ANONCVS CHANGES COPYRIGHT README RELNOTES $PKG/usr/doc/dhcp-$VERSION
+mkdir -p $PKG/usr/doc/dhcp-$VERSION/examples
+cp -a client/dhclient.conf server/dhcpd.conf \
+  $PKG/usr/doc/dhcp-$VERSION/examples
+chown -R root.root $PKG/usr/doc/dhcp-$VERSION
+cat << EOF > $PKG/etc/dhcpd.conf.new
+# dhcpd.conf
+#
+# Configuration file for ISC dhcpd (see 'man dhcpd.conf')
+#
+EOF
+cat << EOF > $PKG/etc/dhclient.conf.new
+# dhclient.conf
+#
+# Configuration file for ISC dhclient (see 'man dhclient.conf')
+#
+EOF
+cat client/scripts/linux > $PKG/sbin/dhclient-script
+chmod 700 $PKG/sbin/dhclient-script
+( cd work.linux-2.2
+  strip server/dhcpd client/dhclient relay/dhcrelay
+  cat server/dhcpd > $PKG/usr/sbin/dhcpd
+  cat relay/dhcrelay > $PKG/usr/sbin/dhcrelay
+  cat client/dhclient > $PKG/sbin/dhclient )
+mkdir -p $PKG/usr/man/man5
+mkdir -p $PKG/usr/man/man8
+for dir in client server ; do
+  cd $dir
+  for file in *.5 ; do
+    cat $file | sed -e "s#ETCDIR#/etc#g" -e "s#DBDIR#/var/db#g" \
+      -e "s#RUNDIR#/var/run#g" | gzip -9c > $PKG/usr/man/man5/$file.gz
+  done
+  for file in *.8 ; do
+    cat $file | sed -e "s#ETCDIR#/etc#g" -e "s#DBDIR#/var/db#g" \
+      -e "s#RUNDIR#/var/run#g" | gzip -9c > $PKG/usr/man/man8/$file.gz
+  done
+  cd ..
+done
+cat relay/dhcrelay.8 | sed -e "s#ETCDIR#/etc#g" -e "s#DBDIR#/var/db#g" \
+  -e "s#RUNDIR#/var/run#g" | gzip -9c > $PKG/usr/man/man8/dhcrelay.8.gz
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/dhcp-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+ rm -rf $TMP/dhcp-$VERSION
+ rm -rf $PKG
+fi

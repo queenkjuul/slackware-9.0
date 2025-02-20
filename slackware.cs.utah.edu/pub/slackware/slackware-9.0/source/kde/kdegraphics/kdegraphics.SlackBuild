@@ -1,0 +1,43 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+PKG=$TMP/package-kdegraphics
+
+VERSION=`cat $CWD/../KDE-VERSION`
+ARCH=i386
+BUILD=2
+
+rm -rf $PKG
+mkdir -p $PKG/opt/kde
+
+# Avoid a version number in .la files:
+if [ -d /usr/lib/qt ]; then
+  QTDIR=/usr/lib/qt
+fi
+cd $TMP
+echo "Building kdegraphics-$VERSION.tar.bz2..."
+tar xjvf $CWD/kdegraphics-$VERSION.tar.bz2
+cd kdegraphics-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/opt/kde i386-slackware-linux \
+  --with-xinerama \
+  --disable-debug \
+  --program-prefix="" --program-suffix=""
+make
+make install DESTDIR=$PKG
+mkdir -p $PKG/usr/doc/kdegraphics-$VERSION
+cp -a AUTHORS COPYING ChangeLog INSTALL README $PKG/usr/doc/kdegraphics-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+( cd $PKG
+  find . -type f | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded )
+if [ -d $PKG/opt/kde/man ]; then
+  gzip -9 $PKG/opt/kde/man/man?/*
+fi
+
+cd $PKG
+makepkg -l y -c n ../kdegraphics-$VERSION-$ARCH-$BUILD.tgz
+

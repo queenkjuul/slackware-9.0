@@ -1,0 +1,63 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-dhcpcd
+
+VERSION=1.3.22-pl4
+PACKAGE=1.3.22pl4
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_dhcpcd.tar.gz
+
+echo "+===================+"
+echo "| dhcpcd-$VERSION |"
+echo "+===================+"
+cd $TMP
+tar xzvf $CWD/dhcpcd-$VERSION.tar.gz
+cd dhcpcd-$VERSION
+chown -R root.root .
+find . -perm 777 -exec chmod 755 {} \;
+find . -perm 555 -exec chmod 755 {} \;
+find . -perm 444 -exec chmod 644 {} \;
+# Do not use i686 instructions:
+zcat $CWD/dhcpcd.noarchforce.diff.gz | patch -p1
+# i686 code alignment is fine, though:
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr
+make clean
+make
+strip dhcpcd
+cat dhcpcd > $PKG/sbin/dhcpcd
+cat dhcpcd.8 | gzip -9c > $PKG/usr/man/man8/dhcpcd.8.gz
+cat << EOF > $PKG/etc/dhcpc/dhcpcd-eth0.exe
+#!/bin/sh
+echo "(dhcpcd)  IP address changed to \$1" | logger
+EOF
+chmod 750 $PKG/etc/dhcpc/dhcpcd-eth0.exe
+mkdir -p $PKG/usr/doc/dhcpcd-$VERSION
+cp -a pcmcia $PKG/usr/doc/dhcpcd-$VERSION
+cp -a AUTHORS COPYING ChangeLog INSTALL NEWS README dhcpcd*lsm $PKG/usr/doc/dhcpcd-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/dhcpcd-$PACKAGE-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+ rm -rf $TMP/dhcpcd-$VERSION
+ rm -rf $PKG
+fi

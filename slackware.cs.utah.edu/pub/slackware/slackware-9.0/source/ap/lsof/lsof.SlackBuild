@@ -1,0 +1,53 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-lsof
+
+VERSION=4.66
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+==============+"
+echo "| lsof-$VERSION |"
+echo "+==============+"
+cd $TMP
+tar xjvf $CWD/lsof_$VERSION.tar.bz2
+cd lsof_$VERSION
+tar xvf lsof_${VERSION}_src.tar
+cd lsof_${VERSION}_src
+echo n | ./Configure linux
+make
+strip lsof
+mkdir -p $PKG/usr/bin
+cat lsof > $PKG/usr/bin/lsof
+# No, NOT suid.
+chmod 755 $PKG/usr/bin/lsof
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/man/man8
+cat lsof.8 | gzip -9c > $PKG/usr/man/man8/lsof.8.gz
+mkdir -p $PKG/usr/doc/lsof-$VERSION
+cp -a 00* $PKG/usr/doc/lsof-$VERSION
+chmod 644 $PKG/usr/doc/lsof-$VERSION/*
+chown root.root $PKG/usr/doc/lsof-$VERSION/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/lsof-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/lsof-$VERSION
+  rm -rf $PKG
+fi

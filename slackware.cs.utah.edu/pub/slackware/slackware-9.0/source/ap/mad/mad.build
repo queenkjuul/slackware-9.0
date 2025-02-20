@@ -1,0 +1,30 @@
+#!/bin/sh
+# Set initial variables:
+
+VERSION=0.14.2b
+
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+
+cd $TMP
+tar xzvf $CWD/mad-$VERSION.tar.gz
+cd mad-$VERSION
+CFLAGS=-O2 ./configure --prefix=/usr i386-slackware-linux
+make
+# Making this into a SlackBuild is more trouble than it's worth trying
+# to beat libtool into making correct .la files, so we'll install for
+# later extraction:
+make install
+mkdir -p /usr/doc/mad-$VERSION
+cp -a \
+  ABOUT-NLS CHANGES COPYING COPYRIGHT CREDITS INSTALL README TODO VERSION \
+  /usr/doc/mad-$VERSION
+chmod 644 /usr/doc/mad-$VERSION/*
+chown root.root /usr/doc/mad-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

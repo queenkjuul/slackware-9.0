@@ -1,0 +1,46 @@
+CWD=`pwd`
+
+VERSION=2.2.2
+EXTRAS=0.99.10
+ARCH=i386
+
+cd /tmp
+tar xjvf $CWD/gnome-vfs-$VERSION.tar.bz2
+cd gnome-vfs-$VERSION
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --enable-static=no \
+            --sysconfdir=/etc \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+make install
+ldconfig
+mkdir -p /usr/doc/gnome-vfs-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  /usr/doc/gnome-vfs-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+
+cd /tmp
+tar xjvf $CWD/gnome-vfs-extras-$EXTRAS.tar.bz2
+cd gnome-vfs-extras-$EXTRAS
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --enable-static=no \
+            --sysconfdir=/etc \
+            --localstatedir=/var/lib
+make
+make install
+mkdir -p /usr/doc/gnome-vfs-extras-$EXTRAS
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  /usr/doc/gnome-vfs-extras-$EXTRAS
+

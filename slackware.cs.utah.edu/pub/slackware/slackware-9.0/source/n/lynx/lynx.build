@@ -1,0 +1,42 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=2.8.4
+
+cd /tmp
+tar xv --use-compress-program=/bin/bzip2 --file $CWD/lynx-$VERSION.tar.bz2
+cd lynx2-8-4
+# Fix /usr/local paths:
+zcat $CWD/lynx.path.diff.gz | patch -p1 --verbose # --backup
+# Apply recolorizing patch:
+zcat $CWD/lynx.cfg.diff.gz | patch -p1 --verbose --backup
+# Apply official patches:
+zcat $CWD/lynx2.8.4rel.1a.patch.gz | patch -p1 --verbose # --backup
+zcat $CWD/lynx2.8.4rel.1b.patch.gz | patch -p1 --verbose # --backup
+zcat $CWD/lynx2.8.4rel.1c.patch.gz | patch -p1 --verbose # --backup
+zcat $CWD/lynx2.8.4rel.1d.patch.gz | patch -p1 --verbose # --backup
+find . -name "*~" | xargs rm
+chown -R root.root .
+./configure --enable-default-colors \
+            --sysconfdir=/etc \
+            --with-screen=ncurses \
+            --prefix=/usr --libdir=/usr/lib/lynx \
+            --enable-gzip-help --with-zlib \
+            --enable-read-eta \
+            --enable-scrollbar \
+            --with-ssl \
+            --enable-color-style \
+            --enable-prettysrc \
+            --enable-source-cache \
+            --enable-nsl-fork
+#            --enable-nls # (not currently compiling so well)
+#            --enable-persistent-cookies
+make
+make install
+make install-help
+make install-doc
+( cd /usr/doc
+  rm -rf lynx-$VERSION
+  ln -sf /usr/lib/lynx lynx-$VERSION )
+cp -a README /usr/lib/lynx
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

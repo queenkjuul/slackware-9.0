@@ -1,0 +1,22 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+
+VERSION=2.57
+
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+cd $TMP
+tar xjvf $CWD/autoconf-$VERSION.tar.bz2
+cd autoconf-$VERSION
+./configure --prefix=/usr
+make
+make install
+mkdir -p /usr/doc/autoconf-$VERSION
+cp -a AUTHORS BUGS COPYING INSTALL INSTALL.txt NEWS README THANKS TODO \
+      /usr/doc/autoconf-$VERSION
+chown root.root /usr/doc/autoconf-$VERSION/*
+chmod 644 /usr/doc/autoconf-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

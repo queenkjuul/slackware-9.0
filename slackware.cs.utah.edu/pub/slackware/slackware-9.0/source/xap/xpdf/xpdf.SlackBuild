@@ -1,0 +1,73 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-xpdf
+
+VERSION=2.01
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+===========+"
+echo "| xpdf-$VERSION |"
+echo "+===========+"
+cd $TMP
+tar xzvf $CWD/xpdf-$VERSION.tar.gz
+cd xpdf-$VERSION
+chown -R root.root .
+zcat $CWD/xpdfrc.diff.gz | patch -p1 --verbose --backup --suffix=.orig
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure \
+  --prefix=/usr/X11R6 \
+  --with-gzip \
+  --with-freetype2-includes=/usr/include/freetype2
+make
+make install DESTDIR=$PKG
+chmod 755 $PKG/usr/X11R6/bin/*
+chown -R root.bin $PKG/usr/X11R6/bin
+strip $PKG/usr/X11R6/bin/*
+gzip -9 $PKG/usr/X11R6/man/man?/*
+cat doc/sample-xpdfrc > $PKG/usr/X11R6/etc/xpdfrc
+mkdir -p $PKG/usr/doc/xpdf-$VERSION
+cp -a \
+  ANNOUNCE CHANGES COPYING INSTALL README \
+  $PKG/usr/doc/xpdf-$VERSION
+chmod 644 $PKG/usr/doc/xpdf-$VERSION/*
+# Add cyrillic support.  Can't leave that out.
+tar xzvf $CWD/xpdf-cyrillic-2002-jan-16.tar.gz
+cd xpdf-cyrillic
+zcat $CWD/xpdf-cyrillic.diff.gz | patch -p1 --verbose --backup --suffix=.orig
+mkdir -p $PKG/usr/X11R6/share/xpdf/cyrillic
+cat KOI8-R.unicodeMap > $PKG/usr/X11R6/share/xpdf/cyrillic/KOI8-R.unicodeMap
+cat add-to-xpdfrc >> $PKG/usr/X11R6/etc/xpdfrc
+# Add latin2 support:
+tar xzvf $CWD/xpdf-latin2-2002-oct-22.tar.gz
+cd xpdf-latin2
+zcat $CWD/xpdf-latin2.diff.gz | patch -p1 --verbose --backup --suffix=.orig
+mkdir -p $PKG/usr/X11R6/share/xpdf/latin2
+cat Latin2.unicodeMap > $PKG/usr/X11R6/share/xpdf/latin2/Latin2.unicodeMap
+cat add-to-xpdfrc >> $PKG/usr/X11R6/etc/xpdfrc
+# Package description:
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/xpdf-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/xpdf-$VERSION
+  rm -rf $PKG
+fi
+

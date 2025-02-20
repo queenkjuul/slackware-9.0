@@ -1,0 +1,23 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=0.11.5
+cd /tmp
+tar xjvf $CWD/pilot-link-$VERSION.tar.bz2
+cd pilot-link-$VERSION
+CFLAGS=-O2 ./configure --prefix=/usr \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+make install
+mkdir /usr/doc/pilot-link-$VERSION
+cp -a ABOUT-NLS AUTHORS BUGS COPYING COPYING.LIB ChangeLog INSTALL NEWS README TODO \
+  /usr/doc/pilot-link-$VERSION
+chmod 644 /usr/doc/pilot-link-$VERSION/*
+chown root.root /usr/doc/pilot-link-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+cat << EOF > /install/doinst.sh
+if [ ! -r dev/pilot ]; then # pick a default
+  ( cd dev ; ln -sf ttyS0 pilot )
+fi
+EOF

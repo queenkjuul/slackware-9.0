@@ -1,0 +1,21 @@
+#!/bin/sh
+CWD=`pwd`
+
+VERSION=12.17.3
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xzvf $CWD/sox-$VERSION.tar.gz
+cd sox-$VERSION
+./configure --prefix=/usr \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/sox-$VERSION
+cp -a Changelog Copyright INSTALL README TODO \
+  /usr/doc/sox-$VERSION
+chown root.root /usr/doc/sox-$VERSION/*
+chmod 644 /usr/doc/sox-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/y/bsd-games</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/y/bsd-games</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/y/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="bsd-games-login-fortune.sh">bsd-games-login-fortune.sh</a></td><td align="right">2003-03-14 00:40  </td><td align="right">141 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="bsd-games-login-fortune.csh">bsd-games-login-fortune.csh</a></td><td align="right">1999-09-27 21:18  </td><td align="right">164 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bsd-games.fortunepath.diff.gz">bsd-games.fortunepath.diff.gz</a></td><td align="right">2002-03-10 05:27  </td><td align="right">181 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bsd-games.fortlen.diff.gz">bsd-games.fortlen.diff.gz</a></td><td align="right">2003-02-03 22:28  </td><td align="right">283 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bsd-games.ospeed.diff.gz">bsd-games.ospeed.diff.gz</a></td><td align="right">2000-05-29 02:50  </td><td align="right">328 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bsd-games.strfile.8.diff.gz">bsd-games.strfile.8.diff.gz</a></td><td align="right">2003-02-03 22:51  </td><td align="right">353 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bsd-games.config.params.diff.gz">bsd-games.config.params.diff.gz</a></td><td align="right">2003-02-03 21:48  </td><td align="right">563 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bsd-games-2.13.lsm">bsd-games-2.13.lsm</a></td><td align="right">2001-08-30 23:25  </td><td align="right">825 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-10 04:51  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bsd-games.SlackBuild">bsd-games.SlackBuild</a></td><td align="right">2003-03-14 00:57  </td><td align="right">2.6K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fortunes-linuxcookie.tar.gz">fortunes-linuxcookie.tar.gz</a></td><td align="right">2002-03-10 05:09  </td><td align="right"> 15K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="hangman-words.gz">hangman-words.gz</a></td><td align="right">1993-10-25 00:02  </td><td align="right">102K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fortunes-o.tar.gz">fortunes-o.tar.gz</a></td><td align="right">2002-03-10 05:09  </td><td align="right">356K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bsd-games-2.13.tar.gz">bsd-games-2.13.tar.gz</a></td><td align="right">2001-08-30 23:25  </td><td align="right">2.2M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

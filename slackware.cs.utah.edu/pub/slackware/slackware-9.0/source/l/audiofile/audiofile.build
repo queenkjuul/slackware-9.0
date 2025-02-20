@@ -1,0 +1,15 @@
+#!/bin/sh
+CWD=`pwd`
+cd /tmp
+tar xzvf $CWD/audiofile-0.2.3.tar.gz
+cd audiofile-0.2.3
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/audiofile-0.2.3
+cp -a  COPYING TODO README ChangeLog docs/* /usr/doc/audiofile-0.2.3
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

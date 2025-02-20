@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+fileutils: fileutils (file management utilities)
+fileutils:
+fileutils: These are the GNU file management utilities.  Most of these programs
+fileutils: have significant advantages over their Unix counterparts, such as
+fileutils: greater speed, additional options, and fewer arbitrary limits.
+fileutils:
+fileutils: These utilities are included:
+fileutils:     chgrp chmod chown cp dd df dircolors du ginstall ln ls 
+fileutils:     mkdir mkfifo mknod mv rm rmdir shred sync touch
+fileutils:
+fileutils:

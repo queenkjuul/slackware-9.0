@@ -1,0 +1,78 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+
+GS_VERSION=7.05.6
+
+# OK, first we need the IJS library and include files.
+# Since it doesn't use an soname, and is very small (about 20K)
+# there's no good reason to compile it shared, and it would be
+# likely to be a bad idea anyway as the author says the protocol
+# is still very much in flux.
+cd $TMP
+tar xjvf $CWD/espgs-$GS_VERSION-source.tar.bz2
+cd espgs-$GS_VERSION
+chown -R root.root .
+cd ijs
+./configure --prefix=/usr
+make CFLAGS="-ansi -pedantic -Wmissing-prototypes"
+cat libijs.a > /usr/lib/libijs.a
+#strip --strip-unneeded libijs.so
+#cat libijs.so > /usr/lib/libijs.so
+#chmod 755 /usr/lib/libijs.so
+cat ijs-config > /usr/bin/ijs-config
+chown root.bin /usr/bin/ijs-config
+chmod 755 /usr/bin/ijs-config
+mkdir -p /usr/include/ijs
+cp -a ijs.h ijs_client.h ijs_server.h /usr/include/ijs
+( cd /usr/include/ijs
+  chmod 644 ijs.h ijs_client.h ijs_server.h
+  chown root.root ijs.h ijs_client.h ijs_server.h )
+# Now the main source is compiled:
+cd $TMP
+# This should have been untarred when we compiled libijs.
+#tar xjvf $CWD/espgs-$GS_VERSION-source.tar.bz2
+cd espgs-$GS_VERSION
+
+# Build the version with X11/CUPS/Omni/gimp-print/etc support:
+./configure --prefix=/usr \
+    --enable-cups \
+    --with-drivers=ALL \
+    --with-ijs \
+    --with-gimp-print \
+    --with-omni \
+    --with-x \
+    i386-slackware-linux
+make clean
+make
+make install
+
+# Now make a "basic" version of gs:
+./configure --prefix=/usr \
+    --enable-cups=no \
+    --with-drivers=ALL \
+    --with-ijs \
+    --with-gimp-print=no \
+    --with-omni=no \
+    --with-x=no \
+    i386-slackware-linux
+make clean
+make
+cat bin/gs > /usr/bin/gs-no-x11
+chmod 755 /usr/bin/gs-no-x11
+
+mkdir -p /usr/doc/espgs-$GS_VERSION
+( cd /usr/doc/espgs-$GS_VERSION
+  rm -rf doc examples
+  ln -sf /usr/share/ghostscript/7.05/doc doc
+  ln -sf /usr/share/ghostscript/7.05/examples examples )
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

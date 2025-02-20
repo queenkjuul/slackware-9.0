@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/l/nss_db</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/l/nss_db</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/l/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="nss_db.SlackBuild">nss_db.SlackBuild</a></td><td align="right">2002-10-13 01:43  </td><td align="right">2.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-10-13 01:37  </td><td align="right">950 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="nss_db-2.2-external.patch.gz">nss_db-2.2-external.patch.gz</a></td><td align="right">2002-04-15 15:00  </td><td align="right">1.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="nss_db-2.2-compat.patch.gz">nss_db-2.2-compat.patch.gz</a></td><td align="right">2002-04-02 20:47  </td><td align="right">2.3K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="db-4.0.14.tar.gz">db-4.0.14.tar.gz</a></td><td align="right">2001-11-27 16:09  </td><td align="right">2.6M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="nss_db-2.2.tar.gz">nss_db-2.2.tar.gz</a></td><td align="right">2000-11-10 07:42  </td><td align="right">126K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

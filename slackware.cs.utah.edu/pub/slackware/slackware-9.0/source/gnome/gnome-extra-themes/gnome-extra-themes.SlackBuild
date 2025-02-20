@@ -1,0 +1,26 @@
+CWD=`pwd`
+PKG=/tmp/package-gnome-extra-themes
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=1.0.1
+ARCH=noarch
+BUILD=1
+
+mkdir -p $PKG/usr/share/themes
+( cd $PKG/usr/share/themes
+  for file in $CWD/themes/*.tar.gz ; do
+    tar xzf $file
+  done
+)
+( cd $PKG
+  chown -R root.root .
+  find . -type d -exec chmod 755 {} \;
+  find . -type f -exec chmod 644 {} \;
+  find . -name .xvpics -exec rm -r {} \;
+)
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-gnome-extra-themes
+makepkg -l y -c n ../gnome-extra-themes-$VERSION-$ARCH-$BUILD.tgz

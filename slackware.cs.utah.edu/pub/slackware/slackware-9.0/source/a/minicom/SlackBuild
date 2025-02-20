@@ -1,0 +1,99 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-minicom
+
+VERSION=2.00.0
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_minicom.tar.gz
+
+echo "+================+"
+echo "| minicom-$VERSION |"
+echo "+================+"
+cd $TMP
+tar xzvf $CWD/minicom-$VERSION.src.tar.gz
+cd minicom-$VERSION
+zcat $CWD/minicom.lrzsz.diff.gz | patch -p1 -E --verbose --backup
+./configure --prefix=/usr --sysconfdir=/etc
+( cd lib ; make )
+cd src
+make
+strip ascii-xfr minicom runscript
+cat minicom > $PKG/usr/bin/minicom
+cat runscript > $PKG/usr/bin/runscript
+cat xminicom > $PKG/usr/X11R6/bin/xminicom
+cat ascii-xfr > $PKG/usr/bin/ascii-xfr
+cat ../doc/minicom.users > $PKG/etc/minicom.users
+cat ../doc/minirc.dfl > $PKG/etc/minirc.dfl
+cd ../po
+for file in *.gmo ; do
+  mkdir -p $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES
+  cat $file > $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES/minicom.mo
+done
+cd ../doc
+mkdir -p $PKG/usr/doc/minicom-$VERSION
+cp -a Announce-1.78 Announce-1.82 Announce-1.82.1 Announce-1.83 COMPATABILITY.lrzsz ChangeLog.old HistSearch Locales Macros QuickStart.modemu README.lrzsz TODO.lrzsz Todo Todo.175 Todo.Irix.dif Todo.emacskey.dif Todo.fsel copyright.modemu fselector.txt japanese minicom.FAQ minicom.users minirc.dfl modemu.README pl-translation.txt portugues-brasil suomeksi $PKG/usr/doc/minicom-$VERSION
+find $PKG/usr/doc -type d -exec chmod 755 {} \;
+find $PKG/usr/doc -type f -exec chmod 644 {} \;
+chown -R root.root $PKG/usr/doc
+cd ../man
+for page in minicom.1 runscript.1 ascii-xfr.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/$page.gz
+done
+
+echo "+===============+"
+echo "| lrzsz_0.12.21 |"
+echo "+===============+"
+cd $TMP
+tar xzvf $CWD/lrzsz_0.12.21.orig.tar.gz
+cd lrzsz-990823
+zcat $CWD/lrzsz_0.12.21-3.diff.gz | patch -p1 -E --verbose --backup
+mkdir -p $PKG/usr/doc/lrzsz-0.12.21
+cp -a ABOUT-NLS AUTHORS COMPATABILITY COPYING INSTALL NEWS README-alpha \
+  README.cvs README.gettext README.isdn4linux README.systems \
+  README.tests THANKS TODO $PKG/usr/doc/lrzsz-0.12.21
+chmod 644 $PKG/usr/doc/lrzsz-0.12.21/*
+chown root.root $PKG/usr/doc/lrzsz-0.12.21/*
+./configure --prefix=/usr i386-slackware-linux
+make
+cd src
+strip lrz lsz
+cat lrz > $PKG/usr/bin/lrz
+cat lsz > $PKG/usr/bin/lsz
+cd ../man
+for page in lrz.1 lsz.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/$page.gz
+done
+echo '.so man1/lrz.1' | gzip -9c > $PKG/usr/man/man1/rz.1.gz
+echo '.so man1/lsz.1' | gzip -9c > $PKG/usr/man/man1/sz.1.gz
+cd ../po
+mkdir -p $PKG/usr/share/locale/de/LC_MESSAGES
+cat de.gmo > $PKG/usr/share/locale/de/LC_MESSAGES/lrzsz.mo
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/minicom-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/lrzsz-990823
+  rm -rf $TMP/minicom-$VERSION.orig
+  rm -rf $PKG
+fi

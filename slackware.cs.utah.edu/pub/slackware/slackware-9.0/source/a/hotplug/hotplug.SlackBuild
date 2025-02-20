@@ -1,0 +1,61 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-hotplug
+
+VERSION=2002_08_26
+ARCH=noarch
+BUILD=5
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+rm -rf $PKG
+mkdir -p $PKG # place for the package to be built
+
+echo "+================+"
+echo "| hotplug-$VERSION |"
+echo "+================+"
+cd $TMP
+tar xzvf $CWD/hotplug-$VERSION.tar.gz
+cd hotplug-$VERSION
+chown -R root.root .
+find . -perm 775 | xargs chmod 755
+find . -perm 664 | xargs chmod 644
+# Expand the list of modules to not load automatically:
+zcat $CWD/hotplug.blacklist.diff.gz | patch -p1
+# Fix net.agent to use rc.inet1:
+zcat $CWD/hotplug.netagent.diff.gz | patch -p1
+# Use usbfs, not usbdevfs.
+zcat $CWD/hotplug.usbfs.diff.gz | patch -p1
+mkdir -p $PKG/sbin
+cat sbin/hotplug > $PKG/sbin/hotplug
+chmod 755 $PKG/sbin/hotplug
+chown -R root.bin $PKG/sbin
+cp -a etc $PKG
+mv $PKG/etc/rc.d/init.d/hotplug $PKG/etc/rc.d/rc.hotplug
+rmdir $PKG/etc/rc.d/init.d
+mkdir -p $PKG/usr/man/man8
+cat hotplug.8 | gzip -9c > $PKG/usr/man/man8/hotplug.8.gz
+mkdir -p $PKG/usr/doc/hotplug-$VERSION
+cp -a ChangeLog README $PKG/usr/doc/hotplug-$VERSION
+mkdir -p $PKG/var/log/setup
+cat $CWD/setup.hotplug > $PKG/var/log/setup/setup.hotplug
+chmod 755 $PKG/var/log/setup/setup.hotplug
+mv $PKG/etc/hotplug/blacklist $PKG/etc/hotplug/blacklist.new
+mkdir -p $PKG/install
+zcat $CWD/doinst.sh.gz > $PKG/install/doinst.sh
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/hotplug-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/hotplug-v$VERSION
+  rm -rf $PKG
+fi

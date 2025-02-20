@@ -1,0 +1,24 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=1.0c19
+cd /tmp
+tar xzvf $CWD/BitchX-$VERSION.tar.gz
+cd BitchX
+chown -R root.root .
+find . -perm 775 -exec chmod 755 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+zcat $CWD/BitchX-$VERSION.diff.gz | patch -p1
+zcat $CWD/BitchX.DOS.diff.gz | patch -p1
+#./configure --prefix=/usr --enable-sound --enable-cdrom --with-ssl --with-plugins --with-gtk
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr --enable-cdrom --with-ssl --with-plugins
+make
+make install
+bzip2 -d /usr/man/man1/BitchX.1.bz2
+gzip -9 /usr/man/man1/BitchX.1
+mkdir -p /usr/doc/BitchX-$VERSION
+cp -a README* COMPILE-PROBLEMS INST* doc/* \
+  BitchX.help BitchX.ircnames BitchX.quit BitchX.reasons \
+  /usr/doc/BitchX-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

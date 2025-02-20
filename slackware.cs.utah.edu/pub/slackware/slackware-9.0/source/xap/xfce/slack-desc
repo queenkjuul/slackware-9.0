@@ -1,0 +1,20 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+    |-----handy-ruler------------------------------------------------------|
+xfce: xfce (a fast and lightweight desktop environment for X)
+xfce:
+xfce: XFce is an easy-to-use and easy-to-configure GTK+ based environment
+xfce: for X11.  Some features include drag'n drop, pulldown menus, color
+xfce: icons, 3D widgets, a Window Manager (xfwm), a backdrop manager (xfbd),
+xfce: a file manager (xftree), a clock/calendar (xfclock) and a system sound
+xfce: manager (xfsound) and a user friendly interface for mouse
+xfce: configuration (xfmouse).  XFce has a homepage:  http://www.xfce.org/
+xfce:
+xfce: XFce was developed by Olivier Fourdan.
+xfce:
+

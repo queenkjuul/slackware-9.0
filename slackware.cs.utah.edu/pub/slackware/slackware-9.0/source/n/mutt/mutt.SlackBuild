@@ -1,0 +1,46 @@
+#!/bin/sh
+# Build Mutt for Slackware (by volkerdi@slackware.com)
+CWD=`pwd` 
+
+VERSION=1.4i
+ARCH=i386
+BUILD=3
+
+PKG=/tmp/package-mutt
+rm -rf $PKG
+mkdir $PKG
+cd /tmp
+tar xzvf $CWD/mutt-$VERSION.tar.gz
+cd mutt-1.4
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure \
+           --prefix=/usr \
+           --sysconfdir=/etc/mutt \
+           --with-mailpath=/var/spool/mail \
+           --enable-pop \
+           --enable-imap \
+           --with-ssl \
+           --enable-locales-fix \
+           --without-wc-funcs \
+           i386-slackware-linux
+make
+make install DESTDIR=$PKG
+
+( cd $PKG
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+chown -R root.bin $PKG/usr/bin
+gzip -9 $PKG/usr/man/man?/*
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+zcat $CWD/doinst.sh.gz > $PKG/install/doinst.sh
+
+# Don't mv the mutt docs directory, because mutt uses 'em.
+# Make a link instead.
+( cd $PKG/usr/doc ; rm -rf mutt-$VERSION ; ln -sf mutt mutt-$VERSION )
+
+mv $PKG/etc/mutt/Muttrc $PKG/etc/mutt/Muttrc.new
+
+cd $PKG
+makepkg -l y -c n ../mutt-$VERSION-$ARCH-$BUILD.tgz

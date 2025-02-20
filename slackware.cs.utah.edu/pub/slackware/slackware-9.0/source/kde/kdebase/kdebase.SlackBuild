@@ -1,0 +1,64 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+PKG=$TMP/package-kdebase
+
+VERSION=`cat $CWD/../KDE-VERSION`
+ARCH=i386
+BUILD=4
+
+rm -rf $PKG
+mkdir -p $PKG/opt/kde
+
+# Avoid a version number in .la files:
+if [ -d /usr/lib/qt ]; then
+  QTDIR=/usr/lib/qt
+fi
+cd $TMP
+echo "Building kdebase-$VERSION.tar.bz2..."
+tar xjvf $CWD/kdebase-$VERSION.tar.bz2
+cd kdebase-$VERSION
+chown -R root.root .
+# Specifying i386-slackware-linux requires the --program-{prefix,suffix}
+# args to avoid renaming the binaries i386-slackware-linux-*
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/opt/kde --with-shadow i386-slackware-linux \
+   --with-xinerama \
+  --disable-debug \
+  --program-prefix="" --program-suffix=""
+make
+make install DESTDIR=$PKG
+mkdir -p $PKG/usr/doc/kdebase-$VERSION
+cp -a \
+  AUTHORS COPYING INSTALL README kdebase.lsm \
+  $PKG/usr/doc/kdebase-$VERSION
+mkdir -p $PKG/etc/X11/xinit $PKG/etc/profile.d
+cat $CWD/xinit/xinitrc.kde > $PKG/etc/X11/xinit/xinitrc.kde
+cat $CWD/profile.d/kde.sh > $PKG/etc/profile.d/kde.sh
+cat $CWD/profile.d/kde.csh > $PKG/etc/profile.d/kde.csh
+chmod 755 $PKG/etc/X11/xinit/xinitrc.kde $PKG/etc/profile.d/kde.sh $PKG/etc/profile.d/kde.csh
+# Add more session types to kdm
+( cd $PKG/opt/kde/share/config/kdm
+  zcat $CWD/kdmrc.diff.gz | patch -p0 --verbose )
+# Change the konsole defaults to look like the real Linux console:
+cp -a $PKG/opt/kde/share/config/konsolerc $PKG/opt/kde/share/config/konsolerc.orig
+cat $CWD/config/konsolerc > $PKG/opt/kde/share/config/konsolerc
+# Make konsole a login shell by default:
+cat $CWD/config/konsole.desktop > $PKG/opt/kde/share/applnk/System/konsole.desktop
+# Use the Xsession in the XFree86 package with kdm:
+( cd $PKG/opt/kde/share/config/kdm
+  mv Xsession Xsession.orig
+  ln -sf /etc/X11/xdm/Xsession .
+)
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+( cd $PKG
+  find . -type f | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded )
+if [ -d $PKG/opt/kde/man ]; then
+  gzip -9 $PKG/opt/kde/man/man?/*
+fi
+
+cd $PKG
+makepkg -l y -c n ../kdebase-$VERSION-$ARCH-$BUILD.tgz

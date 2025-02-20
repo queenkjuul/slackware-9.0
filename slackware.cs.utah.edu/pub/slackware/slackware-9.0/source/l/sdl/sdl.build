@@ -1,0 +1,16 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=1.2.5
+cd /tmp
+tar xzvf $CWD/SDL-$VERSION.tar.gz
+cd SDL-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr
+make
+make install
+mkdir -p /usr/doc/SDL-$VERSION/html
+cp -a docs/index.html /usr/doc/SDL-$VERSION
+cp -a docs/html/*.html /usr/doc/SDL-$VERSION/html
+cp -a BUGS COPYING CREDITS INSTALL README* TODO WhatsNew /usr/doc/SDL-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

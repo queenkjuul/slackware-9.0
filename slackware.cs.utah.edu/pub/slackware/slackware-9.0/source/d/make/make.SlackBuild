@@ -1,0 +1,54 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-make
+
+VERSION=3.80
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+=============+"
+echo "| make-$VERSION |"
+echo "+=============+"
+cd $TMP
+tar xjvf $CWD/make-$VERSION.tar.bz2
+cd make-$VERSION
+chown -R root.root .
+CFLAGS=-O2 LDFLAGS=-s ./configure --prefix=/usr i386-slackware-linux
+make
+make install DESTDIR=$PKG
+strip $PKG/usr/bin/make
+chown -R root.bin $PKG/usr/bin
+gzip -9 $PKG/usr/man/man1/*
+rm $PKG/usr/info/dir
+gzip -9 $PKG/usr/info/*
+( cd $PKG/usr/bin
+  rm -f gmake
+  ln -sf make gmake )
+mkdir -p $PKG/usr/doc/make-$VERSION
+cp -a ABOUT-NLS AUTHORS COPYING INSTALL NEWS README README.customs \
+  $PKG/usr/doc/make-$VERSION/
+chmod 644 $PKG/usr/doc/make-$VERSION/*
+chown root.root $PKG/usr/doc/make-$VERSION/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/make-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/make-$VERSION
+  rm -rf $PKG
+fi

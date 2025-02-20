@@ -1,0 +1,110 @@
+#!/bin/sh
+# Copyright 2000 BSDi, Inc. Concord, CA, USA
+# Copyright 2001, 2002 Slackware Linux, Inc. Concord, CA, USA
+# All rights reserved.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+#  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+VERSION=3.5p1
+ARCH=i386
+BUILD=2
+
+CWD=`pwd`
+PKG1=/tmp/package-openssh
+NAME1=openssh-$VERSION-$ARCH-$BUILD
+
+# WARNING:  first we toss out existing ssh config files...
+#rm -f /etc/ssh/sshd_* /etc/ssh/ssh_*
+
+# Prepare the framework and extract the package:
+cd /tmp
+rm -rf $PKG1 openssh-$VERSION
+tar xzvf $CWD/openssh-$VERSION.tar.gz
+cd openssh-$VERSION
+chown -R root.root .
+
+# Compile package:
+CFLAGS="-O2 -march=i386 -mcpu=i686 -Wall" ./configure --prefix=/usr \
+            --sysconfdir=/etc/ssh \
+            --without-pam \
+            --with-md5-passwords \
+            --with-tcp-wrappers \
+            --with-default-path=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin \
+            --with-ipv4-default \
+            --with-privsep-path=/var/empty \
+            --with-privsep-user=sshd \
+            i386-slackware-linux
+make
+
+# Install the package:
+make install DESTDIR=$PKG1
+
+# Compress the installed manpages:
+find $PKG1/usr/man -type f -exec gzip -9 {} \;
+
+# Install directory used with PrivilegeSeparation option:
+mkdir -p $PKG1/var/empty
+chmod 755 $PKG1/var/empty
+
+# Install docs:
+mkdir -p $PKG1/usr/doc/openssh-$VERSION
+cp -a \
+  CREDITS ChangeLog INSTALL LICENCE OVERVIEW README README.privsep README.smartcard RFC.nroff TODO WARNING.RNG \
+  $PKG1/usr/doc/openssh-$VERSION
+chmod 644 $PKG1/usr/doc/openssh-$VERSION/*
+
+# Install also 'ssh-copy-id' and its manpage from contrib:
+( cd contrib
+  cp -a ssh-copy-id $PKG1/usr/bin/ssh-copy-id
+  chown root.bin $PKG1/usr/bin/ssh-copy-id
+  chmod 755 $PKG1/usr/bin/ssh-copy-id
+  cat ssh-copy-id.1 | gzip -9c > $PKG1/usr/man/man1/ssh-copy-id.1.gz
+)
+
+# Fix some ownerships per FSSTND:
+chown -R root.bin $PKG1/usr/bin $PKG1/usr/sbin
+
+( cd $PKG1
+
+  # Ditch the new host keys, since these have to be uniquely prepared on each machine:
+  rm -f etc/ssh/ssh_host_dsa_key
+  rm -f etc/ssh/ssh_host_dsa_key.pub
+  rm -f etc/ssh/ssh_host_rsa_key
+  rm -f etc/ssh/ssh_host_rsa_key.pub
+  rm -f etc/ssh/ssh_host_key
+  rm -f etc/ssh/ssh_host_key.pub
+
+  # Set up the config script installation:
+  mv etc/ssh/ssh_config etc/ssh/ssh_config.new
+  mv etc/ssh/sshd_config etc/ssh/sshd_config.new
+
+  # Add the init script:
+  mkdir -p etc/rc.d
+  cat $CWD/rc.sshd > etc/rc.d/rc.sshd
+  chmod 755 etc/rc.d/rc.sshd
+
+  # Copy runtime installation files:
+  mkdir -p install
+  zcat $CWD/doinst.sh.gz > install/doinst.sh
+  cat $CWD/slack-desc > install/slack-desc
+)
+
+# Create the package itself:
+cd $PKG1
+makepkg -l y -c n /tmp/$NAME1.tgz
+

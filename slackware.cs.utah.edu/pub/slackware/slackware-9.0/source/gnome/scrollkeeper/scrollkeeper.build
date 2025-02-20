@@ -1,0 +1,37 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=0.3.11
+cd /tmp
+tar xjvf $CWD/scrollkeeper-$VERSION.tar.bz2
+cd scrollkeeper-$VERSION
+chown -R root.root .
+zcat $CWD/scrollkeeper-tempfiles.diff.gz | patch -p1
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --localstatedir=/var \
+            i386-slackware-linux
+make
+make install
+cat $CWD/setup.06.scrollkeeper > /var/log/setup/setup.06.scrollkeeper
+chmod 755 /var/log/setup/setup.06.scrollkeeper
+# this doinst.sh, BTW, should be used in every package with scrollkeeper docs.
+mkdir /install
+cat $CWD/doinst.sh > /install/doinst.sh
+( cd /var/lib/scrollkeeper && rm -r * )
+mkdir /usr/doc/scrollkeeper-$VERSION
+cp -a ABOUT-NLS AUTHORS COPYING COPYING-DOCS ChangeLog INSTALL NEWS README \
+  /usr/doc/scrollkeeper-$VERSION
+chmod 644 /usr/doc/scrollkeeper-$VERSION/*
+chown root.root /usr/doc/scrollkeeper-$VERSION/*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+cat << EOF
+
+
+
+
+OK, now you need must fix the doinst.sh so that the links are made before scrollkeeper-update is run.
+
+
+
+EOF

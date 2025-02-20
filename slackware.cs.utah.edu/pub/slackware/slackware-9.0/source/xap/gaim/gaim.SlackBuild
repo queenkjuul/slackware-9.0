@@ -1,0 +1,36 @@
+#!/bin/sh
+CWD=`pwd`
+PKG=/tmp/package-gaim
+
+VERSION=0.60cvs
+ARCH=i386
+BUILD=2
+
+rm -rf $PKG
+mkdir -p $PKG
+cd /tmp
+tar xjvf $CWD/gaim-$VERSION.tar.bz2
+cd gaim-$VERSION
+chown -R root.root .
+if [ ! -r configure ]; then
+  sh autogen.sh
+fi
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr \
+            i386-slackware-linux
+# I hate to use -i, but there are bugs in the .po files...
+make -i
+make -i install DESTDIR=$PKG
+chown -R root.bin $PKG/usr/bin
+find $PKG | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded
+mkdir -p $PKG/usr/doc/gaim-$VERSION
+cp -a \
+  ABOUT-NLS AUTHORS COPYING ChangeLog HACKING NEWS README TODO doc/FAQ doc/CREDITS \
+  $PKG/usr/doc/gaim-$VERSION
+chmod 644 $PKG/usr/doc/gaim-$VERSION/*
+gzip -9 $PKG/usr/man/man1/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+makepkg -l y -c n ../gaim-$VERSION-$ARCH-$BUILD.tgz
+

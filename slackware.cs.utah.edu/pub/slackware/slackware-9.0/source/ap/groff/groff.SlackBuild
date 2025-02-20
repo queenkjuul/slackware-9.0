@@ -1,0 +1,110 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-groff
+
+VERSION=1.17.2
+ARCH=i386
+BUILD=3
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+mkdir -p $PKG/usr/X11R6/bin \
+         $PKG/usr/X11R6/man/man1 \
+         $PKG/usr/doc \
+         $PKG/etc/X11/app-defaults
+chown root.bin $PKG/usr/X11R6/bin
+
+echo "+============+"
+echo "| groff-$VERSION |"
+echo "+============+"
+cd $TMP
+tar xzvf $CWD/groff-$VERSION.tar.gz
+cd groff-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr
+alias pnmtopng=true
+make
+(
+  cd src/xditview
+  xmkmf
+  make
+)
+make install prefix=$PKG/usr
+(
+  cd src/xditview
+  cp -a gxditview $PKG/usr/X11R6/bin
+  cat gxditview.man | gzip -9c > $PKG/usr/X11R6/man/man1/gxditview.1.gz
+  cp -a GXditview.ad $PKG/etc/X11/app-defaults/GXditview
+)
+mkdir -p $PKG/usr/doc/groff-$VERSION
+cp -a \
+  BUG-REPORT COPYING FDL INSTALL INSTALL.gen MORE.STUFF NEWS PROBLEMS PROJECTS README TODO VERSION \
+  doc \
+  $PKG/usr/doc/groff-$VERSION
+mkdir -p $PKG/usr/doc/groff-$VERSION/xditview
+( cd src/xditview ; cp -a INSTALL README TODO $PKG/usr/doc/groff-$VERSION/xditview )
+chown -R root.root $PKG/usr/doc/groff-$VERSION
+
+# strip binaries & compress man pages
+strip $PKG/usr/bin/* $PKG/usr/X11R6/bin/*
+gzip -9 $PKG/usr/man/man?/*
+rm -f $PKG/usr/info/dir
+rm -rf $PKG/usr/share/doc
+gzip -9 $PKG/usr/info/*
+
+# fix permissions
+chown -R root.bin $PKG/usr/bin
+chown -R root.bin $PKG/usr/X11R6/bin
+chown root.root $PKG/etc/X11/app-defaults/*
+chmod 644 $PKG/etc/X11/app-defaults/*
+
+# Make links:
+( cd $PKG
+  ( cd usr/bin ; rm -rf geqn )
+  ( cd usr/bin ; ln -sf eqn geqn )
+  ( cd usr/bin ; rm -rf gindxbib )
+  ( cd usr/bin ; ln -sf indxbib gindxbib )
+  ( cd usr/bin ; rm -rf gpic )
+  ( cd usr/bin ; ln -sf pic gpic )
+  ( cd usr/bin ; rm -rf grefer )
+  ( cd usr/bin ; ln -sf refer grefer )
+  ( cd usr/bin ; rm -rf gsoelim )
+  ( cd usr/bin ; ln -sf soelim gsoelim )
+  ( cd usr/bin ; rm -rf zsoelim )
+  ( cd usr/bin ; ln -sf soelim zsoelim )
+  ( cd usr/bin ; rm -rf gtbl )
+  ( cd usr/bin ; ln -sf tbl gtbl )
+  ( cd usr/bin ; rm -rf gtroff )
+  ( cd usr/bin ; ln -sf troff gtroff )
+  ( cd usr/bin ; rm -rf glookbib )
+  ( cd usr/bin ; ln -sf lookbib glookbib )
+  ( cd usr/bin ; rm -rf gnroff )
+  ( cd usr/bin ; ln -sf nroff gnroff )
+  ( cd usr/bin ; rm -rf gneqn )
+  ( cd usr/bin ; ln -sf neqn gneqn )
+)
+
+# Install slack-desc:
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/groff-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/groff-$VERSION
+  rm -rf $PKG
+fi

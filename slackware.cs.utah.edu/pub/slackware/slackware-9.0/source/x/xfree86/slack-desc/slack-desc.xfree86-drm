@@ -1,0 +1,23 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+           |-----handy-ruler------------------------------------------------------|
+xfree86-drm: xfree86-drm (XFree86 DRM kernel modules)
+xfree86-drm:
+xfree86-drm: The Direct Rendering Manager (drm) is a device-independent kernel
+xfree86-drm: level device driver that provides support for the XFree86 Direct
+xfree86-drm: Rendering Infrastructure (DRI).
+xfree86-drm:
+xfree86-drm: These modules are compiled for XFree86 4.2.0 and linux-2.4.17.
+xfree86-drm:
+xfree86-drm:
+xfree86-drm:
+xfree86-drm:
+
+NOTES:  I had to use the drmP.h from the kernel tree, as the generic cmpxchg
+kernel function doesn't seem to be there yet.  -P
+

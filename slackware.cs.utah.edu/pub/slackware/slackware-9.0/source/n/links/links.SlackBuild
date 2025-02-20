@@ -1,0 +1,58 @@
+#!/bin/sh
+# Build "links" for Slackware by <volkerdi@slackware.com>
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-links
+
+# Package version number:
+VERSION=0.98
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+==============+"
+echo "| links-$VERSION |"
+echo "+==============+"
+cd $TMP
+tar xzvf $CWD/links-$VERSION.tar.gz
+cd links-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            i386-slackware-linux
+make
+strip links
+mkdir -p $PKG/usr/bin
+cat links > $PKG/usr/bin/links
+chmod 755 $PKG/usr/bin/links
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/man/man1
+cat links.1 | gzip -9c > $PKG/usr/man/man1/links.1.gz
+mkdir -p $PKG/usr/doc/links-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README SITES TODO \
+  $PKG/usr/doc/links-$VERSION
+chmod 644 $PKG/usr/doc/links-$VERSION/*
+cp -a mailcap.pl $PKG/usr/doc/links-$VERSION
+chmod 755 $PKG/usr/doc/links-$VERSION/mailcap.pl
+chown -R root.root $PKG/usr/doc/links-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/links-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/links-$VERSION
+  rm -rf $PKG
+fi

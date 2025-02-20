@@ -1,0 +1,58 @@
+#!/bin/sh
+# Create the Slackware gnuplot package
+
+CWD=`pwd`
+TMP=/tmp
+PKG=$TMP/package-gnuplot
+
+rm -rf $PKG
+mkdir -p $PKG
+
+VERSION=3.7.3
+ARCH=i386
+BUILD=1
+
+# Start with gd, which we need to link against:
+cd $TMP
+tar xzvf $CWD/gd1.3.tar.gz
+cd gd1.3
+chown -R root.root .
+make
+mkdir lib
+cp libgd.a lib
+mkdir include
+cp *.h include
+
+# Now we build gnuplot:
+cd /tmp
+tar xzvf $CWD/gnuplot-$VERSION.tar.gz
+cd gnuplot-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" TERMLIBS="/tmp/gd1.3/libgd.a -lpng -lz /tmp/gd1.3/libgd.a" ./configure --prefix=/usr --with-png --with-gd=/tmp/gd1.3 --datadir=/usr/share/gnuplot --with-readline
+make
+strip gnuplot gnuplot_x11
+mkdir -p $PKG/usr/bin
+chgrp bin $PKG/usr/bin
+cat gnuplot > $PKG/usr/bin/gnuplot
+cat gnuplot_x11 > $PKG/usr/bin/gnuplot_x11
+chmod 755 $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/man/man1
+cat docs/gnuplot.1 | gzip -9c > $PKG/usr/man/man1/gnuplot.1.gz
+mkdir -p $PKG/usr/share/gnuplot
+cat docs/gnuplot.gih > $PKG/usr/share/gnuplot/gnuplot.gih
+mkdir -p $PKG/usr/doc/gnuplot-$VERSION
+cp -a 0* ChangeLog CodeStyle Copyright INSTALL.gnu NEWS PGPKEYS TODO \
+  $PKG/usr/doc/gnuplot-$VERSION
+cp -a demo $PKG/usr/doc/gnuplot-$VERSION
+chmod -R 644 $PKG/usr/doc/gnuplot-$VERSION/*
+chmod 755 $PKG/usr/doc/gnuplot-$VERSION/demo
+( cd docs ; make gnuplot.html )
+cat docs/gnuplot.html > $PKG/usr/doc/gnuplot-$VERSION/gnuplot.html
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Make the package:
+cd $PKG
+makepkg -l y -c n $TMP/gnuplot-$VERSION-$ARCH-$BUILD.tgz
+

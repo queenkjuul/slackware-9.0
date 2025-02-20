@@ -1,0 +1,36 @@
+CWD=`pwd`
+PKG=/tmp/package-gnet
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=1.1.8
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xzvf $CWD/gnet-$VERSION.tar.gz
+cd gnet-$VERSION
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            i386-slackware-linux
+make
+make install DESTDIR=$PKG
+chown -R root.bin $PKG/usr/bin
+( cd $PKG
+  find . | xargs file | grep "ELF " | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+rm $PKG/usr/info/dir
+gzip -9 $PKG/usr/info/*
+gzip -9 $PKG/usr/man/man?/*
+mkdir -p $PKG/usr/doc/gnet-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  $PKG/usr/doc/gnet-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-gnet
+makepkg -l y -c n ../gnet-$VERSION-$ARCH-$BUILD.tgz

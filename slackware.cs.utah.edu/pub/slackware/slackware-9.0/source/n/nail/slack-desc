@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+    |-----handy-ruler------------------------------------------------------|
+nail: nail (a simple mail client)
+nail:
+nail: Nail is a mail user agent derived from Berkeley Mail 8.1 and is
+nail: intended to provide the functionality of the POSIX.2 mailx command
+nail: with additional support for MIME messages, SSL/TLS, POP3 and SMTP.
+nail:
+nail: The maintainer and primary developer of nail is Gunnar Ritter.
+nail:
+nail:
+nail:
+nail:

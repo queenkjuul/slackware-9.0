@@ -1,0 +1,29 @@
+CWD=`pwd`
+PKG=/tmp/package-libart_lgpl
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=2.3.11
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xjvf $CWD/libart_lgpl-$VERSION.tar.bz2
+cd libart_lgpl-$VERSION
+chown -R root.root .
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr
+make
+make install DESTDIR=$PKG
+chown -R root.bin $PKG/usr/bin
+strip --strip-unneeded $PKG/usr/lib/libart_lgpl*so
+mkdir -p $PKG/usr/doc/libart_lgpl-$VERSION
+cp -a \
+  AUTHORS COPYING ChangeLog NEWS README \
+  $PKG/usr/doc/libart_lgpl-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-libart_lgpl
+makepkg -l y -c n ../libart_lgpl-$VERSION-$ARCH-$BUILD.tgz

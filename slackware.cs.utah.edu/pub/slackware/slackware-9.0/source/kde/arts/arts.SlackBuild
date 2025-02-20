@@ -1,0 +1,61 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+PKG=$TMP/package-arts
+
+VERSION=1.1
+ARCH=i386
+BUILD=2
+
+rm -rf $PKG
+mkdir -p $PKG/opt/kde
+
+# Avoid a version number in .la files:
+if [ -d /usr/lib/qt ]; then
+  QTDIR=/usr/lib/qt
+fi
+cd $TMP
+echo "Building arts-$VERSION.tar.bz2..."
+tar xjvf $CWD/arts-$VERSION.tar.bz2
+cd arts-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/opt/kde i386-slackware-linux \
+   --with-xinerama \
+   --disable-debug \
+   --program-prefix="" --program-suffix=""
+make
+make install DESTDIR=$PKG
+mkdir -p $PKG/usr/doc/arts-$VERSION
+cp -a \
+  COPYING COPYING.LIB INSTALL doc/NEWS doc/README doc/TODO \
+  $PKG/usr/doc/arts-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+# It's possible that arts might be installed without KDE (or kdelibs), since
+# other audio related libraries and apps outside of KDE depend on it.  So,
+# we shouldn't rely on kdelibs to make sure that /opt/kde/lib is added to
+# the ld.so.conf.  Do it here, too.
+# Also, I'd rather see arts in /usr at this point, but KDE doesn't seem to
+# pick it up correctly there, and I don't want all of KDE moved into /usr,
+# so it'll have to stay like this for now.
+cat << EOF > $PKG/install/doinst.sh
+#!/bin/sh
+# Add KDE library directory to /etc/ld.so.conf:
+if fgrep /opt/kde/lib etc/ld.so.conf 1> /dev/null 2> /dev/null ; then
+  true
+else
+  echo "/opt/kde/lib" >> etc/ld.so.conf
+fi
+EOF
+
+( cd $PKG
+  find . -type f | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded )
+if [ -d $PKG/opt/kde/man ]; then
+  gzip -9 $PKG/opt/kde/man/man?/*
+fi
+
+cd $PKG
+makepkg -l y -c n ../arts-$VERSION-$ARCH-$BUILD.tgz
+

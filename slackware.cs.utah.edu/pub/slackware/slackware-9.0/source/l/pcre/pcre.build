@@ -1,0 +1,18 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=3.9
+cd /tmp
+tar xjvf $CWD/pcre-$VERSION.tar.bz2
+cd pcre-$VERSION
+./configure --prefix=/usr \
+            i386-slackware-linux
+make CFLAGS=-O2
+make CFLAGS=-O2 install
+mkdir -p /usr/doc/pcre-$VERSION
+cp -a AUTHORS COPYING ChangeLog INSTALL LICENCE NEWS NON-UNIX-USE README /usr/doc/pcre-$VERSION
+cd doc
+cp -a Tech.Notes pcre.html pcregrep.html pcreposix.html /usr/doc/pcre-$VERSION
+chown -R root.root /usr/doc/pcre-$VERSION
+chmod 755 /usr/lib/libpcre.so.* /usr/lib/libpcreposix.so.*
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

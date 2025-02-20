@@ -1,0 +1,79 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-infozip
+
+VERSION=5.50
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_infozip.tar.gz
+
+echo "+=========+"
+echo "| zip-2.3 |"
+echo "+=========+"
+cd $TMP
+tar xzvf $CWD/zip23.tar.gz
+cd zip-2.3
+mkdir -p $PKG/usr/doc/zip-2.3
+cp -a BUGS CHANGES INSTALL MANUAL README TODO WHATSNEW WHERE \
+      $PKG/usr/doc/zip-2.3
+chmod 644 $PKG/usr/doc/zip-2.3/*
+chown root.root $PKG/usr/doc/zip-2.3/*
+make -f unix/Makefile generic_gcc
+strip zip zipnote zipsplit zipcloak
+cat zip > $PKG/usr/bin/zip
+cat zipnote > $PKG/usr/bin/zipnote
+cat zipsplit > $PKG/usr/bin/zipsplit
+cat zipcloak > $PKG/usr/bin/zipcloak
+for page in man/zip.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/`basename $page`.gz
+done
+
+echo "+==========+"
+echo "| unzip550 |"
+echo "+==========+"
+cd $TMP
+tar xzvf $CWD/unzip550.tar.gz
+cd unzip-5.50
+mkdir -p $PKG/usr/doc/unzip-5.50
+cp -a BUGS COPYING Contents History.550 INSTALL README ToDo WHERE \
+      $PKG/usr/doc/unzip-5.50
+chmod 644 $PKG/usr/doc/unzip-5.50/*
+chown root.root $PKG/usr/doc/unzip-5.50/*
+make -f unix/Makefile linux
+strip unzip unzipsfx funzip
+cat unzip > $PKG/usr/bin/unzip
+cat unzipsfx > $PKG/usr/bin/unzipsfx
+cat funzip > $PKG/usr/bin/funzip
+cat unix/zipgrep > $PKG/usr/bin/zipgrep
+cd man
+for page in funzip.1 unzip.1 unzipsfx.1 zipgrep.1 zipinfo.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/$page.gz
+done
+cd ..
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+echo "n" | makepkg $TMP/infozip-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/zip-2.3
+  rm -rf $TMP/unzip-5.50
+  rm -rf $PKG
+fi

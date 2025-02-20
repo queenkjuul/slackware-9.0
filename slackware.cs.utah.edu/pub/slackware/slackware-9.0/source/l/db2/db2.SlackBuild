@@ -1,0 +1,73 @@
+#!/bin/sh
+# Set initial variables:
+VERSION=2.4.14
+ARCH=i386
+BUILD=1
+
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-db2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+=================+"
+echo "| db2-glibc-2.1.3 |"
+echo "+=================+"
+cd $TMP
+tar xzvf $CWD/db2-glibc-2.1.3.tar.gz
+cd db2
+zcat $CWD/db2-glibc-2.1.3.patch.gz | patch -p1 -E --suffix=.orig --backup
+zcat $CWD/db2-2.4.14-db2.patch.gz | patch -p1 -E --suffix=.orig --backup
+zcat $CWD/db2.cflags.diff.gz | patch -p1 -E --suffix=.orig --backup
+make
+strip db_archive db_checkpoint db_deadlock db_dump db_load db_printlog db_recover db_stat
+strip -g libdb2.so.3
+mkdir -p $PKG/lib
+cat libdb2.so.3 > $PKG/lib/libdb2.so.3
+chmod 755 $PKG/lib/libdb2.so.3
+mkdir -p $PKG/usr/lib
+cat libdb2.a > $PKG/usr/lib/libdb2.a
+mkdir -p $PKG/usr/bin
+cat db_archive > $PKG/usr/bin/db2_archive
+cat db_checkpoint > $PKG/usr/bin/db2_checkpoint
+cat db_deadlock > $PKG/usr/bin/db2_deadlock
+cat db_dump > $PKG/usr/bin/db2_dump
+cat db_load > $PKG/usr/bin/db2_load
+cat db_printlog > $PKG/usr/bin/db2_printlog
+cat db_recover > $PKG/usr/bin/db2_recover
+cat db_stat > $PKG/usr/bin/db2_stat
+chmod 755 $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/include/db2
+cat db.h > $PKG/usr/include/db2/db.h
+cat db_185.h > $PKG/usr/include/db2/db_185.h
+mkdir -p $PKG/usr/doc/db2-2.4.14
+cp -a LICENSE README $PKG/usr/doc/db2-2.4.14
+chown root.root $PKG/usr/doc/db2-2.4.14/*
+chmod 644 $PKG/usr/doc/db2-2.4.14/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+# Make symlinks:
+( cd $PKG
+( cd lib ; rm -rf libdb.so.3 )
+( cd lib ; ln -sf libdb2.so.3 libdb.so.3 )
+( cd usr/lib ; rm -rf libdb2.so )
+( cd usr/lib ; ln -sf ../../lib/libdb2.so.3 libdb2.so )
+)
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n ../db2-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/db2
+  rm -rf $PKG
+fi

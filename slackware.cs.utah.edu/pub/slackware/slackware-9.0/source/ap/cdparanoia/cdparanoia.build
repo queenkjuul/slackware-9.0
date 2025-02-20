@@ -1,0 +1,14 @@
+#!/bin/sh
+CWD=`pwd`
+cd /tmp
+tar xzvf $CWD/cdparanoia-III-alpha9.8.src.tar.gz
+cd cdparanoia-III-alpha9.8
+./configure --prefix=/usr i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/cdparanoia-III-alpha9.8
+cp -a FAQ.txt GPL README cdparanoia.1.jp /usr/doc/cdparanoia-III-alpha9.8
+chown -R root.root /usr/doc/cdparanoia-III-alpha9.8
+chmod 755 /usr/lib/libcdda*.so
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

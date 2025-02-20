@@ -1,0 +1,29 @@
+CWD=`pwd`
+
+VERSION=1.116.3
+
+cd /tmp
+tar xjvf $CWD/libgnomeprint-$VERSION.tar.bz2
+cd libgnomeprint-$VERSION
+chown -R root.root .
+# You pretty much have to use /usr/etc below unless you
+# want a mostly unused and confusing /etc/gnome/ dir to
+# get created (that's why /usr/etc used to be standard
+# for gnome around here)
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --disable-static \
+            --sysconfdir=/usr/etc \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/libgnomeprint-$VERSION
+cp -a \
+  AUTHORS BUGS COPYIN* HACKING MAINTAINERS NEWS README \
+  /usr/doc/libgnomeprint-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+

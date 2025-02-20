@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+      |-----handy-ruler------------------------------------------------------|
+nss_db: nss_db (NSS library to use Berkeley databases rather than flatfiles)
+nss_db:
+nss_db: Nss_db is a set of C library extensions which allow Berkeley Databases
+nss_db: to be used as a primary source of aliases, ethers, groups, hosts,
+nss_db: networks, protocol, users, RPCs, services, and shadow passwords.
+nss_db:
+nss_db: To use this, generate the databases from the Makefile in /var/db,
+nss_db: and then use "db" before "files" for entries in /etc/nsswitch.conf.
+nss_db:
+nss_db:
+nss_db:

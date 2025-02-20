@@ -1,0 +1,41 @@
+CWD=`pwd`
+PKG=/tmp/package-gnome-audio
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=1.4.0
+ARCH=noarch
+BUILD=1
+
+cd /tmp
+tar xjvf $CWD/gnome-audio-$VERSION.tar.bz2
+cd gnome-audio-$VERSION
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            i386-slackware-linux
+make
+# This might be the most broken source package in GNOME  :-)
+# make install DESTDIR=$PKG
+mkdir -p $PKG/usr/share/sounds
+( cd sounds ; cp -a *.wav gtk-events panel $PKG/usr/share/sounds )
+find $PKG/usr/share/sounds -type f | xargs chmod 644
+find $PKG/usr/share/sounds -type d | xargs chmod 755
+chown -R root.bin $PKG/usr/bin
+( cd $PKG
+  find . | xargs file | grep "ELF " | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+rm $PKG/usr/info/dir
+gzip -9 $PKG/usr/info/*
+gzip -9 $PKG/usr/man/man?/*
+mkdir -p $PKG/usr/doc/gnome-audio-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  $PKG/usr/doc/gnome-audio-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-gnome-audio
+makepkg -l y -c n ../gnome-audio-$VERSION-$ARCH-$BUILD.tgz

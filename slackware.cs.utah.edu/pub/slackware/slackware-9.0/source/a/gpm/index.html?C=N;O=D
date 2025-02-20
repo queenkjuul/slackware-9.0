@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a/gpm</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a/gpm</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/a/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-05-29 01:05  </td><td align="right">965 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gpm_1.19.6.orig.tar.gz">gpm_1.19.6.orig.tar.gz</a></td><td align="right">2001-11-21 14:27  </td><td align="right">296K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gpm_1.19.6-10.diff.gz">gpm_1.19.6-10.diff.gz</a></td><td align="right">2002-02-22 02:02  </td><td align="right"> 42K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gpm.SlackBuild">gpm.SlackBuild</a></td><td align="right">2003-03-08 07:16  </td><td align="right">3.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="gpm-1.19.6.time.diff.gz">gpm-1.19.6.time.diff.gz</a></td><td align="right">2002-03-06 22:06  </td><td align="right">667 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="gpm-1.19.6.tar.bz2">gpm-1.19.6.tar.bz2</a></td><td align="right">2001-11-19 21:21  </td><td align="right">295K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="_gpm.tar.gz">_gpm.tar.gz</a></td><td align="right">2003-03-08 08:14  </td><td align="right">2.9K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

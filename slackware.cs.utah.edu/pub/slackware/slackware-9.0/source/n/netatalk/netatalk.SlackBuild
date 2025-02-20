@@ -1,0 +1,64 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-netatalk
+
+VERSION=1.6.1
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+( cd $PKG
+  explodepkg $CWD/_netatalk.tar.gz )
+
+cd $TMP
+tar xjvf $CWD/netatalk-$VERSION.tar.bz2
+cd netatalk-$VERSION
+find . -type d -exec chmod 755 {} \;
+zcat $CWD/netatalk.afpdconf.diff.gz | patch -p1
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure \
+  --prefix=/usr \
+  --sysconfdir=/etc \
+  --with-mangling \
+  --with-shadow
+make
+make install DESTDIR=$PKG
+# This is normally installed setuid root, but I'm not 100% sure I trust it yet.
+# I see it uses strcpy() in a few places...
+chmod 755 $PKG/usr/bin/afppasswd
+mkdir -p $PKG/install
+zcat $CWD/doinst.sh.gz > $PKG/install/doinst.sh
+cat $CWD/slack-desc > $PKG/install/slack-desc
+( cd $PKG/etc/netatalk
+  for file in AppleVolumes.default AppleVolumes.system afpd.conf afppasswd atalkd.conf netatalk.conf papd.conf ; do
+    mv $file ${file}.new
+    echo "config etc/netatalk/${file}.new" >> $PKG/install/doinst.sh
+  done
+)
+echo "rm -f etc/netatalk/afppasswd.new" >> $PKG/install/doinst.sh
+( cd $PKG
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded )
+chown -R root.bin $PKG/usr/bin $PKG/usr/sbin
+gzip -9 $PKG/usr/man/man?/*
+mkdir -p $PKG/usr/doc/netatalk-$VERSION
+cp -a \
+  CONTRIBUTORS COPYING COPYRIGHT ChangeLog NEWS README TODO VERSION doc \
+  $PKG/usr/doc/netatalk-$VERSION
+rm -f $PKG/usr/doc/netatalk-$VERSION/doc/Makefile*
+## This helpful documentation reflects a lot of testing.  :-)
+#cat $CWD/PASSWORDS > $PKG/etc/netatalk/PASSWORDS
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/netatalk-$VERSION-$ARCH-$BUILD.tgz
+

@@ -1,0 +1,57 @@
+#!/bin/sh
+CWD=`pwd`
+
+cat << EOF
+By sure the machine has both esound and arts to build all plugins...
+EOF
+sleep 5
+
+LIBAO=0.8.3
+OGGVER=1.0
+
+cd /tmp
+tar xzvf $CWD/libao-$LIBAO.tar.gz
+cd libao-$LIBAO
+./configure --prefix=/usr i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/libao-$LIBAO
+cp -a AUTHORS CHANGES COPYING README TODO doc/API doc/DRIVERS doc/USAGE doc/WANTED \
+  /usr/doc/libao-$LIBAO
+chown -R root.root /usr/doc/libao-$LIBAO
+
+cd /tmp
+tar xzvf $CWD/libogg-$OGGVER.tar.gz
+cd libogg-$OGGVER
+./configure --prefix=/usr i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/libogg-$OGGVER
+cp -a AUTHORS CHANGES COPYING README doc \
+  /usr/doc/libogg-$OGGVER
+chown -R root.root /usr/doc/libogg-$OGGVER
+
+cd /tmp
+tar xzvf $CWD/libvorbis-$OGGVER.tar.gz
+cd libvorbis-$OGGVER
+./configure --prefix=/usr i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/libvorbis-$OGGVER
+cp -a AUTHORS COPYING README doc \
+  /usr/doc/libvorbis-$OGGVER	
+chown -R root.root /usr/doc/libvorbis-$OGGVER
+
+cd /tmp
+tar xzvf $CWD/vorbis-tools-$OGGVER.tar.gz
+cd vorbis-tools-$OGGVER
+./configure --prefix=/usr i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/vorbis-tools-$OGGVER
+cp -a AUTHORS COPYING README \
+  /usr/doc/vorbis-tools-$OGGVER
+chown -R root.root /usr/doc/vorbis-tools-$OGGVER
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

@@ -1,0 +1,68 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=/tmp/package-ifhp
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+rm -rf $PKG
+mkdir -p $PKG
+
+VERSION=3.5.10
+ARCH=i386
+BUILD=1
+
+echo "+==================+"
+echo "| ifhp-$VERSION |"
+echo "+==================+"
+cd $TMP
+tar xzvf $CWD/ifhp-$VERSION.tar.gz
+cd ifhp-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr --enable-nls --sysconfdir=/etc
+make
+mkdir -p $PKG/etc
+cat ifhp.conf > $PKG/etc/ifhp.conf.new
+cd src
+strip ifhp textps
+mkdir -p $PKG/usr/libexec/filters
+cat ifhp > $PKG/usr/libexec/filters/ifhp
+cat textps > $PKG/usr/libexec/filters/textps
+cat wrapper > $PKG/usr/libexec/filters/wrapper
+chmod 755 $PKG/usr/libexec/filters/*
+cd ../man
+mkdir -p $PKG/usr/man/man8
+for file in *.8 ; do
+  cat $file | gzip -9c > $PKG/usr/man/man8/$file.gz 
+done
+cd ../po
+# This doesn't seem to work yet
+#for file in *.gmo ; do
+#  mkdir -p $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES
+#  cat $file > $PKG/usr/share/locale/`basename $file .gmo`/LC_MESSAGES/ifhp.mo
+#done
+cd ..
+mkdir -p $PKG/usr/doc/ifhp-$VERSION
+cp -a BUGS CHANGES INSTALL LICENSE MIRRORS README README.GhostScriptSecurityProblem \
+  README.UTILITYPROGRAMS VERSION $PKG/usr/doc/ifhp-$VERSION
+cp -a HOWTO/IFHP-HOWTO.html HOWTO/*.jpg $PKG/usr/doc/ifhp-$VERSION
+chown -R root.root $PKG/usr/doc/ifhp-$VERSION
+find $PKG/usr/doc/ifhp-$VERSION -type f -exec chmod 644 {} \;
+mkdir -p $PKG/install
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+echo "n" | makepkg ../ifhp-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/ifhp-$VERSION
+  rm -rf $PKG
+fi
+

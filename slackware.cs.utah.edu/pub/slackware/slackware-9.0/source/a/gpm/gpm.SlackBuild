@@ -1,0 +1,101 @@
+#!/bin/sh
+# by: volkerdi@slackware.com
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-gpm
+
+VERSION=1.19.6
+ARCH=i386
+BUILD=5
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_gpm.tar.gz
+
+echo "+============+"
+echo "| gpm-$VERSION |"
+echo "+============+"
+cd $TMP
+tar xjvf $CWD/gpm-$VERSION.tar.bz2
+cd gpm-$VERSION
+zcat $CWD/gpm_$VERSION-10.diff.gz | patch -p1 --backup --suffix=.orig -E
+# This adds #include <time.h> in addition to #include <sys/time.h> per
+# recent glibc requirements.
+zcat $CWD/gpm-1.19.6.time.diff.gz | patch -p1 --backup --suffix=.orig -E
+find . -perm 600 -exec chmod 644 {} \;
+find . -perm 700 -exec chmod 755 {} \;
+# Nico says the proper way to compile for gpm/ncurses support is:
+#   compile ncurses without gpm
+#   compile gpm --with-curses
+#   compile ncurses --with-gpm
+# BTW, I did try gpm-1.20.0, but it produces spurious output on stderr
+# totally breaking dialog.  Even after patching that, I noticed more
+# quirks using it for a couple of days than I've seen with 1.19.6 with
+# all of the patches we apply.  I think it's best to wait until these
+# issues are ironed out before upgrading gpm.
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr \
+            --with-curses \
+            --sysconfdir=/etc \
+            i386-slackware-linux
+# There are bugs in the docs, so -i work around them :)
+make -i
+( cd src
+  strip disable-paste gpm mev gpm-root libgpm.so.1.18.0
+  cat disable-paste > $PKG/usr/bin/disable-paste
+  cat gpm > $PKG/usr/sbin/gpm
+  cat mev > $PKG/usr/bin/mev
+  cat gpm-root > $PKG/usr/bin/gpm-root
+  cat headers/gpm.h > $PKG/usr/include/gpm.h
+  cat libgpm.a > $PKG/usr/lib/libgpm.a
+  cat libgpm.so.1.18.0 > $PKG/lib/libgpm.so.1.18.0
+)
+( cd conf
+  cat gpm-root.conf > $PKG/etc/gpm-root.conf
+  cat gpm-syn.conf > $PKG/etc/gpm-syn.conf
+  cat gpm-twiddler.conf > $PKG/etc/gpm-twiddler.conf
+)
+( cd contrib/emacs
+  cat t-mouse.el > $PKG/usr/share/emacs/site-lisp/t-mouse.el
+)
+# This is no longer there, but no big deal.  Emacs'll use the .el.
+#cat t-mouse.elc > $PKG/usr/share/emacs/site-lisp/t-mouse.elc
+mkdir -p $PKG/usr/doc/gpm-$VERSION
+cp -a \
+  BUGS COPYING ChangeLog Changes MANIFEST README TODO \
+  $PKG/usr/doc/gpm-$VERSION
+( cd doc
+  for page in *.1 *.7 *.8 ; do
+    CHAPTER=`echo $page | cut -f 2 -d .`
+    mkdir -p $PKG/usr/man/man$CHAPTER
+    cat $page | gzip -9c > $PKG/usr/man/man${CHAPTER}/$page.gz
+  done
+  mkdir -p $PKG/usr/info
+  cat gpm.info | gzip -9c > $PKG/usr/info/gpm.info.gz
+  cp -a \
+    Announce FAQ README* gpmdoc.txt \
+    $PKG/usr/doc/gpm-$VERSION
+)
+chown -R root.root $PKG/usr/doc/gpm-$VERSION
+chmod 644 $PKG/usr/doc/gpm-$VERSION/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+echo "n" | makepkg $TMP/gpm-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/gpm-$VERSION
+  rm -rf $PKG
+fi

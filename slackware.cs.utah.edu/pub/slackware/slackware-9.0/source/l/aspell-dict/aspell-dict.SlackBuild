@@ -1,0 +1,25 @@
+CWD=`pwd`
+PKG=/tmp/package-aspell-dict
+BUILD=1
+
+for file in aspell-??-*bz2 ; do
+  NAME=`echo $file | cut -f 1-2 -d -`-`echo $file | cut -f 3- -d - | cut -f 1-2 -d . | tr '[\-]' '[_]'`
+  rm -rf $PKG
+  mkdir -p $PKG
+  cd /tmp
+  tar xjf $CWD/$file
+  cd `basename $file .tar.bz2`
+  chown -R root.root .
+  ./configure
+  make
+  make install DESTDIR=$PKG
+  mkdir -p $PKG/usr/doc/${NAME}
+  cp -a \
+    README Copyright \
+    $PKG/usr/doc/${NAME}
+  chmod 644 $PKG/usr/doc/${NAME}/*
+  mkdir $PKG/install
+  cat $CWD/slack-desc/slack-desc.`echo $file | cut -f 1-2 -d -` > $PKG/install/slack-desc
+  cd $PKG
+  makepkg -l y -c n /tmp/${NAME}-noarch-$BUILD.tgz
+done

@@ -1,0 +1,51 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-strace
+
+VERSION=4.4
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_strace.tar.gz
+
+echo "+============+"
+echo "| strace-$VERSION |"
+echo "+============+"
+cd $TMP
+tar xzvf $CWD/strace_$VERSION-1.tar.gz
+cd strace-$VERSION
+mkdir -p $PKG/usr/doc/strace-$VERSION
+cp -a COPYRIGHT CREDITS ChangeLog INSTALL NEWS PORTING README README-CVS README-freebsd README-linux README-sunos4 README-svr4 TODO $PKG/usr/doc/strace-$VERSION
+chown root.root $PKG/usr/doc/strace-$VERSION/*
+chmod 644 $PKG/usr/doc/strace-$VERSION/*
+./configure --prefix=/usr
+make
+strip strace
+cat strace > $PKG/usr/bin/strace
+cat strace-graph > $PKG/usr/bin/strace-graph
+cat strace.1 | gzip -9c > $PKG/usr/man/man1/strace.1.gz
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/strace-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/strace-$VERSION
+  rm -rf $PKG
+fi

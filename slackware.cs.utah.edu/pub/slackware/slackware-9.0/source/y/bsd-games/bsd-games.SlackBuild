@@ -1,0 +1,70 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=2.13
+ARCH=i386
+BUILD=6
+
+TMP=/tmp
+PKG=$TMP/package-bsdgames
+
+cd /tmp
+tar xzvf $CWD/bsd-games-$VERSION.tar.gz
+cd bsd-games-$VERSION
+zcat $CWD/bsd-games.config.params.diff.gz | patch -p1 --backup --suffix=.orig
+./configure
+zcat $CWD/bsd-games.ospeed.diff.gz | patch -p1 --backup --suffix=.orig
+zcat $CWD/bsd-games.fortunepath.diff.gz | patch -p1 --backup --suffix=.orig
+zcat $CWD/bsd-games.fortlen.diff.gz | patch -p1 --backup --suffix=.orig
+zcat $CWD/bsd-games.strfile.8.diff.gz | patch -p1 --backup --suffix=.orig
+cp fortune/datfiles/unamerican-o.real fortune/datfiles/unamerican-o.fake
+cp fortune/datfiles/unamerican-o.real unamerican-o
+( cd fortune/datfiles ; strfile unamerican-o unamerican-o.dat )
+make
+make install
+mkdir -p $PKG/usr/doc/bsd-games-$VERSION
+cp -a AUTHORS BUGS INSTALL NEWS PACKAGING README SECURITY THANKS \
+  TODO YEAR2000 $PKG/usr/doc/bsd-games-$VERSION
+cp -a fortune/README $PKG/usr/doc/bsd-games-$VERSION/README.fortune
+cp -a hunt/README $PKG/usr/doc/bsd-games-$VERSION/README.hunt
+cp -a hunt/README.linux $PKG/usr/doc/bsd-games-$VERSION/README.linux.hunt
+cp -a phantasia/README $PKG/usr/doc/bsd-games-$VERSION/README.phantasia
+cp -a trek/README.linux $PKG/usr/doc/bsd-games-$VERSION/README.linux.trek
+chown root.root $PKG/usr/doc/bsd-games-$VERSION/*
+chmod 644 $PKG/usr/doc/bsd-games-$VERSION/*
+cd $PKG
+# Add profile scripts:
+mkdir -p etc/profile.d
+cat $CWD/bsd-games-login-fortune.sh > etc/profile.d/bsd-games-login-fortune.sh
+cat $CWD/bsd-games-login-fortune.csh > etc/profile.d/bsd-games-login-fortune.csh
+chmod 755 etc/profile.d/bsd-games-login-fortune.*
+# Add some cool Linux related quotes:
+tar xzvf $CWD/fortunes-linuxcookie.tar.gz
+# I'm not in favor of censorship of any kind.  If you are, you'll
+# have to be the one to delete these:
+rm -f $PKG/usr/share/games/fortunes/limerick
+rm -f $PKG/usr/share/games/fortunes/limerick.dat
+tar xzvf $CWD/fortunes-o.tar.gz
+# Run strfile on all fortune files:
+( cd $PKG/usr/share/games/fortunes
+  for file in *.dat ; do
+    $PKG/usr/bin/strfile -r `basename $file .dat`
+  done 
+  # These ones are rot13:
+  for file in *-o.dat ; do
+    $PKG/usr/bin/strfile -r -x `basename $file .dat`
+  done
+)
+# Strip binaries:
+strip $PKG/usr/games/* $PKG/usr/bin/* $PKG/usr/sbin/*
+chown -R root.bin $PKG/usr/bin $PKG/usr/sbin
+# Fix perms:
+mkdir -p $PKG/usr/share/dict
+zcat $CWD/hangman-words.gz > $PKG/usr/share/dict/words
+chmod 644 $PKG/var/lib/bsdgames/phantasia/characs
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/bsd-games-$VERSION-$ARCH-$BUILD.tgz
+

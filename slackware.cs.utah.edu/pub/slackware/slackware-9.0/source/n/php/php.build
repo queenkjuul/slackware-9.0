@@ -1,0 +1,123 @@
+#!/bin/sh
+#
+# Build and package mod_php on Slackware.
+# by:  David Cantrell <david@slackware.com>
+# Modified for PHP 4.1.x+ by volkerdi@slackware.com
+CWD=`pwd`
+TMP=/tmp
+
+PHP_VER=4.3.1
+PINE=4.53
+
+# we need to compile Pine to get c-client.a for IMAP support:
+if [ ! -d /tmp/pine${PINE} ]; then
+  ( cd $CWD/../pine ; ./pine.SlackBuild )
+fi
+if [ ! -r /tmp/pine${PINE}/imap/c-client/lib/c-client.a ]; then
+  ( cd /tmp/pine${PINE}/imap/c-client
+    mkdir include
+    cp *.h include
+    mkdir lib
+    cp *.a lib )
+fi
+
+php_configure() {
+EXTENSION_DIR=/usr/lib/php/extensions \
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            $* \
+            --enable-discard-path \
+            --with-config-file-path=/etc/apache \
+            --enable-safe-mode \
+            --with-openssl \
+            --enable-bcmath \
+            --with-bz2 \
+            --with-pic \
+            --enable-calendar \
+            --enable-ctype \
+            --with-gdbm \
+            --with-db2 \
+            --with-db3 \
+  --with-imap-ssl=/tmp/pine${PINE}/imap/c-client \
+  --with-imap=/tmp/pine${PINE}/imap/c-client \
+            --enable-dbase \
+            --enable-ftp \
+            --with-gd \
+        --enable-gd-native-ttf \
+            --with-jpeg-dir=/usr \
+            --with-png \
+            --with-gmp \
+            --with-mysql=shared,/usr \
+            --with-xml=shared,/usr \
+            --with-mm=/usr \
+            --enable-trans-sid \
+            --enable-shmop \
+            --enable-sockets \
+            --with-regex=php \
+            --enable-sysvsem \
+            --enable-sysvshm \
+            --enable-yp \
+            --enable-memory-limit \
+            --with-tsrm-pthreads \
+            --enable-shared \
+            --disable-debug \
+            --with-zlib=/usr
+            # --with-mod_charset    # only for Russian patched Apache
+            # --with-readline=/usr  # this is only for the CGI version
+            # --with-ttf            # this links with the shlib, need X for that
+            # --with-java           # no thanks
+            # --with-dom            # requires libxml >= 2.2.7
+            # --with-curl           # no requests for this, so we'll avoid the dependancy
+}
+
+# compile php
+cd $TMP
+tar xjvf $CWD/php-$PHP_VER.tar.bz2
+cd php-$PHP_VER
+# Fixup perms/owners:
+chown -R root.root .
+find . -perm 777 -exec chmod 755 {} \;
+find . -perm 775 -exec chmod 755 {} \;
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+find . -name "*.h" -exec chmod 644 {} \;
+# Patch ini files:
+zcat $CWD/php.ini.diff.gz | patch -p1
+
+# Make the Apache module version of PHP:
+php_configure --disable-static --with-apxs=/usr/sbin/apxs
+make
+make install
+make distclean
+
+# PHP likes to install Pear with some strange permissions.
+chmod 755 /usr/bin/pear
+
+# Make the standalone interpreter:
+php_configure --enable-force-cgi-redirect --enable-fastcgi
+make
+cat sapi/cgi/php > /usr/bin/php
+chmod 755 /usr/bin/php
+chown root.bin /usr/bin/php
+
+# Fix /usr/lib/php perms:
+( cd /usr/lib/php
+  find . -perm 666 -exec chmod 644 {} \;
+)
+
+mkdir -p /usr/doc/php-$PHP_VER
+cp -a \
+  CODING_STANDARDS CREDITS EXTENSIONS INSTALL LICENSE NEWS README* TODO* \
+  sapi/cgi/README.FastCGI \
+  /usr/doc/php-$PHP_VER
+chown -R root.root /usr/doc/php-$PHP_VER
+
+mkdir -p /etc/apache
+cp -a php.ini-dist php.ini-recommended /etc/apache
+cp -a $CWD/mod_php.conf.example /etc/apache
+chmod 644 /etc/apache/*
+chown root.root /etc/apache/*
+
+mkdir -p /install
+zcat $CWD/doinst.sh.gz > /install/doinst.sh
+cat $CWD/slack-desc > /install/slack-desc

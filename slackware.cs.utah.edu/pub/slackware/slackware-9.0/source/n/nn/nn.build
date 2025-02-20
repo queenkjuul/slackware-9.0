@@ -1,0 +1,46 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=6.6.4
+cd /tmp
+tar xjvf $CWD/nn-$VERSION.tar.bz2
+cd nn-$VERSION
+zcat $CWD/nn.diff.gz | patch -p1 --backup
+zcat $CWD/nn.badnntphost.diff.gz | patch -p1 --backup
+cp config.h-dist config.h
+make
+
+
+echo "*** USE install option 's'"
+sleep 5
+./inst
+( cd /
+  ( cd usr/bin ; rm -rf nnadmin )
+  ( cd usr/bin ; ln -sf nn nnadmin )
+  ( cd usr/bin ; rm -rf nnbatch )
+  ( cd usr/bin ; ln -sf nn nnbatch )
+  ( cd usr/bin ; rm -rf nncheck )
+  ( cd usr/bin ; ln -sf nn nncheck )
+  ( cd usr/bin ; rm -rf nngoback )
+  ( cd usr/bin ; ln -sf nn nngoback )
+  ( cd usr/bin ; rm -rf nngrep )
+  ( cd usr/bin ; ln -sf nn nngrep )
+  ( cd usr/bin ; rm -rf nnpost )
+  ( cd usr/bin ; ln -sf nn nnpost )
+  ( cd usr/bin ; rm -rf nntidy )
+  ( cd usr/bin ; ln -sf nn nntidy )
+  ( cd usr/bin ; rm -rf nnview )
+  ( cd usr/bin ; ln -sf nn nnview )
+)
+mkdir -p /usr/doc/nn-$VERSION
+cp -a \
+  INSTALLATION NNTP README olddoc \
+  /usr/doc/nn-$VERSION
+mkdir -p /usr/doc/nn-$VERSION/contrib
+( cd contrib ; cp -a \
+  aspell cn howto-metamail mail-alias nn-use-elm nn-use-mh nnsum recmail.c recmail.sh \
+  /usr/doc/nn-$VERSION/contrib )
+find /usr/doc/nn-$VERSION -type d -exec chmod 755 {} \;
+find /usr/doc/nn-$VERSION -type f -exec chmod 644 {} \;
+chown -R root.root /usr/doc/nn-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

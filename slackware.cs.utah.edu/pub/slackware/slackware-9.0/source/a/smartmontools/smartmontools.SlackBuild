@@ -1,0 +1,54 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-smartmontools
+
+PACKAGEVER=5.1_7
+VERSION=5.1-7
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+=============+"
+echo "| smartmontools-$VERSION |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/smartmontools-$VERSION.tar.gz
+cd smartmontools-$VERSION
+make
+strip smartctl smartd
+mkdir -p $PKG/usr/sbin
+cat smartctl > $PKG/usr/sbin/smartctl
+cat smartd > $PKG/usr/sbin/smartd
+chmod 755 $PKG/usr/sbin/*
+chown -R root.bin $PKG/usr/sbin
+mkdir -p $PKG/usr/man/man8
+cat smartctl.8 | gzip -9c > $PKG/usr/man/man8/smartctl.8.gz
+cat smartd.8 | gzip -9c > $PKG/usr/man/man8/smartd.8.gz
+mkdir -p $PKG/usr/doc/smartmontools-$VERSION
+cp -a \
+  CHANGELOG COPYING README TODO VERSION \
+  $PKG/usr/doc/smartmontools-$VERSION
+chmod 644 $PKG/usr/doc/smartmontools-$VERSION/*
+chown -R root.root $PKG/usr/doc/smartmontools-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/smartmontools-$PACKAGEVER-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/smartmontools-$VERSION
+  rm -rf $PKG
+fi

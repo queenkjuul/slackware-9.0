@@ -1,0 +1,62 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-procmail
+
+VERSION=3.15.2
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_procmail.tar.gz
+
+echo "+===============+"
+echo "| procmail-$VERSION |"
+echo "+===============+"
+cd $TMP
+tar xzvf $CWD/procmail-$VERSION.tar.gz
+cd procmail-$VERSION
+chown -R root.root .
+find . -perm 777 -exec chmod 755 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+make
+cd src
+strip formail lockfile procmail
+cat formail > $PKG/usr/bin/formail
+cat lockfile > $PKG/usr/bin/lockfile
+cat mailstat > $PKG/usr/bin/mailstat
+cat procmail > $PKG/usr/bin/procmail
+cd ../man
+for file in formail.1 lockfile.1 procmail.1 ; do
+  gzip -9c $file > $PKG/usr/man/man1/$file.gz
+done
+for file in procmailex.5 procmailrc.5 procmailsc.5 ; do
+  gzip -9c $file > $PKG/usr/man/man5/$file.gz
+done
+mkdir -p $PKG/usr/doc/procmail-$VERSION
+cd ..
+cp -a Artistic COPYING FAQ FEATURES HISTORY INSTALL KNOWN_BUGS \
+  README examples $PKG/usr/doc/procmail-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/procmail-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/procmail-$VERSION
+  rm -rf $PKG
+fi

@@ -1,0 +1,37 @@
+#!/bin/sh
+CWD=`pwd`
+
+VERSION=2.5.6
+
+cd /tmp
+tar xzvf $CWD/elm$VERSION.tar.gz
+cd elm$VERSION
+zcat $CWD/elm$VERSION.config.diff.gz | patch -p1
+if [ -d /var/lib/elm ]; then
+  rm -rf /var/lib/elm
+fi
+mkdir -p /var/lib/elm
+make
+make install
+mkdir -p /usr/doc/elm-$VERSION
+cp -a BUGS NOTICE Overview README doc/*.guid* doc/Elm.cover /usr/doc/elm-$VERSION
+chown -R root.root /var/lib/elm
+chown -R root.root /usr/doc/elm-$VERSION
+chmod 644 /usr/doc/elm-$VERSION/*
+cd doc
+for file in *.1 ; do
+  cat $file | gzip -9c > /usr/man/man1/$file.gz
+done
+( cd /usr/bin ; rm -rf frm )
+( cd /usr/bin ; ln -sf nfrm frm )
+( cd /usr/bin ; rm -rf newmail )
+( cd /usr/bin ; ln -sf wnewmail newmail )
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+
+cat << EOF
+
+Don't include elm's mmencode (or the man page), as the metamail
+package already contains much better versions.
+
+EOF

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/e</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/e</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.emacs-nox">slack-desc.emacs-nox</a></td><td align="right">2002-02-26 03:07  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.emacs-misc">slack-desc.emacs-misc</a></td><td align="right">2002-03-19 00:20  </td><td align="right">821 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.emacs-lisp">slack-desc.emacs-lisp</a></td><td align="right">2002-02-26 03:06  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.emacs-leim">slack-desc.emacs-leim</a></td><td align="right">2002-02-26 03:06  </td><td align="right">838 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.emacs-info">slack-desc.emacs-info</a></td><td align="right">2002-02-26 03:06  </td><td align="right">712 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.emacs">slack-desc.emacs</a></td><td align="right">2002-02-26 03:07  </td><td align="right">940 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="leim-21.2.tar.bz2">leim-21.2.tar.bz2</a></td><td align="right">2002-03-16 11:54  </td><td align="right">2.9M</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="find-el-orphans.sh">find-el-orphans.sh</a></td><td align="right">2001-10-22 20:26  </td><td align="right">1.4K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="emacsbin-el-filelist">emacsbin-el-filelist</a></td><td align="right">2002-03-19 01:30  </td><td align="right">3.3K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="emacs.build">emacs.build</a></td><td align="right">2002-03-19 00:57  </td><td align="right">1.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="emacs-21.2.tar.bz2">emacs-21.2.tar.bz2</a></td><td align="right">2002-03-16 11:54  </td><td align="right"> 15M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="elisp-manual-21-2.8.tar.bz2">elisp-manual-21-2.8.tar.bz2</a></td><td align="right">2002-03-16 11:52  </td><td align="right">1.8M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

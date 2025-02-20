@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+       |-----handy-ruler------------------------------------------------------|
+mozilla: mozilla (an open-source web browser)
+mozilla:
+mozilla: The Mozilla web browser.  Mozilla is a cousin to Netscape
+mozilla: Communicator that is being developed by the Free Software Community
+mozilla: with the cooperation and support of Netscape.  Mozilla uses a next-
+mozilla: generation browser engine known as Gecko.
+mozilla:
+mozilla:
+mozilla:
+mozilla:
+mozilla:

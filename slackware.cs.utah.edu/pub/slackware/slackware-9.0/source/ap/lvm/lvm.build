@@ -1,0 +1,28 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=1.0.6
+
+cd /tmp
+tar xzvf $CWD/lvm_$VERSION.tar.gz
+cd LVM
+( cd $VERSION
+  zcat $CWD/lvm.nodebug.diff.gz | patch -p2 --verbose --backup --suffix=.orig
+)
+cd $VERSION
+CFLAGS=-O ./configure --prefix=/ --mandir=/usr/man
+make
+make install
+mkdir -p /usr/doc/lvm_$VERSION
+cp -a ABSTRACT CHANGELOG CONTRIBUTORS COPYING COPYING.LIB FAQ \
+  INSTALL KNOWN_BUGS LVM-HOWTO PATCHES README TODO WHATSNEW \
+  scripts \
+  /usr/doc/lvm_$VERSION
+chown -R root.root /usr/doc/lvm_$VERSION
+# Not useful enough for its size.
+rm -f /lib/liblvm-10.a
+# This seems to be done now :)
+#rm -f /lib/liblvm-10.so
+#rm -f /usr/lib/liblvm-10.so
+#( cd /usr/lib ; ln -sf ../../lib/liblvm-10.so.0 liblvm-10.so )
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

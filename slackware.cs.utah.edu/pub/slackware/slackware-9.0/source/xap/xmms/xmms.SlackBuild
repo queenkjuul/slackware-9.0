@@ -1,0 +1,50 @@
+#!/bin/sh
+CWD=`pwd`
+
+VERSION=1.2.7
+ARCH=i386
+BUILD=6
+
+PKG=/tmp/package-xmms
+rm -rf $PKG
+mkdir -p $PKG
+
+cd /tmp
+tar xjvf $CWD/xmms-$VERSION.tar.bz2
+cd xmms-$VERSION
+# I first tried --prefix=/usr/X11R6 --datadir=/usr/share (to try to keep
+# locale and aclocal under /usr so they work), but the configure script
+# put it under /usr.  It seems like the best plan of action given what
+# happens when you try to follow the "standards".
+CFLAGS=-O2 ./configure --prefix=/usr \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+# Sorry, have to spam the machine for xmms-arts to link properly...
+make install
+ldconfig
+make install DESTDIR=$PKG
+mkdir -p $PKG/usr/doc/xmms-$VERSION
+cp -a ABOUT-NLS AUTHORS COPYING ChangeLog FAQ INSTALL NEWS README TODO \
+  $PKG/usr/doc/xmms-$VERSION
+chmod 644 $PKG/usr/doc/xmms-$VERSION/*
+chown root.root $PKG/usr/doc/xmms-$VERSION/*
+cd /tmp
+tar xzvf $CWD/xmmsarts-0.4.tar.gz
+cd xmms-arts-0.4
+CFLAGS=-O2 ./configure --prefix=/usr --enable-static=no
+make
+make install DESTDIR=$PKG
+mkdir -p $PKG/usr/doc/xmms-arts-0.4
+cp -a AUTHORS COPYING INSTALL NEWS README $PKG/usr/doc/xmms-arts-0.4
+chmod 644 $PKG/usr/doc/xmms-arts-0.4/*
+chown -R root.root $PKG/usr/doc/xmms-arts-0.4
+find $PKG -type f | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded
+chown -R root.bin $PKG/usr/bin
+gzip -9 $PKG/usr/man/*/*
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+makepkg -l y -c n /tmp/xmms-$VERSION-$ARCH-$BUILD.tgz
+

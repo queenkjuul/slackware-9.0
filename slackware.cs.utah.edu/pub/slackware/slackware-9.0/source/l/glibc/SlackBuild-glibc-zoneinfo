@@ -1,0 +1,44 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-zoneinfo
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+else
+  rm -rf $PKG
+  mkdir -p $PKG
+fi
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/timezone-scripts.tar.gz
+
+VERSION=2.3.1
+ARCH=i386
+BUILD=1
+
+echo "+================+"
+echo "| timezone utils |"
+echo "+================+"
+mkdir $PKG/install
+cat $CWD/doinst.sh-glibc-zoneinfo > $PKG/install/doinst.sh
+cat $CWD/slack-desc.glibc-zoneinfo > $PKG/install/slack-desc
+cd $PKG/usr/share
+# We better be on a system with a correct zoneinfo database. :)
+cp -a --verbose /usr/share/zoneinfo .
+
+# Build the package:
+cd $PKG
+makepkg $TMP/glibc-zoneinfo-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $PKG
+fi

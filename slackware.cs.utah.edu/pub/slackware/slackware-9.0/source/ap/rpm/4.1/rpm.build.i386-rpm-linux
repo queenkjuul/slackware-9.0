@@ -1,0 +1,60 @@
+#!/bin/sh
+# Build RPM (of all things) for Slackware.
+CWD=`pwd`
+VERSION=4.1
+
+cd /tmp
+tar xjvf $CWD/rpm-$VERSION.tar.bz2
+cd rpm-$VERSION
+chown -R root.root .
+#zcat $CWD/rpm-$VERSION.diff.gz | patch -p1
+# Install the docs before mangling them with our filters:
+mkdir -p /usr/doc/rpm-$VERSION
+cp -a ABOUT-NLS CHANGES COPYING CREDITS GROUPS INSTALL README \
+  README.amiga RPM-GPG-KEY RPM-PGP-KEY TODO /usr/doc/rpm-$VERSION
+cp -a doc/manual /usr/doc/rpm-$VERSION
+find /usr/doc/rpm-$VERSION -type d | xargs chmod 755
+find /usr/doc/rpm-$VERSION -type f | xargs chmod 644
+# Change the /usr/src/redhat path to /usr/src/rpm.  This ain't redhat.
+find . -name "*.orig" | xargs rm --verbose
+for file in `find . -type f` ; do
+  echo "Filtering /src/redhat path in $file..."
+  cp -a $file $file.orig
+  cat $file.orig | sed "/\/src\/redhat/s//\/src\/rpm/" > $file
+done
+for file in `find . -type f` ; do
+  echo "Filtering {_usrsrc}/redhat path in $file..."
+  cp -a $file $file.orig
+  cat $file.orig | sed "/{_usrsrc}\/redhat/s//{_usrsrc}\/rpm/" > $file
+done
+find . -name "*.orig" | xargs rm --verbose
+# Using "rpm" for the vendor name cures the /usr/src bug.
+./configure --prefix=/usr \
+            --program-prefix="" \
+            --program-suffix="" \
+            i386-rpm-linux
+# What were we up to here (I wonder)?
+#make CFLAGS="-O2 -D_GNU_SOURCE -Wall -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes -Wno-char-subscripts"
+make
+make install
+gzip -9 --force /usr/man/man3/popt.3 \
+  /usr/man/man8/rpm.8 \
+  /usr/man/man8/rpm2cpio.8
+strip /bin/rpm /usr/bin/rpm2cpio /usr/bin/rpmgraph
+( cd /usr/lib
+  strip --strip-unneeded libpopt.so librpm.so librpmbuild.so librpmio.so
+  strip -g libpopt.a librpm.a librpmbuild.a librpmio.a
+)
+( cd /usr/lib/rpm
+  find . -type f | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded
+  ln -sf rpmpopt-$VERSION rpmpopt
+)
+mkdir -p /var/lib/rpm
+touch /var/lib/rpm
+# Don't need this since initdb is now automatic.
+#mkdir -p /var/lib/rpm/tmp
+#zcat $CWD/Packages.gz > /var/lib/rpm/tmp/Packages
+mkdir -p /install
+# Don't need this since initdb is now automatic.
+#zcat $CWD/doinst.sh.gz > /install/doinst.sh
+cat $CWD/slack-desc > /install/slack-desc

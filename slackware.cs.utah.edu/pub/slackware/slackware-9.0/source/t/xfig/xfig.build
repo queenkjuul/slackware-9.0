@@ -1,0 +1,23 @@
+#!/bin/sh
+CWD=`pwd`
+
+VERSION=3.2.3d
+
+cd /tmp
+tar xzvf $CWD/xfig.$VERSION.full.tar.gz
+cd xfig.$VERSION
+zcat $CWD/xfig.diff.gz | patch -E -p1 --verbose --backup --suffix=.orig
+xmkmf
+make
+make install
+make install.man
+make install.libs
+make install.html
+rm -rf /usr/doc/xfig.$VERSION
+mkdir -p /usr/doc/xfig.$VERSION
+cp -a CHANGES Examples FIGAPPS LATEX.AND.XFIG README /usr/doc/xfig.$VERSION
+( cd /usr/doc/xfig.$VERSION/Examples ; rm -rf Libraries ; ln -sf /usr/X11R6/lib/X11/xfig/Libraries . )
+( cd /usr/doc/xfig.$VERSION ; ln -sf /usr/X11R6/lib/X11/xfig/html . )
+chown -R root.root /usr/doc/xfig.$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

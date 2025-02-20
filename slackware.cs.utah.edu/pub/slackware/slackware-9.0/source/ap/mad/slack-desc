@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+   |-----handy-ruler------------------------------------------------------|
+mad: mad (high-quality MPEG audio library and decoder)
+mad:
+mad: MAD is a high-quality MPEG audio decoder. It currently supports MPEG-1
+mad: and the MPEG-2 extension to Lower Sampling Frequencies, as well as the
+mad: so-called MPEG 2.5 format. All three audio layers (Layer I, Layer II,
+mad: and Layer III a.k.a. MP3) are fully implemented.  MAD has the
+mad: following special features:  24-bit PCM output;  100% fixed-point
+mad: (integer) computation;  completely new implementation based on the
+mad: ISO/IEC standards;  distributed under the terms of the GNU General
+mad: Public License (GPL).
+mad:

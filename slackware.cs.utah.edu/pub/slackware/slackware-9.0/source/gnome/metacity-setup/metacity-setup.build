@@ -1,0 +1,24 @@
+CWD=`pwd`
+
+VERSION=0.7.1
+
+cd /tmp
+tar xzvf $CWD/metacity-setup-$VERSION.tar.gz
+cd metacity-setup-$VERSION
+chown -R root.root .
+find . -perm 666 -exec chmod 644 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/metacity-setup-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING HACKING MAINTAINERS NEWS README \
+  /usr/doc/metacity-setup-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+

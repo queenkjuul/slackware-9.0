@@ -1,0 +1,44 @@
+#!/bin/sh
+CWD=`pwd`
+
+VERSION=3.5.7
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xzvf $CWD/tiff-v$VERSION.tar.gz
+cd tiff-v$VERSION
+chown -R root.root .
+mkdir -p /usr/doc/libtiff-$VERSION
+cp -a COPYRIGHT README TODO VERSION html /usr/doc/libtiff-$VERSION
+chown -R root.root /usr/doc/libtiff-$VERSION
+zcat $CWD/tiff-v$VERSION.solib.diff.gz | patch -p1 -E --backup --suffix=.orig --verbose
+zcat $CWD/libtiff-v3.5.7.fax2tiff.diff.gz | patch -p1 -E --backup --suffix=.orig --verbose
+mkdir -p /usr/doc/tiff-v$VERSION/html
+CFLAGS="-O -march=i386 -mcpu=i686" ./configure --target=i386-slackware-linux \
+            --with-ZIP=yes \
+            --with-DIR_GZLIB=/usr/lib \
+            --with-DIRS_LIBINC=/usr/include << EOF
+no
+/usr/bin
+/usr/lib
+/usr/include
+/usr/man
+/usr/doc/tiff-v$VERSION/html
+bsd-source-cat
+yes
+EOF
+# Normally COPTS=-g :^P
+( cd libtiff ; make COPTS="-march=i386 -mcpu=i686" )
+( cd tools ; make COPTS="-march=i386 -mcpu=i686" )
+make
+make install
+cd libtiff
+install -m644 -o root -g root libtiff.so.$VERSION /usr/lib
+( cd /usr/lib ; rm -rf libtiff.so.3 )
+( cd /usr/lib ; ln -sf libtiff.so.$VERSION libtiff.so.3 )
+( cd /usr/lib ; rm -rf libtiff.so )
+( cd /usr/lib ; ln -sf libtiff.so.3 libtiff.so )
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

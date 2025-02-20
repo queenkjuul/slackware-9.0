@@ -1,0 +1,20 @@
+#!/bin/sh
+CWD=`pwd`
+
+VERSION=1.8.2
+
+cd /tmp
+tar xzvf $CWD/wget-$VERSION.tar.gz
+cd wget-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr \
+            --sysconfdir=/etc \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/wget-$VERSION
+cp -a AUTHORS COPYING ChangeLog ChangeLog.README INSTALL \
+  MACHINES MAILING-LIST NEWS PATCHES README README.cvs TODO \
+  /usr/doc/wget-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

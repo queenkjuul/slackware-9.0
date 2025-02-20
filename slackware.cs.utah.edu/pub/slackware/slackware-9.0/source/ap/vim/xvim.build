@@ -1,0 +1,93 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+
+VIMVER=6.1
+CTAGSVER=5.4
+
+# ctags was once a part of vim,
+# but now we have to bundle it in
+cd $TMP
+tar xzvf $CWD/ctags-$CTAGSVER.tar.gz
+cd ctags-$CTAGSVER
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/ctags-$CTAGSVER
+cp -a COPYING EXTENDING.html FAQ INSTALL INSTALL.oth NEWS QUOTES README \
+  /usr/doc/ctags-$CTAGSVER
+chown -R root.root /usr/doc/ctags-$CTAGSVER
+chmod 644 /usr/doc/ctags-$CTAGSVER/*
+
+echo "+=========================+"
+echo "| vim-$VIMVER (X/GTK version) |"
+echo "+=========================+"
+cd $TMP
+tar xjvf $CWD/vim-$VIMVER.tar.bz2
+tar xjvf $CWD/vim-$VIMVER-lang.tar.bz2
+
+# build the X version of vim with Gtk toolkit
+cd $TMP/vim61
+for file in $CWD/patches/* ; do
+  ( zcat $file | patch -p0 --verbose --batch )
+done
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure \
+           --prefix=/usr \
+           --with-x \
+           --enable-gui=gtk \
+           --with-features=big \
+           i386-slackware-linux
+make
+make install
+rm -rf /usr/man/man1/{etags,ex,rview,rvim,view}.1
+#( cd/usr/man/man1 ; ln -sf ctags.1.gz etags.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz ex.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz rview.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz rvim.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz view.1.gz )
+( cd /usr/bin ; rm -rf ex )
+( cd /usr/bin ; ln -sf vim ex )
+( cd /usr/bin ; rm -rf rview )
+( cd /usr/bin ; ln -sf vim rview )
+( cd /usr/bin ; rm -rf rvim )
+( cd /usr/bin ; ln -sf vim rvim )
+( cd /usr/bin ; rm -rf view )
+( cd /usr/bin ; ln -sf vim view )
+( cd /usr/bin ; rm -rf eview )
+( cd /usr/bin ; ln -sf vim eview )
+( cd /usr/bin ; rm -rf evim )
+( cd /usr/bin ; ln -sf vim evim )
+# Clean up those manpage links:
+( cd /usr/man/man1 ; rm -rf ex.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz ex.1.gz )
+( cd /usr/man/man1 ; rm -rf eview.1.gz )
+( cd /usr/man/man1 ; ln -sf evim.1.gz eview.1.gz )
+( cd /usr/man/man1 ; rm -rf gview.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz gview.1.gz )
+( cd /usr/man/man1 ; rm -rf gvim.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz gvim.1.gz )
+( cd /usr/man/man1 ; rm -rf gvimdiff.1.gz )
+( cd /usr/man/man1 ; ln -sf vimdiff.1.gz gvimdiff.1.gz )
+( cd /usr/man/man1 ; rm -rf rview.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz rview.1.gz )
+( cd /usr/man/man1 ; rm -rf rvim.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz rvim.1.gz )
+( cd /usr/man/man1 ; rm -rf view.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz view.1.gz )
+( cd /usr/man/man1 ; rm -rf rgview.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz rgview.1.gz )
+( cd /usr/man/man1 ; rm -rf rgvim.1.gz )
+( cd /usr/man/man1 ; ln -sf vim.1.gz rgvim.1.gz )
+# Endclean :)
+mkdir -p /usr/doc/vim-$VIMVER
+cp -a README.txt /usr/doc/vim-$VIMVER
+find /usr/doc/vim-$VIMVER -type f | xargs chmod 644
+chown root.root /usr/doc/vim-$VIMVER/*
+( cd /usr/doc/vim-$VIMVER ; rm -rf doc )
+( cd /usr/doc/vim-$VIMVER ; ln -sf /usr/share/vim/vim61 doc )
+mkdir -p /install
+cat $CWD/slack-desc.xvim > /install/slack-desc
+zcat $CWD/doinst.sh.gz > /install/doinst.sh

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a/minicom</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a/minicom</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/a/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="minicom-2.00.0.src.tar.gz">minicom-2.00.0.src.tar.gz</a></td><td align="right">2002-02-24 22:35  </td><td align="right">536K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="lrzsz_0.12.21.orig.tar.gz">lrzsz_0.12.21.orig.tar.gz</a></td><td align="right">1999-09-19 19:01  </td><td align="right">281K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="lrzsz_0.12.21-3.diff.gz">lrzsz_0.12.21-3.diff.gz</a></td><td align="right">1999-09-19 19:01  </td><td align="right"> 16K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="SlackBuild">SlackBuild</a></td><td align="right">2002-02-24 22:58  </td><td align="right">3.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-29 01:13  </td><td align="right">781 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="lrzsz_0.12.21-3.dsc">lrzsz_0.12.21-3.dsc</a></td><td align="right">1999-09-19 19:01  </td><td align="right">663 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="_minicom.tar.gz">_minicom.tar.gz</a></td><td align="right">2002-02-24 22:47  </td><td align="right">604 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="minicom.lrzsz.diff.gz">minicom.lrzsz.diff.gz</a></td><td align="right">2001-02-11 03:39  </td><td align="right">212 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

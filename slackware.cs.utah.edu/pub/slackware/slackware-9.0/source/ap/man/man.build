@@ -1,0 +1,19 @@
+#!/bin/sh
+CWD=`pwd`
+
+VERSION=1.5l
+
+cd /tmp
+tar xjvf $CWD/man-$VERSION.tar.bz2
+cd man-$VERSION
+zcat $CWD/man.noisy.diff.gz | patch -p1
+mkdir -p /usr/doc/man-$VERSION
+cp -a COPYING INSTALL LSM README TODO /usr/doc/man-$VERSION
+chown root.root /usr/doc/man-$VERSION/*
+chmod 644 /usr/doc/man-$VERSION/*
+./configure +lang all +traditional
+zcat $CWD/man.msafer.diff.gz | patch -p1 -E --verbose --backup
+make LDFLAGS=-s
+make LDFLAGS=-s install
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+  |-----handy-ruler------------------------------------------------------|
+at: at
+at:
+at: at and batch read commands from standard input or a specified file
+at: which are to be executed at a later time using /bin/sh.
+at:
+at:
+at:
+at:
+at:
+at:
+at:

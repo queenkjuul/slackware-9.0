@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/a/floppy</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/a/floppy</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/a/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="mtools-3.9.8.tar.gz">mtools-3.9.8.tar.gz</a></td><td align="right">2001-05-27 12:42  </td><td align="right">280K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fdutils-5.4.tar.gz">fdutils-5.4.tar.gz</a></td><td align="right">2001-02-04 04:36  </td><td align="right">186K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fdutils-5.4-20020222.diff.gz">fdutils-5.4-20020222.diff.gz</a></td><td align="right">2002-05-01 02:18  </td><td align="right"> 25K</td></tr>
+<tr><td valign="top"><img src="/icons/script.gif" alt="[   ]"></td><td><a href="mtools.conf">mtools.conf</a></td><td align="right">2001-02-04 04:50  </td><td align="right">1.9K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="floppy.build">floppy.build</a></td><td align="right">2002-05-01 02:19  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-23 21:55  </td><td align="right">728 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fdutils.mediaprm.diff.gz">fdutils.mediaprm.diff.gz</a></td><td align="right">2001-02-04 05:02  </td><td align="right">182 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

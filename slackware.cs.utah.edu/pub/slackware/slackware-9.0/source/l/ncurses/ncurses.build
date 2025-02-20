@@ -1,0 +1,78 @@
+#!/bin/sh
+# Build ncurses for Slackware
+# by Patrick Volkerding <volkerdi@slackware.com>, 11/2000.
+# Updated for ncurses-5.3, 2003-01.
+
+CWD=`pwd`
+DOCS=/usr/doc/ncurses-5.3
+cd /tmp
+tar xzvf $CWD/ncurses-5.3.tar.gz
+cd ncurses-5.3
+chown -R root.root .
+#            --without-cxx
+./configure --prefix=/usr \
+            --with-gpm \
+            --disable-termcap \
+            --with-normal \
+            --with-shared \
+            --with-debug \
+            --with-profile \
+            --enable-symlinks \
+            --without-ada \
+            --program-prefix="" \
+            i386-slackware-linux
+make
+make install
+
+# Move the include files from /usr/include into
+# /usr/include/ncurses, then make symlinks back
+# into /usr/include.
+( cd /usr/include
+  rm -rf ncurses
+  mkdir ncurses
+  for file in curses eti form menu ncurses ncurses_dll panel term termcap unctrl ; do
+    mv $file.h ncurses
+  done
+  for file in curses eti form menu ncurses ncurses_dll panel term unctrl ; do
+    ln -sf ncurses/$file.h .
+  done
+ )
+
+# Move the libraries into /lib, since they're important:
+( cd /usr/lib ; mv libncurses.so.5* /lib )
+( cd /usr/lib ; rm libncurses.so ; ln -sf /lib/libncurses.so.5 libncurses.so )
+( cd /usr/lib ; rm libcurses.so ; ln -sf libncurses.so libcurses.so )
+
+# Thomas Dickey wrote to ask me why we do this, since --enable-symlinks already
+# makes symlinks.  This was about a year ago, 1/2001 or so, and at the time I
+# couldn't remember. :)  Well, now I do, so I'll document it here.  It's so that the
+# symlinks are all freshly created so my package scanning scripts find all the links.
+# If any of them already existed, they might not be picked up.
+( cd / ; sh $CWD/terminfo.link.sh )
+
+# Fix the xterm entries:
+if [ -r /usr/X11R6/lib/X11/etc/xterm.terminfo ]; then
+  tic /usr/X11R6/lib/X11/etc/xterm.terminfo
+else
+  echo "WARNING: /usr/X11R6/lib/X11/etc/xterm.terminfo not found"
+  sleep 470
+fi
+
+# Update screen entries:
+tic $CWD/screeninfo.src
+
+# Update rxvt entries:
+tic $CWD/rxvt.terminfo
+
+# Then, add /usr/doc/ncurses-xxxxx with appropriate files.
+mkdir -p $DOCS
+cp -a ANNOUNCE INSTALL MANIFEST NEWS README* TO-DO $DOCS
+mkdir -p $DOCS/c++
+cp -a c++/NEWS c++/PROBLEMS c++/README-first $DOCS/c++
+if [ -r /usr/man/man1/tack.1 ]; then
+  gzip -9 --force /usr/man/man1/tack.1
+fi
+
+# desc file:
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/source/xap/fvwm95</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/source/xap/fvwm95</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/source/xap/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="asapm-2.11.tar.gz">asapm-2.11.tar.gz</a></td><td align="right">2002-02-21 18:46  </td><td align="right"> 57K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="asapm-2.11.tar.gz.asc.gz">asapm-2.11.tar.gz.asc.gz</a></td><td align="right">2002-02-21 18:46  </td><td align="right">240 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="asapm.build">asapm.build</a></td><td align="right">2002-02-21 18:50  </td><td align="right">514 </td></tr>
+<tr><td valign="top"><img src="/icons/image2.gif" alt="[IMG]"></td><td><a href="fvwm95-menu.xpm">fvwm95-menu.xpm</a></td><td align="right">1998-05-06 20:14  </td><td align="right">3.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="fvwm95.build">fvwm95.build</a></td><td align="right">2002-05-30 04:39  </td><td align="right">2.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="fvwm95.colormap.slack.diff.bz2">fvwm95.colormap.slack.diff.bz2</a></td><td align="right">2001-02-13 21:52  </td><td align="right">515 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fvwm95.glibc.time.diff.gz">fvwm95.glibc.time.diff.gz</a></td><td align="right">2002-02-21 19:26  </td><td align="right">2.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="fvwm95_2.0.43ba-15.diff.bz2">fvwm95_2.0.43ba-15.diff.bz2</a></td><td align="right">2000-05-24 11:33  </td><td align="right">135K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="fvwm95_2.0.43ba-15.dsc.bz2">fvwm95_2.0.43ba-15.dsc.bz2</a></td><td align="right">2000-05-24 11:33  </td><td align="right">666 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="fvwm95_2.0.43ba.orig.tar.bz2">fvwm95_2.0.43ba.orig.tar.bz2</a></td><td align="right">1998-10-18 19:53  </td><td align="right">685K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-24 00:23  </td><td align="right">667 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="system.fvwm95rc">system.fvwm95rc</a></td><td align="right">1999-09-29 22:55  </td><td align="right"> 32K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="system.fvwm95rc-apm-battery">system.fvwm95rc-apm-battery</a></td><td align="right">1999-09-29 22:56  </td><td align="right"> 32K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xinitrc.fvwm95">xinitrc.fvwm95</a></td><td align="right">1999-08-04 16:29  </td><td align="right">539 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

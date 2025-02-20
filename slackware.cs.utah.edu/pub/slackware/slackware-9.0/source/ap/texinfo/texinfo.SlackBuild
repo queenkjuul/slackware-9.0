@@ -1,0 +1,53 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-texinfo
+
+VERSION=4.5
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+==================+"
+echo "| texinfo-$VERSION |"
+echo "+==================+"
+cd $TMP
+tar xjvf $CWD/texinfo-$VERSION.tar.bz2
+cd texinfo-$VERSION
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr
+make
+make install DESTDIR=$PKG
+# Be sure this is "fresh"
+zcat $CWD/dir.gz > $PKG/usr/info/dir
+strip $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+( cd $PKG/usr/info ; gzip -9 *info* )
+gzip -9 $PKG/usr/man/man?/*
+mkdir -p $PKG/usr/doc/texinfo-$VERSION
+cp -a \
+  ABOUT-NLS AUTHORS COPYING COPYING.DOC INSTALL INTRODUCTION NEWS README TODO \
+  $PKG/usr/doc/texinfo-$VERSION
+chmod 644 $PKG/usr/doc/texinfo-$VERSION/*
+chown -R root.root $PKG/usr/doc/texinfo-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/texinfo-$VERSION-i386-1.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/texinfo-$VERSION
+  rm -rf $PKG
+fi

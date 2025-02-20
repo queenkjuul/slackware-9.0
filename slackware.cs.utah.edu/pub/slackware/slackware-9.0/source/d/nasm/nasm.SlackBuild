@@ -1,0 +1,43 @@
+#!/bin/sh
+CWD=`pwd`
+PKG=/tmp/package-nasm
+
+VERSION=0.98.36
+ARCH=i386
+BUILD=1
+
+rm -rf $PKG
+mkdir -p $PKG
+cd /tmp
+tar xjvf $CWD/nasm-$VERSION.tar.bz2
+cd nasm-$VERSION
+chown -R root.root .
+find . -perm 775 -exec chmod 755 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr
+make
+mkdir -p $PKG/usr/bin $PKG/usr/man/man1
+make install INSTALLROOT=$PKG
+( cd $PKG/usr/bin
+  strip *
+  chown -R root.bin .
+)
+mkdir -p $PKG/usr/doc/nasm-$VERSION
+cp -a \
+  AUTHORS CHANGES COPYING ChangeLog INSTALL README TODO \
+  $PKG/usr/doc/nasm-$VERSION
+( cd doc
+  make
+  cd info
+  mkdir -p $PKG/usr/info
+  cp -a * $PKG/usr/info
+  gzip -9 $PKG/usr/info/*
+)
+gzip -9 $PKG/usr/man/man?/*
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+makepkg -l y -c n ../nasm-$VERSION-$ARCH-$BUILD.tgz
+

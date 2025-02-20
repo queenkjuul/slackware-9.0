@@ -1,0 +1,46 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-ccache
+
+VERSION=2.2
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+cd $TMP
+tar xzvf $CWD/ccache-$VERSION.tar.gz
+cd ccache-$VERSION
+chown -R root.root .
+./configure --prefix=/usr
+make
+make install DESTDIR=$PKG
+gzip -9 $PKG/usr/man/man1/ccache.1
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/doc/ccache-$VERSION
+cp -a README $PKG/usr/doc/ccache-$VERSION
+# Strip binaries:
+( cd $PKG
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/ccache-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/ccache-$VERSION
+  rm -rf $PKG
+fi

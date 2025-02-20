@@ -1,0 +1,18 @@
+#!/bin/sh
+#BLURB="Enable/disable hotplug activation at boot"
+T_PX=$1
+TMP=/var/log/setup/tmp
+if [ "$COLOR" = "on" -o -r $TMP/SeTcolor ]; then
+  dialog --title "ENABLE HOTPLUG SUBSYSTEM AT BOOT?" --yesno \
+ "The Linux kernel uses the hotplug subsystem to activate hardware that can \
+be plugged into a running machine.  Examples of this kind of hardware include \
+USB devices, or Cardbus devices used with laptops.  The hotplug subsystem can \
+also be activated at boot time to discover and enable a wide variety of other \
+hardware, such as PCI sound cards.  To activate the hotplug subsystem at boot \
+(this is usually a good idea), say YES here." 12 63
+  if [ $? = 0 ]; then
+    chmod 755 etc/rc.d/rc.hotplug
+  else
+    chmod 644 etc/rc.d/rc.hotplug
+  fi
+fi

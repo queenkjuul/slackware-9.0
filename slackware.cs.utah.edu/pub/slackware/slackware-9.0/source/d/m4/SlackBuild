@@ -1,0 +1,66 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-m4
+
+VERSION=1.4
+ARCH=i386
+BUILD=2
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+========+"
+echo "| m4-$VERSION |"
+echo "+========+"
+cd $TMP
+tar xzvf $CWD/m4-$VERSION.tar.gz
+cd m4-$VERSION
+./configure --prefix=/usr
+make CFLAGS=-O2 LDFLAGS=-s
+cd src
+make ansi2knr CFLAGS=-O2 LDFLAGS=-s
+mkdir -p $PKG/usr/bin
+cat ansi2knr > $PKG/usr/bin/ansi2knr
+cat m4 > $PKG/usr/bin/m4
+chmod 755 $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/man/man1
+cat ansi2knr.1 | gzip -9c > $PKG/usr/man/man1/ansi2knr.1.gz
+cd ../examples
+mkdir -p $PKG/usr/lib/m4-examples
+for file in * ; do
+  cat $file > $PKG/usr/lib/m4-examples/$file
+done
+cd ../doc
+mkdir -p $PKG/usr/info
+cat m4.info | gzip -9c > $PKG/usr/info/m4.info.gz
+cat m4.info-1 | gzip -9c > $PKG/usr/info/m4.info-1.gz
+cat m4.info-2 | gzip -9c > $PKG/usr/info/m4.info-2.gz
+cat m4.info-3 | gzip -9c > $PKG/usr/info/m4.info-3.gz
+cd ..
+mkdir -p $PKG/usr/doc/m4-$VERSION
+cp -a \
+  BACKLOG COPYING NEWS README THANKS TODO \
+  $PKG/usr/doc/m4-$VERSION
+chmod 644 $PKG/usr/doc/m4-$VERSION/*
+chown -R root.root $PKG/usr/doc/m4-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+echo "n" | makepkg $TMP/m4-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/m4-$VERSION
+  rm -rf $PKG
+fi

@@ -1,0 +1,23 @@
+[Desktop Entry]
+ActiveSession=0
+DefaultSession=shell.desktop
+Fullscreen=false
+Height 768=564
+MenuBar=Enabled
+Width 1024=822
+bellmode=1
+class=konsole-mainwindow#1
+defaultfont=fixed,12,-1,2,50,0,0,0,1,0
+font=5
+history=1000
+historyenabled=true
+keytab=default
+schema=Linux.schema
+scrollbar=2
+
+[konsole-mainwindow#1 Toolbar style]
+Hidden=false
+IconSize=22
+Index=0
+NewLine=false
+Offset=-1

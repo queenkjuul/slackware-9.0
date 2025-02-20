@@ -1,0 +1,24 @@
+#!/bin/sh
+VERSION=2.5.4
+CWD=`pwd` 
+cd /tmp
+tar xjvf $CWD/libxml2-$VERSION.tar.bz2
+cd libxml2-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+ ./configure --prefix=/usr \
+            i386-slackware-linux 
+make
+make install
+mkdir -p /usr/doc/libxml2-$VERSION
+cp -a AUTHORS COPYING COPYING.LIB INSTALL NEWS README /usr/doc/libxml2-$VERSION
+( cd /usr/doc/libxml2-$VERSION
+  find . -type f | xargs chmod 644 )
+#chmod 755 /usr/doc/libxml2-$VERSION/doc/parsedecl.py
+mkdir /install
+cat $CWD/slack-desc > /install/slack-desc
+( cd /usr/doc ; mv libxml2-python-$VERSION libxml2-$VERSION )
+echo
+echo "Only the python bindings in /usr/lib/python__/site-packages/ should"
+echo "be kept... toss the other stuff"
+echo

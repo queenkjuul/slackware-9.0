@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+xfsprogs: xfsprogs (Utilities for SGI's XFS filesystem)
+xfsprogs:
+xfsprogs: XFS is a high performance journaling filesystem which originated on
+xfsprogs: the SGI IRIX platform.  It is completely multi-threaded, can support
+xfsprogs: large files and large filesystems, extended attributes, variable block
+xfsprogs: sizes, is extent based, and makes extensive use of Btrees
+xfsprogs: (directories, extents, free space) to aid both performance and
+xfsprogs: scalability.
+xfsprogs:
+xfsprogs:
+xfsprogs:

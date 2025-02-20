@@ -1,0 +1,11 @@
+The modules package contains the modules for:
+
+  --  the kernel
+# We use the kernel pcmcia modules now.  -P
+#  --  pcmcia-cs
+  --  DRM (direct rendering) modules for XFree86.
+      We mostly use the DRM modules included with XFree86
+      (as of 4.3.0), but still use the gamma.o.gz from the
+      older kernel-drm package since the driver in XFree86
+      is broken.
+

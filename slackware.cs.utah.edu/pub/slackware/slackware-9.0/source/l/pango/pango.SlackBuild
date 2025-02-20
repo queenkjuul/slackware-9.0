@@ -1,0 +1,38 @@
+CWD=`pwd`
+PKG=/tmp/package-pango
+rm -rf $PKG
+mkdir -p $PKG/usr
+
+VERSION=1.2.1
+ARCH=i386
+BUILD=2
+
+cd /tmp
+tar xjvf $CWD/pango-$VERSION.tar.bz2
+cd pango-$VERSION
+chown -R root.root .
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --sysconfdir=/etc
+make
+make install DESTDIR=$PKG
+# Spamming your root partition:
+make install
+mkdir -p $PKG/etc/pango
+cp -a /etc/pango/* $PKG/etc/pango
+strip $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+( cd $PKG
+  find . -type f | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+gzip -9 $PKG/usr/man/man?/*
+mkdir -p $PKG/usr/doc/pango-$VERSION
+cp -a \
+  AUTHORS COPYING ChangeLog NEWS README TODO \
+  $PKG/usr/doc/pango-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd /tmp/package-pango
+makepkg -l y -c n ../pango-$VERSION-$ARCH-$BUILD.tgz

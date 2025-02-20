@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+     |-----handy-ruler------------------------------------------------------|
+links: links (lynx-like character mode WWW browser)
+links:
+links: links is a text mode WWW browser, supporting colors, correct table
+links: rendering, background downloading, and a menu driven configuration
+links: interface.  Frames are supported.  You can have different file formats
+links: associated with external viewers.  mailto: and telnet: are supported
+links: via external clients.  links can handle local (file://) or remote
+links: (http://, ftp:// or https://) URLs.
+links:
+links: links was written by Mikulas Patocka.
+links:
