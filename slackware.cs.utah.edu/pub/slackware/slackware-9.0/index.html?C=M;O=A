@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="COPYING">COPYING</a></td><td align="right">1994-06-10 02:28  </td><td align="right"> 18K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="CRYPTO_NOTICE.TXT">CRYPTO_NOTICE.TXT</a></td><td align="right">2002-04-06 20:48  </td><td align="right">602 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="BOOTING.TXT">BOOTING.TXT</a></td><td align="right">2002-04-06 20:51  </td><td align="right"> 18K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SPEAKUP_DOCS.TXT">SPEAKUP_DOCS.TXT</a></td><td align="right">2002-06-17 22:41  </td><td align="right"> 14K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SPEAK_INSTALL.TXT">SPEAK_INSTALL.TXT</a></td><td align="right">2002-06-17 22:43  </td><td align="right"> 15K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FAQ.TXT">FAQ.TXT</a></td><td align="right">2002-09-29 02:56  </td><td align="right"> 32K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="Slackware-HOWTO">Slackware-HOWTO</a></td><td align="right">2003-03-10 03:28  </td><td align="right"> 70K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="rootdisks/">rootdisks/</a></td><td align="right">2003-03-16 10:05  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RELEASE_NOTES">RELEASE_NOTES</a></td><td align="right">2003-03-17 06:56  </td><td align="right">2.3K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ANNOUNCE.9_0">ANNOUNCE.9_0</a></td><td align="right">2003-03-17 07:03  </td><td align="right">8.4K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="COPYRIGHT.TXT">COPYRIGHT.TXT</a></td><td align="right">2003-03-17 07:06  </td><td align="right">8.5K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="isolinux/">isolinux/</a></td><td align="right">2003-03-17 07:29  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="README90.TXT">README90.TXT</a></td><td align="right">2003-03-17 07:42  </td><td align="right"> 12K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="kernels/">kernels/</a></td><td align="right">2003-03-18 07:18  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="bootdisks/">bootdisks/</a></td><td align="right">2003-03-18 09:44  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="UPGRADE.TXT">UPGRADE.TXT</a></td><td align="right">2003-03-19 23:10  </td><td align="right">2.6K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="zipslack/">zipslack/</a></td><td align="right">2004-08-10 18:42  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="extra/">extra/</a></td><td align="right">2007-02-23 04:04  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="pasture/">pasture/</a></td><td align="right">2007-02-23 04:04  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="PACKAGES.TXT">PACKAGES.TXT</a></td><td align="right">2007-02-23 04:06  </td><td align="right">236K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="slackware/">slackware/</a></td><td align="right">2007-02-23 04:06  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="source/">source/</a></td><td align="right">2007-02-23 04:08  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ChangeLog.txt">ChangeLog.txt</a></td><td align="right">2012-07-25 02:02  </td><td align="right">185K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="patches/">patches/</a></td><td align="right">2012-07-25 02:04  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="GPG-KEY">GPG-KEY</a></td><td align="right">2012-08-29 18:27  </td><td align="right">1.5K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FILELIST.TXT">FILELIST.TXT</a></td><td align="right">2013-01-10 04:52  </td><td align="right">637K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="CHECKSUMS.md5">CHECKSUMS.md5</a></td><td align="right">2013-01-10 04:53  </td><td align="right">479K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="CHECKSUMS.md5.asc">CHECKSUMS.md5.asc</a></td><td align="right">2013-01-10 04:53  </td><td align="right">198 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

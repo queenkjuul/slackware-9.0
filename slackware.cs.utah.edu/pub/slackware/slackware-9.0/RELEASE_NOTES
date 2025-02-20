@@ -1,0 +1,48 @@
+Slackware 9.0 release notes.  Sun Mar 16 22:42:53 PST 2003
+
+Hi folks,
+
+This is the first release of Slackware based on gcc-3 (3.2.2 to be exact).
+Besides the new compiler, you'll also find the 2.4.20 kernel, 
+Ogg Vorbis 1.0, FLAC (the Free Lossless Audio Codec), perl 5.8.0, KDE 3.1,
+GNOME 2.2, and many other improvements.
+
+There's now integrated Linux hotplugging support.  This takes over the job of
+configuring Cardbus cards (instead of pcmcia-cs, still used for non-Cardbus
+cards).  However, this means that if you're used to configuring your card in
+/etc/pcmcia/, you'll need to set it up elsewhere.  For example, the old way
+of configuring a Cardbus network card is by editing /etc/pcmcia/network.opts.
+Now you'll need to set up the IP in /etc/rc.d/rc.inet1 (or by running 
+"netconfig") instead.  To make matters more confusing, non-Cardbus PC cards
+continue to use /etc/pcmcia/network.opts!
+   Even with the rough edges, the addition of Linux hotplug support is a major,
+major step forward.  In most cases this new subsystem can probe for and detect
+every piece of PCI, Cardbus, and USB hardware connected to the machine and
+automatically load all the correct kernel modules.  Very nice.  :-)
+NOTE:  if the hotplugging subsystem causes problems at boot time, it can be
+skipped by passing the kernel a "nohotplug" flag on the kernel command line.
+
+Speaking of PC card support, we're no longer using the driver modules that
+come with the pcmcia-cs sources and have moved to the ones included with the
+Linux kernel source.  Besides providing better PC card support, this will
+make things easier for people who like to keep up with the latest kernels.
+
+Support for USB keyboards is now integrated into the installer.  If USB
+device detection causes problems (it shouldn't), it may be skipped by
+passing the kernel a "nousb" flag at boot.
+
+Known gotchas:
+
+Netscape plugins will not work in Mozilla until they are recompiled with
+gcc-3.2.2 (and for most of them, we have no source code).  They'll continue
+to work with Netscape 7.02, though, and KDE seems to have gotten them to
+work in Konqueror as well.
+
+If you use the xfs.i kernel (XFS filesystem support), you'll need to
+install the kernel-modules package in extra/ (the standard kernel modules
+aren't compatible with the XFS patched kernel).
+
+Have fun!  :-)
+
+Pat Volkerding <volkerdi@slackware.com>
+

@@ -1,0 +1,194 @@
+
+Announcing Slackware Linux 9.0!
+
+The first major Slackware release based on the GCC 3.2.2 compiler,
+Slackware Linux 9.0 continues the ten-year Slackware tradition of
+simplicity, stability, and security.
+
+Among the many program updates and distribution enhancements, you'll
+find two of the most advanced desktop environments available today: 
+GNOME 2.2 (with a large collection of pre-compiled GNOME applications),
+and KDE 3.1, the latest version of the award-winning K Desktop
+Environment.  Slackware now uses the 2.4.20 kernel bringing you
+advanced performance features such as the ReiserFS journaling
+filesystem, SCSI and ATA RAID volume support, and kernel support
+for XFree86's DRI (the Direct Rendering Interface) that brings high-
+speed hardware accelerated 3D graphics to Linux.  Additional kernels
+allow installing Slackware using any of the journaling filesystems
+available for Linux, including ext3, ReiserFS, IBM's JFS, and SGI's XFS.
+
+From the beginning, Slackware has offered a stable and secure Linux
+distribution for UNIX veterans as well as an easy-to-use system for
+beginners.  Slackware includes everything you'll need to run a powerful
+server or workstation.  Each Slackware package follows the setup and
+installation instructions from its author(s) as closely as possible,
+offering you the most stable and easily expandable setup.
+
+Here are some of the advanced features of Slackware 9.0:
+
+- Runs the 2.4.20 version of the Linux kernel from ftp.kernel.org,
+  with Andrew Morton's patches to stabilize the ext3 filesystem.
+  Special kernels were prepared to support hardware such as SCSI
+  controllers, USB keyboards and mice, parallel-port IDE devices,
+  IBM PS/2 machines with the Microchannel bus, and even speech
+  synthesizers providing access to Linux for the visually impaired
+  community.  The performance of the 2.4.x kernel series along with
+  Slackware's track record of careful attention to system security
+  make it the perfect choice for running your production servers.
+
+- System binaries linked with the GNU C Library, version 2.3.1.  This
+  version of glibc has been patched to improve compatibilty with
+  existing binaries.
+
+- XFree86 4.3.0
+  This version of XFree86 represents a major upgrade with greatly
+  improved performance and support for more video hardware, including
+  support for hardware accelerated graphics using the Direct Rendering
+  Interface supported by the 2.4.20 Linux kernel.  The 3D performance
+  rockets past anything you've ever seen before.  Gamers, get ready. :)
+     
+- Major enhancements to the printing system, which now uses LPRng for 
+  better performance and security.  CUPS is also provided as an 
+  alternative in the extra/ directory.  The Ghostscript interpreter has 
+  been upgraded to ESP Ghostscript version 7.05.6, which brings with it
+  several new printer drivers as well as support for the new IJS
+  interface, which allows new printer drivers to be added to Ghostscript
+  without requiring a recompilation.  Two IJS servers are available in
+  this release.  HPIJS, which supports more than 60 HP Inkjet printer
+  models, and Gimp-Print, which supports many printers from Canon and
+  Epson.
+
+- Installs gcc-3.2.2 as the default C, C++, Objective-C and Fortran-77
+  compiler.  This supports C++ much better than the gcc-2.95.3 compiler
+  used in previous Slackware releases.
+
+- Support for fully encrypted network connections with OpenSSL, OpenSSH,
+  and GnuPG.
+
+- Apache 1.3.27 web server with Dynamic Shared Object (DSO) support, SSL,
+     and PHP.
+
+- PCMCIA, CardBus, and APM support for laptops. (pcmcia-cs-3.2.4).
+  Slackware also now includes hotplug support.  This locates and
+  configures most hardware automatically as it is added (or removed)
+  from the system.  It also loads the kernel modules required by sound
+  cards and other hardware at boot time.
+
+- New development tools, including Perl 5.8.0, Python 2.2.2, and 
+  graphical tools like Qt designer, KDevelop, and Glade.
+
+- Updated versions of the Slackware package management tools make it easy
+  to add, remove, upgrade, and make your own Slackware packages.
+  The improved package tracking makes it easy to upgrade from Slackware
+  8.1 to Slackware 9.0.  The checkinstall utility has been added
+  (in extra/) to help you build and maintain your own packages.
+
+- Web browsers galore!  Includes Netscape Communicator version 7.02,
+  Konqueror 3.1, and Mozilla 1.3 (now with anti-aliased font support
+  and built-in junk email filtering).
+
+- The complete K Desktop Environment (KDE) version 3.1, including the
+  KOffice productivity suite, networking tools, GUI development with
+  KDevelop, multimedia tools, the Konqueror web browser and file 
+     manager, dozens of games and utilities, international language 
+     support, and more.
+
+- The GNU Network Object Model Environment (GNOME) version 2.2.  
+     
+- A collection of GTK based applications, including:
+  abiword-1.0.4, gaim-0.60cvs, gimp-1.2.3, and pan-0.13.4.
+
+- Large repository of contributed software compiled and ready to run. 
+  This includes various window managers, support for 3Dfx gaming cards, 
+  XFree86 3.3.6 servers to support older hardware, OpenMotif-2.2.1, 
+  the Java Runtime Environment, libsafe (advanced buffer overflow
+  protection), ISDN support, and much more (see the /extra directory).
+  
+- Many more improved and upgraded packages than we can list here.  For a
+  complete list of core packages in Slackware 9.0, see this file:
+
+    ftp://ftp.slackware.com/pub/slackware/slackware-9.0/PACKAGES.TXT
+
+- Another Slackware exclusive:  Slackware's ZipSlack installation option 
+  is the fastest, _easiest_ Linux installation ever.  ZipSlack provides 
+  a basic text-based Linux system as a 42 megabyte ZIP archive.  
+  Simply unzip on any FAT or FAT32 partition, edit your boot partition 
+  in the LINUX.BAT batch file, and you can be running Linux in less 
+  than five minutes.  The ZipSlack installation includes everything you 
+  need to network with Linux (including Ethernet, token ring, and 
+  PPP), and extend the system with additional software packages such as 
+  X.  A ZipSlack system will even fit on a Zip(TM) disk, so you can 
+  carry a personal Linux system with you to run on any PC with a 
+  Zip(TM) drive.
+
+     
+Downloading Slackware 9.0:
+--------------------------
+
+The full version of Slackware Linux 9.0 is available for download from
+the central Slackware FTP site hosted by our friends at www.cwo.com:
+
+   ftp://ftp.slackware.com/pub/slackware/slackware-9.0/
+
+The ZipSlack version of Slackware can be downloaded from:
+
+   ftp://ftp.slackware.com/pub/slackware/slackware-9.0/zipslack/
+
+If this site is busy, see the list of official mirror sites here:
+
+   http://slackware.com/getslack/
+
+
+Purchasing Slackware on CD-ROM:
+-------------------------------
+
+Or, purchase the Slackware Linux 9.0 four CD-ROM set directly from
+Slackware Linux, and you'll be helping to support the continued
+development of Slackware Linux!  :-)
+
+This is the official release of Slackware on CD-ROM, and has many 
+enhanced features, including:
+
+ -  Easy bootable CD-ROM installation.  If your machine can boot a 
+       CD-ROM, just boot the first disc to begin the installation process.
+ -  Fully bootable live CD-ROM -- just boot the second disc and run a 
+       basic Linux system right off the disc, including networking tools.
+       Makes the ultimate Linux rescue disc!
+ -  The ZipSlack edition of Slackware Linux 9.0.
+ -  The entire source code used to build Slackware Linux 9.0.
+
+The price for the Slackware Linux CD-ROM set is $39.95 plus shipping.
+
+Slackware Linux is also available by subscription.  When we release a new
+version of Slackware (which is typically once or twice a year) we ship it 
+to you and bill your credit card $24.95 plus shipping.  Shipping is $5 in 
+the USA, Canada, and Mexico for First Class.  Overseas is $9 PER ORDER.  
+There is an additional $3 COD charge (USA Only).  UPS Blue Label (2nd day) 
+[USA Only] is $10 PER ORDER, UPS Red Label (next day) [USA Only] is $15 
+PER ORDER.  
+
+
+Ordering Information:
+---------------------
+
+   You can order online at the Slackware Linux store:
+     http://store.slackware.com
+
+   Order inquiries (including questions about becoming a Slackware
+   reseller) may be directed to this address:
+     info@slackware.com
+   
+   Or, send a check or money order to:
+
+     Slackware Linux, Inc.
+     1164 Claremont Drive
+     Brentwood, CA 94513
+     USA
+
+
+Have fun! :^)
+
+---
+Patrick J. Volkerding    <volkerdi@slackware.com>
+
+Visit us on the web at:  http://slackware.com

@@ -1,0 +1,3551 @@
+Wed Jul 25 02:02:40 UTC 2012
+patches/packages/libpng-1.2.50-i386-1_slack9.0.tgz:  Upgraded.
+  Fixed incorrect type (int copy should be png_size_t copy) in png_inflate()
+  (fixes CVE-2011-3045).
+  Revised png_set_text_2() to avoid potential memory corruption (fixes
+    CVE-2011-3048).
+  Changed "a+w" to "u+w" in Makefile.in to fix CVE-2012-3386.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3045
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3048
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3386
+  (* Security fix *)
++--------------------------+
+Thu Jun 14 05:02:39 UTC 2012
+####################################################################
+# NOTICE OF INPENDING EOL (END OF LIFE) FOR OLD SLACKWARE VERSIONS #
+#                                                                  #
+# Effective August 1, 2012, security patches will no longer be     #
+# provided for the following versions of Slackware (which will all #
+# be more than 5 years old at that time):                          #
+# Slackware 8.1, 9.0, 9.1, 10.0, 10.1, 10.2, 11.0, 12.0.           #
+# If you are still running these versions you should consider      #
+# migrating to a newer version (preferably as recent as possible). #
+# Alternately, you may make arrangements to handle your own        #
+# security patches.  If for some reason you are unable to upgrade  #
+# or handle your own security patches, limited security support    #
+# may be available for a fee.  Inquire at security@slackware.com.  #
+####################################################################
+patches/packages/bind-9.7.6_P1-i386-1_slack9.0.tgz:  Upgraded.
+  This release fixes an issue that could crash BIND, leading to a denial of
+  service.  It also fixes the so-called "ghost names attack" whereby a
+  remote attacker may trigger continued resolvability of revoked domain names.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1033
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1667
+  IMPORTANT NOTE:  This is a upgraded version of BIND, _not_ a patched one.
+  It is likely to be more strict about the correctness of configuration files.
+  Care should be taken about deploying this upgrade on production servers to
+  avoid an unintended interruption of service.
+  (* Security fix *)
++--------------------------+
+Sat Apr  7 21:48:42 UTC 2012
+patches/packages/libtiff-3.8.2-i386-4_slack9.0.tgz:  Rebuilt.
+  Patched overflows that could lead to arbitrary code execution when parsing
+  a malformed image file.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1173
+  (* Security fix *)
++--------------------------+
+Wed Feb 22 18:14:58 UTC 2012
+patches/packages/libpng-1.2.47-i386-1_slack9.0.tgz:  Upgraded.
+  All branches of libpng prior to versions 1.5.9, 1.4.9, 1.2.47, and 1.0.57,
+  respectively, fail to correctly validate a heap allocation in
+  png_decompress_chunk(), which can lead to a buffer-overrun and the
+  possibility of execution of hostile code on 32-bit systems.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3026
+  (* Security fix *)
++--------------------------+
+Thu Nov 17 02:09:25 UTC 2011
+patches/packages/bind-9.4_ESV_R5_P1-i386-1_slack9.0.tgz:  Upgraded.
+        --- 9.4-ESV-R5-P1 released ---
+3218.   [security]      Cache lookup could return RRSIG data associated with
+                        nonexistent records, leading to an assertion
+                        failure. [RT #26590]
+  (* Security fix *)
++--------------------------+
+Fri Nov 11 18:58:21 UTC 2011
+  Good 11-11-11, everyone!  Enjoy some fresh time.  :)
+patches/packages/glibc-zoneinfo-2011i_2011n-noarch-1.tgz:  Upgraded.
+  New upstream homepage:  http://www.iana.org/time-zones
++--------------------------+
+Fri Aug 12 23:20:00 UTC 2011
+patches/packages/bind-9.4_ESV_R5-i386-1_slack9.0.tgz:  Upgraded.
+  This BIND update addresses a couple of security issues:
+  * named, set up to be a caching resolver, is vulnerable to a user
+    querying a domain with very large resource record sets (RRSets)
+    when trying to negatively cache the response. Due to an off-by-one
+    error, caching the response could cause named to crash. [RT #24650]
+    [CVE-2011-1910]
+  * Change #2912 (see CHANGES) exposed a latent bug in the DNS message
+    processing code that could allow certain UPDATE requests to crash
+    named. [RT #24777] [CVE-2011-2464]
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1910
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2464
+  (* Security fix *)
++--------------------------+
+Fri Jul 29 18:22:40 UTC 2011
+patches/packages/libpng-1.2.46-i386-1_slack9.0.tgz:  Upgraded.
+  Fixed uninitialized memory read in png_format_buffer()
+  (Bug report by Frank Busse, related to CVE-2004-0421).
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0421
+  (* Security fix *)
++--------------------------+
+Mon Jun 20 00:49:34 UTC 2011
+patches/packages/fetchmail-6.3.20-i386-1_slack9.0.tgz:  Upgraded.
+  This release fixes a denial of service in STARTTLS protocol phases.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1947
+    http://www.fetchmail.info/fetchmail-SA-2011-01.txt
+  (* Security fix *)
++--------------------------+
+Fri May 27 22:56:00 UTC 2011
+patches/packages/bind-9.4_ESV_R4_P1-i386-1_slack9.0.tgz:  Upgraded.
+  This release fixes security issues:
+     * A large RRSET from a remote authoritative server that results in
+       the recursive resolver trying to negatively cache the response can
+       hit an off by one code error in named, resulting in named crashing.
+       [RT #24650] [CVE-2011-1910]
+     * Zones that have a DS record in the parent zone but are also listed
+       in a DLV and won't validate without DLV could fail to validate. [RT
+       #24631]
+  For more information, see:
+    http://www.isc.org/software/bind/advisories/cve-2011-1910
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1910
+  (* Security fix *)
++--------------------------+
+Fri Apr  8 06:58:48 UTC 2011
+patches/packages/libtiff-3.8.2-i386-3_slack9.0.tgz:  Rebuilt.
+  Patched overflows that could lead to arbitrary code execution when parsing
+  a malformed image file.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0192
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1167
+  (* Security fix *)
++--------------------------+
+Thu Apr  7 04:07:29 UTC 2011
+patches/packages/dhcp-3.1_ESV_R1-i386-1_slack9.0.tgz:  Upgraded.
+  In dhclient, check the data for some string options for reasonableness
+  before passing it along to the script that interfaces with the OS.
+  This prevents some possible attacks by a hostile DHCP server.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0997
+  (* Security fix *)
++--------------------------+
+Thu Feb 10 21:19:38 UTC 2011
+patches/packages/sudo-1.7.4p6-i386-1_slack9.0.tgz:  Upgraded.
+  Fix Runas group password checking.
+  For more information, see the included CHANGES and NEWS files, and:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0010
+  (* Security fix *)
++--------------------------+
+Thu Dec 16 18:57:05 UTC 2010
+patches/packages/bind-9.4_ESV_R4-i386-1_slack9.0.tgz:  Upgraded.
+  This update fixes some security issues.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3613
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3614
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3615
+  (* Security fix *)
++--------------------------+
+Mon Sep 20 18:45:08 UTC 2010
+patches/packages/bzip2-1.0.6-i386-1_slack9.0.tgz:  Upgraded.
+  This update fixes an integer overflow that could allow a specially
+  crafted bzip2 archive to cause a crash (denial of service), or execute
+  arbitrary code.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0405
+  (* Security fix *)
++--------------------------+
+Wed Sep 15 18:51:21 UTC 2010
+patches/packages/sudo-1.7.4p4-i386-3_slack9.0.tgz:  Rebuilt.
+  Hi folks, since the patches for old systems (8.1 - 10.2) were briefly
+  available containing a /var/lib with incorrect permissions, I'm issuing
+  these again just to be 100% sure that no systems out there will be left
+  with problems due to that.  This should do it (third time's the charm).
++--------------------------+
+Wed Sep 15 05:58:55 UTC 2010
+patches/packages/sudo-1.7.4p4-i386-2_slack9.0.tgz:  Rebuilt.
+  The last sudo packages accidentally changed the permissions on /var from
+  755 to 700.  This build restores the proper permissions.
+  Thanks to Petri Kaukasoina for pointing this out.
++--------------------------+
+Wed Sep 15 00:41:13 UTC 2010
+patches/packages/sudo-1.7.4p4-i386-1_slack9.0.tgz:  Upgraded.
+  This fixes a flaw that could lead to privilege escalation.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2956
+  (* Security fix *)
++--------------------------+
+Wed Jun 30 04:51:49 UTC 2010
+patches/packages/libtiff-3.8.2-i386-2_slack9.0.tgz:  Rebuilt.
+  This fixes image structure handling bugs that could lead to crashes or
+  execution of arbitrary code if a specially-crafted TIFF image is loaded.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1411
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2065
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2067
+  (* Security fix *)
+patches/packages/libpng-1.2.44-i386-1_slack9.0.tgz:  Upgraded.
+  This fixes out-of-bounds memory write bugs that could lead to crashes
+  or the execution of arbitrary code, and a memory leak bug which could
+  lead to application crashes.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1205
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2249
+  (* Security fix *)
++--------------------------+
+Sun Jun 27 04:02:55 UTC 2010
+patches/packages/bind-9.4.3_P5-i386-2_slack9.0.tgz:  Rebuilt.
+  At least some of these updates for 2.4.x systems were built under a
+  2.6.x kernel, and didn't work.  Sorry, I think I've fixed the
+  issue on this end this time.  If the previous update did not work
+  for you, try this one.
++--------------------------+
+Fri Jun 25 05:28:02 UTC 2010
+patches/packages/bind-9.4.3_P5-i386-1_slack9.0.tgz:  Upgraded.
+  This fixes possible DNS cache poisoning attacks when DNSSEC is enabled
+  and checking is disabled (CD).
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4022
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0097
+  (* Security fix *)
++--------------------------+
+Sun May 16 20:01:28 UTC 2010
+patches/packages/fetchmail-6.3.17-i386-1_slack9.0.tgz:  Upgraded.
+  A crafted header or POP3 UIDL list could cause a memory leak and crash
+  leading to a denial of service.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1167
+  (* Security fix *)
++--------------------------+
+Tue Apr 20 14:45:24 UTC 2010
+patches/packages/sudo-1.7.2p6-i386-1_slack9.0.tgz:  Upgraded.
+  This update fixes security issues that may give a user with permission
+  to run sudoedit the ability to run arbitrary commands.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0426
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1163
+    http://www.gratisoft.us/sudo/alerts/sudoedit_escalate.html
+    http://www.gratisoft.us/sudo/alerts/sudoedit_escalate2.html
+  (* Security fix *)
++--------------------------+
+Thu Dec 10 00:12:58 UTC 2009
+patches/packages/ntp-4.2.2p3-i386-2_slack9.0.tgz:  Rebuilt.
+  Prevent a denial-of-service attack involving spoofed mode 7 packets.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3563
+  (* Security fix *)
++--------------------------+
+Wed Dec  2 20:51:55 UTC 2009
+patches/packages/bind-9.4.3_P4-i386-1_slack9.0.tgz:  Upgraded.
+  BIND 9.4.3-P4 is a SECURITY PATCH for BIND 9.4.3-P3.  It addresses a
+  potential cache poisoning vulnerability, in which data in the additional
+  section of a response could be cached without proper DNSSEC validation.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4022
+    http://www.kb.cert.org/vuls/id/418861
+  (* Security fix *)
++--------------------------+
+Thu Aug  6 00:48:30 CDT 2009
+patches/packages/fetchmail-6.3.11-i386-1_slack9.0.tgz:  Upgraded.
+  This update fixes an SSL NUL prefix impersonation attack through NULs in a
+  part of a X.509 certificate's CommonName and subjectAltName fields.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2666
+  (* Security fix *)
++--------------------------+
+Wed Jul 29 23:10:01 CDT 2009
+patches/packages/bind-9.4.3_P3-i386-1_slack9.0.tgz:  Upgraded.
+  This BIND update fixes a security problem where a specially crafted
+  dynamic update message packet will cause named to exit resulting in
+  a denial of service.
+  An active remote exploit is in wide circulation at this time.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0696
+    https://www.isc.org/node/479
+  (* Security fix *)
++--------------------------+
+Tue Jul 14 18:07:41 CDT 2009
+patches/packages/dhcp-3.1.2p1-i386-1_slack9.0.tgz:  Upgraded.
+  A stack overflow vulnerability was fixed in dhclient that could allow
+  remote attackers to execute arbitrary commands as root on the system,
+  or simply terminate the client, by providing an over-long subnet-mask
+  option.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0692
+  (* Security fix *)
++--------------------------+
+Fri Jun 19 18:22:20 CDT 2009
+patches/packages/libpng-1.2.37-i386-1_slack9.0.tgz:  Upgraded.
+  This update fixes a possible security issue.  Jeff Phillips discovered an
+  uninitialized-memory-read bug affecting interlaced images that may have
+  security implications.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2042
+  (* Security fix *)
++--------------------------+
+Wed Jun  3 18:09:52 CDT 2009
+patches/packages/ntp-4.2.2p3-i386-1_slack9.0.tgz:
+  Patched a stack-based buffer overflow in the cookedprint function in
+  ntpq/ntpq.c in ntpq in NTP before 4.2.4p7-RC2 allows arbitrary code
+  execution by a malicious remote NTP server.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0159
+  (* Security fix *)
++--------------------------+
+Fri Feb 20 17:20:49 CST 2009
+patches/packages/libpng-1.2.35-i386-1_slack9.0.tgz:
+  Upgraded to libpng-1.2.35.
+  This fixes multiple memory-corruption vulnerabilities due to a failure to
+  properly initialize data structures.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0040
+    ftp://ftp.simplesystems.org/pub/png/src/libpng-1.2.34-ADVISORY.txt
+  (* Security fix *)
++--------------------------+
+Wed Jan 14 20:37:39 CST 2009
+patches/packages/bind-9.3.6_P1-i386-1_slack9.0.tgz:
+  Upgraded to bind-9.3.6-P1.
+  Fixed checking on return values from OpenSSL's EVP_VerifyFinal and
+  DSA_do_verify functions to prevent spoofing answers returned from zones using
+  the DNSKEY algorithms DSA and NSEC3DSA.
+  For more information, see:
+    https://www.isc.org/node/373
+    http://www.ocert.org/advisories/ocert-2008-016.html
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5077
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0025
+  (* Security fix *)
+patches/packages/ntp-4.2.4p6-i386-1_slack9.0.tgz:
+  [Sec 1111] Fix incorrect check of EVP_VerifyFinal()'s return value.
+  For more information, see:
+    https://lists.ntp.org/pipermail/announce/2009-January/000055.html
+    http://www.ocert.org/advisories/ocert-2008-016.html
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0021
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5077
+  (* Security fix *)
++--------------------------+
+Mon Oct 13 13:58:21 CDT 2008
+patches/packages/glibc-zoneinfo-2.3.1-noarch-9_slack9.0.tgz:
+  Upgraded to tzdata2008h for the latest world timezone changes.
++--------------------------+
+Wed Sep 17 02:28:20 CDT 2008
+patches/packages/bind-9.3.5_P2-i386-1_slack9.0.tgz:
+  Upgraded to bind-9.3.5-P2.
+  This version has performance gains over bind-9.3.5-P1.
++--------------------------+
+Mon Jul 28 22:05:06 CDT 2008
+patches/packages/fetchmail-6.3.8-i486-1_slack9.0.tgz:
+  Patched to fix a possible denial of service when "-v -v" options are used.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-2711
+  (* Security fix *)
++--------------------------+
+Wed Jul  9 20:03:57 CDT 2008
+patches/packages/bind-9.3.5_P1-i386-1_slack9.0.tgz:
+  Upgraded to bind-9.3.5-P1.
+  This upgrade addresses a security flaw known as the CERT VU#800113 DNS Cache
+  Poisoning Issue.  This is the summary of the problem from the BIND site:
+    "A weakness in the DNS protocol may enable the poisoning of caching
+     recurive resolvers with spoofed data.  DNSSEC is the only full solution.
+     New versions of BIND provide increased resilience to the attack."
+  It is suggested that sites that run BIND upgrade to one of the new packages
+  in order to reduce their exposure to DNS cache poisoning attacks.
+  For more information, see:
+    http://www.isc.org/sw/bind/bind-security.php
+    http://www.kb.cert.org/vuls/id/800113
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1447
+  (* Security fix *)
++--------------------------+
+Mon Apr 28 23:46:17 CDT 2008
+patches/packages/libpng-1.2.27-i386-1_slack9.0.tgz:
+  Upgraded to libpng-1.2.27.
+  This fixes various bugs, the most important of which have to do with the
+  handling of unknown chunks containing zero-length data.  Processing a PNG
+  image that contains these could cause the application using libpng to crash
+  (possibly resulting in a denial of service), could potentially expose the
+  contents of uninitialized memory, or could cause the execution of arbitrary
+  code as the user running libpng (though it would probably be quite difficult
+  to cause the execution of attacker-chosen code).  We recommend upgrading the
+  package as soon as possible.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1382
+    ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.2.27-README.txt
+  (* Security fix *)
++--------------------------+
+Mon Apr  7 02:04:58 CDT 2008
+patches/packages/bzip2-1.0.5-i386-1_slack9.0.tgz:  Upgraded to bzip2-1.0.5.
+  Previous versions of bzip2 contained a buffer overread error that could cause
+  applications linked to libbz2 to crash, resulting in a denial of service.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1372
+  (* Security fix *)
+patches/packages/m4-1.4.11-i386-1_slack9.0.tgz:  Upgraded to m4-1.4.11.
+  In addition to bugfixes and enhancements, this version of m4 also fixes two
+  issues with possible security implications.  A minor security fix with the
+  use of "maketemp" and "mkstemp" -- these are now quoted to prevent the
+  (rather unlikely) possibility that an unquoted string could match an
+  existing macro causing operations to be done on the wrong file.  Also,
+  a problem with the '-F' option (introduced with version 1.4) could cause a
+  core dump or possibly (with certain file names) the execution of arbitrary
+  code.  For more information on these issues, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1687
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1688
+  (* Security fix *)
++--------------------------+
+Fri Apr  4 12:36:37 CDT 2008
+patches/packages/openssh-5.0p1-i386-1_slack9.0.tgz:
+Upgraded to openssh-5.0p1.
+  This version fixes a security issue where local users could hijack forwarded
+  X connections.  Upgrading to the new package is highly recommended.
+  For more information on this security issue, please see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1483
+  (* Security fix *)
++--------------------------+
+Thu Feb 14 17:05:55 CST 2008
+patches/packages/apache-1.3.41-i386-1_slack9.0.tgz:
+  Upgraded to apache-1.3.41, the last regular release of the
+  Apache 1.3.x series, and a security bugfix-only release.
+  For more information about the security issues fixed, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6388
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5000
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3847
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.31_1.3.41-i386-1_slack9.0.tgz:
+  Upgraded to mod_ssl-2.8.31-1.3.41 to work with apache_1.3.41.
++--------------------------+
+Mon Dec 31 18:49:52 CST 2007
+patches/packages/glibc-zoneinfo-2.3.1-noarch-8_slack9.0.tgz:
+  Some deja vu.  ;-)
+  Upgraded to tzdata2007k.  A new year should be started with the
+  latest timezone data, so here it is.
+  Happy holidays, and a happy new year to all!  :-)
++--------------------------+
+Mon Dec 24 15:54:26 CST 2007
+patches/packages/glibc-zoneinfo-2.3.1-noarch-7_slack9.0.tgz:
+  Upgraded to tzdata2007j.  A new year should be started with the
+  latest timezone data, so here it is.
+  Happy holidays, and a happy new year to all!  :-)
++--------------------------+
+Sat Dec  1 16:57:18 CST 2007
+patches/packages/rsync-2.6.9-i386-1_slack9.0.tgz:
+  Patched some security bugs.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4091
+    http://lists.samba.org/archive/rsync-announce/2007/000050.html
+  (* Security fix *)
++--------------------------+
+Wed Nov 21 00:55:51 CST 2007
+patches/packages/libpng-1.2.23-i386-1_slack9.0.tgz:
+  Upgraded to libpng-1.2.23.
+  Previous libpng versions may crash when loading malformed PNG files.
+  It is not currently known if this vulnerability can be exploited to
+  execute malicious code.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5266
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5267
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5268
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5269
+  (* Security fix *)
++--------------------------+
+Thu Nov  1 22:03:53 CDT 2007
+patches/packages/cups-1.1.19-i386-2_slack9.0.tgz:
+  Patched cups-1.1.19.
+  Errors in ipp.c may allow a remote attacker to crash CUPS resulting
+  in a denial of service.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4351
+  (* Security fix *)
++--------------------------+
+Wed Oct 10 11:50:50 CDT 2007
+patches/packages/glibc-zoneinfo-2.3.1-noarch-6_slack9.0.tgz:
+  Upgraded to timezone data from tzcode2007h and tzdata2007h.
+  This contains the latest timezone data from NIST, including some important
+  changes to daylight savings time in Brasil and New Zealand.
++--------------------------+
+Wed Sep 12 15:20:06 CDT 2007
+patches/packages/openssh-4.7p1-i386-1_slack9.0.tgz:
+  Upgraded to openssh-4.7p1.
+  From the OpenSSH release notes:
+  "Security bugs resolved in this release:  Prevent ssh(1) from using a
+  trusted X11 cookie if creation of an untrusted cookie fails; found and
+  fixed by Jan Pechanec."
+  While it's fair to say that we here at Slackware don't see how this could
+  be leveraged to compromise a system, a) the OpenSSH people (who presumably
+  understand the code better) characterize this as a security bug, b) it has
+  been assigned a CVE entry, and c) OpenSSH is one of the most commonly used
+  network daemons.  Better safe than sorry.
+  More information should appear here eventually:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-4752
+  (* Security fix *)
++--------------------------+
+Sat Aug 18 15:00:32 CDT 2007
+patches/packages/tcpdump-3.9.7-i386-1_slack9.0.tgz:
+  Upgraded to libpcap-0.9.7, tcpdump-3.9.7.
+  This new version fixes an integer overflow in the BGP dissector which
+  could possibly allow remote attackers to crash tcpdump or to execute
+  arbitrary code.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3798
+  (* Security fix *)
++--------------------------+
+Thu Jul 26 15:51:42 CDT 2007
+patches/packages/bind-9.2.8_P1-i386-1_slack9.0.tgz:
+  Upgraded to bind-9.2.8_P1 to fix a security issue.
+  The query IDs in BIND9 prior to BIND 9.2.8-P1 are cryptographically weak.
+  For more information on this issue, see:
+    http://www.isc.org/index.pl?/sw/bind/bind-security.php
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2926
+  (* Security fix *)
++--------------------------+
+Wed May 16 16:16:59 CDT 2007
+patches/packages/libpng-1.2.18-i386-1_slack9.0.tgz:
+  Upgraded to libpng-1.2.18.
+  A grayscale PNG image with a malformed (bad CRC) tRNS chunk will crash some
+  libpng applications.  This vulnerability has been assigned the identifiers
+  CVE-2007-2445 and CERT VU#684664.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-2445
+  (* Security fix *)
++--------------------------+
+Tue Apr  3 15:13:56 CDT 2007
+patches/packages/file-4.20-i386-1_slack9.0.tgz:
+  Upgraded to file-4.20.
+  This fixes a heap overflow that could allow code to be executed as the
+  user running file (note that there are many scenarios where file might be
+  used automatically, such as in virus scanners or spam filters).
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-1536
+  (* Security fix *)
++--------------------------+
+Wed Mar  7 18:02:55 CST 2007
+patches/packages/gnupg-1.4.7-i486-1_slack9.0.tgz:  Upgraded to gnupg-1.4.7.
+  This fixes a security problem that can occur when GnuPG is used incorrectly.
+  Newer versions attempt to prevent such misuse.
+  For more information, see:
+    http://lists.gnupg.org/pipermail/gnupg-announce/2007q1/000251.html
+  (* Security fix *)
++--------------------------+
+Sun Feb 18 15:20:36 CST 2007
+patches/packages/glibc-zoneinfo-2.3.1-noarch-5_slack9.0.tgz:
+  Updated with tzdata2007b for impending Daylight Savings Time
+  changes in the US.
++--------------------------+
+Fri Jan 26 22:46:30 CST 2007
+patches/packages/bind-9.2.8-i386-1_slack9.0.tgz:
+  Upgraded to bind-9.2.8.  This update fixes two denial of service
+  vulnerabilities where an attacker could crash the name server with
+  specially crafted malformed data.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0493
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-0494
+  (* Security fix *)
++--------------------------+
+Wed Jan 24 14:15:07 CST 2007
+patches/packages/fetchmail-6.3.6-i386-1_slack9.0.tgz:
+  Upgraded to fetchmail-6.3.6.  This fixes two security issues.  First, a bug
+  introduced in fetchmail-6.3.5 could cause fetchmail to crash.  However,
+  no stable version of Slackware ever shipped fetchmail-6.3.5.  Second, a long
+  standing bug (reported by Isaac Wilcox) could cause fetchmail to send a
+  password in clear text or omit using TLS even when configured otherwise.
+  All fetchmail users are encouraged to consider using getmail, or to upgrade
+  to the new fetchmail packages.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5974
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5867
+  (* Security fix *)
++--------------------------+
+Wed Dec  6 15:16:06 CST 2006
+patches/packages/gnupg-1.4.6-i386-1_slack9.0.tgz:
+  Upgraded to gnupg-1.4.6.  This release fixes a severe and exploitable
+  bug in earlier versions of gnupg.  All gnupg users should update to the
+  new packages as soon as possible.  For details, see the information
+  concerning CVE-2006-6235 posted on lists.gnupg.org:
+    http://lists.gnupg.org/pipermail/gnupg-announce/2006q4/000491.html
+  The CVE entry for this issue may be found here:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6235
+  This update also addresses a more minor security issue possibly
+  exploitable when GnuPG is used in interactive mode.  For more information
+  about that issue, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6169
+  (* Security fix *)
++--------------------------+
+Fri Dec  1 15:03:20 CST 2006
+patches/packages/libpng-1.2.14-i386-1_slack9.0.tgz:
+  Upgraded to libpng-1.2.14.  This fixes a bug where a specially crafted PNG
+  file could crash applications that use libpng.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5793
+  (* Security fix *)
+patches/packages/proftpd-1.3.0a-i386-1_slack9.0.tgz:
+  Upgraded to proftpd-1.3.0a plus an additional security patch.  Several
+  security issues were found in proftpd that could lead to the execution of
+  arbitrary code by a remote attacker, including one in mod_tls that does
+  not require the attacker to be authenticated first.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5815
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6170
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6171
+  (* Security fix *)
+patches/packages/tar-1.16-i386-1_slack9.0.tgz:
+  Upgraded to tar-1.16.
+  This fixes an issue where files may be extracted outside of the current
+  directory, possibly allowing a malicious tar archive, when extracted, to
+  overwrite any of the user's files (in the case of root, any file on the
+  system).
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-6097
+  (* Security fix *)
++--------------------------+
+Mon Nov  6 21:29:24 CST 2006
+patches/packages/bind-9.2.6_P2-i386-1_slack9.0.tgz:
+  Upgraded to bind-9.2.6-P2.  This fixes some security issues related to
+  previous fixes in OpenSSL.  The minimum OpenSSL version was raised to
+  OpenSSL 0.9.7l and OpenSSL 0.9.8d to avoid exposure to known security flaws
+  in older versions (these patches were already issued for Slackware).  If you
+  have not upgraded yet, get those as well to prevent a potentially exploitable
+  security problem in named.  In addition, the default RSA exponent was changed
+  from 3 to 65537.  RSA keys using exponent 3 (which was previously BIND's
+  default) will need to be regenerated to protect against the forging
+  of RRSIGs.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4339
+  (* Security fix *)
++--------------------------+
+Fri Nov  3 23:19:57 CST 2006
+patches/packages/screen-4.0.3-i486-1_slack9.0.tgz:  Upgraded to screen-4.0.3.
+  This addresses an issue with the way screen handles UTF-8 character encoding
+  that could allow screen to be crashed (or possibly code to be executed in the
+  context of the screen user) if a specially crafted sequence of pseudo-UTF-8
+  characters are displayed withing a screen session.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4573
+  (* Security fix *)
++--------------------------+
+Fri Sep 29 00:21:27 CDT 2006
+patches/packages/openssl-0.9.7l-i386-1_slack9.0.tgz:
+  Upgraded to shared libraries from openssl-0.9.7l.
+  See openssl package update below.
+  (* Security fix *)
+patches/packages/openssh-4.4p1-i386-1_slack9.0.tgz:
+  Upgraded to openssh-4.4p1.
+  This fixes a few security related issues.  From the release notes found at
+  http://www.openssh.com/txt/release-4.4:
+    * Fix a pre-authentication denial of service found by Tavis Ormandy,
+      that would cause sshd(8) to spin until the login grace time
+      expired.
+    * Fix an unsafe signal hander reported by Mark Dowd. The signal
+      handler was vulnerable to a race condition that could be exploited
+      to perform a pre-authentication denial of service. On portable
+      OpenSSH, this vulnerability could theoretically lead to
+      pre-authentication remote code execution if GSSAPI authentication
+      is enabled, but the likelihood of successful exploitation appears
+      remote.
+    * On portable OpenSSH, fix a GSSAPI authentication abort that could
+      be used to determine the validity of usernames on some platforms.
+  Links to the CVE entries will be found here:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4924
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5051
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5052
+    After this upgrade, make sure the permissions on /etc/rc.d/rc.sshd are set
+  the way you want them.  Future upgrades will respect the existing permissions
+  settings.  Thanks to Manuel Reimer for pointing out that upgrading openssh
+  would enable a previously disabled sshd daemon.
+    Do better checking of passwd, shadow, and group to avoid adding
+    redundant entries to these files.  Thanks to Menno Duursma.
+  (* Security fix *)
+patches/packages/openssl-0.9.7l-i386-1_slack9.0.tgz:
+  Upgraded to openssl-0.9.7l.
+  This fixes a few security related issues:
+      During the parsing of certain invalid ASN.1 structures an error
+    condition is mishandled.  This can result in an infinite loop which
+    consumes system memory (CVE-2006-2937).  (This issue did not affect
+    OpenSSL versions prior to 0.9.7)
+    Thanks to Dr S. N. Henson of Open Network Security and NISCC.
+      Certain types of public key can take disproportionate amounts of
+    time to process. This could be used by an attacker in a denial of
+    service attack (CVE-2006-2940).
+    Thanks to Dr S. N. Henson of Open Network Security and NISCC.
+      A buffer overflow was discovered in the SSL_get_shared_ciphers()
+    utility function.  An attacker could send a list of ciphers to an
+    application that uses this function and overrun a buffer.
+    (CVE-2006-3738)
+    Thanks to Tavis Ormandy and Will Drewry of the Google Security Team.
+      A flaw in the SSLv2 client code was discovered. When a client
+    application used OpenSSL to create an SSLv2 connection to a malicious
+    server, that server could cause the client to crash (CVE-2006-4343).
+    Thanks to Tavis Ormandy and Will Drewry of the Google Security Team.
+  Links to the CVE entries will be found here:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2937
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3738
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2940
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4343
+  (* Security fix *)
++--------------------------+
+Tue Sep 19 14:07:49 CDT 2006
+patches/packages/gzip-1.3.5-i386-1_slack9.0.tgz:
+  Upgraded to gzip-1.3.5, and fixed a variety of bugs.
+  Some of the bugs have possible security implications if gzip or its tools are
+  fed a carefully constructed malicious archive.  Most of these issues were
+  recently discovered by Tavis Ormandy and the Google Security Team.  Thanks
+  to them, and also to the ALT and Owl developers for cleaning up the patch.
+  For further details about the issues fixed, please see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0758
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0988
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1228
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4334
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4335
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4336
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4337
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4338
+  (* Security fix *)
++--------------------------+
+Thu Sep 14 05:30:50 CDT 2006
+patches/packages/openssl-0.9.7d-i386-3_slack9.0.tgz:  Patched an issue where
+  it is possible to forge certain kinds of RSA signatures.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4339
+patches/packages/openssl-solibs-0.9.7d-i386-3_slack9.0.tgz:  Patched an issue
+  where it is possible to forge certain kinds of RSA signatures.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4339
+  (* Security fix *)
++--------------------------+
+Thu Sep  7 23:41:37 CDT 2006
+patches/packages/bind-9.2.6_P1-i386-1_slack9.0.tgz
+  Upgraded to bind-9.2.6-P1
+  This update addresses a denial of service vulnerability.
+  BIND's CHANGES file says this:
+    2066.   [security]      Handle SIG queries gracefully. [RT #16300]
+  The best discussion I've found is in FreeBSD's advisory, so here's a link:
+    http://security.FreeBSD.org/advisories/FreeBSD-SA-06:20.bind.asc
+  Also, fixed some missing man pages.  (noticed by Xavier Thomassin -- thanks)
+  (* Security fix *)
++--------------------------+
+Fri Aug 18 00:27:05 CDT 2006
+patches/packages/libtiff-3.8.2-i486-1_slack9.0.tgz:
+  Patched vulnerabilities in libtiff which were found by Tavis Ormandy of
+  the Google Security Team.  These issues could be used to crash programs
+  linked to libtiff or possibly to execute code as the program's user.
+  A low risk command-line overflow in tiffsplit was also patched.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3459
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3460
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3461
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3462
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3463
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3464
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3465
+  (* Security fix *)
++--------------------------+
+Wed Aug  2 22:03:08 CDT 2006
+patches/packages/gnupg-1.4.5-i386-1_slack9.0.tgz:
+  Upgraded to gnupg-1.4.5.
+  From the gnupg-1.4.5 NEWS file:
+    * Fixed 2 more possible memory allocation attacks.  They are
+    similar to the problem we fixed with 1.4.4.  This bug can easily
+    be be exploited for a DoS; remote code execution is not entirely
+    impossible.
+(* Security fix *)
++--------------------------+
+Fri Jul 28 17:37:42 CDT 2006
+patches/packages/apache-1.3.37-i386-1_slack9.0.tgz:
+  Upgraded to apache-1.3.37.
+  From the announcement on httpd.apache.org:
+    This version of Apache is security fix release only.  An off-by-one flaw
+    exists in the Rewrite module, mod_rewrite, as shipped with Apache 1.3
+    since 1.3.28, 2.0 since 2.0.46, and 2.2 since 2.2.0.
+  The Slackware Security Team feels that the vast majority of installations
+  will not be configured in a vulnerable way but still suggests upgrading to
+  the new apache and mod_ssl packages for maximum security.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3747
+  And see Apache's announcement here:
+    http://www.apache.org/dist/httpd/Announcement1.3.html
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.28_1.3.37-i386-1_slack9.0.tgz:
+  Upgraded to mod_ssl-2.8.28-1.3.37.
++--------------------------+
+Mon Jul 24 15:44:39 CDT 2006
+patches/packages/mutt-1.4.2.2i-i386-1_slack9.0.tgz:
+  Upgraded to mutt-1.4.2.2i.
+  This release fixes CVE-2006-3242, a buffer overflow that could be triggered
+  by a malicious IMAP server.
+  [Connecting to malicious IMAP servers must be common, right? -- Ed.]
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3242
+  (* Security fix *)
++--------------------------+
+Tue Jun 27 18:48:22 CDT 2006
+patches/packages/gnupg-1.4.4-i386-1_slack9.0.tgz:
+  This version fixes a memory allocation issue that could allow an attacker to
+  crash GnuPG creating a denial-of-service.
+  The CVE entry for this issue may be found here:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3082
++--------------------------+
+Thu Jun 15 02:00:07 CDT 2006
+patches/packages/sendmail-8.13.7-i386-1_slack9.0.tgz:
+  Upgraded to sendmail-8.13.7.
+  Fixes a potential denial of service problem caused by excessive recursion
+  leading to stack exhaustion when attempting delivery of a malformed MIME
+  message.  This crashes sendmail's queue processing daemon, which in turn
+  can lead to two problems:  depending on the settings, these crashed
+  processes may create coredumps which could fill a drive partition; and
+  such a malformed message in the queue will cause queue processing to
+  cease when the message is reached, causing messages that are later in
+  the queue to not be processed.
+  Sendmail's complete advisory may be found here:
+    http://www.sendmail.com/security/advisories/SA-200605-01.txt.asc
+  Sendmail has also provided an FAQ about this issue:
+    http://www.sendmail.com/security/advisories/SA-200605-01/faq.shtml
+  The CVE entry for this issue may be found here:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1173
+  (* Security fix *)
+patches/packages/sendmail-cf-8.13.7-noarch-1_slack9.0.tgz:
+  Upgraded to sendmail-8.13.7 configs.
++--------------------------+
+Wed May 10 15:07:18 CDT 2006
+patches/packages/apache-1.3.35-i386-2_slack9.0.tgz:
+  Patched to fix totally broken Include behavior.
+  Thanks to Francesco Gringoli for reporting this bug.
++--------------------------+
+Tue May  9 00:52:19 CDT 2006
+patches/packages/apache-1.3.35-i386-1_slack9.0.tgz:
+  Upgraded to apache-1.3.35.
+  From the official announcement:
+    Of particular note is that 1.3.35 addresses and fixes 1 potential
+    security issue: CVE-2005-3352 (cve.mitre.org)
+       mod_imap: Escape untrusted referer header before outputting in HTML
+       to avoid potential cross-site scripting.  Change also made to
+       ap_escape_html so we escape quotes.  Reported by JPCERT
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3352
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.26_1.3.35-i386-1_slack9.0.tgz:
+  Upgraded to mod_ssl-2.8.26-1.3.35.
+  This is an updated version designed for Apache 1.3.35.
++--------------------------+
+Wed Mar 22 13:01:23 CST 2006
+patches/packages/sendmail-8.13.6-i386-1.tgz:  Upgraded to sendmail-8.13.6.
+  This new version of sendmail contains a fix for a security problem
+  discovered by Mark Dowd of ISS X-Force.  From sendmail's advisory:
+    Sendmail was notified by security researchers at ISS that, under some
+    specific timing conditions, this vulnerability may permit a specifically
+    crafted attack to take over the sendmail MTA process, allowing remote
+    attackers to execute commands and run arbitrary programs on the system
+    running the MTA, affecting email delivery, or tampering with other
+    programs and data on this system.  Sendmail is not aware of any public
+    exploit code for this vulnerability.  This connection-oriented
+    vulnerability does not occur in the normal course of sending and
+    receiving email.  It is only triggered when specific conditions are
+    created through SMTP connection layer commands.
+  Sendmail's complete advisory may be found here:
+    http://www.sendmail.com/company/advisory/index.shtml
+  The CVE entry for this issue may be found here:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0058
+  (* Security fix *)
+patches/packages/sendmail-cf-8.13.6-noarch-1.tgz:
+  Upgraded to sendmail-8.13.6 configuration files.
++--------------------------+
+Mon Mar 13 20:42:48 CST 2006
+patches/packages/gnupg-1.4.2.2-i386-1.tgz:  Upgraded to gnupg-1.4.2.2.
+  There have been two security related issues reported recently with GnuPG.
+  From the GnuPG 1.4.2.1 and 1.4.2.2 NEWS files:
+    Noteworthy changes in version 1.4.2.2 (2006-03-08)
+    * Files containing several signed messages are not allowed any
+      longer as there is no clean way to report the status of such
+      files back to the caller.  To partly revert to the old behaviour
+      the new option --allow-multisig-verification may be used.
+   Noteworthy changes in version 1.4.2.1 (2006-02-14)
+    * Security fix for a verification weakness in gpgv.  Some input
+      could lead to gpgv exiting with 0 even if the detached signature
+      file did not carry any signature.  This is not as fatal as it
+      might seem because the suggestion as always been not to rely on
+      th exit code but to parse the --status-fd messages.  However it
+      is likely that gpgv is used in that simplified way and thus we
+      do this release.  Same problem with "gpg --verify" but nobody
+      should have used this for signature verification without
+      checking the status codes anyway.  Thanks to the taviso from
+      Gentoo for reporting this problem.
+  (* Security fix *)
++--------------------------+
+Fri Feb 10 17:26:59 CST 2006
+patches/packages/xpdf-3.01-i386-3.tgz:  Recompiled with xpdf-3.01pl2.patch to
+  fix integer and heap overflows in xpdf triggered by malformed PDF files.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3191
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3192
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3193
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3624
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3625
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3626
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3627
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3628
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0301
+  (* Security fix *)
++--------------------------+
+Thu Feb  9 15:09:26 CST 2006
+patches/packages/fetchmail-6.3.2-i386-1.tgz:  Upgraded to fetchmail-6.3.2.
+  Presumably this replaces all the known security problems with
+  a batch of new unknown ones.  (fetchmail is improving, really ;-)
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3088
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-4348
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0321
+  (* Security fix *)
+patches/packages/openssh-4.3p1-i386-1.tgz:  Upgraded to openssh-4.3p1.
+  This fixes a security issue when using scp to copy files that could
+  cause commands embedded in filenames to be executed.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0225
+  (* Security fix *)
+patches/packages/sudo-1.6.8p12-i386-1.tgz:  Upgraded to sudo-1.6.8p12.
+  This fixes an issue where a user able to run a Python script through sudo
+  may be able to gain root access.
+  IMHO, running any kind of scripting language from sudo is still not safe...
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0151
+  (* Security fix *)
++--------------------------+
+Mon Nov  7 19:54:57 CST 2005
+patches/packages/elm-2.5.8-i386-1.tgz:  Upgraded to elm2.5.8.
+  This fixes a buffer overflow in the parsing of the Expires header that
+  could be used to execute arbitrary code as the user running Elm.
+  Thanks to Ulf Harnhammar for finding the bug and reminding me to get
+  out updated packages to address the issue.
+  A reference to the original advisory:
+    http://archives.neohapsis.com/archives/fulldisclosure/2005-08/0688.html
++--------------------------+
+Sat Nov  5 22:21:49 CST 2005
+patches/packages/apache-1.3.34-i386-1.tgz:  Upgraded to apache-1.3.34.
+  Fixes this minor security bug:  "If a request contains both Transfer-Encoding
+  and Content-Length headers, remove the Content-Length, mitigating some HTTP
+  Request Splitting/Spoofing attacks."
+  (* Security fix *)
+patches/packages/imapd-4.64-i386-1.tgz:  Upgraded to imapd-4.64.
+  A buffer overflow was reported in the mail_valid_net_parse_work function.
+  However, this function in the c-client library does not appear to be called
+  from anywhere in imapd.  iDefense states that the issue is of LOW risk to
+  sites that allow users shell access, and LOW-MODERATE risk to other servers.
+  I believe it's possible that it is of NIL risk if the function is indeed
+  dead code to imapd, but draw your own conclusions...
+  (* Security fix *)
+patches/packages/lynx-2.8.5rel.5-i386-1.tgz:  Upgraded to lynx-2.8.5rel.5.
+  Fixes an issue where the handling of Asian characters when using lynx to
+  connect to an NNTP server (is this a common use?) could result in a buffer
+  overflow causing the execution of arbitrary code.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3120
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.25_1.3.34-i386-1.tgz:
+  Upgraded to mod_ssl-2.8.25-1.3.34.
+patches/packages/pine-4.64-i386-1.tgz:  Upgraded to pine-4.64.
+patches/packages/wget-1.10.2-i386-1.tgz:  Upgraded to wget-1.10.2.
+  This addresses a buffer overflow in wget's NTLM handling function that could
+  have possible security implications.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3185
+  (* Security fix *)
++--------------------------+
+Thu Oct 13 13:57:25 PDT 2005
+patches/packages/openssl-0.9.7d-i386-2.tgz:  Patched.
+  Fixed a vulnerability that could, in rare circumstances, allow an attacker
+  acting as a "man in the middle" to force a client and a server to negotiate
+  the SSL 2.0 protocol (which is known to be weak) even if these parties both
+  support SSL 3.0 or TLS 1.0.
+  For more details, see:
+    http://www.openssl.org/news/secadv_20051011.txt
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2969
+  (* Security fix *)
+patches/packages/openssl-solibs-0.9.7d-i386-2.tgz:  Patched.
+  (* Security fix *)
++--------------------------+
+Mon Sep 12 23:38:33 PDT 2005
+patches/packages/util-linux-2.11z-i386-2.tgz:  Patched an issue with
+  umount where if the umount failed when the '-r' option was used, the
+  filesystem would be remounted read-only but without any extra flags
+  specified in /etc/fstab.  This could allow an ordinary user able to
+  mount a floppy or CD (but with nosuid, noexec, nodev, etc in
+  /etc/fstab) to run a setuid binary from removable media and gain
+  root privileges.
+  Reported to BugTraq by David Watson:
+    http://www.securityfocus.com/archive/1/410333
+  (* Security fix *)
++--------------------------+
+Mon Sep 12 12:49:39 PDT 2005
+patches/packages/dhcpcd-1.3.22pl4-i386-2.tgz:  Patched an issue where a
+  remote attacker can cause dhcpcd to crash.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1848
+  (* Security fix *)
++--------------------------+
+Wed Sep  7 13:33:05 PDT 2005
+patches/packages/mod_ssl-2.8.24_1.3.33-i386-1.tgz:  Upgraded to
+  mod_ssl-2.8.24-1.3.33.  From the CHANGES file:
+    Fix a security issue (CAN-2005-2700) where "SSLVerifyClient require" was
+    not enforced in per-location context if "SSLVerifyClient optional" was
+    configured in the global virtual host configuration.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2700
+  (* Security fix *)
++--------------------------+
+Tue Aug 30 12:56:08 PDT 2005
+patches/packages/gaim-1.5.0-i386-1.tgz:  Upgraded to gaim-1.5.0.
+  This fixes some more security issues.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2103
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2102
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2370
+  (* Security fix *)
+patches/packages/pcre-6.3-i386-1.tgz:  Upgraded to pcre-6.3.
+  This fixes a buffer overflow that could be triggered by the processing of a
+  specially crafted regular expression.  Theoretically this could be a security
+  issue if regular expressions are accepted from untrusted users to be
+  processed by a user with greater privileges, but this doesn't seem like a
+  common scenario (or, for that matter, a good idea).  However, if you are
+  using an application that links to the shared PCRE library and accepts
+  outside input in such a manner, you will want to update to this new package.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2491
+  (* Security fix *)
+patches/packages/php-4.3.11-i386-4.tgz:  Relinked with the system PCRE library,
+  as the builtin library has a buffer overflow that could be triggered by the
+  processing of a specially crafted regular expression.
+  Note that this change requires the pcre package to be installed.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2491
+  (* Security fix *)
+  Upgraded PEAR::XMLRPC to version 1.4.0, which eliminates the use of the
+  insecure eval() function.
+    For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2498
+  (* Security fix *)
++--------------------------+
+Fri Jul 29 11:37:17 PDT 2005
+patches/packages/tcpip-0.17-i386-16b.tgz:  Patched two overflows in
+  the telnet client that could allow the execution of arbitrary code
+  when connected to a malicious telnet server.
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0468
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0469
+  (* Security fix *)
++--------------------------+
+Fri Jul 22 13:52:54 PDT 2005
+patches/packages/fetchmail-6.2.5.2-i386-1.tgz:
+  Upgraded to fetchmail-6.2.5.2.
+  This fixes an overflow by which malicious or compromised POP3 servers
+  may overflow fetchmail's stack.
+  For more information, see:
+    http://fetchmail.berlios.de/fetchmail-SA-2005-01.txt
+  (* Security fix *)
++--------------------------+
+Thu Jul 14 15:22:27 PDT 2005
+patches/packages/tcpdump-3.9.3-i386-1.tgz:  Upgraded to libpcap-0.9.3 and
+  tcpdump-3.9.3.  This fixes an issue where an invalid BGP packet can
+  cause tcpdump to go into an infinate loop, effectively disabling network
+  monitoring.
+  (* Security fix *)
+patches/packages/xv-3.10a-i386-4.tgz:  Upgraded to the latest XV jumbo
+  patches, xv-3.10a-jumbo-fix-patch-20050410 and
+  xv-3.10a-jumbo-enh-patch-20050501.  These fix a number of format string
+  and other possible security issues in addition to providing many other
+  bugfixes and enhancements.
+  (Thanks to Greg Roelofs)
+  (* Security fix *)
++--------------------------+
+Mon Jul 11 19:50:20 PDT 2005
+patches/packages/php-4.3.11-i386-3.tgz:  Fixed build/packaging bugs.
++--------------------------+
+Mon Jul 11 15:02:11 PDT 2005
+patches/packages/php-4.3.11-i386-2.tgz:  Upgraded PEAR XML_RPC class.
+  This new PHP package fixes a PEAR XML_RPC vulnerability.  Sites that use
+  this PEAR class should upgrade to the new PHP package, or as a minimal
+  fix may instead upgrade the XML_RPC PEAR class with the following command:
+    pear upgrade XML_RPC
+  (* Security fix *)
++--------------------------+
+Tue Jun 21 22:32:29 PDT 2005
+patches/packages/sudo-1.6.8p9-i386-1.tgz:  Upgraded to sudo-1.6.8p9.
+  This new version of Sudo fixes a race condition in command pathname handling
+  that could allow a user with Sudo privileges to run arbitrary commands.
+  For full details, see the Sudo site:
+    http://www.courtesan.com/sudo/alerts/path_race.html
+  (* Security fix *)
++--------------------------+
+Sat Jun 11 22:05:08 PDT 2005
+patches/packages/gaim-1.3.1-i386-1.tgz:  Upgraded to gaim-1.3.1 and
+  gaim-encryption-2.38.  This fixes a couple of remote crash bugs, so
+  users of the MSN and Yahoo! chat protocols should upgrade to gaim-1.3.1.
+  (* Security fix *)
++--------------------------+
+Fri May 13 12:48:53 PDT 2005
+patches/packages/gaim-1.3.0-i386-1.tgz:  Upgraded to gaim-1.3.0.  This fixes a
+  few bugs which could be used by a remote attacker to annoy a GAIM user by
+  crashing GAIM and creating a denial of service.
+  (* Security fix *)
++--------------------------+
+Sun May  1 22:08:39 PDT 2005
+patches/packages/infozip-5.52-i486-1.tgz:  Upgraded to unzip552.tar.gz and
+  zip231.tar.gz.  These fix some buffer overruns if deep directory paths are
+  packed into a Zip archive which could be a security vulnerability (for
+  example, in a case of automated archiving or backups that use Zip).  However,
+  it also appears that these now use certain assembly instructions that might
+  not be available on older CPUs, so if you have an older machine you may wish
+  to take this into account before deciding whether you should upgrade.
+  (* Security fix *)
++--------------------------+
+Thu Apr 21 14:23:50 PDT 2005
+patches/packages/cvs-1.11.20-i386-1.tgz:  Upgraded to cvs-1.11.20.
+  From cvshome.org:  "This version fixes many minor security issues in the
+  CVS server executable including a potentially serious buffer overflow
+  vulnerability with no known exploit.  We recommend this upgrade for all CVS
+  servers!"
+  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0753
+  (* Security fix *)
+patches/packages/gaim-1.2.1-i386-1.tgz:  Upgraded to gaim-1.2.1.
+  According to gaim.sf.net, this fixes a few denial-of-service flaws.
+  (* Security fix *)
+patches/packages/python-2.2.3-i386-1.tgz:  Upgraded to python-2.2.3.
+  From the python.org site:  "The Python development team has discovered a flaw
+  in the SimpleXMLRPCServer library module which can give remote attackers
+  access to internals of the registered object or its module or possibly other
+  modules. The flaw only affects Python XML-RPC servers that use the
+  register_instance() method to register an object without a _dispatch()
+  method. Servers using only register_function() are not affected."
+  For more details, see:
+    http://python.org/security/PSF-2005-001/
+  (* Security fix *)
++--------------------------+
+Sun Apr  3 21:22:32 PDT 2005
+patches/packages/php-4.3.11-i386-1.tgz:  Upgraded to php-4.3.11.
+ "This is a maintenance release that in addition to over 70 non-critical bug
+  fixes addresses several security issues inside the exif and fbsql extensions
+  as well as the unserialize(), swf_definepoly() and getimagesize() functions."
+  (* Security fix *)
++--------------------------+
+Sun Oct 31 17:21:46 PST 2004
+patches/packages/apache-1.3.33-i386-1.tgz:  Upgraded to apache-1.3.33.
+  This fixes one new security issue (the first issue, CAN-2004-0492, was fixed
+  in apache-1.3.32).  The second bug fixed in 1.3.3 (CAN-2004-0940) allows a
+  local user who can create SSI documents to become "nobody".  The amount of
+  mischief they could cause as nobody seems low at first glance, but it might
+  allow them to use kill or killall as nobody to try to create a DoS.
+  (* Security fix *)
+patches/packages/libtiff-3.5.7-i386-4.tgz:  Patched several bugs that could
+  lead to crashes, or could possibly allow arbitrary code to be executed.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0803
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0804
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0886
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.22_1.3.33-i386-1.tgz:  Upgraded to
+  mod_ssl-2.8.22_1.3.33.
+patches/packages/php-4.3.9-i386-1.tgz:  Fixed mod_php.conf to refer to
+  /usr/libexec rather than /usr/libexec/apache.
++--------------------------+
+Mon Oct 25 16:37:59 PDT 2004
+patches/packages/apache-1.3.32-i386-1.tgz:  Upgraded to apache-1.3.32.
+  This addresses a heap-based buffer overflow in mod_proxy by rejecting
+  responses from a remote server with a negative Content-Length.  The
+  flaw could crash the Apache child process, or possibly allow code to
+  be executed as the Apache user (but only if mod_proxy is actually in
+  use on the server).
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0492
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.21_1.3.32-i386-1.tgz:
+  Upgraded to mod_ssl-2.8.21-1.3.32.
+  Don't allow clients to bypass cipher requirements, possibly negotiating
+  a connection that the server does not consider secure enough.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0885
+  (* Security fix *)
+patches/packages/php-4.3.9-i386-1.tgz:  Upgraded to php-4.3.9.
++--------------------------+
+Fri Oct 22 16:27:48 PDT 2004
+patches/packages/gaim-1.0.2-i386-1.tgz:  Upgraded to gaim-1.0.2
+  and gaim-encryption-2.32.  A buffer overflow in the MSN protocol
+  handler for GAIM 0.79 to 1.0.1 allows remote attackers to cause
+  a denial of service (application crash) and may allow the
+  execution of arbitrary code.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0891
+  (* Security fix *)
++--------------------------+
+Mon Oct 11 19:53:23 PDT 2004
+patches/packages/rsync-2.6.3-i386-1.tgz:  Upgraded to rsync-2.6.3.
+  From the rsync NEWS file:
+      A bug in the sanitize_path routine (which affects a non-chrooted
+      rsync daemon) could allow a user to craft a pathname that would get
+      transformed into an absolute path for certain options (but not for
+      file-transfer names).  If you're running an rsync daemon with chroot
+      disabled, *please upgrade*, ESPECIALLY if the user privs you run
+      rsync under is anything above "nobody".
+  Note that rsync, in daemon mode, sets the "use chroot" to true by
+  default, and (in this default mode) is not vulnerable to this issue.
+  I would strongly recommend against setting "use chroot" to false
+  even if you've upgraded to this new package.
+  (* Security fix *)
++--------------------------+
+Mon Aug 23 14:02:29 PDT 2004
+patches/packages/kde/qt-3.1.2-i486-4.tgz:  Patched bugs in the image
+  loading routines which could be used by an attacker to run
+  unauthorized code or create a denial-of-service.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0691
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0692
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0693
+  (* Security fix *)
++--------------------------+
+Sat Aug  7 17:16:40 AKDT 2004
+patches/packages/libpng-1.2.5-i486-3.tgz:  Patched possible security
+  issues including buffer and integer overflows and null pointer
+  references.  These issues could cause program crashes, or possibly
+  allow arbitrary code embedded in a malicious PNG image to execute.
+  The PNG library is widely used within the system, so all sites
+  should upgrade to the new libpng package.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0597
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0598
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0599
+  (* Security fix *)
+patches/packages/sox-12.17.4-i386-3.tgz:  Patched buffer overflows
+  that could allow a malicious WAV file to execute arbitrary code.
+  (* Security fix *)
++--------------------------+
+Sun Jul 25 18:33:14 PDT 2004
+patches/packages/mod_ssl-2.8.19_1.3.31-i386-1.tgz:
+  Upgraded to mod_ssl-2.8.19-1.3.31.
+  This fixes a security hole (ssl_log() related format string
+  vulnerability in mod_proxy hook functions), so sites using mod_ssl
+  should upgrade to the new version.  Be sure to back up your existing
+  key files first.
+  (* Security fix *)
+patches/packages/samba-2.2.10-i386-1.tgz:  Upgraded to samba-2.2.10.
+  A buffer overrun has been located in the code used to support
+  the 'mangling method = hash' smb.conf option.  Affected Samba
+  2.2 installations can avoid this possible security bug by using
+  the hash2 mangling method.  Server installations requiring
+  the hash mangling method are encouraged to upgrade to Samba v2.2.10
+  or v3.0.5.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0686
+  (* Security fix *)
++--------------------------+
+Tue Jul 20 20:38:58 PDT 2004
+patches/packages/php-4.3.8-i386-1.tgz:  Upgraded to php-4.3.8.
+  This release fixes two security problems in PHP (memory_limit handling and
+  a problem in the strip_tags function).  Sites using PHP should upgrade.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0594
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0595
+  (* Security fix *)
++--------------------------+
+Tue Jun 15 02:03:06 PDT 2004
+patches/packages/kernel-ide-2.4.21-i486-4.tgz:  Patched local DoS
+  (CAN-2004-0554).  Without this patch to asm-i386/i387.h a local user
+  can crash the kernel.  Also includes all previous patches from -3.
+  The new patch can be found here, too:
+  patches/source/kernel-source/CAN-2004-0554.i387.fnclex.diff.gz
+  (* Security fix *)
+patches/packages/kernel-source-2.4.21-noarch-4.tgz:  Patched
+  local DoS (CAN-2004-0554).
+  (* Security fix *)
+patches/kernels/*:  Patched local DoS (CAN-2004-0554).
+  (* Security fix *)
++--------------------------+
+Wed Jun  9 11:38:58 PDT 2004
+patches/packages/cvs-1.11.17-i386-1.tgz:  Upgraded to cvs-1.11.17.
+  From the cvs NEWS file:
+  * Thanks to Stefan Esser & Sebastian Krahmer, several potential security
+    problems have been fixed.  The ones which were considered dangerous enough
+    to catalogue were assigned issue numbers CAN-2004-0416, CAN-2004-0417, &
+    CAN-2004-0418 by the Common Vulnerabilities and Exposures Project.  Please
+    see <http://www.cve.mitre.org> for more information.
+  * A potential buffer overflow vulnerability in the server has been fixed.
+    This addresses the Common Vulnerabilities and Exposures Project's issue
+    CAN-2004-0414.  Please see <http://www.cve.mitre.org> for more information.
+  (* Security fix *)
++--------------------------+
+Wed Jun  2 00:00:58 PDT 2004
+patches/packages/apache-1.3.31-i386-1.tgz:  Upgraded to apache-1.3.31, needed
+  to use the new mod_ssl.
+patches/packages/mod_ssl-2.8.18_1.3.31-i386-1.tgz:  Upgraded to
+  mod_ssl-2.8.18-1.3.31.  This fixes a buffer overflow that may allow remote
+  attackers to execute arbitrary code via a client certificate with a long
+  subject DN, if mod_ssl is configured to trust the issuing CA:
+    *) Fix buffer overflow in "SSLOptions +FakeBasicAuth" implementation
+      if the Subject-DN in the client certificate exceeds 6KB in length.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0488
+  (* Security fix *)
+  Other changes:  Make the sample keys .new so as not to overwrite existing
+  server keys.  However, any existing mod_ssl package will have these listed
+  as non-config files, and will still remove and replace these upon upgrade.
+  You'll have to save your config files one more time... sorry).
+patches/packages/php-4.3.6-i386-1.tgz:  Upgraded to php-4.3.6.  This is
+  compiled with c-client.a in /usr/local/lib/c-client/ to fix a problem in
+  previous php packages where linking against the library in a path under
+  /tmp caused an ELF rpath to this location to be built into the PHP binaries.
+  A local attacker could (by placing shared libraries in this location) either
+  crash PHP or cause arbitrary code to be executed as the PHP user (typically
+  "nobody").  Thanks to Bryce Nichols for discovering this issue and bringing
+  it to my attention.
+  (* Security fix *)
++--------------------------+
+Mon May 31 17:31:42 PDT 2004
+patches/packages/mc-4.6.0-i486-4.tgz:  Patched to fix some problems with
+  hotkeys and php syntax parsing that were caused by the recent changes.
++--------------------------+
+Wed May 19 15:15:17 PDT 2004
+patches/packages/cvs-1.11.16-i386-1.tgz:  Upgraded to cvs-1.11.16.  From
+  the NEWS file:
+    A potential buffer overflow vulnerability in the server has been fixed.
+    Prior to this patch, a malicious client could potentially use carefully
+    crafted server requests to run arbitrary programs on the CVS server
+    machine.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0396
+  (* Security fix *)
++--------------------------+
+Mon May 17 19:28:08 PDT 2004
+patches/packages/kde/kdelibs-3.1.3a-i386-2.tgz:  Patched URI security
+  issues.  According to www.kde.org:
+    The telnet, rlogin, ssh and mailto URI handlers in KDE do not
+    check for '-' at the beginning of the hostname passed, which
+    makes it possible to pass an option to the programs started
+    by the handlers.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0411
+  (* Security fix *)
++--------------------------+
+Fri May 14 15:12:25 PDT 2004
+patches/packages/mc-4.6.0-i386-2.tgz:  Patched to fix buffer overflow,
+  format string, and temporary file creation vulnerabilities found by
+  Andrew V. Samoilov and Pavel Roskin.  These could lead to a denial of
+  service or the execution of arbitrary code as the user running mc.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0226
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0231
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0232
+  (* Security fix *)
++--------------------------+
+Wed May 12 13:12:59 PDT 2004
+patches/packages/apache-1.3.29-i386-2.tgz:  Patched four security issues
+  in the Apache web server as noted on http://httpd.apache.org.
+  These security fixes were backported from Apache 1.3.31:
+
+    In mod_digest, verify whether the nonce returned in the client
+    response is one we issued ourselves.  This problem does not affect
+    mod_auth_digest. (CAN-2003-0987)
+
+    Escape arbitrary data before writing into the errorlog.  (CAN-2003-0020)
+
+    Fix starvation issue on listening sockets where a short-lived connection
+    on a rarely-accessed listening socket will cause a child to hold the
+    accept mutex and block out new connections until another connection
+    arrives on that rarely-accessed listening socket.  (CAN-2004-0174)
+
+    Fix parsing of Allow/Deny rules using IP addresses without a netmask;
+    issue is only known to affect big-endian 64-bit platforms (CAN-2003-0993)
+
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0987
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0020
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0174
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0993
+
+  (* Security fix *)
++--------------------------+
+Tue May  4 13:45:53 PDT 2004
+patches/packages/bin-8.5.0-i386-2.tgz:  Fixed buffer overflows and
+  directory traversal vulnerabilities in the 'lha' archive utility.  Sites
+  using 'lha' should upgrade to the new bin package right away.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0234
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0235
+  (* Security fix *)
++--------------------------+
+Sun May  2 18:00:29 PDT 2004
+patches/packages/libpng-1.2.5-i386-2.tgz:  Patched a problem where
+  libpng may access memory that is out of bounds when creating an error
+  message, possibly crashing libpng and creating a denial of service.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0421
+  (* Security fix *)
+patches/packages/rsync-2.6.2-i386-1.tgz:  Upgraded to rsync-2.6.2.
+  Rsync before 2.6.1 does not properly sanitize paths when running a
+  read/write daemon without using chroot, allowing remote attackers to
+  write files outside of the module's path.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0426
+  (* Security fix *)
+patches/packages/sysklogd-1.4.1-i386-9.tgz:  Patched a bug which could allow
+  a user to cause syslogd to write to unallocated memory and crash.
+  Thanks to Steve Grubb for finding the bug, and Solar Designer for refining
+  the patch.
+  (* Security fix *)
++--------------------------+
+Sat Apr 17 14:05:58 PDT 2004
+patches/packages/cvs-1.11.15-i386-1.tgz:  Upgraded to cvs-1.11.15.
+  Fixes two security problems (server creating arbitrary files on a client
+  machine, and client viewing files outside of the CVS repository).
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0180
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0405
+  (* Security fix *)
++--------------------------+
+Sat Apr 17 11:09:45 PDT 2004
+patches/packages/tcpdump-3.8.3-i486-1.tgz:  Upgraded to tcpdump-3.8.3 and
+  libpcap-0.8.3.  This fixes a couple minor bugs that shouldn't affect
+  32-bit ix86 Slackware, but we might as well have the latest.
+  According to www.tcpdump.org:
+
+    TCPDUMP version 3.8.3 has been released as of March 30, 2004. 3.8.3 is
+    identical to 3.8.2, but the version number has been incremented to
+    match libpcap.
+
+    LIBPCAP version 0.8.3 has been released as of March 30, 2004. 0.8.3
+    fixes a minor problem with gencode.c on 64-bit architectures. It also
+    carries the correct version numbers.
++--------------------------+
+Tue Mar 30 22:27:07 PST 2004
+patches/packages/tcpdump-3.8.2-i386-1.tgz:  Upgraded to tcpdump-3.8.2
+  and libpcap-0.8.2.  Fixes denial-of-service security issues.
+  For more details, see:
+    http://www.rapid7.com/advisories/R7-0017.html
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0183
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0184
+  (* Security fix *)
++--------------------------+
+Wed Mar 17 14:41:42 PST 2004
+patches/packages/openssl-0.9.7d-i386-1.tgz:  Upgraded to openssl-0.9.7d.
+patches/packages/openssl-solibs-0.9.7d-i386-1.tgz:  Upgraded to
+  openssl-0.9.7d.  This fixes two potential denial-of-service issues in
+  earlier versions of OpenSSL.  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0079
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0112
+  (* Security fix *)
++--------------------------+
+Wed Feb 18 03:58:44 PST 2004
+patches/packages/metamail-2.7-i386-2.tgz:  Patched two format string
+  bugs and two buffer overflows in metamail which could lead to
+  unauthorized code execution.  Thanks to Ulf Härnhammar for discovering
+  these problems and providing a patch.
+  (* Security fix *)
++--------------------------+
+Thu Feb 12 10:00:15 PST 2004
+patches/packages/mutt-1.4.2i-i386-1.tgz:  Upgraded to mutt-1.4.2i.
+  This fixes an overflow that is a potential security hole.  Here's the
+  information from www.mutt.org:
+    "Mutt 1.4.2 was released on February 11, 2004. This version fixes a buffer
+     overflow that can be triggered by incoming messages.  There are reports
+     about spam that has actually triggered this problem and crashed mutt. It
+     is recommended that users of mutt versions prior to 1.4.2 upgrade to this
+     version, or apply the patch included below."
+  (* Security fix *)
+patches/packages/xfree86-4.3.0-i386-3.tgz:  Patched to fix buffer overflow
+  problems with the parsing of 'font.alias' files that could allow
+  unauthorized code execution.  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0083
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0084
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0106
+  (* Security fix *)
++--------------------------+
+Mon Jan 26 15:38:40 PST 2004
+patches/packages/gaim-0.75-i386-1.tgz:  Upgraded to gaim-0.75 and patched
+  12 overflows that can allow remote compromise.  All GAIM users should
+  upgrade.
+  (* Security fix *)
++--------------------------+
+Wed Jan 14 21:49:18 PST 2004
+patches/packages/inn-2.4.1-i386-1.tgz:  Upgraded to inn-2.4.1.
+  From the inn-2.4.1 NEWS file:
+    * SECURITY: Handle the special filing of control messages into per-type
+    newsgroups more robust.  This closes a potentially exploitable buffer
+    overflow.  Thanks to Dan Riley for his excellent bug report.
+  (* Security fix *)
++--------------------------+
+Wed Jan 14 16:52:50 PST 2004
+patches/packages/kde/kdebase-3.1.3-i386-2.tgz:  Recompiled with a
+  patch for KDM.  The problem only affects people using PAM, but
+  since it's an available patch I added it.  This one's probably
+  optional for most Slackware users.
+patches/packages/kde/kdepim-3.1.3-i386-2.tgz:  Patched to fix a
+    security issue.  From the KDE advisory:
+
+    The KDE team has found a buffer overflow in the file information reader
+    of VCF files.  A carefully crafted .VCF file potentially enables local
+    attackers to compromise the privacy of a victim's data or execute
+    arbitrary commands with the victim's privileges.
+      By default, file information reading is disabled for remote files.
+    However, if previews are enabled for remote files, remote attackers may
+    be able to compromise the victim's account.
+
+  For more details, see:
+  http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0988
+  (* Security fix *)
++--------------------------+
+Tue Jan  6 13:44:12 PST 2004
+patches/kernels/*:  These are 2.4.21 kernels containing a backported
+  fix for a security problem with the kernel's mremap() function.
+  A local user could exploit this hole to gain root privileges.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0985
+  After installing the new kernel, be sure to run 'lilo'.
+  (* Security fix *)
+patches/packages/kernel-ide-2.4.21-i486-3.tgz:  Patched mremap().
+  (* Security fix *)
+patches/packages/kernel-source-2.4.21-noarch-3.tgz:  Patched mremap().
+(* Security fix *)
+patches/packages/cvs-1.11.11-i386-1.tgz:  Upgraded to cvs-1.11.11.
+  This version enforces greater security.  Changes include pserver
+  refusing to run as root, and logging attempts to exploit the security
+  hole fixed in 1.11.10 in the syslog.
++--------------------------+
+Fri Dec 12 11:09:00 PST 2003
+patches/packages/lftp-2.6.10-i386-1.tgz:  Upgraded to lftp-2.6.10.
+  According to the NEWS file, this includes "security fixes in html
+  parsing code" which could cause a compromise when using lftp to
+  access an untrusted site.
+  (* Security fix *)
++--------------------------+
+Thu Dec 11 12:34:31 PST 2003
+patches/packages/cvs-1.11.10-i386-1.tgz:  Upgraded to cvs-1.11.10.
+From the NEWS file:
+  SERVER SECURITY ISSUES
+    * Malformed module requests could cause the CVS server to attempt to
+    create directories and possibly files at the root of the filesystem
+    holding the CVS repository.  Filesystem permissions usually prevent
+    the creation of these misplaced directories, but nevertheless, the
+    CVS server now rejects the malformed requests.
+  (* Security fix *)
++--------------------------+
+Wed Dec  3 22:14:59 PST 2003
+patches/packages/rsync-2.5.7-i386-1.tgz:  Upgraded to rsync-2.5.7.
+  From the rsync-2.5.7-NEWS file:
+    SECURITY:
+    * Fix buffer handling bugs.  (Andrew Tridgell, Martin Pool, Paul
+      Russell, Andrea Barisani)
+  The vulnerability affects sites running rsync in daemon mode (rsync
+  servers).  These sites should be upgraded immediately.
+  (* Security fix *)
++--------------------------+
+Wed Dec  3 11:58:24 PST 2003
+patches/kernels/*:  These are 2.4.21 kernels containing a backported
+  fix for a security problem with the kernel's do_brk() function.
+  A local user could exploit this hole to gain root privileges.
+  For more details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0961
+  After installing the new kernel, be sure to run 'lilo'.
+  (* Security fix *)
+patches/packages/kernel-ide-2.4.21-i486-2.tgz:  Patched do_brk().
+  (* Security fix *)
+patches/packages/kernel-source-2.4.21-noarch-2.tgz:  Patched do_brk().
+(* Security fix *)
++--------------------------+
+Tue Nov  4 14:50:50 PST 2003
+patches/packages/apache-1.3.29-i386-1.tgz:  Upgraded to apache-1.3.29.
+  This fixes the following local security issue:
+    o CAN-2003-0542 (cve.mitre.org)
+      Fix buffer overflows in mod_alias and mod_rewrite which occurred if
+      one configured a regular expression with more than 9 captures.
+  This vulnerability requires the attacker to create or modify certain
+  Apache configuration files, and is not a remote hole.  However, it could
+  possibly be used to gain additional privileges if access to the Apache
+  administrator account can be gained through some other means.  All sites
+  running Apache should upgrade.
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.16_1.3.29-i386-1.tgz:  Upgraded to
+  mod_ssl-2.8.16_1.3.29.
+patches/packages/php-4.3.3-i386-1.tgz:  Upgraded to php-4.3.3.
++--------------------------+
+Wed Oct 22 13:26:09 PDT 2003
+patches/packages/fetchmail-6.2.5-i386-1.tgz:  Upgraded to fetchmail-6.2.5.
+  This fixes a security issue where a specially crafted message could cause
+  fetchmail to crash, preventing the user from retrieving email.
+  (* Security fix *)
+patches/packages/gdm-2.4.1.7-i386-1.tgz:  Upgraded to gdm-2.4.1.7.  This fixes
+  a bug which can allow a local user to crash gdm, preventing access until the
+  machine is rebooted.
+  (* Security fix *)
++--------------------------+
+Wed Oct  1 17:37:40 PDT 2003
+patches/packages/openssl-solibs-0.9.7c-i386-2.tgz:  Rebuilt.
+patches/packages/openssl-0.9.7c-i386-2.tgz:  Some minor bugs in the 0.9.7c
+  release caused a few manpages to be incorrectly installed, as well as
+  /usr/lib/pkgconfig to be chmoded 644 (which will lead to problems
+  compiling things).  These problems are fixed in our -2 build.
+  Thanks to Frédéric L. W. Meunier and Mark Post for the bug reports.
++--------------------------+
+Tue Sep 30 17:27:53 PDT 2003
+patches/packages/openssl-0.9.7c-i486-1.tgz:  Upgraded to OpenSSL 0.9.7c.
+patches/packages/openssl-solibs-0.9.7c-i486-1.tgz:  Upgraded to OpenSSL 0.9.7c.
+  This update fixes problems with OpenSSL's ASN.1 parsing which could lead to
+  a denial of service.  It is not known whether the problems could lead to the
+  running of malicious code on the server, but it has not been ruled out.
+  For detailed information, see OpenSSL's security advisory:
+    http://www.openssl.org/news/secadv_20030930.txt
+  We recommend sites that use OpenSSL upgrade to the fixed packages right away.
+  (* Security fix *)
++--------------------------+
+Tue Sep 23 14:43:10 PDT 2003
+patches/packages/openssh-3.7.1p2-i386-1.tgz:  Upgraded to openssh-3.7.1p2.
+  This fixes security problems with PAM authentication.  It also includes
+  several code cleanups from Solar Designer.  Slackware does not use PAM and is
+  not vulnerable to any of the fixed problems.
+  Please indulge me for this brief aside (as requests for PAM are on the rise):
+    If you see a security problem reported which depends on PAM, you can be
+    glad you run Slackware.  I think a better name for PAM might be SCAM, for
+    Swiss Cheese Authentication Modules, and have never felt that the small
+    amount of convenience it provides is worth the great loss of system
+    security.  We miss out on half a dozen security problems a year by not
+    using PAM, but you can always install it yourself if you feel that
+    you're missing out on the fun.  (No, don't do that)
+  OK, I'm done ranting here. :-)
+  I suppose this is still a:
+  (* Security fix *)
+patches/packages/proftpd-1.2.8p-i386-1.tgz: Upgraded to proftpd-1.2.8p
+  (patched).
+  This fixes a security problem in ProFTPD.  From http://www.proftpd.org:
+
+    X-Force Research at ISS has discovered a remote exploit in ProFTPD's
+    handling of ASCII translations that an attacker, by downloading a
+    carefully crafted file, can exploit and gain a root shell.  The source
+    distributions on ftp.proftpd.org have all been replaced with patched
+    versions. All ProFTPD users are strongly urged to upgrade to one of
+    the patched versions as soon as possible.
+
+  Note that the upgraded package does not change the displayed version
+  number to 1.2.8p (it remains 1.2.8), but we've verified the source code
+  to make sure that this is in fact the patched version.  We recommend all
+  sites running ProFTPD upgrade to the new package right away.
+  (* Security fix *)
+pasture/dontuse/wu-ftpd/wu-ftpd-2.6.2-i486-3.tgz:  Fixed a security problem in
+  /etc/ftpconversions (CVE-1999-0997).  There's also another hole in wu-ftpd
+  which may be triggered if the MAIL_ADMIN feature (notifies the admin of
+  anonymous uploads) is used, so MAIL_ADMIN has been disabled in this build.
+  Also note that we've moved this from /pasture to /pasture/dontuse, which
+  should tell you something.
+  (* Security fix *)
++--------------------------+
+Wed Sep 17 10:10:26 PDT 2003
+patches/packages/sendmail-8.12.10-i386-1.tgz:  Upgraded to sendmail-8.12.10.
+  This fixes security issues as noted in Sendmail's RELEASE_NOTES:
+
+    "SECURITY: Fix a buffer overflow in address parsing.  Problem
+         detected by Michal Zalewski, patch from Todd C. Miller
+         of Courtesan Consulting.
+     Fix a potential buffer overflow in ruleset parsing.  This problem
+         is not exploitable in the default sendmail configuration;
+         only if non-standard rulesets recipient (2), final (4), or
+         mailer-specific envelope recipients rulesets are used then a
+         problem may occur.  Problem noted by Timo Sirainen."
+
+  We recommend that sites running Sendmail upgrade immediately.
+
+  (* Security fix *)
+patches/packages/sendmail-cf-8.12.10-noarch-1.tgz:  Upgraded to config files
+  for sendmail-8.12.10.
++--------------------------+
+Wed Sep 17 01:25:22 PDT 2003
+patches/packages/openssh-3.7.1p1-i386-1.tgz:  Upgraded to openssh-3.7.1p1.
+  The OpenSSH advisory was updated (http://www.openssh.com/txt/buffer.adv)
+  and now says that you need at least version 3.7.1, which fixes some
+  more buffer problems like those fixed by 3.7.
+  (* Security fix *)
++--------------------------+
+Tue Sep 16 11:13:05 PDT 2003
+patches/packages/openssh-3.7p1-i386-1.tgz:  Upgraded to openssh-3.7p1.
+  From the OpenSSH Security Advisory
+  (http://www.openssh.com/txt/buffer.adv):
+      "All versions of OpenSSH's sshd prior to 3.7 contain a buffer
+       management error.  It is uncertain whether this error is
+       potentially exploitable, however, we prefer to see bugs
+       fixed proactively."
+  (* Security fix *)
++--------------------------+
+Wed Sep 10 20:47:53 PDT 2003
+patches/packages/pine-4.58-i386-1.tgz:  Upgraded to pine4.58.
+  This fixes two vulnerabilities in earlier PINE versions found by iDEFENSE
+  Labs (see http://www.idefense.com/advisory/09.10.03.txt).
+  (* Security fix *)
++--------------------------+
+Mon Sep  8 11:32:55 PDT 2003
+patches/packages/inetd-1.79s-i386-2.tgz:  Disable inetd's (stupid)
+  connection limiting code which can actually cause a DoS rather than
+  preventing it.  The default connections-per-minute is now unlimited.
+  -R 0 also removes limiting (this is now mentioned in the man page as
+  well).  Thanks to 3APA3A for reporting this issue.
+  (* Security fix *)
++--------------------------+
+Mon Aug 25 15:35:28 PDT 2003
+patches/packages/infozip-5.50-i486-2.tgz:  Fixed a bug where a specially
+  crafted archive might try to write to ../ or ../../, etc, potentially
+  overwriting system files if the user (such as root) has permissions to
+  overwrite them.  Thanks to jelmer for locating this problem, and
+  Ben Laurie for providing a patch.
+  (* Security fix *)
++--------------------------+
+Sun Aug 24 14:36:29 PDT 2003
+patches/packages/gdm-2.4.1.6-i386-1.tgz:  Upgraded to gdm-2.4.1.6.
+  This fixes a bug where a local user may read any system file by making a
+  symlink to it from $HOME/.xsession-errors and using GDM's error browser
+  to read the file.
+  (* Security fix *)
++--------------------------+
+Tue Aug 19 21:12:19 PDT 2003
+patches/packages/kde/kdelibs-3.1.3a-i486-1.tgz:  Upgraded to kdelibs-3.1.3a.
+  (this fixes the horizontal scrollbar bug in Konqueror and other KDE apps)
++--------------------------+
+Mon Aug  4 11:52:52 PDT 2003
+pasture/wu-ftpd-2.6.2/wu-ftpd-2.6.2-i386-2.tgz:  Fixed off-by-one buffer
+  overflow.  Note that things in /pasture and -current are not supported,
+  and may be insecure.  Don't assume wu-ftpd is now fixed for good.  :-)
+  (* Security fix *)
++--------------------------+
+Fri Aug  1 15:15:51 PDT 2003
+patches/packages/kde/*:  Upgraded to KDE 3.1.3.
+  Note that this update addresses a security problem in Konqueror which may
+  cause authentication credentials to be leaked to an unintended website
+  through the HTTP-referer header when they have been entered into Konqueror
+  as a URL of the form:
+    http://user:password@host/
+  For more information about this issue, please see the KDE advisory:
+    http://www.kde.org/info/security/advisory-20030729-1.txt
+We recommend that sites running KDE install this update.
+(* Security fix *)
+patches/packages/kdei/*:  New internationalization packages for KDE 3.1.3.
++--------------------------+
+Tue Jul 15 14:24:21 PDT 2003
+patches/packages/nfs-utils-1.0.4-i386-2.tgz:  Fixed a bug in the new
+nfs-utils which can result in mountd crashing.  Thanks to André Muezerie
+for the report.
+patches/packages/openssh-3.6.1p2-i386-1.tgz:  Upgraded to openssh-3.6.1p2.
++--------------------------+
+Mon Jul 14 14:15:34 PDT 2003
+patches/packages/nfs-utils-1.0.4-i386-1.tgz:  Upgraded to nfs-utils-1.0.4.
+  This fixes an off-by-one buffer overflow in xlog.c which could be used
+  by an attacker to produce a denial of NFS service, or to execute
+  arbitrary code.  All sites providing NFS services should upgrade to
+  this new package immediately.
+  (* Security fix *)
++--------------------------+
+Tue Jun 17 19:41:55 PDT 2003
+New precompiled Linux 2.4.21 kernels and source packages are now available
+  for Slackware 9.0.  These fix a few problems with the ptrace patch used
+  with the 2.4.20 kernel, and add a few extra drivers (like Silicon Image
+  Serial-ATA support).  The new kernel also fixes a number of security
+  issues, such as a routing cache problem in 2.4.20 and earlier can allow
+  an attacker to cause hash collisions in the prerouting chain that consume
+  CPU resources resulting in a denial-of-service (CAN-2003-0244).
+patches/packages/kernel-headers-2.4.21-i386-1.tgz:  Upgraded to Linux
+  2.4.21 kernel headers.
+patches/packages/kernel-ide-2.4.21-i486-1.tgz:  Upgraded to Linux 2.4.21.
+patches/packages/kernel-modules-2.4.21-i486-1.tgz:  Upgraded kernel modules
+  to Linux 2.4.21.
+patches/packages/kernel-modules-2.4.21_xfs-i486-1.tgz:  Upgraded the
+  XFS-patched kernel modules package to Linux 2.4.21-xfs.  These are needed
+  for the xfs.i kernel.
+patches/packages/kernel-source-2.4.21-noarch-1.tgz:  Upgraded to Linux
+  2.4.21 source.
+patches/kernels/*:  Upgraded to Linux 2.4.21.
+(* Security fix *)
++--------------------------+
+Sat May 31 18:56:52 PDT 2003
+php-4.3.2-i386-1.tgz:  Upgraded to php-4.3.2.
+  A bit of the information about the release on www.php.net:
+      * Fixes several potentially hazardous integer and buffer overflows.
+      * New "disable_classes" php.ini option to allow administrators to
+        disable certain classes for security reasons.
+      * ..and a HUGE amount of other bug fixes!
+  (* Security fix *)
++--------------------------+
+Thu May 29 00:52:54 PDT 2003
+patches/packages/cups-1.1.19-i386-1.tgz:  Upgraded to cups-1.1.19.
+  A denial of service problem that allowed a CUPS client to hang the CUPS
+  server is now fixed in CUPS 1.1.19.  Note that CUPS is not installed by
+  default -- it is shipped as one of the packages in /extra.
+  (* Security fix *)
++--------------------------+
+Wed May 21 15:50:38 PDT 2003
+patches/packages/apache-1.3.27-i386-3.tgz:  Rebuilt with the EAPI patch from
+  mod_ssl-2.8.14_1.3.27.
+patches/packages/bitchx-1.0c19-i386-3.tgz:  Patched several potential "evil
+  server" security problems noted by Timo Sirainen.
+  (* Security fix *)
+patches/packages/epic4-1.0.1-i386-3.tgz:  Patched a buffer overflow in ctcp.c.
+  (* Security fix *)
+patches/packages/glibc-2.3.1-i386-4.tgz:  Patched, recompiled.
+  (* Security fix *)
+patches/packages/glibc-debug-2.3.1-i386-4.tgz:  Patched, recompiled.
+  (* Security fix *)
+patches/packages/glibc-i18n-2.3.1-noarch-4.tgz:  Rebuilt.
+patches/packages/glibc-profile-2.3.1-i386-4.tgz:  Patched, recompiled.
+  (* Security fix *)
+patches/packages/glibc-solibs-2.3.1-i386-4.tgz:  Patched a buffer overflow in
+  some dead code (xdrmem_getbytes(), which we couldn't find used by anything,
+  but it doesn't hurt to patch it anyway)
+  (* Security fix *)
+patches/packages/glibc-zoneinfo-2.3.1-noarch-4.tgz:  Rebuilt.
+patches/packages/gnupg-1.2.2-i386-1.tgz:  Upgraded to gnupg-1.2.2, which fixes a
+  bug in key validation for keys with more than one user ID.  The bug results in
+  all user IDs on a given key being treated with the validity of the most-valid
+  user ID on that key.
+  (* Security fix *)
+patches/packages/hotplug-2002_08_26-noarch-6.tgz:  Fix a bug which prevents
+  hotplugged network cards from invoking rc.inet1 to bring up the interface.
+  (Thanks to Mark for the bug report)
+  Blacklist 8139cp driver as it interferes with 8139too.
+patches/packages/mod_ssl-2.8.14_1.3.27-i386-1.tgz:  Upgraded to
+  mod_ssl-2.8.14_1.3.27.  Includes RSA blinding fixes.
+  (* Security fix *)
+patches/packages/sysvinit-2.84-i386-26.tgz:  Use option m, not M, for quotacheck.
+  Otherwise, the partition might be remounted losing flags like nosuid,nodev,
+  noexec.  Thanks to Jem Berkes for pointing this out.
+  (* Security fix *)
++--------------------------+
+Sun Apr 20 16:35:57 PDT 2003
+patches/packages/openssh-3.6.1p1-i386-1.tgz:  Upgraded to openssh-3.6.1p1.
+patches/packages/openssl-0.9.7b-i386-1.tgz:  Upgraded to openssl-0.9.7b.  This
+  includes patches for the widely publicized timing attacks against SSL.  We've
+  seen no evidence that these attacks have occured in the wild (and suspect it
+  to be unlikely), but recommend that sites using SSL upgrade.
+  (* Security fix *)
+patches/packages/openssl-solibs-0.9.7b-i386-1.tgz:  Upgraded to shared libraries
+  from openssl-0.9.7b.  Protects against timing attacks.
+  (* Security fix *)
+patches/packages/procps-3.1.8-i386-1.tgz:  Upgraded to procps-3.1.8.  Also
+  upgraded to psmisc-21.2, which fixes a problem with 'killall' sending the
+  wrong signals.  (reported by Phil Howard and Phil DeBecker)
+patches/packages/kde/quanta-3.1.1-i386-2.tgz:  Fixed package build.
++--------------------------+
+Thu Apr 17 15:32:15 PDT 2003
+patches/packages/kde/*:  Upgraded to KDE 3.1.1a.  Also included in
+  this directory are a rebuild of Qt (linked with Xft2 rather than
+  Xft1), an updated aRts package (the aRts sound server is a
+  component of KDE, but ships as part of Slackware's L series), and
+  kdevelop-3.0a4a.
+
+  Note that this update addresses a security problem with KDE's
+  handling of PostScript documents.  This is the overview of the
+  problem from the KDE site:
+
+    KDE uses Ghostscript software for processing of PostScript (PS)
+    and PDF files in a way that allows for the execution of arbitrary
+    commands that can be contained in such files.
+
+    An attacker can prepare a malicious PostScript or PDF file which will
+    provide the attacker with access to the victim's account and privileges
+    when the victim opens this malicious file for viewing or when the
+    victim browses a directory containing such malicious file and has
+    file previews enabled.
+
+    An attacker can provide malicious files remotely to a victim in an
+    e-mail, as part of a webpage, via an ftp server and possible other
+    means.
+
+We recommend that sites running KDE install this update.
+
+Please note that the change from Xft1 to Xft2 has changed the available
+fonts in Konsole (and presumably elsewhere), and that Xft2 seems unable to
+display the Linux Console font that was previously Slackware's default.
+Also, it doesn't handle gamma correction when displaying fonts against a
+black background, so we've had to change the default to black fonts on a
+white background (this is Konsole's default).  This creates an additional
+issue with certain file types displayed as bold white by /etc/DIR_COLORS
+becoming invisible in directory listings.  A workaround is to comment out
+these lines (or change to a different color):
+
+.mpg 01;37 # movie formats
+.avi 01;37
+.mov 01;37
+
+(* Security fix *)
+
+patches/packages/kdei/*:  New internationalization packages for KDE 3.1.1a.
++--------------------------+
+Mon Apr  7 14:26:53 PDT 2003
+patches/packages/samba-2.2.8a-i386-1.tgz:  Upgraded to samba-2.2.8a.
+  From the samba-2.2.8a WHATSNEW.txt:
+
+            ****************************************
+            * IMPORTANT: Security bugfix for Samba *
+            ****************************************
+
+  Digital Defense, Inc. has alerted the Samba Team to a serious
+  vulnerability in all stable versions of Samba currently shipping.
+  The Common Vulnerabilities and Exposures (CVE) project has assigned
+  the ID CAN-2003-0201 to this defect.
+
+  This vulnerability, if exploited correctly, leads to an anonymous
+  user gaining root access on a Samba serving system. All versions
+  of Samba up to and including Samba 2.2.8 are vulnerable. An active
+  exploit of the bug has been reported in the wild. Alpha versions of
+  Samba 3.0 and above are *NOT* vulnerable.
+
+(* Security fix *)
++--------------------------+
+Sat Mar 29 13:46:36 PST 2003
+patches/packages/mutt-1.4.1i-i386-1.tgz:  Upgraded to mutt-1.4.1i.
+  From www.mutt.org:
+    Mutt 1.4.1 and 1.5.4 were released on March 19, 2003. These
+    releases both fix a buffer overflow identified by Core Security
+    Technologies. The only differences between 1.4 and 1.4.1 are bug
+    fixes. If you are currently using 1.4, it's probably a very good
+    idea to update.
+  (* Security fix *)
+patches/packages/sendmail-8.12.9-i386-1.tgz:  Upgraded to sendmail-8.12.9.
+  From sendmail's RELEASE_NOTES:
+    8.12.9/8.12.9   2003/03/29
+    SECURITY: Fix a buffer overflow in address parsing due to
+              a char to int conversion problem which is potentially
+              remotely exploitable.  Problem found by Michal Zalewski.
+              Note: an MTA that is not patched might be vulnerable to
+              data that it receives from untrusted sources, which
+              includes DNS.
+  (* Security fix *)
+patches/packages/sendmail-cf-8.12.9-noarch-1.tgz:  Updated config files for
+  sendmail-8.12.9.
++--------------------------+
+Tue Mar 18 01:44:41 PST 2003
+Slackware 9.0 is released...  happy release day!
+bootdisks/*:  Patched kmod/ptrace hole.  (see below)
+kernels/*:  Patched kmod/ptrace hole.  (see below)
+a/kernel-ide-2.4.20-i486-5.tgz:  Patched kmod/ptrace hole.  (see below)
+ap/mysql-3.23.56-i386-1.tgz:  Upgraded to mysql-3.23.56.
+d/ccache-2.2-i386-1.tgz:  Added ccache-2.2.
+d/kernel-headers-2.4.20-i386-5.tgz:  Patched ptrace related headers.
+k/kernel-source-2.4.20-noarch-5.tgz:  Patched kmod/ptrace hole.
+  The kernel module loader in Linux kernel 2.2.x before 2.2.25, and 2.4.x
+  before 2.4.20, allows local users to gain root privileges by using ptrace
+  to attach to a child process that is spawned by the kernel.
+  For additional information and references, see:
+  http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0127
+  (* Security fix *)
++--------------------------+
+Mon Mar 17 10:47:33 PST 2003
+Slackware 9.0 is (almost) released...  happy Saint Patrick's Day!  :-)
+extra/kernel-modules-2.4.20_xfs/kernel-modules-2.4.20_xfs-i486-6.tgz:
+  Reverted to the stock ac97_codec/emu10k1 modules, as the ones from CVS
+  have problems compiling for the 2.4.20-xfs kernel version and won't load.
+a/kernel-modules-2.4.20-i486-7.tgz:  Updated to the ac97_codec and emu10k1
+  drivers from CVS (this should support the Audigy cards).  Source for these
+  can be found in source/a/kernel-modules/.
+gnome/gnomeicu-0.99-i386-1.tgz:  Upgraded to gnomeicu-0.99.
+  (suggested by Tobias Svensson)
++--------------------------+
+Sun Mar 16 22:23:38 PST 2003
+extra/blackbox-0.65.0/blackbox-0.65.0-i386-1.tgz:  Upgraded to
+  blackbox-0.65.0.  (thanks to Dell'Aiera Pol for pointing out that blackbox
+  needed an upgrade, and casting another vote for fluxbox too :)
+extra/btmgr-3.7/btmgr-3.7_1-i386-1.tgz:  Added btmgr-3.7-1.  This is a boot
+  manager (Smart Boot Manager, or SBM) written in assembly that's small,
+  and can actually boot a CD-ROM without any need for the BIOS to support it.
+  So, if you've got machines that "can't boot a CD-ROM", you might be able
+  to boot a floppy disk with SBM and then boot the CD from the SBM menu.
+  (thanks to Gerardo Exequiel Pozzi for the tip)
+extra/emu-tools-0.9.4/emu-tools-0.9.4-i386-1.tgz:  Added tools for Creative
+  sound cards that use the emu10k1 driver.  (suggested by Marc Mironescu)
+extra/fluxbox-0.1.14/fluxbox-0.1.14-i386-1.tgz:  Added fluxbox-0.1.14.
+  (by popular demand  :-)
+extra/kernel-modules-2.4.20_xfs/kernel-modules-2.4.20_xfs-i486-5.tgz:
+  Updated emu10k1 and ac97_codec to support new cards.
+extra/vlc-0.5.2/vlc-0.5.2-i386-1.tgz:  Added vlc-0.5.2, the VideoLAN client
+  video player.  (for real fun, try 'vlc -V aa some-file.mpg' on the console)
+rootdisks/sbootmgr.dsk:  Added a floppy image with the Smart Boot Manager.
+a/kernel-modules-2.4.20-i486-6.tgz:  Updated emu10k1 and ac97_codec.
+d/nasm-0.98.36-i386-1.tgz:  Upgraded to nasm-0.98.36.
+kde/qt-3.1.2-i386-2.tgz:  Upgraded to qt-x11-free-3.1.2 with Xinerama support.
+kde/koffice-1.2.1-i386-3.tgz:  Added two official patches to fix possible
+  crashes with KWord.
+kde/*.tgz:  Recompiled all KDE packages against the new Qt.
+x/xfree86-4.3.0-i386-2.tgz:  Removed /etc/X11/xinit/.Xmodmap.  This doesn't
+  seem to be needed anymore, and in 4.3.0 it breaks leaving X with Ctrl-Alt-BS.
+  Thanks to Piter PUNK for the bug report and fix.
+xap/fvwm-2.4.15-i386-2.tgz:  Fixed middle mouse button (thanks to grizzarv).
++--------------------------+
+Sat Mar 15 13:02:46 PST 2003
+n/samba-2.2.8-i386-1.tgz:  Upgraded to Samba 2.2.8.  From the Samba web site:
+
+     * (14th Mar, 2003) Security Release - Samba 2.2.8
+
+     A flaw has been detected in the Samba main smbd code which
+     could allow an external attacker to remotely and anonymously
+     gain Super User (root) privileges on a server running a
+     Samba server. This flaw exists in previous versions of Samba
+     from 2.0.x to 2.2.7a inclusive. This is a serious problem
+     and all sites should either upgrade to Samba 2.2.8
+     immediately or prohibit access to TCP ports 139 and 445.
+
+(* Security fix *)
++--------------------------+
+Fri Mar 14 22:04:48 PST 2003
+a/sysklogd-1.4.1-i386-7.tgz:  To improve filesystem performance, by default we
+  should not sync() after every write to the logs.  Thanks to Bruno H. Collovini
+  for the tip.
+n/iptraf-2.7.0-i386-1.tgz:  Added iptraf-2.7.0.
+  (suggested by Bruno H. Collovini)
+n/wireless-tools-25-i386-2.tgz:  Recompiled to quiet version warnings.
+  (thanks to Dominik L. Borkowski)
++--------------------------+
+Fri Mar 14 00:52:10 PST 2003
+Slackware 9.0-rc3 is released for testing...  third time's the charm?
+extra/checkinstall-1.5.3/checkinstall-1.5.3-i386-1.tgz:  Added checkinstall
+  (patched to use Slackware's native makepkg tool).  Thanks to Ezio and izto for
+  talking me into this on /.  :-)
+extra/java2-runtime-environment/j2re-1_4_1_02-i586-1.tgz:  Upgraded to
+  j2re-1_4_1_02.
+rootdisks/install.*, isolinux/initrd.img:  Patched a cosmetic bug in SeTkernel.
+d/gcc-3.2.2-i386-3.tgz:  Updated the fixed Mozilla headers.
+gnome/gedit-2.2.1-i386-1.tgz:  Upgraded to gedit-2.2.1.
+gnome/libgnomeprint-2.2.1.2-i386-1.tgz:  Upgraded to libgnomeprint-2.2.1.2.
+gnome/libgnomeprintui-2.2.1.2-i386-1.tgz:  Upgraded to libgnomeprintui-2.2.1.2.
+n/bitchx-1.0c19-i386-2.tgz:  Patched to fix a crash on malformed input.
+xap/mozilla-1.3-i386-1.tgz:  Upgraded to mozilla-1.3 (with xft support).
+y/bsd-games-2.13-i386-6.tgz:  Patched bsd-games-login-fortune.sh to only output
+  a fortune if it's an interactive shell.  This fixes some problems if you
+  source /etc/profile in .bashrc or other startup scripts (with ssh and scp for
+  example).  Thanks to Brandon Zehm for the patch.
++--------------------------+
+Wed Mar 12 16:06:02 PST 2003
+bootdisks/:  Regenerated bootdisks to fix a couple that didn't boot.
+kernels/scsi.s/:  Recompiled.
+kernels/scsi2.s/:  Recompiled.
++--------------------------+
+Tue Mar 11 21:47:47 PST 2003
+bootdisks/:  Regenerated bootdisks from new kernels.
+rootdisks/install.*, isolinux/initrd.img:  Updated kernel modules.
+kernels/:  Recompiled using '# CONFIG_MODVERSIONS is not set'.
+extra/kernel-modules-2.4.20_xfs/kernel-modules-2.4.20_xfs-i486-4.tgz:
+  Recompiled.
+extra/qt-3.1.2/qt-3.1.2-i386-1.tgz:  This was recommended by several people as
+  an important fix for Opera, but installing it causes all kinds of display
+  problems with KDE (particularly with fixed fonts such as the one used by
+  Konsole).  If you care more about Opera than KDE, you might want to install
+  this, otherwise it's probably a bad idea.
+a/kernel-ide-2.4.20-i486-4.tgz:  Recompiled.
+a/kernel-modules-2.4.20-i486-5.tgz:  Recompiled.
+a/openssl-solibs-0.9.7a-i386-2.tgz:  Recompiled.
+ap/man-1.5l-i386-1.tgz:  Upgraded to man-1.5l.  This fixes a (very minor)
+  security problem where man might try to execute a binary named 'unsafe' as
+  the user running man.  Luckily, a binary with this exact name is extremely
+  unlikely to exist in the $PATH.
+  (* Security fix *)
+ap/man-pages-1.56-noarch-1.tgz:  Upgraded to man-pages-1.56.
+d/automake-1.7.3-noarch-1.tgz:  Upgraded to automake-1.7.3.
+d/kernel-headers-2.4.20-i386-4.tgz:  Updated headers.
+gnome/eel-2.2.2-i386-1.tgz:  Upgraded to eel-2.2.2.
+gnome/gnome2-user-docs-2.0.6-noarch-1.tgz:  Upgraded to gnome2-user-docs-2.0.6.
+gnome/librsvg-2.2.4-i386-1.tgz:  Upgraded to librsvg-2.2.4.
+gnome/nautilus-2.2.2-i386-1.tgz:  Upgraded to nautilus-2.2.2.
+k/kernel-source-2.4.20-noarch-4.tgz:  Updated headers and .config.
+n/mutt-1.4i-i386-3.tgz:  Recompile with both --enable-locales-fix and
+  --without-wc-funcs to fix displaying accented characters in the pager.
+  (thanks to Jurgen Philippaerts)
+n/openssl-0.9.7a-i386-2.tgz:  Fixed man page links (thanks to Sergey Kurilkin).
++--------------------------+
+Mon Mar 10 16:20:39 PST 2003
+isolinux/isolinux.cfg:  Fixed xfs.i boot option (thanks to Chris Willing).
+rootdisks/install.*, isolinux/initrd.img:  Upgraded to dialog-0.9b-20030308.
+kernels/speakup.i/*, bootdisks/speakup.i:  Recompiled using the latest
+  Speakup code from CVS.
+a/aaa_base-9.0.0-noarch-1.tgz:  Updated initial email.
+a/hotplug-2002_08_26-noarch-5.tgz:  Added e100 module to the blacklist so
+  that it won't try to load on top of an already loaded eepro100 module.
+a/pkgtools-9.0.0-i386-1.tgz:  Upgraded to dialog-0.9b-20030308.
+  Fixed missing xwmconfig manpage (thanks to Mark Post).
++--------------------------+
+Sun Mar  9 23:49:43 PST 2003
+Slackware 9.0-rc2 is released for testing.
+bootdisks/:  Regenerated bootdisks from new kernels.
+rootdisks/install.*, isolinux/initrd.img:  Modified /sbin/probe to handle
+  installing to a prepared software RAID array (type Linux RAID autodetect).
+  Thanks to Gaston Dassieu Blanchet for the patch.
+rootdisks/pcmcia.dsk, network.dsk:  Recompiled kernel modules.
+extra/db-4.1.25/db4-4.1.25-i386-1.tgz:  Added db-4.1.25.
+extra/iproute2-2.4.7-now-ss020116-try/iproute2-2.4.7_now_ss020116_try-i386-4.tgz:
+  Recompiled against the fixed libdb3.
+extra/isdn4k-utils/isdn4k-utils-CVS-2003-03-09.tar.gz:  Updated from CVS.
+extra/kernel-modules-2.4.20_xfs/kernel-modules-2.4.20_xfs-i486-3.tgz:
+  Recompiled, updated DRM modules.  Note that the xfs.i kernel did NOT get the
+  ext3 patches because otherwise the XFS patch doesn't apply cleanly.
+extra/lilo-22.5/lilo-22.5-i386-2.tgz:  I'm getting reports of problems with this
+  version of LILO and RAID, so it's being moved into extra/ for now.
+kernels/:  Applied Andrew Morton's ext3 patches.
+a/devs-2.3.1-i386-13.tgz:  Added video, radio, vtx, and vbi devices.
+  Suggested by Kaloyan Naumov.
+a/elflibs-9.0.3-i386-1.tgz:  Updated libdb-3.3.so.
+a/etc-5.0-noarch-11.tgz:  In lang.{csh|sh}, suggest using LANG set to
+  en_US.ISO8859-1 rather than C if problems are encountered with mouse cut and
+  paste with GTK2.  Piter PUNK suggested making en_US.ISO8859-1 the default, but
+  this has other side effects such as changing the sorting of directory listings.
+a/hotplug-2002_08_26-noarch-4.tgz:  Blacklist non-cardbus SCSI kernel modules,
+  as these are likely to be built into the kernel if needed or already loaded
+  from an initrd.
+a/kernel-ide-2.4.20-i486-3.tgz:  Applied Andrew Morton's ext3 patches.
+a/kernel-modules-2.4.20-i486-4.tgz:  Applied Andrew Morton's ext3 patches.
+a/lilo-22.4.1-i386-2.tgz:  If no other kernel is found, look for a built kernel
+  in /usr/src/linux/arch/i386/boot.  (suggested by Jan Rafaj)
+  In liloconfig's expert mode, added a dialog box to show (and possibly edit)
+  the detected location of the MBR.  This is helpful when installing to RAID
+  volumes or other devices that might not be autodetected properly.
+  Reverted to lilo-22.4.1 (for now) due to reported RAID problems with 22.5.
+a/shadow-4.0.3-i386-6.tgz:  Applied a patch from Simon Williams to fix newgrp
+  when run in a 'script' or 'screen' session.
+a/sysvinit-2.84-i386-25.tgz:  In rc.S, don't try to run rc.modules unless
+  /proc/modules exists (thanks to Gerardo Exequiel Pozzi).  Reboot without
+  sulogin if fsck returns a code of 2 or 3 (thanks to Jaroslaw Swierczynski).  
+  In rc.M, don't activate hotplug unless the kernel supports modules.
+ap/vim-6.1-i386-7.tgz:  Updated vim patches through 6.1.385.
+  If /usr/bin/vi doesn't already link to elvis, make a link to vim.
+  (suggested by Lech Szychowski)
+d/kernel-headers-2.4.20-i386-3.tgz:  Applied Andrew Morton's ext3 patches.
+k/kernel-source-2.4.20-noarch-3.tgz:  Applied Andrew Morton's ext3 patches.
+l/db3-3.3.11-i386-3.tgz:  Applied patch.3.3.11.1 to fix db185 problems.
+t/tetex-2.0.2-i386-1.tgz:  Upgraded to tetex-2.0.2.
+t/tetex-doc-2.0.2-i386-1.tgz:  Upgraded to docs from tetex-2.0.2.
+xap/xchat-2.0.1-i386-1.tgz:  Upgraded to xchat-2.0.1.
+  (suggested by guilherme and Yann Brillouet)
+xap/xvim-6.1-i386-7.tgz:  Updated vim patches through 6.1.385.
+  If /usr/bin/vi doesn't already link to elvis, make a link to vim.
+  (suggested by Lech Szychowski)
++--------------------------+
+Sat Mar  8 00:33:50 PST 2003
+rootdisks/install.*, isolinux/initrd.img:  Don't offer to install a software
+  series if it wasn't burned on the install CD.  
+  Thanks to P. Pitts Dockman for the suggestion.
+extra/sgml-tools-1.0.9/sgml-tools-1.0.9-i386-7.tgz:  Fixed ownerships on
+  /usr/bin and gtkdoc tools.
+extra/xlockmore-5.06/xlockmore-5.06-i386-1.tgz:  I've always enjoyed xlock, but
+  IMHO it was time to move it out of the default install.
+a/etc-5.0-noarch-10.tgz:  Don't set LC_ALL in /etc/profile.  Instead, add
+  /etc/profile.d/ add lang.sh and lang.csh to set LANG.  Thanks to penguinista.
+a/gpm-1.19.6-i386-5.tgz:  Autodetect USB mouse in setup.mouse.
+a/hotplug-2002_08_26-noarch-3.tgz:  Mount usbfs, not usbdevfs.
+a/lilo-22.5-i386-1.tgz:  Upgraded to lilo-22.5.
+a/pkgtools-8.9.1-i386-3.tgz:  Don't set a (US) keyboard in the default
+  XF86Config-vesa.  Also, a minor patch to xfree86setup to insure the freetype
+  module is loaded.
+a/sysvinit-2.84-i386-24.tgz:  Try to run fc-cache at boot.
+d/distcc-1.2.3-i386-1.tgz:  Upgraded to distcc-1.2.3.
+gnome/libbonoboui-2.2.0.1-i386-1.tgz:  Upgraded to libbonoboui-2.2.0.1.
+n/iptables-1.2.7a-i386-2.tgz:  Recompiled to enable new 2.4.20 features.
+n/pine-4.53-i386-3.tgz:  Added pinepgp-0.18.0.
+n/netatalk-1.6.1-i386-2.tgz:  This was still missing --with-shadow.
+  (Thanks again to Garrick Meeker)
+n/samba-2.2.7a-i386-4.tgz:  Moved rc.samba into /etc/rc.d, and made it chmod 644
+  so that after a full installation Samba will not attempt to start by default
+  (without an installed smb.conf it won't start anyway).  To get it to start at
+  boot, chmod 755 /etc/rc.d/rc.samba, and install a config file
+  (/etc/samba/smb.conf).
+n/tcpip-0.17-i386-16.tgz:  Detect more network cards in netconfig, and fix
+  loopback setup (thanks to John Yost).
+xap/gnuplot-3.7.3-i386-1.tgz:  Upgraded to gnuplot-3.7.3.
+xap/xscreensaver-4.08-i386-1.tgz:  Upgraded to xscreensaver-4.08.
++--------------------------+
+Thu Mar  6 20:40:09 PST 2003
+n/netatalk-1.6.1-i386-1.tgz:  Upgraded to netatalk-1.6.1.  (suggested by
+  Garrick Meeker, as it's needed to build against the new OpenSSL, and it
+  fixes a problem with using MD5 passwords with netatalk).
+tcl/tcl-8.4.2-i386-1.tgz:  Upgraded to tcl-8.4.2.
+tcl/tk-8.4.2-i386-1.tgz:  Upgraded to tk-8.4.2.
+xap/mozilla-1.2.1-i386-3.tgz:  Mozilla is no longer stuck on the Modern theme.
++--------------------------+
+Thu Mar  6 00:02:35 PST 2003
+a/gzip-1.3.3-i386-2.tgz:  Added missing docs.
+a/pcmcia-cs-3.2.4-i386-1.tgz:  Upgraded to pcmcia-cs-3.2.4.  Fixed network
+  script to find the dhcpcd pid file correctly (thanks to GertJan Spoelman
+  David Nordenberg, and Harri Olin, who all reported this issue :-).
+kde/kdebase-3.1-i386-3.tgz:  Rebuilt against openssl-0.9.7a.
+n/apache-1.3.27-i386-2.tgz:  chmod 644 /etc/rc.d/rc.httpd, so that after a
+  full installation Apache will NOT start at boot by default.  Upgrading to
+  this package will also disable starting Apache at boot until you execute
+  chmod 755 /etc/rc.d/rc.httpd.
+n/proftpd-1.2.8-i386-2.tgz:  The install script now removes any existing
+  files in /var/run/proftpd.  Otherwise, old files may prevent ProFTPD from
+  starting up from inetd.  (reported by Luigi Genoni)
++--------------------------+
+Wed Mar  5 01:28:34 PST 2003
+Recompiled glibc using a patch by Lance Larsh (via Alessandro Suardi and
+Luigi Genoni) to fix a problem in the dynamic loader that broke Oracle
+(and some other binaries).  This same patch was included in glibc-2.3.2 by
+Ulrich Drepper as noted here in the glibc ChangeLog:
+
+        * sysdeps/mips/dl-machine.h (ELF_MACHINE_RUNTIME_TRAMPOLINE): Fix
+        masking of version index.
+        Patch by Lance Larsh <Lance.Larsh@oracle.com>.
+
+I'm sure many of you were hoping to see an update to glibc-2.3.2 here, but I
+don't see anything to be gained by switching to 2.3.2 at the last minute.  I've
+been testing it here, and although the ctype patch applies cleanly the result
+does not compile.  Without the patch, most existing static binaries will again
+be broken under glibc-2.3.2 (this has been tested here with CompuPic).
+IMHO, it's best to leave the glibc-2.3.2 issues for later.
+extra/glibc-extra-packages/glibc-debug-2.3.1-i386-3.tgz:  Patched, recompiled.
+extra/glibc-extra-packages/glibc-profile-2.3.1-i386-3.tgz:  Patched,
+  recompiled.
+rootdisks/install.*, isolinux/initrd.img:  Fixed installing to a cciss device.
+  Many thanks to William Hunt for the bug report and patch.  :-)
+a/bin-8.5.0-i386-1.tgz:  Upgraded to file-3.41.  This fixes a buffer overflow
+  that could be a local security issue.  
+  For details, see iDEFENSE Security Advisory 03.04.03:
+  http://www.idefense.com/advisory/03.04.03.txt
+  (* Security fix *)
+a/elflibs-9.0.2-i386-1.tgz:  Added libpng.so.2.1.0.12.
+a/glibc-solibs-2.3.1-i386-3.tgz:  Patched, recompiled.
+a/glibc-zoneinfo-2.3.1-noarch-2.tgz:  Changed the timeconfig script to show a
+  description in pkgtool.
+a/pkgtools-8.9.1-i386-2.tgz:  Fixed {explode,install,make}pkg to detect the
+  tar version correctly when LC_MESSAGES != C.  Thanks to Andrew W. Nosenko
+  for the patch.
+ap/jove-4.16.0.61-i386-1.tgz:  Upgraded to jove-4.16.0.61.
+l/glibc-2.3.1-i386-3.tgz:  Patched, recompiled.
+n/bind-9.2.2-i386-1.tgz:  Upgraded to bind-9.2.2.
+n/ntp-4.1.1a-i386-2.tgz:  Added "restrict default noquery notrust nomodify"
+  to ntp.conf.new at Alan Brown's suggestion.
+n/popa3d-0.6.1-i386-1.tgz:  Upgraded to popa3d-0.6.1.
+n/proftpd-1.2.8-i386-1.tgz:  Upgraded to proftpd-1.2.8.
++--------------------------+
+Mon Mar  3 21:15:49 PST 2003
+gnome/bonobo-activation-2.2.1-i386-1.tgz:  Upgraded to bonobo-activation-2.2.1.
+gnome/eel-2.2.1-i386-1.tgz:  Upgraded to eel-2.2.1.
+gnome/ghex-2.2.0-i386-1.tgz:  Upgraded to ghex-2.2.0.
+gnome/gnome-terminal-2.2.1-i386-1.tgz:  Upgraded to gnome-terminal-2.2.1.
+gnome/gnome-vfs-2.2.2-i386-1.tgz:  Upgraded to gnome-vfs-2.2.2 and
+  gnome-vfs-extras-0.99.10.
+gnome/libgnomecanvas-2.2.0.2-i386-1.tgz:  Upgraded to libgnomecanvas-2.2.0.2.
+gnome/nautilus-2.2.1-i386-1.tgz:  Upgraded to nautilus-2.2.1.
+gnome/vte-0.10.25-i386-1.tgz:  Upgraded to vte-0.10.25.
+kdei/kde-i18n-bg-3.1-noarch-2.tgz:  Updated from CVS to fix a bug which
+  prevented KDE from starting with the locale set to bg.
+  Thanks to Kaloyan Naumov for the bug report.
+t/transfig-3.2.4-i386-1.tgz:  Upgraded to transfig-3.2.4.
+xap/abiword-1.0.4-i386-1.tgz:  Upgraded to abiword-1.0.4.
++--------------------------+
+Mon Mar  3 11:08:27 PST 2003
+n/sendmail-8.12.8-i386-1.tgz:  Upgraded to sendmail-8.12.8.
+  From sendmail's RELNOTES:
+    SECURITY: Fix a remote buffer overflow in header parsing by dropping sender
+    and recipient header comments if the comments are too long.  Problem noted
+    by Mark Dowd of ISS X-Force.
+  (* Security fix *)
+n/sendmail-cf-8.12.8-noarch-1.tgz:  Updated config files for sendmail-8.12.8.
+----------------------------
+Sun Mar  2 18:39:56 PST 2003
+This is Slackware 9.0-rc1, and is now (mostly) frozen to be prepared for
+release.  If you find any remaining issues, let me know soon!
+extra/cups-1.1.18/cups-1.1.18-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+pasture/freetype-1.3.1/freetype-1.3.1-i386-3.tgz:  Moved to pasture.
+a/elflibs-9.0.1-i386-1.tgz:  Removed old version of libfontconfig in /usr/lib.
+  Updated freetype2 library in /usr/lib to libfreetype.so.6.3.1.
+a/kernel-modules-2.4.20-i486-3.tgz:  Upgraded to kernel DRM modules from
+  XFree86-4.3.0.
+a/lprng-3.8.20-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+a/sed-4.0.5-i386-2.tgz:  Fixed missing manpage/docs (thanks to Mario Stabrey).
+gnome/gthumb-2.1.0-i386-1.tgz:  Upgraded to gthumb-2.1.0.
+kde/kdelibs-3.1-i386-2.tgz:  Rebuilt against openssl-0.9.7a.  Luigi Genoni
+  reported that this wasn't linking properly against the new OpenSSL libs, and
+  this prompted me to rebuild many things that link with OpenSSL.  If anyone
+  spots any more problems, please let me know.
+l/fontconfig-1.0.1-i386-4.tgz:  Removed.  (fontconfig is part of XFree86 4.3.0)
+l/pango-1.2.1-i386-2.tgz:  Rebuilt against freetype-2.1.1 from XFree86-4.3.0.
+l/xft2-2.0.0-i386-2.tgz:  Removed.  (Xft2 is part of XFree86 4.3.0)
+n/curl-7.10.3-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/fetchmail-6.2.2-i386-1.tgz:  Upgraded to fetchmail-6.2.2.
+n/imapd-4.53-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/lftp-2.6.5-i386-1.tgz:  Upgraded to lftp-2.6.5.
+n/links-0.98-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/lynx-2.8.4-i386-5.tgz:  Rebuilt against openssl-0.9.7a.
+n/mod_ssl-2.8.12_1.3.27-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/mutt-1.4i-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/php-4.3.1-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/pine-4.53-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/rp-pppoe-3.5-i386-1.tgz:  Upgraded to rp-pppoe-3.5 (Brian Bisaillon reminded
+  me first), and moved to N from extra/ (suggested by Frédéric L. W. Meunier).
+n/samba-2.2.7a-i386-3.tgz:  Rebuilt against openssl-0.9.7a.
+n/traceroute-1.4a12-i386-2.tgz:  Added a patch from Jan Rafaj to show the FQDN
+  (Fully Qualified Domain Name) whenever possible.  Previously the domain was
+  stripped from the localhost and any other host that shared your domain.
+x/xfree86-4.3.0-i386-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-devel-4.3.0-i386-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-docs-4.3.0-noarch-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-docs-html-4.3.0-noarch-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-fonts-100dpi-4.3.0-noarch-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-fonts-cyrillic-4.3.0-noarch-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-fonts-misc-4.3.0-noarch-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-fonts-scale-4.3.0-noarch-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-xnest-4.3.0-i386-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-xprt-4.3.0-i386-1.tgz:  Upgraded to XFree86-4.3.0.
+x/xfree86-xvfb-4.3.0-i386-1.tgz:  Upgraded to XFree86-4.3.0.
+xap/gaim-0.60cvs-i386-2.tgz:  Updated to the latest source code from CVS.
+xap/xchat-2.0.0-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+----------------------------
+Thu Feb 27 17:53:26 PST 2003
+extra/gimp-1.3.12/gimp-1.3.12-i386-1.tgz:  Upgraded to gimp-1.3.12.
+extra/iproute2-2.4.7-now-ss020116-try/iproute2-2.4.7_now_ss020116_try-i386-3.tgz:
+  Patched to add HTB support.
+extra/libsafe-2.0-16/libsafe-2.0.16-i386-1.tgz:  Upgraded to libsafe-2.0-16.
+extra/links-2.1pre7/links-2.1pre7-i386-1.tgz:  Added links-2.1pre7 with support
+  for Javascript and graphical mode using SVGAlib or the framebuffer.
+extra/parted-1.6.5/parted-1.6.5-i386-1.tgz:  Upgraded to parted-1.6.5.
+pasture/libxml-1.8.17/libxml-1.8.17-i386-2.tgz:  Moved to pasture.
+rootdisks/install.*, isolinux/initrd.img:  Updated raidtools, nl keymap.
+a/cxxlibs-5.0.2-i386-1.tgz:  Updated to libstdc++.so.5.0.2.
+a/elflibs-9.0.0-i386-1.tgz:  Upgraded to the latest versions, added CUPS and
+  font handling libraries.
+a/hotplug-2002_08_26-noarch-2.tgz:  Add support for bringing up network
+  interfaces with /etc/rc.d/rc.inet1 (thanks to David Nordenberg), added
+  video framebuffer modules to /etc/hotplug/blacklist.
+a/kbd-1.08-i386-2.tgz:  Merged in fixes for the nl.map from Eric Hameleers.
+a/openssl-solibs-0.9.7a-i386-1.tgz:  Upgraded to openssl-0.9.7a.
+a/pciutils-2.1.11-i386-4.tgz:  Added libpci.a and headers.
+  (suggested by Jaroslaw Swierczynski)
+a/shadow-4.0.3-i386-5.tgz:  Updated to adduser-1.05 (from Stuart Winter).
+a/sysvinit-2.84-i386-23.tgz:  On shutdown, try to stop Apache and process
+  accounting.  Also, kill dhcpcd before bringing down interfaces so that
+  the DHCP leases are released.
+a/tcsh-6.12.00-i386-2.tgz:  Stripped binary.
+ap/espgs-7.05.6-i386-1.tgz:  Upgraded to espgs-7.05.6.
+  This replaces the ghostscript package.
+ap/hpijs-1.3.1-i386-1.tgz:  Upgraded to hpijs-1.3.1.
+ap/raidtools-1.00.3-i386-1.tgz:  Upgraded to raidtools-1.00.3.
+d/gcc-3.2.2-i386-2.tgz:  Updated openssl/bn.h and linux/zconf.h headers.  It
+  looks like new compiler packages will become quite common, since header
+  updates have to be synced into the gcc package (after a full compiler rebuild,
+  of course).  If you upgrade libraries yourself, be aware that old headers in
+  /usr/lib/gcc-lib/*/*/include/ may cause compiles to fail.  Presumably as the
+  headers are updated to comply with standards it will become unneccessary to
+  maintain modified copies, but for now it has to be done.
+d/perl-5.8.0-i386-3.tgz:  Rebuilt against db3-3.3.11.
+gnome/libmikmod-3.1.10-i386-2.tgz:  Fixed perms on /usr/lib/libmikmod.*
+l/db3-3.3.11-i386-2.tgz:  Move libdb-3.3.so from /usr/lib to /lib.
+l/lesstif-0.93.40-i386-1.tgz:  Upgraded to lesstif-0.93.40.
+l/libtermcap-1.2.3-i386-5.tgz:  Put the library in /lib, not /lib/incoming.
+l/libxml2-2.5.4-i386-1.tgz:  Upgraded to libxml2-2.5.4.
+l/libxslt-1.0.27-i386-1.tgz:  Upgraded to libxslt-1.0.27.
+n/gnupg-1.2.1-i386-1.tgz:  Added gnupg-1.2.1.
+n/openssh-3.5p1-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+n/openssl-0.9.7a-i386-1.tgz:  Upgraded to openssl-0.9.7a.
+n/samba-2.2.7a-i386-2.tgz:  Rebuilt with CUPS support.
+n/tcpdump-3.7.2-i386-1.tgz:  Upgraded to tcpdump-3.7.2 and libpcap-0.7.2.
+n/wget-1.8.2-i386-2.tgz:  Rebuilt against openssl-0.9.7a.
+t/tetex-2.0.1-i386-2.tgz:  Rebuilt using --with-system-t1lib.
+tcl/expect-5.38-i386-2.tgz:  Patched "weather" script to use wunderground.com.
+xap/pan-0.13.4-i386-1.tgz:  Upgraded to pan-0.13.4.
+xap/xmms-1.2.7-i386-6.tgz:  Dropped support for CDIndex since it requires the
+  obsolete version of libxml.  Use the CDDB protocol instead.
+xap/xpaint-2.6.9-i386-1.tgz:  Upgraded to xpaint-2.6.9.
+y/bsd-games-2.13-i386-5.tgz:  Replaced a few missing games.
+----------------------------
+Sun Feb 23 17:52:26 PST 2003
+rootdisks/install.*, isolinux/initrd.img:  USB keyboard support.
+xap/pan-0.13.3-i386-1.tgz:  Switched to (stable) pan-0.13.3.
+----------------------------
+Sat Feb 22 23:35:18 PST 2003
+extra/kernel-modules-2.4.20_xfs/kernel-modules-2.4.20_xfs-i486-2.tgz:
+  Added nbd.o.gz, multipath.o.gz, and isense.o.gz.
+bootdisks/:  Regenerated bootdisks from new kernels.
+rootdisks/install.*, isolinux/initrd.img:  Installer enhancements.
+kernels/:  All kernels rebuilt to add process accounting and support
+  network block devices through a kernel module.
+a/devs-2.3.1-i386-12.tgz:  Added /dev/nb? (network block) devices.
+a/kernel-ide-2.4.20-i486-2.tgz:  Rebuilt.
+a/kernel-modules-2.4.20-i486-2.tgz:  Added nbd.o.gz, multipath.o.gz, and
+  isense.o.gz.
+a/sysvinit-2.84-i386-22.tgz:  Don't try to start process accounting unless
+  /var/log/pacct exists.
+ap/acct-6.3.2-i386-1.tgz:  Added acct-6.3.2.
+ap/rpm-4.0.2-i386-6.tgz:  Removed libpopt.
+d/distcc-1.2-i386-1.tgz:  Upgraded to distcc-1.2.
+d/kernel-headers-2.4.20-i386-2.tgz:  Updated /usr/include/linux/autoconf.h.
+f/linux-faqs-20030222-noarch-1.tgz:  Updated.
+f/linux-howtos-20030222-noarch-1.tgz:  Updated.
+f/linux-mini-howtos-20030222-noarch-1.tgz:  Updated.
+k/kernel-source-2.4.20-noarch-2.tgz:  Updated .config and include files.
+l/popt-1.7-i386-1.tgz:  Split libpopt out of the RPM package, and upgraded
+  it to popt-1.7.  Now RPM is throughly optional again.  ;-)
+t/tetex-2.0.1-i386-1.tgz:  Upgraded to tetex-2.0.1.
+t/tetex-doc-2.0.1-i386-1.tgz:  Upgraded to tetex-2.0.1.
+----------------------------
+Fri Feb 21 15:09:27 PST 2003
+a/pciutils-2.1.11-i386-3.tgz:  pciutils now ships with a default prefix
+  of /usr/local.  This has been changed to /usr, fixing a problem with
+  lspci outputing numeric IDs instead of hardware descriptions.
+  (thanks to Petri Kaukasoina for the bug report)
+----------------------------
+Thu Feb 20 23:29:37 PST 2003
+a/pciutils-2.1.11-i386-2.tgz:  Fixed zero-length pcimodules.
+----------------------------
+Thu Feb 20 21:53:46 PST 2003
+extra/bash-completion-20030209/bash-completion-20030209-noarch-1.tgz:
+  Added bash-completion.
+a/bin-8.4.0-i386-1.tgz:  Removed sed and indent.  Upgraded to tree-1.4b3.
+a/getty-ps-2.1.0-i386-1.tgz:  Upgraded to getty-ps-2.1.0.
+a/hdparm-5.3-i386-1.tgz:  Upgraded to hdparm-5.3.
+a/lilo-22.4.1-i386-1.tgz:  Upgraded to lilo-22.4.1.
+a/pciutils-2.1.11-i386-1.tgz:  Upgraded to pciutils-2.1.11.
+a/sed-4.0.5-i386-1.tgz:  Split out of bin package, upgraded to sed-4.0.5.
+a/smartmontools-5.1_7-i386-1.tgz:  Upgraded to smartmontools-5.1-7.
+d/distcc-1.1-i386-1.tgz:  Added distcc-1.1.  (is this cool, or what?  :-)
+d/indent-2.2.9-i386-1.tgz:  Split out of bin package, upgraded to indent-2.2.9.
+tcl/tcl-8.4.1-i386-1.tgz:  Upgraded to tcl-8.4.1.
+tcl/tclx-8.3.5-i386-1.tgz:  Upgraded to tclx-8.3.5.
+tcl/tix-8.1.4-i386-1.tgz:  Upgraded to tix-8.1.4.
+tcl/tk-8.4.1-i386-1.tgz:  Upgraded to tk-8.4.1.
+xap/netscape-7.02-i686-1.tgz:  Upgraded to netscape-7.02.
+----------------------------
+Tue Feb 18 18:38:32 PST 2003
+bootdisks/:  Upgraded to linux-2.4.20.
+rootdisks/pcmcia.dsk, network.dsk:  Upgraded to linux-2.4.20.
+rootdisks/install.*, isolinux/initrd.img:  Installer enhancements.
+extra/kernel-modules-2.4.20_xfs/kernel-modules-2.4.20_xfs-i486-1.tgz:
+  Added an extra package of kernel modules for use with the xfs.i
+  (SGI XFS filesystem patched) kernel.  It seems there are enough changes
+  in the patch all over the kernel that modules compiled for a vanilla
+  2.4.20 kernel will not load against a kernel patched with XFS.  
+  Let's hope XFS makes it into the main kernel soon...  I'd hate to have
+  to haul this package around forever.  ;-)
+extra/kfiresaver3d-0.6/kfiresaver3d-0.6-i386-1.tgz:  Added 
+  kfiresaver3d-0.6 (a GL screensaver for KDE).
+a/jfsutils-1.1.1-i386-1.tgz:  Upgraded to jfsutils-1.1.1.
+a/kbd-1.08-i386-1.tgz:  Upgraded to kbd-1.08 and changed the name of the
+  console font selection script from "fontconfig" to "setconsolefont" to
+  avoid any confusion with the fontconfig package.
+a/kernel-ide-2.4.20-i486-1.tgz:  Upgraded to linux-2.4.20.
+a/kernel-modules-2.4.20-i486-1.tgz:  Upgraded to linux-2.4.20.
+  Fixed a depmod bug in rc.modules (reported by Ladislav Tomes).
+a/modutils-2.4.22-i386-1.tgz:  Upgraded to modutils-2.4.22.
+a/pcmcia-cs-3.2.3-i386-1.tgz:  Upgraded to pcmcia-cs-3.2.3.
+a/pkgtools-8.9.1-i386-1.tgz:  Add pkgtool labels to the setup.* scripts.
+a/procps-3.1.6-i386-1.tgz:  Upgraded to procps-3.1.6.
+a/util-linux-2.11z-i386-1.tgz:  Upgraded to util-linux-2.11z.
+a/xfsprogs-2.3.5-i386-1.tgz:  Upgraded to xfsprogs-2.3.5.
+d/kernel-headers-2.4.20-i386-1.tgz:  Upgraded to linux-2.4.20.
+gnome/scrollkeeper-0.3.11-i386-2.tgz:  Renamed setup script, added label.
+k/kernel-source-2.4.20-noarch-1.tgz:  Upgraded to linux-2.4.20.
+l/fontconfig-1.0.1-i386-4.tgz:  Add pkgtool info to the setup script.
+n/php-4.3.1-i386-1.tgz:  Upgraded to php-4.3.1  This fixes a serious
+  security vulnerability in CGI SAPI.  Most sites don't use this mode of
+  operation, but if you do -- upgrade.
+  (* Security fix *)
+n/tcpip-0.17-i386-15.tgz:  Upgraded to tftp-hpa-0.33 and whois-4.6.2.
+  Made a few enhancements to the netconfig script.
+----------------------------
+Fri Feb 14 09:59:40 PST 2003
+isolinux/initrd.img, rootdisks/install*:  A few installer changes.
+extra/dip-3.3.7p/dip-3.3.7p-i386-1.tgz:  Brought back dip-3.3.7p.
+  Thanks to Jan Rafaj for the patches.  :-)
+a/less-381-i386-1.tgz:  Upgraded to less-381.
+a/pkgtools-8.9.0-i386-1.tgz:  Add some more scripts in /var/log/setup to
+  take over parts of the installer's SeTconfig script.  Remove reference
+  to 'setup' in the pkgtool man page.
+a/slocate-2.7-i386-1.tgz:  Upgraded to slocate-2.7.
+a/tcsh-6.12.00-i386-1.tgz:  Upgraded to tcsh-6.12.00.
+d/python-2.2.2-i386-3.tgz:  Stripped binaries.
+ap/man-1.5k-i386-1.tgz:  Upgraded to man-1.5k.
+ap/man-pages-1.55-noarch-1.tgz:  Upgraded to man-pages-1.55.
+ap/rpm-4.0.2-i386-5.tgz:  Recompiled more binaries in the package statically,
+  because they don't work linked with the latest glibc.  Newer versions seem
+  even buggier here... at least this can actually build working rpms.  
+ap/texinfo-4.5-i386-1.tgz:  Upgraded to texinfo-4.5.
+ap/workbone-2.40-i386-3.tgz:  Fix for hundreds of phantom blank lines in the
+  man page (from Mark Hill).
+gnome/gnome-games-2.2.0-i386-2.tgz:  Stripped binaries.
+l/fontconfig-1.0.1-i386-3.tgz:  Setup script renamed.
+l/libjpeg-6b-i386-4.tgz:  Stripped binaries.
+l/xft2-2.0.0-i386-2.tgz:  Fixed man page.
+xap/fvwm-2.4.15-i386-1.tgz:  Upgraded to fvwm-2.4.15.
+xap/pan-0.13.3.93-i386-1.tgz:  Upgraded to pan-0.13.3.93.
+xap/sane-1.0.11-i386-1.tgz:  Upgraded to sane-frontends-1.0.10 and
+  sane-backends-1.0.11.
+xap/windowmaker-0.80.2-i386-1.tgz:  Upgraded to WindowMaker-0.80.2.
+xap/xchat-2.0.0-i386-1.tgz:  Upgraded to xchat-2.0.0.  Moved here from the
+  gnome series since xchat no longer requires libgnome.
+xap/xfce-3.8.18-i386-1.tgz:  Upgraded to xfce-3.8.18.
+xap/xlockmore-5.06-i386-1.tgz:  Upgraded to xlockmore-5.06.  This contains
+  the biggest, scariest setuid root binary in Slackware.  I'm considering
+  moving this package out of the default install...   maybe to /extra?
+xap/xpaint-2.6.8-i386-1.tgz:  Upgraded to xpaint-2.6.8.
+xap/xpdf-2.01-i386-1.tgz:  Upgraded to xpdf-2.01.
+xap/xscreensaver-4.07-i386-1.tgz:  Upgraded to xscreensaver-4.07.
+y/bsd-games-2.13-i386-4.tgz:  Stripped /usr/sbin/huntd.
+----------------------------
+Mon Feb 10 20:15:22 PST 2003
+extra/mpg123-0.59r-i386-1.tgz:  Added mpg123-0.59r.
+a/syslinux-2.01-i386-1.tgz:  Upgraded to syslinux-2.01.
+ap/cdrtools-2.0-i386-1.tgz:  Upgraded to cdrtools-2.0 and zisofs-tools-1.0.4.
+ap/lsof-4.66-i386-1.tgz:  Upgraded to lsof-4.66.
+ap/lvm-1.0.6-i386-1.tgz:  Upgraded to lvm-1.0.6.
+ap/mc-4.6.0-i386-1.tgz:  Upgraded to mc-4.6.0.
+ap/mysql-3.23.55-i386-1.tgz:  Upgraded to mysql-3.23.55.
+ap/quota-3.08-i386-1.tgz:  Upgraded to quota-3.08.
+ap/sc-7.16-i386-1.tgz:  Upgraded to sc-7.16.
+d/bin86-0.16.11-i386-1.tgz:  Upgraded to bin86-0.16.11.
+d/gcl-2.4.4-i386-1.tgz:  Upgraded to gcl-2.4.4.
+d/gdb-5.3-i386-1.tgz:  Upgraded to gdb-5.3.
+d/guile-1.6.3-i386-1.tgz:  Upgraded to guile-1.6.3.
+l/aspell-0.50.3-i386-3.tgz:  Stripped binaries.
+l/libieee1284-0.2.6-i386-2.tgz:  Stripped binaries.
+n/yptools-2.8-i386-2.tgz:  Upgraded to ypserv-2.7.
+----------------------------
+Sat Feb  8 18:25:06 PST 2003
+a/openssl-solibs-0.9.6h-i386-2.tgz:  Recompiled using ./config ... shared
+  instead of the (older) ./config ... ; make do_linux-shared.  This fixes
+  some issues with certain apps, and seems to be a better way to build
+  OpenSSL.  Thanks to Jaroslaw Swierczynski for reporting this problem.
+a/procps-3.1.5-i386-2.tgz:  Added procinfo patch from Petri Kaukasoina to
+  fix uptime and idle stats when compiled with gcc3 (thanks!).
+ap/vim-6.1-i386-6.tgz:  Patched vim to 6.1.320, upgraded ctags to 5.4.
+d/binutils-2.13.90.0.18-i386-1.tgz:  Upgraded to binutils-2.13.90.0.18.
+  Added ksymoops-2.4.8 (suggested by Paul Blazejowski). 
+  (it is placed here because it links with the shared libbfd)
+d/gcc-3.2.2-i386-1.tgz:  Upgraded to gcc-3.2.2.
+d/gcc-g++-3.2.2-i386-1.tgz:  Upgraded to gcc-3.2.2.
+d/gcc-g77-3.2.2-i386-1.tgz:  Upgraded to gcc-3.2.2.
+d/gcc-gnat-3.2.2-i386-1.tgz:  Upgraded to gcc-3.2.2.
+d/gcc-java-3.2.2-i386-1.tgz:  Upgraded to gcc-3.2.2.
+d/gcc-objc-3.2.2-i386-1.tgz:  Upgraded to gcc-3.2.2.
+gnome/acme-2.0.2-i386-1.tgz:  Upgraded to acme-2.0.2.
+gnome/bug-buddy-2.2.102-i386-1.tgz:  Upgraded to bug-buddy-2.2.102.
+gnome/control-center-2.2.0.1-i386-1.tgz:  Upgraded to control-center-2.2.0.1.
+gnome/crux-1.9.5-i386-1.tgz:  Removed.
+gnome/gdm-2.4.1.3-i386-1.tgz:  Upgraded to gdm-2.4.1.3, bugfixes.
+gnome/gedit-2.2.0.1-i386-1.tgz:  Upgraded to gedit-2.2.0.1.
+gnome/ggv-1.99.98-i386-1.tgz:  Upgraded to ggv-1.99.98.
+gnome/gnome-desktop-2.2.0.1-i386-1.tgz:  Upgraded to gnome-desktop-2.2.0.1.
+gnome/gnome-extra-themes-1.0.1-noarch-1.tgz:  Removed Sandwish theme.
+gnome/gnome-themes-2.2-i386-1.tgz:  Upgraded to gnome-themes-2.2.
+gnome/gnome-media-2.2.1.1-i386-1.tgz:  Upgraded to gnome-media-2.2.1.1.
+gnome/gnome-mime-data-2.2.0-noarch-1.tgz:  Upgraded to gnome-mime-data-2.2.0.
+gnome/gnome-panel-2.2.0.1-i386-1.tgz:  Upgraded to gnome-panel-2.2.0.1.
+gnome/gnome-session-2.2.0.2-i386-1.tgz:  Upgraded to gnome-session-2.2.0.2.
+gnome/gnome2-user-docs-2.0.5-noarch-1.tgz:  Upgraded to
+  gnome2-user-docs-2.0.5.
+gnome/gstreamer-0.6.0-i386-2.tgz:  Remove some python files that shouldn't
+  have been included.
+gnome/gtk-engines-2.2.0-i386-2.tgz:  Added gtk-thinice-engine-2.0.2.
+gnome/gthumb-2.0.1-i386-1.tgz:  Upgraded to gthumb-2.0.1.
+gnome/libgnomeprint-2.2.1.1-i386-1.tgz:  Upgraded to libgnomeprint-2.2.1.1.
+gnome/libgnomeprintui-2.2.1.1-i386-1.tgz:  Upgraded to libgnomeprintui-2.2.1.1.
+gnome/librsvg-2.2.3-i386-1.tgz:  Upgraded to librsvg-2.2.3.
+gnome/metacity-2.4.34-i386-1.tgz:  Upgraded to metacity-2.4.34.
+gnome/nautilus-media-0.2.1-i386-1.tgz:  Upgraded to nautilus-media-0.2.1.
+gnome/vte-0.10.17-i386-1.tgz:  Upgraded to vte-0.10.17.
+gnome/xchat-2.0.0pre1-i386-1.tgz:  Upgraded to xchat-2.0.0pre1.
+kde/kdebase-3.1-i386-2.tgz:  Adjusted konsole to default to the Linux konsole
+  scheme with a nice large font, and make konsole.desktop launch a login shell.
+  In /opt/kde/share/config/kdm/, make Xsession a link to /etc/X11/xdm/Xsession.
+l/glib2-2.2.1-i386-1.tgz:  Upgraded to glib-2.2.1.
+l/gtk+2-2.2.1-i386-1.tgz:  Upgraded to gtk+-2.2.1.
+l/pango-1.2.1-i386-1.tgz:  Upgraded to pango-1.2.1.
+n/openssl-0.9.6h-i386-2.tgz:  Recompiled.
+x/xfree86-4.2.1.1-i386-2.tgz:  Removed /usr/X11R6/bin/freetype-config (the copy
+  in /usr/bin is the good one).  Fixed /etc/X11/xdm/Xsession to try to grab the
+  user's custom $PATH using their shell of choice (from Jim Diamond... only took
+  me a year to figure out ;-).  No longer exec .xsession before trying to start
+  a window manager that was requested by xdm.  
+xap/pan-0.13.3.91-i386-1.tgz:  Upgraded to pan-0.13.3.91.
+xap/xvim-6.1-i386-6.tgz:  Patched vim to 6.1.320, upgraded ctags to 5.4.
+y/bsd-games-2.13-i386-3.tgz:  Ran strfile -x on the -o fortunes.
+----------------------------
+Mon Feb  3 20:35:25 PST 2003
+a/gettext-0.11.5-i386-1.tgz:  Upgraded to gettext-0.11.5.
+a/pkgtools-8.1.1-i386-7.tgz:  Upgraded to dialog-0.9b-20030130.
+a/procps-3.1.5-i386-1.tgz:  Upgraded to procps-3.1.5.
+d/autoconf-2.57-noarch-1.tgz:  Upgraded to autoconf-2.57.
+d/automake-1.7.2-noarch-1.tgz:  Upgraded to automake-1.7.2.
+d/gettext-tools-0.11.5-i386-1.tgz:  Upgraded to gettext-0.11.5.
+d/libtool-1.4.3-i386-1.tgz:  Upgraded to libtool-1.4.3.
+gnome/gnome-media-2.2.0-i386-2.tgz:  Recompiled against gstreamer-0.6.0.
+gnome/gst-plugins-0.6.0-i386-1.tgz:  Upgraded to gst-plugins-0.6.0.
+gnome/gstreamer-0.6.0-i386-1.tgz:  Upgraded to gstreamer-0.6.0.
+gnome/librsvg-2.2.2.1-i386-1.tgz:  Upgraded to librsvg-2.2.2.1.
+gnome/nautilus-media-0.2.0-i386-2.tgz:  Recompiled against gstreamer-0.6.0.
+n/curl-7.10.3-i386-1.tgz:  Upgraded to curl-7.10.3.
+n/fetchmail-6.2.1-i386-1.tgz:  Upgraded to fetchmail-6.2.1.
+n/imapd-4.53-i386-1.tgz:  Recompiled from pine-4.53.
+n/inn-2.3.4-i386-1.tgz:  Upgraded to inn-2.3.4.
+n/links-0.98-i386-1.tgz:  Upgraded to links-0.98.
+n/nail-10.4-i386-1.tgz:  Upgraded to nail-10.4.
+n/ncftp-3.1.5-i386-1.tgz:  Upgraded to ncftp-3.1.5.
+n/netatalk-1.6.0-i386-1.tgz:  Upgraded to netatalk-1.6.0.
+n/netwatch-1.0a-i386-1.tgz:  Upgraded to netwatch-1.0a.
+n/nfs-utils-1.0.1-i386-1.tgz:  Upgraded to nfs-utils-1.0.1.
+n/nn-6.6.4-i386-1.tgz:  Upgraded to nn-6.6.4.
+n/php-4.3.0-i386-4.tgz:  Fixed perms on /usr/bin/pear.
+n/pidentd-3.0.16-i386-1.tgz:  Upgraded to pidentd-3.0.16.
+n/pine-4.53-i386-1.tgz:  Upgraded to pine-4.53.
+n/popa3d-0.5.1-i386-2.tgz:  Define both POP_STANDALONE and POP_OPTIONS so that
+  the server can function in either standalone (with -D) or in inetd mode.
+  Thanks to christian laubscher for suggesting this improvement.
+n/portmap-4.0-i386-2.tgz:  Recompiled.
+n/rsync-2.5.6-i386-1.tgz:  Upgraded to rsync-2.5.6.
+n/samba-2.2.7a-i386-1.tgz:  Upgraded to samba-2.2.7a.
+n/tin-1.5.16-i386-1.tgz:  Upgraded to tin-1.5.16.
+n/wireless-tools-25-i386-1.tgz:  Upgraded to wireless-tools-25.
+t/tetex-20030112-i386-1.tgz:  Upgraded to teTeX-beta-20030112.
+t/tetex-doc-20030112-i386-1.tgz:  Upgraded to teTeX-beta-20030112.
+xap/gaim-0.60cvs-i386-1.tgz:  Upgraded to gaim-0.60cvs.
+xap/imagemagick-5.5.4_3-i386-1.tgz:  Upgraded to ImageMagick-5.5.4-3.
+y/bsd-games-2.13-i386-2.tgz:  Fortune patched to fix bugs in -s and -l (from
+  Simon Williams),  ran strfile on all fortune data files to fix problems with
+  certain fortunes being favored (reported by Mark Hill), fix strfile.8 manpage
+  to list the correct default output file (reported by Faux_Pseudo), changed
+  the name of the scripts in /etc/rc.d/ to bsd-games-login-fortune.* so that
+  users will be more aware of where those #%*&@ login fortunes are coming from.
+pasture/gaim-0.59.8/gaim-0.59.8-i386-1.tgz:  GTK1 version moved to /pasture.
+----------------------------
+Wed Jan 29 19:46:08 PST 2003
+kdei/:  Upgraded to kde-i18n-3.1.
+----------------------------
+Wed Jan 29 16:08:50 PST 2003
+extra/gimp-1.3.11/gimp-1.3.11-i386-1.tgz:  Added gimp-1.3.11 (unstable).
+extra/j2re-1_4_1_01-i586-2.tgz:  Fixed an install script bug which in some cases
+  would place the plugin symlinks in the root directory.
+extra/sgml-tools-1.0.9/sgml-tools-1.0.9-i386-6.tgz:  Upgraded to gtk-doc-1.0.
+a/sysvinit-2.84-i386-21.tgz:  Display a message when running ldconfig, since it
+  might take a while.  For runlevel 4, make the default order:  gdm, kdm, xdm.
+ap/flac-1.1.0-i386-1.tgz:  Upgraded to flac-1.1.0.
+ap/gimp-print-4.2.5-i386-1.tgz:  Upgraded to gimp-print-4.2.5.
+ap/mc-4.6.0pre3-i386-2.tgz:  Updated ./configure options and recompiled.
+gnome/eel-2.2.0.2-i386-1.tgz:  Upgraded to eel-2.2.0.2.
+gnome/eog-2.2.0-i386-1.tgz:  Upgraded to eog-2.2.0.
+gnome/file-roller-2.2.1-i386-1.tgz:  Upgraded to file-roller-2.2.1.
+gnome/gal2-1.99.1-i386-1.tgz:  Upgraded to gal-1.99.1.
+gnome/gedit-2.2.0-i386-1.tgz:  Upgraded to gedit-2.2.0.
+gnome/gnome-utils-2.2.0.3-i386-1.tgz:  Upgraded to gnome-utils-2.2.0.3.
+gnome/gnumeric-1.1.16-i386-1.tgz:  Upgraded to gnumeric-1.1.16.
+gnome/libgnome-2.2.0.1-i386-1.tgz:  Upgraded to libgnome-2.2.0.1.
+gnome/libgnomecanvas-2.2.0.1-i386-1.tgz:  Upgraded to libgnomecanvas-2.2.0.1.
+gnome/libgnomeui-2.2.0.1-i386-1.tgz:  Upgraded to libgnomeui-2.2.0.1.
+gnome/libgsf-1.7.2-i386-1.tgz:  Upgraded to libgsf-1.7.2.
+gnome/librsvg-2.2.1-i386-1.tgz:  Upgraded to librsvg-2.2.1.
+gnome/nautilus-2.2.0.2-i386-1.tgz:  Upgraded to nautilus-2.2.0.2.
+gnome/nautilus-cd-burner-0.3.2-i386-1.tgz:  Upgraded to
+  nautilus-cd-burner-0.3.2.
+gnome/startup-notification-0.5-i386-1.tgz: Upgraded to
+  startup-notification-0.5.
+gnome/vte-0.10.15-i386-1.tgz: Upgraded to vte-0.10.15.
+kde/kdeaddons-3.1-i386-1.tgz:  Upgraded to kdeaddons-3.1.
+kde/kdeadmin-3.1-i386-1.tgz:  Upgraded to kdeadmin-3.1.
+kde/kdeartwork-3.1-i386-1.tgz:  Upgraded to kdeartwork-3.1.
+kde/kdebase-3.1-i386-1.tgz:  Upgraded to kdebase-3.1.
+kde/kdebindings-3.1-i386-1.tgz:  Upgraded to kdebindings-3.1.
+kde/kdeedu-3.1-i386-1.tgz:  Upgraded to kdeedu-3.1.
+kde/kdegames-3.1-i386-1.tgz:  Upgraded to kdegames-3.1.
+kde/kdegraphics-3.1-i386-1.tgz:  Upgraded to kdegraphics-3.1.
+kde/kdelibs-3.1-i386-1.tgz:  Upgraded to kdelibs-3.1.
+kde/kdelinks-1.0-noarch-1.tgz:  Added a package with additional KDE menu
+  links for non-KDE X and GNOME applications.
+kde/kdemultimedia-3.1-i386-1.tgz:  Upgraded to kdemultimedia-3.1.
+kde/kdenetwork-3.1-i386-1.tgz:  Upgraded to kdenetwork-3.1.
+kde/kdepim-3.1-i386-1.tgz:  Upgraded to kdepim-3.1.
+kde/kdesdk-3.1-i386-1.tgz:  Upgraded to kdesdk-3.1.
+kde/kdetoys-3.1-i386-1.tgz:  Upgraded to kdetoys-3.1.
+kde/kdeutils-3.1-i386-1.tgz:  Upgraded to kdeutils-3.1.
+kde/kdevelop-3.0a3-i386-1.tgz:  Upgraded to kdevelop-3.0a3.
+kde/quanta-3.1-i386-1.tgz:  Upgraded to quanta-3.1.
+l/arts-1.1-i386-1.tgz:  Upgraded to arts-1.1.
+n/dhcpcd-1.3.22pl4-i386-1.tgz:  Upgraded to dhcpcd-1.3.22-pl4.
+n/lftp-2.6.4-i386-1.tgz:  Upgraded to lftp-2.6.4.
+n/sendmail-8.12.7-i386-1.tgz:  Upgraded to sendmail-8.12.7.
+n/sendmail-cf-8.12.7-i386-1.tgz:  Upgraded to sendmail-8.12.7.
+xap/gimp-1.2.3-i386-2.tgz:  Recompiled to fix the perl plugin, removed
+  escputil (which is part of the gimp-print package now), and added a
+  GNOME2 menu entry and icon.
+----------------------------
+Mon Jan 27 12:52:31 PST 2003
+n/proftpd-1.2.7-i386-1.tgz:  Upgraded to proftpd-1.2.7.
+----------------------------
+Sun Jan 26 16:13:11 PST 2003
+extra/java2-runtime-environment/j2re-1_4_1_01-i586-1.tgz:
+  Upgraded to version 1.4.1_01 of Sun's Java(TM) 2 Runtime Environment.
+extra/xcdroast-0.98alpha13/xcdroast-0.98alpha13-i386-1.tgz:  Upgraded to
+  xcdroast-0.98alpha13.
+gnome/gnome-applets-2.2.0-i386-1.tgz:  Upgraded to gnome-applets-2.2.0.
+xap/netscape-7.01-i686-1.tgz:  Upgraded to netscape-7.01.
+  (Note that the Linux version of Netscape no longer bundles Java)
+----------------------------
+Sun Jan 26 00:26:08 PST 2003
+ap/mc-4.6.0pre3-i386-1.tgz:  Upgraded to mc-4.6.0-pre3.
+gnome/gdm-2.4.1.2-i386-1.tgz:  Upgraded to gdm-2.4.1.2.  Enable graphical
+  greeter by default.  Fix problems with missing /var/lib/gdb and non-GNOME
+  session types (thanks to mRgOBLIN for the bug report!).
+gnome/gnome-media-2.2.0-i386-1.tgz:  Upgraded to gnome-media-2.2.0.
+l/db3-3.3.11-i386-1.tgz:  Upgraded to Berkeley DB 3.3.11.
+----------------------------
+Thu Jan 23 22:54:43 PST 2003
+extra/cups-1.1.18/cups-1.1.18-i386-1.tgz:  Upgraded to cups-1.1.18.
+a/devs-2.3.1-i386-11.tgz:  Added /dev/input/keyboard and
+  /dev/input/mouse.  Added js? -> input/js? symlinks.  Loosened up
+  default permissions on audio devices a bit allowing anyone to use
+  the audio mixer, or to output (but NOT input) audio.
+a/lprng-3.8.20-i386-1.tgz:  Upgraded to LPRng-3.8.20.
+ap/apsfilter-7.2.5-i386-2.tgz:  Do not include /etc/apsfilter directory,
+  instead let SETUP create it.  This keeps apsfilter from thinking that
+  the initial printer setup is a reconfiguration.
+ap/gimp-print-4.2.4-i386-1.tgz:  Upgraded to gimp-print-4.2.4.
+ap/ifhp-3.5.10-i386-1.tgz:  Upgraded to ifhp-3.5.10.
+gnome/acme-2.0.1-i386-1.tgz:  Added acme-2.0.1.
+gnome/at-spi-1.1.8-i386-1.tgz:  Added at-spi-1.1.8.
+gnome/bonobo-activation-2.2.0-i386-1.tgz:  Added bonobo-activation-2.2.0.
+gnome/bug-buddy-2.2.101-i386-1.tgz:  Added bug-buddy-2.2.101.
+gnome/control-center-2.2.0-i386-1.tgz:  Added control-center-2.2.0.
+gnome/crux-1.9.5-i386-1.tgz:  Added crux-1.9.5.
+gnome/eel-2.2.0-i386-1.tgz:  Added eel-2.2.0.
+gnome/eog-1.1.4-i386-1.tgz:  Added eog-1.1.4.
+gnome/file-roller-2.2.0-i386-1.tgz:  Added file-roller-2.2.0.
+gnome/gail-1.2.0-i386-1.tgz:  Added gail-1.2.0.
+gnome/gal2-0.0.7-i386-1.tgz:  Added gal2-0.0.7.
+gnome/gconf-2.2.0-i386-1.tgz:  Added gconf-2.2.0.
+gnome/gconf-editor-0.4.0-i386-1.tgz:  Added gconf-editor-0.4.0.
+gnome/gdm-2.4.1.1-i386-1.tgz:  Added gdm-2.4.1.1.
+gnome/gedit-2.1.91-i386-1.tgz:  Added gedit-2.1.91.
+gnome/gftp-2.0.14-i386-1.tgz:  Added gftp-2.0.14.
+gnome/ggv-1.99.97-i386-1.tgz:  Added ggv-1.99.97.
+gnome/ghex-2.0.0-i386-1.tgz:  Added ghex-2.0.0.
+gnome/glade-1.1.3-i386-1.tgz:  Added glade-1.1.3.
+gnome/gnome-applets-2.1.3-i386-1.tgz:  Added gnome-applets-2.1.3.
+gnome/gnome-audio-1.4.0-noarch-1.tgz:  Added gnome-audio-1.4.0.
+gnome/gnome-desktop-2.2.0-i386-1.tgz:  Added gnome-desktop-2.2.0.
+gnome/gnome-extra-themes-1.0.0-noarch-1.tgz:  Added gnome-extra-themes-1.0.0.
+gnome/gnome-games-2.2.0-i386-1.tgz:  Added gnome-games-2.2.0.
+gnome/gnome-icon-theme-1.0.0-noarch-1.tgz:  Added gnome-icon-theme-1.0.0.
+gnome/gnome-media-2.1.5-i386-1.tgz:  Added gnome-media-2.1.5.
+gnome/gnome-mime-data-2.0.1-noarch-1.tgz:  Added gnome-mime-data-2.0.1.
+gnome/gnome-panel-2.2.0-i386-1.tgz:  Added gnome-panel-2.2.0.
+gnome/gnome-session-2.2.0.1-i386-1.tgz:  Added gnome-session-2.2.0.1.
+gnome/gnome-system-monitor-2.0.4-i386-1.tgz:  Added gnome-system-monitor-2.0.4.
+gnome/gnome-terminal-2.2.0-i386-1.tgz:  Added gnome-terminal-2.2.0.
+gnome/gnome-themes-1.0-noarch-1.tgz:  Added gnome-themes-1.0.
+gnome/gnome-utils-2.2.0-i386-1.tgz:  Added gnome-utils-2.2.0.
+gnome/gnome-vfs-2.2.0-i386-1.tgz:  Added gnome-vfs-2.2.0.
+gnome/gnome2-user-docs-2.0.4-noarch-1.tgz:  Added gnome2-user-docs-2.0.4.
+gnome/gnomeicu-0.98.126-i386-1.tgz:  Added gnomeicu-0.98.126.
+gnome/gnumeric-1.1.15-i386-1.tgz:  Added gnumeric-1.1.15.
+gnome/gst-plugins-0.5.2-i386-1.tgz:  Added gst-plugins-0.5.2.
+gnome/gstreamer-0.5.2-i386-1.tgz:  Added gstreamer-0.5.2.
+gnome/gthumb-2.0.0-i386-1.tgz:  Added gthumb-2.0.0.
+gnome/gtk-engines-2.2.0-i386-1.tgz:  Added gtk-engines-2.2.0.
+gnome/libbonobo-2.2.0-i386-1.tgz:  Added libbonobo-2.2.0.
+gnome/libbonoboui-2.2.0-i386-1.tgz:  Added libbonoboui-2.2.0.
+gnome/libexif-0.5.9-i386-1.tgz:  Added libexif-0.5.9.
+gnome/libgail-gnome-1.0.2-i386-1.tgz:  Added libgail-gnome-1.0.2.
+gnome/libgnome-2.2.0-i386-1.tgz:  Added libgnome-2.2.0.
+gnome/libgnomecanvas-2.2.0-i386-1.tgz:  Added libgnomecanvas-2.2.0.
+gnome/libgnomeprint-2.2.1-i386-1.tgz:  Added libgnomeprint-2.2.1.
+gnome/libgnomeprintui-2.2.1-i386-1.tgz:  Added libgnomeprintui-2.2.1.
+gnome/libgnomeui-2.2.0-i386-1.tgz:  Added libgnomeui-2.2.0.
+gnome/libgsf-1.6.0-i386-1.tgz:  Added libgsf-1.6.0.
+gnome/libgtkhtml-2.2.0-i386-1.tgz:  Added libgtkhtml-2.2.0.
+gnome/libgtop-2.0.1-i386-1.tgz:  Added libgtop-2.0.1.
+gnome/libidl-0.8.0-i386-1.tgz:  Added libidl-0.8.0.
+gnome/libmikmod-3.1.10-i386-1.tgz:  Added libmikmod-3.1.10.
+gnome/librsvg-2.2.0-i386-1.tgz:  Added librsvg-2.2.0.
+gnome/libwnck-2.2.0-i386-1.tgz:  Added libwnck-2.2.0.
+gnome/linc-1.0.1-i386-1.tgz:  Added linc-1.0.1.
+gnome/metacity-2.4.21-i386-1.tgz:  Added metacity-2.4.21.
+gnome/metacity-setup-0.7.1-i386-1.tgz:  Added metacity-setup-0.7.1.
+gnome/mpeg2dec-0.3.1-i386-1.tgz:  Added mpeg2dec-0.3.1.
+gnome/nautilus-2.2.0-i386-1.tgz:  Added nautilus-2.2.0.
+gnome/nautilus-cd-burner-0.3.1-i386-1.tgz:  Added nautilus-cd-burner-0.3.1.
+gnome/nautilus-media-0.2.0-i386-1.tgz:  Added nautilus-media-0.2.0.
+gnome/orbit2-2.6.0-i386-1.tgz:  Added orbit2-2.6.0.
+gnome/scrollkeeper-0.3.11-i386-1.tgz:  Added scrollkeeper-0.3.11.
+gnome/startup-notification-0.4-i386-1.tgz:  Added startup-notification-0.4.
+gnome/vte-0.10.12-i386-1.tgz:  Added vte-0.10.12.
+gnome/xchat-1.9.8-i386-1.tgz:  Added xchat-1.9.8.
+gnome/yelp-2.2.0-i386-1.tgz:  Added yelp-2.2.0.
+l/aspell-0.50.3-i386-2.tgz:  Added libpspell that was missing before.
+n/nmap-3.00-i386-1.tgz:  Upgraded to nmap-3.00.
+----------------------------
+Tue Jan 21 19:07:37 PST 2003
+l/pango-1.2.0-i386-2.tgz:  Moved /usr/X11R6/lib/libXft.so to
+  /usr/X11R6/lib/libXft1.so and /usr/X11R6/include/X11/Xft/ to
+  /usr/X11R6/include/X11/Xft1/ (to avoid having Pango find the old
+  version of Xft) and recompiled Pango.  It should work better now.
+  Thanks to Jaroslaw Swierczynski for helping me figure this out. :-)
+----------------------------
+Tue Jan 21 13:08:00 PST 2003
+d/cvs-1.11.5-i386-1.tgz:  Upgraded to cvs-1.11.5.  This release fixes a
+   major security vulnerability in the CVS server by which users with
+   read only access could gain write access.  Details should be
+   available at this URL (but don't seem to be yet):
+     http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0015
+   (* Security fix *)
+extra/sgml-tools/sgml-tools-1.0.9-i386-5.tgz:  Fixed some gtk-doc
+  install problems.
+l/atk-1.2.2-i386-1.tgz:  Upgraded to atk-1.2.2.
+l/fontconfig-1.0.1-i386-2.tgz:  Fixed a cosmetic install script bug.
+l/glib2-2.2.0-i386-1.tgz:  Upgraded to glib-2.2.0.
+l/gtk+2-2.2.0-i386-1.tgz:  Upgraded to gtk+-2.2.0.
+l/libxml2-2.5.1-i386-1.tgz:  Upgraded to libxml2-2.5.1.
+l/libxslt-1.0.24-i386-1.tgz:  Upgraded to libxslt-1.0.24.
+l/pango-1.2.0-i386-1.tgz:  Upgraded to pango-1.2.0.
+----------------------------
+Sun Jan 19 16:33:15 PST 2003
+extra/kde-3.1rc5/qt-3.1.1-i386-1.tgz:  Upgraded to qt-x11-free-3.1.1.
+----------------------------
+Sun Jan 19 11:24:45 PST 2003
+n/dhcp-3.0pl2-i386-1.tgz:  Upgraded to dhcp-3.0pl2,
+  which fixes several buffer overflow vulnerabilities, including some
+  which may allow remote attackers to execute arbitrary code on affected
+  systems, though no exploits are known yet.  For complete information,
+  please see:  http://www.cert.org/advisories/CA-2003-01.html
+  (* Security fix *)
+----------------------------
+Fri Jan 17 13:42:10 PST 2003
+extra/aspell-word-lists/:  Added non-English word lists for Aspell.
+extra/bison-1.875/bison-1.875-i386-1.tgz:  Upgraded to bison-1.875.
+extra/sgml-tools/sgml-tools-1.0.9-i386-4.tgz:  Added docbook-xml-4.1.2 and
+  docbook-xsl-1.48.  Upgraded to gtk-doc-0.10.
+d/guile-1.6.1-i386-1.tgz:  Moved here from GNOME, upgraded to guile-1.6.1.
+d/python-2.2.2-i386-2.tgz:  Rebuilt with XML/XSLT/expat support.
+gnome/:  Off to pasture (for now).
+l/arts-1.0.5a-i386-1.tgz:  Moved here from KDE since SDL (and other audio apps)
+  might have a dependancy on this.
+l/aspell-0.50.3-i386-1.tgz:  Added aspell-0.50.3.
+l/aspell-en-0.51_0-noarch-1.tgz:  Added aspell-en-0.51-0.
+l/atk-1.0.3-i386-1.tgz:  Added atk-1.0.3.
+l/esound-0.2.29-i386-1.tgz:  Moved here from GNOME since SDL (and other audio apps)
+  might have a dependancy on this.
+l/expat-1.95.5-i386-1.tgz:  Added expat-1.95.5.
+l/fontconfig-1.0.1-i386-1.tgz:  Added fontconfig-1.0.1.
+l/gmp-4.1.2-i386-1.tgz:  Upgraded to gmp-4.1.2.
+l/glib2-2.0.7-i386-1.tgz:  Added glib-2.0.7.
+l/gnet-1.1.8-i386-1.tgz:  Moved here from GNOME, upgraded to gnet-1.1.8.
+  (this is now used by Pan)
+l/gtk+2-2.0.9-i386-1.tgz:  Added gtk+-2.0.9.
+l/libglade-2.0.1-i386-1.tgz:  Moved here from GNOME, upgraded to libglade-2.0.1.
+  This is mostly used by GNOME, but also by xscreensaver.  It's small, and moving
+  it to the L series removes the need for a special GNOME version of xscreensaver.
+l/libieee1284-0.2.6-i386-1.tgz:  Added libieee1284-0.2.6.
+l/libusb-0.1.7-i386-1.tgz:  Added libusb-0.1.7.
+l/pango-1.0.5-i386-1.tgz:  Added pango-1.0.5.
+l/pilot-link-0.11.5-i386-1.tgz:  Moved here from GNOME (used by kdepim).
+l/sdl-1.2.5-i386-1.tgz:  Moved here from /extra.
+l/xft2-2.0.0-i386-1.tgz:  Added xft2-2.0.0.
+n/nail-10.3-i386-2.tgz:  Moved symlinks from /bin to /usr/bin.
+n/imapd-4.52-i386-1.tgz:  Upgraded to imapd from pine-4.52.
+n/php-4.3.0-i386-3.tgz:  Rebuilt using the included version of GD.
+  Added --enable-fastcgi to the standalone version.
+n/pine-4.52-i386-1.tgz:  Upgraded to pine-4.52.
+xap/abiword-1.0.3-i386-1.tgz:  Moved here from GNOME, upgraded to abiword-1.0.3.
+xap/gaim-0.59.8-i386-1.tgz:  Moved here from GNOME, upgraded to gaim-0.59.8.
+xap/imagemagick-5.5.3_2-i386-1.tgz:  Upgraded to ImageMagick-5.5.3-2.
+xap/mozilla-1.2.1-i386-2.tgz:  Recompiled with --enable-xft (requires
+  expat, fontconfig, and Xft2).
+xap/pan-0.13.3.90-i386-1.tgz:  Moved here from GNOME, upgraded to pan-0.13.3.90.
+xap/sane-1.0.9-i386-1.tgz:  Upgraded to sane-1.0.9, linked with libieee1284
+  and libusb.
+xap/xmms-1.2.7-i386-5.tgz:  Recompiled against libmikmod, removed gnomexmms
+  which is no longer supported under GNOME 2.
+xap/xsane-0.90-i386-1.tgz:  Upgraded to xsane-0.90, linked with libieee1284
+  and libusb.
+xap/xscreensaver-4.06-i386-1.tgz:  Upgraded to xscreensaver-4.06.
+----------------------------
+Fri Jan 10 10:49:00 PST 2003
+d/pkgconfig-0.14.0-i386-1.tgz:  Added pkgconfig-0.14.0.
+kde/arts-1.0.5a-i386-1.tgz:  Upgraded to arts-1.0.5a.
+kde/kdeaddons-3.0.5a-i386-1.tgz:  Upgraded to kdeaddons-1.0.5a.
+kde/kdeadmin-3.0.5a-i386-1.tgz:  Upgraded to kdeadmin-3.0.5a.
+kde/kdeartwork-3.0.5a-i386-1.tgz:  Upgraded to kdeartwork-3.0.5a.
+kde/kdebase-3.0.5a-i386-1.tgz:  Upgraded to kdebase-3.0.5a.
+kde/kdebindings-3.0.5a-i386-1.tgz:  Upgraded to kdebindings-3.0.5a.
+kde/kdeedu-3.0.5a-i386-1.tgz:  Upgraded to kdeedu-3.0.5a.
+kde/kdegames-3.0.5a-i386-1.tgz:  Upgraded to kdegames-3.0.5a.
+kde/kdegraphics-3.0.5a-i386-1.tgz:  Upgraded to kdegraphics-3.0.5a.
+kde/kdelibs-3.0.5a-i386-1.tgz:  Upgraded to kdelibs-3.0.5a.
+kde/kdemultimedia-3.0.5a-i386-1.tgz:  Upgraded to kdemultimedia-3.0.5a.
+kde/kdenetwork-3.0.5a-i386-1.tgz:  Upgraded to kdenetwork-3.0.5a.
+kde/kdepim-3.0.5a-i386-1.tgz:  Upgraded to kdepim-3.0.5a.
+kde/kdesdk-3.0.5a-i386-1.tgz:  Upgraded to kdesdk-3.0.5a.
+kde/kdetoys-3.0.5a-i386-1.tgz:  Upgraded to kdetoys-3.0.5a.
+kde/kdeutils-3.0.5a-i386-1.tgz:  Upgraded to kdeutils-3.0.5a.
+kde/kdevelop-2.1.4_for_KDE_3.0-i386-2.tgz:  Recompiled.
+kde/koffice-1.2.1-i386-2.tgz:  Recompiled with libart_lgpl, which allows
+  building karbon and kontour.  Thanks to Gerardo Pozzi and Marco Berizzi
+  for suggesting the addition of libart.
+kde/qt-3.0.6-i386-1.tgz:  Upgraded to qt-x11-free-3.0.6.
+l/libart_lgpl-2.3.11-i386-1.tgz:  Added libart_lgpl-2.3.11.
+----------------------------
+Tue Jan  7 19:26:52 PST 2003
+ap/apsfilter-7.2.5-i386-1.tgz:  Upgraded to apsfilter-7.2.5.
+ap/hpijs-1.3-i386-1.tgz:  Upgraded to hpijs-1.3.
+ap/mc-4.6.0pre2-i386-1.tgz:  Upgraded to mc-4.6.0-pre2.
+n/yptools-2.8-i386-1.tgz:  Upgraded to yp-tools-2.8 and ypserv-2.6.
+  This fixes a bug where yppasswd fails to work.  Thanks to Dirk van Deun
+  for suggesting the upgrade.
+----------------------------
+Mon Jan  6 20:04:52 PST 2003
+ap/mysql-3.23.54a-i386-1.tgz:  Upgraded to mysql-3.23.54a.
+  According to www.mysql.com, this contains some security fixes.
+  (* Security fix *)
+d/gcc-3.2.1-i386-3.tgz:  Removed old curses.h header from
+  /usr/lib/gcc-lib/i386-slackware-linux/3.2.1/include/ (this was
+  missed last time).
+n/php-4.3.0-i386-2.tgz:  Moved mysql.so module into
+  /usr/lib/php/extensions.
+  Edited php.ini examples to add extension_dir=/usr/lib/php/extensions/
+  and extension=mysql.so.
+  Fixed chmod 666 files under /usr/lib/php/.
+  Changed ./configure option from --mysql=shared to --mysql=shared,/dir
+  which fixes the module (thanks Jimmy Zhou).
+----------------------------
+Sun Jan  5 12:18:14 PST 2003
+t/tetex-20021225-i386-1.tgz:  Upgraded to teTeX-beta-20021225.
+t/tetex-doc-20021225-noarch-1.tgz:  Upgraded to teTeX-beta-20021225.
+----------------------------
+Sat Jan  4 18:36:05 PST 2003
+a/openssl-solibs-0.9.6h-i386-1.tgz:  Upgraded to openssl-0.9.6h.
+n/apache-1.3.27-i386-1.tgz:  Upgraded to apache-1.3.27.
+n/imapd-4.50-i386-2.tgz:  Fixed version in slack-desc.
+n/lynx-2.8.4-i386-4.tgz:  Patched up to lynx2.8.4rel.1d.
+n/mod_ssl-2.8.12_1.3.27-i386-1.tgz:  Upgraded to mod_ssl-2.8.12_1.3.27.
+n/openssl-0.9.6h-i386-1.tgz:  Upgraded to openssl-0.9.6h.
+n/php-4.3.0-i386-1.tgz:  Upgraded to php-4.3.0.
+----------------------------
+Fri Jan  3 14:45:36 PST 2003
+ap/screen-3.9.13-i386-1.tgz:  Upgraded to screen-3.9.13.
+d/gcc-3.2.1-i386-2.tgz:  Removed old ncurses headers from
+  /usr/lib/gcc-lib/i386-slackware-linux/3.2.1/include/.
+l/libtermcap-1.2.3-i386-4.tgz:  Patched to increase the buffer size
+  for parsing termcap entries from 1K to 4K.  Some larger entries were
+  triggering the overflow checking code and were getting truncated,
+  as well as causing a warning message to be output on stderr.
+l/ncurses-5.3-i386-1.tgz:  Upgraded to ncurses-5.3, added C++ bindings
+  (suggested by ziabice), updated screen terminfo entries (suggested by
+  Tomas Szepe).
+----------------------------
+Thu Jan  2 14:24:42 PST 2003
+XFree86 has been updated to version 4.2.1.1 from CVS, which merges in
+the previous security patches as well as some important bug fixes (such
+as a crash upon leaving DRM that I've been trying to figure out ever
+since 4.2.1 came out).
+Oh, and happy new year!  :-) 
+x/xfree86-4.2.1.1-i386-1.tgz:  Upgraded to XFree86-4.2.1.1.
+x/xfree86-devel-4.2.1.1-i386-1.tgz:  Upgraded to XFree86-4.2.1.1.
+x/xfree86-docs-4.2.1.1-noarch-1.tgz:  Upgraded to XFree86-4.2.1.1.
+x/xfree86-docs-html-4.2.1.1-noarch-1.tgz:  Upgraded to XFree86-4.2.1.1.
+x/xfree86-xnest-4.2.1.1-i386-1.tgz:  Upgraded to XFree86-4.2.1.1.
+x/xfree86-xprt-4.2.1.1-i386-1.tgz:  Upgraded to XFree86-4.2.1.1.
+x/xfree86-xvfb-4.2.1.1-i386-1.tgz:  Upgraded to XFree86-4.2.1.1.
+----------------------------
+Fri Dec 13 13:42:19 PST 2002
+a/bzip2-1.0.2-i386-4.tgz:  Recompiled.
+ap/rpm-4.0.2-i386-4.tgz:  Recompiled, then swapped in the /bin/rpm from
+  rpm-4.0.2-i386-2, which was the last version that didn't produce RPMs
+  containing random MD5 errors.  It seems like something about either the
+  new glibc or gcc is causing problems with the static rpm binary, and tests
+  on newer versions seem to have even more bugs (4.1, for instance, doesn't
+  want to build RPMs at all -- it leaves nothing in /usr/src/rpm/RPMS, but
+  also gives no indication of failure).  Anyway, we'll go with this for now.
+  The broken rpm-4.1 source and build scripts are in source/ap/rpm/4.1.
+  If anyone has a real handle on why a vanilla build of 4.1 can't build
+  SRPMS, I'm accepting hints.  :-)
+kde/koffice-1.2.1-i386-1.tgz:  Upgraded to koffice-1.2.1.
+  (this package will work with KDE-3.0.5 or newer)
+kdei/koffice-i18n-*.tgz:  Upgraded to koffice-1.2.1.
+  (kde-i18n-ca is producing an empty package -- looking into that)
+l/zlib-1.1.4-i386-3.tgz:  Recompiled.
+An update on http://slackware.com:
+As many of you have noticed, the slackware.com website is not online.  
+We offer our apologies, but we've been the target of DoS attacks for a few
+days.  We're investigating the problem, but can't give an estimate of when
+the site will return.  If anyone has any additional information that might
+be helpful to us in tracking down the source of these attacks, please email
+us at security@slackware.com.  Thanks for your patience.
+----------------------------
+Tue Dec 10 19:41:12 PST 2002
+a/e2fsprogs-1.32-i386-2.tgz:  Fixed minor install-info bug in install script,
+  thanks to LukenShiro.
+l/libxml2-2.4.25-i386-2.tgz:  Reverted to version 2.4.25, as this is the last
+  version that works correctly with kdoctools.  Newer versions hang calling
+  xmllint.
+l/libxslt-1.0.23-i386-2.tgz:  Recompiled against libxml2-2.4.25.
+xap/mozilla-1.2.1-i386-1.tgz:  Upgraded to mozilla-1.2.1.
+extra/cups-1.1.17/cups-1.1.17-i386-1.tgz:  Upgraded to cups-1.1.17.
+extra/kde-3.1rc5/:  Upgraded to KDE 3.1rc5.
+----------------------------
+Mon Dec  2 14:56:43 PST 2002
+a/e2fsprogs-1.32-i386-1.tgz:  Upgraded to e2fsprogs-1.32.
+a/reiserfsprogs-3.6.4-i386-1.tgz:  Upgraded to reiserfsprogs-3.6.4.
+n/nail-10.3-i386-1.tgz:  Added nail, a MIME and SSL capable mail client.
+  This replaces the mailx package.  (Suggested by Frédéric L. W. Meunier)
+----------------------------
+Thu Nov 28 16:39:25 PST 2002
+a/bin-8.3.0-i386-4.tgz:  Merged in a patch for rpm2targz from David Cantrell to
+  put the contents of SRPMS into an appropriately named subdirectory.  I've
+  modified this to use "file" to detect SRPMS (which works fine on Slackware).
+  If you need a more portable approach, David's C program "getrpmtype" is
+  included in source/a/bin, and should compile on most systems.  rpm2targz will
+  use this utility if it's found in the $PATH.  Thanks David!  :-)
+  Upgraded to which-2.14.
+l/libxml2-2.4.28-i386-1.tgz:  Upgraded to libxml2-2.4.28.
+l/libxslt-1.0.23-i386-1.tgz:  Upgraded to libxslt-1.0.23.
+xap/mozilla-1.2-i386-1.tgz:  Upgraded to mozilla-1.2.
+----------------------------
+Sun Nov 24 11:42:03 PST 2002
+n/pine-4.50-i386-2.tgz:  Patched pine to actually look for the pine.conf,
+  pine.conf.fixed, and pine.info files in /etc, not /etc/pine (where the
+  original patch mistakenly had it looking).  Thanks to Stuart Winter for
+  spotting this bug.
+----------------------------
+Fri Nov 22 23:01:35 PST 2002
+d/binutils-2.13.90.0.14-i386-1.tgz:  Upgraded to binutils-2.13.90.0.14.
+d/gcc-3.2.1-i386-1.tgz:  Upgraded to gcc-3.2.1.
+d/gcc-g++-3.2.1-i386-1.tgz:  Upgraded to gcc-3.2.1.
+d/gcc-g77-3.2.1-i386-1.tgz:  Upgraded to gcc-3.2.1.
+d/gcc-gnat-3.2.1-i386-1.tgz:  Upgraded to gcc-3.2.1.
+d/gcc-java-3.2.1-i386-1.tgz:  Upgraded to gcc-3.2.1.
+d/gcc-objc-3.2.1-i386-1.tgz:  Upgraded to gcc-3.2.1.
+----------------------------
+Thu Nov 21 21:36:34 PST 2002
+n/imapd-4.50-i386-1.tgz:  Upgraded to imapd from pine-4.50.
+n/pine-4.50-i386-1.tgz:  Upgraded to pine-4.50.
+  Moved pine.conf file to /etc (suggested by Jan Rafaj).
+----------------------------
+Wed Nov 20 15:06:32 PST 2002
+ap/mysql-3.23.53-i386-2.tgz:  Recompiled with --with-extra-charsets=complex.
+  (suggested by Stepan Roh)
+n/samba-2.2.7-i386-1.tgz:  Upgraded to samba-2.2.7.  Some details (based on
+  the WHATSNEW.txt file included in samba-2.2.7):
+    This fixes a security hole discovered in versions 2.2.2 through 2.2.6 of
+    Samba that could potentially allow an attacker to gain root access
+    on the target machine.  The word "potentially" is used because there
+    is no known exploit of this bug, and the Samba Team has not been able to
+    craft one ourselves. However, the seriousness of the problem warrants
+    this immediate 2.2.7 release.  There was a bug in the length checking for
+    encrypted password change requests from clients. A client could potentially
+    send an encrypted password, which, when decrypted with the old hashed
+    password could be used as a buffer overrun attack on the stack of smbd. The
+    attack would have to be crafted such that converting a DOS codepage string
+    to little endian UCS2 unicode would translate into an executable block of
+    code.  Thanks to Steve Langasek <vorlon@debian.org> and Eloy Paris
+    <peloy@debian.org> for bringing this vulnerability to our notice.
+  (* Security fix *)
+  An unrelated change to the Slackware package is the addition of libsmbclient.
+  This was suggested by Marcelo Anton, and should be a big help for smb://
+  browsing with KDE (once kdebase is recompiled :-).
+----------------------------
+Tue Nov 19 16:09:38 PST 2002
+Patched and recompiled glibc to improve compatibility with older binaries
+and libraries.  This fixes compupic and many other commercial apps, and
+restores the ability to compile against most existing static libraries.
+a/glibc-solibs-2.3.1-i386-2.tgz:  Patched, recompiled.
+l/glibc-2.3.1-i386-2.tgz:  Patched, recompiled.
+extra/glibc-extra-packages/glibc-debug-2.3.1-i386-2.tgz:  Patched, recompiled.
+extra/glibc-extra-packages/glibc-profile-2.3.1-i386-2.tgz:  Patched,
+  recompiled.
+----------------------------
+Sun Nov 17 15:32:14 PST 2002
+a/gpm-1.19.6-i386-4.tgz:  Recompiled.  This fixes a problem with the last build
+  which left out a symbol needed by aumix.
+ap/flac-1.0.4-i386-2.tgz:  Recompiled to fix xmms flac plugin.
+xap/xmms-1.2.7-i386-4.tgz:  Added xmms-arts plugin (suggested by Petr Hostalek).
+extra/kde-3.1-rc2/qt-3.1.0-i386-1.tgz:  Upgraded to qt-x11-free-3.1.0.
+----------------------------
+Sat Nov 16 18:47:34 PST 2002
+gnome/pilot-link-0.11.3-i386-2.tgz:  Recompiled.
+kde/arts-1.0.5-i386-1.tgz:  Upgraded to arts-1.0.5.
+kde/kdeaddons-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdeadmin-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdeartwork-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdebase-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdebindings-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdeedu-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdegames-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdegraphics-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdelibs-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdemultimedia-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdenetwork-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdepim-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdesdk-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdetoys-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdeutils-3.0.5-i386-1.tgz:  Upgraded to KDE 3.0.5.
+kde/kdevelop-2.1.4_for_KDE_3.0-i386-1.tgz:  Upgraded to
+    kdevelop-2.1.4_for_KDE_3.0.
+kde/qt-3.0.5-i386-3.tgz:  Added libqt.so.* symlinks (thanks to Delian Krustev).
+kdei/:  Upgraded to KDE 3.0.5.
+----------------------------
+Sun Nov 10 19:03:38 PST 2002
+extra/kde-3.1-rc2/:  Upgraded to KDE 3.1-rc2.
+----------------------------
+Fri Nov  1 11:59:29 PST 2002
+extra/kde-3.1-rc1/:  Added KDE 3.1-rc1 packages.
+ap/mc-4.6.0pre1-i386-1.tgz:  Upgraded to mc-4.6.0-pre1.
+ap/zsh-4.0.6-i386-1.tgz:  Upgraded to zsh-4.0.6.
+----------------------------
+Mon Oct 28 17:24:26 PST 2002
+d/gcc-3.2-i386-3.tgz:  Patched using gcc-3.2-glibc-2.3-compat.diff and
+  recompiled against glibc-2.3.1.  Thanks to Artur Kedzierski for showing me
+  where the glibc-2.3.1 FAQ recommends this patch.  :-)
+d/gcc-g++-3.2-i386-3.tgz:  Recompiled.
+d/gcc-g77-3.2-i386-3.tgz:  Recompiled.
+d/gcc-gnat-3.2-i386-3.tgz:  Recompiled.
+d/gcc-java-3.2-i386-3.tgz:  Recompiled.
+d/gcc-objc-3.2-i386-3.tgz:  Recompiled.
+----------------------------
+Sun Oct 27 20:35:23 PST 2002
+ap/cdrdao-1.1.7-i386-1.tgz:  Upgraded to cdrdao-1.1.7.
+ap/cdrtools-1.11a39-i386-1.tgz:  Upgraded to cdrtools-1.11a39.
+ap/flac-1.0.4-i386-1.tgz:  Upgraded to flac-1.0.4.
+ap/oggutils-1.0-i386-2.tgz:  Recompiled, added arts ao plugin.
+gnome/esound-0.2.29-i386-1.tgz:  Upgraded to esound-0.2.29.
+----------------------------
+Wed Oct 23 20:47:28 PDT 2002
+ap/mysql-3.23.53-i386-1.tgz:  Upgraded to mysql-3.23.53.
+n/curl-7.10.1-i386-1.tgz:  Upgraded to curl-7.10.1.
+n/samba-2.2.6-i386-1.tgz:  Upgraded to samba-2.2.6.
+----------------------------
+Tue Oct 22 22:24:12 PDT 2002
+a/gpm-1.19.6-i386-3.tgz:  Recompiled.
+d/binutils-2.13.90.0.10-i386-1.tgz:  Upgraded to binutils-2.13.90.0.10.
+d/gcl-2.4.3-i386-1.tgz:  Upgraded to gcl-2.4.3.
+d/python-2.2.2-i386-1.tgz:  Upgraded to Python-2.2.2.
+kde/koffice-1.2-i386-3.tgz:  Fixed problems with missing files/programs.
+  This happened because a static X library that needed to be recompiled
+  caused the last build to abort halfway through.
+l/aalib-1.4rc5-i386-1.tgz:  Upgraded to aalib-1.4rc5.
+l/audiofile-0.2.3-i386-3.tgz:  Recompiled.
+l/gdbm-1.8.0-i386-3.tgz:  Recompiled.
+l/glib-1.2.10-i386-2.tgz:  Recompiled.
+l/gmp-4.1-i386-1.tgz:  Recompiled.
+l/gtk+-1.2.10-i386-3.tgz:  Recompiled.
+l/freetype-1.3.1-i386-3.tgz:  Recompiled.
+l/lesstif-0.93.36-i386-1.tgz:  Upgraded to lesstif-0.93.36.
+l/libgr-2.0.13-i386-2.tgz:  Recompiled.
+l/libungif-4.1.0b1-i386-4.tgz:  Patched for gcc-3.2, recompiled.
+l/libxml-1.8.17-i386-2.tgz:  Recompiled.
+l/mpeg_lib-1.3.1-i386-2.tgz:  Recompiled.
+l/ncurses-5.2-i386-5.tgz:  Recompiled.
+l/slang-1.4.5-i386-2.tgz:  Recompiled.
+l/svgalib-1.4.3-i386-2.tgz:  Recompiled.
+l/t1lib-1.3.1-i386-2.tgz:  Recompiled.
+l/xaw3d-1.5-i386-3.tgz:  Recompiled.
+t/tetex-20021017-i386-1.tgz:  Upgraded to teTeX-beta-20021017.
+t/tetex-doc-20021017-noarch-1.tgz:  Upgraded to teTeX-beta-20021017.
+tcl/expect-5.38-i386-1.tgz:  Upgraded to expect-5.38.
+tcl/hfsutils-3.2.6-i386-2.tgz:  Recompiled.
+tcl/tcl-8.4.0-i386-1.tgz:  Upgraded to tcl-8.4.0.
+tcl/tclx-8.3-i386-2.tgz:  Upgraded to tclx-8.3 (latest CVS branch).
+tcl/tix-8.1.4b1-i386-1.tgz:  Upgraded to tix-8.1.4b1.
+tcl/tk-8.4.0-i386-1.tgz:  Upgraded to tk-8.4.0.
+----------------------------
+Mon Oct 21 17:51:04 PDT 2002
+a/smartmontools-5.0_10-i386-1.tgz:  Replaces smartsuite package.
+n/nfs-utils-0.3.3-i386-3.tgz:  In /etc/rc.d/rc.nfsd, don't test for
+  NFSv3 with rpcinfo, as this does not work with new development kernels.
+n/tcpdump-3.7.1-i386-3.tgz:  Recompiled.
+x/xfree86-4.2.1-i386-3.tgz:  Recompiled.
+x/xfree86-devel-4.2.1-i386-3.tgz:  Recompiled.
+x/xfree86-xnest-4.2.1-i386-2.tgz:  Recompiled.
+x/xfree86-xprt-4.2.1-i386-2.tgz:  Recompiled.
+x/xfree86-xvfb-4.2.1-i386-2.tgz:  Recompiled.
+----------------------------
+Wed Oct 16 22:49:17 PDT 2002
+a/elflibs-8.3.0-i386-2.tgz:  Relocated libgcc_s.so.1 to avoid an error
+  message from the install script.
+ap/man-pages-1.53-noarch-1.tgz:  Upgraded to man-pages-1.53.
+ap/rpm-4.0.2-i386-3.tgz:  Recompiled.
+d/bison-1.35-i386-1.tgz:  I'm running into things that don't like bison-1.50,
+  so I'm holding off on including it in the D series for now, and have gone
+  back to bison-1.35.
+d/perl-5.8.0-i386-2.tgz:  Recompiled.
+kde/arts-1.0.4-i386-1.tgz:  Upgraded to arts-1.0.4.
+kde/kdeaddons-3.0.4-i386-1.tgz:  Upgraded to kdeaddons-3.0.4.
+kde/kdeadmin-3.0.4-i386-1.tgz:  Upgraded to kdeadmin-3.0.4.
+kde/kdeartwork-3.0.4-i386-1.tgz:  Upgraded to kdeartwork-3.0.4.
+kde/kdebase-3.0.4-i386-1.tgz:  Upgraded to kdebase-3.0.4.
+  This is a complete kdebase package with nothing removed.  :-)
+kde/kdebindings-3.0.4-i386-1.tgz:  Upgraded to kdebindings-3.0.4.
+kde/kdeedu-3.0.4-i386-1.tgz:  Upgraded to kdeedu-3.0.4.
+kde/kdegames-3.0.4-i386-1.tgz:  Upgraded to kdegames-3.0.4.
+kde/kdegraphics-3.0.4-i386-1.tgz:  Upgraded to kdegraphics-3.0.4.
+kde/kdelibs-3.0.4-i386-1.tgz:  Upgraded to kdelibs-3.0.4.
+kde/kdemultimedia-3.0.4-i386-1.tgz:  Upgraded to kdemultimedia-3.0.4.
+kde/kdenetwork-3.0.4-i386-1.tgz:  Upgraded to kdenetwork-3.0.4.
+kde/kdepim-3.0.4-i386-1.tgz:  Upgraded to kdepim-3.0.4.
+kde/kdesdk-3.0.4-i386-1.tgz:  Upgraded to kdesdk-3.0.4.
+kde/kdetoys-3.0.4-i386-1.tgz:  Upgraded to kdetoys-3.0.4.
+kde/kdeutils-3.0.4-i386-1.tgz:  Upgraded to kdeutils-3.0.4.
+kde/kdevelop-2.1.3_for_KDE_3.0-i386-1.tgz:  Upgraded to kdevelop-2.1.3_for_KDE_3.0.
+kde/koffice-1.2-i386-2.tgz:  Recompiled against KDE-3.0.4.
+kde/qt-3.0.5-i386-2.tgz:  Recompiled to add mysql plugin, restore plugin
+  src, and move the documentation to where it can be found (since -docdir doesn't
+  seem to do the job).  Thanks to Jean-Christophe Fargette for suggesting these
+  fixes and improvements.
+kdei/:  Upgraded kde-i18n packages to KDE 3.0.4.
+l/readline-4.3-i386-2.tgz:  Recompiled with 2 official patches.
+n/openssh-3.5p1-i386-1.tgz:  Upgraded to openssh-3.5p1.
+n/tcpip-0.17-i386-14.tgz:  Recompiled.  In /etc/rc.d/rc.inet2, moved NFS server
+  startup after named and yp startup since the NFS server may need named and/or
+  YP in order to resolve clients.  Thanks to Jonathan Woithe for the report.
+extra/bison-1.50/bison-1.50-i386-1.tgz:  This version of bison can stay in extra/
+  for a while until more sources are updated to work with it.
+----------------------------
+Sun Oct 13 20:44:40 PDT 2002
+a/bzip2-1.0.2-i386-3.tgz:  Recompiled.
+a/e2fsprogs-1.29-i386-1.tgz:  Upgraded to e2fsprogs-1.29.
+a/elflibs-8.3.0-i386-1.tgz:  Added Berkeley DB libraries.
+  Moved libpopt from /usr/lib/incoming to /usr/lib to match its location
+  in the rpm package.  This prevents libpopt from being removed if
+  removepkg is used to remove the rpm package.  (reported by Tomas Szepe)
+a/etc-5.0-noarch-9.tgz:  In nsswitch.conf, do not use "db" lookups.
+
+  A note about nss_db:  it doesn't build anymore with gcc-3.2.
+  I've placed the work-in-progress source and build script for it in
+  source/l/nss_db/, if anyone wants to help get it working.  If you do,
+  please let me know.
+
+a/glibc-solibs-2.3.1-i386-1.tgz:  Upgraded to glibc-2.3.1.
+a/glibc-zoneinfo-2.3.1-i386-1.tgz:  Upgraded to timezone files from glibc-2.3.1.
+a/openssl-solibs-0.9.6g-i386-1.tgz:  Upgraded to openssl-0.9.6g.
+a/shadow-4.0.3-i386-4.tgz:  Fixed a problem with newgrp where an error message
+  was printed with every use (patch from Simon Williams).
+a/util-linux-2.11w-i386-1.tgz:  Upgraded to util-linux-2.11w.
+d/bison-1.50-i386-1.tgz:  Upgraded to bison-1.50.
+d/kernel-headers-2.4.19-i386-1.tgz:  Upgraded to 2.4.19 kernel headers to
+d/make-3.80-i386-1.tgz:  Upgraded to make-3.80.
+  prepare for building glibc-2.3.
+l/db1-1.85-i386-1.tgz:  Added db.1.85 (Berkeley DB version 1).
+l/db2-2.4.14-i386-1.tgz:  Added db-2.4.14 (Berkeley DB version 2).
+l/db3-3.1.17-i386-1.tgz:  Added db-3.1.17 (Berkeley DB version 3).  I plan to
+  look into upgrading this, but newer versions of db3 aren't compatible so it
+  will take some recompiling elsewhere.
+l/glibc-2.3.1-i386-1.tgz:  Upgraded to glibc-2.3.1.
+l/glibc-i18n-2.3.1-noarch-1.tgz:  Upgraded to glibc-2.3.1.
+l/libtermcap-1.2.3-i386-3.tgz:  Recompiled.
+l/libjpeg-6b-i386-3.tgz:  Recompiled.
+l/libpng-1.2.5-i386-1.tgz:  Upgraded to libpng-1.2.5.
+l/libtiff-3.5.7-i386-3.tgz:  Recompiled.
+l/libxml2-2.4.25-i386-1.tgz:  Upgraded to libxml2-2.4.25.
+l/libxslt-1.0.21-i386-1.tgz:  Upgraded to libxslt-1.0.21.
+l/pcre-3.9-i386-2.tgz:  Recompiled.
+l/zlib-1.1.4-i386-2.tgz:  Recompiled.
+n/fetchmail-6.1.0-i386-1.tgz:  Upgraded to fetchmail-6.1.0.  This includes
+  Stefan Esser's fix for a potential remote vulnerability in multidrop mode.
+  (* Security fix *)
+n/openssl-0.9.6g-i386-1.tgz:  Upgraded to openssl-0.9.6g.
+n/yptools-2.7-i386-4.tgz:  Fixed (harmless) install script bug.
+extra/cups-1.1.16/cups-1.1.16-i386-1.tgz:  Upgraded to cups-1.1.16.
+extra/espgs-7.05.5/espgs-7.05.5-i386-1.tgz:  Upgraded to espgs-7.05.5.
+  ESPGS is an advanced version of ghostscript designed to work with CUPS
+  and the gimp-print library.
+extra/glibc-extra-packages/glibc-debug-2.3.1-i386-1.tgz:  Added static and
+  shared debuggable versions of the GNU C libraries (glibc-2.3.1).
+extra/glibc-extra-packages/glibc-profile-2.3.1-i386-1.tgz:  Added versions of
+  the GNU C libraries (glibc-2.3.1) for profiling binaries with gprof.
+----------------------------
+Mon Sep 30 23:33:26 PDT 2002
+a/procps-2.0.9-i386-1.tgz:  Upgraded to procps-2.0.9.
+gnome/galeon-1.2.6-i386-1.tgz:  Upgraded to galeon-1.2.6.
+  (This package requires Mozilla 1.1)
+n/dhcpcd-1.3.22pl3-i386-1.tgz:  Upgraded to dhcpcd-1.3.22pl3.
+  From the dhcpcd ChangeLog:
+    Simon Kelley <simon@thekelleys.org.uk> pointed out at security bug in dhcpcd
+    related to *.info file. A malicios administrator of untrusted DHCP server
+    may execute any command with root privileges on DHCP client machine by
+    sending the command enclosed in shell metacharacters in one of DHCP server
+    provided options. Fixed by enclosing all strings in *.info file into single
+    quotes and replacing any single quotes found in DHCP option strings
+    with space. - S.V.
+  (* Security fix *)
+n/lftp-2.6.2-i386-1.tgz:  Upgraded to lftp-2.6.2.
+n/proftpd-1.2.6-i386-1.tgz:  Upgraded to proftpd-1.2.6.
+xap/mozilla-1.1-i386-1.tgz:  Upgraded to mozilla-1.1.
+----------------------------
+Sun Sep 29 12:38:04 PDT 2002
+d/automake-1.7-noarch-2.tgz:  Fixed aclocal and automake symlinks.
+----------------------------
+Sat Sep 28 22:52:54 PDT 2002
+rootdisks/install.1, install.2, isolinux/initrd.img:  Fixed installing
+  via serial console (see updated FAQ Q34 for instructions).
+  Thanks to Karl Magnus Kolstø for the bug report.
+a/cxxlibs-5.0.0-i386-2.tgz:  Replaced libstdc++.so.5.0.0 with the new
+  version from gcc-g++-3.2-i386-2.tgz.  (compiled using
+  --enable-__cxa_atexit)
+d/autoconf-2.54-noarch-1.tgz:  Upgraded to autoconf-2.54.
+d/automake-1.7-noarch-1.tgz:  Upgraded to automake-1.7.
+----------------------------
+Mon Sep 23 00:13:22 PDT 2002
+a/bash-2.05b-i386-2.tgz:  Applied latest bash patches from ftp.gnu.org.
+  This prevents bash from crashing on certain keypresses when TERM=xterm.
+a/bin-8.3.0-i386-3.tgz:  Have rpm2tgz use rpm2cpio if it's there.  This
+  is more reliable than the old approach of calculating the offset of
+  the cpio archive and trying to extract it with dd.  If rpm2cpio is not
+  installed then we fall back to the old method.
+a/etc-5.0-noarch-8.tgz:  In /etc/nsswitch.conf, don't try to use dns to
+  look up networks.
+a/lilo-22.3.3-i386-1.tgz:  Upgraded to lilo-22.3.3.
+  Changed liloconfig to use timeout instead of delay, and fixed the text
+  formatting in several partition displays.
+d/gcc-3.2-i386-2.tgz:  Recompiled with the following ./configure changes:
+    --enable-threads=posix --enable-__cxa_atexit --disable-checking
+  Previously we used --enable-threads.  I think [=posix] is the default
+  on Linux, but it's probably best to make it an explicit option.
+  --enable-__cxa_atexit was added when Mark Post reported that it's
+  needed for correct C++ standards compliance (thanks, Mark!).
+  --disable-checking seems to be in common use everywhere else.  
+  The rumor is that using this will speed up the compiler.
+d/gcc-g++-3.2-i386-2.tgz:  Recompiled.
+d/gcc-g77-3.2-i386-2.tgz:  Recompiled.
+d/gcc-gnat-3.2-i386-2.tgz:  Recompiled.
+d/gcc-java-3.2-i386-2.tgz:  Recompiled.
+d/gcc-objc-3.2-i386-2.tgz:  Recompiled.
+kde/kdebase-3.0.3-i386-2.tgz:  Do not try to embed audio apps in Konqueror
+  by default, as this is causes Konqueror to crash.  They work fine from
+  Konqueror in standalone mode, so this has been made the new default.
+  If anyone knows what's actually causing this, drop me an email.
+n/yptools-2.7-i386-3.tgz:  Upgraded to ypserv-2.5.
+----------------------------
+Mon Sep 16 19:03:11 PDT 2002
+a/kernel-modules-2.4.19-i386-3.tgz:  Rerun depmod -a.
+a/lilo-22.2-i386-6.tgz:  In liloconfig, properly sort DOS partitions.
+  This also ensures that we try to boot the proper DOS/Windows partition
+  when installing lilo in "simple" mode.
+kde/kdelibs-3.0.3a-i386-1.tgz:  Upgraded to kdelibs-3.0.3a.
+kde/koffice-1.2-i386-1.tgz:  Upgraded to koffice-1.2.
+kdei/koffice-i18n-*:  Upgraded to koffice-1.2.
+x/xfree86-4.2.1-i386-2.tgz:  Recompiled with 4.2.1-mit-shm-security.patch,
+  This is an update to 4.2.1 that fixes the shm vulnerability for the
+  case where the server is running from xdm.  Also fixed a problem with
+  freetype2 where there were two versions of the shared library on the
+  system.
+  (* Security fix *)
+x/xfree86-devel-4.2.1-i386-2.tgz:  Recompiled with
+  4.2.1-mit-shm-security.patch.
+  (* Security fix *)
+rootdisks/install.1, install.2:  Fixed the rootdisk loading problem.
+  Split the installer into two parts so that we can use compression on the
+  rootdisks again.  As a result, only 2 rootdisks are needed instead of 5.
+  I'm pretty sure now that Slackware 8.1 is going to be remembered as the
+  release with all the rootdisks. ;-)
+----------------------------
+Thu Sep  5 15:48:39 PDT 2002
+a/kernel-modules-2.4.19-i386-2.tgz:  Upgraded to XFree86 4.2.1 DRI modules.
+a/util-linux-2.11u-i386-1.tgz:  Upgraded to util-linux-2.11u.
+ap/groff-1.17.2-i386-3.tgz:  Added zsoelim -> soelim symlink.
+  groff-1.18 was tried, but this version adds ANSI color support and makes
+  color support the default (which breaks everything I tried).
+  Maybe we'll see saner defaults in 1.18.1...
+d/automake-1.6.3-noarch-1.tgz:  Upgraded to automake-1.6.3.
+xap/xmms-1.2.7-i386-3.tgz:  Recompiled against libogg-1.0.
+  XFree86 update (* Security fix *) -- see RELNOTES in /usr/X11R6/lib/X11/doc:
+x/xfree86-4.2.1-i386-1.tgz:  Upgraded to XFree86 4.2.1.
+x/xfree86-devel-4.2.1-i386-1.tgz:  Upgraded to XFree86 4.2.1.
+x/xfree86-docs-4.2.1-noarch-1.tgz:  Upgraded to XFree86 4.2.1.
+x/xfree86-docs-html-4.2.1-noarch-1.tgz:  Upgraded to XFree86 4.2.1.
+x/xfree86-xnest-4.2.1-i386-1.tgz:  Upgraded to XFree86 4.2.1.
+x/xfree86-xprt-4.2.1-i386-1.tgz:  Upgraded to XFree86 4.2.1.
+x/xfree86-xvfb-4.2.1-i386-1.tgz:  Upgraded to XFree86 4.2.1.
+  These are the "same old" font packages with new version numbers:
+x/xfree86-fonts-100dpi-4.2.1-noarch-1.tgz:  renamed.
+x/xfree86-fonts-cyrillic-4.2.1-noarch-1.tgz:  renamed.
+x/xfree86-fonts-misc-4.2.1-noarch-1.tgz:  renamed.
+x/xfree86-fonts-scale-4.2.1-noarch-1.tgz:  renamed.
+----------------------------
+Sun Sep  1 14:47:04 PDT 2002
+a/pciutils-2.1.10-i386-3.tgz:  Patched a memory handling error in pcimodules
+   that caused it to hang on systems that use libsafe.
+   Thanks to Dennis Bijwaard for the bug report.
+----------------------------
+Fri Aug 30 14:19:08 PDT 2002
+We're happy to announce the initial Slackware-9.0-beta based on gcc-3.2. :-)
+Please test it and report any bugs that you find.
+a/aaa_base-8.9.9-i386-1.tgz:  Edited /etc/slackware-version.
+a/bash-2.05b-i386-1.tgz:  Upgraded to bash-2.05b.
+a/bzip2-1.0.2-i386-2.tgz:  Added bzcat symlink, and bzdiff, bzgrep, and
+  bzmore scripts and manpages.
+a/cpio-2.5-i386-1.tgz:  Upgraded to cpio-2.5.
+a/gawk-3.1.1-i386-2.tgz:  Moved (g)awk from /usr/bin to /bin.  I don't
+  like to do this, but it's becoming fairly common to see awk used in
+  startup scripts.  For example, the hotplug support will require awk.
+a/hotplug-2002_08_26-noarch-1.tgz:  Added hotplug-2002_08_26.  These are
+  scripts to automatically initialize PCI, Cardbus, and USB devices when
+  they are plugged into the system or at boot time.  Cardbus modules are
+  now loaded by hotplug rather than pcmcia-cs.
+a/pciutils-2.1.10-i386-2.tgz:  Added pcimodules (needed by hotplug).
+a/pcmcia-cs-3.2.1-i386-1.tgz:  Upgraded to pcmcia-cs-3.2.1.
+a/sysvinit-2.84-i386-20.tgz:  Edited /etc/rc.d/rc.M to start rc.hotplug.
+a/usbutils-0.11-i386-1.tgz:  Added usbutils-0.11.
+ap/flac-1.0.3-i386-1.tgz:  Added flac-1.0.3.
+gnome/galeon-1.2.5-i386-2.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+  (see Mozilla note below)
+l/readline-4.3-i386-1.tgz:  Upgraded to readline-4.3.
+n/iptables-1.2.7a-i386-1.tgz:  Upgraded to iptables-1.2.7a.
+n/sendmail-8.12.6-i386-1.tgz:  Upgraded to sendmail-8.12.6.
+n/sendmail-cf-8.12.6-i386-1.tgz:  Upgraded to sendmail-8.12.6.
+t/tetex-20020825-i386-1.tgz:  Upgraded to teTeX-beta-20020825.
+t/tetex-doc-20020825-i386-1.tgz:  Upgraded to teTeX-beta-20020825.
+xap/imagemagick-5.4.8_2-i386-1.tgz:  Upgraded to ImageMagick-5.4.8-2.
+xap/mozilla-1.0-i386-2.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+  Note that various Netscape plugins such as Java and flash will need to be
+  recompiled using gcc-3.2 before they will work with a gcc-3.2 compiled
+  Mozilla, galeon, Konqueror, or other browser.  The plugins will continue
+  to work in Netscape, so if you must have working plugins you'll need to
+  use that (at least for now).
+xap/netscape-7.0-i686-1.tgz:  Upgraded to Netscape 7.0.
+----------------------------
+Fri Aug 23 21:22:03 PDT 2002
+a/reiserfsprogs-3.6.3-i386-1.tgz:  Upgraded to reiserfsprogs-3.6.3.
+ap/mysql-3.23.52-i386-1.tgz:  Upgraded to mysql-3.23.52.
+kde/qt-3.0.5-i386-1.tgz:  Upgraded to qt-x11-free-3.0.5.
+kde/:  Upgraded to KDE-3.0.3.
+kdei/:  Upgraded to KDE-3.0.3 i18n packages.
+n/lftp-2.6.1a-i386-1.tgz:  Upgraded to lftp-2.6.1a.
+n/lynx-2.8.4-i386-3.tgz:  Recompiled with lynx2.8.4rel.1c.patch.
+n/samba-2.2.5-i386-1.tgz:  Upgraded to samba-2.2.5.
+n/sendmail-8.12.5-i386-1.tgz:  Upgraded to sendmail-8.12.5.
+n/sendmail-cf-8.12.5-i386-1.tgz:  Upgraded to sendmail-8.12.5.
+----------------------------
+Mon Aug 19 16:15:04 PDT 2002
+a/jfsutils-1.0.21-i386-1.tgz:  Upgraded to jfsutils-1.0.21.
+a/kernel-ide-2.4.19-i386-1.tgz:  Upgraded to linux-2.4.19.
+a/kernel-modules-2.4.19-i386-1.tgz:  Upgraded to modules for linux-2.4.19.
+  Switched to the kernel PCMCIA modules instead of the ones from the
+  pcmcia-cs package.
+a/modutils-2.4.19-i386-1.tgz:  Upgraded to modutils-2.4.19.
+ap/groff-1.17.2-i386-2.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+ap/hpijs-1.2-i386-1.tgz:  Upgraded to hpijs-1.2.
+d/gdb-5.2.1-i386-1.tgz:  Upgraded to gdb-5.2.1.
+gnome/gnomemm-1.2.3-i386-1.tgz:  Upgraded to gnomemm-1.2.3.
+gnome/gtkmm-1.2.10-i386-1.tgz:  Upgraded to gtkmm-1.2.10.
+gnome/libsigc++-1.0.4-i386-2.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+gnome/pilot-link-0.11.3-i386-1.tgz:  Upgraded to pilot-link-0.11.3.
+gnome/xscreensaver-4.05_gnome-i386-2.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+k/kernel-source-2.4.19-noarch-1.tgz:  Upgraded to linux-2.4.19.
+x/xfree86-4.2.0-i386-6.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+x/xfree86-devel-4.2.0-i386-4.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+x/xfree86-xnest-4.2.0-i386-3.tgz:  Recompiled with gcc-3.2.
+x/xfree86-xprt-4.2.0-i386-3.tgz:  Recompiled with gcc-3.2.
+x/xfree86-xvfb-4.2.0-i386-3.tgz:  Recompiled with gcc-3.2.
+xap/imagemagick-5.4.8-i386-1.tgz:  Upgraded to ImageMagick-5.4.8.
+xap/xlockmore-5.04-i386-2.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+xap/xscreensaver-4.05-i386-2.tgz:  Recompiled with gcc-3.2/libstdc++.so.5.
+extra/espgs-7.05.4/espgs-7.05.4-i386-1.tgz:  Upgraded to espgs-7.05.4.
+----------------------------
+Sat Aug 17 23:45:40 PDT 2002
+a/cxxlibs-5.0.0-i386-1.tgz:  Added libstdc++.so.5 from gcc-3.2.
+a/elflibs-8.2.0-i386-1.tgz:  Added libgcc_s.so.1 from gcc-3.2.
+d/binutils-2.13.90.0.4-i386-1.tgz:  Upgraded to binutils-2.13.90.0.4.
+d/gcc-3.2-i386-1.tgz:  Upgraded to gcc-3.2.
+d/gcc-g++-3.2-i386-1.tgz:  Upgraded to gcc-3.2.
+d/gcc-g77-3.2-i386-1.tgz:  Upgraded to gcc-3.2.
+d/gcc-gnat-3.2-i386-1.tgz:  Upgraded to gcc-3.2.
+d/gcc-java-3.2-i386-1.tgz:  Upgraded to gcc-3.2.
+d/gcc-objc-3.2-i386-1.tgz:  Upgraded to gcc-3.2.
+l/libpng-1.2.4-i386-1.tgz:  Upgraded to libpng-1.2.4.
+l/libxml2-2.4.23-i386-1.tgz:  Upgraded to libxml2-2.4.23.
+l/libxslt-1.0.19-i386-1.tgz:  Upgraded to libxslt-1.0.19.
+----------------------------
+Fri Aug 16 19:55:17 PDT 2002
+ap/oggutils-1.0-i386-1.tgz:  Upgraded to libao-0.8.3, libogg-1.0,
+  libvorbis-1.0, and vorbis-tools-1.0.
+ap/sox-12.17.3-i386-2.tgz:  Recompiled against libao-0.8.3.
+d/perl-5.8.0-i386-1.tgz:  Upgraded to perl-5.8.0.
+xap/imagemagick-5.4.7_4-i386-1.tgz:  Upgraded to ImageMagick-5.4.7-4.
+Moved the packages in patches/ to these new locations under slackware/:
+a/glibc-solibs-2.2.5-i386-3.tgz
+a/openssl-solibs-0.9.6e-i386-1.tgz
+l/glibc-2.2.5-i386-3.tgz
+n/apache-1.3.26-i386-2.tgz
+n/mod_ssl-2.8.10_1.3.26-i386-1.tgz
+n/openssh-3.4p1-i386-2.tgz
+n/openssl-0.9.6e-i386-1.tgz
+n/php-4.2.2-i386-1.tgz
+----------------------------
+Tue Jul 30 19:45:52 PDT 2002
+patches/packages/apache-1.3.26-i386-2.tgz:  Upgraded the included libmm
+  to version 1.2.1.  Versions of libmm earlier than 1.2.0 contain a tmp file
+  vulnerability which may allow the local Apache user to gain privileges via
+  temporary files or symlinks.  For details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0658
+  This was also recompiled using EAPI patch from mod_ssl-2.8.10_1.3.26.
+  (* Security fix *)
+patches/packages/glibc-2.2.5-i386-3.tgz:  Patched to fix a buffer overflow
+  in glibc's DNS resolver functions that look up network addresses.
+  Another workaround for this problem is to edit /etc/nsswtich.conf changing:
+    networks:       files dns
+  to:
+    networks:       files
+  (* Security fix *)
+patches/packages/glibc-solibs-2.2.5-i386-3.tgz:  Patched to fix a buffer
+  overflow in glibc's DNS resolver functions that look up network addresses.
+  (* Security fix *)
+patches/packages/mod_ssl-2.8.10_1.3.26-i386-1.tgz:  This update fixes an
+  off-by-one error in earlier versions of mod_ssl that may allow local users to
+  execute code as the Apache user.  For more information, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0653
+  (* Security fix *)
+patches/packages/openssh-3.4p1-i386-2.tgz:  Recompiled against openssl-0.9.6e.
+  This update also contains a fix to the installation script to ensure that the
+  sshd privsep user is correctly created.
+patches/packages/openssl-0.9.6e-i386-1.tgz:  Upgraded to openssl-0.9.6e, which
+  fixes 4 potentially remotely exploitable bugs.  For details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0659
+  (* Security fix *)
+patches/packages/openssl-solibs-0.9.6e-i386-1.tgz:  Upgraded to openssl-0.9.6e,
+  which fixes 4 potentially remotely exploitable bugs.  For details, see:
+    http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0659
+  (* Security fix *)
+patches/packages/php-4.2.2-i386-1.tgz:  Upgraded to php-4.2.2.  Earlier versions
+  of PHP 4.2.x contain a security vulnerability, which although not currently
+  considered exploitable on the x86 architecture is probably still a good to
+  patch.  For details, see:  http://www.cert.org/advisories/CA-2002-21.html
+  (* Security fix *)
+----------------------------
+Wed Jun 26 12:03:06 PDT 2002
+patches/packages/openssh-3.4p1-i386-1.tgz:  Upgraded to openssh-3.4p1.
+  This version enables privilege separation by default.  The README.privsep file
+  says this about it:
+
+     Privilege separation, or privsep, is method in OpenSSH by which operations
+     that require root privilege are performed by a separate privileged monitor
+     process.  Its purpose is to prevent privilege escalation by containing
+     corruption to an unprivileged process.  More information is available at:
+       http://www.citi.umich.edu/u/provos/ssh/privsep.html
+
+  Note that ISS has released an advisory on OpenSSH (OpenSSH Remote Challenge
+  Vulnerability).  Slackware is not affected by this issue, as we have never
+  included AUTH_BSD, S/KEY, or PAM.  Unless at least one of these options is
+  compiled into sshd, it is not vulnerable.  Further note that none of these
+  options are turned on in a default build from source code, so if you have
+  built sshd yourself you should not be vulnerable unless you've enabled one
+  of these options.
+
+  Regardless, the security provided by privsep is unquestionably better.
+  This time we (Slackware) were lucky, but next time we might not be.
+  Therefore we recommend that all sites running the OpenSSH daemon (sshd,
+  enabled by default in Slackware 8.1) upgrade to this new openssh package.
+  After upgrading the package, restart the daemon like this:
+
+  /etc/rc.d/rc.sshd restart
+
+  We would like to thank Theo and the rest of the OpenSSH team for
+  their quick handling of this issue, Niels Provos and Markus Friedl for
+  implementing privsep, and Solar Designer for working out issues with
+  privsep on 2.2 Linux kernels.
+----------------------------
+Wed Jun 19 07:02:39 PDT 2002
+Slackware 8.1.01-stable is released.
+a/sysvinit-2.84-i386-19.tgz:  Added -M to fix quotacheck for reiserfs.
+d/cvs-1.11.2-i386-2.tgz:  Added docs in text format.
+n/apache-1.3.26-i386-1.tgz:  Upgraded to apache-1.3.26.
+  This fixes the issue described in:
+  "CERT Advisory CA-2002-17 Apache Web Server Chunk Handling Vulnerability"
+  While the impact of this issue is minimal on 32 bit Linux systems, we felt it
+  was important enough to stop the presses and get these fixes in before sending
+  the Slackware 8.1 discs in for replication.
+  (* Security fix *)
+n/mod_ssl-2.8.9_1.3.26-i386-1.tgz:  Upgraded to mod_ssl-2.8.9_1.3.26.
+rootdisks/rescue.dsk:  Added network/pcmcia scripts.
+----------------------------
+Tue Jun 18 10:47:47 PDT 2002
+Slackware 8.1-stable is released!  :-)
+
