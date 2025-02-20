@@ -1,0 +1,13 @@
+
+libproj-4.4.5-i386-1: PROJ.4 cartographic projection software,
+libproj-4.4.5-i386-1: with US NAD83/NAD27 datum shifting support.
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: This package is needed by Xastir.
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: 
+

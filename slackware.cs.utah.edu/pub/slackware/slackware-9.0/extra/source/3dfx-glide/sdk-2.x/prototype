@@ -1,0 +1,62 @@
+VERSION=2.x
+BUILD=1
+ARCH=i386
+
+PKGNAME=glide_sdk-$VERSION-$ARCH-$BUILD
+MAINTAINER="David Cantrell <david@slackware.com>"
+
+IGNOREPATH=/tmp:/proc:/dev:/root:/var:/a
+STRIPLIB=y
+STRIPBIN=y
+
+PROGNAME="Glide SDK"
+DESC="\
+Glide $VERSION Software Development Kit\n\
+\n\
+This package installs sample source, documentation, and header\n\
+files for building programs that make use of the Glide $VERSION\n\
+rasterization libraries.  You will also want to install the\n\
+necessary Glide package for your 3Dfx card."
+
+compile() {
+   mkdir Glide
+   cd Glide
+   tar xvzf $CWD/glide2x.tar.gz
+   tar xvzf $CWD/swlibs.tar.gz
+   tar xvzf $CWD/Glide2-Doc.tar.gz
+}
+
+install() {
+   # install headers
+   mkdir -p /usr/include/glide
+   cp swlibs/fxmisc/3dfx.h glide2x/h3/glide/src/glide.h \
+      glide2x/h3/glide/src/glidesys.h glide2x/h3/glide/src/glideutl.h \
+      glide2x/h3/incsrc/sst1vid.h glide2x/h3/glide/src/gump.h \
+      swlibs/fxmisc/linutil.h swlibs/texus/lib/texus.h \
+      /usr/include/glide
+
+   # install test sources
+   mkdir -p /usr/src/glide/tests
+   cp glide2x/h3/glide/tests/makefile.distrib /usr/src/glide/tests/Makefile
+   cp glide2x/h3/glide/tests/*.3df glide2x/h3/glide/tests/test??.c \
+      glide2x/h3/glide/tests/tldata.inc glide2x/h3/glide/tests/tlib.c \
+      glide2x/h3/glide/tests/tlib.h /usr/src/glide/tests
+
+   # install texus sources
+   mkdir -p /usr/src/glide/texus/lib
+   mkdir -p /usr/src/glide/texus/cmd
+   mkdir -p /usr/src/glide/texus/examples
+   cp swlibs/texus/makefile.distrib /usr/src/glide/texus/Makefile
+   cp swlibs/texus/lib/makefile.distrib /usr/src/glide/texus/lib/Makefile
+   cp swlibs/texus/cmd/makefile.distrib /usr/src/glide/texus/cmd/Makefile
+   cp swlibs/texus/examples/makefile.distrib \
+      /usr/src/glide/texus/examples/Makefile
+   cp swlibs/texus/lib/*.c /usr/src/glide/texus/lib
+   cp swlibs/texus/lib/texusint.h /usr/src/glide/texus/lib
+   cp swlibs/texus/cmd/*.c /usr/src/glide/texus/cmd
+   cp swlibs/texus/examples/*.c /usr/src/glide/texus/examples
+
+   # install documentation
+   mkdir -p /usr/doc/Glide2
+   cp glide2x/glide_license.txt Glide2/*.pdf /usr/doc/Glide2
+}

@@ -1,0 +1,11 @@
+aspell-cs: aspell-cs (Czech word list)
+aspell-cs:
+aspell-cs: Czech word list for the Aspell spell checker.
+aspell-cs:
+aspell-cs:
+aspell-cs:
+aspell-cs:
+aspell-cs:
+aspell-cs:
+aspell-cs:
+aspell-cs:

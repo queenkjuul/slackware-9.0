@@ -1,0 +1,13 @@
+
+awznode-0.4_pre2-i386-1: AWZnode is based upon LinuxNode by Tomi Manninen 
+awznode-0.4_pre2-i386-1: OH2BNS and FlexNode by Roy PE1RJA. Users in AWZNode can
+awznode-0.4_pre2-i386-1: connect all nodes that are available via AX25, NETROM, 
+awznode-0.4_pre2-i386-1: ROSE, FLEXNET, and TCP/IP. 
+awznode-0.4_pre2-i386-1: 
+awznode-0.4_pre2-i386-1: AWZnode is developed by Stefano Noferi, IW5AWZ.
+awznode-0.4_pre2-i386-1: 
+awznode-0.4_pre2-i386-1: 
+awznode-0.4_pre2-i386-1: 
+awznode-0.4_pre2-i386-1: 
+awznode-0.4_pre2-i386-1: 
+

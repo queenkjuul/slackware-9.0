@@ -1,0 +1,11 @@
+glide_cvg: Glide 2.53 for the Voodoo2
+glide_cvg:
+glide_cvg: Includes dynamic ELF libraries for Glide 2.53 built
+glide_cvg: specifically for the Voodoo2 card.  Also includes the Texus
+glide_cvg: libraries and test programs for your 3Dfx card.
+glide_cvg:
+glide_cvg:
+glide_cvg:
+glide_cvg:
+glide_cvg:
+glide_cvg:

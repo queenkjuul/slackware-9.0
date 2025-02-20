@@ -1,0 +1,11 @@
+kfiresaver3d: kfiresaver3d
+kfiresaver3d:
+kfiresaver3d: An amazing GL fireworks display screensaver for KDE 3.1!
+kfiresaver3d:
+kfiresaver3d: This KDE screensaver module was produced by Enrico Ros, based on the
+kfiresaver3d: great work of David Sansome on kfiresaver, and is released under the
+kfiresaver3d: GNU Public License.
+kfiresaver3d:
+kfiresaver3d:
+kfiresaver3d:
+kfiresaver3d:

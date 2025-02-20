@@ -1,0 +1,18 @@
+CWD=`pwd`
+# Again, like Mozilla, it would gain nothing to try to seperate
+# these sources from rpm, and would likely lead to incompatiblities
+# with the docbook/sgml/jade systems that are in use elsewhere.  Most
+# versions on Linux seem to come from these srpms in some way.
+# So, we build these on Slackware, and then turn them into the
+# Slackware sgml-tools package, which contains all of this stuff.
+for file in *.tar.gz ; do
+  ( rm -rf /usr/src/rpm/SOURCES/*
+    cd /usr/src/rpm/SOURCES
+    tar xzvf $CWD/$file
+    rpmbuild -bb --nodeps *.spec )
+done
+
+# After this is done, install the gnome-doc-tools-2-1.noarch.rpm:
+# rpm -i --nodeps gnome-doc-tools-2-1.noarch.rpm
+# (I've not seen this in another format, BTW :)
+# Then, run the buildDocBookCatalog script.

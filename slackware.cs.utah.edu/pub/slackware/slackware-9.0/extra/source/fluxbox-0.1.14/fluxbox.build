@@ -1,0 +1,30 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=0.1.14
+ARCH=i386
+
+cd /tmp
+tar xjvf $CWD/fluxbox-$VERSION.tar.bz2
+cd fluxbox-$VERSION
+chown -R root.root .
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr/X11R6 \
+            --enable-xinerama \
+            --enable-shape \
+            --enable-slit \
+            --enable-interlace \
+            --enable-nls \
+            --enable-timed-cache
+make
+make install
+mkdir -p /etc/X11/xinit
+zcat $CWD/xinitrc.fluxbox.gz > /etc/X11/xinit/xinitrc.fluxbox
+chmod 755 /etc/X11/xinit/xinitrc.fluxbox
+mkdir -p /usr/doc/fluxbox-$VERSION
+cp -a \
+  AUTHORS ChangeLog INSTALL COPYING README* TODO \
+  /usr/doc/fluxbox-$VERSION
+chmod 644 /usr/doc/fluxbox-$VERSION/*
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

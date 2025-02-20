@@ -1,0 +1,13 @@
+
+predict-2.1.5-i386-1: Satellite Tracking Program with Optional Voice Output
+predict-2.1.5-i386-1: by KD2BD, et al.
+predict-2.1.5-i386-1: Several client programs are provided:
+predict-2.1.5-i386-1: earthtrack: Combines predict with xearth
+predict-2.1.5-i386-1: geosat:     Determines the 'look angles' for geostationary
+predict-2.1.5-i386-1:             satellites
+predict-2.1.5-i386-1: gsat:       Graphical front-end for predict using gtk
+predict-2.1.5-i386-1: 
+predict-2.1.5-i386-1: The upstream predict sources also come with a front-end 
+predict-2.1.5-i386-1: called 'map', but it is not included in the Slackware 
+predict-2.1.5-i386-1: package because it requires the non-free xforms library.
+

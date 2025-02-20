@@ -1,0 +1,11 @@
+mpg123: mpg123 (a command-line mp3 player)
+mpg123:
+mpg123: (full?) MPEG 1.0/2.0, Layer 1,2 and 3 support (Layer-3 realtime only
+mpg123: with a 'fast' machine).  Since April 97, 128kbit j-stereo should work
+mpg123: on a 486DX4-120.  With 2:1 down-sampling or using the downmix-mode
+mpg123: even a 486DX2-66 should play such a stream in realtime! 
+mpg123:
+mpg123:
+mpg123:
+mpg123:
+mpg123:

@@ -1,0 +1,13 @@
+Slackware 3Dfx Sources
+======================
+
+This is the Slackware Linux 3Dfx package source directory.  Each subdirectory
+represents a Slackware package.  Each package is built with the protopkg
+tool that can be found on ftp.slackware.com in
+/pub/slackware/unsupported/protopkg.
+
+The get-3dfx-cvs.sh script will fetch a current copy of the 3Dfx sources and
+place them in the appropriate locations within this source tree.
+
+- David Cantrell
+  david@slackware.com

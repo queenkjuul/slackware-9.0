@@ -1,0 +1,13 @@
+
+baken-0.5-i386-2: Visualisation of VHF/UHF and microwave beacons 
+baken-0.5-i386-2: on a map of Europe. As input it takes the file produced 
+baken-0.5-i386-2: by G3UUT the Region 1 Beacon Co-ordinator, and attempts 
+baken-0.5-i386-2: to extract the beacon data from it. 
+baken-0.5-i386-2: Author: Jonathan Naylor, G4KLX 
+baken-0.5-i386-2: 
+baken-0.5-i386-2: Requires glib to be installed.
+baken-0.5-i386-2: 
+baken-0.5-i386-2: 
+baken-0.5-i386-2: 
+baken-0.5-i386-2: 
+

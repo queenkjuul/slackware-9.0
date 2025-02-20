@@ -1,0 +1,11 @@
+emacspeak-ss: emacspeak-ss (Emacspeak speech servers for several synthesizers)
+emacspeak-ss:
+emacspeak-ss: The emacspeak-ss package provides Emacspeak servers for several
+emacspeak-ss: additional synthesizers:  DoubleTalk PC and AT from R. C. Systems
+emacspeak-ss: <http://www.rcsys.com/>, Braille 'n Speak, Type 'n Speak, and Braille
+emacspeak-ss: Lite from Blazie Engineering <http://www.blazie.com>, Accent SA,
+emacspeak-ss: Apollo 2, JUNO, and JUNO-sp from Dolphin, Spanish ciber 232, Spanish
+emacspeak-ss: ciber 232 Plus, and Spanish PC Hablado notebook.  Emacspeak-ss was
+emacspeak-ss: written by Jim Van Zandt, and additional servers were contributed by
+emacspeak-ss: Jack Chen and Oscar Fernandez.  Original inspiration by Bob Gildea. :)
+emacspeak-ss:

@@ -1,0 +1,42 @@
+
+This package (openmotif-2.2.1-i386-1.tgz), is Open Motif 2.2.1 compiled for
+Slackware.
+
+
+INSTALLATION:
+
+Slackware's Open Motif and LessTif packages should not be installed at the same
+time (though it may be possible to make them work together if you compile them
+both from source and put them in different locations).  So before you begin,
+remove lesstif from your system:
+
+removepkg lesstif
+
+Then, install the Open Motif package:
+
+installpkg openmotif-2.2.1-i386-1.tgz
+
+Open Motif will now be installed.
+
+
+IMPORTANT UNINSTALLATION NOTES:
+
+The Open Motif package will overwrite several X Window System files with its own
+versions.  Therefore, to remove it you must follow these steps:
+
+Remove the Open Motif package:
+
+removepkg openmotif
+
+Then, you'll need to reinstall these packages from Slackware's slackware/x
+directory:
+
+installpkg xfree86-4.2.0-i386-2.tgz
+installpkg xfree86-devel-4.2.0-i386-2.tgz
+
+And, if desired, this package in slackware/l:
+
+installpkg lesstif-0.93.18-i386-1.tgz
+
+Have fun!
+

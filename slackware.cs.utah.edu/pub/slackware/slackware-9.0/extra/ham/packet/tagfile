@@ -1,0 +1,16 @@
+# Tagfile for ham/packet series
+7plus: REC
+aprsdigi: OPT
+awznode: OPT
+ax25_apps: ADD
+ax25_tools: ADD
+libax25: ADD
+libgeotiff: OPT
+libproj: OPT
+node: REC
+soundmodem: OPT
+xastir: OPT
+xcall: REC
+xconvers: REC
+xfbb: OPT
+z8530drv_utils: REC

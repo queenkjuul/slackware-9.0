@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/bootdisks</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/bootdisks</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE12.DOC">RAWRITE12.DOC</a></td><td align="right">1997-12-01 01:21  </td><td align="right">2.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITENT.DOC">RAWRITENT.DOC</a></td><td align="right">2000-08-29 08:23  </td><td align="right">6.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE12.EXE">RAWRITE12.EXE</a></td><td align="right">1997-12-01 01:21  </td><td align="right"> 13K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="README.TXT">README.TXT</a></td><td align="right">2003-03-10 05:09  </td><td align="right"> 15K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITENT.EXE">RAWRITENT.EXE</a></td><td align="right">2000-08-29 08:26  </td><td align="right"> 24K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE.EXE">RAWRITE.EXE</a></td><td align="right">1995-05-12 01:23  </td><td align="right"> 35K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE13.EXE">RAWRITE13.EXE</a></td><td align="right">1995-05-12 01:23  </td><td align="right"> 35K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITEXP.EXE">RAWRITEXP.EXE</a></td><td align="right">2001-12-29 04:47  </td><td align="right">200K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="adaptec.s">adaptec.s</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ataraid.i">ataraid.i</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bare.i">bare.i</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ibmmca.s">ibmmca.s</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="jfs.s">jfs.s</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="lowmem.i">lowmem.i</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="old_cd.i">old_cd.i</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="pportide.i">pportide.i</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="raid.s">raid.s</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="scsi.s">scsi.s</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="scsi2.s">scsi2.s</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="speakup.i">speakup.i</a></td><td align="right">2003-03-18 08:39  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfs.i">xfs.i</a></td><td align="right">2003-03-18 09:42  </td><td align="right">1.4M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

@@ -1,0 +1,13 @@
+
+aprsdigi-2.4.1-i386-1: Aprsdigi is a specialized Amateur Packet Radio (AX.25)
+aprsdigi-2.4.1-i386-1: UI-frame digipeater for the Automatic Position Reporting 
+aprsdigi-2.4.1-i386-1: Systems, APRS(tm).
+aprsdigi-2.4.1-i386-1: 
+aprsdigi-2.4.1-i386-1: Aprsmon collects and displays standard AX.25 UI text
+aprsdigi-2.4.1-i386-1: frames in a format similar to that output by a standard
+aprsdigi-2.4.1-i386-1: TNC in "Monitor ON" mode and is intended to be used with
+aprsdigi-2.4.1-i386-1: programs like javAPRS which wish to see a TNC data
+aprsdigi-2.4.1-i386-1: stream over a TCP connection.
+aprsdigi-2.4.1-i386-1: 
+aprsdigi-2.4.1-i386-1: Aprsdigi is developed by Alan Crosswell <n2ygk@weca.org>
+

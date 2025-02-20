@@ -1,0 +1,13 @@
+
+xlog-0.6.1-i386-2: GTK+ Logging program for Shortwave Hamradio Operators
+xlog-0.6.1-i386-2: xlog focuses on hams who operate shortwave on a daily basis.
+xlog-0.6.1-i386-2: The log is stored into a text file. QSO's are presented in a
+xlog-0.6.1-i386-2: list. Items in the list can be added, deleted or updated.
+xlog-0.6.1-i386-2: For each contact, DXCC information is displayed and bearings
+xlog-0.6.1-i386-2: and distance are calculated, both short and long path.
+xlog-0.6.1-i386-2: xlog is developed by Joop Stakenborg <pa4tu@amsat.org>
+xlog-0.6.1-i386-2: 
+xlog-0.6.1-i386-2: Requires glib, gtk+ and hamlib to be installed.
+xlog-0.6.1-i386-2: 
+xlog-0.6.1-i386-2: 
+

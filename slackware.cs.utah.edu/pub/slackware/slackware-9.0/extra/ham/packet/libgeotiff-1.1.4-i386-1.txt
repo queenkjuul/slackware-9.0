@@ -1,0 +1,13 @@
+
+libgeotiff-1.1.4-i386-1: Libgeotiff is a public domain library normally hosted
+libgeotiff-1.1.4-i386-1: on top of libtiff for reading, and writing GeoTIFF
+libgeotiff-1.1.4-i386-1: information tags.
+libgeotiff-1.1.4-i386-1: 
+libgeotiff-1.1.4-i386-1: listgeo:  utility program for dumping the metadata
+libgeotiff-1.1.4-i386-1:           of a GeoTIFF file.
+libgeotiff-1.1.4-i386-1: geotifcp: utility program for applying metadata to a
+libgeotiff-1.1.4-i386-1:           TIFF file, making it a GeoTIFF file.
+libgeotiff-1.1.4-i386-1: 
+libgeotiff-1.1.4-i386-1: This package is needed by Xastir.
+libgeotiff-1.1.4-i386-1: 
+

@@ -1,0 +1,22 @@
+
+                 -+  Kernel Selection Help +-
+
+You'll need one kernel to get Linux started on your system so that you can 
+install it.  Because of the possibility of collisions between the various 
+Linux drivers, several kernels have been provided.  You should use the one 
+with the least drivers possible to maximize your chances of success.  
+
+***************************************************************************
+* Tip:  If you have no idea which kernel to use, Try one of these.        *
+*       If you have a IDE system choose "bare.i".                         *
+*       If you have a SCSI system choose "scsi.s" or "scsi2.s".           *
+***************************************************************************
+
+To boot the chosen kernel put the name of the kernel and press enter.
+
+boot: bare.i   "For example, boot the 'bare.i' kernel!"
+
+Press the [F3] key for a complete list of kernel choices (including patched
+kernels to support IBM' JFS and SGI's XFS journaling filesystems), or enter
+your selection on the line below.
+

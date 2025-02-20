@@ -1,0 +1,11 @@
+sgml-tools: sgml-tools (Utilities for working with SGML)
+sgml-tools:
+sgml-tools: SGML stands for Standard Generalized Markup Language.  This is a
+sgml-tools: system which allows you to produce LaTeX, HTML, GNU info, LyX, RTF,
+sgml-tools: and plain text (via groff) from a single source file in SGML.  It is
+sgml-tools: often used for technical software documentation, such as the Linux
+sgml-tools: HOWTO documents.  This package includes everything you need to use
+sgml-tools: SGML -- all the standard SGML tools, OpenJade, and tools for working
+sgml-tools: with DocBook documents (various DTDs).
+sgml-tools:
+sgml-tools:

@@ -1,0 +1,39 @@
+#!/bin/sh
+# Build LILO for Slackware
+CWD=`pwd`
+VERSION=22.5
+
+cd /tmp
+tar xzvf $CWD/lilo-$VERSION.tar.gz
+cd lilo-$VERSION
+make
+make install
+chown root.bin /sbin/lilo /sbin/mkrescue
+chown root.bin /usr/sbin/keytab-lilo.pl
+# Add Slackware's 'liloconfig' utility:
+mkdir -p /sbin
+cp -a $CWD/liloconfig /sbin/liloconfig
+chmod 755 /sbin/liloconfig
+chown root.bin /sbin/liloconfig
+mkdir -p /var/log/setup
+cp -a $CWD/setup.liloconfig /var/log/setup/setup.liloconfig
+cp -a $CWD/text.lilohelp /var/log/setup/text.lilohelp
+chmod 755 /var/log/setup/setup.liloconfig
+chmod 644 /var/log/setup/text.lilohelp
+chown root.root /var/log/setup/setup.liloconfig /var/log/setup/text.lilohelp
+rm -rf $PKG/usr/doc/lilo-$VERSION
+mkdir -p $PKG/usr/doc/lilo-$VERSION
+cp -a CHANGES COPYING COPYRIGHT INCOMPAT QuickInst READM* doc sample \
+  $PKG/usr/doc/lilo-$VERSION
+if [ -r $CWD/lilo-$VERSION.lsm ]; then
+  cp -a $CWD/lilo-$VERSION.lsm $PKG/usr/doc/lilo-$VERSION
+fi
+if [ -r $CWD/lilo-$VERSION.announce.txt ]; then
+  cp -a $CWD/lilo-$VERSION.announce.txt $PKG/usr/doc/lilo-$VERSION
+fi
+( cd /usr/man/man5 ; gzip -9 --force lilo.conf.5 )
+( cd /usr/man/man8 ; gzip -9 --force lilo.8 )
+( cd /usr/man/man8 ; gzip -9 --force mkrescue.8 )
+chown -R root.root $PKG/usr/doc/lilo-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc

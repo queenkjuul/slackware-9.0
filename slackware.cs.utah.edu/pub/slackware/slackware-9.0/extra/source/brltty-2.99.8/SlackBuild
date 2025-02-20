@@ -1,0 +1,45 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+PKG=/tmp/package-brltty
+
+VERSION=2.99.8
+ARCH=i386
+BUILD=1
+
+rm -rf $PKG
+mkdir -p $PKG
+echo "+=================+"
+echo "| brltty-$VERSION |"
+echo "+=================+"
+cd $TMP
+tar xzvf $CWD/brltty-$VERSION.tar.gz
+cd brltty-$VERSION
+chown -R root.root .
+find . -perm 775 -exec chmod 755 {} \;
+find . -perm 700 -exec chmod 755 {} \;
+find . -perm 744 -exec chmod 755 {} \;
+find . -perm 664 -exec chmod 644 {} \;
+find . -perm 600 -exec chmod 644 {} \;
+make
+make install INSTALL_ROOT=$PKG
+rm -r $PKG/dev
+chmod 755 $PKG/sbin/* $PKG/lib/brltty/*
+chown -R root.bin $PKG/sbin
+mkdir -p $PKG/usr/doc/brltty-$VERSION
+cp -a \
+  README COPYING DOCS \
+  $PKG/usr/doc/brltty-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+makepkg -l y -c n ../brltty-$VERSION-$ARCH-$BUILD.tgz
+

@@ -1,0 +1,49 @@
+VERSION=3.x
+BUILD=1
+ARCH=i386
+
+PKGNAME=glide_sdk-$VERSION-$ARCH-$BUILD
+MAINTAINER="David Cantrell <david@slackware.com>"
+
+IGNOREPATH=/tmp:/proc:/dev:/root:/var:/a
+STRIPLIB=y
+STRIPBIN=y
+
+PROGNAME="Glide SDK"
+DESC="\
+Glide $VERSION Software Development Kit\n\
+\n\
+This package installs sample source, documentation, and header\n\
+files for building programs that make use of the Glide $VERSION\n\
+rasterization libraries.  You will also want to install the\n\
+necessary Glide package for your 3Dfx card."
+
+compile() {
+   mkdir Glide
+   cd Glide
+   tar xvzf $CWD/glide3x.tar.gz
+   tar xvzf $CWD/swlibs.tar.gz
+   tar xvzf $CWD/Glide3-Doc.tar.gz
+}
+
+install() {
+   # install headers
+   mkdir -p /usr/include/glide3
+   cp swlibs/fxmisc/3dfx.h glide3x/h3/glide3/src/glide.h \
+      glide3x/h3/glide3/src/glidesys.h glide3x/h3/glide3/src/glideutl.h \
+      glide3x/h3/incsrc/sst1vid.h swlibs/fxmisc/linutil.h \
+      swlibs/texus/lib/texus.h /usr/include/glide3
+
+   # install test sources
+   mkdir -p /usr/src/glide/tests3x
+   cp glide3x/h3/glide3/tests/makefile.distrib /usr/src/glide/tests3x/Makefile
+   cp -r glide3x/h3/glide3/tests/*.3df \
+      glide3x/h3/glide3/tests/test??.c \
+      glide3x/h3/glide3/tests/tldata.inc \
+      glide3x/h3/glide3/tests/tlib.c \
+      glide3x/h3/glide3/tests/tlib.h /usr/src/glide/tests3x
+
+   # install documentation
+   mkdir -p /usr/doc/Glide3
+   cp glide3x/glide_license.txt Glide3/*.pdf /usr/doc/Glide3
+}

@@ -1,0 +1,46 @@
+
+This is a modified version of checkinstall which uses Slackware's
+native "makepkg" tool so that it produces (mostly) correct packages.
+
+One thing to be careful about is the filename of the finished
+package.  If it does not follow Slackware's naming scheme, the
+package utilities won't be able to tell which part of the filename
+is the package's base name, and the package will not be able to be
+managed 100% effectively.  For instance, removing the package could
+cause other similarly-named packages to be removed as well.
+
+So, once you have your build package, change the filename so that
+it follows these rules BEFORE you install it:
+
+<packagename>-<version>-<arch>-<build>.tgz
+
+An example correct package name would be:  
+
+checkinstall-1.5.3-i386-1.tgz
+
+You may include dashes in the package name.  You may NOT include them
+in the version number, arch, or build number.  Why?  Because
+Slackware's package tools take the rightmost dash delimited field to
+be the build number, the next dash delimited field to the left of that
+as the architecture, the next field as the version number, and
+everything to the left of that as the package's base name.  Including
+extra dashes in any field except the package name will mess up the
+count.
+
+To make this more clear, here's an example of a WRONG package name:
+
+xmms-skins-i386-1.tgz
+
+Note that "skins" will be taken as the package's version number.
+Attempting to remove this package may remove the "xmms" package
+instead.
+
+Hope this helps!  And thanks to Ezio and izto for informing me that
+checkinstall doesn't have to use the broken version of makepkg that it
+ships with.  After a few other patches to bring things in line, it
+looks like this is going to be a nice addition to Slackware.  :-)
+
+Have fun,
+
+Pat <volkerdi@slackware.com>
+

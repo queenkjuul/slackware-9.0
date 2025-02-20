@@ -1,0 +1,21 @@
+
+Brief Description of 3Dfx Cards
+-------------------------------
+
+There are currently five different types of 3Dfx graphics cards.  There are
+probably more retail namings than that, but in reality there are basically
+five types of cards.
+
+   Card                             ASIC      Subdirectory
+   ====                             ====      ============
+   Voodoo Graphics                  sst1      voodoo_graphics
+   Voodoo Rush                      sst96     voodoo_rush
+   Voodoo 2                         cvg       voodoo2
+   Voodoo 3 and Voodoo Banshee      h3        voodoo3_banshee
+   Voodoo 4 and Voodoo 5            h5        voodoo4_voodoo5
+
+Go into the appropriate subdirectory for your card and install the packages
+you want.  All applicable versions of the Glide rasterization library will
+be found there, along with any other card-specific packages.  Installing a
+package is done using the installpkg(8) command.
+

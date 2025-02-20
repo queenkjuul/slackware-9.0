@@ -1,0 +1,4 @@
+
+checkinstall (and installwatch) will not work
+if libsafe is installed.
+

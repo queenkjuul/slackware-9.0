@@ -1,0 +1,13 @@
+
+xastir-1.1.2-i386-3: XASTIR is an APRS program that uses GPS tracking/maps
+xastir-1.1.2-i386-3: and Amateur Radio to convey position reports, messaging,
+xastir-1.1.2-i386-3: weather, and much more.
+xastir-1.1.2-i386-3: Xastir was originally written by Frank Giannandrea, KC2GJS.
+xastir-1.1.2-i386-3: 
+xastir-1.1.2-i386-3: Requires packages: ax25-tools, imagick, lesstif, libax25,
+xastir-1.1.2-i386-3:                    libgeotiff, libproj.
+xastir-1.1.2-i386-3: 
+xastir-1.1.2-i386-3: 
+xastir-1.1.2-i386-3: 
+xastir-1.1.2-i386-3: 
+

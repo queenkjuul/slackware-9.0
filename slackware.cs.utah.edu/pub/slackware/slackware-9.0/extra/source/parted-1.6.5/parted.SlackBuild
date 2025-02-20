@@ -1,0 +1,40 @@
+#!/bin/sh
+CWD=`pwd` 
+PKG=/tmp/package-parted
+rm -rf $PKG
+mkdir -p $PKG
+
+VERSION=1.6.5
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xzvf $CWD/parted-$VERSION.tar.gz
+cd parted-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure --prefix=/usr \
+            --enable-shared=yes \
+            --enable-static=no \
+            --with-readline
+make
+make install DESTDIR=$PKG
+strip $PKG/usr/sbin/*
+chown -R root.bin $PKG/usr/sbin
+mkdir -p $PKG/usr/doc/parted-$VERSION
+cp -a \
+  AUTHORS BUGS COPYING README THANKS TODO \
+  doc/{API,FAQ,FAT,pt_BR-FAQ} \
+  $PKG/usr/doc/parted-$VERSION
+rm $PKG/usr/info/dir
+gzip -9 $PKG/usr/info/*
+( cd $PKG/usr/man
+  find . -type f -exec chmod 644 {} \;
+  find . -type f -exec gzip -9 {} \;
+)
+strip --strip-unneeded $PKG/usr/lib/*.so
+mkdir $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+makepkg -l y -c n ../parted-$VERSION-$ARCH-$BUILD.tgz

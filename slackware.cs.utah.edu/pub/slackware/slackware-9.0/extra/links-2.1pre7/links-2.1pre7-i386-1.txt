@@ -1,0 +1,11 @@
+links: links (WWW browser for the console)
+links:
+links: links is a console mode WWW browser, supporting colors, correct table
+links: rendering, background downloading, frames, Javascript, and a menu
+links: driven configuration interface.  This is a pre-release version of
+links: that supports graphical output using the Linux framebuffer console or
+links: SVGAlib.  Normal text console mode is also supported.  (sorry, no
+links: X support in this package... there are enough X browsers and it's
+links: useful to have a graphical browser that does NOT need X libraries)
+links:
+links: links was written by Mikulas Patocka.

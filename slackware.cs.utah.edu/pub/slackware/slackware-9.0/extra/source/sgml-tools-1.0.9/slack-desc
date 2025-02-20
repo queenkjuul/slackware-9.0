@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+          |-----handy-ruler------------------------------------------------------|
+sgml-tools: sgml-tools (Utilities for working with SGML)
+sgml-tools:
+sgml-tools: SGML stands for Standard Generalized Markup Language.  This is a
+sgml-tools: system which allows you to produce LaTeX, HTML, GNU info, LyX, RTF,
+sgml-tools: and plain text (via groff) from a single source file in SGML.  It is
+sgml-tools: often used for technical software documentation, such as the Linux
+sgml-tools: HOWTO documents.  This package includes everything you need to use
+sgml-tools: SGML -- all the standard SGML tools, OpenJade, and tools for working
+sgml-tools: with DocBook documents (various DTDs).
+sgml-tools:
+sgml-tools:

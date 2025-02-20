@@ -1,0 +1,11 @@
+aspell-sv: aspell-sv (Swedish word list)
+aspell-sv:
+aspell-sv: Swedish word list for the Aspell spell checker.
+aspell-sv:
+aspell-sv:
+aspell-sv:
+aspell-sv:
+aspell-sv:
+aspell-sv:
+aspell-sv:
+aspell-sv:

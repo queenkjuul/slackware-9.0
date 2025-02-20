@@ -1,0 +1,11 @@
+Open Motif 2.2
+
+ToolTip and autoconf code donated by Rick W Scott (rwscott@alumni.uwaterloo.ca) 
+under the MIT License:
+http://www.opensource.org/licenses/mit-license.html
+
+XmTree, XmTabStack, XmButtonBox, XmIconButton, XmExt18List,
+XmIconBox, XmColorSelector, XmFontSelector, XmDataField,and XmColumn donated by
+Integrated Computer Solutions, Inc under the Open Group Public 
+License:
+http://www.opengroup.org/openmotif/license/

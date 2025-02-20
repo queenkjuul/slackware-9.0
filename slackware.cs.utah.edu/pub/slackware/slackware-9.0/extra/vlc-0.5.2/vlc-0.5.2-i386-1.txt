@@ -1,0 +1,11 @@
+vlc: vlc (VideoLAN Client)
+vlc:
+vlc: The VideoLAN Client (vlc) is a video player application for Linux
+vlc: that can play MPEG-1, MPEG-2, and MPEG-4 video files and streams.
+vlc:
+vlc:
+vlc:
+vlc:
+vlc:
+vlc:
+vlc:

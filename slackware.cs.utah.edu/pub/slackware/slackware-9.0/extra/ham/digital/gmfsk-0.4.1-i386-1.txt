@@ -1,0 +1,13 @@
+
+gmfsk-0.4.1-i386-1: gMFSK is an implementation of M-ary Frequency Shift 
+gmfsk-0.4.1-i386-1: Keying modulation for amateur radio communications. 
+gmfsk-0.4.1-i386-1: It is a digital communication mode intended for keyboard 
+gmfsk-0.4.1-i386-1: to keyboard QSO's over challenging HF propagation conditions. 
+gmfsk-0.4.1-i386-1: The main goal for the program is interoperability with the 
+gmfsk-0.4.1-i386-1: IZ8BLY Stream program in MFSK16 mode.
+gmfsk-0.4.1-i386-1: However currently the program also implements other FSK 
+gmfsk-0.4.1-i386-1: based modes, namely RTTY and THROB. The graphical user 
+gmfsk-0.4.1-i386-1: interface is written with the gnome libraries.
+gmfsk-0.4.1-i386-1: 
+gmfsk-0.4.1-i386-1: 
+

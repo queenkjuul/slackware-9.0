@@ -1,0 +1,36 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES HAM (PROPAGATION)" \
+       --checklist "Please select the packages you wish to install. \
+Use the \
+UP/DOWN keys to scroll through the list, and the SPACE key to select \
+the packages you wish to install.  Recommended packages have \
+already been selected for you, but you may unselect them if you wish.  \
+Press ENTER when you are \
+done." 21 70 3 \
+"baken" "Visualisation of VHF/UHF and microwave beacons" "on" \
+"baken_data" "Satellite-, location- and user profile-data" "on" \
+"baken_map" "Maps belonging to the baken program" "on" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+ rm -f $TMP/SeTpkgs
+ > $TMP/SeTnewtag
+ for pkg in 7plus aprsdigi awznode ax25_apps ax25_tools htpp libax25 libgeotiff libproj linkt node soundmodem xastir xcall xconvers xfbb z8530drv_utils ; do
+  echo "$pkg: SKP" >> $TMP/SeTnewtag
+ done
+ exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PACKAGE in 7plus aprsdigi awznode ax25_apps ax25_tools htpp libax25 libgeotiff libproj linkt node soundmodem xastir xcall xconvers xfbb z8530drv_utils ; do
+ if fgrep \"$PACKAGE\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+  echo "$PACKAGE: ADD" >> $TMP/SeTnewtag
+ else
+  echo "$PACKAGE: SKP" >> $TMP/SeTnewtag
+ fi
+done
+rm -f $TMP/SeTpkgs

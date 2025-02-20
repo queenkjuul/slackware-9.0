@@ -1,0 +1,17 @@
+                      -+ Kernel Image List +-
+
+ These are the kernels for you can use when booting this CD:
+    adaptec.s   -      Supports most Adaptec SCSI and RAID controllers.
+    bare.i      -      The standard, generic IDE/ATAPI kernel.
+    jfs.s       -      bare.i with support for IBM's JFS and AIC7xxx.
+    raid.s      -      Kernel with support for Compaq Smart Array, Mylex
+                       DAC960, AcceleRAID, and eXtremeRAID controllers.
+    scsi.s      -      Generic SCSI Linux kernel, with support for
+                       most controllers.
+    scsi2.s     -      Alternate SCSI kernel, supports mostly older cards.
+    speakup.i   -      kernels with Speakup speech support.
+    xfs.i       -      bare.i with support for SGI's XFS.
+
+Other kernels on this disk might be usable if you enter the $PATH to them.
+
+Please enter your kernel choice below.

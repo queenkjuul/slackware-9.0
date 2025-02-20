@@ -1,0 +1,11 @@
+emacspeak: emacspeak (Emacs speech interface)
+emacspeak:
+emacspeak: Emacspeak is a speech interface that allows visually impaired users to
+emacspeak: interact independently and efficiently with the computer.  By
+emacspeak: seamlessly blending all aspects of the Internet such as Web-surfing
+emacspeak: and messaging, Emacspeak speech-enables local and remote information
+emacspeak: via a consistent and well-integrated user interface.  Emacspeak has
+emacspeak: dramatically changed how the author, T. V. Raman, and hundreds of
+emacspeak: blind and visually impaired users around the world interact with the
+emacspeak: personal computer and the Internet.
+emacspeak:

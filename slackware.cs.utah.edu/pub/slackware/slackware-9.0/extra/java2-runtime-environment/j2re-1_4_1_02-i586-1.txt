@@ -1,0 +1,11 @@
+j2re: Sun Java(TM) 2 Runtime Environment, Standard Edition Version 1.4.0_02.
+j2re:
+j2re: The Java(TM) 2 Runtime Environment contains the Java virtual machine,
+j2re: runtime class libraries, and Java application launcher that are
+j2re: necessary to run programs written in the Java progamming language.
+j2re: It is not a development environment and does not contain development
+j2re: tools such as compilers or debuggers.  For development tools, obtain
+j2re: the Java 2 SDK, Standard Edition from http://java.sun.com.
+j2re:
+j2re:
+j2re:

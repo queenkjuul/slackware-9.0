@@ -1,0 +1,34 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=0.5.2
+ARCH=i386
+
+cd /tmp
+tar xjvf $CWD/vlc-$VERSION.tar.bz2
+cd vlc-$VERSION
+chown -R root.root .
+CXXFLAGS="-O2 -march=i386 -mcpu=i686" \
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure \
+  --prefix=/usr \
+  --disable-dvd \
+  --disable-static \
+  --enable-shared \
+  --enable-mad \
+  --enable-aa \
+  --enable-esd \
+  --enable-arts \
+  --enable-ncurses
+make
+make install
+mkdir -p /usr/man/man1
+cat doc/vlc.1 | gzip -9c > /usr/man/man1/vlc.1.gz
+cat doc/vlc-config.1 | gzip -9c > /usr/man/man1/vlc-config.1.gz
+mkdir -p /usr/doc/vlc-$VERSION
+cp -a \
+  ABOUT-NLS AUTHORS COPYING HACKING INSTALL INSTALL.win32 MAINTAINERS NEWS README README.MacOSX.rtf THANKS \
+  /usr/doc/vlc-$VERSION
+chmod 644 /usr/doc/vlc-$VERSION/*
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

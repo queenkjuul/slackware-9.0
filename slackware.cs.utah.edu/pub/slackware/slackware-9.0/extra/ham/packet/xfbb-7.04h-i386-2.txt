@@ -1,0 +1,13 @@
+
+xfbb-7.04h-i386-2: xfbb-7.04h 
+xfbb-7.04h-i386-2:  
+xfbb-7.04h-i386-2: FBB is a bulletin board software package for amateur packet- 
+xfbb-7.04h-i386-2: radio. FBB is developed by Jean-Paul Roubelat, F6FBB. 
+xfbb-7.04h-i386-2: 
+xfbb-7.04h-i386-2: This Slackware package also includes additional language 
+xfbb-7.04h-i386-2: files, the multi server and the 7plus server.
+xfbb-7.04h-i386-2: 
+xfbb-7.04h-i386-2: 
+xfbb-7.04h-i386-2: 
+xfbb-7.04h-i386-2: 
+

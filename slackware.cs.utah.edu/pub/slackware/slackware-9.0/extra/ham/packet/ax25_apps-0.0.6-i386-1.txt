@@ -1,0 +1,13 @@
+
+ax25_apps-0.0.6-i386-1: AX.25 applications 0.0.6 
+ax25_apps-0.0.6-i386-1:  
+ax25_apps-0.0.6-i386-1: These are the essential applications for use with AX.25 
+ax25_apps-0.0.6-i386-1: packet radio. 
+ax25_apps-0.0.6-i386-1: Requires libax25 to be installed. 
+ax25_apps-0.0.6-i386-1: The configuration files are included, but this packages 
+ax25_apps-0.0.6-i386-1: will not overwrite any existing config files.
+ax25_apps-0.0.6-i386-1: 
+ax25_apps-0.0.6-i386-1: 
+ax25_apps-0.0.6-i386-1: 
+ax25_apps-0.0.6-i386-1: 
+

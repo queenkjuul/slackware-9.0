@@ -1,0 +1,11 @@
+glibc-debug: glibc-debug (GNU C libraries with debugging symbols)
+glibc-debug:
+glibc-debug: This package contains versions of the GNU C libraries with debugging
+glibc-debug: information.  These are needed only if you wish to be able to step
+glibc-debug: through C library routines while debugging programs.  Most debugging
+glibc-debug: efforts will not require these.
+glibc-debug: To use these libraries, set LD_LIBRARY_PATH when calling the debugger:
+glibc-debug:   LD_LIBRARY_PATH=/usr/lib/debug gdb <executable>
+glibc-debug:
+glibc-debug: Or, use this approach if you need to debug a setuid binary:
+glibc-debug:   su user -c "LD_LIBRARY_PATH=/usr/lib/debug gdb <executable>"

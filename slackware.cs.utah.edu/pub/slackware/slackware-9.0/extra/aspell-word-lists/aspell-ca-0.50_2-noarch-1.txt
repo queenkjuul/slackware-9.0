@@ -1,0 +1,11 @@
+aspell-ca: aspell-ca (Catalan word list)
+aspell-ca:
+aspell-ca: Catalan word list for the Aspell spell checker.
+aspell-ca:
+aspell-ca:
+aspell-ca:
+aspell-ca:
+aspell-ca:
+aspell-ca:
+aspell-ca:
+aspell-ca:

@@ -1,0 +1,11 @@
+aspell-pt: aspell-pt (Portuguese word list)
+aspell-pt:
+aspell-pt: Portuguese word list for the Aspell spell checker.
+aspell-pt:
+aspell-pt:
+aspell-pt:
+aspell-pt:
+aspell-pt:
+aspell-pt:
+aspell-pt:
+aspell-pt:

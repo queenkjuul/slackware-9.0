@@ -1,0 +1,11 @@
+aspell-de: aspell-de (German word list)
+aspell-de:
+aspell-de: German word list for the Aspell spell checker.
+aspell-de:
+aspell-de:
+aspell-de:
+aspell-de:
+aspell-de:
+aspell-de:
+aspell-de:
+aspell-de:

@@ -1,0 +1,11 @@
+emu-tools: emu-tools (tools for Creative audio cards)
+emu-tools:
+emu-tools: These are tools for use with Creative audio cards that use the emu10k1
+emu-tools: driver, such as the Soundblaster Live! and Audigy.  The latest version
+emu-tools: of both the driver and the emu-tools are available at:
+emu-tools:
+emu-tools: http://opensource.creative.com
+emu-tools:
+emu-tools:
+emu-tools:
+emu-tools:

@@ -1,0 +1,31 @@
+#!/bin/sh
+CWD=`pwd` 
+PKG=/tmp/package-aumix
+rm -rf $PKG
+mkdir -p $PKG
+
+VERSION=2.7
+ARCH=i386
+BUILD=2
+
+cd /tmp
+tar xzvf $CWD/aumix_$VERSION.orig.tar.gz
+cd aumix-$VERSION
+chown -R root.root .
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr
+make
+make install DESTDIR=$PKG
+strip $PKG/usr/bin/*
+chown -R root.bin $PKG/usr/bin
+mkdir -p $PKG/usr/doc/aumix-$VERSION
+cp -a \
+  ABOUT-NLS AUTHORS BUGS COPYING ChangeLog INSTALL NEWS README TODO \
+  $PKG/usr/doc/aumix-$VERSION
+# This is obsolete (besides being broken)
+rm -f $PKG/usr/bin/xaumix $PKG/usr/man/man1/xaumix.1
+gzip -9 $PKG/usr/man/man1/*
+mkdir $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+makepkg -l y -c n ../aumix-$VERSION-$ARCH-$BUILD.tgz

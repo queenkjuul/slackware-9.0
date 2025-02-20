@@ -1,0 +1,13 @@
+
+xcall-0.15-i386-2: Packet radio program for X/GTK
+xcall-0.15-i386-2: Xcall is a packet radio program which supports the AX.25,
+xcall-0.15-i386-2: NET/ROM and Rose protocols. The current features of xcall
+xcall-0.15-i386-2: include: Command line history, Recording of the session
+xcall-0.15-i386-2: into a file, AX.25 port information read from the proc
+xcall-0.15-i386-2: filesystem, Changing of the receive window font and colors,
+xcall-0.15-i386-2: Dutch and French Language support, Basic support for DX
+xcall-0.15-i386-2: Clusters. Author:  Joop Stakenborg <pa3aba@debian.org>
+xcall-0.15-i386-2: 
+xcall-0.15-i386-2: Requires glib & gtk+ to be installed.
+xcall-0.15-i386-2: 
+

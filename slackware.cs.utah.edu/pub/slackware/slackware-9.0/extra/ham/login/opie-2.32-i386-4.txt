@@ -1,0 +1,13 @@
+
+opie-2.32-i386-4: One-time Passwords In Everything, Release 2.32
+opie-2.32-i386-4: 
+opie-2.32-i386-4: OPIE is a freely distributable software package originally developed
+opie-2.32-i386-4: at and for the US Naval Research Laboratory (NRL).
+opie-2.32-i386-4: OPIE provides a one-time password system. The system should be
+opie-2.32-i386-4: secure against the passive attacks now commonplace on the Internet
+opie-2.32-i386-4: (see RFC 1704 for more details).
+opie-2.32-i386-4: This Slackware binary package only contains the OPIE client software.
+opie-2.32-i386-4: 
+opie-2.32-i386-4: 
+opie-2.32-i386-4: 
+

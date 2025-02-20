@@ -1,0 +1,13 @@
+
+xconvers-0.8.1-i386-2: Xconvers is a client for convers, a IRC-like conversation
+xconvers-0.8.1-i386-2: system for hamradio operators. Convers differs from IRC 
+xconvers-0.8.1-i386-2: because there is a much smaller command set and command 
+xconvers-0.8.1-i386-2: input and output is generally shorter. This is done 
+xconvers-0.8.1-i386-2: because a lot of convers servers are linked by radio 
+xconvers-0.8.1-i386-2: waves, where traffic should be kept low.
+xconvers-0.8.1-i386-2: Author: Joop Stakenborg (PA4TU)
+xconvers-0.8.1-i386-2: 
+xconvers-0.8.1-i386-2: requires glib and gtk+ to be installed.
+xconvers-0.8.1-i386-2: 
+xconvers-0.8.1-i386-2: 
+

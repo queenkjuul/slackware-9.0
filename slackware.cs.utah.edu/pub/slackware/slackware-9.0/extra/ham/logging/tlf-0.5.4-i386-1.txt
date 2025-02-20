@@ -1,0 +1,13 @@
+
+tlf-0.5.4-i386-1: TLF is a console (ncurses) mode general purpose CW keyer,
+tlf-0.5.4-i386-1: -logging and -contest program for hamradio. It supports the
+tlf-0.5.4-i386-1: CQWW, the WPX, the ARRL-DX , the ARRL-FD, the PACC and the EU
+tlf-0.5.4-i386-1: SPRINT contests (single operator) as well as a lot more basic
+tlf-0.5.4-i386-1: contests, general QSO and DXpedition mode. It interfaces with a
+tlf-0.5.4-i386-1: morse code generator, a number of radios, and with a DX Cluster.
+tlf-0.5.4-i386-1: 
+tlf-0.5.4-i386-1: 
+tlf-0.5.4-i386-1: 
+tlf-0.5.4-i386-1: 
+tlf-0.5.4-i386-1: 
+

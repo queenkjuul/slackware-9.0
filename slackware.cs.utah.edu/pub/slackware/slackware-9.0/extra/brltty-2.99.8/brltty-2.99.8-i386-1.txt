@@ -1,0 +1,11 @@
+brltty: brltty (Braille display daemon)
+brltty:
+brltty: BRLTTY is a daemon which provides access to the Linux console (text
+brltty: mode) for a blind person using a soft braille display.  It drives the
+brltty: braille terminal and provides complete screen review functionality.
+brltty:
+brltty:
+brltty:
+brltty:
+brltty:
+brltty:

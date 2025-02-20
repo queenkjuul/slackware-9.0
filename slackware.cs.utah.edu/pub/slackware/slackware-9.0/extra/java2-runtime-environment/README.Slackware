@@ -1,0 +1,19 @@
+This package contains Sun's Java(TM) Runtime Environment.
+
+Use installpkg to install this package:
+
+installpkg j2re-1.4.1_02-i586-1.tgz
+
+If you require the Java(TM) SDK, you will have to obtain it from
+Sun's Java(TM) website:
+
+http://java.sun.com
+
+Complete Java(TM) documentation can be also be found in Sun's Java(TM) website.
+
+--------------------------------------------
+
+This product includes code licensed from RSA Security, Inc.
+
+Some portions licensed from IBM are available at http://oss.software.ibm.com/icu4j/
+

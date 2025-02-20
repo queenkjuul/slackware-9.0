@@ -1,0 +1,48 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES HAM (PACKET RADIO)" \
+       --checklist "Please select the packages you wish to install. \
+Use the \
+UP/DOWN keys to scroll through the list, and the SPACE key to select \
+the packages you wish to install.  Recommended packages have \
+already been selected for you, but you may unselect them if you wish.  \
+Press ENTER when you are \
+done." 21 70 10 \
+"7plus" "7+ file encoder - REQOMMENDED" "on" \
+"aprsdigi" "UI-frame digipeater for APRS" "off" \
+"awznode" "Alternative for Linuxnode" "off" \
+"ax25_apps" "Essential AX.25 application - REQUIRED" "on" \
+"ax25_tools" "AX.25 tools - REQUIRED" "on" \
+"libax25" "AX.25 libraries - REQUIRED" "on" \
+"libgeotiff" "GEOTIFF library. (Needed by Xastir)" "off" \
+"libproj" "PROJ library. (Needed by Xastir)" "off" \
+"node" "Linuxnode - RECOMMENDED" "on" \
+"soundmodem" "Userspace soundmodem" "off" \
+"xastir" "X11 APRS program" "off" \
+"xcall" "X11 packet radio terminal" "on" \
+"xconvers" "X11 convers client" "on" \
+"xfbb" "F6FBB's packet radio BBS server" "off" \
+"z8530drv_utils" "Utilities for Z8530 SCC boards" "on" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+ rm -f $TMP/SeTpkgs
+ > $TMP/SeTnewtag
+ for pkg in 7plus aprsdigi awznode ax25_apps ax25_tools libax25 libgeotiff libproj node soundmodem xastir xcall xconvers xfbb z8530drv_utils ; do
+  echo "$pkg: SKP" >> $TMP/SeTnewtag
+ done
+ exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PACKAGE in 7plus aprsdigi awznode ax25_apps ax25_tools libax25 libgeotiff libproj node soundmodem xastir xcall xconvers xfbb z8530drv_utils ; do
+ if fgrep \"$PACKAGE\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+  echo "$PACKAGE: ADD" >> $TMP/SeTnewtag
+ else
+  echo "$PACKAGE: SKP" >> $TMP/SeTnewtag
+ fi
+done
+rm -f $TMP/SeTpkgs

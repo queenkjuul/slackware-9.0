@@ -1,0 +1,11 @@
+glide_h3_dri: Glide 3.10 with DRI support for the Voodoo3/Voodoo Banshee
+glide_h3_dri:
+glide_h3_dri: Includes dynamic ELF libraries and headers for Glide 3.10 built
+glide_h3_dri: specifically for the Voodoo 3 and Voodoo Banshee cards.  This
+glide_h3_dri: particular build incorporates DRI functionality.
+glide_h3_dri:
+glide_h3_dri:
+glide_h3_dri:
+glide_h3_dri:
+glide_h3_dri:
+glide_h3_dri:

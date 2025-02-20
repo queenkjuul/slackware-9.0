@@ -1,0 +1,46 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-openmotif
+
+VERSION=2.2.1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+===================+"
+echo "| openmotif-$VERSION |"
+echo "+===================+"
+cd $TMP
+tar xzvf $CWD/openmotif-$VERSION.tar.gz
+cd openMotif-$VERSION
+# If there are official patches, apply them:
+for patch in $CWD/fixes/* ; do
+  cat $patch | patch -p1
+done
+# Now, get rid of the demo programs so they don't clutter /usr/X11R6/bin.
+# If users want to try out the demo programs, the source will be in
+# /usr/doc/openmotif...
+rm -r demos
+CFLAGS=-O2 CXXFLAGS=-O2 ./configure --prefix=/usr/X11R6
+# -i needed after removing demos
+make -i
+make -i install
+rm -rf /usr/doc/openmotif-$VERSION
+mkdir -p /usr/doc/openmotif-$VERSION
+cp -a \
+  BUGREPORT CLOSEDBUGS COPYRIGHT.MOTIF INSTALL.configure INSTALL.imake LICENSE OPENBUGS README RELEASE RELNOTES \
+  /usr/doc/openmotif-$VERSION
+( cd /usr/doc/openmotif-$VERSION
+  find . -type f | xargs chmod 644
+  find . -type d | xargs chmod 755
+  chown -R root.root . )
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

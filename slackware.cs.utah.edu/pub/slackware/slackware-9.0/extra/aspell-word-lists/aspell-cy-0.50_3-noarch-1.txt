@@ -1,0 +1,11 @@
+aspell-cy: aspell-cy (Welsh word list)
+aspell-cy:
+aspell-cy: Welsh word list for the Aspell spell checker.
+aspell-cy:
+aspell-cy:
+aspell-cy:
+aspell-cy:
+aspell-cy:
+aspell-cy:
+aspell-cy:
+aspell-cy:

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/extra/source/3dfx-glide</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/extra/source/3dfx-glide</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/extra/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="voodoo_rush/">voodoo_rush/</a></td><td align="right">2001-01-24 20:22  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="voodoo_graphics/">voodoo_graphics/</a></td><td align="right">2001-01-24 20:47  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="voodoo4_voodoo5/">voodoo4_voodoo5/</a></td><td align="right">2001-06-18 05:45  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="voodoo3_banshee/">voodoo3_banshee/</a></td><td align="right">2001-06-18 05:54  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="voodoo2/">voodoo2/</a></td><td align="right">2001-01-24 20:21  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="sdk-3.x/">sdk-3.x/</a></td><td align="right">2001-01-26 03:18  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="sdk-2.x/">sdk-2.x/</a></td><td align="right">2001-01-26 03:08  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="get-3Dfx-cvs.sh">get-3Dfx-cvs.sh</a></td><td align="right">2001-01-25 10:08  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="README">README</a></td><td align="right">2001-01-28 07:18  </td><td align="right">465 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

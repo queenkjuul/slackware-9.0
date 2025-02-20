@@ -1,0 +1,11 @@
+glide_sdk: Glide 2.x Software Development Kit
+glide_sdk:
+glide_sdk: This package installs sample source, documentation, and header
+glide_sdk: files for building programs that make use of the Glide 2.x
+glide_sdk: rasterization libraries.  You will also want to install the
+glide_sdk: necessary Glide package for your 3Dfx card.
+glide_sdk:
+glide_sdk:
+glide_sdk:
+glide_sdk:
+glide_sdk:

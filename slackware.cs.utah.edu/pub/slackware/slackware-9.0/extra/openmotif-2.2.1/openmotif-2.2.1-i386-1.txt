@@ -1,0 +1,11 @@
+openmotif: openmotif (Open Motif graphical toolkit)
+openmotif:
+openmotif: The Open Motif toolkit and Motif clients, such as the Motif Window
+openmotif: Manager.
+openmotif:
+openmotif: Open Motif is only free on free operating systems such as Linux, BSD,
+openmotif: and GNU HURD.  Please see the LICENSE in this directory.
+openmotif:
+openmotif:
+openmotif:
+openmotif:

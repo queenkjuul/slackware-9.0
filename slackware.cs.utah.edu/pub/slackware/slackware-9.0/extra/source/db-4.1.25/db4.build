@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# Set initial variables:
+VERSION=4.1.25
+CWD=`pwd`
+
+rm -f /usr/include/db.h
+cd /tmp
+tar xjvf $CWD/db-$VERSION.tar.bz2
+cd db-$VERSION
+zcat $CWD/patch.4.1.25.html.gz | patch -p0 --verbose
+chown -R root.root .
+find . -perm 775 | xargs chmod 755
+find . -perm 444 | xargs chmod 644
+cd dist
+./configure --prefix=/usr \
+            --enable-compat185 \
+            --enable-shared \
+            --enable-rpc \
+            i386-slackware-linux
+make
+make install
+# Remove misplaced docs:
+rm -r /usr/docs
+chmod 755 /usr/lib/libdb-4.1.so
+( cd /usr/lib
+  rm -f libdb-4.so libdb.so
+  ln -sf libdb-4.1.so libdb-4.so
+  ln -sf libdb-4.1.so libdb.so
+  rm -f libdb-4.a libdb.a
+  ln -sf libdb-4.1.a libdb-4.a  
+  ln -sf libdb-4.1.a libdb.a  
+)
+# Put libdb-4.1.so into /lib since it might be needed
+# before /usr is mounted (eg, nssswitch.conf requires it)
+mv /usr/lib/libdb-4.1.so /lib/libdb-4.1.so
+ln -sf /lib/libdb-4.1.so /usr/lib/libdb-4.1.so
+( cd /usr/include
+  mkdir db4
+  mv cxx_common.h cxx_except.h db.h db_185.h db_cxx.h db4
+  ln -sf db4/db.h db.h
+)
+cd ../docs
+rm -rf /usr/doc/db-$VERSION
+mkdir -p /usr/doc/db-$VERSION
+cp -a * /usr/doc/db-$VERSION
+cd ..
+cp -a \
+  LICENSE README \
+  /usr/doc/db-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

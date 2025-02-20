@@ -1,0 +1,13 @@
+
+opie_server-2.32-i386-2: One-time Passwords In Everything, Release 2.32
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: This Slackware binary package only contains the 
+opie_server-2.32-i386-2: OPIE server software.
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: 
+

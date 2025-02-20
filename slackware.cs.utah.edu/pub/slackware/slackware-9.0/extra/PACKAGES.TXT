@@ -1,0 +1,1160 @@
+
+PACKAGES.TXT;  Fri Feb 23 04:04:13 UTC 2007
+
+This file provides details on the Slackware packages found
+in the ./extra/ directory.
+
+Total size of all packages (compressed):  218 MB
+Total size of all packages (uncompressed):  575 MB
+
+
+PACKAGE NAME:  7plus-2.25-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  33 K
+PACKAGE SIZE (uncompressed):  90 K
+PACKAGE DESCRIPTION:
+7plus-2.25-i386-1: 7PLUS is an encoder vaguely similar to Unix's UUENCODE.
+7plus-2.25-i386-1: It uses a very effective radix216 encoding and incorporates
+7plus-2.25-i386-1: diverse mechanisms to ensure decoded data is not corrupted.
+7plus-2.25-i386-1: It also includes an interactive repair mechanism which allows
+7plus-2.25-i386-1: the repair of damaged files using correction files, thus 
+7plus-2.25-i386-1: eliminating the need to retransmit entire files. In case of
+7plus-2.25-i386-1: a corruption, only the faulty sections are resent. 7PLUS
+7plus-2.25-i386-1: is only meant to be used within the Packet Radio network
+7plus-2.25-i386-1: for the tranport of binary data through Packet Radio mail.
+7plus-2.25-i386-1: It cannot be used for Internet eMail since it needs a
+7plus-2.25-i386-1: (almost) transparent path from end to end.
+7plus-2.25-i386-1: 
+
+PACKAGE NAME:  aprsdigi-2.4.1-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  29 K
+PACKAGE SIZE (uncompressed):  70 K
+PACKAGE DESCRIPTION:
+aprsdigi-2.4.1-i386-1: Aprsdigi is a specialized Amateur Packet Radio (AX.25)
+aprsdigi-2.4.1-i386-1: UI-frame digipeater for the Automatic Position Reporting 
+aprsdigi-2.4.1-i386-1: Systems, APRS(tm).
+aprsdigi-2.4.1-i386-1: 
+aprsdigi-2.4.1-i386-1: Aprsmon collects and displays standard AX.25 UI text
+aprsdigi-2.4.1-i386-1: frames in a format similar to that output by a standard
+aprsdigi-2.4.1-i386-1: TNC in "Monitor ON" mode and is intended to be used with
+aprsdigi-2.4.1-i386-1: programs like javAPRS which wish to see a TNC data
+aprsdigi-2.4.1-i386-1: stream over a TCP connection.
+aprsdigi-2.4.1-i386-1: 
+aprsdigi-2.4.1-i386-1: Aprsdigi is developed by Alan Crosswell <n2ygk@weca.org>
+
+PACKAGE NAME:  aspell-br-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  489 K
+PACKAGE SIZE (uncompressed):  1210 K
+PACKAGE DESCRIPTION:
+aspell-br: aspell-br (Breton word list)
+aspell-br:
+aspell-br: Breton word list for the Aspell spell checker.
+aspell-br:
+
+PACKAGE NAME:  aspell-ca-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  3616 K
+PACKAGE SIZE (uncompressed):  8470 K
+PACKAGE DESCRIPTION:
+aspell-ca: aspell-ca (Catalan word list)
+aspell-ca:
+aspell-ca: Catalan word list for the Aspell spell checker.
+aspell-ca:
+
+PACKAGE NAME:  aspell-cs-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  17088 K
+PACKAGE SIZE (uncompressed):  49070 K
+PACKAGE DESCRIPTION:
+aspell-cs: aspell-cs (Czech word list)
+aspell-cs:
+aspell-cs: Czech word list for the Aspell spell checker.
+aspell-cs:
+
+PACKAGE NAME:  aspell-cy-0.50_3-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  3932 K
+PACKAGE SIZE (uncompressed):  9220 K
+PACKAGE DESCRIPTION:
+aspell-cy: aspell-cy (Welsh word list)
+aspell-cy:
+aspell-cy: Welsh word list for the Aspell spell checker.
+aspell-cy:
+
+PACKAGE NAME:  aspell-da-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  6689 K
+PACKAGE SIZE (uncompressed):  16340 K
+PACKAGE DESCRIPTION:
+aspell-da: aspell-da (Danish word list)
+aspell-da:
+aspell-da: Danish word list for the Aspell spell checker.
+aspell-da:
+
+PACKAGE NAME:  aspell-de-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  5130 K
+PACKAGE SIZE (uncompressed):  12790 K
+PACKAGE DESCRIPTION:
+aspell-de: aspell-de (German word list)
+aspell-de:
+aspell-de: German word list for the Aspell spell checker.
+aspell-de:
+
+PACKAGE NAME:  aspell-el-0.50_3-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  6882 K
+PACKAGE SIZE (uncompressed):  17190 K
+PACKAGE DESCRIPTION:
+aspell-el: aspell-el (Greek word list)
+aspell-el:
+aspell-el: Greek word list for the Aspell spell checker.
+aspell-el:
+
+PACKAGE NAME:  aspell-en-0.51_0-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  1904 K
+PACKAGE SIZE (uncompressed):  4270 K
+PACKAGE DESCRIPTION:
+aspell-en: aspell-en (English word list)
+aspell-en:
+aspell-en: English word list for the Aspell spell checker.
+aspell-en:
+aspell-en: Word lists for other languages may be found in Slackware's 
+aspell-en: /extra directory.
+aspell-en:
+
+PACKAGE NAME:  aspell-eo-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  5454 K
+PACKAGE SIZE (uncompressed):  17210 K
+PACKAGE DESCRIPTION:
+aspell-eo: aspell-eo (Esperanto word list)
+aspell-eo:
+aspell-eo: Esperanto word list for the Aspell spell checker.
+aspell-eo:
+
+PACKAGE NAME:  aspell-es-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  6840 K
+PACKAGE SIZE (uncompressed):  16050 K
+PACKAGE DESCRIPTION:
+aspell-es: aspell-es (Spanish word list)
+aspell-es:
+aspell-es: Spanish word list for the Aspell spell checker.
+aspell-es:
+
+PACKAGE NAME:  aspell-fo-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  542 K
+PACKAGE SIZE (uncompressed):  1350 K
+PACKAGE DESCRIPTION:
+aspell-fo: aspell-fo (Faroese word list)
+aspell-fo:
+aspell-fo: Faroese word list for the Aspell spell checker.
+aspell-fo:
+
+PACKAGE NAME:  aspell-fr-0.50_3-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  9167 K
+PACKAGE SIZE (uncompressed):  22840 K
+PACKAGE DESCRIPTION:
+aspell-fr: aspell-fr (French word list)
+aspell-fr:
+aspell-fr: French word list for the Aspell spell checker.
+aspell-fr:
+
+PACKAGE NAME:  aspell-it-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  400 K
+PACKAGE SIZE (uncompressed):  1180 K
+PACKAGE DESCRIPTION:
+aspell-it: aspell-it (Italian word list)
+aspell-it:
+aspell-it: Italian word list for the Aspell spell checker.
+aspell-it:
+
+PACKAGE NAME:  aspell-nl-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  3421 K
+PACKAGE SIZE (uncompressed):  7840 K
+PACKAGE DESCRIPTION:
+aspell-nl: aspell-nl (Dutch word list)
+aspell-nl:
+aspell-nl: Dutch word list for the Aspell spell checker.
+aspell-nl:
+
+PACKAGE NAME:  aspell-no-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  2861 K
+PACKAGE SIZE (uncompressed):  6790 K
+PACKAGE DESCRIPTION:
+aspell-no: aspell-no (Norwegian word list)
+aspell-no:
+aspell-no: Norwegian word list for the Aspell spell checker.
+aspell-no:
+
+PACKAGE NAME:  aspell-pl-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  9180 K
+PACKAGE SIZE (uncompressed):  26230 K
+PACKAGE DESCRIPTION:
+aspell-pl: aspell-pl (Polish word list)
+aspell-pl:
+aspell-pl: Polish word list for the Aspell spell checker.
+aspell-pl:
+
+PACKAGE NAME:  aspell-pt-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  5301 K
+PACKAGE SIZE (uncompressed):  12630 K
+PACKAGE DESCRIPTION:
+aspell-pt: aspell-pt (Portuguese word list)
+aspell-pt:
+aspell-pt: Portuguese word list for the Aspell spell checker.
+aspell-pt:
+
+PACKAGE NAME:  aspell-ro-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  533 K
+PACKAGE SIZE (uncompressed):  1240 K
+PACKAGE DESCRIPTION:
+aspell-ro: aspell-ro (Romanian word list)
+aspell-ro:
+aspell-ro: Romanian word list for the Aspell spell checker.
+aspell-ro:
+
+PACKAGE NAME:  aspell-ru-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  10926 K
+PACKAGE SIZE (uncompressed):  24650 K
+PACKAGE DESCRIPTION:
+aspell-ru: aspell-ru (Russian word list)
+aspell-ru:
+aspell-ru: Russian word list for the Aspell spell checker.
+aspell-ru:
+
+PACKAGE NAME:  aspell-sk-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  7834 K
+PACKAGE SIZE (uncompressed):  17820 K
+PACKAGE DESCRIPTION:
+aspell-sk: aspell-sk (Slovak word list)
+aspell-sk:
+aspell-sk: Slovak word list for the Aspell spell checker.
+aspell-sk:
+
+PACKAGE NAME:  aspell-sv-0.50_2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  1919 K
+PACKAGE SIZE (uncompressed):  4770 K
+PACKAGE DESCRIPTION:
+aspell-sv: aspell-sv (Swedish word list)
+aspell-sv:
+aspell-sv: Swedish word list for the Aspell spell checker.
+aspell-sv:
+
+PACKAGE NAME:  aspell-uk-0.50_3-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/aspell-word-lists
+PACKAGE SIZE (compressed):  11869 K
+PACKAGE SIZE (uncompressed):  27490 K
+PACKAGE DESCRIPTION:
+aspell-uk: aspell-uk (Ukrainian word list)
+aspell-uk:
+aspell-uk: Ukrainian word list for the Aspell spell checker.
+aspell-uk:
+
+PACKAGE NAME:  aumix-2.7-i386-1.tgz
+PACKAGE LOCATION:  ./extra/aumix-2.7
+PACKAGE SIZE (compressed):  66 K
+PACKAGE SIZE (uncompressed):  210 K
+PACKAGE DESCRIPTION:
+aumix: aumix (GTK+/ncurses audio mixer)
+aumix:
+aumix: This is a program for adjusting audio mixers from the command line or
+aumix: scripts, or interactively at the console or a terminal with a 
+aumix: full-screen, ncurses-based interface or a GTK-based X interface.
+aumix:
+
+PACKAGE NAME:  awznode-0.4_pre2-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  58 K
+PACKAGE SIZE (uncompressed):  160 K
+PACKAGE DESCRIPTION:
+awznode-0.4_pre2-i386-1: AWZnode is based upon LinuxNode by Tomi Manninen 
+awznode-0.4_pre2-i386-1: OH2BNS and FlexNode by Roy PE1RJA. Users in AWZNode can
+awznode-0.4_pre2-i386-1: connect all nodes that are available via AX25, NETROM, 
+awznode-0.4_pre2-i386-1: ROSE, FLEXNET, and TCP/IP. 
+awznode-0.4_pre2-i386-1: 
+awznode-0.4_pre2-i386-1: AWZnode is developed by Stefano Noferi, IW5AWZ.
+awznode-0.4_pre2-i386-1: 
+
+PACKAGE NAME:  ax25_apps-0.0.6-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  82 K
+PACKAGE SIZE (uncompressed):  210 K
+PACKAGE DESCRIPTION:
+ax25_apps-0.0.6-i386-1: AX.25 applications 0.0.6 
+ax25_apps-0.0.6-i386-1:  
+ax25_apps-0.0.6-i386-1: These are the essential applications for use with AX.25 
+ax25_apps-0.0.6-i386-1: packet radio. 
+ax25_apps-0.0.6-i386-1: Requires libax25 to be installed. 
+ax25_apps-0.0.6-i386-1: The configuration files are included, but this packages 
+ax25_apps-0.0.6-i386-1: will not overwrite any existing config files.
+ax25_apps-0.0.6-i386-1: 
+
+PACKAGE NAME:  ax25_tools-0.0.8-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  221 K
+PACKAGE SIZE (uncompressed):  700 K
+PACKAGE DESCRIPTION:
+ax25_tools-0.0.8-i386-2: AX.25 tools version 0.0.8
+ax25_tools-0.0.8-i386-2: 
+ax25_tools-0.0.8-i386-2: Author: Craig Small VK2XLZ 
+ax25_tools-0.0.8-i386-2: <csmall@small.dropbear.id.au>, et al
+ax25_tools-0.0.8-i386-2: Needs: glibc2.1, A Modern kernel (2.2.x), libtool,
+ax25_tools-0.0.8-i386-2: libax25 0.0.5 or newer, and  zlib.
+ax25_tools-0.0.8-i386-2: 
+
+PACKAGE NAME:  baken-0.5-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/propagation
+PACKAGE SIZE (compressed):  27 K
+PACKAGE SIZE (uncompressed):  80 K
+PACKAGE DESCRIPTION:
+baken-0.5-i386-2: Visualisation of VHF/UHF and microwave beacons 
+baken-0.5-i386-2: on a map of Europe. As input it takes the file produced 
+baken-0.5-i386-2: by G3UUT the Region 1 Beacon Co-ordinator, and attempts 
+baken-0.5-i386-2: to extract the beacon data from it. 
+baken-0.5-i386-2: Author: Jonathan Naylor, G4KLX 
+baken-0.5-i386-2: 
+baken-0.5-i386-2: Requires glib to be installed.
+baken-0.5-i386-2: 
+
+PACKAGE NAME:  baken_data-0.5-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/propagation
+PACKAGE SIZE (compressed):  115 K
+PACKAGE SIZE (uncompressed):  490 K
+PACKAGE DESCRIPTION:
+baken_data-0.5-i386-2: Satellite-, location- and user profile-data 
+baken_data-0.5-i386-2: belonging to the baken program.
+baken_data-0.5-i386-2: 
+
+PACKAGE NAME:  baken_map-0.5-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/propagation
+PACKAGE SIZE (compressed):  58 K
+PACKAGE SIZE (uncompressed):  140 K
+PACKAGE DESCRIPTION:
+baken_map-0.5-i386-1: Maps belonging to the baken program
+baken_map-0.5-i386-1: 
+
+PACKAGE NAME:  bash-completion-20030209-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/bash-completion-20030209
+PACKAGE SIZE (compressed):  46 K
+PACKAGE SIZE (uncompressed):  170 K
+PACKAGE DESCRIPTION:
+bash-completion: bash-completion
+bash-completion:
+bash-completion: Adds programmable completion to the bash shell.  A new file called
+bash-completion: /etc/bash_completion will be sourced for interactive bash shells
+bash-completion: adding all sorts of enhanced command completion features.  Once
+bash-completion: installed, you may get a list of all commands that have associated
+bash-completion: completions with 'complete -p', and examine the code for the shell
+bash-completion: functions with 'declare -f'.
+bash-completion:
+bash-completion: bash-completion was written by Ian Macdonald <ian@caliban.org>.
+bash-completion:
+
+PACKAGE NAME:  bison-1.875-i386-1.tgz
+PACKAGE LOCATION:  ./extra/bison-1.875
+PACKAGE SIZE (compressed):  289 K
+PACKAGE SIZE (uncompressed):  750 K
+PACKAGE DESCRIPTION:
+bison: bison (parser generator similar to yacc)
+bison:
+bison: GNU "Bison" is a general-purpose parser generator that converts a
+bison: grammar description for an LALR(1) context-free grammar into a C
+bison: program to parse that grammar.
+bison:
+bison: Bison is upward compatible with Yacc:  all properly-written Yacc
+bison: grammars ought to work with Bison with no change.  Anyone familiar
+bison: with Yacc should be able to use Bison with little trouble.
+bison:
+
+PACKAGE NAME:  blackbox-0.65.0-i386-1.tgz
+PACKAGE LOCATION:  ./extra/blackbox-0.65.0
+PACKAGE SIZE (compressed):  324 K
+PACKAGE SIZE (uncompressed):  920 K
+PACKAGE DESCRIPTION:
+blackbox: blackbox (Blackbox window manager)
+blackbox:
+blackbox: Blackbox is that fast, light window manager you have been looking for
+blackbox: without all those annoying library dependencies.
+blackbox:
+blackbox: Also included in this package is the bbkeys utility for controlling
+blackbox: keyboard shortcut commands from within Blackbox.
+blackbox:
+blackbox: The Blackbox home page is http://blackboxwm.sourceforge.net
+blackbox:
+
+PACKAGE NAME:  brltty-2.99.8-i386-1.tgz
+PACKAGE LOCATION:  ./extra/brltty-2.99.8
+PACKAGE SIZE (compressed):  388 K
+PACKAGE SIZE (uncompressed):  1380 K
+PACKAGE DESCRIPTION:
+brltty: brltty (Braille display daemon)
+brltty:
+brltty: BRLTTY is a daemon which provides access to the Linux console (text
+brltty: mode) for a blind person using a soft braille display.  It drives the
+brltty: braille terminal and provides complete screen review functionality.
+brltty:
+
+PACKAGE NAME:  btmgr-3.7_1-i386-1.tgz
+PACKAGE LOCATION:  ./extra/btmgr-3.7
+PACKAGE SIZE (compressed):  194 K
+PACKAGE SIZE (uncompressed):  680 K
+PACKAGE DESCRIPTION:
+btmgr: btmgr (Smart Boot Manager)
+btmgr:
+btmgr: Smart BootManager is a tiny, powerful and multi-language boot manager
+btmgr: written in assembler.  SBM supports many features in only 30K bytes
+btmgr: including multi-languages and themes, a user friendly menu system,
+btmgr: partition auto scan, boot schedule, password protection, and more.
+btmgr: SBM is the first GPLed boot manager to embed an IDE ATAPI CD-ROM
+btmgr: driver, it can boot Win95/98/2K, Linux, FreeBSD, OpenBSD, and BeOS
+btmgr: from CD-ROM.  Multi-bootable image CDs are supported as well.
+btmgr:
+btmgr: SBM was written by Suzhe, Lonius, and Christopher Li.
+
+PACKAGE NAME:  checkinstall-1.5.3-i386-1.tgz
+PACKAGE LOCATION:  ./extra/checkinstall-1.5.3
+PACKAGE SIZE (compressed):  52 K
+PACKAGE SIZE (uncompressed):  190 K
+PACKAGE DESCRIPTION:
+checkinstall: checkinstall (create a package from "make install")
+checkinstall:
+checkinstall: Installs a compiled program from the program's source directory using
+checkinstall: "make install" or any other command supplied on checkinstall's command
+checkinstall: line (such as a Slackware .build script), and create a binary package
+checkinstall: at the same time so that you can install and remove the package using
+checkinstall: Slackware's package management tools.
+checkinstall:
+checkinstall: checkinstall was written by Felipe Eduardo Sanchez Diaz Duran, and
+checkinstall: uses the installwatch tool by Pancrazio `Ezio' de Mauro to monitor the
+checkinstall: installation process.
+
+PACKAGE NAME:  cups-1.1.18-i386-2.tgz
+PACKAGE LOCATION:  ./extra/cups-1.1.18
+PACKAGE SIZE (compressed):  2505 K
+PACKAGE SIZE (uncompressed):  6300 K
+PACKAGE DESCRIPTION:
+cups: CUPS (Common UNIX Printing System)
+cups:
+cups: The Common UNIX Printing System provides a portable printing layer for
+cups: UNIX(R)-like operating systems. It has been developed by Easy Software
+cups: Products to promote a standard printing solution for all UNIX vendors
+cups: and users.  CUPS uses the Internet Printing Protocol ("IPP") as the
+cups: basis for managing print jobs and queues.  The CUPS package includes
+cups: System V and Berkeley command-line interfaces, a PostScript RIP
+cups: package for supporting non-PostScript printer drivers, and tools for
+cups: creating additional printer drivers and other CUPS services.
+cups:
+
+PACKAGE NAME:  db4-4.1.25-i386-1.tgz
+PACKAGE LOCATION:  ./extra/db-4.1.25
+PACKAGE SIZE (compressed):  1626 K
+PACKAGE SIZE (uncompressed):  7040 K
+PACKAGE DESCRIPTION:
+db4: db4 (Berkeley database library version 4)
+db4:
+db4: The Berkeley Database (Berkeley DB) library provides embedded database
+db4: support for both traditional and client/server applications.
+db4:
+db4: This package should be installed if compatibility is needed with
+db4: databases created with the Berkeley DB version 4.
+db4:
+
+PACKAGE NAME:  dip-3.3.7p-i386-1.tgz
+PACKAGE LOCATION:  ./extra/dip-3.3.7p
+PACKAGE SIZE (compressed):  80 K
+PACKAGE SIZE (uncompressed):  210 K
+PACKAGE DESCRIPTION:
+dip: dip (Dialup IP connection handler)
+dip:
+dip: Uri Blumenthal's version of Fred N. van Kempen's DIP utility. DIP 
+dip: handles the connections needed for dialup IP links, like SLIP or
+dip: CSLIP.  It can handle both incoming and outgoing connections, using
+dip: password security for incoming connections.  
+dip:
+dip: This is seldom used these days, as most dialups use PPP, not SLIP.
+dip: It's still useful for running IP over a serial connection, though.
+dip:
+
+PACKAGE NAME:  emacspeak-16.0-i386-1.tgz
+PACKAGE LOCATION:  ./extra/emacspeak-16.0
+PACKAGE SIZE (compressed):  1456 K
+PACKAGE SIZE (uncompressed):  6130 K
+PACKAGE DESCRIPTION:
+emacspeak: emacspeak (Emacs speech interface)
+emacspeak:
+emacspeak: Emacspeak is a speech interface that allows visually impaired users to
+emacspeak: interact independently and efficiently with the computer.  By
+emacspeak: seamlessly blending all aspects of the Internet such as Web-surfing
+emacspeak: and messaging, Emacspeak speech-enables local and remote information
+emacspeak: via a consistent and well-integrated user interface.  Emacspeak has
+emacspeak: dramatically changed how the author, T. V. Raman, and hundreds of
+emacspeak: blind and visually impaired users around the world interact with the
+emacspeak: personal computer and the Internet.
+emacspeak:
+
+PACKAGE NAME:  emacspeak-ss-1.9.1-i386-1.tgz
+PACKAGE LOCATION:  ./extra/emacspeak-ss-1.9.1
+PACKAGE SIZE (compressed):  37 K
+PACKAGE SIZE (uncompressed):  240 K
+PACKAGE DESCRIPTION:
+emacspeak-ss: emacspeak-ss (Emacspeak speech servers for several synthesizers)
+emacspeak-ss:
+emacspeak-ss: The emacspeak-ss package provides Emacspeak servers for several
+emacspeak-ss: additional synthesizers:  DoubleTalk PC and AT from R. C. Systems
+emacspeak-ss: <http://www.rcsys.com/>, Braille 'n Speak, Type 'n Speak, and Braille
+emacspeak-ss: Lite from Blazie Engineering <http://www.blazie.com>, Accent SA,
+emacspeak-ss: Apollo 2, JUNO, and JUNO-sp from Dolphin, Spanish ciber 232, Spanish
+emacspeak-ss: ciber 232 Plus, and Spanish PC Hablado notebook.  Emacspeak-ss was
+emacspeak-ss: written by Jim Van Zandt, and additional servers were contributed by
+emacspeak-ss: Jack Chen and Oscar Fernandez.  Original inspiration by Bob Gildea. :)
+emacspeak-ss:
+
+PACKAGE NAME:  emu-tools-0.9.4-i386-1.tgz
+PACKAGE LOCATION:  ./extra/emu-tools-0.9.4
+PACKAGE SIZE (compressed):  58 K
+PACKAGE SIZE (uncompressed):  170 K
+PACKAGE DESCRIPTION:
+emu-tools: emu-tools (tools for Creative audio cards)
+emu-tools:
+emu-tools: These are tools for use with Creative audio cards that use the emu10k1
+emu-tools: driver, such as the Soundblaster Live! and Audigy.  The latest version
+emu-tools: of both the driver and the emu-tools are available at:
+emu-tools:
+emu-tools: http://opensource.creative.com
+emu-tools:
+
+PACKAGE NAME:  fluxbox-0.1.14-i386-1.tgz
+PACKAGE LOCATION:  ./extra/fluxbox-0.1.14
+PACKAGE SIZE (compressed):  347 K
+PACKAGE SIZE (uncompressed):  1000 K
+PACKAGE DESCRIPTION:
+fluxbox: fluxbox (Fluxbox window manager)
+fluxbox:
+fluxbox: Fluxbox is yet another windowmanager for X that is based on the
+fluxbox: Blackbox 0.61.1 code.
+fluxbox:
+
+PACKAGE NAME:  gimp-1.3.12-i386-1.tgz
+PACKAGE LOCATION:  ./extra/gimp-1.3.12
+PACKAGE SIZE (compressed):  7568 K
+PACKAGE SIZE (uncompressed):  21390 K
+PACKAGE DESCRIPTION:
+gimp: gimp (The GNU Image Manipulation Program)
+gimp:
+gimp: The GIMP is a powerful tool for the preparation and manipulation of
+gimp: digital images.  The GIMP provides the user with a wide variety of
+gimp: image manipulation, painting, processing, and rendering tools.  The
+gimp: GIMP's open design and extensible architecture make for a very
+gimp: powerful end product for photo and image retouching, web graphics
+gimp: design, or digital illustration.
+gimp:
+
+PACKAGE NAME:  glibc-debug-2.3.1-i386-3.tgz
+PACKAGE LOCATION:  ./extra/glibc-extra-packages
+PACKAGE SIZE (compressed):  16650 K
+PACKAGE SIZE (uncompressed):  50080 K
+PACKAGE DESCRIPTION:
+glibc-debug: glibc-debug (GNU C libraries with debugging symbols)
+glibc-debug:
+glibc-debug: This package contains versions of the GNU C libraries with debugging
+glibc-debug: information.  These are needed only if you wish to be able to step
+glibc-debug: through C library routines while debugging programs.  Most debugging
+glibc-debug: efforts will not require these.
+glibc-debug: To use these libraries, set LD_LIBRARY_PATH when calling the debugger:
+glibc-debug:   LD_LIBRARY_PATH=/usr/lib/debug gdb <executable>
+glibc-debug:
+glibc-debug: Or, use this approach if you need to debug a setuid binary:
+glibc-debug:   su user -c "LD_LIBRARY_PATH=/usr/lib/debug gdb <executable>"
+
+PACKAGE NAME:  glibc-profile-2.3.1-i386-3.tgz
+PACKAGE LOCATION:  ./extra/glibc-extra-packages
+PACKAGE SIZE (compressed):  11326 K
+PACKAGE SIZE (uncompressed):  32700 K
+PACKAGE DESCRIPTION:
+glibc-profile: glibc-profile (GNU C libraries with profiling support)
+glibc-profile:
+glibc-profile: This package contains static versions of the GNU C libraries with 
+glibc-profile: support for profiling binaries using gprof.  gprof calculates how much
+glibc-profile: much time a program spends in each routine which can suggest where to
+glibc-profile: concentrate efforts to improve performance.
+glibc-profile:
+glibc-profile: See the gprof man page for more details.
+glibc-profile:
+
+PACKAGE NAME:  glide_cvg-2.53-i386-1.tgz
+PACKAGE LOCATION:  ./extra/3dfx-glide/voodoo2
+PACKAGE SIZE (compressed):  203 K
+PACKAGE SIZE (uncompressed):  660 K
+PACKAGE DESCRIPTION:
+glide_cvg: Glide 2.53 for the Voodoo2
+glide_cvg:
+glide_cvg: Includes dynamic ELF libraries for Glide 2.53 built
+glide_cvg: specifically for the Voodoo2 card.  Also includes the Texus
+glide_cvg: libraries and test programs for your 3Dfx card.
+glide_cvg:
+
+PACKAGE NAME:  glide_h3_dri-3.10-i386-1.tgz
+PACKAGE LOCATION:  ./extra/3dfx-glide/voodoo3_banshee
+PACKAGE SIZE (compressed):  107 K
+PACKAGE SIZE (uncompressed):  320 K
+PACKAGE DESCRIPTION:
+glide_h3_dri: Glide 3.10 with DRI support for the Voodoo3/Voodoo Banshee
+glide_h3_dri:
+glide_h3_dri: Includes dynamic ELF libraries and headers for Glide 3.10 built
+glide_h3_dri: specifically for the Voodoo 3 and Voodoo Banshee cards.  This
+glide_h3_dri: particular build incorporates DRI functionality.
+glide_h3_dri:
+
+PACKAGE NAME:  glide_h5_dri-3.10-i386-1.tgz
+PACKAGE LOCATION:  ./extra/3dfx-glide/voodoo4_voodoo5
+PACKAGE SIZE (compressed):  190 K
+PACKAGE SIZE (uncompressed):  550 K
+PACKAGE DESCRIPTION:
+glide_h5_dri: Glide 3.10 for the Voodoo4/5
+glide_h5_dri:
+glide_h5_dri: Includes dynamic ELF libraries and headers for Glide 3.10
+glide_h5_dri: built specifically for the Voodoo 4 and Voodoo 5 cards.  This
+glide_h5_dri: particular build incorporates DRI functionality.
+glide_h5_dri:
+
+PACKAGE NAME:  glide_sdk-2.x-i386-1.tgz
+PACKAGE LOCATION:  ./extra/3dfx-glide
+PACKAGE SIZE (compressed):  2048 K
+PACKAGE SIZE (uncompressed):  5150 K
+PACKAGE DESCRIPTION:
+glide_sdk: Glide 2.x Software Development Kit
+glide_sdk:
+glide_sdk: This package installs sample source, documentation, and header
+glide_sdk: files for building programs that make use of the Glide 2.x
+glide_sdk: rasterization libraries.  You will also want to install the
+glide_sdk: necessary Glide package for your 3Dfx card.
+glide_sdk:
+
+PACKAGE NAME:  glide_sdk-3.x-i386-1.tgz
+PACKAGE LOCATION:  ./extra/3dfx-glide
+PACKAGE SIZE (compressed):  1758 K
+PACKAGE SIZE (uncompressed):  3230 K
+PACKAGE DESCRIPTION:
+glide_sdk: Glide 3.x Software Development Kit
+glide_sdk:
+glide_sdk: This package installs sample source, documentation, and header
+glide_sdk: files for building programs that make use of the Glide 3.x
+glide_sdk: rasterization libraries.  You will also want to install the
+glide_sdk: necessary Glide package for your 3Dfx card.
+glide_sdk:
+
+PACKAGE NAME:  glide_sst1-2.46-i386-1.tgz
+PACKAGE LOCATION:  ./extra/3dfx-glide/voodoo_graphics
+PACKAGE SIZE (compressed):  218 K
+PACKAGE SIZE (uncompressed):  660 K
+PACKAGE DESCRIPTION:
+glide_sst1: Glide 2.46 for the Voodoo Graphics
+glide_sst1:
+glide_sst1: Includes dynamic ELF libraries and headers for Glide 2.46
+glide_sst1: built specifically for the Voodoo Graphics card.  Also includes
+glide_sst1: the test3Dfx utility.
+glide_sst1:
+
+PACKAGE NAME:  glide_sst96-2.46-i386-1.tgz
+PACKAGE LOCATION:  ./extra/3dfx-glide/voodoo_rush
+PACKAGE SIZE (compressed):  227 K
+PACKAGE SIZE (uncompressed):  730 K
+PACKAGE DESCRIPTION:
+glide_sst96: Glide 2.46 for the Voodoo Rush
+glide_sst96:
+glide_sst96: Includes dynamic ELF libraries and headers for Glide 2.46
+glide_sst96: built specifically for the Voodoo Rush card.  Also includes the
+glide_sst96: test3Dfx utility.
+glide_sst96:
+
+PACKAGE NAME:  gmfsk-0.4.1-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/digital
+PACKAGE SIZE (compressed):  85 K
+PACKAGE SIZE (uncompressed):  280 K
+PACKAGE DESCRIPTION:
+gmfsk-0.4.1-i386-1: gMFSK is an implementation of M-ary Frequency Shift 
+gmfsk-0.4.1-i386-1: Keying modulation for amateur radio communications. 
+gmfsk-0.4.1-i386-1: It is a digital communication mode intended for keyboard 
+gmfsk-0.4.1-i386-1: to keyboard QSO's over challenging HF propagation conditions. 
+gmfsk-0.4.1-i386-1: The main goal for the program is interoperability with the 
+gmfsk-0.4.1-i386-1: IZ8BLY Stream program in MFSK16 mode.
+gmfsk-0.4.1-i386-1: However currently the program also implements other FSK 
+gmfsk-0.4.1-i386-1: based modes, namely RTTY and THROB. The graphical user 
+gmfsk-0.4.1-i386-1: interface is written with the gnome libraries.
+gmfsk-0.4.1-i386-1: 
+
+PACKAGE NAME:  hamlib-1.1.2-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/rigcontrol
+PACKAGE SIZE (compressed):  807 K
+PACKAGE SIZE (uncompressed):  2810 K
+PACKAGE DESCRIPTION:
+hamlib-1.1.2-i386-2: Run-time library to control radio transceivers and
+hamlib-1.1.2-i386-2: receivers.
+hamlib-1.1.2-i386-2: Also included is a simple radio control program 'rigctl'
+hamlib-1.1.2-i386-2: 
+hamlib-1.1.2-i386-2: hamlib is developed by Frank Singleton, VK3FCS/KM5
+hamlib-1.1.2-i386-2: and Stephane Fillod, F4CFE.
+hamlib-1.1.2-i386-2: 
+
+PACKAGE NAME:  iproute2-2.4.7_now_ss020116_try-i386-4.tgz
+PACKAGE LOCATION:  ./extra/iproute2-2.4.7-now-ss020116-try
+PACKAGE SIZE (compressed):  212 K
+PACKAGE SIZE (uncompressed):  610 K
+PACKAGE DESCRIPTION:
+iproute2: iproute2 (IP routing utilities)
+iproute2:
+iproute2: These are tools used to administer many advanced IP routing features
+iproute2: in the kernel.  See Configure.help in the kernel documentation 
+iproute2: (search for iproute2) for more information on which kernel options
+iproute2: these tools are used with.
+iproute2: 
+iproute2: These utilities were written by Alexey Kuznetsov.
+iproute2:
+
+PACKAGE NAME:  j2re-1_4_1_02-i586-1.tgz
+PACKAGE LOCATION:  ./extra/java2-runtime-environment
+PACKAGE SIZE (compressed):  22012 K
+PACKAGE SIZE (uncompressed):  55310 K
+PACKAGE DESCRIPTION:
+j2re: Sun Java(TM) 2 Runtime Environment, Standard Edition Version 1.4.0_02.
+j2re:
+j2re: The Java(TM) 2 Runtime Environment contains the Java virtual machine,
+j2re: runtime class libraries, and Java application launcher that are
+j2re: necessary to run programs written in the Java progamming language.
+j2re: It is not a development environment and does not contain development
+j2re: tools such as compilers or debuggers.  For development tools, obtain
+j2re: the Java 2 SDK, Standard Edition from http://java.sun.com.
+j2re:
+
+PACKAGE NAME:  kernel-modules-2.4.20_xfs-i486-6.tgz
+PACKAGE LOCATION:  ./extra/kernel-modules-2.4.20_xfs
+PACKAGE SIZE (compressed):  8435 K
+PACKAGE SIZE (uncompressed):  9400 K
+PACKAGE DESCRIPTION:
+kernel-modules: kernel-modules (Linux kernel modules)
+kernel-modules:
+kernel-modules: A kernel module is a piece of object code that can be dynamically
+kernel-modules: loaded into the Linux kernel to provide new kernel functions.  Most of
+kernel-modules: these modules provide support for devices such as CD-ROM drives, tape
+kernel-modules: drives, and ethernet cards.  You can choose which modules to load by
+kernel-modules: editing /etc/rc.d/rc.modules.
+kernel-modules:
+kernel-modules: These modules are compiled from a 2.4.20 kernel that's been patched
+kernel-modules: with SGI's XFS filesystem patches.  If you use the Slackware supplied
+kernel-modules: XFS kernel, you'll also need to use these modules with it.
+
+PACKAGE NAME:  kfiresaver3d-0.6-i386-1.tgz
+PACKAGE LOCATION:  ./extra/kfiresaver3d-0.6
+PACKAGE SIZE (compressed):  72 K
+PACKAGE SIZE (uncompressed):  220 K
+PACKAGE DESCRIPTION:
+kfiresaver3d: kfiresaver3d
+kfiresaver3d:
+kfiresaver3d: An amazing GL fireworks display screensaver for KDE 3.1!
+kfiresaver3d:
+kfiresaver3d: This KDE screensaver module was produced by Enrico Ros, based on the
+kfiresaver3d: great work of David Sansome on kfiresaver, and is released under the
+kfiresaver3d: GNU Public License.
+kfiresaver3d:
+
+PACKAGE NAME:  libax25-0.0.9-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  107 K
+PACKAGE SIZE (uncompressed):  380 K
+PACKAGE DESCRIPTION:
+libax25-0.0.9-i386-2: AX.25 libraries version 0.0.9
+libax25-0.0.9-i386-2: 
+libax25-0.0.9-i386-2: This library set is still really under test but is now
+libax25-0.0.9-i386-2: release for general use. You are supposed to use glibc2
+libax25-0.0.9-i386-2: for this package.
+libax25-0.0.9-i386-2: 
+libax25-0.0.9-i386-2: Authors: Jonathan Naylor, Tomi Manninen, 
+libax25-0.0.9-i386-2:          Jean-Paul Roubelat, Alan Cox.
+libax25-0.0.9-i386-2: 
+
+PACKAGE NAME:  libgeotiff-1.1.4-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  261 K
+PACKAGE SIZE (uncompressed):  1240 K
+PACKAGE DESCRIPTION:
+libgeotiff-1.1.4-i386-1: Libgeotiff is a public domain library normally hosted
+libgeotiff-1.1.4-i386-1: on top of libtiff for reading, and writing GeoTIFF
+libgeotiff-1.1.4-i386-1: information tags.
+libgeotiff-1.1.4-i386-1: 
+libgeotiff-1.1.4-i386-1: listgeo:  utility program for dumping the metadata
+libgeotiff-1.1.4-i386-1:           of a GeoTIFF file.
+libgeotiff-1.1.4-i386-1: geotifcp: utility program for applying metadata to a
+libgeotiff-1.1.4-i386-1:           TIFF file, making it a GeoTIFF file.
+libgeotiff-1.1.4-i386-1: 
+libgeotiff-1.1.4-i386-1: This package is needed by Xastir.
+libgeotiff-1.1.4-i386-1: 
+
+PACKAGE NAME:  libproj-4.4.5-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  2129 K
+PACKAGE SIZE (uncompressed):  5000 K
+PACKAGE DESCRIPTION:
+libproj-4.4.5-i386-1: PROJ.4 cartographic projection software,
+libproj-4.4.5-i386-1: with US NAD83/NAD27 datum shifting support.
+libproj-4.4.5-i386-1: 
+libproj-4.4.5-i386-1: This package is needed by Xastir.
+libproj-4.4.5-i386-1: 
+
+PACKAGE NAME:  libsafe-2.0.16-i386-1.tgz
+PACKAGE LOCATION:  ./extra/libsafe-2.0-16
+PACKAGE SIZE (compressed):  343 K
+PACKAGE SIZE (uncompressed):  850 K
+PACKAGE DESCRIPTION:
+libsafe: libsafe 
+libsafe:
+libsafe: The libsafe library protects a process against the exploitation of
+libsafe: buffer overflow vulnerabilities in process stacks and against format
+libsafe: string exploits.  Libsafe works with any existing pre-compiled
+libsafe: executable and can be used transparently, even on a system-wide basis.
+libsafe: The method intercepts all calls to library functions that are known to
+libsafe: be vulnerable.  Libsafe has been shown to detect several known attacks
+libsafe: and can potentially prevent yet unknown attacks.  Experiments indicate
+libsafe: that the performance overhead of libsafe is negligible.
+libsafe:
+
+PACKAGE NAME:  lilo-22.5-i386-2.tgz
+PACKAGE LOCATION:  ./extra/lilo-22.5
+PACKAGE SIZE (compressed):  275 K
+PACKAGE SIZE (uncompressed):  800 K
+PACKAGE DESCRIPTION:
+lilo: lilo (Linux Loader)
+lilo:
+lilo: Generic Boot Loader for Linux ('LInux LOader') by Werner Almesberger.
+lilo: LILO boots Linux from your hard drive. It can also boot other
+lilo: operating systems such as MS-DOS and OS/2, and can even boot DOS from
+lilo: the second hard drive. LILO comes with utilities and documentation
+lilo: that make it easier to install, such as 'liloconfig' and 'QuickStart'.
+lilo: NOTE: Installing boot loaders is inherently dangerous. Be sure to have
+lilo: some means to boot your system from a different media if you install
+lilo: LILO on your hard disk.
+lilo:
+
+PACKAGE NAME:  links-2.1pre7-i386-1.tgz
+PACKAGE LOCATION:  ./extra/links-2.1pre7
+PACKAGE SIZE (compressed):  1792 K
+PACKAGE SIZE (uncompressed):  2800 K
+PACKAGE DESCRIPTION:
+links: links (WWW browser for the console)
+links:
+links: links is a console mode WWW browser, supporting colors, correct table
+links: rendering, background downloading, frames, Javascript, and a menu
+links: driven configuration interface.  This is a pre-release version of
+links: that supports graphical output using the Linux framebuffer console or
+links: SVGAlib.  Normal text console mode is also supported.  (sorry, no
+links: X support in this package... there are enough X browsers and it's
+links: useful to have a graphical browser that does NOT need X libraries)
+links:
+links: links was written by Mikulas Patocka.
+
+PACKAGE NAME:  mpg123-0.59r-i386-1.tgz
+PACKAGE LOCATION:  ./extra/mpg123-0.59r
+PACKAGE SIZE (compressed):  77 K
+PACKAGE SIZE (uncompressed):  210 K
+PACKAGE DESCRIPTION:
+mpg123: mpg123 (a command-line mp3 player)
+mpg123:
+mpg123: (full?) MPEG 1.0/2.0, Layer 1,2 and 3 support (Layer-3 realtime only
+mpg123: with a 'fast' machine).  Since April 97, 128kbit j-stereo should work
+mpg123: on a 486DX4-120.  With 2:1 down-sampling or using the downmix-mode
+mpg123: even a 486DX2-66 should play such a stream in realtime! 
+mpg123:
+
+PACKAGE NAME:  node-0.3.0-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  46 K
+PACKAGE SIZE (uncompressed):  130 K
+PACKAGE DESCRIPTION:
+node-0.3.0-i386-2: AX.25 node version 0.3.0
+node-0.3.0-i386-2:
+node-0.3.0-i386-2: This is a simple node frontend for Linux kernel AX.25, NETROM,
+node-0.3.0-i386-2: ROSE and TCP. Author: Tomi Manninen OH2BNS, <tomi.manninen@hut.fi>
+node-0.3.0-i386-2: 
+
+PACKAGE NAME:  openmotif-2.2.1-i386-1.tgz
+PACKAGE LOCATION:  ./extra/openmotif-2.2.1
+PACKAGE SIZE (compressed):  3857 K
+PACKAGE SIZE (uncompressed):  9920 K
+PACKAGE DESCRIPTION:
+openmotif: openmotif (Open Motif graphical toolkit)
+openmotif:
+openmotif: The Open Motif toolkit and Motif clients, such as the Motif Window
+openmotif: Manager.
+openmotif:
+openmotif: Open Motif is only free on free operating systems such as Linux, BSD,
+openmotif: and GNU HURD.  Please see the LICENSE in this directory.
+openmotif:
+
+PACKAGE NAME:  opie-2.32-i386-4.tgz
+PACKAGE LOCATION:  ./extra/ham/login
+PACKAGE SIZE (compressed):  29 K
+PACKAGE SIZE (uncompressed):  80 K
+PACKAGE DESCRIPTION:
+opie-2.32-i386-4: One-time Passwords In Everything, Release 2.32
+opie-2.32-i386-4: 
+opie-2.32-i386-4: OPIE is a freely distributable software package originally developed
+opie-2.32-i386-4: at and for the US Naval Research Laboratory (NRL).
+opie-2.32-i386-4: OPIE provides a one-time password system. The system should be
+opie-2.32-i386-4: secure against the passive attacks now commonplace on the Internet
+opie-2.32-i386-4: (see RFC 1704 for more details).
+opie-2.32-i386-4: This Slackware binary package only contains the OPIE client software.
+opie-2.32-i386-4: 
+
+PACKAGE NAME:  opie_server-2.32-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/login
+PACKAGE SIZE (compressed):  109 K
+PACKAGE SIZE (uncompressed):  230 K
+PACKAGE DESCRIPTION:
+opie_server-2.32-i386-2: One-time Passwords In Everything, Release 2.32
+opie_server-2.32-i386-2: 
+opie_server-2.32-i386-2: This Slackware binary package only contains the 
+opie_server-2.32-i386-2: OPIE server software.
+opie_server-2.32-i386-2: 
+
+PACKAGE NAME:  parted-1.6.5-i386-1.tgz
+PACKAGE LOCATION:  ./extra/parted-1.6.5
+PACKAGE SIZE (compressed):  399 K
+PACKAGE SIZE (uncompressed):  1100 K
+PACKAGE DESCRIPTION:
+parted: parted (GNU disk partitioning tool)
+parted:
+parted: GNU Parted is a program for creating, destroying, resizing, checking
+parted: and copying partitions, and the filesystems on them.  This is useful
+parted: for creating space for new operating systems, reorganizing disk
+parted: usage, copying data between hard disks, and disk imaging.
+parted:
+
+PACKAGE NAME:  predict-2.1.5-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/satellite
+PACKAGE SIZE (compressed):  321 K
+PACKAGE SIZE (uncompressed):  910 K
+PACKAGE DESCRIPTION:
+predict-2.1.5-i386-1: Satellite Tracking Program with Optional Voice Output
+predict-2.1.5-i386-1: by KD2BD, et al.
+predict-2.1.5-i386-1: Several client programs are provided:
+predict-2.1.5-i386-1: earthtrack: Combines predict with xearth
+predict-2.1.5-i386-1: geosat:     Determines the 'look angles' for geostationary
+predict-2.1.5-i386-1:             satellites
+predict-2.1.5-i386-1: gsat:       Graphical front-end for predict using gtk
+predict-2.1.5-i386-1: 
+predict-2.1.5-i386-1: The upstream predict sources also come with a front-end 
+predict-2.1.5-i386-1: called 'map', but it is not included in the Slackware 
+predict-2.1.5-i386-1: package because it requires the non-free xforms library.
+
+PACKAGE NAME:  sgml-tools-1.0.9-i386-7.tgz
+PACKAGE LOCATION:  ./extra/sgml-tools-1.0.9
+PACKAGE SIZE (compressed):  6640 K
+PACKAGE SIZE (uncompressed):  33090 K
+PACKAGE DESCRIPTION:
+sgml-tools: sgml-tools (Utilities for working with SGML)
+sgml-tools:
+sgml-tools: SGML stands for Standard Generalized Markup Language.  This is a
+sgml-tools: system which allows you to produce LaTeX, HTML, GNU info, LyX, RTF,
+sgml-tools: and plain text (via groff) from a single source file in SGML.  It is
+sgml-tools: often used for technical software documentation, such as the Linux
+sgml-tools: HOWTO documents.  This package includes everything you need to use
+sgml-tools: SGML -- all the standard SGML tools, OpenJade, and tools for working
+sgml-tools: with DocBook documents (various DTDs).
+sgml-tools:
+
+PACKAGE NAME:  soundmodem-0.6-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  139 K
+PACKAGE SIZE (uncompressed):  340 K
+PACKAGE DESCRIPTION:
+soundmodem-0.6-i386-1: Usermode Soundcard Modem driver 
+soundmodem-0.6-i386-1: 
+soundmodem-0.6-i386-1: This package contains the driver and the diagnostic 
+soundmodem-0.6-i386-1: utility for userspace SoundModem. It allows you to use 
+soundmodem-0.6-i386-1: soundcards supported by OSS/Free as Amateur Packet Radio
+soundmodem-0.6-i386-1: modems.
+soundmodem-0.6-i386-1: Author: Thomas Sailer <sailer@ife.ee.ethz.ch>
+soundmodem-0.6-i386-1: 
+soundmodem-0.6-i386-1: Requires audiofile and libxml to be installed.
+soundmodem-0.6-i386-1: 
+
+PACKAGE NAME:  tlf-0.5.4-i386-1.tgz
+PACKAGE LOCATION:  ./extra/ham/logging
+PACKAGE SIZE (compressed):  137 K
+PACKAGE SIZE (uncompressed):  390 K
+PACKAGE DESCRIPTION:
+tlf-0.5.4-i386-1: TLF is a console (ncurses) mode general purpose CW keyer,
+tlf-0.5.4-i386-1: -logging and -contest program for hamradio. It supports the
+tlf-0.5.4-i386-1: CQWW, the WPX, the ARRL-DX , the ARRL-FD, the PACC and the EU
+tlf-0.5.4-i386-1: SPRINT contests (single operator) as well as a lot more basic
+tlf-0.5.4-i386-1: contests, general QSO and DXpedition mode. It interfaces with a
+tlf-0.5.4-i386-1: morse code generator, a number of radios, and with a DX Cluster.
+tlf-0.5.4-i386-1: 
+
+PACKAGE NAME:  tlfcwkeyer-0.1-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/ham/logging
+PACKAGE SIZE (compressed):  15 K
+PACKAGE SIZE (uncompressed):  80 K
+PACKAGE DESCRIPTION:
+tlfcwkeyer-0.1-noarch-1: TLF cwkeyer source files
+tlfcwkeyer-0.1-noarch-1: These kernel modules need to be built from source
+tlfcwkeyer-0.1-noarch-1: This package contains the source files of both the
+tlfcwkeyer-0.1-noarch-1: serial keyer and the parallel port keyer.
+tlfcwkeyer-0.1-noarch-1: 
+
+PACKAGE NAME:  tlfmanual-0.5.2-noarch-1.tgz
+PACKAGE LOCATION:  ./extra/ham/logging
+PACKAGE SIZE (compressed):  217 K
+PACKAGE SIZE (uncompressed):  300 K
+PACKAGE DESCRIPTION:
+tlfmanual-0.5.2-noarch-1: TLF manual (html)
+tlfmanual-0.5.2-noarch-1: 
+
+PACKAGE NAME:  vlc-0.5.2-i386-1.tgz
+PACKAGE LOCATION:  ./extra/vlc-0.5.2
+PACKAGE SIZE (compressed):  854 K
+PACKAGE SIZE (uncompressed):  2490 K
+PACKAGE DESCRIPTION:
+vlc: vlc (VideoLAN Client)
+vlc:
+vlc: The VideoLAN Client (vlc) is a video player application for Linux
+vlc: that can play MPEG-1, MPEG-2, and MPEG-4 video files and streams.
+vlc:
+
+PACKAGE NAME:  xastir-1.1.2-i386-3.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  517 K
+PACKAGE SIZE (uncompressed):  1670 K
+PACKAGE DESCRIPTION:
+xastir-1.1.2-i386-3: XASTIR is an APRS program that uses GPS tracking/maps
+xastir-1.1.2-i386-3: and Amateur Radio to convey position reports, messaging,
+xastir-1.1.2-i386-3: weather, and much more.
+xastir-1.1.2-i386-3: Xastir was originally written by Frank Giannandrea, KC2GJS.
+xastir-1.1.2-i386-3: 
+xastir-1.1.2-i386-3: Requires packages: ax25-tools, imagick, lesstif, libax25,
+xastir-1.1.2-i386-3:                    libgeotiff, libproj.
+xastir-1.1.2-i386-3: 
+
+PACKAGE NAME:  xcall-0.15-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  49 K
+PACKAGE SIZE (uncompressed):  160 K
+PACKAGE DESCRIPTION:
+xcall-0.15-i386-2: Packet radio program for X/GTK
+xcall-0.15-i386-2: Xcall is a packet radio program which supports the AX.25,
+xcall-0.15-i386-2: NET/ROM and Rose protocols. The current features of xcall
+xcall-0.15-i386-2: include: Command line history, Recording of the session
+xcall-0.15-i386-2: into a file, AX.25 port information read from the proc
+xcall-0.15-i386-2: filesystem, Changing of the receive window font and colors,
+xcall-0.15-i386-2: Dutch and French Language support, Basic support for DX
+xcall-0.15-i386-2: Clusters. Author:  Joop Stakenborg <pa3aba@debian.org>
+xcall-0.15-i386-2: 
+xcall-0.15-i386-2: Requires glib & gtk+ to be installed.
+xcall-0.15-i386-2: 
+
+PACKAGE NAME:  xcdroast-0.98alpha13-i386-1.tgz
+PACKAGE LOCATION:  ./extra/xcdroast-0.98alpha13
+PACKAGE SIZE (compressed):  1035 K
+PACKAGE SIZE (uncompressed):  2500 K
+PACKAGE DESCRIPTION:
+xcdroast: xcdroast (Graphical frontend for cdrtools)
+xcdroast:
+xcdroast: X-CD-Roast is a graphical frontend for the command line cdrtools.
+xcdroast: You can do anything X-CD-Roast does yourself using the command line
+xcdroast: tools - but it's nicer and easier with the frontend.  The cdrtools
+xcdroast: contain "cdrecord" (which does the actual writing of CDs), "readcd"
+xcdroast: (reads data tracks of CDs"), "mkisofs" (masters CD images), and
+xcdroast: "cdda2wav" (reads audio tracks).  Cdrecord, readcd and mkisofs are
+xcdroast: maintained by Joerg Schilling, cdda2wav by Heiko Eissfeldt, and
+xcdroast: X-CD-Roast by Thomas Niederreiter.
+xcdroast:
+
+PACKAGE NAME:  xconvers-0.8.1-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  44 K
+PACKAGE SIZE (uncompressed):  140 K
+PACKAGE DESCRIPTION:
+xconvers-0.8.1-i386-2: Xconvers is a client for convers, a IRC-like conversation
+xconvers-0.8.1-i386-2: system for hamradio operators. Convers differs from IRC 
+xconvers-0.8.1-i386-2: because there is a much smaller command set and command 
+xconvers-0.8.1-i386-2: input and output is generally shorter. This is done 
+xconvers-0.8.1-i386-2: because a lot of convers servers are linked by radio 
+xconvers-0.8.1-i386-2: waves, where traffic should be kept low.
+xconvers-0.8.1-i386-2: Author: Joop Stakenborg (PA4TU)
+xconvers-0.8.1-i386-2: 
+xconvers-0.8.1-i386-2: requires glib and gtk+ to be installed.
+xconvers-0.8.1-i386-2: 
+
+PACKAGE NAME:  xfbb-7.04h-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  857 K
+PACKAGE SIZE (uncompressed):  2680 K
+PACKAGE DESCRIPTION:
+xfbb-7.04h-i386-2: xfbb-7.04h 
+xfbb-7.04h-i386-2:  
+xfbb-7.04h-i386-2: FBB is a bulletin board software package for amateur packet- 
+xfbb-7.04h-i386-2: radio. FBB is developed by Jean-Paul Roubelat, F6FBB. 
+xfbb-7.04h-i386-2: 
+xfbb-7.04h-i386-2: This Slackware package also includes additional language 
+xfbb-7.04h-i386-2: files, the multi server and the 7plus server.
+xfbb-7.04h-i386-2: 
+
+PACKAGE NAME:  xlockmore-5.06-i386-1.tgz
+PACKAGE LOCATION:  ./extra/xlockmore-5.06
+PACKAGE SIZE (compressed):  980 K
+PACKAGE SIZE (uncompressed):  2870 K
+PACKAGE DESCRIPTION:
+xlockmore: xlockmore (screen locker for X)
+xlockmore:
+xlockmore: Patrick J. Naughton's xlock screensaver/locker for X, with many
+xlockmore: more modes added by David A. Bagley.
+xlockmore:
+xlockmore: The 'Bob' bitmap has been included especially for Slackware, as well
+xlockmore: as a Linux penguin logo.  (NOTE: the image of J. R. "Bob" Dobbs is a
+xlockmore: registered trademark of The Subgenius Foundation, used by permission)
+xlockmore:
+
+PACKAGE NAME:  xlog-0.6.1-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/logging
+PACKAGE SIZE (compressed):  106 K
+PACKAGE SIZE (uncompressed):  350 K
+PACKAGE DESCRIPTION:
+xlog-0.6.1-i386-2: GTK+ Logging program for Shortwave Hamradio Operators
+xlog-0.6.1-i386-2: xlog focuses on hams who operate shortwave on a daily basis.
+xlog-0.6.1-i386-2: The log is stored into a text file. QSO's are presented in a
+xlog-0.6.1-i386-2: list. Items in the list can be added, deleted or updated.
+xlog-0.6.1-i386-2: For each contact, DXCC information is displayed and bearings
+xlog-0.6.1-i386-2: and distance are calculated, both short and long path.
+xlog-0.6.1-i386-2: xlog is developed by Joop Stakenborg <pa4tu@amsat.org>
+xlog-0.6.1-i386-2: 
+xlog-0.6.1-i386-2: Requires glib, gtk+ and hamlib to be installed.
+xlog-0.6.1-i386-2: 
+
+PACKAGE NAME:  z8530drv_utils-3.0-i386-2.tgz
+PACKAGE LOCATION:  ./extra/ham/packet
+PACKAGE SIZE (compressed):  36 K
+PACKAGE SIZE (uncompressed):  120 K
+PACKAGE DESCRIPTION:
+z8530drv_utils-3.0-i386-2: Utilities for Z8530 based SCC boards by Joerg Reuter DL1BKE.
+z8530drv_utils-3.0-i386-2: Needs scc support enabled in the kernel, or have the scc.o
+z8530drv_utils-3.0-i386-2: module loaded.
+z8530drv_utils-3.0-i386-2: 
+z8530drv_utils-3.0-i386-2: Edit /etc/ax25/z8530drv.conf to fit your configuration.
+z8530drv_utils-3.0-i386-2: 
+
+

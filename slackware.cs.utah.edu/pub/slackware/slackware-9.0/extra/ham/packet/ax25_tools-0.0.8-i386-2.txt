@@ -1,0 +1,13 @@
+
+ax25_tools-0.0.8-i386-2: AX.25 tools version 0.0.8
+ax25_tools-0.0.8-i386-2: 
+ax25_tools-0.0.8-i386-2: Author: Craig Small VK2XLZ 
+ax25_tools-0.0.8-i386-2: <csmall@small.dropbear.id.au>, et al
+ax25_tools-0.0.8-i386-2: Needs: glibc2.1, A Modern kernel (2.2.x), libtool,
+ax25_tools-0.0.8-i386-2: libax25 0.0.5 or newer, and  zlib.
+ax25_tools-0.0.8-i386-2: 
+ax25_tools-0.0.8-i386-2: 
+ax25_tools-0.0.8-i386-2: 
+ax25_tools-0.0.8-i386-2: 
+ax25_tools-0.0.8-i386-2: 
+

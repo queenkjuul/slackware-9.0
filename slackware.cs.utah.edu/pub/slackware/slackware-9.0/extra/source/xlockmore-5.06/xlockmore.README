@@ -1,0 +1,316 @@
+xlockmore-5.03 as of 25 January 2002, the maintained version of xlock
+Adapted from Patrick J. Naughton's original xlock
+
+Primary site: ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore
+Secondary site: ftp://ftp.x.org/contrib/applications
+Web page: http://www.tux.org/~bagleyd/xlockmore.html
+Maintainer: David A. Bagley <bagleyd@tux.org>
+
+Mailman lists: http://www.tux.org/mailman/listinfo
+If you are interested in contributing to XLock development and/or maintenance
+or just want to be notified when the latest stable version comes out.
+
+    choices                 brief description
+    -------                 -----------------
+    xlock-announce          Xlock beta and production announcements
+    xlock-develop           Xlock alpha ("daily") release announcements
+    xlock-discuss           Xlock/Xlockmore development discussion
+
+Please send all bug reports to bagleyd@tux.org .
+Alpha versions may be available through web page or ftp site.
+Adapted from Patrick J. Naughton's original xlock, with lots of help
+ from others.
+
+BUGS to fix and other stuff to do see docs/TODO.
+
+5.03
+  GL updates: lament (light and color are more realistic),
+    gears (misc updates) and atlantis (first try) for a
+    thanks to Eric Lassauge ported from xscreensaver (VMS patch for
+    atlantis from Jouk Jansen).
+  logout button Array out of bounds fix thanks to Tom Schmidt.
+  ant,bug,coral,crystal,daisy,demon,decay,dragon,goop,loop,slip,sphere,
+    tetris,turtle,voters,wator,wire,&xjack fix and squaretate fix for 1x1
+    screens, thanks to Tom Schmidt for helping out.
+  juggle updated for xscreensaver... thanks to Tim Auckland
+    <Tim.Auckland@Procket.com>.  I made similar MODE_ changes throughout.
+  loop update to make flaws closer to the initial loop, without this
+    it could be quite slow
+  pacman update/rewrite: level generator added, dots added thanks to
+    Edwin de Jong <mauddib@gmx.net>
+  2 erase modes ported from xscreensaver, thanks to Jouk Jansen.
+    Also added features to make these 2 modes more random.
+    Fix to set back line width.
+  standalone maze from Ephraim Yawitz fyawitz@actcom.co.il back into
+    maze mode for interactive feature.
+  RedHat fixes (VMS Intrinsic.h placement, rpm & configure updates)
+    and update to text3d.cc (removed blank, cleanups, and wander animation)
+    thanks to Eric Lassauge.
+  sounds can now be randomized using directories thanks to Jouk Jansen.
+    Also a fix for sel_image wildcard selection for VMS, thanks to
+    Tom Schmidt for noticing it does not work on UNIX machines.
+  swarm -size was inconsistent with other tails like worm and julia.
+    It now uses -cycles thanks to Frank v Waveren <fvw@var.cx>.
+  fire, lament, sballs fixes on SGI Marcus Herbert <rhoenie@spam-filter.de>
+  xmlock update for options thanks to Charles Vidal.
+  MI_IS_DRAWN fixes thanks to Jouk Jansen.
+
+5.02
+  gcc-3.0  It did not like:
+    bigendian now removed from configure
+    had some trouble with "-c -o" for compilation, fixed
+    -Wall -Wstrict-prototypes -Wmissing-prototypes removed as was too noisy
+      about system files... -isystem did not seem to help
+    Solaris troubles with sigset_t (solved in xlock.c) and wchar_t
+      (solved in configure.in).
+  fire update for wandering and sball update, thanks to Eric Lassauge
+    <lassauge@mail.dotcom.fr>.
+  Changes to Makefile and using DPMS for NetBSD.  Thanks to
+    <hubert.feyrer@rz.uni-regensburg.de>
+  Standard spot for assorted xlock stuff is now "/usr/lib/X11/xlock".
+    This can have 3 directories "fonts", "modules", and "sounds".
+  Configure change for mesa disabled and gl enabled and round conflicts
+    in solitare thanks to Michael Stone <mstone@debian.org>.
+  ImageMagick for UNIX... not working yet...
+    Thanks to Tom Schmidt for sort of getting it to work on JPG, PPM, PS,
+    and RGB (TrueColor problem) but it still does not work on BMP, GIF,
+    PNG, RAS, TGA, TIF, XBM, and XPM formats.  [None work for me yet.]
+    Now uses configure --enable-magick
+    Core dumps when reading in an image.  According to
+    http://www.imagemagick.org/, this happen if the application does not get
+    compiled or linked the way ImageMagick expects (used ImageMagick-5.3.6).
+    Patches for VMS from Jouk Jansen (it still works there).
+  Cygwin32 updates, see README on how to build.
+    changed modes/dclock.c xlock/xlock.c xlock/passwd.c
+      added defined(__CYGWIN__) where appropriate
+    modified configure.in (and configure) to add libcrypt in XLOCKLIBS
+    usage: xlockrc running mode is used. At the first use the password is asked
+      "Key: " and a $HOME/.xlockrc file is created with crypted password.
+    Specific bitmap and pixmap for cygwin, xmlock update
+    What is not done yet:
+      sound support, text3d
+    Thanks to Eric Lassauge <lassauge@mail.dotcom.fr>.
+  delay patch that takes into account the amount of time spent drawing
+    and syncing the screen.  Thanks to Nick Johnson http://www.spatula.net/
+  Configure updates for SIA and small goof fixes thanks to Tim Mooney
+    <mooney@dogbert.cc.ndsu.NoDak.edu>
+  Updated README for gltt patch recommendation so xlock will not core dump
+    if symbol.ttf and wingding.ttf are in the font directory.
+    text3d finally taken out of unstable with patch for double free from Tom
+    Schmidt.
+  Distributing in bzip2 compression.  Any problems with the change?
+  apollonian mode thanks to a program by Allan R. Wilks
+    <allan@research.att.com>.  For example, -1,2,2,3 are numbers that
+    represent curvature (1 / radius) in Euclidean space for the circles.
+    (This converts to 0,1,1,2 for spherical space and -1,1,1,1 for hyperbolic
+    space).  A negative number means that the circles are inscribed.
+    A few interesting noninteger examples are given, these are unlabled.
+    The double bounded example has no spherical or hyperbolic numbers.
+    Automatic generation of numbers with -count for outer circle (upper limit
+    of 99, since run time goes up polynomially by at least n^3).
+  More cleanup of C++ warnings, this time for modules and some glx stuff.
+  Removed abort and exit from modes: decay.c, goop.c, glx/tube.c, gears,
+    lament.c, moebius.c, molecule.c, sierpinski3d.c, i_spline.cc
+    TODO remove exit (or improve) for: glplanet.c, molecule.c
+    Tom Schmidt found a goof here for decay.
+  qix updated with -solid, got the idea from xscreensaver
+  Signal 11: Not compiled with XPM support.-> xpm-ximage.c atlantis, fire,
+    sballs fixed for unlikely case of GL but no XPM.  
+  Removed an extra FD_SET call for UNIX.
+  Got rid of of some -Wall, lint, and C++ warnings (mostly the new 5.01 modes).
+    ecgs g++ warnings removed from most of the code.  Added xscreensaver's
+    gcc -W checks to xlock's configure.  Imakefile and module fixes.
+  Modified iostuff.c to handle random selection directory similar to
+    VMS.  Found that the bug is really in text3d when reading files like
+    wingding.ttf and symbol.ttf.  Currently looking how to handle these
+    files (they should be excluded for now).
+  scooter now setup for multiscreen.
+  Missed a patch to config.h.in for Red Hat 7.1... thanks again to
+    Tim Aukland <tda10@Procket.com>.
+  New "tetris -well", now uses generated images, also cleaned up some
+    bugs too.  Bug fix thanks to Tom Schmidt.
+  New molecule to solve a random SEGV on Sun thanks to Tom Schmidt
+    <tschmidt@micron.com> (it still crashes on my Sun with OpenGL but
+    I think its an isolated case).  Also cleaned up a few mistakes in the
+    menus and resource file.
+  OSF1_ENH_SEC passwd updated to handle passwords with more than eight
+    characters using dispcrypt, thanks to Steve VanDevender
+    <stevev@hexadecimal.uoregon.edu>.
+  molecule fix in sscanf thanks to Jouk Jansen.
+  scooter updated thanks to Sven Thoennissen <posse@gmx.net>.
+  Fixed generated xlock.hlp.
+  gears added -size but defaults to 0, only -planetary will use up lots of
+    CPU so added a -planetsize 400 which takes over if -size is 0 (full screen
+    if both are 0).
+
+5.01
+  molecule, glplanet, and sierpinski3d modes converted from xscreensaver
+    thanks to Rolf Groppe <rolf@groppe.de>. 
+    VMS changes for gl modes thanks to Jouk Jansen <joukj@hrem.stm.tudelft.nl>.
+    Updates to molecule thanks to Rolf Groppe and Tom Schmidt.
+  Forte cpp changes for polyominoes.c, tetris.c, and scooter.c
+    (mostly just casting malloc).
+  "Kick me out" statement is removed since XLock.logoutButtonHelp is probably
+    more descriptive.  Thanks to Tom Schmidt.
+  Workaround for possible crashing when xautolock calls xlock when its
+    already running on Linux.  etc/xlock1.sh thanks to Chima Njaka
+    <dream@linkline.com>.  [Have not observed this on my Sun. DAB]
+  texture for atlantis from xscreensaver-3.32 thanks to Eric Lassauge.
+    <lassauge@mail.dotcom.fr>.
+  showfps with some MESA causes problems.  configure changes thanks to
+    Tom Schmidt.
+  scooter mode added: thanks to Sven Thoennissen <posse@gmx.net>.
+    Sort of like star mode... also took out space from "unstable" and
+    may in the future combine them both into star mode.
+  kerberos patch from Marc Mengel <mengel@fnal.gov>.  It no longer rewrites
+    the ticket cache with a ticket which may have several options turned off,
+    when they were turned on before you locked the screen.
+  DPMS patch thanks to Maorong Zou <mzou@mail.ma.utexas.edu>.  xlock will
+    not burn up cpu when screen is blank.
+  tetris and dragon leak fixed thanks to Tom Schmidt.
+    Memory read fix in tetris thanks to Tom Schmidt.
+  dragon mode added.  Just one of Oskar van Deventer's ingenius mazes.
+  juggle mode: probablility of adding another ball when juggling 2 balls
+    was increased.
+  loop mode: Added some flaws, random blue wall spots, to "liven" it up.
+  tetris fixes for -well :  1. clearing of multiple rows;
+    2. invisible squares when folded on a corner;
+    3. Frozen walls are now white.
+  xmlock update thanks to Charles Vidal <vidalc@club-internet.fr>, now with
+    a task bar and more toggles.
+  -showfps, moebius, and gears updates thanks to Eric Lassauge
+    <lassauge@mail.dotcom.fr> and Jamie Zawinski <jwz@jwz.org>.
+  polyominoes memory leaks and array bounds problems fixed thanks to
+    Tom Schmidt <tschmidt@micron.com>.
+  nice was causing a stalling problem renice stuff removed thanks to
+    Akio Morita <amorita@meadow.scphys.kyoto-u.ac.jp>
+  plain bitmap added for polyominoes and tetris
+  polyominoes mode algorithm improved thanks to Stephen Montgomery-Smith
+    <stephen@math.missouri.edu>.  Name changed from pentominoes to
+    polyominoes.  New with lots of puzzles (-identical) most of which take
+    a while and some one sided and combination puzzles.
+    Added -cycles (default 8192) if set to 0 will try to solve puzzle forever
+    Changed some wait and delay stuff.  Will now try to display a small puzzle
+    if a large one does not fit at all (usually in the password window).
+    25 by 22 elevenomino now takes advantage of 180 symmetry.  180 symmetry
+    now have their colors cooridinated.
+  RedHat configure changes thanks to Tim Auckland <Tim.Auckland@Procket.com>.
+  juggle spin now tracks with -count
+  xcl fixes thanks to Martin Berentsen <berentsen@sent5.uni-duisburg.de>.
+  text3d fixes to get it to work on my Linux box.  Seems to generate wacky
+    file names if there is more than one font in the font directory somewhere
+    in iostuff.c.
+  SGI fixes thanks to Ed Mackey <emackey@early.com> needs /usr/lib32 in path
+    and must #undef offsetof .
+  Dynamic linking (Modules) working again (broken in 5.00).  Also Makefiles
+    now handle multi-file modes.
+  fire and text3d updates from Eric Lassauge <lassauge@mail.dotcom.fr>
+    fire with -count 0 shows rain.
+  sco changes to configure MAY have caused problems in slackware starting
+    in 4.17.  Backed out the changes and put in a special case for sco.
+    where XGetScreenSaver is moved before GrabKeyboardAndMouse
+  Fixed cases for -allowroot if root has a null password or does not have
+    a password thanks to Stefan `Sec` Zehl <sec@yoda.fwe.pi.musin.de>.
+    Also fixed BSD_AUTH & ultrix in a similar way but not tested.
+    (Should VMS have this too?  I know its unlikely for a couple of reasons.)
+  galaxy -fisheye lens option thanks to Richard Loftin <rich@sevenravens.com>.
+  xlock allocation updates (color.c, iostuff.c) and text3d updates
+    (not complete).  Should there be a standard spot for the text3d font
+    similar to the sound directory?.  Ideas welcome.
+  commented out #define MODE_dclock_millennium from mode.h in the 3rd
+    millennium.
+  wator.c an alloc check added.
+  tetris now has the newer bitmaps taken from pentominoes mode.
+
+5.00
+  Just about all modes are now updated.  Numerous bug fixes added.
+    Modes modified for safer allocating.  Part of fix to security flaw.
+    xlock was broken by using up all the virtual memory.
+    xlockdir may need more work.  Multiscreen fixes added.
+    text3d, an unstable C++ mode, needs more work, for the calls to "new".
+    Tom Schmidt & Jouk Jansen caught numerous goofs.
+  Assorted fixes when doing above like "discrete -mono", and lyapunov &
+    mandelbrot now sometimes draw from the right side.  tube, lyapunov, and
+    mandelbrot now go through colormap changes forward and backward.
+  XFreeColors bug fix in colors.c thanks to Ian Collier
+    <Ian.Collier@comlab.ox.ac.uk>.
+  Enhanced xlock/util.c for SunOS 4.1.X and others that needed the
+    matherr() function defined.  Now handles acos() and asin() DOMAIN
+    error messages. Thanks to Tom Schmidt <tschmidt@micron.com>.
+  SunOS 4.1.3_U1 did not have CLOCKS_PER_SEC defined.  Thanks to Tom Schmidt
+    <tschmidt@micron.com>.
+  pentomino mode added by Stephen Montgomery-Smith
+    <stephen@math.missouri.edu>... it includes a scalable 3d look.
+    tetris mode now uses and older version of this scalable 3d look as well.
+  fire, sballs, lament and atlantis updates by Eric Lassauge.
+  SIA passwording for Tru64 help thanks to Octave Orgeron <octave@sun.com>.
+  ImageMagick stuff added by Jouk Jansen <joukj@hrem.stm.tudelft.nl>
+    Setup to go only for VMS.
+  SunC++ (Forte 6 U1) compatiblity changes.
+  sball mode... new GL mode, converted by Eric Lassauge.
+  euler2d new mode option, eulerpower Added optimizations, rotation
+    of region to maximize screen fill, and new algorithm for solving
+    diff equation makes it twice as fast thanks to Stephen
+    Montgomery-Smith <stephen@math.missouri.edu>.
+  bubble3d, invert release fix
+  fire mode... new GL mode converted by Eric Lassauge
+    <lassauge@mail.dotcom.fr>.  Also had a few other mods including a
+    solitare and new l-* icons in pixmaps.  Tom Schmidt
+    <tschmidt@micron.com> added a -size option similar to sproingies for fire.
+  lint cleanups
+  cartoon and raster image removed, bat and bounce modes modified to do
+    some of what it used to but not all...
+  e-sound can now be turned off thanks to Mark Davies
+  life patterns more random
+  VMS edits thanks to Jouk Jansen <joukj@hrem.stm.tudelft.nl>.
+  Dpms lib changes for configure for Solaris 8 and XFree86 4.0 (latter not
+    tested).  Also added a new Solaris xpm.
+  kaleid: new spiral and spots options thanks Robert Adam, II
+    <raii@comm.net> (spiral looks best like:
+    xlock -mode kaleid -spiral -alternate -size 20 -count 5  ).
+  Configure update for Mesa thanks to Tom Schmidt <tschmidt@micron.com>.
+  closedown patch thanks to Bernd 'Bing' Leibing
+    <bernd.leibing@rz.uni-ulm.de>.
+  vtlock patches Eric Lassauge <lassauge@mail.dotcom.fr>.
+  Configure update for X11R6.4 and X11R6.5.1.
+  Display error should be printed if SYSLOG defined thanks to Alexander
+    Elgert <elgert@rbg.informatik.tu-darmstadt.de>.
+  xlock -resources crash fixed on Solaris thanks to Alexander Elgert
+    <elgert@rbg.informatik.tu-darmstadt.de>.
+  coredump fix for GL modes cage, moebius, rubik, skewb, and stairs
+    and Mesa3.1 thanks to Tom Schmidt <tschmidt@micron.com>.
+  solitare.cc update for disable-interactive.
+  xlock -resources crash fixed on Solaris thanks to Alexander Elgert
+    <elgert@rbg.informatik.tu-darmstadt.de>.
+  Security Focus found a security bug with display name passing "%d" as the
+    display name.  Thanks to Jeremy Buhler <jbuhler@cs.washington.edu> for
+    the xlockmore patch.
+  Environment configuration (--disable-interactive) logic was corrected
+    (default was ok but you had to --enable-interactive to disable) thanks
+    to Tom Schmidt <tschmidt@micron.com>.
+  Man page changes.
+
+-------------------------------------------------------------------------------
+
+Original author: Patrick J. Naughton
+Site: ftp.x.org in /R5contrib
+
+ Copyright (c) 1988-91 by Patrick J. Naughton.
+
+ Permission to use, copy, modify, and distribute this software and its
+ documentation for any purpose and without fee is hereby granted,
+ provided that the above copyright notice appear in all copies and that
+ both that copyright notice and this permission notice appear in
+ supporting documentation.
+
+ This file is provided AS IS with no warranties of any kind.  The author
+ shall have no liability with respect to the infringement of copyrights,
+ trade secrets or any patents by this file or any part thereof.  In no
+ event will the author be liable for any lost revenue or profits or
+ other special, indirect and consequential damages.
+
+    ______________________________________________________________________
+    Patrick J. Naughton				   email: naughton@sun.com
+    Sun Microsystems Laboratories, Inc.		   voice: (415) 336 - 1080
+
+Maintainer: David A. Bagley <bagleyd@tux.org>

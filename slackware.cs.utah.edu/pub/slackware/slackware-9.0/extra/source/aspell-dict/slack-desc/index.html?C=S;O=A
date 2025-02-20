@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/extra/source/aspell-dict/slack-desc</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/extra/source/aspell-dict/slack-desc</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/extra/source/aspell-dict/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-cs">slack-desc.aspell-cs</a></td><td align="right">2003-01-13 23:54  </td><td align="right">195 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-cy">slack-desc.aspell-cy</a></td><td align="right">2003-01-13 23:54  </td><td align="right">195 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-el">slack-desc.aspell-el</a></td><td align="right">2003-01-13 23:55  </td><td align="right">195 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-nl">slack-desc.aspell-nl</a></td><td align="right">2003-01-13 23:57  </td><td align="right">195 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-br">slack-desc.aspell-br</a></td><td align="right">2003-01-13 23:53  </td><td align="right">197 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-da">slack-desc.aspell-da</a></td><td align="right">2003-01-13 23:54  </td><td align="right">197 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-de">slack-desc.aspell-de</a></td><td align="right">2003-01-13 23:55  </td><td align="right">197 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-fr">slack-desc.aspell-fr</a></td><td align="right">2003-01-13 23:56  </td><td align="right">197 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-pl">slack-desc.aspell-pl</a></td><td align="right">2003-01-13 23:57  </td><td align="right">197 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-sk">slack-desc.aspell-sk</a></td><td align="right">2003-01-13 23:58  </td><td align="right">197 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-ca">slack-desc.aspell-ca</a></td><td align="right">2003-01-13 23:54  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-es">slack-desc.aspell-es</a></td><td align="right">2003-01-13 23:56  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-fo">slack-desc.aspell-fo</a></td><td align="right">2003-01-13 23:56  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-it">slack-desc.aspell-it</a></td><td align="right">2003-01-13 23:57  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-ru">slack-desc.aspell-ru</a></td><td align="right">2003-01-13 23:58  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-sv">slack-desc.aspell-sv</a></td><td align="right">2003-01-13 23:59  </td><td align="right">199 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-ro">slack-desc.aspell-ro</a></td><td align="right">2003-01-13 23:58  </td><td align="right">201 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-eo">slack-desc.aspell-eo</a></td><td align="right">2003-01-13 23:56  </td><td align="right">203 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-no">slack-desc.aspell-no</a></td><td align="right">2003-01-13 23:57  </td><td align="right">203 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-uk">slack-desc.aspell-uk</a></td><td align="right">2003-01-13 23:59  </td><td align="right">203 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-pt">slack-desc.aspell-pt</a></td><td align="right">2003-01-13 23:58  </td><td align="right">205 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.aspell-en">slack-desc.aspell-en</a></td><td align="right">2003-01-14 00:32  </td><td align="right">277 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

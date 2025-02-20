@@ -1,0 +1,11 @@
+libax25-0.0.9-i386-2: AX.25 libraries version 0.0.9
+libax25-0.0.9-i386-2: 
+libax25-0.0.9-i386-2: This library set is still really under test but is now
+libax25-0.0.9-i386-2: release for general use. You are supposed to use glibc2
+libax25-0.0.9-i386-2: for this package.
+libax25-0.0.9-i386-2: 
+libax25-0.0.9-i386-2: Authors: Jonathan Naylor, Tomi Manninen, 
+libax25-0.0.9-i386-2:          Jean-Paul Roubelat, Alan Cox.
+libax25-0.0.9-i386-2: 
+libax25-0.0.9-i386-2: 
+libax25-0.0.9-i386-2: 

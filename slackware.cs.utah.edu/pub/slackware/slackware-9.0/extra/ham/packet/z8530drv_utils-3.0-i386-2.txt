@@ -1,0 +1,13 @@
+
+z8530drv_utils-3.0-i386-2: Utilities for Z8530 based SCC boards by Joerg Reuter DL1BKE.
+z8530drv_utils-3.0-i386-2: Needs scc support enabled in the kernel, or have the scc.o
+z8530drv_utils-3.0-i386-2: module loaded.
+z8530drv_utils-3.0-i386-2: 
+z8530drv_utils-3.0-i386-2: Edit /etc/ax25/z8530drv.conf to fit your configuration.
+z8530drv_utils-3.0-i386-2: 
+z8530drv_utils-3.0-i386-2: 
+z8530drv_utils-3.0-i386-2: 
+z8530drv_utils-3.0-i386-2: 
+z8530drv_utils-3.0-i386-2: 
+z8530drv_utils-3.0-i386-2: 
+

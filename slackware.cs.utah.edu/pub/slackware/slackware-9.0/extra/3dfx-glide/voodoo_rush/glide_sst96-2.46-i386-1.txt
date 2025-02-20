@@ -1,0 +1,11 @@
+glide_sst96: Glide 2.46 for the Voodoo Rush
+glide_sst96:
+glide_sst96: Includes dynamic ELF libraries and headers for Glide 2.46
+glide_sst96: built specifically for the Voodoo Rush card.  Also includes the
+glide_sst96: test3Dfx utility.
+glide_sst96:
+glide_sst96:
+glide_sst96:
+glide_sst96:
+glide_sst96:
+glide_sst96:

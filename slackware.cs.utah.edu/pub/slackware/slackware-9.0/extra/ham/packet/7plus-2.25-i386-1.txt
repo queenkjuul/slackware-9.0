@@ -1,0 +1,14 @@
+
+7plus-2.25-i386-1: 7PLUS is an encoder vaguely similar to Unix's UUENCODE.
+7plus-2.25-i386-1: It uses a very effective radix216 encoding and incorporates
+7plus-2.25-i386-1: diverse mechanisms to ensure decoded data is not corrupted.
+7plus-2.25-i386-1: It also includes an interactive repair mechanism which allows
+7plus-2.25-i386-1: the repair of damaged files using correction files, thus 
+7plus-2.25-i386-1: eliminating the need to retransmit entire files. In case of
+7plus-2.25-i386-1: a corruption, only the faulty sections are resent. 7PLUS
+7plus-2.25-i386-1: is only meant to be used within the Packet Radio network
+7plus-2.25-i386-1: for the tranport of binary data through Packet Radio mail.
+7plus-2.25-i386-1: It cannot be used for Internet eMail since it needs a
+7plus-2.25-i386-1: (almost) transparent path from end to end.
+7plus-2.25-i386-1: 
+

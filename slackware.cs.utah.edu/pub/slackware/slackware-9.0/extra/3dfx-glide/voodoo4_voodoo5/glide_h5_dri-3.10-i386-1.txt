@@ -1,0 +1,11 @@
+glide_h5_dri: Glide 3.10 for the Voodoo4/5
+glide_h5_dri:
+glide_h5_dri: Includes dynamic ELF libraries and headers for Glide 3.10
+glide_h5_dri: built specifically for the Voodoo 4 and Voodoo 5 cards.  This
+glide_h5_dri: particular build incorporates DRI functionality.
+glide_h5_dri:
+glide_h5_dri:
+glide_h5_dri:
+glide_h5_dri:
+glide_h5_dri:
+glide_h5_dri:

@@ -1,0 +1,13 @@
+
+tlfcwkeyer-0.1-noarch-1: TLF cwkeyer source files
+tlfcwkeyer-0.1-noarch-1: These kernel modules need to be built from source
+tlfcwkeyer-0.1-noarch-1: This package contains the source files of both the
+tlfcwkeyer-0.1-noarch-1: serial keyer and the parallel port keyer.
+tlfcwkeyer-0.1-noarch-1: 
+tlfcwkeyer-0.1-noarch-1: 
+tlfcwkeyer-0.1-noarch-1: 
+tlfcwkeyer-0.1-noarch-1: 
+tlfcwkeyer-0.1-noarch-1: 
+tlfcwkeyer-0.1-noarch-1: 
+tlfcwkeyer-0.1-noarch-1: 
+

@@ -1,0 +1,11 @@
+glide_sst1: Glide 2.46 for the Voodoo Graphics
+glide_sst1:
+glide_sst1: Includes dynamic ELF libraries and headers for Glide 2.46
+glide_sst1: built specifically for the Voodoo Graphics card.  Also includes
+glide_sst1: the test3Dfx utility.
+glide_sst1:
+glide_sst1:
+glide_sst1:
+glide_sst1:
+glide_sst1:
+glide_sst1:

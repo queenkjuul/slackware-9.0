@@ -1,0 +1,11 @@
+db4: db4 (Berkeley database library version 4)
+db4:
+db4: The Berkeley Database (Berkeley DB) library provides embedded database
+db4: support for both traditional and client/server applications.
+db4:
+db4: This package should be installed if compatibility is needed with
+db4: databases created with the Berkeley DB version 4.
+db4:
+db4:
+db4:
+db4:

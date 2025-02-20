@@ -1,0 +1,71 @@
+Slackware Linux 3Dfx Support Packages
+-------------------------------------
+
+This directory contains packages for adding 3Dfx support to Slackware.  All
+of the packages in this directory can be installed using the "installpkg"
+command.  Refer to the man page for installpkg for more information.
+
+1.  INSTALLATION INSTRUCTIONS
+
+       The packages in this directory are generic 3Dfx support packages and
+       can be installed on all systems with a 3Dfx graphics card.  The
+       various subdirectories contain the specific support packages for each
+       card.  Here's an overview of the installation process:
+
+       a.  Determine your 3Dfx card.  For example, if you have a Voodoo 2
+           card, you will want to use the packages from the "voodoo2"
+           subdirectory.
+
+       b.  Install the packages from your card's subdirectory.  You may
+           install only the versions of Glide you want, but installing them
+           all does not hurt anything.  Use the installpkg(8) command to 
+           install them on your system.
+
+
+2.  COMMON PACKAGE DESCRIPTIONS
+
+       These packages work with all 3Dfx cards and are to be used in
+       conjunction with the appropriate Glide package(s) for your 3Dfx card.
+
+       - glide_sdk-2.x-i386-1.tgz
+            Software Development Kit for Glide versions 2.x.  Includes
+            headers, sample source code, and documentation.
+
+       - glide_sdk-3.x-i386-1.tgz
+            Software Development Kit for Glide versions 3.x.  Includes
+            headers, sample source code, and documentation.
+
+
+3.  DEVICE SPECIFIC PACKAGE DESCRIPTIONS
+
+       Each subdirectory contains Glide packages built for different 3Dfx
+       card.  Only install the Glide package(s) appropriate to your system.
+
+       - voodoo_graphics/
+            * glide_sst1-2.46-i386-1.tgz
+                 Glide version 2.46 for Voodoo Graphics cards.
+
+       - voodoo_rush/
+            * glide_sst96-2.46-i386-1.tgz
+                 Glide version 2.46 for Voodoo Rush cards.
+
+       - voodoo2/
+            * glide_cvg-2.53-i386-1.tgz
+                 Glide version 2.53 for Voodoo 2 cards.
+
+       - voodoo3_banshee/
+            * glide_h3_dri-3.10-i386-1.tgz
+                 Glide version 3.10 for Voodoo 3/Banshee cards.  Includes
+                 DRI support.
+
+       - voodoo4_voodoo5/
+            * glide_h5_dri-3.10-i386-1.tgz
+                 Glide version 3.10 for Voodoo 4/5 cards.  Includes DRI
+                 support.
+
+
+Enjoy!
+
+--
+David Cantrell
+david@slackware.com

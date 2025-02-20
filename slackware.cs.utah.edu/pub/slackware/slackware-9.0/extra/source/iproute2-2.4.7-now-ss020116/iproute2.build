@@ -1,0 +1,17 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=2.4.7-now-ss020116-try
+cd /tmp
+tar xzvf $CWD/iproute2-$VERSION.tar.gz
+cd iproute2
+tar xzf $CWD/htb3.6-020525.tar.gz
+chown -R root.root .
+cat htb3.6_tc.diff | patch -p1
+make
+make install
+mv /usr/doc/iproute2 /usr/doc/iproute2-$VERSION
+cp -a RE* \
+  /usr/doc/iproute2-$VERSION
+mkdir -p /var/lib/arpd
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

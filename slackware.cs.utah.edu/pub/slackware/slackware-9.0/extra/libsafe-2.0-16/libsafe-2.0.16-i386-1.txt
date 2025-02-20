@@ -1,0 +1,11 @@
+libsafe: libsafe 
+libsafe:
+libsafe: The libsafe library protects a process against the exploitation of
+libsafe: buffer overflow vulnerabilities in process stacks and against format
+libsafe: string exploits.  Libsafe works with any existing pre-compiled
+libsafe: executable and can be used transparently, even on a system-wide basis.
+libsafe: The method intercepts all calls to library functions that are known to
+libsafe: be vulnerable.  Libsafe has been shown to detect several known attacks
+libsafe: and can potentially prevent yet unknown attacks.  Experiments indicate
+libsafe: that the performance overhead of libsafe is negligible.
+libsafe:

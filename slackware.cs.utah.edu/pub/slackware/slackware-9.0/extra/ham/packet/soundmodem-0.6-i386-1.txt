@@ -1,0 +1,13 @@
+
+soundmodem-0.6-i386-1: Usermode Soundcard Modem driver 
+soundmodem-0.6-i386-1: 
+soundmodem-0.6-i386-1: This package contains the driver and the diagnostic 
+soundmodem-0.6-i386-1: utility for userspace SoundModem. It allows you to use 
+soundmodem-0.6-i386-1: soundcards supported by OSS/Free as Amateur Packet Radio
+soundmodem-0.6-i386-1: modems.
+soundmodem-0.6-i386-1: Author: Thomas Sailer <sailer@ife.ee.ethz.ch>
+soundmodem-0.6-i386-1: 
+soundmodem-0.6-i386-1: Requires audiofile and libxml to be installed.
+soundmodem-0.6-i386-1: 
+soundmodem-0.6-i386-1: 
+

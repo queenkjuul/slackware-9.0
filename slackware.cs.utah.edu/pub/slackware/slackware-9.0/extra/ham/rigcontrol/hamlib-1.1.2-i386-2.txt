@@ -1,0 +1,13 @@
+
+hamlib-1.1.2-i386-2: Run-time library to control radio transceivers and
+hamlib-1.1.2-i386-2: receivers.
+hamlib-1.1.2-i386-2: Also included is a simple radio control program 'rigctl'
+hamlib-1.1.2-i386-2: 
+hamlib-1.1.2-i386-2: hamlib is developed by Frank Singleton, VK3FCS/KM5
+hamlib-1.1.2-i386-2: and Stephane Fillod, F4CFE.
+hamlib-1.1.2-i386-2: 
+hamlib-1.1.2-i386-2: 
+hamlib-1.1.2-i386-2: 
+hamlib-1.1.2-i386-2: 
+hamlib-1.1.2-i386-2: 
+
