@@ -1,0 +1,39 @@
+# $XFree86: xc/lib/Xft/XftConfig.cpp,v 1.8 2001/11/21 23:41:12 keithp Exp $
+
+dir "/usr/X11R6/lib/X11/fonts/Type1"
+
+#
+# alias 'fixed' for 'mono'
+#
+match any family == "fixed"		edit family =+ "mono";
+
+#
+# Check users config file
+#
+includeif	"~/.xftconfig"
+
+#
+# Use Luxi fonts for default faces
+#
+match any family == "serif"		edit family += "Luxi Serif";
+match any family == "sans"		edit family += "Luxi Sans";
+match any family == "mono"		edit family += "Luxi Mono";
+
+#
+# Alias between XLFD families and font file family name, prefer local
+# fonts
+#
+match any family == "charter"		edit family += "bitstream charter";
+match any family == "bitstream charter" edit family =+ "charter";
+
+#
+# Alias older name for Luxi fonts
+#
+match any family == "LuciduxSerif" edit family += "Luxi Serif";
+match any family == "Lucidux Serif" edit family += "Luxi Serif";
+
+match any family == "LuciduxSans" edit family += "Luxi Sans";
+match any family == "Lucidux Sans" edit family += "Luxi Sans";
+
+match any family == "LuciduxMono" edit family += "Luxi Mono";
+match any family == "Lucidux Mono" edit family += "Luxi Mono";

@@ -1,0 +1,11 @@
+inn: inn (InterNetNews news server)
+inn:
+inn: Rich Salz's InterNetNews news transport system.  The core part of the
+inn: package is a single long-running daemon that handles all incoming NNTP
+inn: connections.  It files the articles and arranges for them to be 
+inn: forwarded to downstream sites.
+inn:
+inn:
+inn:
+inn:
+inn:

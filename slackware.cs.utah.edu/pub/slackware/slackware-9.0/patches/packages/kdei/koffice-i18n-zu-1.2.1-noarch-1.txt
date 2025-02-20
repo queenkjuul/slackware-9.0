@@ -1,0 +1,11 @@
+koffice-i18n-zu: koffice-i18n-zu
+koffice-i18n-zu:
+koffice-i18n-zu: Zulu language support for KOffice.
+koffice-i18n-zu:
+koffice-i18n-zu:
+koffice-i18n-zu:
+koffice-i18n-zu:
+koffice-i18n-zu:
+koffice-i18n-zu:
+koffice-i18n-zu:
+koffice-i18n-zu:

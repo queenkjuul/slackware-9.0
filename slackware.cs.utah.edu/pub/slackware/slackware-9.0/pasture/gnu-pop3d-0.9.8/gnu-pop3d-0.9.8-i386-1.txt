@@ -1,0 +1,11 @@
+gnu-pop3d: gnu-pop3d (GNU POP3 daemon)
+gnu-pop3d:
+gnu-pop3d: This is the GNU POP3 server.  The goal of GNU POP is to provide a
+gnu-pop3d: small, fast, efficient, free POP3 server fully compliant with RFCs. 
+gnu-pop3d:
+gnu-pop3d: The GNU POP3 server was written by Jakob 'sparky' Kaivo.
+gnu-pop3d:
+gnu-pop3d:
+gnu-pop3d:
+gnu-pop3d:
+gnu-pop3d:

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/xfree86</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/xfree86</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="README">README</a></td><td align="right">2004-02-12 01:52  </td><td align="right"> 96 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="libXi.diff.gz">libXi.diff.gz</a></td><td align="right">2003-09-14 00:27  </td><td align="right">351 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fontfile.diff.gz">fontfile.diff.gz</a></td><td align="right">2004-02-11 23:37  </td><td align="right">1.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fs.diff.gz">fs.diff.gz</a></td><td align="right">2003-09-15 21:32  </td><td align="right">2.5K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="XFree86.build">XFree86.build</a></td><td align="right">2004-02-11 23:37  </td><td align="right">9.4K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

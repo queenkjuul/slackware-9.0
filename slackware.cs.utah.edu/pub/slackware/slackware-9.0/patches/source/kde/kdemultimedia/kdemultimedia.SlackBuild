@@ -1,0 +1,55 @@
+#!/bin/sh
+CWD=`pwd`
+TMP=/tmp
+PKG=$TMP/package-kdemultimedia
+
+# Set the config option variables if they are not already set:
+if [ -z $VERSION ]; then
+  export VERSION=`grep VERSION= ../KDE.options | cut -f 2- -d =`
+fi
+if [ -z $ARCH ]; then
+  export ARCH=`grep ARCH= ../KDE.options | cut -f 2- -d =`
+fi
+if [ -z $BUILD ]; then
+  export BUILD=`grep BUILD= ../KDE.options | cut -f 2- -d =`
+fi
+if [ -z $TARGET ]; then
+  export TARGET=`grep TARGET= ../KDE.options | cut -f 2- -d =`
+fi
+if [ -z "$CPUOPT" ]; then
+  export CPUOPT=`grep CPUOPT= ../KDE.options | cut -f 2- -d =`
+fi
+
+rm -rf $PKG
+mkdir -p $PKG/opt/kde
+
+# Avoid a version number in .la files:
+if [ -d /usr/lib/qt ]; then
+  QTDIR=/usr/lib/qt
+fi
+cd $TMP
+echo "Building kdemultimedia-$VERSION.tar.bz2..."
+tar xjvf $CWD/kdemultimedia-$VERSION.tar.bz2
+cd kdemultimedia-$VERSION
+chown -R root.root .
+CFLAGS=$CPUOPT \
+CXXFLAGS=$CPUOPT \
+./configure --prefix=/opt/kde $TARGET-slackware-linux \
+  --with-xinerama \
+  --disable-debug \
+  --program-prefix="" --program-suffix=""
+make
+make install DESTDIR=$PKG
+mkdir -p $PKG/usr/doc/kdemultimedia-$VERSION
+cp -a AUTHORS COPYING INSTALL README $PKG/usr/doc/kdemultimedia-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+( cd $PKG
+  find . -type f | xargs file | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded )
+if [ -d $PKG/opt/kde/man ]; then
+  gzip -9 $PKG/opt/kde/man/man?/*
+fi
+
+cd $PKG
+makepkg -l y -c n ../kdemultimedia-$VERSION-$ARCH-$BUILD.tgz

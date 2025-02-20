@@ -1,0 +1,11 @@
+koffice-i18n-nl: koffice-i18n-nl
+koffice-i18n-nl:
+koffice-i18n-nl: Dutch language support for KOffice.
+koffice-i18n-nl:
+koffice-i18n-nl:
+koffice-i18n-nl:
+koffice-i18n-nl:
+koffice-i18n-nl:
+koffice-i18n-nl:
+koffice-i18n-nl:
+koffice-i18n-nl:

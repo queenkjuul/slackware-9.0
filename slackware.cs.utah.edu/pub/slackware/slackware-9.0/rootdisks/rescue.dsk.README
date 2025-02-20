@@ -1,0 +1,15 @@
+rescue.dsk:
+
+This is a BusyBox-based rescue disk for Linux.  It is a reasonably complete
+mini-Linux system running from a four megabyte ramdisk, and contains an editor
+(vi), networking tools like ifconfig, route, telnet, ping, and wget, and other
+tools that might be handy for fixing your Linux machine if you ever get locked
+out for some reason, or any time you just need to boot Linux to "edit something
+quickly".
+
+The rescue disk is written out to a 1.44MB formatted floppy disk using a
+version of rawrite, like the other disk images.  You may then use your choice
+of Slackware bootdisks to load it.
+
+Hope this helps someone...  :-)
+

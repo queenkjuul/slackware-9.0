@@ -1,0 +1,11 @@
+xfree86: xfree86 (XFree86 base package)
+xfree86:
+xfree86: This is the base package for XFree86, and provides the required
+xfree86: binaries, shared libraries, and support files (except fonts) to run
+xfree86: X11R6 on Linux.
+xfree86:
+xfree86:
+xfree86:
+xfree86:
+xfree86:
+xfree86:

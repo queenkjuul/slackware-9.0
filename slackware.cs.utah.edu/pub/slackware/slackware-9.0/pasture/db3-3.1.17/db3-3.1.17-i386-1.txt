@@ -1,0 +1,11 @@
+db3: db3 (Berkeley database library version 3)
+db3:
+db3: The Berkeley Database (Berkeley DB) library provides embedded database
+db3: support for both traditional and client/server applications.
+db3:
+db3: This package should be installed if compatibility is needed with
+db3: databases created with the Berkeley DB version 3.
+db3:
+db3: This library used to be part of the glibc package.
+db3:
+db3:

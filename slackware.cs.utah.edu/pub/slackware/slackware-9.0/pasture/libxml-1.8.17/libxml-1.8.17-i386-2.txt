@@ -1,0 +1,11 @@
+libxml: libxml (XML parser library)
+libxml:
+libxml: This is an older version of the XML parser library that supplies
+libxml: libxml.so.1.  This version is still required by many programs, such as
+libxml: xscreensaver-demo and several GNOME apps.
+libxml:
+libxml:
+libxml:
+libxml:
+libxml:
+libxml:

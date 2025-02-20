@@ -1,0 +1,11 @@
+koffice-i18n-xh: koffice-i18n-xh
+koffice-i18n-xh:
+koffice-i18n-xh: Xhosa language support for KOffice.
+koffice-i18n-xh:
+koffice-i18n-xh:
+koffice-i18n-xh:
+koffice-i18n-xh:
+koffice-i18n-xh:
+koffice-i18n-xh:
+koffice-i18n-xh:
+koffice-i18n-xh:

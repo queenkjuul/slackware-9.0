@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/inn</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/inn</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="ckpasswd.diff.gz">ckpasswd.diff.gz</a></td><td align="right">2002-02-27 00:53  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="distributions">distributions</a></td><td align="right">1999-08-20 00:10  </td><td align="right"> 72 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="history">history</a></td><td align="right">2000-09-10 22:56  </td><td align="right">  0 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="history.dir">history.dir</a></td><td align="right">2000-09-10 22:58  </td><td align="right"> 75 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="history.pag">history.pag</a></td><td align="right">2000-09-10 22:58  </td><td align="right">  0 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="inn-2.4.1.tar.bz2">inn-2.4.1.tar.bz2</a></td><td align="right">2004-01-07 22:48  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="inn.build">inn.build</a></td><td align="right">2004-01-14 21:12  </td><td align="right">5.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="newsgroups">newsgroups</a></td><td align="right">1999-08-20 00:10  </td><td align="right">249 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-02-27 00:23  </td><td align="right">777 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

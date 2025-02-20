@@ -1,0 +1,11 @@
+xwrapper: xwrapper (setuid root wrapper for the X server)
+xwrapper:
+xwrapper: As a security measure, the X servers in XFree86 3.3.6 are not setuid
+xwrapper: root.  In order for non-root users to run them, you will need to
+xwrapper: install this package.
+xwrapper:
+xwrapper:
+xwrapper:
+xwrapper:
+xwrapper:
+xwrapper:

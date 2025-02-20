@@ -1,0 +1,11 @@
+pop3d: pop3d (POP3 server)
+pop3d:
+pop3d: This POP3 server was written at the University of California at Davis.
+pop3d: The server implements the minimal POP3 command list, plus some
+pop3d: optional commands.
+pop3d:
+pop3d: POP3, the Post Office Protocol (version 3), is described in RFC1939.
+pop3d: A copy of RFC1939 is included with this distribution.
+pop3d:
+pop3d:
+pop3d:

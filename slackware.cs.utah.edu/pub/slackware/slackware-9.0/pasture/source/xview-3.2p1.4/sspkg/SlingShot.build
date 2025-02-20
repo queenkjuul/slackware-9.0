@@ -1,0 +1,10 @@
+#!/bin/sh
+CWD=`pwd`
+cd /tmp
+tar xzvf $CWD/SlingShot2.1.tar.gz
+cd sspkg2.1
+zcat $CWD/SlingShot2.1.diff.gz | patch -p1 -E
+mkdir -p /usr/doc/packages
+make -f Makefile.Linux
+make -f Makefile.Linux install
+rm -r /usr/doc/packages

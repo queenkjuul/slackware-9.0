@@ -1,0 +1,11 @@
+koffice-i18n-uk: koffice-i18n-uk
+koffice-i18n-uk:
+koffice-i18n-uk: Ukrainian language support for KOffice.
+koffice-i18n-uk:
+koffice-i18n-uk:
+koffice-i18n-uk:
+koffice-i18n-uk:
+koffice-i18n-uk:
+koffice-i18n-uk:
+koffice-i18n-uk:
+koffice-i18n-uk:

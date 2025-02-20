@@ -1,0 +1,11 @@
+x8514: An accelerated server for cards using IBM8514 chips.
+x8514:
+x8514: Installing this package will create a link in /usr/X11R6/bin from
+x8514: XF86_8514 to X, setting this server as the default.
+x8514:
+x8514:
+x8514:
+x8514:
+x8514:
+x8514:
+x8514:

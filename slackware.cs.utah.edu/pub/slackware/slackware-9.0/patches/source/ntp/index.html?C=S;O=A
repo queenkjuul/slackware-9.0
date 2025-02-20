@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/ntp</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/ntp</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ntp.keys">ntp.keys</a></td><td align="right">1999-10-07 19:50  </td><td align="right"> 22 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="ntp.ntpq.security.diff.gz">ntp.ntpq.security.diff.gz</a></td><td align="right">2009-06-03 22:18  </td><td align="right">251 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doinst.sh.gz">doinst.sh.gz</a></td><td align="right">2002-05-20 02:52  </td><td align="right">268 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="ntp.CVE-2009-3563.diff.gz">ntp.CVE-2009-3563.diff.gz</a></td><td align="right">2009-12-09 20:43  </td><td align="right">525 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-02-27 23:02  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/script.gif" alt="[   ]"></td><td><a href="ntp.conf">ntp.conf</a></td><td align="right">2003-03-05 01:55  </td><td align="right">1.6K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ntp.SlackBuild">ntp.SlackBuild</a></td><td align="right">2009-12-09 23:43  </td><td align="right">2.7K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="ntp-manpages-4.2.2.tar.gz">ntp-manpages-4.2.2.tar.gz</a></td><td align="right">2009-12-09 23:28  </td><td align="right"> 38K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="ntp-4.2.2p3.tar.bz2">ntp-4.2.2p3.tar.bz2</a></td><td align="right">2006-08-05 20:35  </td><td align="right">2.1M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

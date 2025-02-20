@@ -1,0 +1,101 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-cups
+
+VERSION=1.1.19
+ARCH=i386
+BUILD=2_slack9.0
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+=================+"
+echo "| cups-$VERSION |"
+echo "+=================+"
+cd $TMP
+tar xjvf $CWD/cups-$VERSION-source.tar.bz2
+cd cups-$VERSION
+
+# The only part of this patch that "fails" is the id tags...
+( cd cups
+  cat $CWD/str2561-cups11v2.patch | patch -p0
+)
+
+./configure --disable-pam
+make
+mkdir -p $PKG/etc/cups
+mkdir -p $PKG/var/spool
+make BUILDROOT=$PKG install
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Fix manpages:
+( cd $PKG/usr/share/man
+  find . -type d -name "cat*" | xargs rm -rf
+  find . -type f -name "*.1" | xargs gzip -9 --force
+  find . -type f -name "*.5" | xargs gzip -9 --force
+  find . -type f -name "*.8" | xargs gzip -9 --force
+)
+( cd $PKG/usr/share/man/man1 ; rm -rf cancel.1 )
+( cd $PKG/usr/share/man/man8 ; rm -rf reject.8 )
+( cd $PKG/usr/share/man/man8 ; rm -rf disable.8 )
+( cd $PKG/usr/share/man ; rm -rf cat? )
+( cd $PKG/usr/share/man ; gzip -9 --force */* )
+( cd $PKG/usr/share/man/man1 ; ln -sf lp.1.gz cancel.1.gz )
+( cd $PKG/usr/share/man/man8 ; ln -sf accept.8.gz reject.8.gz )
+( cd $PKG/usr/share/man/man8 ; ln -sf enable.8.gz disable.8.gz )
+( cd $PKG/usr/share ; mv man .. )
+
+# Adjust for BSD init scripts.  Note that rc.cups will have to be
+# started from somewhere, like rc.M or rc.inet2.
+( cd $PKG/etc/rc.d
+  mv init.d/cups rc.cups
+  rm -r init.d rc?.d )
+
+# Fix ownerships:
+chown root.bin $PKG/usr/bin $PKG/usr/sbin
+( cd $PKG/usr/bin
+  chown root.bin cancel cups-config cupstestppd lp lpoptions lpq lpr lprm lpstat )
+( cd $PKG/usr/sbin
+  chown root.bin * )
+
+# Adjust/expand docs:
+( mkdir -p $PKG/usr/doc
+  mv $PKG/usr/share/doc/cups $PKG/usr/doc/cups-$VERSION
+  cd $PKG/usr/doc
+  ln -sf cups-$VERSION cups )
+
+# Apply no-clobber fix to conffiles:
+( cd $PKG/etc/cups
+  for file in * ; do
+    if [ -f $file ]; then
+      mv $file $file.new
+    fi
+  done )
+
+# Strip stuff:
+( cd $PKG
+find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+find . | xargs file | grep "ELF 32-bit LSB shared object" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null )
+
+# Add the doinst.sh that installs the .new conffiles:
+zcat $CWD/doinst.sh.gz > $PKG/install/doinst.sh
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/cups-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/cups-$VERSION
+  rm -rf $PKG
+fi

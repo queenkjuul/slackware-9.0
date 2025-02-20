@@ -1,0 +1,277 @@
+#!/bin/sh
+#
+# Build and install XFree86-4.3.0 on Slackware Linux.
+#
+
+# *****************************************************
+# **************  GLIDE SUPPORT  **********************
+# *****************************************************
+# If you want to build against Glide, run with $1 = YES
+# See more info below.
+# [more info]:  It seems that as of XFree86 4.3.0 it is no longer
+# necessary to build X with libglide3 in order to support 3dfx DRI.
+# The tdfx_dri.so driver will be built either way, and appears to
+# be the same.  Instead of being linked with libglide, it does
+# runtime library discovery which also allows it to find versions
+# of glide for all the various 3dfx cards instead of just the most
+# common ones that we were including in previous builds.
+#
+# Just in case, we'll leave most of the glide cruft in place.
+GLIDE=$1
+
+if [ "$GLIDE" = "YES" ]; then
+  echo "*** building X with Glide support ***"
+  sleep 2
+else
+  echo "*** building X without Glide support ***"
+  sleep 2
+fi
+
+CWD=`pwd`
+cd /tmp
+for file in $CWD/X430*.tar.bz2 ; do
+  tar xjvf $file
+done
+
+cd xc
+chown -R root.root .
+zcat $CWD/xf86site.def.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/site.def.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/Xlib.h.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/xclock.glibc.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/linux.cf.zlib.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+
+# Video hang bug:
+zcat $CWD/libXi.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+
+# Font server overflows.  I'm sure you thought the X font server code was entirely
+# free of these.  Well, this will fix all of them for sure!
+zcat $CWD/fs.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+
+# Guess not... here's are some more font related overflow fixes:
+zcat $CWD/fontfile.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+
+# Savage driver update:
+( cd /tmp/xc/programs/Xserver/hw/xfree86/drivers
+  rm -rf savage
+  unzip $CWD/savage/savage-1.1.27t.zip
+)
+# Related savage patches:
+# This one is needed to fix the Imakefile as XFree86 4.3.0 moved the vbe
+# source directory
+zcat $CWD/savage/XFree86-4.2.99.902-savage-Imakefile-vbe-fixup.patch.gz | patch -p1 --verbose
+# These 2 (282,283) are ports of XFree86 differences between 1.1.26t and 1.1.26
+# in XFree86 4.3.0 forward ported to 1.1.27t which we're using
+zcat $CWD/savage/XFree86-4.2.99.902-savage-1.1.26cvs-1.1.27t-fixups.patch.gz | patch -p1 --verbose
+zcat $CWD/savage/XFree86-4.2.99.902-savage-1.1.26cvs-1.1.27t-accel-fixup.patch.gz | patch -p1 --verbose
+# This one backs out a change which XFree86 CVS broke the driver with on
+# Dec 16, 2002.  This change has been reverted in stock 4.3.0 sources already.
+zcat $CWD/savage/XFree86-4.2.99.902-savage-revert-vbe-change-from-X-cvs.patch.gz | patch -p1 --verbose
+
+# Set various compile defaults:
+cat << EOF > config/cf/host.def 
+#define FSUseSyslog            YES
+#define HasPam                 NO
+#define UseUtempter            YES
+#define HasTk                  YES
+#define TkLibDir               /usr/lib
+#define TkIncDir               /usr/include
+#define TkLibName              tk8.4
+#define XF86SetupUsesStaticTk  NO
+#define HasTcl                 YES
+#define TclLibDir              /usr/lib
+#define TclIncDir              /usr/include
+#define TclLibName             tcl8.4
+#define XF86SetupUsesStaticTcl NO
+#define HasZlib                YES
+#define SharedLibGlu           YES
+/* It's best to build freetype2 ourselves first... */
+/* We use the XFree86 provided version though, which is closely matched to */
+/* their other sources.  Trust me on that.  */
+#define HasFreetype2           YES
+/* We also use our own expat (mostly because the XFree86 uses the wrong version number) */
+#define HasExpat               YES
+/* We will allow XFree86 to "take over" fontconfig and Xft2, since those are */
+/* official XFree86 projects. */
+/* #define HasFontconfig          YES */
+/* #define HasGlide3              YES */
+/* #define Glide3IncDir           /usr/include/glide3 */
+EOF
+
+if [ "$GLIDE" = "YES" ]; then
+  # This edits xf86site.def to add HasGlide3.  You'll need to install the a DRI capable
+  # version of Glide for your video card class (voodoo3/banshee, or voodoo4/5), then the
+  # tdfx DRI module will be built for that card.
+  zcat $CWD/glide.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+fi
+
+# pkgconfig doesn't know where to put this stuff:
+mkdir -p /usr/X11R6/lib
+( cd /usr/X11R6/lib
+  ln -sf /usr/lib/pkgconfig .
+)
+
+# It's VERY important to build freetype2 ourselves (or some functions are left out),
+# but also to use the XFree86 supplied sources.
+# Step one is to remove existing freetype2 cruft:
+rm -rf /usr/include/freetype2 \
+       /usr/X11R6/include/freetype2 \
+       /usr/lib/libfreetype.* \
+       /usr/X11R6/lib/libfreetype.*
+# It seems prudent to move this into /usr rather than /usr/X11R6, as *many* source bits
+# won't find ft2build.h in /usr/X11R6/include without some patching.
+# Therefore, --prefix=/usr must be the ad-hoc standard.  Another
+# rationale:  /usr is also the prefix for freetype1 (for as long as that sticks around),
+# and putting them in different prefixes causes problems.  Also, we're bumping the -march
+# from i386 to i486, as I can't imagine too many people are running the latest Slackware
+# with X on a 386 in the year 2002.  If there are, maybe they can get away with running an
+# earlier version of X.  :-) 
+( cd extras/freetype2
+  CFLAGS="-O2 -march=i486 -mcpu=i686" make setup CFG="--prefix=/usr i486-slackware-linux"
+  make -j4
+  make install
+)
+ldconfig
+# This shouldn't be needed (apps should pick up -I/usr/include/freetype2 from
+# `freetype-config --cflags` while compiling), but it's so often reported as a bug that
+# I'll give in to the point.  Now that Freetype1 is pretty much gone having this link
+# shouldn't hurt anything.  Try not to rely on it, though.
+( cd /usr/include
+  rm -rf freetype
+  ln -sf freetype2/freetype .
+)
+
+# Build and install XFree86:
+make World -j4 -i CDEBUGFLAGS="-O2 -march=i486 -mcpu=i686"
+make install
+ldconfig
+make install.man
+
+# Just to be on the safe side, we should provide Compose files where
+# they are missing, as it's been known to cause a crash.
+for dir in /usr/X11/lib/X11/locale/* ; do
+  if [ -d $dir ]; then
+    if [ -r $dir/XI18N_OBJS -o -r $dir/XLC_LOCALE ]; then
+      if [ ! -r $dir/Compose ]; then
+        NAME=`basename $dir`
+        CAPN=`echo $NAME | tr [a-z] [A-Z]`
+        cat << EOF > $dir/Compose
+#
+# $CAPN Compose Sequence
+#
+# Sequence Definition
+#
+# \$XFree86: xc/nls/Compose/$NAME,v 1.2 `date` volkerdi Exp $
+#
+# This file currently has no entries.  It appears that a compose file (even
+# just an empty one) is required for the appropriate keysyms to work for
+# this encoding.
+#
+# <Multi_key> Means <Compose>
+# Special Character
+
+# End of Sequence Definition
+EOF
+      fi
+    fi
+  fi
+done
+
+#mkdir -p /usr/X11R6/lib/fonts/CID
+#if [ ! -r /usr/X11R6/lib/fonts/CID/fonts.dir ]; then
+#  echo 0 > /usr/X11R6/lib/fonts/CID/fonts.dir
+#fi
+#if [ ! -r /usr/X11R6/lib/fonts/CID/fonts.scale ]; then
+#  echo 0 > /usr/X11R6/lib/fonts/CID/fonts.scale
+#fi
+
+mkdir -p /usr/X11R6/lib/X11/fonts/misc
+cat $CWD/linux8x16.pcf.gz > /usr/X11R6/lib/X11/fonts/misc/linux8x16.pcf.gz
+cat $CWD/linux8x8.pcf.gz > /usr/X11R6/lib/X11/fonts/misc/linux8x8.pcf.gz
+
+rm -f /usr/X11R6/lib/X11/config/host.def
+
+cat $CWD/xinit/README.Xmodmap > /etc/X11/xinit/README.Xmodmap
+cat $CWD/xinit/.Xmodmap > /etc/X11/xinit/.Xmodmap
+
+cp -a /etc/X11/xdm/Xsession /etc/X11/xdm/Xsession.orig
+cp -a /etc/X11/xdm/Xsetup_0 /etc/X11/xdm/Xsetup_0.orig
+cat $CWD/xdm/Xsession > /etc/X11/xdm/Xsession
+cat $CWD/xdm/Xsetup_0 > /etc/X11/xdm/Xsetup_0
+cat $CWD/xdm/Xsession.orig > /etc/X11/xdm/Xsession.orig
+cat $CWD/xdm/Xsetup_0.orig > /etc/X11/xdm/Xsetup_0.orig
+# Treat some of these as config files:
+mv /etc/X11/xdm/Xsession /etc/X11/xdm/Xsession.new
+mv /etc/X11/xdm/xdm-config /etc/X11/xdm/xdm-config.new
+mv /etc/X11/xdm/Xservers /etc/X11/xdm/Xservers.new
+rm -rf /install
+mkdir /install
+zcat $CWD/doinst.sh.gz > /install/doinst.sh
+
+if [ "$GLIDE" = "YES" ]; then
+  cat $CWD/README.tdfx > /usr/X11R6/lib/modules/dri/README.tdfx
+fi
+
+rm -f /usr/X11R6/lib/libz.a
+
+( cd /usr/X11R6/lib/X11/fonts/misc
+  mkfontdir -e /usr/X11R6/lib/X11/fonts/encodings -e /usr/X11R6/lib/X11/fonts/encodings/large .
+)
+
+( cd /etc/X11/xdm
+  rm authdir
+  ln -sf ../../../var/lib/xdm authdir
+)
+( cd /etc/X11/xkb
+  rm compiled
+  ln -sf ../../../var/lib/xkb compiled
+)
+mv /etc/X11/xinit/xinitrc /etc/X11/xinit/xinitrc.twm
+mkdir -p /var/log/setup
+cat $CWD/setup.05.fontconfig > /var/log/setup/setup.05.fontconfig
+chmod 755 /var/log/setup/setup.05.fontconfig
+
+cat $CWD/xfree86-devel/doinst.sh > /install/doinst.sh.devel
+cp $CWD/slack-desc/slack-desc.* /install
+
+cat << EOF >> /install/doinst.sh.fonts
+#!/bin/sh
+# Update the X font indexes:
+if [ -x /usr/X11R6/bin/fc-cache ]; then
+  /usr/X11R6/bin/fc-cache -f
+fi
+# else we'll catch it later with setup.fontconfig :-)
+# make links:
+EOF
+
+# A tool for configuring S3 Savage cards:
+cd $TMP
+rm -rf s3switch
+mkdir s3switch
+cd s3switch
+unzip $CWD/savage/s3ssrc.zip
+make
+strip s3switch
+cat s3switch > /usr/X11R6/bin/s3switch
+chmod 755 /usr/X11R6/bin/s3switch
+chown root.bin /usr/X11R6/bin/s3switch
+cat s3switch.1x | gzip -9c > /usr/X11R6/man/man1/s3switch.1x.gz
+
+# Replace freetype2:
+cd $CWD
+./freetype2.build
+
+# Replace fontconfig:
+cd $CWD
+./fontconfig.build
+
+# crud removal:
+rm -rf /usr/X11R6/share/doc
+# We don't ship fonts.cache-1 files, we create them later.
+find /usr -type f -name fonts.cache-1 -exec rm {} \;
+
+cat << EOF
+
+Slackware X build complete!
+
+EOF

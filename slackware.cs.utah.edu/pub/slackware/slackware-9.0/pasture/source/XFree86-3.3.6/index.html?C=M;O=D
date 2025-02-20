@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/pasture/source/XFree86-3.3.6</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/pasture/source/XFree86-3.3.6</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/pasture/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="xprog/">xprog/</a></td><td align="right">2001-02-12 23:26  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="XFree86-3.3.6.build">XFree86-3.3.6.build</a></td><td align="right">2000-09-24 19:13  </td><td align="right">939 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-08-s3savage_ix+mx.gz">fix-08-s3savage_ix+mx.gz</a></td><td align="right">2000-07-21 18:05  </td><td align="right"> 16K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-07-s3trio64v2gx+netfinity.gz">fix-07-s3trio64v2gx+netfinity.gz</a></td><td align="right">2000-07-21 18:05  </td><td align="right">1.9K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-06-s3trio3d2x.gz">fix-06-s3trio3d2x.gz</a></td><td align="right">2000-06-13 14:35  </td><td align="right">335 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-05-s3trio3d.gz">fix-05-s3trio3d.gz</a></td><td align="right">2000-05-31 11:06  </td><td align="right">719 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-04-s3trio3d2x.gz">fix-04-s3trio3d2x.gz</a></td><td align="right">2000-05-31 11:06  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-03-mmap.gz">fix-03-mmap.gz</a></td><td align="right">2000-02-12 03:21  </td><td align="right">573 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-02-svr4.gz">fix-02-svr4.gz</a></td><td align="right">2000-02-09 14:35  </td><td align="right">689 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fix-01-r128.gz">fix-01-r128.gz</a></td><td align="right">2000-02-07 12:55  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doctools-1.1.1.tgz">doctools-1.1.1.tgz</a></td><td align="right">2000-01-18 07:18  </td><td align="right">1.3M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="X336src-1.tar.bz2">X336src-1.tar.bz2</a></td><td align="right">2000-01-09 08:33  </td><td align="right"> 13M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="X336src-3.tar.bz2">X336src-3.tar.bz2</a></td><td align="right">2000-01-09 05:33  </td><td align="right"> 12M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="X336src-2.tar.bz2">X336src-2.tar.bz2</a></td><td align="right">2000-01-09 05:25  </td><td align="right"> 11M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doctools-1.1.tgz">doctools-1.1.tgz</a></td><td align="right">2000-01-09 05:09  </td><td align="right">1.2M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="X336contrib.tar.bz2">X336contrib.tar.bz2</a></td><td align="right">2000-01-09 05:07  </td><td align="right">186K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="xcfg/">xcfg/</a></td><td align="right">1999-10-04 01:41  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xf86site.def.diff.gz">xf86site.def.diff.gz</a></td><td align="right">1999-09-21 23:45  </td><td align="right">891 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86.cf.diff.gz">xfree86.cf.diff.gz</a></td><td align="right">1999-09-21 23:43  </td><td align="right">172 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="XTerm.diff.gz">XTerm.diff.gz</a></td><td align="right">1999-09-07 19:23  </td><td align="right">233 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="Xlib.h.diff.gz">Xlib.h.diff.gz</a></td><td align="right">1999-09-02 23:17  </td><td align="right">218 </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="xinit/">xinit/</a></td><td align="right">1999-08-24 23:20  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="site.def.diff.gz">site.def.diff.gz</a></td><td align="right">1999-06-27 03:00  </td><td align="right">306 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

@@ -1,0 +1,11 @@
+koffice-i18n-af: koffice-i18n-af
+koffice-i18n-af:
+koffice-i18n-af: Afrikaans language support for KOffice.
+koffice-i18n-af:
+koffice-i18n-af:
+koffice-i18n-af:
+koffice-i18n-af:
+koffice-i18n-af:
+koffice-i18n-af:
+koffice-i18n-af:
+koffice-i18n-af:

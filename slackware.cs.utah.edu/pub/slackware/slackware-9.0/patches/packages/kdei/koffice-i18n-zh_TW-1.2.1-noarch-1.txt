@@ -1,0 +1,11 @@
+koffice-i18n-zh_TW: koffice-i18n-zh_TW
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW: Chinese language support for KOffice.
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW:

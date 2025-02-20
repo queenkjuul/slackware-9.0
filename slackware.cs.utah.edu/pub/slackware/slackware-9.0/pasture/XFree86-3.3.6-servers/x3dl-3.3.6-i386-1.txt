@@ -1,0 +1,11 @@
+x3dl: An accelerated server for 3DLabs chipsets.
+x3dl:
+x3dl: This server supports the GLINT 500TX with IBM RGB526 RAMDAC,
+x3dl: GLINT MX with IBM RGB526 and IBM RGB640 RAMDAC,
+x3dl: Permedia with IBM RGB526 RAMDAC,
+x3dl: Permedia 2 (classic, 2a, 2v).
+x3dl:
+x3dl: Installing this package will create a link in /usr/X11R6/bin from
+x3dl: XF86_3DLabs to X, setting this server as the default.
+x3dl:
+x3dl:

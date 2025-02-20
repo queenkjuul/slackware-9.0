@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/kernels</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/kernels</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="zipslack.s/">zipslack.s/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="xfs.i/">xfs.i/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="speakup.i/">speakup.i/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="scsi2.s/">scsi2.s/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="scsi.s/">scsi.s/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="raid.s/">raid.s/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="pportide.i/">pportide.i/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="old_cd.i/">old_cd.i/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="makedisk">makedisk</a></td><td align="right">2003-03-06 07:12  </td><td align="right">5.4K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="make-all-bootdisks">make-all-bootdisks</a></td><td align="right">2002-03-23 08:00  </td><td align="right">389 </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="lowmem.i/">lowmem.i/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="loadlin16c.zip">loadlin16c.zip</a></td><td align="right">2002-04-17 04:20  </td><td align="right"> 96K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="loadlin16c.txt">loadlin16c.txt</a></td><td align="right">2002-04-17 04:21  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="jfs.s/">jfs.s/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="ibmmca.s/">ibmmca.s/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="compile_kern.sh">compile_kern.sh</a></td><td align="right">2004-06-15 05:25  </td><td align="right">2.3K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="bare.i/">bare.i/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="ataraid.i/">ataraid.i/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="adaptec.s/">adaptec.s/</a></td><td align="right">2004-06-15 07:00  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="VERSIONS.TXT">VERSIONS.TXT</a></td><td align="right">2003-06-17 21:37  </td><td align="right"> 43 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="README.TXT">README.TXT</a></td><td align="right">2003-02-23 04:15  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="1440k.img.gz">1440k.img.gz</a></td><td align="right">2002-05-31 02:32  </td><td align="right">2.0K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

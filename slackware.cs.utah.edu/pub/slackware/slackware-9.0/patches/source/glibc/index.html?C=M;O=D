@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/glibc</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/glibc</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glibc.SlackBuild">glibc.SlackBuild</a></td><td align="right">2003-05-21 01:26  </td><td align="right">8.2K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-xdrmemsecurity.diff.gz">glibc-xdrmemsecurity.diff.gz</a></td><td align="right">2003-04-15 13:48  </td><td align="right">1.6K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-2.3.1-dl-runtime.diff.gz">glibc-2.3.1-dl-runtime.diff.gz</a></td><td align="right">2003-03-04 20:32  </td><td align="right">334 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="timezone-scripts.tar.gz">timezone-scripts.tar.gz</a></td><td align="right">2003-02-16 21:18  </td><td align="right">9.7K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="doinst.sh-glibc-solibs">doinst.sh-glibc-solibs</a></td><td align="right">2002-11-19 21:59  </td><td align="right">3.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="doinst.sh-glibc">doinst.sh-glibc</a></td><td align="right">2002-11-19 21:59  </td><td align="right">6.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-2.3.1-stack_end-compat.patch.gz">glibc-2.3.1-stack_end-compat.patch.gz</a></td><td align="right">2002-11-18 22:58  </td><td align="right">445 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-2.3.1-prelinkfix.patch.gz">glibc-2.3.1-prelinkfix.patch.gz</a></td><td align="right">2002-11-18 22:58  </td><td align="right">1.8K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-2.3.1-libc_wait-compat.patch.gz">glibc-2.3.1-libc_wait-compat.patch.gz</a></td><td align="right">2002-11-18 22:58  </td><td align="right">505 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="glibc-2.3.1-ctype-compat-v2.patch.gz">glibc-2.3.1-ctype-compat-v2.patch.gz</a></td><td align="right">2002-11-18 22:58  </td><td align="right">508 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc-profile">slack-desc.glibc-profile</a></td><td align="right">2002-10-12 04:24  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc-debug">slack-desc.glibc-debug</a></td><td align="right">2002-10-12 04:15  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc">slack-desc.glibc</a></td><td align="right">2002-10-11 19:15  </td><td align="right">845 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glibc-linuxthreads-2.3.1.tar.bz2">glibc-linuxthreads-2.3.1.tar.bz2</a></td><td align="right">2002-10-11 12:20  </td><td align="right">180K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glibc-2.3.1.tar.bz2">glibc-2.3.1.tar.bz2</a></td><td align="right">2002-10-11 12:16  </td><td align="right"> 13M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc-i18n">slack-desc.glibc-i18n</a></td><td align="right">2002-05-01 00:01  </td><td align="right">794 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc-zoneinfo">slack-desc.glibc-zoneinfo</a></td><td align="right">2002-03-23 23:26  </td><td align="right">968 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc-solibs">slack-desc.glibc-solibs</a></td><td align="right">2002-03-23 23:26  </td><td align="right">786 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="doinst.sh-glibc-zoneinfo">doinst.sh-glibc-zoneinfo</a></td><td align="right">2002-01-15 02:00  </td><td align="right">574 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

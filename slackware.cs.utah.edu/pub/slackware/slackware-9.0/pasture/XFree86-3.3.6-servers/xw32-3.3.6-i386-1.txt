@@ -1,0 +1,11 @@
+xw32: A server for chipsets in the ET4000/W32 series.
+xw32:
+xw32: This server currently supports the w32, w32i, w32p and et6000 chips.
+xw32: XF86_W32 gets phased out, now that the SVGA server with XAA 
+xw32: acceleration is at least as fast as the W32 server but supports more
+xw32: cards and higher color depths.  Use this server if the SVGA server
+xw32: fails to work/accelerate for you.
+xw32:
+xw32: Installing this package will create a link in /usr/X11R6/bin from
+xw32: XF86_W32 to X, setting this server as the default.
+xw32:

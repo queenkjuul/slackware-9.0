@@ -1,0 +1,213 @@
+
+Welcome to the ZipSlack(tm) 9.0 UMSDOS Linux installation.
+
+This is a great way to install an up-to-date Slackware Linux system on a DOS
+partition.  It'll use about 90 megabytes of drive space, which means you can
+install this on a Zip disk.  (more space will be used if your drive uses large
+clusters, i.e. a one or more gigabyte pre-FAT32 DOS partition)  It'll probably
+work with LS120 and all the other Zip-imitators as well (but I haven't tried it
+myself, as I'm pretty loyal to Iomega :^) and, it can also be installed to any
+DOS partition (including FAT32) as a quick and easy way to get a nicely loaded
+base Linux system up and running without having to repartition a hard drive.
+
+This system includes:
+
+       2.4.20 Linux kernel, with support for many SCSI controllers.
+       Includes parallel port Zip support.
+
+       An easy to configure PPP setup script (pppsetup), network setup script
+       (netconfig), and a nice collection of network applications like mail,
+       links, ssh, and more.
+
+       Slackware 'setup', 'installpkg', 'rpm2targz', and other tools to let you
+       customize the system and add additional software that the ZipSlack
+       installation doesn't add by default for space considerations (like X).
+
+       Extra applications and utilities: 
+ 
+          -- bash shell.
+          -- A large set of kernel modules
+          -- Midnight Commander file manager
+          -- "Links" text based web browser
+          -- Many networking related tools like lftp, nmap, nc, rsync, ssh,
+             traceroute, wget, and more
+
+       Here's the list of packages ZipSlack installs:
+
+aaa_base-9.0.0-noarch-1 apmd-3.0.2-i386-1 bash-2.05b-i386-2 bin-8.5.0-i386-1
+bsd-games-2.13-i386-5 bzip2-1.0.2-i386-4 cpio-2.5-i386-1 cxxlibs-5.0.2-i386-1
+dcron-2.3.3-i386-4 devs-2.3.1-i386-13 dhcpcd-1.3.22pl4-i386-1
+diffutils-2.8.1-i386-1 e2fsprogs-1.32-i386-2 elflibs-9.0.3-i386-1
+elvis-2.1_4-i386-1 etc-5.0-noarch-11 fileutils-4.1-i386-2 findutils-4.1.7-i386-1
+floppy-5.4-i386-3 gawk-3.1.1-i386-2 gettext-0.11.5-i386-1
+glibc-solibs-2.3.1-i386-3 glibc-zoneinfo-2.3.1-noarch-2 gpm-1.19.6-i386-5
+grep-2.5-i386-2 groff-1.17.2-i386-3 gzip-1.3.3-i386-2 hdparm-5.3-i386-1
+hotplug-2002_08_26-noarch-5 inetd-1.79s-i386-1 infozip-5.50-i386-1
+isapnptools-1.26-i386-1 kbd-1.08-i386-2 kernel-modules-2.4.20-i486-5
+less-381-i386-1 lftp-2.6.5-i386-1 lilo-22.4.1-i386-2 links-0.98-i386-2
+logrotate-3.6.3-i386-1 man-1.5k-i386-1 man-pages-1.55-noarch-1 mc-4.6.0-i386-1
+minicom-2.00.0-i386-1 modutils-2.4.22-i386-1 mpg123-0.59r-i386-1
+nail-10.4-i386-1 nc-1.10-i386-1 nmap-3.00-i386-1 openssh-3.5p1-i386-2
+openssl-solibs-0.9.7a-i386-1 pciutils-2.1.11-i386-4 pcmcia-cs-3.2.4-i386-1
+pidentd-3.0.16-i386-1 pkgtools-8.9.1-i386-3 ppp-2.4.1-i386-2 procps-3.1.6-i386-1
+rp-pppoe-3.5-i386-1 rsync-2.5.6-i386-1 screen-3.9.13-i386-1 sed-4.0.5-i386-2
+sh-utils-2.0-i386-1 shadow-4.0.3-i386-6 slocate-2.7-i386-1
+smartmontools-5.1_7-i386-1 sox-12.17.3-i386-2 sysklogd-1.4.1-i386-6
+syslinux-2.01-i386-1 sysvinit-2.84-i386-25 tar-1.13.25-i386-1
+tcpdump-3.7.2-i386-1 tcpip-0.17-i386-16 textutils-2.0-i386-1
+traceroute-1.4a12-i386-2 umsdos-progs-1.13-i386-1 usbutils-0.11-i386-1
+util-linux-2.11z-i386-1 wget-1.8.2-i386-2 workbone-2.40-i386-3 ytalk-3.1.1-i386-1
+
+
+INSTALLATION:
+
+To install Slackware using ZipSlack, all you need to do is unzip the file
+ZIPSLACK.ZIP on the DOS partition where you want Linux installed.  To do this,
+you'll need an unzip utility.  If you don't already have an unzipper such as
+PKZIP for DOS or Windows, http://www.pkware.com is a great place to get one.
+
+Here's how you'd install on a Zip disk on drive D:\ -- first, fire up Win95 and
+start PKZIP for Windows.  
+
+Then, from the "File" menu, select the "Open..." option.  In the dialog box,
+browse for and select the file ZIPSLACK.ZIP.
+
+If you're planning to put this on a Zip disk, make sure it's in your machine,
+formatted, and ready to go. 
+
+Next, you need to extract the files to a DOS partition.  From the "Extract" 
+menu, select the "Extract Files..." choice.  In the "Extract" box, make sure
+the "all files" choice is selected.  In the "Extract to:" box, make sure the
+"Disk" choice is selected.  In the text box next to "Disk", you'll need to
+fill in the path to where you want to extract the files.  (They'll be extracted
+into a \linux subdirectory)  For example, if your Zip drive is D:\ and that's
+where you want to install, then you'll want to put D:\ in the box.  Otherwise,
+fill in any DOS drive with enough free space to install.  When you've got
+everything filled in correctly, hit the "Extract" button to extract the files.
+
+Be sure to unzip zipslack.zip at the top of whatever partition you choose 
+(the \ directory in DOS/Windows).  It will create a \LINUX directory there.
+If you try to unzip it in a subdirectory or folder, it will not boot correctly.
+
+
+BOOTING THE LINUX SYSTEM
+
+There are probably countless ways to boot this system once you've unzipped it.
+Here, I'll cover two.
+
+Loadlin
+-------
+
+Loadlin is a DOS program designed to load the Linux kernel and boot it.  In the
+\linux directory, you'll find these files:
+
+LOADLIN.EXE:  The loadlin loader executable.
+LINUX.BAT:    A simple DOS batch file to boot Linux using LOADLIN.EXE.
+vmlinuz:      A Linux kernel with support for SCSI and IDE devices.
+
+You can use the provided vmlinuz kernel (a generic kernel with support for many
+devices that will work for most machines), or you can use another Linux kernel
+of your choosing by copying it to \linux\vmlinuz over the existing file.
+Slackware includes a large collection of precompiled kernels in its \kernels
+directory, any of which will work.
+
+To boot the system, you'll need to edit the LINUX.BAT file, and make sure the
+root=/dev/XXXX statement on the loadlin line (the one that's not commented out
+with 'rem') is set up to use the partition where you unzipped ZIPSLACK.ZIP, 
+such as /dev/sda4.  If you're not sure which partition to use, just go ahead
+and guess.  If you get it wrong, you'll still be able to use scrollback
+(right shift key and PageUp) when the kernel halts to go back and look at your
+partitions, noting the names Linux gives them.  With this information, you
+should be able to edit the LINUX.BAT correctly.
+
+Once LINUX.BAT is edited, you can try to boot the system by entering LINUX on
+a prompt while in the \linux directory.  IMPORTANT:  You'll need to be in 
+DOS mode for the boot to work.  A DOS prompt running under Windows95 will not
+work!  What you need to do if you use Windows95 is shut the machine down,
+selecting the "Restart in MS-DOS mode" selection.  Then, you'll be able to use
+Loadlin.  I've also had great success booting with a "Startup disk" made from
+Win95 (Add/Remove Programs in Control Panel, and then "Startup disk" tab) and
+then switching into the \linux directory on the target drive and running 
+LINUX.BAT.
+
+If it doesn't work, the problem could be DOS memory management -- I had to run
+both HIMEM.SYS and EMM386.EXE to get LOADLIN to load a large kernel, but it
+also worked fine with no memory management.  I ran into problems when I tried
+to run _just_ HIMEM.SYS.
+
+You can also run LOADLIN directly.  Here is a sample boot command to boot Linux
+on /dev/sda4 in read-write mode using the kernel file vmlinuz:
+
+loadlin vmlinuz root=/dev/sda4 rw
+
+Using a boot floppy
+-------------------
+
+The other way you can boot the system is by using a boot floppy.  There's
+one provided (bootdisk.img) that uses the generic kernel, or you can use any
+of the bootdisks included with Slackware.  
+
+To write the image to a floppy disk, use the RAWRITE.EXE program:
+
+rawrite bootdisk.img a:
+
+To boot a Linux system in read-write mode on /dev/sda4, boot the bootdisk.  On
+the 'boot:' prompt, you'd enter this command:
+
+  mount root=/dev/sda4 rw
+
+
+CONFIGURING THE SYSTEM
+
+Once you've booted the system, log in as 'root'.  One of the first things you
+should do is add a root password with the 'passwd' command.  Then, (if you want
+some things like 'df' to work) you'll need to edit /etc/fstab to fix the entry
+for your root partition.  Seasoned UNIX veterans will probably use 'vi' for
+this, otherwise 'mcedit' is another option.
+
+If you're on an ethernet connected to the Internet, you can run 'netconfig' to
+configure your network access.  You may also need to edit /etc/rc.d/rc.modules
+to load a kernel module that supports your ethernet card.
+
+If you use PPP to connect to the Internet, you can configure your PPP
+connection using 'pppsetup'.
+
+
+COMPILING AND DEVELOPING SOFTWARE
+
+Past versions of ZipSlack have also included development tools such as binutils,
+gcc, make, and perl, but these things are now too large to include by default.
+Luckily, it's still easy to add them if you have enough space to install them.
+To add a complete development system you'll need to install the packages from the
+Slackware D (development) and L (libraries) series using the installpkg package
+utility.  For example, if you've mounted a Slackware CD on /mnt/cdrom:
+
+cd /mnt/cdrom/slackware
+installpkg d/*.tgz l/*.tgz
+
+Note that this will add more than 300MB of software, so you'd better have the space
+for it!  If you're looking to add a more modest development environment for C and
+C++, you'll need at least these packages for good results:
+
+d/binutils d/gcc d/gcc-g++ d/kernel-headers d/make l/glibc
+
+This will require around 125MB of additional space.  
+
+Note that the entire ZipSlack system may be extended using Slackware packages, and
+you may even use installpkg to install all of them on top of a basic ZipSlack
+system in order to get a fully complete Linux system with X, KDE, and GNOME.
+
+==============
+
+I hope this system makes it easier to get Linux up and running.  At around 40
+megabytes (or so) most people can download this package in just a few hours.
+If you like the ZipSlack installation, let me know so that I'll know that people
+are interested in seeing continued support for it.  And, if you find any 
+problems with it, let me know about them.
+
+Have fun!
+
+---
+Patrick Volkerding
+volkerdi@slackware.com
+

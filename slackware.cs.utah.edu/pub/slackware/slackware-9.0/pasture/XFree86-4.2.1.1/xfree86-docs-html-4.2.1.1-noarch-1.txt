@@ -1,0 +1,11 @@
+xfree86-docs-html: xfree86-docs-html (HTML documentation for XFree86)
+xfree86-docs-html:
+xfree86-docs-html: Documentation and release notes for XFree86 (in HTML format) that you
+xfree86-docs-html: can find in /usr/X11R6/lib/X11/doc/html/.
+xfree86-docs-html:
+xfree86-docs-html:
+xfree86-docs-html:
+xfree86-docs-html:
+xfree86-docs-html:
+xfree86-docs-html:
+xfree86-docs-html:

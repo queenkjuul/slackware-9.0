@@ -1,0 +1,49 @@
+#!/bin/sh
+# Build XView for Slackware
+CWD=`pwd`
+cd /tmp
+mkdir -p /usr/openwin/man /usr/openwin/bin /usr/openwin/lib
+tar xzvf $CWD/xview-3.2p1.4.src.tar.gz
+cd xview-3.2p1.4
+tar xzvf $CWD/clients.tar.gz
+zcat $CWD/xview-3.2p1.4.diff.gz | patch -p1 -E
+make -f Makefile.Linux compile
+make -f Makefile.Linux install
+installpkg $CWD/examples.tgz
+cat $CWD/xinitrc.openwin > /etc/X11/xinit/xinitrc.openwin
+chmod 755 /etc/X11/xinit/xinitrc.openwin
+mv /usr/X11R6/bin/xcenter /usr/openwin/bin/xcenter
+mv /usr/openwin/bin/clock /usr/openwin/bin/xvclock
+mv /usr/openwin/bin/msgfmt /usr/openwin/bin/xvmsgfmt
+mv /usr/openwin/man/man1/clock.1x /usr/openwin/man/man1/xvclock.1x
+mv /usr/openwin/man/man1/msgfmt.1 /usr/openwin/man/man1/xvmsgfmt.1
+gzip -9 --force /usr/openwin/man/man1/*
+mkdir -p /usr/doc/xview-3.2p1.4
+cp -a LEGAL_NOTICE README README.LinuxELF README.X11R6 UNPACKING \
+  /usr/doc/xview-3.2p1.4
+chown root.root /usr/doc/xview-3.2p1.4/*
+( cd /usr/doc/xview-3.2p1.4 ; ln -sf /usr/openwin/share/doc/xview . )
+# Manpage cat links:
+( cd usr/openwin/man ; rm -rf cat1 )
+( cd usr/openwin/man ; ln -sf /var/man/cat1 cat1 )
+( cd usr/openwin/man ; rm -rf cat2 )
+( cd usr/openwin/man ; ln -sf /var/man/cat2 cat2 )
+( cd usr/openwin/man ; rm -rf cat3 )
+( cd usr/openwin/man ; ln -sf /var/man/cat3 cat3 )
+( cd usr/openwin/man ; rm -rf cat4 )
+( cd usr/openwin/man ; ln -sf /var/man/cat4 cat4 )
+( cd usr/openwin/man ; rm -rf cat5 )
+( cd usr/openwin/man ; ln -sf /var/man/cat5 cat5 )
+( cd usr/openwin/man ; rm -rf cat6 )
+( cd usr/openwin/man ; ln -sf /var/man/cat6 cat6 )
+( cd usr/openwin/man ; rm -rf cat7 )
+( cd usr/openwin/man ; ln -sf /var/man/cat7 cat7 )
+( cd usr/openwin/man ; rm -rf cat8 )
+( cd usr/openwin/man ; ln -sf /var/man/cat8 cat8 )
+( cd usr/openwin/man ; rm -rf cat9 )
+( cd usr/openwin/man ; ln -sf /var/man/cat9 cat9 )
+( cd usr/openwin/man ; rm -rf catn )
+( cd usr/openwin/man ; ln -sf /var/man/catn catn )
+# Install script:
+mkdir -p /install
+cat $CWD/doinst.sh > /install/doinst.sh

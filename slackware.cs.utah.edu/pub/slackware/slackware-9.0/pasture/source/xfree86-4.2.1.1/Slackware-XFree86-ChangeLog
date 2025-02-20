@@ -1,0 +1,5 @@
+Strip and chown root.bin /usr/X11R6/bin/ (taking care not to remove setuid
+bit from XFree86, xterm, and xload)
+Add .Xmodmap and README.Xmodmap to /etc/X11/xinit/.
+# done by the build script:
+Edit Xlib.h to #include <stddef.h>

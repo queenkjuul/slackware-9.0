@@ -1,0 +1,11 @@
+koffice-i18n-hu: koffice-i18n-hu
+koffice-i18n-hu:
+koffice-i18n-hu: Hungarian language support for KOffice.
+koffice-i18n-hu:
+koffice-i18n-hu:
+koffice-i18n-hu:
+koffice-i18n-hu:
+koffice-i18n-hu:
+koffice-i18n-hu:
+koffice-i18n-hu:
+koffice-i18n-hu:

@@ -1,0 +1,11 @@
+xvol32: Binaries for xview3.2p1-X11R6.LinuxELF.4
+xvol32:
+xvol32: Configuration files, programs, and documentation for xview3.2p1-X11R6.
+xvol32:
+xvol32: Includes these programs: xgettext msgfmt olwm svenv toolwait winsysck
+xvol32: owplaces openwin xcenter clock cmdtool olwmslave props textedit olvwm
+xvol32:
+xvol32:
+xvol32:
+xvol32:
+xvol32:

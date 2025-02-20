@@ -1,0 +1,27 @@
+Supplemental Support Disk for installing from a PCMCIA source
+-------------------------------------------------------------
+
+This is a version of the pcmcia disk for use with Linux 2.4.20 bootdisks.
+
+WARNING!  This is not a stand-alone installation disk.  You will also need the
+install rootdisks to install from a PCMCIA source.  Do not write protect the
+supplemental PCMCIA support disk.
+
+1.  Boot the bare.i bootdisk.  This uses a generic IDE kernel and is the
+    correct bootdisk to use when installing Slackware Linux on a laptop.
+
+2.  When prompted, load the install rootdisks starting with install.1.
+    These are the main installation disks.
+
+3.  After you're logged into the system with the username "root", you start
+    the PCMCIA support system with the command "pcmcia".  Then you'll be
+    prompted to take these actions:
+
+    o   Insert the pcmcia.dsk support floppy
+    o   Attach your PCMCIA/Cardbus devices if they are not already attached.
+    o   Remove the pcmcia.dsk support floppy
+
+4.  Now you're ready to proceed with the installation as usual.  If you
+    need to partition your drive with "fdisk" or "cfdisk", do that first,
+    otherwise go ahead and run "setup".
+

@@ -1,0 +1,11 @@
+xv32_a: Static libraries for xview3.2p1-X11R6.LinuxELF.4
+xv32_a:
+xv32_a: Libraries for compiling statically linked Xview applications. Only
+xv32_a: needed if you are planning to debug Xview applications, or compile
+xv32_a: them with the -g or -static flags.
+xv32_a:
+xv32_a:
+xv32_a:
+xv32_a:
+xv32_a:
+xv32_a:

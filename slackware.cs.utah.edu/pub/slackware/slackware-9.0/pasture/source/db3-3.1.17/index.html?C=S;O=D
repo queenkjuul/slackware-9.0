@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/pasture/source/db3-3.1.17</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/pasture/source/db3-3.1.17</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/pasture/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="db-3.1.17.tar.gz">db-3.1.17.tar.gz</a></td><td align="right">2000-11-21 03:34  </td><td align="right">1.9M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="db3.SlackBuild">db3.SlackBuild</a></td><td align="right">2002-10-12 20:46  </td><td align="right">3.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-10-12 08:24  </td><td align="right">849 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doinst.sh.gz">doinst.sh.gz</a></td><td align="right">2002-10-12 09:02  </td><td align="right">469 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="db-3.1.17.mutex.diff.gz">db-3.1.17.mutex.diff.gz</a></td><td align="right">2000-11-21 03:43  </td><td align="right">351 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="db-3.1.17.la.diff.gz">db-3.1.17.la.diff.gz</a></td><td align="right">2000-11-21 04:41  </td><td align="right">191 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

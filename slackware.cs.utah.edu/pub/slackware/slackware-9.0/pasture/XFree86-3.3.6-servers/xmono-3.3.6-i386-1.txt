@@ -1,0 +1,11 @@
+xmono: A Monochrome server.
+xmono:
+xmono: Installing this package will create a link in /usr/X11R6/bin from
+xmono: XF86_Mono to X, setting this server as the default.
+xmono:
+xmono:
+xmono:
+xmono:
+xmono:
+xmono:
+xmono:

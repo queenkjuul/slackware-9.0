@@ -1,0 +1,79 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-wu-ftpd
+
+VERSION=2.6.2
+ARCH=i386
+BUILD=3
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+rm -rf $PKG
+mkdir -p $PKG
+
+# Explode the package framework:
+cd $PKG
+explodepkg $CWD/_wuftpd.tar.gz
+
+cd $TMP
+rm -rf wu-ftpd-$VERSION
+tar xzvf $CWD/wu-ftpd-$VERSION.tar.gz
+cd wu-ftpd-$VERSION
+chown -R root.root .
+zcat $CWD/wu-ftpd-$VERSION.diff.gz | patch -p1 -E --backup
+zcat $CWD/wu-ftpd.mkstemp.diff.gz | patch -p1 -E --backup
+zcat $CWD/wu-ftpd.offby1.diff.gz | patch -p1 -E --backup
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+./configure \
+--prefix=/usr \
+--disable-mail
+make
+strip bin/*
+cat bin/ckconfig > $PKG/usr/sbin/ckconfig
+cat bin/ftpcount > $PKG/usr/bin/ftpcount
+cat bin/ftpd > $PKG/usr/sbin/wu.ftpd
+cat bin/ftpshut > $PKG/usr/bin/ftpshut
+cat bin/ftpwho > $PKG/usr/bin/ftpwho
+cat util/xferstats > $PKG/usr/bin/xferstats
+mkdir -p $PKG/usr/doc/wu-ftpd-$VERSION
+cp -a CHANGES CONTRIBUTORS COPYRIGHT ERRATA \
+  INSTALL LICENSE README README.AUTOCONF $PKG/usr/doc/wu-ftpd-$VERSION
+cp -a doc/examples $PKG/usr/doc/wu-ftpd-$VERSION
+cat $CWD/etc/ftpconversions > $PKG/usr/doc/wu-ftpd-$VERSION/examples/ftpconversions
+cd doc
+for page in ftpcount.1 ftpwho.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/$page.gz
+done
+# cat realpath.3 | gzip -9c > $PKG/usr/man/man3/realpath.3.gz
+for page in ftpaccess.5 xferlog.5 ftpconversions.5 ftphosts.5 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man5/$page.gz
+done
+for page in ftpd.8 ftpshut.8 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man8/$page.gz
+done
+echo ".so man8/ftpd.8" | gzip -9c > $PKG/usr/man/man8/wu.ftpd.8.gz
+cat $CWD/etc/ftpaccess > $PKG/etc/ftpaccess.new
+cat $CWD/etc/ftpconversions > $PKG/etc/ftpconversions.new
+cat $CWD/etc/ftpgroups > $PKG/etc/ftpgroups.new
+cat $CWD/etc/ftpusers > $PKG/etc/ftpusers.new
+cat $CWD/etc/msgs/mirrors.msg > $PKG/etc/msgs/mirrors.msg.new
+cat $CWD/etc/msgs/msg.dead > $PKG/etc/msgs/msg.dead.new
+cat $CWD/etc/msgs/msg.toomany > $PKG/etc/msgs/msg.toomany.new
+cat $CWD/etc/msgs/welcome.msg > $PKG/etc/msgs/welcome.msg.new
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n ../wu-ftpd-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+ rm -rf wu-ftpd-$VERSION
+ rm -rf $PKG
+fi

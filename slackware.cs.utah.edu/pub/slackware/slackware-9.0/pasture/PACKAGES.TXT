@@ -1,0 +1,565 @@
+
+PACKAGES.TXT;  Fri Feb 23 04:04:29 UTC 2007
+
+This file provides details on the Slackware packages found
+in the ./pasture/ directory.
+
+Total size of all packages (compressed):  69 MB
+Total size of all packages (uncompressed):  151 MB
+
+
+PACKAGE NAME:  db3-3.1.17-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/db3-3.1.17
+PACKAGE SIZE (compressed):  1192 K
+PACKAGE SIZE (uncompressed):  5260 K
+PACKAGE DESCRIPTION:
+db3: db3 (Berkeley database library version 3)
+db3:
+db3: The Berkeley Database (Berkeley DB) library provides embedded database
+db3: support for both traditional and client/server applications.
+db3:
+db3: This package should be installed if compatibility is needed with
+db3: databases created with the Berkeley DB version 3.
+db3:
+db3: This library used to be part of the glibc package.
+db3:
+
+PACKAGE NAME:  fontconfig-1.0.1-i386-4.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  86 K
+PACKAGE SIZE (uncompressed):  230 K
+PACKAGE DESCRIPTION:
+fontconfig: fontconfig
+fontconfig:
+fontconfig: fontconfig is a library for configuring and customizing font access.
+fontconfig: It is used by Xft2, Mozilla, and GNOME.
+fontconfig:
+
+PACKAGE NAME:  freetype-1.3.1-i386-3.tgz
+PACKAGE LOCATION:  ./pasture/freetype-1.3.1
+PACKAGE SIZE (compressed):  510 K
+PACKAGE SIZE (uncompressed):  1440 K
+PACKAGE DESCRIPTION:
+freetype: freetype
+freetype:
+freetype: The FreeType engine is a free and portable TrueType font rendering
+freetype: engine.  It has been developed to provide TrueType support to a
+freetype: great variety of platforms and environments.
+freetype:
+freetype: This is an old version (freetype1, or libttf) that is considered
+freetype: deprecated but might still be required by some programs.  New programs
+freetype: should use the freetype2 library (which is bundled with XFree86).
+freetype:
+
+PACKAGE NAME:  gnu-pop3d-0.9.8-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/gnu-pop3d-0.9.8
+PACKAGE SIZE (compressed):  89 K
+PACKAGE SIZE (uncompressed):  350 K
+PACKAGE DESCRIPTION:
+gnu-pop3d: gnu-pop3d (GNU POP3 daemon)
+gnu-pop3d:
+gnu-pop3d: This is the GNU POP3 server.  The goal of GNU POP is to provide a
+gnu-pop3d: small, fast, efficient, free POP3 server fully compliant with RFCs. 
+gnu-pop3d:
+gnu-pop3d: The GNU POP3 server was written by Jakob 'sparky' Kaivo.
+gnu-pop3d:
+
+PACKAGE NAME:  libglut-3.7-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/libglut-3.7
+PACKAGE SIZE (compressed):  255 K
+PACKAGE SIZE (uncompressed):  800 K
+PACKAGE DESCRIPTION:
+libglut: libglut
+libglut:
+libglut: GLUT is a 3-D graphics library which uses the OpenGL API.
+libglut:
+libglut: Some 3D programs might need this to run or compile.
+libglut:
+
+PACKAGE NAME:  libxml-1.8.17-i386-2.tgz
+PACKAGE LOCATION:  ./pasture/libxml-1.8.17
+PACKAGE SIZE (compressed):  506 K
+PACKAGE SIZE (uncompressed):  2090 K
+PACKAGE DESCRIPTION:
+libxml: libxml (XML parser library)
+libxml:
+libxml: This is an older version of the XML parser library that supplies
+libxml: libxml.so.1.  This version is still required by many programs, such as
+libxml: xscreensaver-demo and several GNOME apps.
+libxml:
+
+PACKAGE NAME:  pop3d-1.020i-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/pop3d-1.020i
+PACKAGE SIZE (compressed):  32 K
+PACKAGE SIZE (uncompressed):  110 K
+PACKAGE DESCRIPTION:
+pop3d: pop3d (POP3 server)
+pop3d:
+pop3d: This POP3 server was written at the University of California at Davis.
+pop3d: The server implements the minimal POP3 command list, plus some
+pop3d: optional commands.
+pop3d:
+pop3d: POP3, the Post Office Protocol (version 3), is described in RFC1939.
+pop3d: A copy of RFC1939 is included with this distribution.
+pop3d:
+
+PACKAGE NAME:  sspkg-2.1-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/xview-3.2p1.4
+PACKAGE SIZE (compressed):  610 K
+PACKAGE SIZE (uncompressed):  2850 K
+PACKAGE DESCRIPTION:
+sspkg: SlingShot extensions 2.1
+sspkg:
+sspkg: These are extensions for programming under XView.  Includes shared
+sspkg: (ELF) libraries, include files, and many programming samples.
+sspkg:
+
+PACKAGE NAME:  workman-1.3a-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/xview-3.2p1.4
+PACKAGE SIZE (compressed):  147 K
+PACKAGE SIZE (uncompressed):  420 K
+PACKAGE DESCRIPTION:
+workman: WorkMan-1.3a
+workman:
+workman: A graphical tool for playing audio compact discs in a CD-ROM drive.
+workman: It has most of the features available on standalone CD players, such
+workman: as a shuffle mode, programmable  playlists, and elapsed/remaining 
+workman: timers.  Extra features include the ability to store information about
+workman: CDs in a database and then automatically extract that information when
+workman: the CD is inserted later.
+workman:
+
+PACKAGE NAME:  wu-ftpd-2.6.2-i386-3.tgz
+PACKAGE LOCATION:  ./pasture/dontuse/wu-ftpd
+PACKAGE SIZE (compressed):  226 K
+PACKAGE SIZE (uncompressed):  590 K
+PACKAGE DESCRIPTION:
+wu-ftpd: wu-ftpd (WU-FTP SERVER)
+wu-ftpd:
+wu-ftpd: wu-ftpd is a replacement ftp server for Un*x systems.  Besides
+wu-ftpd: supporting the ftp protocol defined in RFC 959, it adds the following
+wu-ftpd: features:  logging of transfers, logging of commands, on the fly
+wu-ftpd: compression and archiving, classification of users on type and
+wu-ftpd: location, per class limits, per directory upload permissions,
+wu-ftpd: restricted guest accounts, system wide and per directory messages,
+wu-ftpd: directory alias, cdpath, filename filter, and virtual host support.
+wu-ftpd:
+
+PACKAGE NAME:  x3dl-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  861 K
+PACKAGE SIZE (uncompressed):  2050 K
+PACKAGE DESCRIPTION:
+x3dl: An accelerated server for 3DLabs chipsets.
+x3dl:
+x3dl: This server supports the GLINT 500TX with IBM RGB526 RAMDAC,
+x3dl: GLINT MX with IBM RGB526 and IBM RGB640 RAMDAC,
+x3dl: Permedia with IBM RGB526 RAMDAC,
+x3dl: Permedia 2 (classic, 2a, 2v).
+x3dl:
+x3dl: Installing this package will create a link in /usr/X11R6/bin from
+x3dl: XF86_3DLabs to X, setting this server as the default.
+x3dl:
+
+PACKAGE NAME:  x8514-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  681 K
+PACKAGE SIZE (uncompressed):  1590 K
+PACKAGE DESCRIPTION:
+x8514: An accelerated server for cards using IBM8514 chips.
+x8514:
+x8514: Installing this package will create a link in /usr/X11R6/bin from
+x8514: XF86_8514 to X, setting this server as the default.
+x8514:
+
+PACKAGE NAME:  xagx-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  757 K
+PACKAGE SIZE (uncompressed):  1770 K
+PACKAGE DESCRIPTION:
+xagx: An accelerated server for IIT AGX chipsets.
+xagx:
+xagx: This server supports the IIT AGX-016, AGX-015, AGX-014 and XGA-2
+xagx: chipsets.  There's also untested support for the XGA-1 and AGX-010
+xagx: chipsets.
+xagx:
+xagx: Installing this package will create a link in /usr/X11R6/bin from
+xagx: XF86_AGX to X, setting this server as the default.
+xagx:
+
+PACKAGE NAME:  xfree86-4.2.1.1-i386-2.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  12892 K
+PACKAGE SIZE (uncompressed):  35330 K
+PACKAGE DESCRIPTION:
+xfree86: xfree86 (XFree86 base package)
+xfree86:
+xfree86: This is the base package for XFree86, and provides the required
+xfree86: binaries, shared libraries, and support files (except fonts) to run
+xfree86: X11R6 on Linux.
+xfree86:
+
+PACKAGE NAME:  xfree86-devel-4.2.1.1-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  4572 K
+PACKAGE SIZE (uncompressed):  14530 K
+PACKAGE DESCRIPTION:
+xfree86-devel: xfree86-devel (Libraries and other files for X programming)
+xfree86-devel:
+xfree86-devel: This is a set of include files (found in /usr/X11R6/include), static
+xfree86-devel: libraries (found in /usr/X11R6/lib/*.a) and configuration files
+xfree86-devel: (found in /usr/X11R6/lib/X11/config/) needed to compile X programs
+xfree86-devel: under Linux and XFree86.
+xfree86-devel:
+
+PACKAGE NAME:  xfree86-docs-4.2.1.1-noarch-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  195 K
+PACKAGE SIZE (uncompressed):  730 K
+PACKAGE DESCRIPTION:
+xfree86-docs: xfree86-docs (text documentation for XFree86)
+xfree86-docs:
+xfree86-docs: Documentation and release notes for XFree86 that you can find in
+xfree86-docs: /usr/X11R6/lib/X11/doc/.
+xfree86-docs:
+
+PACKAGE NAME:  xfree86-docs-html-4.2.1.1-noarch-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  1090 K
+PACKAGE SIZE (uncompressed):  6020 K
+PACKAGE DESCRIPTION:
+xfree86-docs-html: xfree86-docs-html (HTML documentation for XFree86)
+xfree86-docs-html:
+xfree86-docs-html: Documentation and release notes for XFree86 (in HTML format) that you
+xfree86-docs-html: can find in /usr/X11R6/lib/X11/doc/html/.
+xfree86-docs-html:
+
+PACKAGE NAME:  xfree86-fonts-100dpi-4.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  11886 K
+PACKAGE SIZE (uncompressed):  13550 K
+PACKAGE DESCRIPTION:
+xfree86-fonts-100dpi: xfree86-fonts-100dpi (100dpi screen fonts for the X Window System)
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi: These extra fonts are useful on high-resolution monitors.
+xfree86-fonts-100dpi:
+
+PACKAGE NAME:  xfree86-fonts-cyrillic-4.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  359 K
+PACKAGE SIZE (uncompressed):  430 K
+PACKAGE DESCRIPTION:
+xfree86-fonts-cyrillic: xfree86-fonts-cyrillic (Cyrillic fonts for the X Window System)
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic: A set of Cyrillic fonts for XFree86.
+xfree86-fonts-cyrillic:
+
+PACKAGE NAME:  xfree86-fonts-misc-4.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  16132 K
+PACKAGE SIZE (uncompressed):  18840 K
+PACKAGE DESCRIPTION:
+xfree86-fonts-misc: xfree86-fonts-misc (fonts for the X Window System)
+xfree86-fonts-misc:
+xfree86-fonts-misc: This is a minimal set of fonts needed to run XFree86.
+xfree86-fonts-misc:
+
+PACKAGE NAME:  xfree86-fonts-scale-4.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  2287 K
+PACKAGE SIZE (uncompressed):  4260 K
+PACKAGE DESCRIPTION:
+xfree86-fonts-scale: xfree86-fonts-scale (scalable screen fonts for the X Window System)
+xfree86-fonts-scale:
+xfree86-fonts-scale: Speedo, Type 1, and TrueType scalable fonts for XFree86.
+xfree86-fonts-scale:
+
+PACKAGE NAME:  xfree86-xnest-4.2.1.1-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  1110 K
+PACKAGE SIZE (uncompressed):  2940 K
+PACKAGE DESCRIPTION:
+xfree86-xnest: xfree86-xnest (a nested X server)
+xfree86-xnest:
+xfree86-xnest: Xnest is an experimental nested server for X that acts as both a 
+xfree86-xnest: client and a server.  Xnest is a client of the real server which
+xfree86-xnest: manages windows and graphics requests on its behalf.  Xnest is a
+xfree86-xnest: server to its own clients.  Xnest manages windows and graphics 
+xfree86-xnest: requests on their behalf.  To these clients Xnest appears to be a 
+xfree86-xnest: conventional server.
+xfree86-xnest:
+
+PACKAGE NAME:  xfree86-xprt-4.2.1.1-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  833 K
+PACKAGE SIZE (uncompressed):  1910 K
+PACKAGE DESCRIPTION:
+xfree86-xprt: xfree86-xprt (a print-only X server)
+xfree86-xprt:
+
+PACKAGE NAME:  xfree86-xvfb-4.2.1.1-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  1235 K
+PACKAGE SIZE (uncompressed):  3210 K
+PACKAGE DESCRIPTION:
+xfree86-xvfb: xfree86-xvfb (virtual framebuffer X server)
+xfree86-xvfb:
+xfree86-xvfb: Xvfb is an X server that can run on machines with no display hardware
+xfree86-xvfb: and no physical input devices.  It emulates a dumb framebuffer using 
+xfree86-xvfb: virtual memory.  The primary use of this server is intended to be 
+xfree86-xvfb: server testing.  The mfb or cfb code for any depth can be exercised
+xfree86-xvfb: with this server without the need for real hardware that supports the
+xfree86-xvfb: desired depths.  A secondary use is testing clients against unusual
+xfree86-xvfb: depths and screen configurations.
+xfree86-xvfb:
+
+PACKAGE NAME:  xft2-2.0.0-i386-2.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-4.2.1.1
+PACKAGE SIZE (compressed):  39 K
+PACKAGE SIZE (uncompressed):  110 K
+PACKAGE DESCRIPTION:
+xft2: xft2
+xft2:
+xft2: Xft is a simple library designed to interface the FreeType rasterizer
+xft2: with the X Rendering Extension.
+xft2:
+
+PACKAGE NAME:  xi128-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  852 K
+PACKAGE SIZE (uncompressed):  2030 K
+PACKAGE DESCRIPTION:
+xi128: A server for the Number Nine Imagine 128.
+xi128:
+xi128: This server supports the Number Nine Imagine 128. (series I and II)
+xi128: Installing this package will create a link in /usr/X11R6/bin from
+xi128: XF86_I128 to X, setting this server as the default.
+xi128:
+
+PACKAGE NAME:  xma32-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  744 K
+PACKAGE SIZE (uncompressed):  1730 K
+PACKAGE DESCRIPTION:
+xma32: An accelerated server for cards using Mach32 chips.
+xma32:
+xma32: Installing this package will create a link in /usr/X11R6/bin from
+xma32: XF86_Mach32 to X, setting this server as the default.
+xma32:
+
+PACKAGE NAME:  xma64-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  791 K
+PACKAGE SIZE (uncompressed):  1860 K
+PACKAGE DESCRIPTION:
+xma64: An accelerated server for cards using the Mach64 chipset.
+xma64:
+xma64: The Mach64 server will now correctly recognize some of the newer ATI
+xma64: chip revisions, including the 3D Rage, 3D Rage II, 3D Rage IIC, 
+xma64: 3D Rage II+DVD, Rage Pro, and Rage LT Pro.
+xma64:
+xma64: Installing this package will create a link in /usr/X11R6/bin from
+xma64: XF86_Mach64 to X, setting this server as the default.
+xma64:
+
+PACKAGE NAME:  xma8-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  685 K
+PACKAGE SIZE (uncompressed):  1600 K
+PACKAGE DESCRIPTION:
+xma8: An accelerated server for cards using Mach8 chips.
+xma8:
+xma8: Installing this package will create a link in /usr/X11R6/bin from
+xma8: XF86_Mach8 to X, setting this server as the default.
+xma8:
+
+PACKAGE NAME:  xmono-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  755 K
+PACKAGE SIZE (uncompressed):  1940 K
+PACKAGE DESCRIPTION:
+xmono: A Monochrome server.
+xmono:
+xmono: Installing this package will create a link in /usr/X11R6/bin from
+xmono: XF86_Mono to X, setting this server as the default.
+xmono:
+
+PACKAGE NAME:  xp9k-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  764 K
+PACKAGE SIZE (uncompressed):  1790 K
+PACKAGE DESCRIPTION:
+xp9k: An accelerated server for cards using the P9000 chipset.
+xp9k:
+xp9k: Some of the cards this server will work with are the Diamond Viper
+xp9k: VLB, Diamond Viper PCI, Orchid P9000 (and some other clones, such as
+xp9k: the STAR 2000).  Viper Pro and other P9100 and P9130 cards are NOT
+xp9k: supported, but are supported in the p9x00 driver of the SVGA server. 
+xp9k:
+xp9k: Installing this package will create a link in /usr/X11R6/bin from
+xp9k: XF86_P9000 to X, setting this server as the default.
+xp9k:
+
+PACKAGE NAME:  xs3-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  950 K
+PACKAGE SIZE (uncompressed):  2270 K
+PACKAGE DESCRIPTION:
+xs3: An accelerated server for cards using S3 chips.
+xs3:
+xs3: The current S3 Server supports all available S3 chipsets: 911, 924,
+xs3: 801/805, 928, 732 (Trio32), 764, 765, 775, 785 (Trio64*), 864, 868,
+xs3: 964, 968 and M65 (Aurora64V+).  However, this does not mean that all
+xs3: S3 boards will work -- see the XFree86 docs for complete information.
+xs3: The S3 server will also recognize the 866, but it has not been tested
+xs3: with this chipset.  Installing this package will create a link in
+xs3: /usr/X11R6/bin from XF86_S3 to X, setting this server as the default.
+xs3:
+
+PACKAGE NAME:  xs3v-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  847 K
+PACKAGE SIZE (uncompressed):  2000 K
+PACKAGE DESCRIPTION:
+xs3v: An accelerated server for cards using S3 ViRGE chips.
+xs3v:
+xs3v: The current XF86_S3V server supports the S3 ViRGE (86C325), the
+xs3v: ViRGE/DX (86C375), ViRGE/GX (86C385) and the ViRGE/VX (86C988) chips.
+xs3v: It has been tested with ViRGE cards with 2 and 4MB DRAM, ViRGE/DX 4M,
+xs3v: ViRGE/VX 8M (4M VRAM/4M DRAM), and with a 220MHz ViRGE/VX card with
+xs3v: 2MB VRAM up to 1600x1200 with 8/15/16bpp.  Note that the XF86_SVGA
+xs3v: server also supports these chipsets (and others).  It's recommended to
+xs3v: try using that first.  Installing this package will create a link in
+xs3v: /usr/X11R6/bin from XF86_S3V to X, setting this server as the default.
+xs3v:
+
+PACKAGE NAME:  xset-3.3.6-i386-2.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  624 K
+PACKAGE SIZE (uncompressed):  1620 K
+PACKAGE DESCRIPTION:
+xset: Graphical configuration utility for XFree86.
+xset:
+xset: A graphical configuration utility.  Produces an initial XF86Config
+xset: file, or tunes the existing one.  Runs on the X desktop using TCL
+xset: (this also requires the vg16 X server).
+xset:
+
+PACKAGE NAME:  xsvga-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  1287 K
+PACKAGE SIZE (uncompressed):  3100 K
+PACKAGE DESCRIPTION:
+xsvga: A server for many SuperVGA video cards.
+xsvga:
+xsvga: Installing this package will create a link in /usr/X11R6/bin from
+xsvga: XF86_SVGA to X, setting this server as the default.
+xsvga:
+
+PACKAGE NAME:  xv32_a-3.2p1.4-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/xview-3.2p1.4
+PACKAGE SIZE (compressed):  660 K
+PACKAGE SIZE (uncompressed):  1910 K
+PACKAGE DESCRIPTION:
+xv32_a: Static libraries for xview3.2p1-X11R6.LinuxELF.4
+xv32_a:
+xv32_a: Libraries for compiling statically linked Xview applications. Only
+xv32_a: needed if you are planning to debug Xview applications, or compile
+xv32_a: them with the -g or -static flags.
+xv32_a:
+
+PACKAGE NAME:  xv32exmp-3.2p1.4-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/xview-3.2p1.4
+PACKAGE SIZE (compressed):  317 K
+PACKAGE SIZE (uncompressed):  2090 K
+PACKAGE DESCRIPTION:
+xv32exmp: Sample code for XView
+xv32exmp:
+xv32exmp: Sample code that comes with the XView distribution.  Useful as 
+xv32exmp: examples to learn XView programming from, but probably won't
+xv32exmp: compile under Linux without some porting work.
+xv32exmp:
+
+PACKAGE NAME:  xvg16-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  760 K
+PACKAGE SIZE (uncompressed):  1840 K
+PACKAGE DESCRIPTION:
+xvg16: A server for 16 color EGA/VGA graphics modes.
+xvg16:
+xvg16: This is a server that uses standard generic video modes -- it works
+xvg16: with nearly all video hardware (but with only 16 colors).  Installing
+xvg16: this package will create a link in /usr/X11R6/bin from XF86_VGA16 to
+xvg16: X, setting this server as the default.
+xvg16:
+
+PACKAGE NAME:  xvinc32-3.2p1.4-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/xview-3.2p1.4
+PACKAGE SIZE (compressed):  277 K
+PACKAGE SIZE (uncompressed):  1630 K
+PACKAGE DESCRIPTION:
+xvinc32: Include files for xview3.2p1-X11R6.LinuxELF.4
+xvinc32:
+xvinc32: Include files needed for Xview programming.
+xvinc32:
+
+PACKAGE NAME:  xvol32-3.2p1.4-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/xview-3.2p1.4
+PACKAGE SIZE (compressed):  1046 K
+PACKAGE SIZE (uncompressed):  2670 K
+PACKAGE DESCRIPTION:
+xvol32: Binaries for xview3.2p1-X11R6.LinuxELF.4
+xvol32:
+xvol32: Configuration files, programs, and documentation for xview3.2p1-X11R6.
+xvol32:
+xvol32: Includes these programs: xgettext msgfmt olwm svenv toolwait winsysck
+xvol32: owplaces openwin xcenter clock cmdtool olwmslave props textedit olvwm
+xvol32:
+
+PACKAGE NAME:  xw32-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  698 K
+PACKAGE SIZE (uncompressed):  1650 K
+PACKAGE DESCRIPTION:
+xw32: A server for chipsets in the ET4000/W32 series.
+xw32:
+xw32: This server currently supports the w32, w32i, w32p and et6000 chips.
+xw32: XF86_W32 gets phased out, now that the SVGA server with XAA 
+xw32: acceleration is at least as fast as the W32 server but supports more
+xw32: cards and higher color depths.  Use this server if the SVGA server
+xw32: fails to work/accelerate for you.
+xw32:
+xw32: Installing this package will create a link in /usr/X11R6/bin from
+xw32: XF86_W32 to X, setting this server as the default.
+xw32:
+
+PACKAGE NAME:  xwrapper-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  7 K
+PACKAGE SIZE (uncompressed):  30 K
+PACKAGE DESCRIPTION:
+xwrapper: xwrapper (setuid root wrapper for the X server)
+xwrapper:
+xwrapper: As a security measure, the X servers in XFree86 3.3.6 are not setuid
+xwrapper: root.  In order for non-root users to run them, you will need to
+xwrapper: install this package.
+xwrapper:
+
+PACKAGE NAME:  xxfb-3.3.6-i386-1.tgz
+PACKAGE LOCATION:  ./pasture/XFree86-3.3.6-servers
+PACKAGE SIZE (compressed):  796 K
+PACKAGE SIZE (uncompressed):  1890 K
+PACKAGE DESCRIPTION:
+xxfb: Frame buffer X server.
+xxfb:
+xxfb: This X server uses the Linux frame buffer device available with Linux
+xxfb: 2.2.x to provide a general X server for bitmapped, unaccelerated video
+xxfb: hardware.  See /var/X11R6/lib/doc/README.fbdev for more information.
+xxfb: This server is the default for a full installation, since it will
+xxfb: provide a nice high-resolution screen with most modern video cards
+xxfb: if the kernel supports and is set to use the frame buffer console.
+xxfb: Just set your mouse type in /etc/XF86Config if the default (PS/2)
+xxfb: doesn't match your system.
+xxfb:
+
+

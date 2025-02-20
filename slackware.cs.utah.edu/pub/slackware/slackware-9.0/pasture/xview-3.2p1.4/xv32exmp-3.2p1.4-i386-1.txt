@@ -1,0 +1,11 @@
+xv32exmp: Sample code for XView
+xv32exmp:
+xv32exmp: Sample code that comes with the XView distribution.  Useful as 
+xv32exmp: examples to learn XView programming from, but probably won't
+xv32exmp: compile under Linux without some porting work.
+xv32exmp:
+xv32exmp:
+xv32exmp:
+xv32exmp:
+xv32exmp:
+xv32exmp:

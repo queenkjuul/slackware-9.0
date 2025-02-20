@@ -1,0 +1,11 @@
+xfree86-fonts-scale: xfree86-fonts-scale (scalable screen fonts for the X Window System)
+xfree86-fonts-scale:
+xfree86-fonts-scale: Speedo, Type 1, and TrueType scalable fonts for XFree86.
+xfree86-fonts-scale:
+xfree86-fonts-scale:
+xfree86-fonts-scale:
+xfree86-fonts-scale:
+xfree86-fonts-scale:
+xfree86-fonts-scale:
+xfree86-fonts-scale:
+xfree86-fonts-scale:

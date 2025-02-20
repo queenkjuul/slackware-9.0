@@ -1,0 +1,56 @@
+#!/bin/sh
+#item   ####description                                      ###on off ###
+TMP=/var/log/setup/tmp
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+cat /dev/null > $TMP/SeTnewtag
+dialog --title "SELECTING PACKAGES FROM SERIES KDE" \
+--checklist "Please select the packages you wish to install \
+from series KDE.  KDE is a network transparent desktop \
+environment that seeks to fill the need for an easy to use desktop \
+for Unix workstations, similar to the desktop environments found \
+under MacOS or Windows.  Use the UP/DOWN keys to scroll through the \
+list, and the SPACE key to select the packages you wish to \
+install. Recommended packages have already been selected for \
+you, but you may unselect them if you wish.  Press ENTER \
+when you are done." 22 70 8 \
+"arts" "Analog Realtime Synthesizer (sound support)" "on" \
+"kdeaddons" "Plugins and scripts for some applications" "on" \
+"kdeadmin" "KDE system administration utilities" "on" \
+"kdeartwork" "Extra themes, sounds, wallpapers, and styles" "on" \
+"kdebase" "The K Desktop Environment (base package)" "on" \
+"kdebindings" "Optional KDE library bindings" "off" \
+"kdeedu" "KDE Edutainment programs" "on" \
+"kdegames" "A KDE games collection" "on" \
+"kdegraphics" "Graphic programs for KDE" "on" \
+"kdelibs" "Libraries required for KDE" "on" \
+"kdelinks" "Additional menu links for non-KDE programs" "on" \
+"kdemultimedia" "Multimedia programs for KDE" "on" \
+"kdenetwork" "Networking programs for KDE" "on" \
+"kdepim" "Personal Information Management tools" "on" \
+"kdesdk" "KDE software development kit" "off" \
+"kdetoys" "Toys for the KDE desktop" "on" \
+"kdeutils" "Utilities for KDE" "on" \
+"kdevelop" "KDE Application Development Environment" "off" \
+"koffice" "The KDE office productivity suite" "on" \
+"qt" "C++ GUI library used by KDE" "on" \
+"quanta" "Quanta Plus web development environment" "on" \
+2> $TMP/SeTpkgs
+if [ $? = 1 -o $? = 255 ]; then
+  rm -f $TMP/SeTpkgs
+  cat /dev/null > $TMP/SeTnewtag
+  for PKG in arts kdeaddons kdeadmin kdeartwork kdebase kdebindings kdeedu kdegames kdegraphics kdelibs kdelinks kdemultimedia kdenetwork kdepim kdesdk kdetoys kdeutils kdevelop koffice qt quanta ; do
+    echo "$PKG: SKP" >> $TMP/SeTnewtag
+  done
+  exit
+fi
+cat /dev/null > $TMP/SeTnewtag
+for PKG in arts kdeaddons kdeadmin kdeartwork kdebase kdebindings kdeedu kdegames kdegraphics kdelibs kdelinks kdemultimedia kdenetwork kdepim kdesdk kdetoys kdeutils kdevelop koffice qt quanta ; do
+  if grep \"$PKG\" $TMP/SeTpkgs 1> /dev/null 2> /dev/null ; then
+    echo "$PKG: ADD" >> $TMP/SeTnewtag
+  else
+    echo "$PKG: SKP" >> $TMP/SeTnewtag
+  fi
+done
+rm -f $TMP/SeTpkgs

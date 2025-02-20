@@ -1,0 +1,11 @@
+xset: Graphical configuration utility for XFree86.
+xset:
+xset: A graphical configuration utility.  Produces an initial XF86Config
+xset: file, or tunes the existing one.  Runs on the X desktop using TCL
+xset: (this also requires the vg16 X server).
+xset:
+xset:
+xset:
+xset:
+xset:
+xset:

@@ -1,0 +1,11 @@
+koffice-i18n-sv: koffice-i18n-sv
+koffice-i18n-sv:
+koffice-i18n-sv: Swedish language support for KOffice.
+koffice-i18n-sv:
+koffice-i18n-sv:
+koffice-i18n-sv:
+koffice-i18n-sv:
+koffice-i18n-sv:
+koffice-i18n-sv:
+koffice-i18n-sv:
+koffice-i18n-sv:

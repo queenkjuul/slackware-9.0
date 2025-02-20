@@ -1,0 +1,11 @@
+workman: WorkMan-1.3a
+workman:
+workman: A graphical tool for playing audio compact discs in a CD-ROM drive.
+workman: It has most of the features available on standalone CD players, such
+workman: as a shuffle mode, programmable  playlists, and elapsed/remaining 
+workman: timers.  Extra features include the ability to store information about
+workman: CDs in a database and then automatically extract that information when
+workman: the CD is inserted later.
+workman:
+workman:
+workman:

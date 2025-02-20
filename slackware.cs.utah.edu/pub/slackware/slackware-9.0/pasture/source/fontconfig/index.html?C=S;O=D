@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/pasture/source/fontconfig</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/pasture/source/fontconfig</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/pasture/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fcpackage.2_1.tar.gz">fcpackage.2_1.tar.gz</a></td><td align="right">2002-11-22 02:33  </td><td align="right">532K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="fontconfig.build">fontconfig.build</a></td><td align="right">2003-02-13 20:46  </td><td align="right">745 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.fontconfig">slack-desc.fontconfig</a></td><td align="right">2003-01-11 05:13  </td><td align="right">713 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xft2">slack-desc.xft2</a></td><td align="right">2003-01-11 05:36  </td><td align="right">628 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="setup.05.fontconfig">setup.05.fontconfig</a></td><td align="right">2003-02-16 04:13  </td><td align="right">602 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xft2.build">xft2.build</a></td><td align="right">2003-02-13 23:14  </td><td align="right">495 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doinst.sh-fontconfig.gz">doinst.sh-fontconfig.gz</a></td><td align="right">2003-01-20 02:47  </td><td align="right">157 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

@@ -1,0 +1,11 @@
+freetype: freetype
+freetype:
+freetype: The FreeType engine is a free and portable TrueType font rendering
+freetype: engine.  It has been developed to provide TrueType support to a
+freetype: great variety of platforms and environments.
+freetype:
+freetype: This is an old version (freetype1, or libttf) that is considered
+freetype: deprecated but might still be required by some programs.  New programs
+freetype: should use the freetype2 library (which is bundled with XFree86).
+freetype:
+freetype:

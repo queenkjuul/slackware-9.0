@@ -1,0 +1,11 @@
+xfree86-fonts-100dpi: xfree86-fonts-100dpi (100dpi screen fonts for the X Window System)
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi: These extra fonts are useful on high-resolution monitors.
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi:
+xfree86-fonts-100dpi:

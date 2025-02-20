@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+      |-----handy-ruler------------------------------------------------------|
+quanta: quanta
+quanta:
+quanta: Quanta Plus is a web development environment for HTML and associate
+quanta: languages.  It is designed for quick web development and is rapidly
+quanta: becoming a mature editor with a number of great features.  Quanta
+quanta: already has a good deal of PHP support in it including the ability to
+quanta: run a debugger.
+quanta:
+quanta: Quanta Plus is not in any way affiliated with any commercial versions
+quanta: of Quanta.  The primary coders from the original team left the GPL'd
+quanta: version to produce a commercial product.

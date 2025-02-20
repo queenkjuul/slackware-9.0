@@ -1,0 +1,11 @@
+xma32: An accelerated server for cards using Mach32 chips.
+xma32:
+xma32: Installing this package will create a link in /usr/X11R6/bin from
+xma32: XF86_Mach32 to X, setting this server as the default.
+xma32:
+xma32:
+xma32:
+xma32:
+xma32:
+xma32:
+xma32:

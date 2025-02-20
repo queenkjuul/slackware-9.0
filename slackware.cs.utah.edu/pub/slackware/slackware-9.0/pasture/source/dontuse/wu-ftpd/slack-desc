@@ -1,0 +1,20 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+       |-----handy-ruler------------------------------------------------------|
+wu-ftpd: wu-ftpd (WU-FTP SERVER)
+wu-ftpd:
+wu-ftpd: wu-ftpd is a replacement ftp server for Un*x systems.  Besides
+wu-ftpd: supporting the ftp protocol defined in RFC 959, it adds the following
+wu-ftpd: features:  logging of transfers, logging of commands, on the fly
+wu-ftpd: compression and archiving, classification of users on type and
+wu-ftpd: location, per class limits, per directory upload permissions,
+wu-ftpd: restricted guest accounts, system wide and per directory messages,
+wu-ftpd: directory alias, cdpath, filename filter, and virtual host support.
+wu-ftpd:
+wu-ftpd:
+

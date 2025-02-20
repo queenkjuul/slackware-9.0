@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/pasture/source/xfree86-4.2.1.1/slack-desc</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/pasture/source/xfree86-4.2.1.1/slack-desc</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/pasture/source/xfree86-4.2.1.1/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-xvfb">slack-desc.xfree86-xvfb</a></td><td align="right">2002-03-24 00:15  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-xprt">slack-desc.xfree86-xprt</a></td><td align="right">2002-03-24 00:14  </td><td align="right">654 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-xnest">slack-desc.xfree86-xnest</a></td><td align="right">2002-03-24 00:14  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-fonts-scale">slack-desc.xfree86-fonts-scale</a></td><td align="right">2002-03-24 00:13  </td><td align="right">826 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-fonts-misc">slack-desc.xfree86-fonts-misc</a></td><td align="right">2002-03-24 00:10  </td><td align="right">794 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-fonts-cyrillic">slack-desc.xfree86-fonts-cyrillic</a></td><td align="right">2002-03-24 00:09  </td><td align="right">838 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-fonts-100dpi">slack-desc.xfree86-fonts-100dpi</a></td><td align="right">2002-03-24 00:08  </td><td align="right">838 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-drm">slack-desc.xfree86-drm</a></td><td align="right">2002-03-24 00:08  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-docs-html">slack-desc.xfree86-docs-html</a></td><td align="right">2002-03-24 00:08  </td><td align="right">840 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-docs">slack-desc.xfree86-docs</a></td><td align="right">2002-03-24 00:07  </td><td align="right">753 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86-devel">slack-desc.xfree86-devel</a></td><td align="right">2002-03-24 00:06  </td><td align="right">914 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.xfree86">slack-desc.xfree86</a></td><td align="right">2002-03-24 00:03  </td><td align="right">736 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

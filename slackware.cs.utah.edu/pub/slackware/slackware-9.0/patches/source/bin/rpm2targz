@@ -1,0 +1,97 @@
+#!/bin/sh
+# Copyright 1997, 1998 Patrick Volkerding, Moorhead, MN USA
+# Copyright 2002 Slackware Linux, Inc., Concord, CA USA
+# All rights reserved.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+#  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+if [ "$TMPDIR" = "" ]; then
+  TMPDIR=/tmp
+fi
+# If mcookie is available, use it for better /tmp security.
+if [ -x `which mcookie` ]; then
+  COOKIE=`mcookie`
+else
+  COOKIE=$$
+fi
+if [ "$1" = "" ]; then
+  echo "$0:  Converts RPM format to standard GNU tar + GNU zip format."
+  echo "            (view converted packages with \"less\", install and remove"
+  echo "            with \"installpkg\", \"removepkg\", \"pkgtool\", or manually"
+  echo "            with \"tar\")"
+  echo
+  echo "Usage:      $0 <file.rpm>"
+  if [ "`basename $0`" = "rpm2tgz" ]; then
+    echo "            (Outputs \"file.tgz\")"
+  else
+    echo "            (Outputs \"file.tar.gz\")"
+  fi
+  exit 1;
+fi
+for i in $* ; do
+  if [ ! "$1" = "$*" ]; then
+    echo -n "Processing file: $i"
+  fi
+  rm -rf $TMPDIR/rpm2targz$COOKIE # clear the way, just in case of mischief
+  mkdir $TMPDIR/rpm2targz$COOKIE
+
+  # Determine if this is a source or binary RPM.
+  # If we have getrpmtype, use that.  Otherwise, try "file".
+  if which getrpmtype 1> /dev/null 2> /dev/null; then
+    if getrpmtype -n $i | grep source 1> /dev/null 2> /dev/null ; then
+      isSource=1
+    else
+      isSource=0
+    fi
+  else # use file.  This works fine on Slackware, and is the default.
+    if file $i | grep RPM | grep " src " 1> /dev/null 2> /dev/null ; then
+      isSource=1
+    else
+      isSource=0
+    fi
+  fi
+
+  ofn=$TMPDIR/rpm2targz$COOKIE/`basename $i .rpm`.cpio
+  if which rpm2cpio 1> /dev/null 2> /dev/null ; then
+    rpm2cpio $i > $ofn 2> /dev/null
+    if [ ! $? = 0 ]; then
+      echo "... rpm2cpio failed.  (maybe $i is not an RPM?)"
+      ( cd $TMPDIR ; rm -rf rpm2targz$COOKIE )
+      continue
+    fi
+  else # less reliable than rpm2cpio...
+    dd ibs=`rpmoffset < $i` skip=1 if=$i 2> /dev/null | gzip -dc > $ofn
+  fi
+  DEST=$TMPDIR/rpm2targz$COOKIE
+  if [ "$isSource" = "1" ]; then
+     DEST=$DEST/$(basename $(basename $i .rpm) .src)
+  fi
+  mkdir -p $DEST
+  ( cd $DEST
+    cpio --extract --preserve-modification-time --make-directories < $ofn 1> /dev/null 2> /dev/null
+    rm -f $ofn
+    find . -type d -perm 700 -exec chmod 755 {} \; )
+  ( cd $TMPDIR/rpm2targz$COOKIE ; tar cf - . ) > `basename $i .rpm`.tar
+  gzip -9 `basename $i .rpm`.tar
+  if [ "`basename $0`" = "rpm2tgz" ]; then
+    mv `basename $i .rpm`.tar.gz `basename $i .rpm`.tgz
+  fi
+  ( cd $TMPDIR ; rm -rf rpm2targz$COOKIE )
+  echo
+done

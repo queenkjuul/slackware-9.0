@@ -1,0 +1,11 @@
+xfree86-docs: xfree86-docs (text documentation for XFree86)
+xfree86-docs:
+xfree86-docs: Documentation and release notes for XFree86 that you can find in
+xfree86-docs: /usr/X11R6/lib/X11/doc/.
+xfree86-docs:
+xfree86-docs:
+xfree86-docs:
+xfree86-docs:
+xfree86-docs:
+xfree86-docs:
+xfree86-docs:

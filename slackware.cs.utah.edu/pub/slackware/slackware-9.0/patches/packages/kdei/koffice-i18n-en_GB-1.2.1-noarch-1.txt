@@ -1,0 +1,11 @@
+koffice-i18n-en_GB: koffice-i18n-en_GB
+koffice-i18n-en_GB:
+koffice-i18n-en_GB: English (UK) language support for KOffice.
+koffice-i18n-en_GB:
+koffice-i18n-en_GB:
+koffice-i18n-en_GB:
+koffice-i18n-en_GB:
+koffice-i18n-en_GB:
+koffice-i18n-en_GB:
+koffice-i18n-en_GB:
+koffice-i18n-en_GB:

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/php</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/php</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doinst.sh.gz">doinst.sh.gz</a></td><td align="right">2002-03-03 06:06  </td><td align="right">152 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="php.ini.diff.gz">php.ini.diff.gz</a></td><td align="right">2003-11-16 21:26  </td><td align="right">619 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2003-11-16 21:27  </td><td align="right">834 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="mod_php.conf.example">mod_php.conf.example</a></td><td align="right">2004-10-31 20:22  </td><td align="right">336 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="php-4.3.11.tar.bz2">php-4.3.11.tar.bz2</a></td><td align="right">2005-04-03 23:40  </td><td align="right">3.8M</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="pear/">pear/</a></td><td align="right">2005-08-30 18:43  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="php.SlackBuild">php.SlackBuild</a></td><td align="right">2005-08-30 18:46  </td><td align="right">4.6K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

@@ -1,0 +1,49 @@
+#!/bin/sh
+CWD=`pwd` 
+VERSION=2.4.1.7
+cd /tmp
+tar xjvf $CWD/gdm-$VERSION.tar.bz2
+cd gdm-$VERSION
+chown -R root.root .
+# Quiet the output from the gdm script when /etc/profile is sourced:
+zcat $CWD/gdm.quiet.diff.gz | patch -p1 --verbose --suffix=.orig
+# gdm will add -g anyway.  I suggest not fighting it.  ;-)
+CFLAGS=-O2 ./configure --prefix=/usr \
+            --sysconfdir=/etc/X11 \
+            --localstatedir=/var/lib \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/share/faces
+# Simple session files designed to work with Slackware:
+for file in $CWD/Sessions/* ; do
+  cp $file /etc/X11/gdm/Sessions
+  chown root.root /etc/X11/gdm/Sessions/`basename $file`
+  chmod 755 /etc/X11/gdm/Sessions/`basename $file`
+done
+# Use the Xsession from the XFree86 package:
+( cd /etc/X11/gdm/Sessions
+  rm -f Xsession
+  ln -sf /etc/X11/xdm/Xsession .
+)
+mkdir -p /usr/doc/gdm-$VERSION
+cp -a ABOUT-NLS AUTHORS COPYING INSTALL NEWS README README.install RELEASENOTES TODO \
+   /usr/doc/gdm-$VERSION
+chmod 644 /usr/doc/gdm-$VERSION/*
+chown -R gdm.gdm /var/lib/gdm
+touch /usr/share/faces /var/lib/gdm
+cat $CWD/gdm.conf-graphical > /etc/X11/gdm/gdm.conf
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc
+cat << EOF
+
+
+
+Don't miss these empty directories:
+drwxr-xr-x    2 root     root           48 Jan 25 14:57 /usr/share/faces
+drwxr-x---    2 gdm      gdm            48 Jan 25 14:57 /var/lib/gdm
+
+
+
+
+EOF

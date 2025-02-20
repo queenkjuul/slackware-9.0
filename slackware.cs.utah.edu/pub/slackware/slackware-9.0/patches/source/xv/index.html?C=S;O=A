@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/xv</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/xv</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xv.prefix.diff.gz">xv.prefix.diff.gz</a></td><td align="right">2005-07-12 22:17  </td><td align="right">200 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-10 06:26  </td><td align="right">688 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xv.SlackBuild">xv.SlackBuild</a></td><td align="right">2005-07-14 20:43  </td><td align="right">1.7K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xv-3.10a-jumbo-README.txt">xv-3.10a-jumbo-README.txt</a></td><td align="right">2005-05-01 20:45  </td><td align="right"> 20K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xv-3.10a.patch.gz">xv-3.10a.patch.gz</a></td><td align="right">1996-10-05 19:33  </td><td align="right"> 21K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xv-3.10a-jumbo-enh-patch-20050501.txt.gz">xv-3.10a-jumbo-enh-patch-20050501.txt.gz</a></td><td align="right">2005-05-01 20:51  </td><td align="right">196K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xv-3.10a-jumbo-fix-patch-20050410.txt.gz">xv-3.10a-jumbo-fix-patch-20050410.txt.gz</a></td><td align="right">2005-04-11 03:01  </td><td align="right">232K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xv-3.10.tar.gz">xv-3.10.tar.gz</a></td><td align="right">1994-12-22 15:50  </td><td align="right">2.2M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

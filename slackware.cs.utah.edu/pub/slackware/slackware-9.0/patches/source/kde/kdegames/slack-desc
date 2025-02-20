@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+        |-----handy-ruler------------------------------------------------------|
+kdegames: kdegames
+kdegames:
+kdegames: Games for the K Desktop Environment.
+kdegames:
+kdegames: Included with this package are: kasteroids, katomic, kbackgammon,
+kdegames: kblackbox, kbounce, kenolaba, kfouleggs, kjumpingcube, klines,
+kdegames: kmahjongg, kmines, konquest, kpat, kpoker, kreversi, ksame, kshisen,
+kdegames: ksirtet, ksmiletris, ksnake, ksokoban, kspaceduel, ktron, ktuberling,
+kdegames: kwin4, and lskat.
+kdegames:
+kdegames:

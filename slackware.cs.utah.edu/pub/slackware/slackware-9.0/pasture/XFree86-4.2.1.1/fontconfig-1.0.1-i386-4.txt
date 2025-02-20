@@ -1,0 +1,11 @@
+fontconfig: fontconfig
+fontconfig:
+fontconfig: fontconfig is a library for configuring and customizing font access.
+fontconfig: It is used by Xft2, Mozilla, and GNOME.
+fontconfig:
+fontconfig:
+fontconfig:
+fontconfig:
+fontconfig:
+fontconfig:
+fontconfig:

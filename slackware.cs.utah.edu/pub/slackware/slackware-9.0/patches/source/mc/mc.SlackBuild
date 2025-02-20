@@ -1,0 +1,89 @@
+#!/bin/sh
+TMP=${TMP:-/tmp}
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP
+fi
+
+VERSION=4.6.0
+ARCH=${ARCH:-i386}
+BUILD=${BUILD:-4}
+
+if [ "$ARCH" = "i386" ]; then
+  SLKCFLAGS="-O2 -march=i386 -mcpu=i686"
+elif [ "$ARCH" = "i486" ]; then
+  SLKCFLAGS="-O2 -march=i486 -mcpu=i686"
+elif [ "$ARCH" = "s390" ]; then
+  SLKCFLAGS="-O2"
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2"
+fi
+
+PKG=$TMP/package-mc
+rm -rf $PKG
+mkdir -p $PKG/usr
+CWD=`pwd` 
+cd $TMP
+rm -rf mc-$VERSION
+tar xjvf $CWD/mc-$VERSION.tar.bz2
+cd mc-$VERSION
+chown -R root.root .
+find . -perm 664 -exec chmod 644 {} \;
+find . -perm 600 -exec chmod 644 {} \;
+find . -perm 444 -exec chmod 644 {} \;
+find . -perm 400 -exec chmod 644 {} \;
+find . -perm 440 -exec chmod 644 {} \;
+find . -perm 777 -exec chmod 755 {} \;
+find . -perm 775 -exec chmod 755 {} \;
+find . -perm 511 -exec chmod 755 {} \;
+find . -perm 711 -exec chmod 755 {} \;
+find . -perm 555 -exec chmod 755 {} \;
+# Include a ton of fixes from mc CVS:
+zcat $CWD/mc.cvsfixes.diff.gz | patch -p1 --verbose
+# This is obsolete:
+# ( cd vfs/samba ; zcat $CWD/samba.codepages.diff.gz | patch -p0 )
+# To enable samba, I believe these are the options to use:
+# --with-samba \
+# --with-configdir=/etc/samba \
+# --with-codepagedir=/etc/codepages \
+#
+# Using --with-included-slang seems to be the magic incantation that builds
+# a clean, small mc like days of yore
+# --with-screen=mcslang \
+#
+CFLAGS="$SLKCFLAGS" \
+./configure \
+  --prefix=/usr \
+  --sysconfdir=/etc \
+  --localstatedir=/var \
+  --enable-charset \
+  --with-gpm-mouse \
+  --with-ext2undel \
+  --with-x=no \
+  --with-vfs \
+  $ARCH-slackware-linux
+# Removed due to bug reports.  Does anyone use this feature?
+# Will it be missed?  complain to: volkerdi@slackware.com
+#	    --with-samba
+make -j3
+make DESTDIR=$PKG install
+( cd $PKG
+  find . | xargs file | grep "executable" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+  find . | xargs file | grep "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+)
+mkdir -p $PKG/etc/profile.d
+cat $PKG/usr/share/mc/bin/mc.csh > $PKG/etc/profile.d/mc.csh
+cat $PKG/usr/share/mc/bin/mc.sh > $PKG/etc/profile.d/mc.sh
+chmod 755 $PKG/etc/profile.d/*
+chown -R root.bin $PKG/usr/bin $PKG/usr/sbin
+find $PKG/usr/man -name "*.?" -type f | xargs gzip -9
+mkdir -p $PKG/usr/doc/mc-$VERSION
+cp -a \
+  ABOUT-NLS AUTHORS COPYING FAQ INSTALL INSTALL.FAST MAINTAINERS NEWS README* \
+  $PKG/usr/doc/mc-$VERSION
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build package:
+cd $PKG
+makepkg -l y -c n ../mc-$VERSION-$ARCH-$BUILD.tgz
+

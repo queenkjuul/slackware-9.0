@@ -1,0 +1,15 @@
+Begin3
+Title:          bpe
+Version:        1.4
+Entered-date:   20SEP99
+Description:    bpe is a tool for searching and modifying binary
+                files, somewhat in the spirit of Norton's Diskedit,
+                and much more reliable than Emacs' hexl mode.
+Keywords:       hex editor, binary, patch
+Author:         Andreas Pleschutznig (email address unknown)
+Maintained-by:  carter@math.gmu.edu
+Primary-site:   math.gmu.edu /pub/carter
+                14kB bpe-1.4.tar.gz
+Platforms:      Unix with curses or compatible, DOS
+Copying-policy: freeware
+End

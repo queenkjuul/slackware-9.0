@@ -1,0 +1,11 @@
+koffice-i18n-pt_BR: koffice-i18n-pt_BR
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR: Brazil portuguese language support for KOffice.
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR:

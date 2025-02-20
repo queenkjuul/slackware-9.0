@@ -1,0 +1,65 @@
+
+Introducing fourmeg.zip:
+
+fourmeg.zip is an add-on for ZipSlack which creates an 8 megabyte swap file
+in your \LINUX directory.  This allows ZipSlack to boot on a machine that only
+has 4 megabytes of RAM.  (at least it might...)  Even if you have more
+RAM in your machine, you might still want to add this package.  For example,
+you might need swap space if you add the X Window System to ZipSlack (see the
+FAQ.TXT for more information on this), and adding fourmeg.zip provides a nice
+example of how to make a Linux swap file.
+
+Note that the 2.4.18 kernel is quite a bit larger than previous kernels in
+ZipSlack, so you may also need to replace the default kernel with one from the
+kernels/bare.i/ or kernels/lowmem.i/ (although lowmem.i is severely limited)
+directories.  See the FAQ.TXT for more information on selecting a different
+kernel (the Q/A about "What if the machine halts at boot").
+
+Installing fourmeg.zip:
+
+To install fourmeg.zip, simply unzip the file in DOS/Windows on the same 
+partition where you unzipped ZipSlack.  (Be sure to unzip zipslack.zip FIRST!)
+It will overwrite a few files in \LINUX such as \linux\etc\fstab, and will 
+add an 8 megabyte swap file.  If you've only got 4 megabytes of RAM, you may
+also wish to disable any shadow RAM in your machine's BIOS settings to make 
+the maximum amount of RAM available to Linux.
+
+How it works (for the technically curious):
+
+fourmeg.zip does the trick by adding this file to your Linux system:
+
+-rw-r--r--   1 root     root      8388608  Jun 12 19:43 swapfile
+
+This file is used for swap space.  If you've got an 8 megabyte swap file
+and 4 megabytes of real RAM, then you'll have 12 megabytes of virtual 
+memory available for Linux.  This line in /etc/fstab tells the kernel to
+activate the swap space at boot time:
+
+/root/swapfile        swap     swap        defaults   0   0
+
+As shipped, the file is mostly filled with zeroes, and this is why the
+fourmeg.zip file can be compressed so efficiently. :^)  In fact, the
+file is generated from the /dev/zero device (a never-ending supply of
+zeros) using the 'dd' utility.  It is then formatted using the 'mkswap'
+program.  Here's how to make a swap file manually:
+
+dd if=/dev/zero of=swapfile bs=1k count=8192
+mkswap swapfile
+sync
+
+If you need a larger swapfile, simply increase the value of 'count'.
+
+To activate a swapfile manually, you can use 'swapon':
+
+swapon /root/swapfile
+
+Or, to have it made active with every boot, make sure there's a line for
+it in your /etc/fstab like this one:
+
+/root/swapfile        swap     swap        defaults   0   0
+
+Have fun!
+
+---
+Patrick Volkerding
+volkerdi@slackware.com

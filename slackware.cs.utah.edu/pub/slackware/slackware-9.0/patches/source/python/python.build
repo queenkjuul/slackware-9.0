@@ -1,0 +1,26 @@
+CWD=`pwd`
+
+VERSION=2.2.3
+ARCH=i386
+BUILD=1
+
+cd /tmp
+tar xjvf $CWD/Python-$VERSION.tar.bz2
+cd Python-$VERSION
+zcat $CWD/python-2.2-xmlrpc.diff.gz | patch -p0 --verbose --backup --suffix=.orig
+./configure --prefix=/usr \
+            --with-ncurses \
+            --with-threads
+make OPT=-O2
+make OPT=-O2 install
+# Install docs:
+mkdir /usr/doc/python-$VERSION
+cp -a README /usr/doc/python-$VERSION
+cp -a Misc /usr/doc/python-$VERSION
+( cd /usr/doc/python-$VERSION ; mkdir html )
+( cd /usr/doc/python-$VERSION/html
+  tar xjvf $CWD/html-$VERSION.tar.bz2 )
+chown -R root.root /usr/doc/python-$VERSION
+
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

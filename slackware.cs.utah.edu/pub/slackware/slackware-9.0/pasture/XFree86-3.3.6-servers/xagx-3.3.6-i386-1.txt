@@ -1,0 +1,11 @@
+xagx: An accelerated server for IIT AGX chipsets.
+xagx:
+xagx: This server supports the IIT AGX-016, AGX-015, AGX-014 and XGA-2
+xagx: chipsets.  There's also untested support for the XGA-1 and AGX-010
+xagx: chipsets.
+xagx:
+xagx: Installing this package will create a link in /usr/X11R6/bin from
+xagx: XF86_AGX to X, setting this server as the default.
+xagx:
+xagx:
+xagx:

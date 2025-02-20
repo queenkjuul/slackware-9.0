@@ -1,0 +1,13 @@
+
+This is ZipSlack split into smaller Zip files that can fit on floppy disks.
+These might be useful for installing on a laptop with only a floppy disk for
+input, or to make downloading a little easier.  To install, extract *all* of
+the .zip files in C:\, D:\, or some other top-level DOS/Windows drive directory.
+The archives will make their own C:\linux directory.
+
+Then, just follow the usual ZipSlack directions to get it going.
+
+Have fun! :)
+
+P.
+

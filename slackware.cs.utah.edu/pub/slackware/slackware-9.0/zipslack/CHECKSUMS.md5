@@ -1,0 +1,58 @@
+These are the MD5 message digests for the files in this directory.
+If you want to test your files, use 'md5sum' and compare the values to
+the ones listed here.
+
+To test all these files, use this command:
+
+md5sum -c CHECKSUMS.md5 | less
+
+'md5sum' can be found in the GNU coreutils package on ftp.gnu.org in
+/pub/gnu, or at any GNU mirror site.
+
+MD5 message digest                Filename
+5dfcb3438f9c0ab38c7d88041a8669a5  ./ChangeLog.txt
+ca9c7d0f9e6fc081ad33fced4a86b1a4  ./FAQ.TXT
+f46bf6c3d1c925a05de879a4ed5d994f  ./RAWRITE.EXE
+1d0954d71851e55ffa27bc6107ee95eb  ./RAWRITE12.DOC
+7dac6ea496014d32dbce6c50feb254ca  ./RAWRITE12.EXE
+f46bf6c3d1c925a05de879a4ed5d994f  ./RAWRITE13.EXE
+b321f719ec1d93e81ae78bd9f9ae225e  ./RAWRITENT.DOC
+f9af2d209376613985dc75318461072a  ./RAWRITENT.EXE
+675cedf3a167fcefa44339ae1e1d2e2d  ./RAWRITEXP.EXE
+a8fef4fb091291104ab04d107904bc3f  ./README.1st
+701dba455f0e532fb00c2b9610720e3e  ./README.ppa
+a6b2c03318cf8b88d36af2ff2fa4412b  ./bootdisk.img
+bd20f2035573f285e9d9684ae5638de0  ./fourmeg.txt
+4068e4b3df8c26e2667c8e94069dd484  ./fourmeg.zip
+49e38d7f2c70b3bba5705f4bc35ff4fa  ./split/README
+03299dbdce927db5c6a781b2425469f1  ./split/zipsla01.zip
+926bcb832c1849a6abefb90d7b067f2e  ./split/zipsla02.zip
+a7c07dba982c2f92a6effa96cb294b05  ./split/zipsla03.zip
+9d3e6136767d6e2ec4bbcdedbf1a784f  ./split/zipsla04.zip
+ea3d9a3756216a390fed3aef98efdedc  ./split/zipsla05.zip
+e4278aa7268a1bc935169f13dcf890b7  ./split/zipsla06.zip
+26ee6128ca7b30be3782013a0755d5a6  ./split/zipsla07.zip
+bb3320ab39a5e47201c8864e898ec9ed  ./split/zipsla08.zip
+daacfa72d16f6fbc1aa7ba16422b2cd4  ./split/zipsla09.zip
+939968b63faa0967288595cc303030c0  ./split/zipsla10.zip
+261acce0be15b50031fd0b91915f9c38  ./split/zipsla11.zip
+50003fd1467031920ac58feed85b44de  ./split/zipsla12.zip
+e3f81a7a23952b6f4a8c3eee864f656c  ./split/zipsla13.zip
+d2547c4f47d2d585238c69cfe32daf66  ./split/zipsla14.zip
+a72f6b3df93a10cde8b9de05a428b0d9  ./split/zipsla15.zip
+7f5e0d8f53cb20a6f1105dd4a4a7bd77  ./split/zipsla16.zip
+d5cdfd6c8ef97824bc1a40b897d7f2b8  ./split/zipsla17.zip
+35a141bb32a73813d3214cda93502d0c  ./split/zipsla18.zip
+5126dbf2dd2672e9549260e17053db56  ./split/zipsla19.zip
+d6f50d9ac8f481b0201bd343b69e8c4d  ./split/zipsla20.zip
+ec7d824a0216222c62bec1d16f60b4f0  ./split/zipsla21.zip
+e108723a44863f981471a2a0d6196780  ./split/zipsla22.zip
+fed02eead6456eb0fe4b67a44c0e7a67  ./split/zipsla23.zip
+e1efd8adba54ce6951ca75b569f2c8da  ./split/zipsla24.zip
+404c586c01809cb9fc2ed230fa2d55eb  ./split/zipsla25.zip
+b347b7a2de3c8b921bc49afdcd95e0bb  ./split/zipsla26.zip
+6019e2680d3dfd96623984256c18b963  ./split/zipsla27.zip
+a08bf28724ece5a6f6ac2f2d012204c9  ./split/zipsla28.zip
+af283ea7f3d2af6c061699f1be4c9186  ./split/zipsla29.zip
+3d51ecabd2d22743935f4be277781452  ./split/zipsla30.zip
+df686903ce2dba5c8fcb96513b11d9a9  ./zipslack.zip

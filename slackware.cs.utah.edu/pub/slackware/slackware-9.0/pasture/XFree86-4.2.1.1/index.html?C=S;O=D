@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/pasture/XFree86-4.2.1.1</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/pasture/XFree86-4.2.1.1</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/pasture/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-misc-4.2.1-noarch-1.tgz">xfree86-fonts-misc-4.2.1-noarch-1.tgz</a></td><td align="right">2002-01-26 21:36  </td><td align="right"> 16M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-4.2.1.1-i386-2.tgz">xfree86-4.2.1.1-i386-2.tgz</a></td><td align="right">2003-02-08 19:47  </td><td align="right"> 13M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-100dpi-4.2.1-noarch-1.tgz">xfree86-fonts-100dpi-4.2.1-noarch-1.tgz</a></td><td align="right">2002-01-26 21:36  </td><td align="right"> 12M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-devel-4.2.1.1-i386-1.tgz">xfree86-devel-4.2.1.1-i386-1.tgz</a></td><td align="right">2003-01-02 22:12  </td><td align="right">4.5M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-scale-4.2.1-noarch-1.tgz">xfree86-fonts-scale-4.2.1-noarch-1.tgz</a></td><td align="right">2002-01-26 21:36  </td><td align="right">2.2M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-xvfb-4.2.1.1-i386-1.tgz">xfree86-xvfb-4.2.1.1-i386-1.tgz</a></td><td align="right">2003-01-02 22:14  </td><td align="right">1.2M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-xnest-4.2.1.1-i386-1.tgz">xfree86-xnest-4.2.1.1-i386-1.tgz</a></td><td align="right">2003-01-02 22:14  </td><td align="right">1.1M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-docs-html-4.2.1.1-noarch-1.tgz">xfree86-docs-html-4.2.1.1-noarch-1.tgz</a></td><td align="right">2003-01-02 22:14  </td><td align="right">1.1M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-xprt-4.2.1.1-i386-1.tgz">xfree86-xprt-4.2.1.1-i386-1.tgz</a></td><td align="right">2003-01-02 22:14  </td><td align="right">833K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-fonts-cyrillic-4.2.1-noarch-1.tgz">xfree86-fonts-cyrillic-4.2.1-noarch-1.tgz</a></td><td align="right">2002-01-26 21:36  </td><td align="right">360K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xfree86-docs-4.2.1.1-noarch-1.tgz">xfree86-docs-4.2.1.1-noarch-1.tgz</a></td><td align="right">2003-01-02 22:13  </td><td align="right">196K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="fontconfig-1.0.1-i386-4.tgz">fontconfig-1.0.1-i386-4.tgz</a></td><td align="right">2003-02-16 04:14  </td><td align="right"> 87K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="xft2-2.0.0-i386-2.tgz">xft2-2.0.0-i386-2.tgz</a></td><td align="right">2003-02-13 23:14  </td><td align="right"> 40K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-xvfb-4.2.1.1-i386-1.txt">xfree86-xvfb-4.2.1.1-i386-1.txt</a></td><td align="right">2003-01-02 22:14  </td><td align="right">645 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-xnest-4.2.1.1-i386-1.txt">xfree86-xnest-4.2.1.1-i386-1.txt</a></td><td align="right">2003-01-02 22:14  </td><td align="right">547 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-devel-4.2.1.1-i386-1.txt">xfree86-devel-4.2.1.1-i386-1.txt</a></td><td align="right">2003-01-02 22:12  </td><td align="right">450 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-docs-html-4.2.1.1-noarch-1.txt">xfree86-docs-html-4.2.1.1-noarch-1.txt</a></td><td align="right">2003-01-02 22:14  </td><td align="right">372 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-100dpi-4.2.1-noarch-1.txt">xfree86-fonts-100dpi-4.2.1-noarch-1.txt</a></td><td align="right">2002-01-26 21:36  </td><td align="right">367 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-cyrillic-4.2.1-noarch-1.txt">xfree86-fonts-cyrillic-4.2.1-noarch-1.txt</a></td><td align="right">2002-01-26 21:36  </td><td align="right">365 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-scale-4.2.1-noarch-1.txt">xfree86-fonts-scale-4.2.1-noarch-1.txt</a></td><td align="right">2002-01-26 21:36  </td><td align="right">356 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-fonts-misc-4.2.1-noarch-1.txt">xfree86-fonts-misc-4.2.1-noarch-1.txt</a></td><td align="right">2002-01-26 21:36  </td><td align="right">325 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-docs-4.2.1.1-noarch-1.txt">xfree86-docs-4.2.1.1-noarch-1.txt</a></td><td align="right">2003-01-02 22:13  </td><td align="right">290 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-4.2.1.1-i386-2.txt">xfree86-4.2.1.1-i386-2.txt</a></td><td align="right">2003-02-08 19:47  </td><td align="right">278 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="fontconfig-1.0.1-i386-4.txt">fontconfig-1.0.1-i386-4.txt</a></td><td align="right">2003-02-16 04:14  </td><td align="right">252 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xfree86-xprt-4.2.1.1-i386-1.txt">xfree86-xprt-4.2.1.1-i386-1.txt</a></td><td align="right">2003-01-02 22:14  </td><td align="right">191 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xft2-2.0.0-i386-2.tgz.asc">xft2-2.0.0-i386-2.tgz.asc</a></td><td align="right">2003-02-13 23:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-xvfb-4.2.1.1-i386-1.tgz.asc">xfree86-xvfb-4.2.1.1-i386-1.tgz.asc</a></td><td align="right">2003-01-02 22:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-xprt-4.2.1.1-i386-1.tgz.asc">xfree86-xprt-4.2.1.1-i386-1.tgz.asc</a></td><td align="right">2003-01-02 22:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-xnest-4.2.1.1-i386-1.tgz.asc">xfree86-xnest-4.2.1.1-i386-1.tgz.asc</a></td><td align="right">2003-01-02 22:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-scale-4.2.1-noarch-1.tgz.asc">xfree86-fonts-scale-4.2.1-noarch-1.tgz.asc</a></td><td align="right">2002-01-26 21:36  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-misc-4.2.1-noarch-1.tgz.asc">xfree86-fonts-misc-4.2.1-noarch-1.tgz.asc</a></td><td align="right">2002-01-26 21:36  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-cyrillic-4.2.1-noarch-1.tgz.asc">xfree86-fonts-cyrillic-4.2.1-noarch-1.tgz.asc</a></td><td align="right">2002-01-26 21:36  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-fonts-100dpi-4.2.1-noarch-1.tgz.asc">xfree86-fonts-100dpi-4.2.1-noarch-1.tgz.asc</a></td><td align="right">2002-01-26 21:36  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-docs-html-4.2.1.1-noarch-1.tgz.asc">xfree86-docs-html-4.2.1.1-noarch-1.tgz.asc</a></td><td align="right">2003-01-02 22:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-docs-4.2.1.1-noarch-1.tgz.asc">xfree86-docs-4.2.1.1-noarch-1.tgz.asc</a></td><td align="right">2003-01-02 22:13  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-devel-4.2.1.1-i386-1.tgz.asc">xfree86-devel-4.2.1.1-i386-1.tgz.asc</a></td><td align="right">2003-01-02 22:12  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="xfree86-4.2.1.1-i386-2.tgz.asc">xfree86-4.2.1.1-i386-2.tgz.asc</a></td><td align="right">2003-02-08 19:47  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="fontconfig-1.0.1-i386-4.tgz.asc">fontconfig-1.0.1-i386-4.tgz.asc</a></td><td align="right">2003-02-16 04:14  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="xft2-2.0.0-i386-2.txt">xft2-2.0.0-i386-2.txt</a></td><td align="right">2003-02-13 23:14  </td><td align="right">173 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

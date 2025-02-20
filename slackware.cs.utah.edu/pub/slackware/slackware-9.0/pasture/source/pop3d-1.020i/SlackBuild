@@ -1,0 +1,54 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-pop3d
+
+VERSION=1.020i
+ARCH=i386
+BUILD=1
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+==============+"
+echo "| pop3d-$VERSION |"
+echo "+==============+"
+cd $TMP
+tar xzvf $CWD/pop3d-$VERSION.tar.gz
+cd pop3d
+make -f Makefile.Linux
+strip in.pop3d
+mkdir -p $PKG/usr/sbin
+cat pop3d > $PKG/usr/sbin/pop3d
+cat $CWD/flushpop.sh > $PKG/usr/sbin/flushpop.sh
+chown -R root.bin $PKG/usr/sbin
+chmod 755 $PKG/usr/sbin/*
+mkdir -p $PKG/usr/man/man8
+gzip -9c pop3d.man > $PKG/usr/man/man8/pop3d.8.gz
+mkdir -p $PKG/usr/doc/pop3d-$VERSION
+cp -a \
+  CHANGES README.1st README.INSTALL README.popmotd RFC1939 \
+  $PKG/usr/doc/pop3d-$VERSION
+chmod 644 $PKG/usr/doc/pop3d-$VERSION/*
+chown -R root.root $PKG/usr/doc/pop3d-$VERSION
+mkdir -p $PKG/var/spool/pop
+chmod 1775 $PKG/var/spool/pop
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+echo "n" | makepkg $TMP/pop3d-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/pop3d-$VERSION
+  rm -rf $PKG
+fi

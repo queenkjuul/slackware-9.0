@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/kde-i18n/koffice</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/kde-i18n/koffice</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/kde-i18n/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-af-1.2.1.tar.bz2">koffice-i18n-af-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:03  </td><td align="right">454K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-ar-1.2.1.tar.bz2">koffice-i18n-ar-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:05  </td><td align="right">475K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-bs-1.2.1.tar.bz2">koffice-i18n-bs-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:06  </td><td align="right">406K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-cs-1.2.1.tar.bz2">koffice-i18n-cs-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:07  </td><td align="right">534K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-da-1.2.1.tar.bz2">koffice-i18n-da-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:09  </td><td align="right">751K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-de-1.2.1.tar.bz2">koffice-i18n-de-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:15  </td><td align="right">2.6M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-el-1.2.1.tar.bz2">koffice-i18n-el-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:16  </td><td align="right">518K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-en_GB-1.2.1.tar.bz2">koffice-i18n-en_GB-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:17  </td><td align="right">536K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-eo-1.2.1.tar.bz2">koffice-i18n-eo-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:18  </td><td align="right">538K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-es-1.2.1.tar.bz2">koffice-i18n-es-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:20  </td><td align="right">857K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-et-1.2.1.tar.bz2">koffice-i18n-et-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:20  </td><td align="right">567K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-fr-1.2.1.tar.bz2">koffice-i18n-fr-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:23  </td><td align="right">2.6M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-he-1.2.1.tar.bz2">koffice-i18n-he-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:23  </td><td align="right">514K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-hu-1.2.1.tar.bz2">koffice-i18n-hu-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:24  </td><td align="right">551K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-it-1.2.1.tar.bz2">koffice-i18n-it-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:25  </td><td align="right">560K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-ja-1.2.1.tar.bz2">koffice-i18n-ja-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:25  </td><td align="right">547K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-lt-1.2.1.tar.bz2">koffice-i18n-lt-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:26  </td><td align="right">465K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-lv-1.2.1.tar.bz2">koffice-i18n-lv-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:26  </td><td align="right">428K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-mt-1.2.1.tar.bz2">koffice-i18n-mt-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:27  </td><td align="right">520K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-nb-1.2.1.tar.bz2">koffice-i18n-nb-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:27  </td><td align="right">501K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-nl-1.2.1.tar.bz2">koffice-i18n-nl-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:28  </td><td align="right">569K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-nn-1.2.1.tar.bz2">koffice-i18n-nn-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:28  </td><td align="right">495K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-pl-1.2.1.tar.bz2">koffice-i18n-pl-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:29  </td><td align="right">710K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-pt-1.2.1.tar.bz2">koffice-i18n-pt-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:29  </td><td align="right">512K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-pt_BR-1.2.1.tar.bz2">koffice-i18n-pt_BR-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:30  </td><td align="right">663K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-ru-1.2.1.tar.bz2">koffice-i18n-ru-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:31  </td><td align="right">830K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-sk-1.2.1.tar.bz2">koffice-i18n-sk-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:32  </td><td align="right">1.2M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-sl-1.2.1.tar.bz2">koffice-i18n-sl-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:33  </td><td align="right">563K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-sv-1.2.1.tar.bz2">koffice-i18n-sv-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:37  </td><td align="right">3.7M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-th-1.2.1.tar.bz2">koffice-i18n-th-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:37  </td><td align="right">476K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-tr-1.2.1.tar.bz2">koffice-i18n-tr-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:38  </td><td align="right">424K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-uk-1.2.1.tar.bz2">koffice-i18n-uk-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:38  </td><td align="right">498K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-ven-1.2.1.tar.bz2">koffice-i18n-ven-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:39  </td><td align="right">455K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-xh-1.2.1.tar.bz2">koffice-i18n-xh-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:39  </td><td align="right">561K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-zh_TW-1.2.1.tar.bz2">koffice-i18n-zh_TW-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:40  </td><td align="right">483K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-zu-1.2.1.tar.bz2">koffice-i18n-zu-1.2.1.tar.bz2</a></td><td align="right">2002-12-03 19:40  </td><td align="right">566K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="koffice-i18n-ca-1.2.1.tar.bz2">koffice-i18n-ca-1.2.1.tar.bz2</a></td><td align="right">2002-12-10 00:42  </td><td align="right">513K</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="slack-desc/">slack-desc/</a></td><td align="right">2002-12-13 19:51  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="make-i18n-packages.sh">make-i18n-packages.sh</a></td><td align="right">2002-12-13 19:52  </td><td align="right">1.6K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

@@ -1,0 +1,21 @@
+#!/bin/sh
+VERSION=1.8.17
+CWD=`pwd` 
+cd /tmp
+tar xzvf $CWD/libxml-$VERSION.tar.gz
+cd libxml-$VERSION
+CFLAGS=-O2 ./configure --prefix=/usr \
+            i386-slackware-linux 
+make
+make install
+rm -rf /usr/doc/libxml-$VERSION
+mkdir -p /usr/doc/libxml-$VERSION
+cp -a \
+  AUTHORS COPYING COPYING.LIB INSTALL NEWS README \
+  /usr/doc/libxml-$VERSION
+chmod 644 /usr/doc/libxml-$VERSION/*
+chown -R root.root /usr/doc/libxml-$VERSION
+( cd /usr/doc/libxml-$VERSION
+  ln -sf /usr/share/gnome-xml/html/gnome-xml htmldocs )
+mkdir /install
+cat $CWD/slack-desc > /install/slack-desc

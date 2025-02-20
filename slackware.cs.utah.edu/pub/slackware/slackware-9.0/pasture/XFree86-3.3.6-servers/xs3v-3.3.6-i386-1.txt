@@ -1,0 +1,11 @@
+xs3v: An accelerated server for cards using S3 ViRGE chips.
+xs3v:
+xs3v: The current XF86_S3V server supports the S3 ViRGE (86C325), the
+xs3v: ViRGE/DX (86C375), ViRGE/GX (86C385) and the ViRGE/VX (86C988) chips.
+xs3v: It has been tested with ViRGE cards with 2 and 4MB DRAM, ViRGE/DX 4M,
+xs3v: ViRGE/VX 8M (4M VRAM/4M DRAM), and with a 220MHz ViRGE/VX card with
+xs3v: 2MB VRAM up to 1600x1200 with 8/15/16bpp.  Note that the XF86_SVGA
+xs3v: server also supports these chipsets (and others).  It's recommended to
+xs3v: try using that first.  Installing this package will create a link in
+xs3v: /usr/X11R6/bin from XF86_S3V to X, setting this server as the default.
+xs3v:

@@ -1,0 +1,11 @@
+xi128: A server for the Number Nine Imagine 128.
+xi128:
+xi128: This server supports the Number Nine Imagine 128. (series I and II)
+xi128: Installing this package will create a link in /usr/X11R6/bin from
+xi128: XF86_I128 to X, setting this server as the default.
+xi128:
+xi128:
+xi128:
+xi128:
+xi128:
+xi128:

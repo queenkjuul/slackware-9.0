@@ -1,0 +1,11 @@
+xma8: An accelerated server for cards using Mach8 chips.
+xma8:
+xma8: Installing this package will create a link in /usr/X11R6/bin from
+xma8: XF86_Mach8 to X, setting this server as the default.
+xma8:
+xma8:
+xma8:
+xma8:
+xma8:
+xma8:
+xma8:

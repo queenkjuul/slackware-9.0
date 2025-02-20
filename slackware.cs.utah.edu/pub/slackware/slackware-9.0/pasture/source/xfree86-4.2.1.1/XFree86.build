@@ -1,0 +1,179 @@
+#!/bin/sh
+#
+# Build and install XFree86-4.2.1.1 on Slackware Linux.
+#
+
+# *****************************************************
+# **************  GLIDE SUPPORT  **********************
+# *****************************************************
+# If you want to build against Glide, run with $1 = YES
+# See more info below.
+GLIDE=$1
+
+if [ "$GLIDE" = "YES" ]; then
+  echo "*** building X with Glide support ***"
+  sleep 10
+else
+  echo "*** building X without Glide support ***"
+  sleep 10
+fi
+
+CWD=`pwd`
+cd /tmp
+tar xjvf $CWD/X420src-1.tar.bz2
+tar xjvf $CWD/X420src-2.tar.bz2
+tar xjvf $CWD/X420src-3.tar.bz2
+cd xc
+zcat $CWD/xf86site.def.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/site.def.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/Xlib.h.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/xclock.glibc.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/linux.cf.zlib.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+zcat $CWD/4.2.0-4.2.1.1.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+
+if [ "$GLIDE" = "YES" ]; then
+# This edits xf86site.def to add HasGlide3.  You'll need to install the a DRI capable
+# version of Glide for your video card class (voodoo3/banshee, or voodoo4/5), then the
+# tdfx DRI module will be built for that card.
+zcat $CWD/glide.diff.gz | patch -p1 --backup --verbose --suffix=.orig -E
+fi
+
+# Replace included freetype2 (2.0.6) with the latest stable version (2.0.9):
+( cd extras
+  tar xjf $CWD/freetype-2.0.9.tar.bz2
+  rm -rf freetype2
+  mv freetype-2.0.9 freetype2
+  chown -R root.root freetype2
+)
+
+# We may be splitting this out at a later date.  Also, it seems prudent to move this into
+# /usr rather than /usr/X11R6, as *many* source bits won't find ft2build.h in /usr/X11R6/include
+# without some patching.  Therefore, --prefix=/usr must be the ad-hoc standard.  Another
+# rationale:  /usr is also the prefix for freetype1 (for as long as that sticks around),
+# and putting them in different prefixes causes problems.  Also, we're bumping the -march
+# from i386 to i486, as I can't imagine too many people are running the latest Slackware
+# with X on a 386 in the year 2002.  If there are, maybe they can get away with running an
+# earlier version of X.  :-) 
+echo "#define Freetype2Dir     /usr" > /tmp/xc/config/cf/host.def
+# This is not a good idea...  trying to avoid letting XFree86 build it's own freetype2 has
+# wasted many hours here always leading to a failed build or no libXft.  It's best to let
+# X just do it's own thing and then fix the problems with freetype2 after the build.
+#echo "#define BuildFreetype2Library NO" >> /tmp/xc/config/cf/host.def
+( cd extras/freetype2
+  CFLAGS="-O2 -march=i486 -mcpu=i686" make setup CFG="--prefix=/usr i386-slackware-linux"
+  make
+  make install
+)
+
+# Build and install XFree86:
+make World -i CDEBUGFLAGS="-O2 -march=i486 -mcpu=i686"
+make install
+make install.man
+
+## Nice to see my patch was accepted. :-)
+## Fix slight startx bug:
+#( cd /usr/X11R6/bin
+#  zcat $CWD/startx.diff.gz | patch -p1 --verbose )
+
+# Wipe/recompile freetype2 (trust me :)
+# We could actually use a newer version at this point...
+rm -f /usr/include/ft2build.h /usr/X11R6/include/ft2build.h
+rm -rf /usr/include/freetype2 /usr/X11R6/include/freetype2
+rm -f /usr/bin/freetype-config /usr/X11R6/bin/freetype-config
+rm -f /usr/lib/libfreetype.* /usr/X11R6/lib/libfreetype.*
+( cd extras/freetype2
+  make clean
+  CFLAGS="-O2 -march=i486 -mcpu=i686" make setup CFG="--prefix=/usr i386-slackware-linux"
+  make
+  make install
+)
+
+# Just to be on the safe side, we should provide Compose files where
+# they are missing, as it's been known to cause a crash.
+for dir in /usr/X11/lib/X11/locale/* ; do
+  if [ -d $dir ]; then
+    if [ -r $dir/XI18N_OBJS -o -r $dir/XLC_LOCALE ]; then
+      if [ ! -r $dir/Compose ]; then
+        NAME=`basename $dir`
+        CAPN=`echo $NAME | tr [a-z] [A-Z]`
+        cat << EOF > $dir/Compose
+#
+# $CAPN Compose Sequence
+#
+# Sequence Definition
+#
+# \$XFree86: xc/nls/Compose/$NAME,v 1.2 `date` volkerdi Exp $
+#
+# This file currently has no entries.  It appears that a compose file (even
+# just an empty one) is required for the appropriate keysyms to work for
+# this encoding.
+#
+# <Multi_key> Means <Compose>
+# Special Character
+
+# End of Sequence Definition
+EOF
+      fi
+    fi
+  fi
+done
+
+#mkdir -p /usr/X11R6/lib/fonts/CID
+#if [ ! -r /usr/X11R6/lib/fonts/CID/fonts.dir ]; then
+#  echo 0 > /usr/X11R6/lib/fonts/CID/fonts.dir
+#fi
+#if [ ! -r /usr/X11R6/lib/fonts/CID/fonts.scale ]; then
+#  echo 0 > /usr/X11R6/lib/fonts/CID/fonts.scale
+#fi
+
+mkdir -p /usr/X11R6/lib/X11/fonts/misc
+cat $CWD/linux8x16.pcf.gz > /usr/X11R6/lib/X11/fonts/misc/linux8x16.pcf.gz
+cat $CWD/linux8x8.pcf.gz > /usr/X11R6/lib/X11/fonts/misc/linux8x8.pcf.gz
+
+rm -f /usr/X11R6/lib/X11/config/host.def
+rm -rf /install
+mkdir /install
+cat $CWD/xfree86-devel/doinst.sh > /install/doinst.sh
+
+cat $CWD/xinit/README.Xmodmap > /etc/X11/xinit/README.Xmodmap
+cat $CWD/xinit/.Xmodmap > /etc/X11/xinit/.Xmodmap
+
+cp -a /etc/X11/xdm/Xsession /etc/X11/xdm/Xsession.orig
+cp -a /etc/X11/xdm/Xsetup_0 /etc/X11/xdm/Xsetup_0.orig
+cat $CWD/xdm/Xsession > /etc/X11/xdm/Xsession
+cat $CWD/xdm/Xsetup_0 > /etc/X11/xdm/Xsetup_0
+cat $CWD/xdm/Xsession.orig > /etc/X11/xdm/Xsession.orig
+cat $CWD/xdm/Xsetup_0.orig > /etc/X11/xdm/Xsetup_0.orig
+
+if [ "$GLIDE" = "YES" ]; then
+  cat $CWD/README.tdfx > /usr/X11R6/lib/modules/dri/README.tdfx
+fi
+
+rm -f /usr/X11R6/lib/libz.a
+
+cat $CWD/XftConfig/XftConfig > /usr/X11R6/lib/X11/XftConfig
+cat $CWD/XftConfig/XftConfig.orig > /usr/X11R6/lib/X11/XftConfig.orig
+
+( cd /usr/X11R6/lib/X11/fonts/misc
+  mkfontdir -e /usr/X11R6/lib/X11/fonts/encodings -e /usr/X11R6/lib/X11/fonts/encodings/large .
+)
+
+( cd /etc/X11/xdm
+  rm authdir
+  ln -sf ../../../var/lib/xdm authdir
+)
+( cd /etc/X11/xkb
+  rm compiled
+  ln -sf ../../../var/lib/xkb compiled
+)
+
+mkdir -p /install
+cp $CWD/slack-desc/slack-desc.* /install
+
+mv /etc/X11/xinit/xinitrc /etc/X11/xinit/xinitrc.twm
+
+cat << EOF
+
+Slackware X build complete!
+
+EOF

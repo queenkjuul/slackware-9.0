@@ -1,0 +1,11 @@
+xfree86-xprt: xfree86-xprt (a print-only X server)
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:
+xfree86-xprt:

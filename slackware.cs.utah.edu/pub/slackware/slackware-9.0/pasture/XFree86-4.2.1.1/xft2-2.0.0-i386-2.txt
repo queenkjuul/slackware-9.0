@@ -1,0 +1,11 @@
+xft2: xft2
+xft2:
+xft2: Xft is a simple library designed to interface the FreeType rasterizer
+xft2: with the X Rendering Extension.
+xft2:
+xft2:
+xft2:
+xft2:
+xft2:
+xft2:
+xft2:

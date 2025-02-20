@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/openssl</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/openssl</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="openssl-0.9.7.fix.uninitialized.pointer.diff.gz">openssl-0.9.7.fix.uninitialized.pointer.diff.gz</a></td><td align="right">2006-09-29 02:29  </td><td align="right">274 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="openssl.soname.diff.gz">openssl.soname.diff.gz</a></td><td align="right">2003-04-20 20:45  </td><td align="right">340 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="openssl.opts.diff.gz">openssl.opts.diff.gz</a></td><td align="right">2004-03-17 22:42  </td><td align="right">437 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.openssl">slack-desc.openssl</a></td><td align="right">2002-04-06 20:23  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.openssl-solibs">slack-desc.openssl-solibs</a></td><td align="right">2002-03-23 22:11  </td><td align="right">1.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="openssl.SlackBuild">openssl.SlackBuild</a></td><td align="right">2006-09-29 03:17  </td><td align="right">4.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="openssl-0.9.7l.tar.bz2">openssl-0.9.7l.tar.bz2</a></td><td align="right">2006-09-28 12:08  </td><td align="right">2.5M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

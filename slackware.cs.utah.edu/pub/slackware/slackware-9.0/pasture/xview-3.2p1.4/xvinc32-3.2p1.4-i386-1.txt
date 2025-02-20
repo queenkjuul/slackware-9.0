@@ -1,0 +1,11 @@
+xvinc32: Include files for xview3.2p1-X11R6.LinuxELF.4
+xvinc32:
+xvinc32: Include files needed for Xview programming.
+xvinc32:
+xvinc32:
+xvinc32:
+xvinc32:
+xvinc32:
+xvinc32:
+xvinc32:
+xvinc32:

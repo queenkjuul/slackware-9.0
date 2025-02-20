@@ -1,0 +1,11 @@
+xfree86-fonts-cyrillic: xfree86-fonts-cyrillic (Cyrillic fonts for the X Window System)
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic: A set of Cyrillic fonts for XFree86.
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic:
+xfree86-fonts-cyrillic:

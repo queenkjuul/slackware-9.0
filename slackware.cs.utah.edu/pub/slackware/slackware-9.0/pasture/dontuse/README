@@ -1,0 +1,9 @@
+This directory is for things that we don't think you should use, but that
+there still might be a good reason that some people might need.  These
+people will (I'm sure :-) take into consideration the possible security
+hazards of deploying anything found here.
+
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/glibc-zoneinfo</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/glibc-zoneinfo</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="timezone-scripts/">timezone-scripts/</a></td><td align="right">2011-11-11 18:10  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc-zoneinfo">slack-desc.glibc-zoneinfo</a></td><td align="right">2011-11-11 18:09  </td><td align="right">969 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="glibc.SlackBuild">glibc.SlackBuild</a></td><td align="right">2011-11-11 17:11  </td><td align="right"> 16K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tzdata2011n.tar.gz">tzdata2011n.tar.gz</a></td><td align="right">2011-11-02 21:27  </td><td align="right">200K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="tzcode2011i.tar.gz">tzcode2011i.tar.gz</a></td><td align="right">2011-11-02 21:27  </td><td align="right">132K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="doinst.sh-glibc-zoneinfo">doinst.sh-glibc-zoneinfo</a></td><td align="right">2010-10-12 19:33  </td><td align="right">736 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc.glibc-zoneinfo.olson">slack-desc.glibc-zoneinfo.olson</a></td><td align="right">2007-04-30 20:52  </td><td align="right">965 </td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

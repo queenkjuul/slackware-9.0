@@ -1,0 +1,11 @@
+xsvga: A server for many SuperVGA video cards.
+xsvga:
+xsvga: Installing this package will create a link in /usr/X11R6/bin from
+xsvga: XF86_SVGA to X, setting this server as the default.
+xsvga:
+xsvga:
+xsvga:
+xsvga:
+xsvga:
+xsvga:
+xsvga:

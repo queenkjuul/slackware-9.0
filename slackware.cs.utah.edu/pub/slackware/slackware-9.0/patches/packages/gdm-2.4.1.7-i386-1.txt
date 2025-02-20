@@ -1,0 +1,11 @@
+gdm: gdm
+gdm:
+gdm: The Gnome Display Manager is a reimplementation of the well known
+gdm: xdm program.  gdm implements all significant features required for
+gdm: managing local and remote displays.
+gdm:
+gdm:
+gdm:
+gdm:
+gdm:
+gdm:

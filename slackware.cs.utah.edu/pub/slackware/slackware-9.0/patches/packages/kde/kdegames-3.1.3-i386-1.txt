@@ -1,0 +1,11 @@
+kdegames: kdegames
+kdegames:
+kdegames: Games for the K Desktop Environment.
+kdegames:
+kdegames: Included with this package are: kasteroids, katomic, kbackgammon,
+kdegames: kblackbox, kbounce, kenolaba, kfouleggs, kjumpingcube, klines,
+kdegames: kmahjongg, kmines, konquest, kpat, kpoker, kreversi, ksame, kshisen,
+kdegames: ksirtet, ksmiletris, ksnake, ksokoban, kspaceduel, ktron, ktuberling,
+kdegames: kwin4, and lskat.
+kdegames:
+kdegames:

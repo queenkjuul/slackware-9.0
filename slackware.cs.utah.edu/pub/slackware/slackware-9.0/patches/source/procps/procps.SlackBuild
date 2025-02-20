@@ -1,0 +1,142 @@
+#!/bin/sh
+# Set initial variables:
+CWD=`pwd`
+if [ "$TMP" = "" ]; then
+  TMP=/tmp
+fi
+PKG=$TMP/package-procps
+
+VERSION=3.1.8
+ARCH=i386
+BUILD=1
+
+# Sometimes this number lags behind...
+SOVER=3.1.8
+
+if [ ! -d $TMP ]; then
+  mkdir -p $TMP # location to build the source
+fi
+if [ ! -d $PKG ]; then
+  mkdir -p $PKG # place for the package to be built
+fi
+
+echo "+==============+"
+echo "| procps-$VERSION |"
+echo "+==============+"
+cd $TMP
+tar xjvf $CWD/procps-$VERSION.tar.bz2
+cd procps-$VERSION
+chown -R root.root .
+mkdir -p $PKG/usr/doc/procps-$VERSION
+cp -a BUGS COPYING COPYING.LIB INSTALL NEWS TODO $PKG/usr/doc/procps-$VERSION
+chown root.root $PKG/usr/doc/procps-$VERSION/*
+chmod 644 $PKG/usr/doc/procps-$VERSION/*
+# Fix a couple annoying things:
+zcat $CWD/procps.ksyms.nowhine.diff.gz | patch -p1 --verbose
+zcat $CWD/procps.nowarning.diff.gz | patch -p1 --verbose
+zcat $CWD/procps.top.nobright.diff.gz | patch -p1 --verbose
+zcat $CWD/procps.top.COMMAND.diff.gz | patch -p1 --verbose
+zcat $CWD/procps.w.showfrom.diff.gz | patch -p1 --verbose
+make OPT="-O2 -march=i386 -mcpu=i686"
+mkdir -p $PKG/lib $PKG/bin $PKG/sbin $PKG/usr/bin
+cat free > $PKG/bin/free
+cat kill > $PKG/bin/kill
+cat ps/ps> $PKG/bin/ps
+cat proc/libproc.so.$SOVER > $PKG/lib/libproc.so.$SOVER
+cat pkill > $PKG/usr/bin/pkill
+cat pmap > $PKG/usr/bin/pmap
+cat sysctl > $PKG/sbin/sysctl
+cat tload > $PKG/usr/bin/tload
+cat top > $PKG/usr/bin/top
+cat uptime > $PKG/usr/bin/uptime
+cat vmstat > $PKG/usr/bin/vmstat
+cat w > $PKG/usr/bin/w
+cat watch > $PKG/usr/bin/watch
+( cd $PKG
+  ( cd usr/bin ; rm -rf skill )
+  ( cd usr/bin ; ln -sf /bin/kill skill )
+  ( cd usr/bin ; rm -rf snice )
+  ( cd usr/bin ; ln -sf /bin/kill snice )
+  ( cd usr/bin ; rm -rf pgrep )
+  ( cd usr/bin ; ln -sf pkill pgrep )
+)
+cp -a ps/ps.1 .
+mkdir -p $PKG/usr/man/man1
+for page in free.1 kill.1 pgrep.1 pkill.1 pmap.1 ps.1 skill.1 snice.1 tload.1 \
+  top.1 uptime.1 w.1 watch.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/$page.gz
+done
+mkdir -p $PKG/usr/man/man5
+cat sysctl.conf.5 | gzip -9c > $PKG/usr/man/man5/sysctl.conf.5.gz
+mkdir -p $PKG/usr/man/man8
+for page in vmstat.8 sysctl.8 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man8/$page.gz
+done
+
+echo "+=============+"
+echo "| psmisc-21.2 |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/psmisc-21.2.tar.gz
+cd psmisc-21.2
+# Maybe we'll turn on NLS when it supports more than
+# just US English. :)
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr --disable-nls
+mkdir -p $PKG/usr/doc/psmisc-21.2
+cp -a AUTHORS COPYING ChangeLog INSTALL NEWS README $PKG/usr/doc/psmisc-21.2
+chmod 644 $PKG/usr/doc/psmisc-21.2/*
+chown root.root $PKG/usr/doc/psmisc-21.2/*
+make
+cd src
+strip fuser pstree killall
+cat fuser > $PKG/usr/bin/fuser
+cat pstree > $PKG/usr/bin/pstree
+cat killall > $PKG/bin/killall
+cd ../doc
+for page in fuser.1 killall.1 pstree.1 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man1/$page.gz
+done
+cd ..
+
+echo "+=============+"
+echo "| procinfo-18 |"
+echo "+=============+"
+cd $TMP
+tar xzvf $CWD/procinfo-18.tar.gz
+cd procinfo-18
+zcat $CWD/procinfo.gcc3.diff.gz | patch -p1 --backup --suffix=.orig --verbose
+mkdir -p $PKG/usr/doc/procinfo-18
+cp -a CHANGES README $PKG/usr/doc/procinfo-18
+chmod 644 $PKG/usr/doc/procinfo-18/*
+chown root.root $PKG/usr/doc/procinfo-18/*
+make CFLAGS="-O2 -march=i386 -mcpu=i686"
+strip procinfo
+cat procinfo > $PKG/usr/bin/procinfo
+cat lsdev.pl > $PKG/usr/bin/lsdev
+cat socklist.pl > $PKG/usr/bin/socklist
+for page in procinfo.8 lsdev.8 socklist.8 ; do
+  cat $page | gzip -9c > $PKG/usr/man/man8/$page.gz
+done
+
+# Fix permissions:
+chmod 755 $PKG/lib/* $PKG/bin/* $PKG/sbin/* $PKG/usr/bin/*
+chown -R root.bin $PKG/bin $PKG/sbin $PKG/usr/bin
+( cd $PKG
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+  find . | xargs file | grep "ELF 32-bit LSB shared object" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+# Build the package:
+cd $PKG
+makepkg -l y -c n $TMP/procps-$VERSION-$ARCH-$BUILD.tgz
+
+# Clean up the extra stuff:
+if [ "$1" = "--cleanup" ]; then
+  rm -rf $TMP/procps-$VERSION
+  rm -rf $TMP/procinfo-18
+  rm -rf $TMP/psmisc-21.2
+  rm -rf $PKG
+fi

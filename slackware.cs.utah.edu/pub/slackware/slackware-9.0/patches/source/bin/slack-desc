@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+   |-----handy-ruler------------------------------------------------------|
+bin: bin (standard utilities found in /bin and /usr/bin)
+bin:
+bin: The "bin" package is a collection of utilities for handling various
+bin: kinds of archives, identifying file types, and processing data.
+bin: Several of these tools are used by system scripts, so this is a
+bin: required package.  The bin package contains these programs:
+bin:
+bin: bban bpe compress diskcopy ed eject file fiz fromdos lha mktemp
+bin: patch rpm2targz rpmoffset run-parts savelog shar splitvt sysvbanner
+bin: tempfile time todos tree unarj unshar uudecode uuencode volname
+bin: which xx zoo

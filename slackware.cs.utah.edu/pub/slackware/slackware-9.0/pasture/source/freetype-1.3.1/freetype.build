@@ -1,0 +1,37 @@
+# Since this file is not in any way associated with gnome or Enlightenment
+# (both just use it) We'll put it in a more acceptable place like 
+# /usr/X11R6 since it seems to belong there and doesn't have any files
+# for autoconf
+#
+# Um, revise that.  If it's not under /usr, enlightenment won't find it
+# properly without a patch.  I can only assume there's other stuff like
+# that out there, and if things expect it under /usr, that's where it
+# should go (at least for now).
+#
+# 4/2001: re-revise that.  It's going in /usr/X11R6, and I'm going to figure
+# out how to make that work.  Part of the grand reorganization, I guess.
+# Finally putting things where they were supposed to be all along.
+#
+# 4/2002: And again, it's going back into /usr.  This time, it's because
+# GTK+-2.0 fails to compile otherwise.  Oh well, this is obsolete now
+# anyway and will hopefully be able to be retired soon.  Not yet though,
+# as I'm sure lots of third party software would miss it...
+
+CWD=`pwd`
+cd /tmp
+tar xzvf $CWD/freetype-1.3.1.tar.gz
+chown -R root.root .
+cd freetype-1.3.1
+CFLAGS="-O2 -march=i386 -mcpu=i686" ./configure --prefix=/usr \
+            --with-locale-dir=/usr/share/locale \
+            --includedir=/usr/include/freetype1 \
+            --enable-static=yes \
+            --enable-shared=yes \
+            i386-slackware-linux
+make
+make install
+mkdir -p /usr/doc/freetype-1.3.1
+cp -a  README announce license.txt readme.1st docs/* \
+   howto/* /usr/doc/freetype-1.3.1
+mkdir -p /install
+cat $CWD/slack-desc > /install/slack-desc

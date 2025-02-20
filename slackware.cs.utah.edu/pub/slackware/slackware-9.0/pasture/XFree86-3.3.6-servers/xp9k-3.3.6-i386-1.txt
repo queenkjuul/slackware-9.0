@@ -1,0 +1,11 @@
+xp9k: An accelerated server for cards using the P9000 chipset.
+xp9k:
+xp9k: Some of the cards this server will work with are the Diamond Viper
+xp9k: VLB, Diamond Viper PCI, Orchid P9000 (and some other clones, such as
+xp9k: the STAR 2000).  Viper Pro and other P9100 and P9130 cards are NOT
+xp9k: supported, but are supported in the p9x00 driver of the SVGA server. 
+xp9k:
+xp9k: Installing this package will create a link in /usr/X11R6/bin from
+xp9k: XF86_P9000 to X, setting this server as the default.
+xp9k:
+xp9k:

@@ -1,0 +1,11 @@
+quanta: quanta
+quanta:
+quanta: Quanta Plus is a web development environment for HTML and associate
+quanta: languages.  It is designed for quick web development and is rapidly
+quanta: becoming a mature editor with a number of great features.  Quanta
+quanta: already has a good deal of PHP support in it including the ability to
+quanta: run a debugger.
+quanta:
+quanta: Quanta Plus is not in any way affiliated with any commercial versions
+quanta: of Quanta.  The primary coders from the original team left the GPL'd
+quanta: version to produce a commercial product.

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/bind</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/bind</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="caching-example/">caching-example/</a></td><td align="right">2008-04-13 21:26  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bind.so_bsdcompat.diff.gz">bind.so_bsdcompat.diff.gz</a></td><td align="right">2006-02-18 19:10  </td><td align="right">280 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bind-9.7.6-P1.tar.gz.asc">bind-9.7.6-P1.tar.gz.asc</a></td><td align="right">2012-06-04 16:26  </td><td align="right">481 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bind-9.7.6-P1.tar.gz.sha1.asc">bind-9.7.6-P1.tar.gz.sha1.asc</a></td><td align="right">2012-06-04 16:26  </td><td align="right">481 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bind-9.7.6-P1.tar.gz.sha256.asc">bind-9.7.6-P1.tar.gz.sha256.asc</a></td><td align="right">2012-06-04 16:26  </td><td align="right">481 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bind-9.7.6-P1.tar.gz.sha512.asc">bind-9.7.6-P1.tar.gz.sha512.asc</a></td><td align="right">2012-06-04 16:26  </td><td align="right">481 </td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="doinst.sh.gz">doinst.sh.gz</a></td><td align="right">2009-05-23 08:11  </td><td align="right">514 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-02-27 02:45  </td><td align="right">791 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="rc.bind">rc.bind</a></td><td align="right">2008-04-13 21:48  </td><td align="right">3.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="bind.SlackBuild">bind.SlackBuild</a></td><td align="right">2012-06-12 16:08  </td><td align="right">4.7K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="3link.sh">3link.sh</a></td><td align="right">2007-06-08 04:48  </td><td align="right">5.0K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="bind-9.7.6-P1.tar.gz">bind-9.7.6-P1.tar.gz</a></td><td align="right">2012-06-04 16:26  </td><td align="right">6.7M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

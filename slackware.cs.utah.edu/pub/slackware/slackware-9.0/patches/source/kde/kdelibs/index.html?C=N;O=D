@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/patches/source/kde/kdelibs</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/patches/source/kde/kdelibs</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/patches/source/kde/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="slack-desc">slack-desc</a></td><td align="right">2002-03-23 23:03  </td><td align="right">1.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="post-3.1.5-kdelibs-ktelnetservice.patch.asc">post-3.1.5-kdelibs-ktelnetservice.patch.asc</a></td><td align="right">2004-05-17 10:13  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="post-3.1.5-kdelibs-ktelnetservice.patch">post-3.1.5-kdelibs-ktelnetservice.patch</a></td><td align="right">2004-05-17 10:13  </td><td align="right">968 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="post-3.1.5-kdelibs-kapplication.patch.asc">post-3.1.5-kdelibs-kapplication.patch.asc</a></td><td align="right">2004-05-17 10:13  </td><td align="right">189 </td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="post-3.1.5-kdelibs-kapplication.patch">post-3.1.5-kdelibs-kapplication.patch</a></td><td align="right">2004-05-17 10:13  </td><td align="right">888 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdelibs.SlackBuild">kdelibs.SlackBuild</a></td><td align="right">2004-05-17 23:33  </td><td align="right">2.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdelibs-3.1.3a.tar.bz2.asc">kdelibs-3.1.3a.tar.bz2.asc</a></td><td align="right">2003-08-18 00:54  </td><td align="right">198 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="kdelibs-3.1.3a.tar.bz2">kdelibs-3.1.3a.tar.bz2</a></td><td align="right">2003-08-18 00:29  </td><td align="right"> 10M</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

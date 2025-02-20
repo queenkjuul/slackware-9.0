@@ -1,0 +1,25 @@
+#!/bin/sh
+CWD=`pwd`
+VERSION=1.0.1
+cd /tmp
+tar xzvf $CWD/fcpackage.2_1.tar.gz
+cd fcpackage.2_1/fontconfig
+chown -R root.root .
+find . -perm 664 -exec chmod 644 {} \;
+CFLAGS="-O2 -march=i386 -mcpu=i686" \
+  ./configure --prefix=/usr \
+              --sysconfdir=/etc \
+            i386-slackware-linux
+make
+make install
+mkdir -p /var/log/setup
+cp $CWD/setup.05.fontconfig /var/log/setup/setup.05.fontconfig
+chown root.root /var/log/setup/setup.05.fontconfig
+chmod 755 /var/log/setup/setup.05.fontconfig
+mkdir -p /usr/doc/fontconfig-$VERSION
+cp -a  \
+  AUTHORS COPYING ChangeLog INSTALL README \
+  /usr/doc/fontconfig-$VERSION
+mkdir -p /install
+cat $CWD/slack-desc.fontconfig > /install/slack-desc
+zcat doinst.sh-fontconfig.gz > /install/doinst.sh

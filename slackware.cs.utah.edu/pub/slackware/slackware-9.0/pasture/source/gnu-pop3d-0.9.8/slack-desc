@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|'
+# on the right side marks the last column you can put a character in.  You must
+# make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':'.
+
+         |-----handy-ruler------------------------------------------------------|
+gnu-pop3d: gnu-pop3d (GNU POP3 daemon)
+gnu-pop3d:
+gnu-pop3d: This is the GNU POP3 server.  The goal of GNU POP is to provide a
+gnu-pop3d: small, fast, efficient, free POP3 server fully compliant with RFCs. 
+gnu-pop3d:
+gnu-pop3d: The GNU POP3 server was written by Jakob 'sparky' Kaivo.
+gnu-pop3d:
+gnu-pop3d:
+gnu-pop3d:
+gnu-pop3d:
+gnu-pop3d:

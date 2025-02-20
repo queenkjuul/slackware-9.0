@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pub/slackware/slackware-9.0/rootdisks</title>
+ </head>
+ <body>
+<h1>Index of /pub/slackware/slackware-9.0/rootdisks</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=D">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/pub/slackware/slackware-9.0/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE.EXE">RAWRITE.EXE</a></td><td align="right">1995-05-12 01:23  </td><td align="right"> 35K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE13.EXE">RAWRITE13.EXE</a></td><td align="right">1995-05-12 01:23  </td><td align="right"> 35K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE12.DOC">RAWRITE12.DOC</a></td><td align="right">1997-12-01 01:21  </td><td align="right">2.1K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITE12.EXE">RAWRITE12.EXE</a></td><td align="right">1997-12-01 01:21  </td><td align="right"> 13K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITENT.DOC">RAWRITENT.DOC</a></td><td align="right">2000-08-29 08:23  </td><td align="right">6.0K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITENT.EXE">RAWRITENT.EXE</a></td><td align="right">2000-08-29 08:26  </td><td align="right"> 24K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="RAWRITEXP.EXE">RAWRITEXP.EXE</a></td><td align="right">2001-12-29 04:47  </td><td align="right">200K</td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="rescue.dsk.README">rescue.dsk.README</a></td><td align="right">2002-06-10 21:38  </td><td align="right">637 </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="rescue.dsk">rescue.dsk</a></td><td align="right">2002-06-19 13:43  </td><td align="right">1.1M</td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="network.dsk.README">network.dsk.README</a></td><td align="right">2003-03-10 06:12  </td><td align="right">1.3K</td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="pcmcia.dsk.README">pcmcia.dsk.README</a></td><td align="right">2003-03-10 06:13  </td><td align="right">1.2K</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="network.dsk">network.dsk</a></td><td align="right">2003-03-12 00:44  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="pcmcia.dsk">pcmcia.dsk</a></td><td align="right">2003-03-12 00:49  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/hand.right.gif" alt="[   ]"></td><td><a href="install.zip.README">install.zip.README</a></td><td align="right">2003-03-13 05:09  </td><td align="right"> 16K</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="color.gz">color.gz</a></td><td align="right">2003-03-14 07:20  </td><td align="right">2.2M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install.1">install.1</a></td><td align="right">2003-03-14 07:20  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="install.2">install.2</a></td><td align="right">2003-03-14 07:20  </td><td align="right">1.4M</td></tr>
+<tr><td valign="top"><img src="/icons/compressed.gif" alt="[   ]"></td><td><a href="install.zip">install.zip</a></td><td align="right">2003-03-14 07:20  </td><td align="right">2.4M</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="sbootmgr.dsk">sbootmgr.dsk</a></td><td align="right">2003-03-16 08:38  </td><td align="right">108K</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="README.TXT">README.TXT</a></td><td align="right">2003-03-16 10:05  </td><td align="right">4.0K</td></tr>
+   <tr><th colspan="4"><hr></th></tr>
+</table>
+<address>Apache/2.4.58 (Ubuntu) Server at slackware.cs.utah.edu Port 80</address>
+</body></html>

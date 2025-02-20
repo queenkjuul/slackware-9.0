@@ -1,0 +1,11 @@
+xxfb: Frame buffer X server.
+xxfb:
+xxfb: This X server uses the Linux frame buffer device available with Linux
+xxfb: 2.2.x to provide a general X server for bitmapped, unaccelerated video
+xxfb: hardware.  See /var/X11R6/lib/doc/README.fbdev for more information.
+xxfb: This server is the default for a full installation, since it will
+xxfb: provide a nice high-resolution screen with most modern video cards
+xxfb: if the kernel supports and is set to use the frame buffer console.
+xxfb: Just set your mouse type in /etc/XF86Config if the default (PS/2)
+xxfb: doesn't match your system.
+xxfb:

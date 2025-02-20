@@ -1,0 +1,46 @@
+#!/bin/sh
+CWD=`pwd`
+PKG=/tmp/package-lftp
+
+VERSION=2.6.10
+ARCH=i386
+BUILD=1
+
+if [ "$ARCH" = "i386" ]; then
+  SLKCFLAGS="-O2 -march=i386 -mcpu=i686"
+elif [ "$ARCH" = "i486" ]; then
+  SLKCFLAGS="-O2 -march=i486 -mcpu=i686"
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -march=x86_64"
+fi
+rm -rf $PKG
+mkdir -p $PKG
+cd /tmp
+rm -rf lftp-$VERSION
+tar xjvf $CWD/lftp-$VERSION.tar.bz2
+cd lftp-$VERSION
+chown -R root.root .
+CFLAGS="$SLKCFLAGS" \
+CXXFLAGS="$SLKCFLAGS" \
+./configure --prefix=/usr
+make
+make install DESTDIR=$PKG
+chown -R root.bin $PKG/usr/bin
+( cd $PKG
+  find . | xargs file | grep "executable" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+  find . | xargs file | grep "shared object" | grep ELF | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null
+)
+mv $PKG/etc/lftp.conf $PKG/etc/lftp.conf.new
+mkdir -p $PKG/usr/doc/lftp-$VERSION
+cp -a \
+  ABOUT-NLS BUGS COPYING ChangeLog FAQ FEATURES INSTALL MIRRORS NEWS README README.debug-levels README.modules THANKS TODO lftp.lsm \
+  $PKG/usr/doc/lftp-$VERSION
+chmod 644 $PKG/usr/doc/lftp-$VERSION/*
+gzip -9 $PKG/usr/man/man?/*.?
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+zcat $CWD/doinst.sh.gz > $PKG/install/doinst.sh
+
+cd $PKG
+makepkg -l y -c n ../lftp-$VERSION-$ARCH-$BUILD.tgz
+

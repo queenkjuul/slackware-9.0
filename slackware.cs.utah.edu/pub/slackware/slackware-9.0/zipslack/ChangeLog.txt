@@ -1,0 +1,102 @@
+Tue Mar 18 00:44:43 PST 2003
+bootdisk.img, zipslack.zip:  Patched ptrace bug in the kernel.
+(* Security fix *)
++--------------------------+
+Mon Mar 17 00:05:41 PST 2003
+Added ZipSlack split into floppy-sized chunks in the split/ directory.
++--------------------------+
+Tue Mar 11 20:47:43 PST 2003
+Recompiled kernel and kernel modules.
++--------------------------+
+Mon Mar 10 13:38:02 PST 2003
+Upgraded to aaa_base-9.0.0-noarch-1, hotplug-2002_08_26-noarch-5, and
+  added missing DHCP package (dhcpcd-1.3.22pl4-i386-1).
++--------------------------+
+Sun Mar  9 23:33:34 PST 2003
+Rebuilt ZipSlack from Slackware 9.0-rc2, Linux 2.4.20, and glibc-2.3.1.
++--------------------------+
+Sun Jun 16 16:14:05 PDT 2002
+Renamed /etc/rc.d/rc.keymap to /etc/rc.d/rc.keymap.new to stop it from
+loading by default.  If you want to load a keymap, you'll need to rename
+the file to remove the .new and edit it appropriately.  This change was
+made because if you happen to be booting ZipSlack with one of the kernels
+containing Speakup speech synthesizer support, when the us.map keymap is
+loaded it overwrites the Speakup map built into the kernel, and Speakup
+can no longer be controlled with the numeric keypad.
+----------------------------
+Wed Jun 12 19:56:26 PDT 2002
+Updated aaa_base, pkgtools, sysvinit, and util-linux packages.
+----------------------------
+Mon Jun 10 11:03:47 PDT 2002
+Rebuilt ZipSlack from Slackware 8.1, Linux 2.4.18, and glibc-2.2.5.
+----------------------------
+Tue Jun 26 18:10:25 PDT 2001
+Rebuilt ZipSlack from Slackware 8.0, Linux 2.2.19, and glibc-2.2.3.
+----------------------------
+Tue Jun 20 19:59:43 PDT 2000
+Rebuilt ZipSlack from Slackware 7.1, Linux 2.2.16, and glibc-2.1.3.
+Unfortunately, things keep growing, but the size of a 100MB Zip Disk
+doesn't (they sort of remind me of floppy disks in that regard ;), so
+there are somewhat less features this time around.  In particular,
+there's no longer room for a subset of the kernel sources, which will
+limit what can be compiled unless kernel sources are added.
+----------------------------
+Wed Apr 26 20:40:27 PDT 2000
+Patch kernel to fix crash when ls'ing /dev.
+----------------------------
+Thu Oct 21 18:43:39 CDT 1999
+Upgrade to Linux 2.2.13.
+----------------------------
+Fri Oct 15 10:56:19 CDT 1999
+Make symlinks for /usr/i386-slackware-*, as the kernel mangling algorithm
+doesn't seem to grok directories that long and similar.
+----------------------------
+Thu Oct 14 20:58:42 CDT 1999
+Completely rebuilt ZipSlack from Slackware 7.0, and Linux 2.2.12.
+ZipSlack is now based on glibc-2.1.2.
+Added ZipSlack split into floppy-sized chunks in the split/ directory.
+----------------------------
+Wed Jun 16 21:23:13 CDT 1999
+Two changes were made to zipslack.zip:
+  1.  \--LINUX-.--- was removed, as it was preventing the virtual /DOS
+      directory from working.
+  2.  The default kernel should now have working support for parallel-port
+      Zip drives.
+The bootdisk.img has also been replaced with one using the fixed kernel, and
+the kernel itself can be found in ../kernels/zipslack.s/.
+----------------------------
+Sat May  8 23:38:08 CDT 1999
+New ZipSlack 4.0 release:  ZipSlack rebuilt from Slackware 4.0 packages.  Now
+uses the Linux 2.2.6 kernel.  fourmeg.zip rebuilt for ZipSlack 4.0.
+----------------------------
+Wed Oct 28 04:01:07 CST 1998
+New ZipSlack 3.6 release:  ZipSlack rebuilt from Slackware 3.6 packages.
+fourmeg.zip rebuilt for ZipSlack 3.6.
+----------------------------
+Mon Oct 26 01:45:51 CST 1998
+Upgraded bootdisk.img to linux-2.0.35 for upcoming ZipSlack release.
+----------------------------
+Fri Aug 14 20:59:26 CDT 1998
+Added fourmeg.zip package.  This adds an 8 megabyte swap file to ZipSlack,
+allowing it to boot on machines with only 4 megabytes of RAM.  Hopefully this
+will help make some of those old 386 laptops useful again. :^)
+----------------------------
+Fri Jun  5 21:00:59 PDT 1998
+zipslack.zip rebuilt from the latest Slackware.
+Upgraded bootdisk.img to linux-2.0.34.
+----------------------------
+Wed May 27 02:25:45 CDT 1998
+Rebuilt zipslack.zip from current Slackware snapshot, added 'dip' package,
+      and added PCMCIA support.
+NOTE: This won't allow you to install to a drive connected through a PCMCIA
+      card, only to use PCMCIA devices.  Booting Linux on a PCMCIA device
+      would require using an initial ramdisk (initrd) with PCMCIA support, and
+      my tests here have shown that an initrd doesn't work with a UMSDOS Linux
+      system installed in \LINUX.
+----------------------------
+Tue May 12 23:57:28 CDT 1998
+Updated zipslack.zip archive to use new /vmlinuz, and set -R rdev flag to 0.
+----------------------------
+Fri May  8 22:24:37 CDT 1998
+Recompiled kernel on zipslack.img using newer NCR 53c8xx SCSI driver.  This
+is reported to work better with Diamond SCSI cards.

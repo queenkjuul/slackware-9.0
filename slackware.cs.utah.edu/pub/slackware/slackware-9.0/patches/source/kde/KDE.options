@@ -1,0 +1,16 @@
+# Set default version/arch/build.  You can override these settings
+# in the SlackBuild scripts for each package (koffice, for example,
+# usually has a different version number), or by setting your own
+# environment variables.
+
+export VERSION=3.1.3
+export ARCH=i386
+export BUILD=1
+
+# Target arch (this should be set to i386 for any x86, unless
+# you want problems finding your compiler...):
+export TARGET=i386
+
+# Use this as CFLAGS and CXXFLAGS:
+export CPUOPT=-O2 -march=i386 -mcpu=i686
+

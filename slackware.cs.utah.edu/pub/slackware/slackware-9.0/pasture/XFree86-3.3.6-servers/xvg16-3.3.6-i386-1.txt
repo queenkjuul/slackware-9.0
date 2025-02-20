@@ -1,0 +1,11 @@
+xvg16: A server for 16 color EGA/VGA graphics modes.
+xvg16:
+xvg16: This is a server that uses standard generic video modes -- it works
+xvg16: with nearly all video hardware (but with only 16 colors).  Installing
+xvg16: this package will create a link in /usr/X11R6/bin from XF86_VGA16 to
+xvg16: X, setting this server as the default.
+xvg16:
+xvg16:
+xvg16:
+xvg16:
+xvg16:

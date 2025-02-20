@@ -1,0 +1,18 @@
+These are the X server packages from XFree86 3.3.6.  If you have a video card
+that is not working under XFree86-4.x, you can try installing the appropriate
+3.3.6 server on top of your XFree86-4 installation to see if that gets it
+working.  All of these servers will work fine with the newer libraries that are
+installed with XFree86-4.x.
+
+IMPORTANT!  Unless you either make the servers setuid root (not recommended),
+or install the xwrapper package, X will only be usable by root.  You can pick
+up a copy of the xwrapper package here in this directory.  It contains Xwrapper
+(a setuid root wrapper program for the X binary), and a version of xinit that
+knows to use Xwrapper to start the server.
+
+Also included in this directory is xset.tgz, the XF86Setup tool.  This might
+come in handy for producing your XF86Config file.  To use it, you'll need to
+install both the server for your video card and xvg16.tgz (16 color VGA server).
+
+Have fun!
+

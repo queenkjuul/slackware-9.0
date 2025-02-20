@@ -1,0 +1,11 @@
+koffice-i18n-pl: koffice-i18n-pl
+koffice-i18n-pl:
+koffice-i18n-pl: Polish language support for KOffice.
+koffice-i18n-pl:
+koffice-i18n-pl:
+koffice-i18n-pl:
+koffice-i18n-pl:
+koffice-i18n-pl:
+koffice-i18n-pl:
+koffice-i18n-pl:
+koffice-i18n-pl:

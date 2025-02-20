@@ -1,0 +1,270 @@
+#!/bin/sh
+## build glibc-$VERSION for Slackware
+## by Patrick J. Volkerding <volkerdi@slackware.com>
+CWD=`pwd`
+TMP=${TMP-/tmp}
+
+VERSION=2.3.1
+ARCH=i386
+BUILD=4
+
+VERSION=${VERSION-2.3.1}
+# $ARCH may be preset, otherwise i386 compatibility with i686 binary
+# structuring is the Slackware default now, since this is what gcc-3.2+
+# requires for binary compatibility with previous releases.
+ARCH=${ARCH-i386}
+BUILD=${BUILD-1}
+# This should be i386 for all x86 arch:
+TARGET=${TARGET-i386}
+
+# I'll break this out as an option for fun  :-)
+if [ "$ARCH" = "i386" ]; then
+  OPTIMIZ="-O2 -march=i386 -mcpu=i686"
+elif [ "$ARCH" = "i486" ]; then
+  OPTIMIZ="-O2 -march=i486 -mcpu=i686"
+elif [ "$ARCH" = "i586" ]; then
+  OPTIMIZ="-O2 -march=i586"
+elif [ "$ARCH" = "i686" ]; then
+  OPTIMIZ="-O2 -march=i686"
+elif [ "$ARCH" = "athlon" ]; then
+  OPTIMIZ="-O2 -march=athlon"
+else
+  OPTIMIZ="-O2"
+fi
+
+# This is going to be the initial $DESTDIR:
+export PKG=$TMP/package-glibc-incoming-tree
+# Then we'll compile the following packages from it:
+PGLIBC=$TMP/package-glibc
+PSOLIBS=$TMP/package-glibc-solibs
+PZONE=$TMP/package-glibc-zoneinfo
+PI18N=$TMP/package-glibc-i18n
+PPROFILE=$TMP/package-glibc-profile
+PDEBUG=$TMP/package-glibc-debug
+
+# Empty these locations first:
+for dir in $PKG $PGLIBC $PSOLIBS $PZONE $PI18N $PPROFILE $PDEBUG ; do
+  if [ -d $dir ]; then
+    rm -rf $dir
+  fi
+  mkdir -p $dir
+done
+if [ -d $TMP/glibc-$VERSION ]; then
+  rm -rf $TMP/glibc-$VERSION
+fi
+
+# Create an incoming directory structure for glibc to be built into:
+mkdir -p $PKG/lib
+mkdir -p $PKG/sbin
+mkdir -p $PKG/usr/bin
+mkdir -p $PKG/usr/lib
+mkdir -p $PKG/usr/sbin
+mkdir -p $PKG/usr/include
+mkdir -p $PKG/usr/doc
+mkdir -p $PKG/usr/man
+mkdir -p $PKG/usr/share
+
+cd $TMP
+tar xjvf $CWD/glibc-$VERSION.tar.bz2
+cd glibc-$VERSION
+tar xjvf $CWD/glibc-linuxthreads-$VERSION.tar.bz2
+chown -R root.root .
+
+# Fix compatibility problems with old binaries/libraries [for now]:
+zcat $CWD/glibc-2.3.1-ctype-compat-v2.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-libc_wait-compat.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-prelinkfix.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-stack_end-compat.patch.gz | patch -p1
+zcat $CWD/glibc-2.3.1-dl-runtime.diff.gz | patch -p1
+# Fix a security problem in a function that nothing seems to use.
+# Why not, right?  :-)
+zcat $CWD/glibc-xdrmemsecurity.diff.gz | patch -p1
+
+# Make build directory:
+mkdir build-glibc-$VERSION
+cd build-glibc-$VERSION
+
+CFLAGS="-g $OPTIMIZ" ../configure --prefix=/usr \
+            --enable-add-ons=linuxthreads \
+            --without-cvs \
+            $TARGET-slackware-linux
+
+make
+make install install_root=$PKG
+make localedata/install-locales install_root=$PKG
+
+# The prevailing standard seems to be putting unstripped libraries in
+# /usr/lib/debug/ and stripping the debugging symbols from all the other
+# libraries except the profiling ones:
+mkdir $PKG/usr/lib/debug
+cp -a $PKG/lib/l*.so* $PKG/usr/lib/debug
+cp -a $PKG/usr/lib/*.a $PKG/usr/lib/debug
+# Now strip all other libraries:
+strip -g $PKG/lib/lib*
+strip -g $PKG/usr/lib/l*.so*
+strip -g $PKG/usr/lib/lib*.a
+# Put back unstripped profiling libraries:
+mv $PKG/usr/lib/debug/*_p.a $PKG/usr/lib
+# it might be best to put the unstripped and profiling libraries in glibc-debug and glibc-profile
+
+# Out of the build directory...
+cd ..
+
+# We'll automatically install the config file for the Name Server Cache Daemon.
+# Perhaps this should also have some commented-out startup code in rc.inet2...
+mkdir -p $PKG/etc
+cat nscd/nscd.conf > $PKG/etc/nscd.conf.new
+
+# Not a bad idea to have this here as well:
+( cd $PKG ; tar xzvf $CWD/timezone-scripts.tar.gz )
+
+## Install docs:
+( mkdir -p $PKG/usr/doc/glibc-$VERSION
+  cp -a BUGS CONFORMANCE COPYING COPYING.LIB FAQ INSTALL INTERFACE LICENSES \
+    NAMESPACE NEWS NOTES PROJECTS README README.libm $PKG/usr/doc/glibc-$VERSION
+  cd linuxthreads
+  mkdir -p $PKG/usr/doc/glibc-$VERSION/linuxthreads
+  cp -a Banner FAQ.html LICENSE README README.Xfree3.2 linuxthreads.texi \
+    Examples $PKG/usr/doc/glibc-$VERSION/linuxthreads
+  cd man
+  mkdir $PKG/usr/man/man3
+  for file in *.man ; do
+    cat $file | gzip -9c > $PKG/usr/man/man3/`basename $file .man`.3.gz
+  done 
+  find $PKG/usr/doc/glibc-$VERSION -type d | xargs chmod 755 
+  find $PKG/usr/doc/glibc-$VERSION -type f | xargs chmod 644 )
+
+# Don't forget to add the /usr/share/zoneinfo/localtime -> /etc/localtime symlink! :)
+if [ ! -r $PKG/usr/share/zoneinfo/localtime ]; then
+  ( cd $PKG/usr/share/zoneinfo ; ln -sf /etc/localtime . )
+fi
+
+# OK, there are some very old Linux standards that say that any binaries in a /bin or
+# /sbin directory (and the directories themselves) should be group bin rather than
+# group root, unless a specific group is really needed for some reason.
+#
+# I can't find any mention of this in more recent standards docs, and always thought
+# that it was pretty cosmetic anyway (hey, if there's a reason -- fill me in!), so
+# it's possible that this ownership change won't be followed in the near future
+# (it's a PITA, and causes many bug reports when the perms change is occasionally
+# forgotten).
+#
+# But, it's hard to get me to break old habits, so we'll continue the tradition here:
+chown -R root.bin $PKG/sbin $PKG/usr/bin $PKG/usr/sbin
+
+# Strip most binaries:
+( cd $PKG
+  find . | xargs file | grep "ELF 32-bit LSB executable" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+
+# Fix info dir:
+rm $PKG/usr/info/dir
+gzip -9 $PKG/usr/info/*
+
+# This is junk
+rm $PKG/etc/ld.so.cache
+rm $PKG/sbin/sln
+( cd $PKG
+  find . -name "*.orig" -exec rm {} \;
+)
+
+##################################
+# OK, time to make some packages #
+##################################
+
+# glibc-zoneinfo.  We will start with an easy one to avoid breaking a sweat.  ;-)
+cd $PZONE
+explodepkg $CWD/timezone-scripts.tar.gz
+mkdir $PZONE/install
+cat $CWD/doinst.sh-glibc-zoneinfo > $PZONE/install/doinst.sh
+cat $CWD/slack-desc.glibc-zoneinfo > $PZONE/install/slack-desc
+cd $PZONE/usr/share
+cp -a --verbose $PKG/usr/share/zoneinfo .
+cd $PZONE
+# This is already hard-coded into doinst.sh:
+rm -f etc/localtime
+# Wrap it up:
+makepkg -l y -c n $TMP/glibc-zoneinfo-$VERSION-noarch-$BUILD.tgz
+
+# glibc-profile:
+cd $PPROFILE
+mkdir -p usr/lib
+# Might as well just grab these with 'mv' to simplify things later:
+mv $PKG/usr/lib/lib*_p.a usr/lib
+mkdir install
+cp -a $CWD/slack-desc.glibc-profile install/slack-desc
+makepkg -l y -c n $TMP/glibc-profile-$VERSION-$ARCH-$BUILD.tgz
+
+# glibc-debug:
+cd $PDEBUG
+mkdir -p usr/lib
+# Might as well just grab these with 'mv' to simplify things later:
+mv $PKG/usr/lib/debug usr/lib
+mkdir install
+cp -a $CWD/slack-desc.glibc-debug install/slack-desc
+makepkg -l y -c n $TMP/glibc-debug-$VERSION-$ARCH-$BUILD.tgz
+
+# glibc-i18n:
+cd $PI18N
+mkdir -p usr/lib/locale
+cp -a $PKG/usr/lib/locale/locale-archive usr/lib/locale
+mkdir -p usr/share
+cp -a $PKG/usr/share/i18n usr/share
+mkdir install
+cp -a $CWD/slack-desc.glibc-i18n install/slack-desc
+makepkg -l y -c n $TMP/glibc-i18n-$VERSION-noarch-$BUILD.tgz
+
+# glibc-solibs:
+cd $PSOLIBS
+mkdir -p lib/incoming
+cp -a $PKG/lib/* lib/incoming
+mv lib/incoming/libSegFault.so lib
+( cd lib/incoming
+  find . | xargs file | grep "ELF 32-bit LSB shared object" | grep 80386 | cut -f 1 -d : | xargs strip --strip-unneeded
+)
+mkdir -p usr
+# This skirts the root.bin issue.
+cp -a $PKG/usr/bin usr
+mv usr/bin/ldd .
+rm usr/bin/*
+mv ldd usr/bin
+mkdir -p usr/lib
+# Another manpage abandoned by GNU...
+#mkdir -p usr/man/man1
+#cp -a $PKG/usr/man/man1/ldd.1.gz usr/man/man1
+mkdir -p usr/libexec
+cp -a $PKG/usr/libexec/pt_chown usr/libexec
+# Same usr.bin deal:
+cp -a $PKG/sbin .
+mv sbin/ldconfig .
+rm sbin/*
+mv ldconfig sbin
+mkdir install
+cp -a $CWD/slack-desc.glibc-solibs install/slack-desc
+cp -a $CWD/doinst.sh-glibc-solibs install/doinst.sh
+# Ditch links:
+find . -type l -exec rm {} \;
+# Build the package:
+makepkg -l y -c n $TMP/glibc-solibs-$VERSION-$ARCH-$BUILD.tgz
+
+# And finally, the complete "all-in-one" glibc package is created
+# from whatever was leftover:
+cd $PGLIBC
+mv $PKG/* .
+# Ditch links (these are in doinst.sh-glibc):
+find . -type l -exec rm {} \;
+mkdir install
+cp -a $CWD/slack-desc.glibc install/slack-desc
+cp -a $CWD/doinst.sh-glibc install/doinst.sh
+( cd lib
+  mkdir incoming
+  mv * incoming
+  mv incoming/libSegFault.so .
+)
+# Build the package:
+makepkg -l y -c n $TMP/glibc-$VERSION-$ARCH-$BUILD.tgz
+
+# Done!
+echo
+echo "glibc packages built in $TMP!"
+

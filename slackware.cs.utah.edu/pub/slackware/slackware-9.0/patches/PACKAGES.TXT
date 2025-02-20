@@ -1,0 +1,2190 @@
+
+PACKAGES.TXT;  Wed Jul 25 02:04:14 UTC 2012
+
+This file provides details on the Slackware packages found
+in the ./patches/ directory.
+
+Total size of all packages (compressed):  448 MB
+Total size of all packages (uncompressed):  1209 MB
+
+
+PACKAGE NAME:  apache-1.3.41-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1564 K
+PACKAGE SIZE (uncompressed):  6560 K
+PACKAGE DESCRIPTION:
+apache: apache (The Apache HTTP Server)
+apache:
+apache: Apache is an HTTP server designed as a plug-in replacement for the
+apache: NCSA HTTP server.  It fixes numerous bugs in the NCSA server and
+apache: includes many frequently requested new features, and has an API which
+apache: allows it to be extended to meet users' needs more easily.
+apache:
+apache: Apache is the most popular web server in the known universe; over
+apache: half of the servers on the Internet are running Apache or one of
+apache: its variants.
+apache:
+
+PACKAGE NAME:  arts-1.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  1352 K
+PACKAGE SIZE (uncompressed):  5330 K
+PACKAGE DESCRIPTION:
+arts: arts (Analog Realtime Synthesizer)
+arts:
+arts: aRts is the core sound system for KDE, and is short for "analog
+arts: realtime synthesizer".  aRts is designed to create or process sound
+arts: using small specialized modules.  These may create a waveform, play
+arts: samples, filter data, add signals, perform effects (like delay,
+arts: flanger or chorus), or output the data to the soundcard.
+arts:
+
+PACKAGE NAME:  bin-8.5.0-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  584 K
+PACKAGE SIZE (uncompressed):  1450 K
+PACKAGE DESCRIPTION:
+bin: bin (standard utilities found in /bin and /usr/bin)
+bin:
+bin: The "bin" package is a collection of utilities for handling various
+bin: kinds of archives, identifying file types, and processing data.
+bin: Several of these tools are used by system scripts, so this is a
+bin: required package.  The bin package contains these programs:
+bin:
+bin: bban bpe compress diskcopy ed eject file fiz fromdos lha mktemp
+bin: patch rpm2targz rpmoffset run-parts savelog shar splitvt sysvbanner
+bin: tempfile time todos tree unarj unshar uudecode uuencode volname
+bin: which xx zoo
+
+PACKAGE NAME:  bind-9.7.6_P1-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  2144 K
+PACKAGE SIZE (uncompressed):  6960 K
+PACKAGE DESCRIPTION:
+bind: bind (DNS server and utilities)
+bind:
+bind: The named daemon and support utilities such as dig, host, and
+bind: nslookup.  Sample configuration files for running a simple caching
+bind: nameserver are included.  Documentation for advanced name server
+bind: setup can be found in /usr/doc/bind-9.x.x/.
+bind:
+
+PACKAGE NAME:  bitchx-1.0c19-i386-3.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1396 K
+PACKAGE SIZE (uncompressed):  3880 K
+PACKAGE DESCRIPTION:
+bitchx: BitchX (chat client)
+bitchx:
+bitchx: BitchX is an advanced Internet Relay Chat (IRC) client.
+bitchx:
+
+PACKAGE NAME:  bzip2-1.0.6-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  188 K
+PACKAGE SIZE (uncompressed):  520 K
+PACKAGE DESCRIPTION:
+bzip2: bzip2 (a block-sorting file compressor)
+bzip2:
+bzip2: Bzip2 compresses files using the Burrows-Wheeler block sorting text
+bzip2: compression algorithm, and Huffman coding.  Compression is generally
+bzip2: considerably better than that achieved by more conventional LZ77/LZ78-
+bzip2: based compressors, and approaches the performance of the PPM family of
+bzip2: statistical compressors. 
+bzip2:
+bzip2: Julian Seward <jseward@acm.org> is the author of bzip2.
+bzip2:
+
+PACKAGE NAME:  cups-1.1.19-i386-2_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  2560 K
+PACKAGE SIZE (uncompressed):  6540 K
+PACKAGE DESCRIPTION:
+cups: CUPS (Common UNIX Printing System)
+cups:
+cups: The Common UNIX Printing System provides a portable printing layer for
+cups: UNIX(R)-like operating systems. It has been developed by Easy Software
+cups: Products to promote a standard printing solution for all UNIX vendors
+cups: and users.  CUPS uses the Internet Printing Protocol ("IPP") as the
+cups: basis for managing print jobs and queues.  The CUPS package includes
+cups: System V and Berkeley command-line interfaces, a PostScript RIP
+cups: package for supporting non-PostScript printer drivers, and tools for
+cups: creating additional printer drivers and other CUPS services.
+cups:
+
+PACKAGE NAME:  cvs-1.11.20-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  856 K
+PACKAGE SIZE (uncompressed):  1470 K
+PACKAGE DESCRIPTION:
+cvs: cvs (Concurrent Versions System)
+cvs:
+cvs: CVS is a version control system, which allows you to keep old versions
+cvs: of files (usually source code), keep a log of who, when, and why
+cvs: changes occurred, etc., like RCS or SCCS.  It handles multiple
+cvs: developers, multiple directories, triggers to enable/log/control
+cvs: various operations, and can work over a wide area network.
+cvs:
+cvs: Some of the people who have worked on CVS include:  Dick Grune,
+cvs: Brian Berliner, Jeff Polk, and others too numerous to mention.
+cvs:
+
+PACKAGE NAME:  dhcp-3.1_ESV_R1-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  712 K
+PACKAGE SIZE (uncompressed):  1760 K
+PACKAGE DESCRIPTION:
+dhcp: dhcp (DHCP server and client utilities)
+dhcp:
+dhcp: This package provides the ISC's DHCP utilities, including both a
+dhcp: server and client.  The DHCP protocol allows a host to contact a
+dhcp: central server which maintains a list of IP addresses which may be
+dhcp: assigned on one or more subnets.   A DHCP client may request an
+dhcp: address from this pool, and then use it temporarily for communication
+dhcp: on the network.   The DHCP protocol also provides a mechanism whereby
+dhcp: a client can learn important details about the network to which it is
+dhcp: attached, such as the location of a default router or name server.
+dhcp:
+
+PACKAGE NAME:  dhcpcd-1.3.22pl4-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  52 K
+PACKAGE SIZE (uncompressed):  150 K
+PACKAGE DESCRIPTION:
+dhcpcd: dhcpcd (DHCP client daemon)
+dhcpcd:
+dhcpcd: The DHCP client program dhcpcd is used to connect to a network by
+dhcpcd: contacting a DHCP server.  dhcpcd gets an IP address and other
+dhcpcd: information from a corresponding DHCP server, configures the network
+dhcpcd: interface automatically, and tries to renew the lease time according
+dhcpcd: to RFC2131 or RFC1541 depending on the command line option.
+dhcpcd:
+
+PACKAGE NAME:  elm-2.5.8-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  280 K
+PACKAGE SIZE (uncompressed):  760 K
+PACKAGE DESCRIPTION:
+elm: elm (Menu-driven user mail program)
+elm:
+elm: Elm is an interactive screen-oriented mailer program originally
+elm: written by Dave Taylor, and continued by the Elm Development Group. 
+elm:
+
+PACKAGE NAME:  epic4-1.0.1-i386-3.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  516 K
+PACKAGE SIZE (uncompressed):  1950 K
+PACKAGE DESCRIPTION:
+epic4: epic4 (Internet Relay Chat client)
+epic4:
+epic4: EPIC is the (E)nhanced (P)rogrammable (I)RC-II (C)lient.
+epic4:
+epic4: The EPIC home page is:        http://www.epicsol.org/
+epic4: The EPIC main ftp site is:    ftp://ftp.epicsol.org/
+epic4: The EPIC IRC channel is:      #epic on EFNet
+epic4:
+
+PACKAGE NAME:  fetchmail-6.3.20-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  988 K
+PACKAGE SIZE (uncompressed):  2750 K
+PACKAGE DESCRIPTION:
+fetchmail: fetchmail (mail retrieval and forwarding utility)
+fetchmail:
+fetchmail: fetchmail is a mail retrieval and forwarding utility.  It fetches
+fetchmail: mail from a POP, IMAP, or ETRN-capable remote mailserver and forwards
+fetchmail: it to your local (client) machine's delivery system.  You can then
+fetchmail: handle the retrieved mail using normal mail user agents such as elm,
+fetchmail: pine, or mutt.  The fetchmail utility can be run in a daemon mode to
+fetchmail: repeatedly poll one or more systems at a specified interval.
+fetchmail:
+fetchmail: fetchmail is probably not secure.
+fetchmail:
+
+PACKAGE NAME:  file-4.20-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  224 K
+PACKAGE SIZE (uncompressed):  690 K
+PACKAGE DESCRIPTION:
+file: file (a utility to determine file type)
+file:
+file: This is Ian F. Darwin's 'file' utility, used to identify files.
+file: Christos Zoulas has been file's maintainer since 1994.
+file:
+
+PACKAGE NAME:  gaim-1.5.0-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  4692 K
+PACKAGE SIZE (uncompressed):  12640 K
+PACKAGE DESCRIPTION:
+gaim: gaim
+gaim:
+gaim: Gaim allows you to talk to anyone using a variety of messaging
+gaim: protocols, including AIM (Oscar and TOC), ICQ, IRC, Yahoo!, MSN
+gaim: Messenger, Jabber, Gadu-Gadu, Napster, and Zephyr.  These protocols
+gaim: are implemented using a modular, easy to use design.  To use a
+gaim: protocol, just load the plugin for it.
+gaim:
+gaim: Gaim is NOT affiliated with or endorsed by AOL.
+gaim:
+
+PACKAGE NAME:  gdm-2.4.1.7-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1592 K
+PACKAGE SIZE (uncompressed):  4630 K
+PACKAGE DESCRIPTION:
+gdm: gdm
+gdm:
+gdm: The Gnome Display Manager is a reimplementation of the well known
+gdm: xdm program.  gdm implements all significant features required for
+gdm: managing local and remote displays.
+gdm:
+
+PACKAGE NAME:  glibc-2.3.1-i386-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  13980 K
+PACKAGE SIZE (uncompressed):  46350 K
+PACKAGE DESCRIPTION:
+glibc: glibc (GNU C libraries)
+glibc:
+glibc: This package contains the GNU C libraries and header files.  The GNU
+glibc: C library was written originally by Roland McGrath, and is currently
+glibc: maintained by Ulrich Drepper.  Some parts of the library were
+glibc: contributed or worked on by other people.
+glibc:
+glibc: You'll need this package to compile programs.
+glibc:
+
+PACKAGE NAME:  glibc-debug-2.3.1-i386-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  16652 K
+PACKAGE SIZE (uncompressed):  50090 K
+PACKAGE DESCRIPTION:
+glibc-debug: glibc-debug (GNU C libraries with debugging symbols)
+glibc-debug:
+glibc-debug: This package contains versions of the GNU C libraries with debugging
+glibc-debug: information.  These are needed only if you wish to be able to step
+glibc-debug: through C library routines while debugging programs.  Most debugging
+glibc-debug: efforts will not require these.
+glibc-debug: To use these libraries, set LD_LIBRARY_PATH when calling the debugger:
+glibc-debug:   LD_LIBRARY_PATH=/usr/lib/debug gdb <executable>
+glibc-debug:
+glibc-debug: Or, use this approach if you need to debug a setuid binary:
+glibc-debug:   su user -c "LD_LIBRARY_PATH=/usr/lib/debug gdb <executable>"
+
+PACKAGE NAME:  glibc-i18n-2.3.1-noarch-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  6508 K
+PACKAGE SIZE (uncompressed):  25110 K
+PACKAGE DESCRIPTION:
+glibc-i18n: glibc-i18n (locale files from glibc)
+glibc-i18n:
+glibc-i18n: These files go in /usr/lib/locale and /usr/share/i18n/ to provide
+glibc-i18n: internationalization support.  You'll need this package unless you
+glibc-i18n: will be using US English only.
+glibc-i18n:
+
+PACKAGE NAME:  glibc-profile-2.3.1-i386-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  11328 K
+PACKAGE SIZE (uncompressed):  32700 K
+PACKAGE DESCRIPTION:
+glibc-profile: glibc-profile (GNU C libraries with profiling support)
+glibc-profile:
+glibc-profile: This package contains static versions of the GNU C libraries with 
+glibc-profile: support for profiling binaries using gprof.  gprof calculates how much
+glibc-profile: much time a program spends in each routine which can suggest where to
+glibc-profile: concentrate efforts to improve performance.
+glibc-profile:
+glibc-profile: See the gprof man page for more details.
+glibc-profile:
+
+PACKAGE NAME:  glibc-solibs-2.3.1-i386-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1020 K
+PACKAGE SIZE (uncompressed):  2460 K
+PACKAGE DESCRIPTION:
+glibc-solibs: glibc-solibs (shared GNU C libraries)
+glibc-solibs:
+glibc-solibs: This package contains the shared libraries, binaries, and support
+glibc-solibs: files required to run most Linux applications linked with glibc.
+glibc-solibs:
+
+PACKAGE NAME:  glibc-zoneinfo-2011i_2011n-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  580 K
+PACKAGE SIZE (uncompressed):  3110 K
+PACKAGE DESCRIPTION:
+glibc-zoneinfo: glibc-zoneinfo (timezone database)
+glibc-zoneinfo:
+glibc-zoneinfo: This package allows you to configure your time zone.
+glibc-zoneinfo:
+glibc-zoneinfo: This timezone database comes from the tzdata and tzcode packages by
+glibc-zoneinfo: Arthur David Olson et.al.  The latest version and more information
+glibc-zoneinfo: may be found at:  http://www.iana.org/time-zones
+glibc-zoneinfo:
+glibc-zoneinfo: Use the timeconfig utility to set your local time zone.
+glibc-zoneinfo:
+
+PACKAGE NAME:  gnupg-1.4.7-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1744 K
+PACKAGE SIZE (uncompressed):  4500 K
+PACKAGE DESCRIPTION:
+gnupg: gnupg (The GNU Privacy Guard)
+gnupg:
+gnupg: GnuPG is GNU's tool for secure communication and data storage.  It can
+gnupg: be used to encrypt data and to create digital signatures.  It includes
+gnupg: an advanced key management facility and is compliant with the proposed
+gnupg: OpenPGP Internet standard as described in RFC2440.
+gnupg:
+
+PACKAGE NAME:  gzip-1.3.5-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  84 K
+PACKAGE SIZE (uncompressed):  190 K
+PACKAGE DESCRIPTION:
+gzip: gzip (file compression utility)
+gzip:
+gzip: Gzip reduces the size of the named files using Lempel-Ziv coding
+gzip: (LZ77).  Whenever possible, each file is replaced by one with the
+gzip: extension .gz, while keeping the same ownership modes, access and
+gzip: modification times.
+gzip:
+
+PACKAGE NAME:  hotplug-2002_08_26-noarch-6.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  28 K
+PACKAGE SIZE (uncompressed):  130 K
+PACKAGE DESCRIPTION:
+hotplug: hotplug (scripts to handle hotplugging Cardbus and USB devices)
+hotplug:
+hotplug: This package contains scripts used to initialize and configure
+hotplug: Cardbus and USB hardware at boot time or when it is plugged into the
+hotplug: machine (aka hotplugging).  The /sbin/hotplug script is called by the
+hotplug: kernel to load the appropriate support modules and set up the device.
+hotplug:
+hotplug: Linux hotplug support is developed by the Linux Hotplugging Project:
+hotplug:   http://linux-hotplug.sourceforge.net/
+hotplug:
+
+PACKAGE NAME:  imapd-4.64-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  736 K
+PACKAGE SIZE (uncompressed):  1390 K
+PACKAGE DESCRIPTION:
+imapd: imapd (IMAP4rev1 from pine4.63)
+imapd:
+imapd: /usr/sbin/ipop3d and /usr/sbin/imapd are servers supporting the POP3
+imapd: and IMAP remote mail access protocols.  They allow users to download
+imapd: mail from your Linux system for remote viewing.
+imapd:
+
+PACKAGE NAME:  inetd-1.79s-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  24 K
+PACKAGE SIZE (uncompressed):  50 K
+PACKAGE DESCRIPTION:
+inetd: inetd (Internet super-server)
+inetd:
+inetd: This is a program to listen for connections on certain Internet
+inetd: sockets and invokes a program to service the request.  Essentially,
+inetd: inetd allows running one daemon to invoke several others, reducing
+inetd: load on the system.  Many of the network services are run through
+inetd: inetd, so you'll probably need it.
+inetd:
+inetd: This version of inetd was ported from OpenBSD.
+inetd:
+
+PACKAGE NAME:  infozip-5.52-i486-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  264 K
+PACKAGE SIZE (uncompressed):  610 K
+PACKAGE DESCRIPTION:
+infozip: infozip (Info-ZIP's zip and unzip utilities)
+infozip:
+infozip: zip is a compression and file packaging utility for Unix, VMS, MSDOS,
+infozip: OS/2, Windows NT, Minix, Atari and Macintosh, Amiga and Acorn RISC OS.
+infozip: It is analogous to a combination of the UNIX commands tar(1) and
+infozip: compress(1) and is compatible with PKZIP (Phil Katz's ZIP).  A
+infozip: companion program (unzip(1L)), unpacks zip archives.
+infozip:
+
+PACKAGE NAME:  inn-2.4.1-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  4132 K
+PACKAGE SIZE (uncompressed):  9460 K
+PACKAGE DESCRIPTION:
+inn: inn (InterNetNews news server)
+inn:
+inn: Rich Salz's InterNetNews news transport system.  The core part of the
+inn: package is a single long-running daemon that handles all incoming NNTP
+inn: connections.  It files the articles and arranges for them to be 
+inn: forwarded to downstream sites.
+inn:
+
+PACKAGE NAME:  kde-i18n-af-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1168 K
+PACKAGE SIZE (uncompressed):  3470 K
+PACKAGE DESCRIPTION:
+kde-i18n-af: kde-i18n-af
+kde-i18n-af:
+kde-i18n-af: Afrikaans language support for KDE.
+kde-i18n-af:
+
+PACKAGE NAME:  kde-i18n-ar-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  728 K
+PACKAGE SIZE (uncompressed):  2390 K
+PACKAGE DESCRIPTION:
+kde-i18n-ar: kde-i18n-ar
+kde-i18n-ar:
+kde-i18n-ar: Arabic language support for KDE.
+kde-i18n-ar:
+
+PACKAGE NAME:  kde-i18n-bg-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1028 K
+PACKAGE SIZE (uncompressed):  3360 K
+PACKAGE DESCRIPTION:
+kde-i18n-bg: kde-i18n-bg
+kde-i18n-bg:
+kde-i18n-bg: Bulgarian language support for KDE.
+kde-i18n-bg:
+
+PACKAGE NAME:  kde-i18n-bs-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  896 K
+PACKAGE SIZE (uncompressed):  2720 K
+PACKAGE DESCRIPTION:
+kde-i18n-bs: kde-i18n-bs
+kde-i18n-bs:
+kde-i18n-bs: Bosnian language support for KDE.
+kde-i18n-bs:
+
+PACKAGE NAME:  kde-i18n-ca-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  2192 K
+PACKAGE SIZE (uncompressed):  5740 K
+PACKAGE DESCRIPTION:
+kde-i18n-ca: kde-i18n-ca
+kde-i18n-ca:
+kde-i18n-ca: Catalan language support for KDE.
+kde-i18n-ca:
+
+PACKAGE NAME:  kde-i18n-cs-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1612 K
+PACKAGE SIZE (uncompressed):  4260 K
+PACKAGE DESCRIPTION:
+kde-i18n-cs: kde-i18n-cs
+kde-i18n-cs:
+kde-i18n-cs: Czech language support for KDE.
+kde-i18n-cs:
+
+PACKAGE NAME:  kde-i18n-da-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  7076 K
+PACKAGE SIZE (uncompressed):  13470 K
+PACKAGE DESCRIPTION:
+kde-i18n-da: kde-i18n-da
+kde-i18n-da:
+kde-i18n-da: Danish language support for KDE.
+kde-i18n-da:
+
+PACKAGE NAME:  kde-i18n-de-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  11060 K
+PACKAGE SIZE (uncompressed):  20590 K
+PACKAGE DESCRIPTION:
+kde-i18n-de: kde-i18n-de
+kde-i18n-de:
+kde-i18n-de: German language support for KDE.
+kde-i18n-de:
+
+PACKAGE NAME:  kde-i18n-el-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  864 K
+PACKAGE SIZE (uncompressed):  2900 K
+PACKAGE DESCRIPTION:
+kde-i18n-el: kde-i18n-el
+kde-i18n-el:
+kde-i18n-el: Greek language support for KDE.
+kde-i18n-el:
+
+PACKAGE NAME:  kde-i18n-en_GB-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1616 K
+PACKAGE SIZE (uncompressed):  5410 K
+PACKAGE DESCRIPTION:
+kde-i18n-en_GB: kde-i18n-en_GB
+kde-i18n-en_GB:
+kde-i18n-en_GB: English (UK) language support for KDE.
+kde-i18n-en_GB:
+
+PACKAGE NAME:  kde-i18n-eo-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  820 K
+PACKAGE SIZE (uncompressed):  2480 K
+PACKAGE DESCRIPTION:
+kde-i18n-eo: kde-i18n-eo
+kde-i18n-eo:
+kde-i18n-eo: Esperanto language support for KDE.
+kde-i18n-eo:
+
+PACKAGE NAME:  kde-i18n-es-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  6300 K
+PACKAGE SIZE (uncompressed):  13280 K
+PACKAGE DESCRIPTION:
+kde-i18n-es: kde-i18n-es
+kde-i18n-es:
+kde-i18n-es: Spanish language support for KDE.
+kde-i18n-es:
+
+PACKAGE NAME:  kde-i18n-et-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  4132 K
+PACKAGE SIZE (uncompressed):  10600 K
+PACKAGE DESCRIPTION:
+kde-i18n-et: kde-i18n-et
+kde-i18n-et:
+kde-i18n-et: Estonian language support for KDE.
+kde-i18n-et:
+
+PACKAGE NAME:  kde-i18n-eu-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  536 K
+PACKAGE SIZE (uncompressed):  1670 K
+PACKAGE DESCRIPTION:
+kde-i18n-eu: kde-i18n-eu
+kde-i18n-eu:
+kde-i18n-eu: Basque language support for KDE.
+kde-i18n-eu:
+
+PACKAGE NAME:  kde-i18n-fa-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  516 K
+PACKAGE SIZE (uncompressed):  1710 K
+PACKAGE DESCRIPTION:
+kde-i18n-fa: kde-i18n-fa
+kde-i18n-fa:
+kde-i18n-fa: Farsi language support for KDE.
+kde-i18n-fa:
+
+PACKAGE NAME:  kde-i18n-fi-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1352 K
+PACKAGE SIZE (uncompressed):  3960 K
+PACKAGE DESCRIPTION:
+kde-i18n-fi: kde-i18n-fi
+kde-i18n-fi:
+kde-i18n-fi: Finnish language support for KDE.
+kde-i18n-fi:
+
+PACKAGE NAME:  kde-i18n-fr-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  9900 K
+PACKAGE SIZE (uncompressed):  17810 K
+PACKAGE DESCRIPTION:
+kde-i18n-fr: kde-i18n-fr
+kde-i18n-fr:
+kde-i18n-fr: French language support for KDE.
+kde-i18n-fr:
+
+PACKAGE NAME:  kde-i18n-he-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1524 K
+PACKAGE SIZE (uncompressed):  4510 K
+PACKAGE DESCRIPTION:
+kde-i18n-he: kde-i18n-he
+kde-i18n-he:
+kde-i18n-he: Hebrew language support for KDE.
+kde-i18n-he:
+
+PACKAGE NAME:  kde-i18n-hr-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  512 K
+PACKAGE SIZE (uncompressed):  1540 K
+PACKAGE DESCRIPTION:
+kde-i18n-hr: kde-i18n-hr
+kde-i18n-hr:
+kde-i18n-hr: Croatian language support for KDE.
+kde-i18n-hr:
+
+PACKAGE NAME:  kde-i18n-hu-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  2812 K
+PACKAGE SIZE (uncompressed):  7350 K
+PACKAGE DESCRIPTION:
+kde-i18n-hu: kde-i18n-hu
+kde-i18n-hu:
+kde-i18n-hu: Hungarian language support for KDE.
+kde-i18n-hu:
+
+PACKAGE NAME:  kde-i18n-is-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1144 K
+PACKAGE SIZE (uncompressed):  3410 K
+PACKAGE DESCRIPTION:
+kde-i18n-is: kde-i18n-is
+kde-i18n-is:
+kde-i18n-is: Icelandic language support for KDE.
+kde-i18n-is:
+
+PACKAGE NAME:  kde-i18n-it-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  6612 K
+PACKAGE SIZE (uncompressed):  11550 K
+PACKAGE DESCRIPTION:
+kde-i18n-it: kde-i18n-it
+kde-i18n-it:
+kde-i18n-it: Italian language support for KDE.
+kde-i18n-it:
+
+PACKAGE NAME:  kde-i18n-ja-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1776 K
+PACKAGE SIZE (uncompressed):  5230 K
+PACKAGE DESCRIPTION:
+kde-i18n-ja: kde-i18n-ja
+kde-i18n-ja:
+kde-i18n-ja: Japanese language support for KDE.
+kde-i18n-ja:
+
+PACKAGE NAME:  kde-i18n-lt-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  984 K
+PACKAGE SIZE (uncompressed):  2840 K
+PACKAGE DESCRIPTION:
+kde-i18n-lt: kde-i18n-lt
+kde-i18n-lt:
+kde-i18n-lt: Lithuanian language support for KDE.
+kde-i18n-lt:
+
+PACKAGE NAME:  kde-i18n-mk-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  980 K
+PACKAGE SIZE (uncompressed):  3220 K
+PACKAGE DESCRIPTION:
+kde-i18n-mk: kde-i18n-mk
+kde-i18n-mk:
+kde-i18n-mk: Macedonian language support for KDE.
+kde-i18n-mk:
+
+PACKAGE NAME:  kde-i18n-mt-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  696 K
+PACKAGE SIZE (uncompressed):  2100 K
+PACKAGE DESCRIPTION:
+kde-i18n-mt: kde-i18n-mt
+kde-i18n-mt:
+kde-i18n-mt: Maltese language support for KDE.
+kde-i18n-mt:
+
+PACKAGE NAME:  kde-i18n-nb-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1412 K
+PACKAGE SIZE (uncompressed):  4150 K
+PACKAGE DESCRIPTION:
+kde-i18n-nb: kde-i18n-nb
+kde-i18n-nb:
+kde-i18n-nb: Norwegian (Bokmaal) language support for KDE.
+kde-i18n-nb:
+
+PACKAGE NAME:  kde-i18n-nl-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  2592 K
+PACKAGE SIZE (uncompressed):  6370 K
+PACKAGE DESCRIPTION:
+kde-i18n-nl: kde-i18n-nl
+kde-i18n-nl:
+kde-i18n-nl: Dutch language support for KDE.
+kde-i18n-nl:
+
+PACKAGE NAME:  kde-i18n-nn-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1492 K
+PACKAGE SIZE (uncompressed):  4020 K
+PACKAGE DESCRIPTION:
+kde-i18n-nn: kde-i18n-nn
+kde-i18n-nn:
+kde-i18n-nn: Norwegian (Nynorsk) language support for KDE.
+kde-i18n-nn:
+
+PACKAGE NAME:  kde-i18n-nso-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  960 K
+PACKAGE SIZE (uncompressed):  3070 K
+PACKAGE DESCRIPTION:
+kde-i18n-nso: kde-i18n-nso
+kde-i18n-nso:
+kde-i18n-nso: Northern Sotho language support for KDE.
+kde-i18n-nso:
+
+PACKAGE NAME:  kde-i18n-pl-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1364 K
+PACKAGE SIZE (uncompressed):  3920 K
+PACKAGE DESCRIPTION:
+kde-i18n-pl: kde-i18n-pl
+kde-i18n-pl:
+kde-i18n-pl: Polish language support for KDE.
+kde-i18n-pl:
+
+PACKAGE NAME:  kde-i18n-pt-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  2732 K
+PACKAGE SIZE (uncompressed):  7120 K
+PACKAGE DESCRIPTION:
+kde-i18n-pt: kde-i18n-pt
+kde-i18n-pt:
+kde-i18n-pt: Portuguese language support for KDE.
+kde-i18n-pt:
+
+PACKAGE NAME:  kde-i18n-pt_BR-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1948 K
+PACKAGE SIZE (uncompressed):  5340 K
+PACKAGE DESCRIPTION:
+kde-i18n-pt_BR: kde-i18n-pt_BR
+kde-i18n-pt_BR:
+kde-i18n-pt_BR: Brazil portuguese language support for KDE.
+kde-i18n-pt_BR:
+
+PACKAGE NAME:  kde-i18n-ro-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  944 K
+PACKAGE SIZE (uncompressed):  2690 K
+PACKAGE DESCRIPTION:
+kde-i18n-ro: kde-i18n-ro
+kde-i18n-ro:
+kde-i18n-ro: Romanian language support for KDE.
+kde-i18n-ro:
+
+PACKAGE NAME:  kde-i18n-ru-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  2904 K
+PACKAGE SIZE (uncompressed):  8460 K
+PACKAGE DESCRIPTION:
+kde-i18n-ru: kde-i18n-ru
+kde-i18n-ru:
+kde-i18n-ru: Russian language support for KDE.
+kde-i18n-ru:
+
+PACKAGE NAME:  kde-i18n-se-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  388 K
+PACKAGE SIZE (uncompressed):  1160 K
+PACKAGE DESCRIPTION:
+kde-i18n-se: kde-i18n-se
+kde-i18n-se:
+kde-i18n-se: Northern Sami language support for KDE.
+kde-i18n-se:
+
+PACKAGE NAME:  kde-i18n-sk-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  4340 K
+PACKAGE SIZE (uncompressed):  9830 K
+PACKAGE DESCRIPTION:
+kde-i18n-sk: kde-i18n-sk
+kde-i18n-sk:
+kde-i18n-sk: Slovak language support for KDE.
+kde-i18n-sk:
+
+PACKAGE NAME:  kde-i18n-sl-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  4276 K
+PACKAGE SIZE (uncompressed):  8900 K
+PACKAGE DESCRIPTION:
+kde-i18n-sl: kde-i18n-sl
+kde-i18n-sl:
+kde-i18n-sl: Slovenian language support for KDE.
+kde-i18n-sl:
+
+PACKAGE NAME:  kde-i18n-sr-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  408 K
+PACKAGE SIZE (uncompressed):  1280 K
+PACKAGE DESCRIPTION:
+kde-i18n-sr: kde-i18n-sr
+kde-i18n-sr:
+kde-i18n-sr: Serbian language support for KDE.
+kde-i18n-sr:
+
+PACKAGE NAME:  kde-i18n-ss-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  376 K
+PACKAGE SIZE (uncompressed):  1170 K
+PACKAGE DESCRIPTION:
+kde-i18n-ss: kde-i18n-ss
+kde-i18n-ss:
+kde-i18n-ss: Swati language support for KDE.
+kde-i18n-ss:
+
+PACKAGE NAME:  kde-i18n-sv-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  11156 K
+PACKAGE SIZE (uncompressed):  19040 K
+PACKAGE DESCRIPTION:
+kde-i18n-sv: kde-i18n-sv
+kde-i18n-sv:
+kde-i18n-sv: Swedish language support for KDE.
+kde-i18n-sv:
+
+PACKAGE NAME:  kde-i18n-ta-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  640 K
+PACKAGE SIZE (uncompressed):  2110 K
+PACKAGE DESCRIPTION:
+kde-i18n-ta: kde-i18n-ta
+kde-i18n-ta:
+kde-i18n-ta: Tamil language support for KDE.
+kde-i18n-ta:
+
+PACKAGE NAME:  kde-i18n-th-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  892 K
+PACKAGE SIZE (uncompressed):  3570 K
+PACKAGE DESCRIPTION:
+kde-i18n-th: kde-i18n-th
+kde-i18n-th:
+kde-i18n-th: Thai language support for KDE.
+kde-i18n-th:
+
+PACKAGE NAME:  kde-i18n-tr-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1204 K
+PACKAGE SIZE (uncompressed):  3570 K
+PACKAGE DESCRIPTION:
+kde-i18n-tr: kde-i18n-tr
+kde-i18n-tr:
+kde-i18n-tr: Turkish language support for KDE.
+kde-i18n-tr:
+
+PACKAGE NAME:  kde-i18n-uk-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1304 K
+PACKAGE SIZE (uncompressed):  4210 K
+PACKAGE DESCRIPTION:
+kde-i18n-uk: kde-i18n-uk
+kde-i18n-uk:
+kde-i18n-uk: Ukrainian language support for KDE.
+kde-i18n-uk:
+
+PACKAGE NAME:  kde-i18n-ven-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  908 K
+PACKAGE SIZE (uncompressed):  2890 K
+PACKAGE DESCRIPTION:
+kde-i18n-ven: kde-i18n-ven
+kde-i18n-ven:
+kde-i18n-ven: Venda language support for KDE.
+kde-i18n-ven:
+
+PACKAGE NAME:  kde-i18n-vi-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  556 K
+PACKAGE SIZE (uncompressed):  1760 K
+PACKAGE DESCRIPTION:
+kde-i18n-vi: kde-i18n-vi
+kde-i18n-vi:
+kde-i18n-vi: Vietnamese language support for KDE.
+kde-i18n-vi:
+
+PACKAGE NAME:  kde-i18n-xh-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1708 K
+PACKAGE SIZE (uncompressed):  5000 K
+PACKAGE DESCRIPTION:
+kde-i18n-xh: kde-i18n-xh
+kde-i18n-xh:
+kde-i18n-xh: Xhosa language support for KDE.
+kde-i18n-xh:
+
+PACKAGE NAME:  kde-i18n-zh_CN-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1472 K
+PACKAGE SIZE (uncompressed):  4130 K
+PACKAGE DESCRIPTION:
+kde-i18n-zh_CN: kde-i18n-zh_CN
+kde-i18n-zh_CN:
+kde-i18n-zh_CN: Simplified Chinese language support for KDE.
+kde-i18n-zh_CN:
+
+PACKAGE NAME:  kde-i18n-zh_TW-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  976 K
+PACKAGE SIZE (uncompressed):  2770 K
+PACKAGE DESCRIPTION:
+kde-i18n-zh_TW: kde-i18n-zh_TW
+kde-i18n-zh_TW:
+kde-i18n-zh_TW: Chinese language support for KDE.
+kde-i18n-zh_TW:
+
+PACKAGE NAME:  kde-i18n-zu-3.1.3-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  1192 K
+PACKAGE SIZE (uncompressed):  3540 K
+PACKAGE DESCRIPTION:
+kde-i18n-zu: kde-i18n-zu
+kde-i18n-zu:
+kde-i18n-zu: Zulu language support for KDE.
+kde-i18n-zu:
+
+PACKAGE NAME:  kdeaddons-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  1156 K
+PACKAGE SIZE (uncompressed):  5640 K
+PACKAGE DESCRIPTION:
+kdeaddons: kdeaddons
+kdeaddons:
+kdeaddons: Additional plugins and scripts for some KDE applications.
+kdeaddons:
+
+PACKAGE NAME:  kdeadmin-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  1388 K
+PACKAGE SIZE (uncompressed):  3570 K
+PACKAGE DESCRIPTION:
+kdeadmin: kdeadmin
+kdeadmin:
+kdeadmin: KDE system administration tools.
+kdeadmin:
+
+PACKAGE NAME:  kdeartwork-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  12244 K
+PACKAGE SIZE (uncompressed):  19280 K
+PACKAGE DESCRIPTION:
+kdeartwork: kdeartwork
+kdeartwork:
+kdeartwork: Additional themes, screensavers, sounds, wallpapers, and window
+kdeartwork: styles.
+kdeartwork:
+
+PACKAGE NAME:  kdebase-3.1.3-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  18128 K
+PACKAGE SIZE (uncompressed):  38010 K
+PACKAGE DESCRIPTION:
+kdebase: kdebase (KDE base package)
+kdebase:
+kdebase: Core applications for the K Desktop Environment.  Included are: kdm
+kdebase: (replacement for xdm), kwin (window manager), konqueror (filemanager,
+kdebase: web browser, ftp client), konsole (xterm replacement), kicker
+kdebase: (application starter and desktop pager), kaudio (audio server),
+kdebase: kdehelp (viewer for kde help files, info and man pages), kthememgr
+kdebase: (system for managing alternate theme packages) plus other KDE
+kdebase: components like kcheckpass, kikbd, kscreensaver, kcontrol, kfind,
+kdebase: kfontmanager, kmenuedit, and kappfinder.
+kdebase:
+
+PACKAGE NAME:  kdebindings-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  2540 K
+PACKAGE SIZE (uncompressed):  10000 K
+PACKAGE DESCRIPTION:
+kdebindings: kdebindings
+kdebindings:
+kdebindings: This package contains dcopc (DCOP bindings for C), dcopjava (DCOP
+kdebindings: bindings for JAVA), dcopperl (DCOP bindings for Perl), dcoppython
+kdebindings: (DCOP bindings for Python), kalyptus (C, Objective-C and Java bindings
+kdebindings: generator), kdec (KDE bindings for C), kdejava (KDE bindings for Java
+kdebindings: JNI to use Qt/KDE classes with Java), kdeobjc (KDE bindings for
+kdebindings: Objective-C), qtc (Qt bindings for C), qtjava (Qt bindings for Java
+kdebindings: JNI to use Qt/KDE classes with Java), qtobjc (Qt bindings for
+kdebindings: Objective-C), xparts (allows you to embed non-KDE apps as a KPart).
+kdebindings:
+
+PACKAGE NAME:  kdeedu-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  15176 K
+PACKAGE SIZE (uncompressed):  26830 K
+PACKAGE DESCRIPTION:
+kdeedu: kdeedu
+kdeedu:
+kdeedu: Educational applications for KDE.
+kdeedu:
+
+PACKAGE NAME:  kdegames-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  9036 K
+PACKAGE SIZE (uncompressed):  17940 K
+PACKAGE DESCRIPTION:
+kdegames: kdegames
+kdegames:
+kdegames: Games for the K Desktop Environment.
+kdegames:
+kdegames: Included with this package are: kasteroids, katomic, kbackgammon,
+kdegames: kblackbox, kbounce, kenolaba, kfouleggs, kjumpingcube, klines,
+kdegames: kmahjongg, kmines, konquest, kpat, kpoker, kreversi, ksame, kshisen,
+kdegames: ksirtet, ksmiletris, ksnake, ksokoban, kspaceduel, ktron, ktuberling,
+kdegames: kwin4, and lskat.
+kdegames:
+
+PACKAGE NAME:  kdegraphics-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  3944 K
+PACKAGE SIZE (uncompressed):  7880 K
+PACKAGE DESCRIPTION:
+kdegraphics: kdegraphics
+kdegraphics:
+kdegraphics: Graphics programs for KDE, including:  kdvi (displays TeX's device
+kdegraphics: independent .dvi files), kfax (displays fax files), kfract (a fractal
+kdegraphics: generator), kghostview (displays postscript .ps files), kpaint (a
+kdegraphics: simple drawing program), kruler (an onscreen ruler), ksnapshot (a
+kdegraphics: screenshot utility), and kview (displays many graphic file formats).
+kdegraphics:
+
+PACKAGE NAME:  kdelibs-3.1.3a-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  12452 K
+PACKAGE SIZE (uncompressed):  35490 K
+PACKAGE DESCRIPTION:
+kdelibs: kdelibs (KDE libraries)
+kdelibs:
+kdelibs: System libraries and other resources required by KDE:  kdecore (KDE
+kdelibs: core library), kdeui (user interface), kimgio (image formats), kfile
+kdelibs: (file dialog), kspell (spelling checker), khtml (HTML widget), kab
+kdelibs: (addressbook), arts (sound, mixing and animation), kstyles, kparts,
+kdelibs: kjs (JavaScript), kio (URL fetcher), kdesu, dcop (desktop
+kdelibs: communication program), kssl (OpenSSL integration), kinit, libkmid,
+kdelibs: interfaces, libtldl, mimetypes, pics, and ksgmltools.
+kdelibs:
+
+PACKAGE NAME:  kdemultimedia-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  7020 K
+PACKAGE SIZE (uncompressed):  19300 K
+PACKAGE DESCRIPTION:
+kdemultimedia: kdemultimedia
+kdemultimedia:
+kdemultimedia: Multimedia applications for KDE, including:
+kdemultimedia:   aktion (video player)
+kdemultimedia:   kmid (a midi/karaoke player)
+kdemultimedia:   kmidi (a midi-to-wav player/converter)
+kdemultimedia:   kmix (a mixer)
+kdemultimedia:   kscd (an audio CD player)
+kdemultimedia:   timidity (synth application)
+kdemultimedia:
+
+PACKAGE NAME:  kdenetwork-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  5644 K
+PACKAGE SIZE (uncompressed):  14980 K
+PACKAGE DESCRIPTION:
+kdenetwork: kdenetwork
+kdenetwork:
+kdenetwork: Network related utilities for the K Desktop Environment.
+kdenetwork:
+
+PACKAGE NAME:  kdepim-3.1.3-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  2868 K
+PACKAGE SIZE (uncompressed):  7750 K
+PACKAGE DESCRIPTION:
+kdepim: kdepim
+kdepim:
+kdepim: This is a collection of Personal Information Management (PIM) tools.
+kdepim:
+
+PACKAGE NAME:  kdesdk-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  2512 K
+PACKAGE SIZE (uncompressed):  6780 K
+PACKAGE DESCRIPTION:
+kdesdk: kdesdk
+kdesdk:
+kdesdk: KDE Software Development Kit.  This is a collection of applications
+kdesdk: and tools used by KDE developers.  It also has example code for use in
+kdesdk: learning KDE programming or starting a new KDE application.
+kdesdk:
+
+PACKAGE NAME:  kdetoys-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  1592 K
+PACKAGE SIZE (uncompressed):  3470 K
+PACKAGE DESCRIPTION:
+kdetoys: kdetoys
+kdetoys:
+kdetoys: Some toys for use with KDE such as kmoon (displays various phases of
+kdetoys: the moon), kworldwatch (displays where in the world it is light and
+kdetoys: dark depending on time), kodo (a mouse odometer which shows how far
+kdetoys: your mouse has traveled), and kteatime (alerts you when your tea is
+kdetoys: ready).
+kdetoys:
+
+PACKAGE NAME:  kdeutils-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  1704 K
+PACKAGE SIZE (uncompressed):  4790 K
+PACKAGE DESCRIPTION:
+kdeutils: kdeutils
+kdeutils:
+kdeutils: Utilities for the K Desktop Environment.  
+kdeutils:
+kdeutils: Includes: ark (tar/gzip archive  manager), kab (address book), karm
+kdeutils: (personal time tracker), kcalc (scientific calculator), kedit (simple
+kdeutils: text editor), kfloppy (floppy formatting tool), khexedit (hex editor),
+kdeutils: kjots (note taker), klipper (clipboard tool), kljettool(HP printer
+kdeutils: configuration tool), klpq (print queue manager), knotes (sticky notes
+kdeutils: for the desktop), kpm (process manager similar to 'top', but more
+kdeutils: advanced), kwrite (improved text editor).
+
+PACKAGE NAME:  kdevelop-3.0a5-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  7104 K
+PACKAGE SIZE (uncompressed):  20530 K
+PACKAGE DESCRIPTION:
+kdevelop: kdevelop
+kdevelop:
+kdevelop: The KDevelop integrated C/C++ application development environment.
+kdevelop:
+
+PACKAGE NAME:  kernel-headers-2.4.21-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1120 K
+PACKAGE SIZE (uncompressed):  4500 K
+PACKAGE DESCRIPTION:
+kernel-headers: kernel-headers (Linux kernel include files)
+kernel-headers:
+kernel-headers: These are the include files from the 2.4.21 Linux kernel.  You'll 
+kernel-headers: need these to compile most system software for Linux.
+kernel-headers:
+
+PACKAGE NAME:  kernel-ide-2.4.21-i486-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1316 K
+PACKAGE SIZE (uncompressed):  1790 K
+PACKAGE DESCRIPTION:
+kernel-ide: kernel-ide (Linux kernel without SCSI controller support)
+kernel-ide:
+kernel-ide: A Linux kernel for computers that do not need SCSI support. You MUST
+kernel-ide: install a kernel image in order for your system to boot. This kernel
+kernel-ide: supports IDE hard drives and IDE CD-ROM drives.  Other drivers (such
+kernel-ide: as for CD-ROM drives on proprietary interfaces, or ethernet cards)
+kernel-ide: may be loaded as modules.  See /etc/rc.d/rc.modules for examples.
+kernel-ide:
+
+PACKAGE NAME:  kernel-modules-2.4.21-i486-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  8888 K
+PACKAGE SIZE (uncompressed):  9900 K
+PACKAGE DESCRIPTION:
+kernel-modules: kernel-modules (Linux kernel modules)
+kernel-modules:
+kernel-modules: A kernel module is a piece of object code that can be dynamically
+kernel-modules: loaded into the Linux kernel to provide new kernel functions.  Most of
+kernel-modules: these modules provide support for devices such as CD-ROM drives, tape
+kernel-modules: drives, and ethernet cards.  You can choose which modules to load by
+kernel-modules: editing /etc/rc.d/rc.modules.
+kernel-modules:
+
+PACKAGE NAME:  kernel-modules-2.4.21_xfs-i486-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  9044 K
+PACKAGE SIZE (uncompressed):  10070 K
+PACKAGE DESCRIPTION:
+kernel-modules: kernel-modules (Linux kernel modules)
+kernel-modules:
+kernel-modules: A kernel module is a piece of object code that can be dynamically
+kernel-modules: loaded into the Linux kernel to provide new kernel functions.  Most of
+kernel-modules: these modules provide support for devices such as CD-ROM drives, tape
+kernel-modules: drives, and ethernet cards.  You can choose which modules to load by
+kernel-modules: editing /etc/rc.d/rc.modules.
+kernel-modules:
+kernel-modules: These modules are compiled from a 2.4.21 kernel that's been patched
+kernel-modules: with SGI's XFS filesystem patches.  If you use the Slackware supplied
+kernel-modules: XFS kernel, you'll also need to use these modules with it.
+
+PACKAGE NAME:  kernel-source-2.4.21-noarch-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  35012 K
+PACKAGE SIZE (uncompressed):  158990 K
+PACKAGE DESCRIPTION:
+kernel-source: kernel-source (Linux kernel source)
+kernel-source:
+kernel-source: Source code for Linus Torvalds' Linux kernel.
+kernel-source:
+kernel-source: This is the complete and unmodified source code for the Linux kernel.
+kernel-source:
+
+PACKAGE NAME:  koffice-1.2.1-i386-3.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  11856 K
+PACKAGE SIZE (uncompressed):  29950 K
+PACKAGE DESCRIPTION:
+koffice: koffice (KDE office productivity suite)
+koffice:
+koffice: KOffice office productivity applications, including:
+koffice: - KWord (Professional text editing)
+koffice: - KSpread (Professional number cruncher/spreadsheet)
+koffice: - KPresenter (Professional presentation program)
+koffice: - KChart (Graphing of your abstract data)
+koffice: - Kontour (Vector graphics tool)
+koffice: - Kugar (Database report creation)
+koffice: - Kivio (Flowcharting program)
+koffice: - KOffice Workspace (A combination of all of the above)
+
+PACKAGE NAME:  koffice-i18n-af-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  120 K
+PACKAGE SIZE (uncompressed):  360 K
+PACKAGE DESCRIPTION:
+koffice-i18n-af: koffice-i18n-af
+koffice-i18n-af:
+koffice-i18n-af: Afrikaans language support for KOffice.
+koffice-i18n-af:
+
+PACKAGE NAME:  koffice-i18n-ar-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  96 K
+PACKAGE SIZE (uncompressed):  300 K
+PACKAGE DESCRIPTION:
+koffice-i18n-ar: koffice-i18n-ar
+koffice-i18n-ar:
+koffice-i18n-ar: Arabic language support for KOffice.
+koffice-i18n-ar:
+
+PACKAGE NAME:  koffice-i18n-bs-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  80 K
+PACKAGE SIZE (uncompressed):  230 K
+PACKAGE DESCRIPTION:
+koffice-i18n-bs: koffice-i18n-bs
+koffice-i18n-bs:
+koffice-i18n-bs: Bosnian language support for KOffice.
+koffice-i18n-bs:
+
+PACKAGE NAME:  koffice-i18n-ca-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  4 K
+PACKAGE SIZE (uncompressed):  10 K
+PACKAGE DESCRIPTION:
+koffice-i18n-ca: koffice-i18n-ca
+koffice-i18n-ca:
+koffice-i18n-ca: Catalan language support for KOffice.
+koffice-i18n-ca:
+
+PACKAGE NAME:  koffice-i18n-cs-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  160 K
+PACKAGE SIZE (uncompressed):  460 K
+PACKAGE DESCRIPTION:
+koffice-i18n-cs: koffice-i18n-cs
+koffice-i18n-cs:
+koffice-i18n-cs: Czech language support for KOffice.
+koffice-i18n-cs:
+
+PACKAGE NAME:  koffice-i18n-da-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  388 K
+PACKAGE SIZE (uncompressed):  1130 K
+PACKAGE DESCRIPTION:
+koffice-i18n-da: koffice-i18n-da
+koffice-i18n-da:
+koffice-i18n-da: Danish language support for KOffice.
+koffice-i18n-da:
+
+PACKAGE NAME:  koffice-i18n-de-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  204 K
+PACKAGE SIZE (uncompressed):  590 K
+PACKAGE DESCRIPTION:
+koffice-i18n-de: koffice-i18n-de
+koffice-i18n-de:
+koffice-i18n-de: German language support for KOffice.
+koffice-i18n-de:
+
+PACKAGE NAME:  koffice-i18n-el-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  184 K
+PACKAGE SIZE (uncompressed):  610 K
+PACKAGE DESCRIPTION:
+koffice-i18n-el: koffice-i18n-el
+koffice-i18n-el:
+koffice-i18n-el: Greek language support for KOffice.
+koffice-i18n-el:
+
+PACKAGE NAME:  koffice-i18n-en_GB-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  152 K
+PACKAGE SIZE (uncompressed):  530 K
+PACKAGE DESCRIPTION:
+koffice-i18n-en_GB: koffice-i18n-en_GB
+koffice-i18n-en_GB:
+koffice-i18n-en_GB: English (UK) language support for KOffice.
+koffice-i18n-en_GB:
+
+PACKAGE NAME:  koffice-i18n-eo-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  156 K
+PACKAGE SIZE (uncompressed):  440 K
+PACKAGE DESCRIPTION:
+koffice-i18n-eo: koffice-i18n-eo
+koffice-i18n-eo:
+koffice-i18n-eo: Esperanto language support for KOffice.
+koffice-i18n-eo:
+
+PACKAGE NAME:  koffice-i18n-es-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  608 K
+PACKAGE SIZE (uncompressed):  1850 K
+PACKAGE DESCRIPTION:
+koffice-i18n-es: koffice-i18n-es
+koffice-i18n-es:
+koffice-i18n-es: Spanish language support for KOffice.
+koffice-i18n-es:
+
+PACKAGE NAME:  koffice-i18n-et-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  180 K
+PACKAGE SIZE (uncompressed):  520 K
+PACKAGE DESCRIPTION:
+koffice-i18n-et: koffice-i18n-et
+koffice-i18n-et:
+koffice-i18n-et: Estonian language support for KOffice.
+koffice-i18n-et:
+
+PACKAGE NAME:  koffice-i18n-fr-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  2272 K
+PACKAGE SIZE (uncompressed):  3720 K
+PACKAGE DESCRIPTION:
+koffice-i18n-fr: koffice-i18n-fr
+koffice-i18n-fr:
+koffice-i18n-fr: French language support for KOffice.
+koffice-i18n-fr:
+
+PACKAGE NAME:  koffice-i18n-he-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  192 K
+PACKAGE SIZE (uncompressed):  600 K
+PACKAGE DESCRIPTION:
+koffice-i18n-he: koffice-i18n-he
+koffice-i18n-he:
+koffice-i18n-he: Hebrew language support for KOffice.
+koffice-i18n-he:
+
+PACKAGE NAME:  koffice-i18n-hu-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  204 K
+PACKAGE SIZE (uncompressed):  590 K
+PACKAGE DESCRIPTION:
+koffice-i18n-hu: koffice-i18n-hu
+koffice-i18n-hu:
+koffice-i18n-hu: Hungarian language support for KOffice.
+koffice-i18n-hu:
+
+PACKAGE NAME:  koffice-i18n-it-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  208 K
+PACKAGE SIZE (uncompressed):  630 K
+PACKAGE DESCRIPTION:
+koffice-i18n-it: koffice-i18n-it
+koffice-i18n-it:
+koffice-i18n-it: Italian language support for KOffice.
+koffice-i18n-it:
+
+PACKAGE NAME:  koffice-i18n-ja-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  180 K
+PACKAGE SIZE (uncompressed):  550 K
+PACKAGE DESCRIPTION:
+koffice-i18n-ja: koffice-i18n-ja
+koffice-i18n-ja:
+koffice-i18n-ja: Japanese language support for KOffice.
+koffice-i18n-ja:
+
+PACKAGE NAME:  koffice-i18n-lt-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  88 K
+PACKAGE SIZE (uncompressed):  270 K
+PACKAGE DESCRIPTION:
+koffice-i18n-lt: koffice-i18n-lt
+koffice-i18n-lt:
+koffice-i18n-lt: Lithuanian language support for KOffice.
+koffice-i18n-lt:
+
+PACKAGE NAME:  koffice-i18n-lv-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  120 K
+PACKAGE SIZE (uncompressed):  350 K
+PACKAGE DESCRIPTION:
+koffice-i18n-lv: koffice-i18n-lv
+koffice-i18n-lv:
+koffice-i18n-lv: Latvian language support for KOffice.
+koffice-i18n-lv:
+
+PACKAGE NAME:  koffice-i18n-mt-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  144 K
+PACKAGE SIZE (uncompressed):  420 K
+PACKAGE DESCRIPTION:
+koffice-i18n-mt: koffice-i18n-mt
+koffice-i18n-mt:
+koffice-i18n-mt: Maltese language support for KOffice.
+koffice-i18n-mt:
+
+PACKAGE NAME:  koffice-i18n-nb-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  184 K
+PACKAGE SIZE (uncompressed):  530 K
+PACKAGE DESCRIPTION:
+koffice-i18n-nb: koffice-i18n-nb
+koffice-i18n-nb:
+koffice-i18n-nb: Norwegian (Bokmaal) language support for KOffice.
+koffice-i18n-nb:
+
+PACKAGE NAME:  koffice-i18n-nl-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  184 K
+PACKAGE SIZE (uncompressed):  540 K
+PACKAGE DESCRIPTION:
+koffice-i18n-nl: koffice-i18n-nl
+koffice-i18n-nl:
+koffice-i18n-nl: Dutch language support for KOffice.
+koffice-i18n-nl:
+
+PACKAGE NAME:  koffice-i18n-nn-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  184 K
+PACKAGE SIZE (uncompressed):  530 K
+PACKAGE DESCRIPTION:
+koffice-i18n-nn: koffice-i18n-nn
+koffice-i18n-nn:
+koffice-i18n-nn: Norwegian (Nynorsk) language support for KOffice.
+koffice-i18n-nn:
+
+PACKAGE NAME:  koffice-i18n-pl-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  192 K
+PACKAGE SIZE (uncompressed):  550 K
+PACKAGE DESCRIPTION:
+koffice-i18n-pl: koffice-i18n-pl
+koffice-i18n-pl:
+koffice-i18n-pl: Polish language support for KOffice.
+koffice-i18n-pl:
+
+PACKAGE NAME:  koffice-i18n-pt-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  184 K
+PACKAGE SIZE (uncompressed):  560 K
+PACKAGE DESCRIPTION:
+koffice-i18n-pt: koffice-i18n-pt
+koffice-i18n-pt:
+koffice-i18n-pt: Portuguese language support for KOffice.
+koffice-i18n-pt:
+
+PACKAGE NAME:  koffice-i18n-pt_BR-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  288 K
+PACKAGE SIZE (uncompressed):  800 K
+PACKAGE DESCRIPTION:
+koffice-i18n-pt_BR: koffice-i18n-pt_BR
+koffice-i18n-pt_BR:
+koffice-i18n-pt_BR: Brazil portuguese language support for KOffice.
+koffice-i18n-pt_BR:
+
+PACKAGE NAME:  koffice-i18n-ru-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  504 K
+PACKAGE SIZE (uncompressed):  1720 K
+PACKAGE DESCRIPTION:
+koffice-i18n-ru: koffice-i18n-ru
+koffice-i18n-ru:
+koffice-i18n-ru: Russian language support for KOffice.
+koffice-i18n-ru:
+
+PACKAGE NAME:  koffice-i18n-sk-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  852 K
+PACKAGE SIZE (uncompressed):  1300 K
+PACKAGE DESCRIPTION:
+koffice-i18n-sk: koffice-i18n-sk
+koffice-i18n-sk:
+koffice-i18n-sk: Slovak language support for KOffice.
+koffice-i18n-sk:
+
+PACKAGE NAME:  koffice-i18n-sl-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  204 K
+PACKAGE SIZE (uncompressed):  590 K
+PACKAGE DESCRIPTION:
+koffice-i18n-sl: koffice-i18n-sl
+koffice-i18n-sl:
+koffice-i18n-sl: Slovenian language support for KOffice.
+koffice-i18n-sl:
+
+PACKAGE NAME:  koffice-i18n-sv-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  3472 K
+PACKAGE SIZE (uncompressed):  4990 K
+PACKAGE DESCRIPTION:
+koffice-i18n-sv: koffice-i18n-sv
+koffice-i18n-sv:
+koffice-i18n-sv: Swedish language support for KOffice.
+koffice-i18n-sv:
+
+PACKAGE NAME:  koffice-i18n-th-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  164 K
+PACKAGE SIZE (uncompressed):  600 K
+PACKAGE DESCRIPTION:
+koffice-i18n-th: koffice-i18n-th
+koffice-i18n-th:
+koffice-i18n-th: Thai language support for KOffice.
+koffice-i18n-th:
+
+PACKAGE NAME:  koffice-i18n-tr-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  120 K
+PACKAGE SIZE (uncompressed):  350 K
+PACKAGE DESCRIPTION:
+koffice-i18n-tr: koffice-i18n-tr
+koffice-i18n-tr:
+koffice-i18n-tr: Turkish language support for KOffice.
+koffice-i18n-tr:
+
+PACKAGE NAME:  koffice-i18n-uk-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  124 K
+PACKAGE SIZE (uncompressed):  410 K
+PACKAGE DESCRIPTION:
+koffice-i18n-uk: koffice-i18n-uk
+koffice-i18n-uk:
+koffice-i18n-uk: Ukrainian language support for KOffice.
+koffice-i18n-uk:
+
+PACKAGE NAME:  koffice-i18n-ven-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  108 K
+PACKAGE SIZE (uncompressed):  330 K
+PACKAGE DESCRIPTION:
+koffice-i18n-ven: koffice-i18n-ven
+koffice-i18n-ven:
+koffice-i18n-ven: Venda language support for KOffice.
+koffice-i18n-ven:
+
+PACKAGE NAME:  koffice-i18n-xh-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  212 K
+PACKAGE SIZE (uncompressed):  620 K
+PACKAGE DESCRIPTION:
+koffice-i18n-xh: koffice-i18n-xh
+koffice-i18n-xh:
+koffice-i18n-xh: Xhosa language support for KOffice.
+koffice-i18n-xh:
+
+PACKAGE NAME:  koffice-i18n-zh_TW-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  176 K
+PACKAGE SIZE (uncompressed):  510 K
+PACKAGE DESCRIPTION:
+koffice-i18n-zh_TW: koffice-i18n-zh_TW
+koffice-i18n-zh_TW:
+koffice-i18n-zh_TW: Chinese language support for KOffice.
+koffice-i18n-zh_TW:
+
+PACKAGE NAME:  koffice-i18n-zu-1.2.1-noarch-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kdei
+PACKAGE SIZE (compressed):  188 K
+PACKAGE SIZE (uncompressed):  560 K
+PACKAGE DESCRIPTION:
+koffice-i18n-zu: koffice-i18n-zu
+koffice-i18n-zu:
+koffice-i18n-zu: Zulu language support for KOffice.
+koffice-i18n-zu:
+
+PACKAGE NAME:  lftp-2.6.10-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  484 K
+PACKAGE SIZE (uncompressed):  1160 K
+PACKAGE DESCRIPTION:
+lftp: lftp (command line file transfer program)
+lftp:
+lftp: lftp is a program that allows sophisticated ftp and http connections
+lftp: to other hosts.  lftp can handle many file access methods including
+lftp: ftp, ftps, http, https, hftp, fish and file.  Every operation in lftp
+lftp: is reliable, that is any non-fatal error is ignored and the operation
+lftp: is retried.  lftp has shell-like command syntax.  lftp has a built in
+lftp: mirror feature which can download or upload a whole directory tree.
+lftp: To learn about many more features of lftp, see 'man lftp'.
+lftp:
+
+PACKAGE NAME:  libpng-1.2.50-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  404 K
+PACKAGE SIZE (uncompressed):  1000 K
+PACKAGE DESCRIPTION:
+libpng: libpng (Portable Network Graphics library)
+libpng:
+libpng: PNG (Portable Network Graphics) is an extensible file format for the
+libpng: lossless, portable, well-compressed storage of raster images.  PNG
+libpng: provides a patent-free replacement for GIF and can also replace many
+libpng: common uses of TIFF.  Indexed-color, grayscale, and truecolor images
+libpng: are supported, plus an optional alpha channel.  Sample depths range
+libpng: from 1 to 16 bits.
+libpng:
+
+PACKAGE NAME:  libtiff-3.8.2-i386-4_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  492 K
+PACKAGE SIZE (uncompressed):  1310 K
+PACKAGE DESCRIPTION:
+libtiff: libtiff (a library for reading and writing TIFF files)
+libtiff:
+libtiff: This package provides support for the Tag Image File Format (TIFF),
+libtiff: a widely used format for storing image data.  Included is the libtiff
+libtiff: library (for reading and writing TIFF files), and a collection of
+libtiff: tools for working with TIFF images.
+libtiff:
+
+PACKAGE NAME:  lynx-2.8.5rel.5-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1928 K
+PACKAGE SIZE (uncompressed):  4470 K
+PACKAGE DESCRIPTION:
+lynx: Lynx (text mode browser)
+lynx:
+lynx: Lynx is a distributed hypertext browser with full World Wide Web
+lynx: capabilities.  Lynx can be used to access information on the World 
+lynx: Wide Web, or to build information systems intended primarily for local
+lynx: access.  For example, Lynx has been used to build several Campus Wide
+lynx: Information Systems (CWIS).  
+lynx:
+lynx: Lynx's authors include Lou Montulli, Garrett Blythe, Craig Lavender,
+lynx: Michael Grobe, and Charles Rezac.
+lynx:
+
+PACKAGE NAME:  m4-1.4.11-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  220 K
+PACKAGE SIZE (uncompressed):  430 K
+PACKAGE DESCRIPTION:
+m4: m4 (an implementation of the UNIX macro processor)
+m4:
+m4: This is GNU m4, a program which copies its input to the output,
+m4: expanding macros as it goes.  m4 has built-in functions for including
+m4: named files, running commands, doing integer arithmetic, manipulating
+m4: text in various ways, recursion, etc...  Macros can also be user-
+m4: defined, and can take any number of arguments.
+m4:
+m4: GNU 'm4' was originally written by Rene Seindal, from Denmark.
+m4:
+
+PACKAGE NAME:  mc-4.6.0-i386-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1732 K
+PACKAGE SIZE (uncompressed):  4260 K
+PACKAGE DESCRIPTION:
+mc: mc (Midnight Commander file manager)
+mc:
+mc: The Midnight Commander is a Norton Commander clone, a program that
+mc: manipulates and manages files and directories.  Useful, fast, and has
+mc: color displays on the Linux console.  Mouse support is provided
+mc: through the gpm mouse server.  This is a lightweight compilation of
+mc: mc for use on the text console or in an xterm.
+mc:
+mc: mc was written by Miguel de Icaza and Mauricio Plaza.
+mc:
+
+PACKAGE NAME:  metamail-2.7-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  136 K
+PACKAGE SIZE (uncompressed):  380 K
+PACKAGE DESCRIPTION:
+metamail: metamail (MIME extensions for mail)
+metamail:
+metamail: Metamail is an implementation of MIME, the Multipurpose Internet
+metamail: Mail Extensions, a proposed standard for multimedia mail on the
+metamail: Internet.  Metamail implements MIME, and also implements extensibility
+metamail: and configuration via the "mailcap" mechanism described in an
+metamail: informational RFC that is a companion to the MIME document.
+metamail:
+
+PACKAGE NAME:  mod_ssl-2.8.31_1.3.41-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  464 K
+PACKAGE SIZE (uncompressed):  1450 K
+PACKAGE DESCRIPTION:
+mod_ssl: mod_ssl (Apache module for SSL)
+mod_ssl:
+mod_ssl: mod_ssl provides provides strong cryptography for the Apache web
+mod_ssl: server via the Secure Sockets Layer (SSL v2/v3) and Transport Layer
+mod_ssl: Security (TLS v1).  It is based on OpenSSL and provides support for
+mod_ssl: all major security needs through HTTP.
+mod_ssl:
+mod_ssl: mod_ssl is written by Ralf S. Engelschall.
+mod_ssl:
+
+PACKAGE NAME:  mutt-1.4.2.2i-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1080 K
+PACKAGE SIZE (uncompressed):  2840 K
+PACKAGE DESCRIPTION:
+mutt: The mutt mail client.
+mutt:
+mutt: Mutt is a small but very powerful text-based MIME mail client.  Mutt
+mutt: is highly configurable, and is well suited to the mail power user with
+mutt: advanced features like key bindings, keyboard macros, mail threading,
+mutt: regular expression searches and a powerful pattern matching language
+mutt: for selecting groups of messages.
+mutt:
+
+PACKAGE NAME:  nfs-utils-1.0.4-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  152 K
+PACKAGE SIZE (uncompressed):  380 K
+PACKAGE DESCRIPTION:
+nfs-utils: nfs-utils (Network File System daemons and utilities)
+nfs-utils:
+nfs-utils: The nfs-utils package contains the necessary daemons and utilities to
+nfs-utils: run an NFS server on Linux.
+nfs-utils:
+nfs-utils: You'll also need the portmap package to use NFS.
+nfs-utils:
+
+PACKAGE NAME:  ntp-4.2.2p3-i386-2_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1304 K
+PACKAGE SIZE (uncompressed):  2860 K
+PACKAGE DESCRIPTION:
+ntp: ntp (Network Time Protocol daemon)
+ntp:
+ntp: The Network Time Protocol (NTP) is used to synchronize the time of a
+ntp: computer client or server to another server or reference time source,
+ntp: such as a radio or satellite receiver or modem. It provides client
+ntp: accuracies typically within a millisecond on LANs and up to a few tens
+ntp: of milliseconds on WANs relative to a primary server synchronized to
+ntp: Coordinated Universal Time (UTC) via a Global Positioning Service
+ntp: (GPS) receiver, for example. 
+ntp:
+
+PACKAGE NAME:  openssh-5.0p1-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  780 K
+PACKAGE SIZE (uncompressed):  1850 K
+PACKAGE DESCRIPTION:
+openssh: openssh (Secure Shell daemon and clients)
+openssh:
+openssh: ssh (Secure Shell) is a program for logging into a remote machine and
+openssh: for executing commands on a remote machine.  It is intended to replace
+openssh: rlogin and rsh, and provide secure encrypted communications between
+openssh: two untrusted hosts over an insecure network.  sshd (SSH Daemon) is
+openssh: the daemon program for ssh.  OpenSSH is based on the last free version
+openssh: of Tatu Ylonen's SSH, further enhanced and cleaned up by Aaron
+openssh: Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt, and
+openssh: Dug Song.  It has a homepage at http://www.openssh.com/
+openssh:
+
+PACKAGE NAME:  openssl-0.9.7l-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  2896 K
+PACKAGE SIZE (uncompressed):  7830 K
+PACKAGE DESCRIPTION:
+openssl: openssl (Secure Sockets Layer toolkit)
+openssl:
+openssl: The OpenSSL certificate management tool and the shared libraries that
+openssl: provide various encryption and decryption algorithms and protocols.
+openssl:
+openssl: This product includes software developed by the OpenSSL Project for
+openssl: use in the OpenSSL Toolkit (http://www.openssl.org).  This product
+openssl: includes cryptographic software written by Eric Young
+openssl: (eay@cryptsoft.com).  This product includes software written by Tim
+openssl: Hudson (tjh@cryptsoft.com).
+openssl:
+
+PACKAGE NAME:  openssl-solibs-0.9.7l-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  672 K
+PACKAGE SIZE (uncompressed):  1720 K
+PACKAGE DESCRIPTION:
+openssl-solibs: openssl-solibs (OpenSSL shared libraries)
+openssl-solibs:
+openssl-solibs: These shared libraries provide encryption routines required by
+openssl-solibs: programs such as openssh.  They are also used by KDE's Konqueror web
+openssl-solibs: browser to provide secure web connections.
+openssl-solibs:
+openssl-solibs: This product includes software developed by the OpenSSL Project for
+openssl-solibs: use in the OpenSSL Toolkit (http://www.openssl.org).  This product
+openssl-solibs: includes cryptographic software written by Eric Young
+openssl-solibs: (eay@cryptsoft.com).  This product includes software written by Tim
+openssl-solibs: Hudson (tjh@cryptsoft.com).
+
+PACKAGE NAME:  pcre-6.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  544 K
+PACKAGE SIZE (uncompressed):  1470 K
+PACKAGE DESCRIPTION:
+pcre: pcre (Perl-compatible regular expression library)
+pcre:
+pcre: The PCRE library is a set of functions that implement regular
+pcre: expression pattern matching using the same syntax and semantics as
+pcre: Perl 5, with just a few differences (documented in the man page).
+pcre:
+pcre: The PCRE library is used by KDE's Konqueror browser.
+pcre:
+
+PACKAGE NAME:  php-4.3.11-i386-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  2860 K
+PACKAGE SIZE (uncompressed):  8700 K
+PACKAGE DESCRIPTION:
+php: php (HTML-embedded scripting language)
+php:
+php: PHP is an HTML-embedded scripting language.  It shares syntax
+php: characteristics with C, Java, and Perl.  The primary objective behind this
+php: language is to make a fast and easy-to-use scripting language for dynamic
+php: web sites.
+php:
+php: More information can be found online at http://www.php.net/
+php:
+
+PACKAGE NAME:  pine-4.64-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1820 K
+PACKAGE SIZE (uncompressed):  4630 K
+PACKAGE DESCRIPTION:
+pine: pine (a menu driven mail client)
+pine:
+pine: A menu driven user mail program. Originally based on Elm (Pine Is
+pine: No-longer Elm), but with many additional features that make it
+pine: easier to use.  Also contains pilot (a simple file manager) and
+pine: pico (an easy to use text editor).
+pine:
+
+PACKAGE NAME:  procps-3.1.8-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  220 K
+PACKAGE SIZE (uncompressed):  510 K
+PACKAGE DESCRIPTION:
+procps: procps (utilities for displaying process information)
+procps:
+procps: Utilities for displaying process and memory information written by
+procps: Michael K. Johnson, Werner Almesberger, Charles Blake, Branko
+procps: Lankester, Robert Nation, David Engel, Larry Greenfield, Roger Binns,
+procps: Sander van Malssen, Brian Edmonds, George Staikos, and Jim Warner.
+procps:
+
+PACKAGE NAME:  proftpd-1.3.0a-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  852 K
+PACKAGE SIZE (uncompressed):  3040 K
+PACKAGE DESCRIPTION:
+proftpd: proftpd (FTP server daemon)
+proftpd:
+proftpd: ProFTPD is the Professional File Transfer Protocol (FTP) server
+proftpd: daemon.  ProFTPD grew out of the desire to have a secure and
+proftpd: configurable FTP server, and out of a significant admiration of the
+proftpd: Apache web server.
+proftpd:
+
+PACKAGE NAME:  python-2.2.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  7188 K
+PACKAGE SIZE (uncompressed):  33180 K
+PACKAGE DESCRIPTION:
+python: python (object-oriented interpreted programming language)
+python:
+python: Python is an interpreted, interactive, object-oriented programming
+python: language that combines remarkable power with very clear syntax.  
+python: Python's basic power can be extended with your own modules written in
+python: C or C++.  Python is also adaptable as an extension language for
+python: existing applications. 
+python:
+
+PACKAGE NAME:  qt-3.1.2-i486-4.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  17188 K
+PACKAGE SIZE (uncompressed):  53920 K
+PACKAGE DESCRIPTION:
+qt: Qt (a multi-platform C++ graphical user interface toolkit)
+qt:
+qt: Qt is a complete and well-developed object-oriented framework for
+qt: developing graphical user interface (GUI) applications using C++.
+qt:
+qt: This release is free only for development of free software for the X
+qt: Window System.  If you use Qt for developing commercial or other
+qt: non-free software, you must have a professional license.  Please see
+qt: http://www.trolltech.com/purchase.html for information on how to
+qt: obtain a professional license.
+qt:
+
+PACKAGE NAME:  quanta-3.1.3-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages/kde
+PACKAGE SIZE (compressed):  2816 K
+PACKAGE SIZE (uncompressed):  6740 K
+PACKAGE DESCRIPTION:
+quanta: quanta
+quanta:
+quanta: Quanta Plus is a web development environment for HTML and associate
+quanta: languages.  It is designed for quick web development and is rapidly
+quanta: becoming a mature editor with a number of great features.  Quanta
+quanta: already has a good deal of PHP support in it including the ability to
+quanta: run a debugger.
+quanta:
+quanta: Quanta Plus is not in any way affiliated with any commercial versions
+quanta: of Quanta.  The primary coders from the original team left the GPL'd
+quanta: version to produce a commercial product.
+
+PACKAGE NAME:  rsync-2.6.9-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  204 K
+PACKAGE SIZE (uncompressed):  380 K
+PACKAGE DESCRIPTION:
+rsync: rsync
+rsync:
+rsync: rsync is a replacement for rcp that has many more features.  It
+rsync: uses the "rsync algorithm" which provides a very fast method for
+rsync: bringing remote files into sync.  It does this by sending just the
+rsync: differences in the files across the link, without requiring that both
+rsync: sets of files are present at one of the ends of the link beforehand.
+rsync:
+rsync: rsync was written by Andrew Tridgell and Paul Mackerras.
+rsync:
+
+PACKAGE NAME:  samba-2.2.10-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  8468 K
+PACKAGE SIZE (uncompressed):  24710 K
+PACKAGE DESCRIPTION:
+samba: samba (SMB file and print server)
+samba:
+samba: Samba is an SMB file and print server for SMB and CIFS clients.  It
+samba: allows you to make file space or printers on a Samba host available to
+samba: any PCs running SMB clients (such as PCs running Windows).
+samba:
+samba: If you have any SMB servers (such as Windows NT/2K Server), you may be
+samba: able to replace them by or supplement them with Samba. One of Samba's
+samba: big strengths is integration, so you can use it to tie together your
+samba: Linux hosts and Windows PC clients.
+samba:
+
+PACKAGE NAME:  screen-4.0.3-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  552 K
+PACKAGE SIZE (uncompressed):  800 K
+PACKAGE DESCRIPTION:
+screen: screen (screen manager with VT100/ANSI terminal emulation)
+screen:
+screen: Screen is a full-screen window manager that multiplexes a physical
+screen: terminal between several processes (typically interactive shells).
+screen: Each virtual terminal provides the functions of a DEC VT100 terminal
+screen: and several control functions from the ISO 6492 (ECMA 48, ANSI X3.64)
+screen: and ISO 2022 standards (e.g. insert/delete line and support for
+screen: multiple character sets).  There is a scrollback history buffer for
+screen: each virtual terminal and a copy-and-paste mechanism that allows
+screen: moving text regions between windows.
+screen:
+
+PACKAGE NAME:  sendmail-8.13.7-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1232 K
+PACKAGE SIZE (uncompressed):  3130 K
+PACKAGE DESCRIPTION:
+sendmail: sendmail (mail transfer agent)
+sendmail:
+sendmail: Eric Allman's mail transport agent. The _Unix System Administration
+sendmail: Handbook_ calls sendmail 'The most complex and complete mail delivery
+sendmail: system in common use...'
+sendmail:
+sendmail: Ready-made configuration files are included for systems connected by
+sendmail: TCP/IP (with or without a nameserver) and for systems using UUCP.
+sendmail:
+sendmail: The procmail package is required to handle local mail delivery.
+sendmail:
+
+PACKAGE NAME:  sendmail-cf-8.13.7-noarch-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  264 K
+PACKAGE SIZE (uncompressed):  1080 K
+PACKAGE DESCRIPTION:
+sendmail-cf: sendmail-cf (configuration files for sendmail)
+sendmail-cf:
+sendmail-cf: These files are used to create sendmail.cf configuration files.  The
+sendmail-cf: m4 macro processor is also required in order to make use of these
+sendmail-cf: files. 
+sendmail-cf:
+sendmail-cf: The files and documentation in /usr/share/sendmail should make it
+sendmail-cf: possible to support virtually any mail configuration.  NOTE: You
+sendmail-cf: probably won't need this package if you're planning to use one of the
+sendmail-cf: sendmail.cf samples included in the sendmail package.
+sendmail-cf:
+
+PACKAGE NAME:  sox-12.17.4-i386-3.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  360 K
+PACKAGE SIZE (uncompressed):  740 K
+PACKAGE DESCRIPTION:
+sox: sox (universal sound sample translator)
+sox:
+sox: Sox is a universal sound converter, player, and recorder.  It can
+sox: play, record, and convert between several sound file formats such as
+sox: .au, .snd, .voc and .wav.
+sox:
+
+PACKAGE NAME:  sudo-1.7.4p6-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  196 K
+PACKAGE SIZE (uncompressed):  430 K
+PACKAGE DESCRIPTION:
+sudo: sudo (give limited root privileges to certain users)
+sudo:
+sudo: 'sudo' is a command that allows users to execute some commands as 
+sudo: root.  The /etc/sudoers file (edited with 'visudo') specifies which
+sudo: users have access to sudo and which commands they can run.  'sudo' 
+sudo: logs all its activities to /var/log/ so the system administrator
+sudo: can keep an eye on things.
+sudo:
+
+PACKAGE NAME:  sysklogd-1.4.1-i386-9.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  64 K
+PACKAGE SIZE (uncompressed):  140 K
+PACKAGE DESCRIPTION:
+sysklogd: sysklogd (Linux system logging utilities)
+sysklogd:
+sysklogd: Dr. Greg Wettstein and Stephen Tweedie's syslogd/klogd.
+sysklogd:
+sysklogd: This package contains a modified version of syslogd for the Linux
+sysklogd: environment.  An additional utility, klogd, is included which allows
+sysklogd: kernel logging to be directed through the syslogd facility.
+sysklogd: Syslogd and klogd are started when your system boots.
+sysklogd:
+
+PACKAGE NAME:  sysvinit-2.84-i386-26.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  256 K
+PACKAGE SIZE (uncompressed):  590 K
+PACKAGE DESCRIPTION:
+sysvinit: sysvinit (init, the parent of all processes)
+sysvinit:
+sysvinit: System V style init programs by Miquel van Smoorenburg that control
+sysvinit: the booting and shutdown of your system.  These support a number of
+sysvinit: system runlevels, each with a specific set of utilities spawned.
+sysvinit: For example, the normal system runlevel is 3, which starts agetty
+sysvinit: on virtual consoles tty1 - tty6.  Runlevel 4 starts xdm.
+sysvinit: Runlevel 0 shuts the system down.
+sysvinit:
+
+PACKAGE NAME:  tar-1.16-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  768 K
+PACKAGE SIZE (uncompressed):  1860 K
+PACKAGE DESCRIPTION:
+tar: tar (archiving utility)
+tar:
+tar: This is the GNU version of tar, an archiving program designed to store
+tar: and extract files from an archive file known as a tarfile.  A tarfile
+tar: may be made on a tape drive, however, it is also common to write a
+tar: tarfile to a normal file.
+tar:
+tar: Slackware's package system uses tarfiles compressed with GNU gzip.
+tar:
+
+PACKAGE NAME:  tcpdump-3.9.7-i386-1_slack9.0.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  472 K
+PACKAGE SIZE (uncompressed):  1090 K
+PACKAGE DESCRIPTION:
+tcpdump: tcpdump
+tcpdump:
+tcpdump: Tcpdump is a tool for network monitoring and data acquisition.  You
+tcpdump: can use it to dump information on all the packets on a network that
+tcpdump: match a boolean expression.  Tcpdump uses libpcap, a system
+tcpdump: independent interface for user-level packet capture.
+tcpdump:
+
+PACKAGE NAME:  tcpip-0.17-i386-16b.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  688 K
+PACKAGE SIZE (uncompressed):  1670 K
+PACKAGE DESCRIPTION:
+tcpip: tcpip (TCP/IP networking programs and support files)
+tcpip:
+tcpip: This is a set of standard TCP/IP utilities for Linux.  Some of these
+tcpip: were written from scratch and some were ported from various sources
+tcpip: such as BSD.  Some of the people who helped write and/or port this
+tcpip: code include:  H. Peter Anvin,  Donald J. Becker,  Alan Cox,
+tcpip: David A. Holland,  Fred N. van Kempen,  Olaf Kirch, H.J. Lu,
+tcpip: Florian  La Roche,  Mark Shand,  Rick Sladkey,  Johannes Stille,
+tcpip: Linus Torvalds,  Wietse Venema,  and Orest Zborowski.
+tcpip:
+
+PACKAGE NAME:  util-linux-2.11z-i386-2.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  1704 K
+PACKAGE SIZE (uncompressed):  4280 K
+PACKAGE DESCRIPTION:
+util-linux: util-linux (a huge collection of essential utilities)
+util-linux:
+util-linux: adjtimex agetty arch blockdev cal cfdisk chkdupexe clear clock col
+util-linux: colcrt colrm column ctrlaltdel cytune ddate dmesg dnsdomainname
+util-linux: domainname elvtune fdformat fdisk fsck.cramfs fsck.minix getopt
+util-linux: getoptprog hexdump hostname hwclock ipcrm ipcs isosize jaztool line
+util-linux: logger look losetup mcookie mesg mkfs mkfs.bfs mkfs.cramfs mkfs.minix
+util-linux: mkswap more mount namei nisdomainname pg pivot_root ramsize raw rdev
+util-linux: readprofile rename renice reset rev rootflags script setfdprm
+util-linux: setserial setsid setterm sfdisk sln strings swapoff swapon tput tunelp
+util-linux: ul umount update vidmode wall whereis write ypdomainname ziptool
+
+PACKAGE NAME:  wget-1.10.2-i386-1.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  584 K
+PACKAGE SIZE (uncompressed):  1560 K
+PACKAGE DESCRIPTION:
+wget: wget (a non-interactive network retriever)
+wget:
+wget: GNU Wget is a free network utility to retrieve files from the 
+wget: World Wide Web using HTTP and FTP, the two most widely used Internet
+wget: protocols.  It works non-interactively, thus enabling work in the
+wget: background after having logged off.
+wget:
+wget: The author of Wget is Hrvoje Niksic <hniksic@srce.hr>.
+wget:
+
+PACKAGE NAME:  xfree86-4.3.0-i386-3.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  15476 K
+PACKAGE SIZE (uncompressed):  46390 K
+PACKAGE DESCRIPTION:
+xfree86: xfree86 (XFree86 base package)
+xfree86:
+xfree86: This is the base package for XFree86, and provides the required
+xfree86: binaries, shared libraries, and support files (except fonts) to run
+xfree86: X11R6 on Linux.
+xfree86:
+
+PACKAGE NAME:  xpdf-3.01-i386-3.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  2092 K
+PACKAGE SIZE (uncompressed):  5560 K
+PACKAGE DESCRIPTION:
+xpdf: xpdf (PDF viewer for X)
+xpdf:
+xpdf: Xpdf is a viewer for Portable Document Format (PDF) files.  The
+xpdf: package also contains some command-line PDF manipulation utilities.
+xpdf:
+xpdf: xpdf was written by Derek B. Noonburg.
+xpdf:
+xpdf: The xpdf package requires the t1lib package to render Type 1 fonts.
+xpdf:
+
+PACKAGE NAME:  xv-3.10a-i386-4.tgz
+PACKAGE LOCATION:  ./patches/packages
+PACKAGE SIZE (compressed):  920 K
+PACKAGE SIZE (uncompressed):  1560 K
+PACKAGE DESCRIPTION:
+xv: xv (John Bradley's interactive image viewer)
+xv:
+xv: xv is an interactive image manipulation program.
+xv:
+xv: NOTICE:  This program is unregistered shareware.  Please read the 
+xv: license information included.
+xv:
+
+

@@ -1,0 +1,379 @@
+install.zip - an *EXPERIMENTAL* UMSDOS-based Slackware installer.
+
+This is the Slackware install.zip, a new approach to installing
+Slackware.  It is a UMSDOS version of the Slackware installer rootdisks.
+
+UMSDOS is a means of having a UNIX-compatible filesystem on a DOS
+partition. For more information about UMSDOS, see:
+  http://www.voyager.hr/umsdos/                 UMSDOS home page
+  http://tldp.org/HOWTO/UMSDOS-HOWTO.html       UMSDOS-HOWTO
+
+The Slackware install.zip was made for two main reasons: to address the
+inconvenience and difficulty of having to use three floppy disks for
+installing Slackware; and at the same time to try to reduce the hardware
+memory requirement. If an operating system can run with 8MB RAM, it
+should also be able to install on such a machine, right?
+
+In case you didn't know, a rootdisk is a minimal Linux root filesystem.
+We call it that because it used to fit on a single floppy disk. :-)  The
+rootdisk provides the executables and scripts needed to install
+Slackware Linux.
+
+Rootdisks for previous recent versions of Slackware have loaded into a
+ramdisk: that is, placing the root filesystem entirely into system RAM.
+This is very fast, but of course requires more RAM. With install.zip
+unzipped onto a partition of the hard drive, we can read our necessary
+files from there and thus conserve RAM.
+
+
+REQUIREMENTS:
+=============
+
+  1. You need a small FAT partition, preferably accessible to and
+     bootable by DOS, although DOS is not necessary.  The minimum size
+     or free space for the filesystem is approximately 16MB.
+
+  2. You need an unzip utility which works in your operating system of
+     choice.  Pkunzip.exe for DOS should suffice for DOS/Windows.  The
+     "unzip" utility included in all versions of Slackware will do.
+
+  3. You need a Linux kernel with hardware support for the device on
+     which your FAT partition sits (this includes having support for the
+     controller and the bus for the device).  Any of the Slackware
+     kernels and boot disks (including the bootable CD-ROM -- yes, there
+     are reasons why you might use this with the CD!) will do.
+
+  4. You need to have a means to boot that kernel: LILO, loadlin, or
+     other boot loader.
+
+  5. I would recommend at least 8MB RAM, but you might succeed with as
+     little as 5MB (with patience and a lot of time).
+
+  6. You should understand that this is experimental.  I hope and
+     believe it will be useful to many people, but I have not had time
+     to test it to my satisfaction.  Consider this a beta release.
+     Comments, bug reports, suggestions and patches may be sent to
+     volkerdi@slackware.com.
+
+
+FEATURES:
+=========
+
+  1. The exact same Slackware setup scripts and supporting binaries as
+     are on the rootdisks/install.[1-2] disks, and the bootable CD-ROM.
+
+  2. The binaries for modutils, so that you can load any modules
+     you may need for installing Slackware. (See "Using Modules" below).
+
+  3. A preconfigured swap file of ~10MB. Note that this accounts for the
+     largest single part of the 16MB disk space requirement.
+
+
+BENEFITS:
+=========
+
+  1. You can use this to install Slackware on machines which lack a
+     floppy drive or bootable CD-ROM drive.
+
+  2. You can use this to install Slackware on machines well below the
+     official minimum RAM requirement of 16MB.  This is because the root
+     filesystem for setup will be read from the FAT partition, rather
+     than being loaded entirely in memory (ramdisk).
+
+  3. You can use this to install Slackware without having to fumble with
+     *six* or more floppy disks! :-)
+
+
+PREINSTALL INSTRUCTIONS:
+========================
+
+Create a FAT partition.  Any of the numerous FAT partition types will do,
+depending on the operating system of your boot loader: i.e., if you're
+planning to use DOS and loadlin, it must be a partition type which is
+recognized by DOS.  You may, of course, use an existing FAT partition
+(such as a partition containing Windows) if you wish.
+
+If it's a new partition, you must format it. Slackware and other Linux
+distributions include a "mkdosfs" utility which can do this.  It's simply
+"/sbin/mkdosfs /dev/<device>".  In DOS or Windows you can use the DOS
+command "format X:" (where "X:" is the drive letter for your new
+partition).  In Windows you can use the format command from Explorer.
+
+If it's an existing partition, make sure that there is no "Linux" file
+or directory in the top level.  (The name is case-insensitive, so "linux"
+or "LINUX" or "LiNuX" must not be there).  Rename it if you want to save
+it, delete it otherwise.
+
+Using your unzip utility, unzip the install.zip file into the top level
+directory of your chosen FAT partition.  That's what is called the root
+directory in DOS and Windows.  You *must* unzip into that directory, and
+you must recreate the directories in the .zip file (pkunzip for DOS has
+the "-d" option for this.  Unlike ZipSlack, install.zip should work with
+a 16-bit DOS unzipper).  You will see a new /linux (\linux in DOS)
+directory.
+
+Boot your kernel, and specify the partition with the unzipped
+install.zip as your root partition.  (See BOOTING, below).
+
+
+Using Modules
+-------------
+
+If you need to load a module to access either the source or the target
+media, you can easily install the full modules package.  After you unzip
+install.zip, copy the slackware/a/kernel-modules-2.4.20-i486-4.tgz
+package to the new \linux directory.  After booting Linux (and before
+running setup) use these commands to install the modules:
+  cd /
+  mv <name UMSDOS mangled kernel-modules to> kernel-modules-2.4.20-i486-4.tgz
+  installpkg kernel-modules-2.4.20-i486-4.tgz
+
+At that point you can use "modprobe" to load any module you may need.
+ 
+Please note that the modules package is 7.3MB, and it untars to slightly
+more than that. Using this procedure you will need at least another 16MB
+of free space on the FAT partition.  If this is a problem, extract only
+the modules you need from /lib/modules/2.4.20 inside the tar archive.
+You will be able to load the modules with commands like this:
+  insmod [/path-to/]modulename.o.gz
+When using insmod you must manually load all dependent modules in the
+correct order.  If you don't know which modules are needed by the one you
+want, the simple answer is to use a larger FAT partition for your
+install.zip installation. :-)
+
+
+BOOTING:
+========
+
+There are as many possible ways to boot this as there are to boot any
+Linux root filesystem.  Here we will consider four likely possibilities.
+
+
+Loadlin
+-------
+
+Loadlin is a DOS program designed to load the Linux kernel and boot it. 
+If the machine is already configured to boot DOS, loadlin.exe is
+probably the simplest way to boot this. In the \linux directory, you'll
+find these files:
+
+  LOADLIN.EXE:  The loadlin loader executable.
+  LINUX.BAT:    A simple DOS batch file to boot Linux using LOADLIN.EXE.
+
+You can use any Linux kernel of your choosing by copying it to your FAT
+partition.  Typically you might put it at \linux\vmlinuz (which is the
+path and filename assumed by LINUX.BAT).  Slackware includes a collection
+of precompiled kernels in its kernels directory, any of which will work
+if appropriate for your hardware.
+
+To boot the system, you'll need to edit the LINUX.BAT file, and make
+sure the root=/dev/XXXX statement on the loadlin line (the one that's
+not commented out with 'rem') is set up to use the partition where you
+unzipped install.zip, such as /dev/hda1.  If you're not sure which
+partition to use, just go ahead and guess.  If you get it wrong, you'll
+still be able to use scrollback (right shift key and PageUp) when the
+kernel halts to go back and look at your partitions, noting the names
+Linux gives them.  With this information, you should be able to edit the
+LINUX.BAT correctly.
+
+Once LINUX.BAT is edited, you can try to boot the system by entering
+LINUX on a prompt while in the \linux directory.  IMPORTANT:  You'll need
+to be in DOS mode for the boot to work.  A DOS prompt running under
+Windows will not work!  What you need to do if you use Windows 95 or 98
+is shut the machine down, selecting the "Restart in MS-DOS mode"
+selection.  Then, you'll be able to use Loadlin.  I've also had great
+success booting with a "Startup disk" made from Win95 (Add/Remove
+Programs in Control Panel, and then "Startup disk" tab) and then
+switching into the \linux directory on the target drive and running
+LINUX.BAT.
+
+If it doesn't work, the problem could be DOS memory management -- I had
+to run both HIMEM.SYS and EMM386.EXE to get LOADLIN to load a large
+kernel, but it also worked fine with no memory management.  With the
+latest version (1.6c) of loadlin.exe, memory management should not be
+necessary. (At the time of this writing, this has not been extensively
+tested).
+
+Windows 9x has an undocumented command for bypassing all startup files
+and automatically loaded drivers, including compression: press Ctrl+F5
+when you see the initial "Starting Windows 9x" message.  This is usually
+a good environment for loadlin.
+
+You can also run LOADLIN directly.  Here is a sample boot command to
+boot Linux on /dev/sda4 (a parallel-port Zip disk would often be this)
+in read-write mode using the kernel file vmlinuz:
+
+  loadlin vmlinuz root=/dev/sda4 rw
+
+
+Using a boot floppy
+-------------------
+
+You can use any of the bootdisks included with Slackware 9.0 to boot an
+unzipped install.zip. See the "bootdisks" directory on the first CD.
+
+To write the image to a floppy disk in DOS or Windows 9x/ME, use the
+RAWRITE.EXE program:
+
+  rawrite bare.i a:
+
+The RAWRITENT.EXE program works similarly for Windows NT/2000/XP.  If
+you're using Slackware or another UNIX/Linux, use dd:
+
+  dd if=bare.i of=/dev/fd0
+
+To boot a Linux system in read-write mode on /dev/sda4, boot the
+bootdisk.  On the 'boot:' prompt, you'd enter this command:
+
+  mount root=/dev/sda4 rw noinitrd
+
+
+Using the bootable CD-ROM
+-------------------------
+
+This booting option is identical to using a boot floppy, except of
+course for the creation of the disk, which is beyond the scope of this
+document. :-)
+
+Assuming that you possess a copy of the Slackware install CD, you
+could boot it and enter the same kind of command at the boot prompt as
+was shown in the previous section.
+
+(In general, if you can boot the CD-ROM you should use its built-in
+install. But install.zip might be useful for installing on a machine
+with less than 16MB RAM).
+
+
+Using LILO
+----------
+
+LILO can boot a UMSDOS root filesystem almost as easily as any other
+type of root filesystem. The exception is that the boot map must not be
+installed to the superblock of a partition containing a FAT filesystem.
+You should have the "boot" line of /etc/lilo.conf point to the master
+boot record of the boot drive, or to the superblock of a native Linux
+partition.
+
+Here's a sample lilo.conf for multi-booting install.zip along with an
+existing Slackware install.  This assumes that the older Slackware root
+filesystem is on /dev/hda2 and that the FAT filesystem where you
+unzipped install.zip is /dev/hda3:
+
+  boot = /dev/hda       # /dev/hda2 would work if set active
+  image = /vmlinuz
+    root = /dev/hda2
+    read-only           # normal for ext2 root filesystems
+    label = linux
+  image = /vmlinuz
+    root = /dev/hda3
+    read-write          # necessary for UMSDOS filesystems
+    label = setup
+
+As always, for any changes in /etc/lilo.conf to take effect, you must
+first run /sbin/lilo, the map installer.
+
+
+
+NOTES ON INSTALLING:
+====================
+
+This section is lacking at this point because of the beta status of
+install.zip.  If you have tips to share or if you encounter a problem
+with installing from it, please send them to volkerdi@slackware.com.
+
+The pcmcia and network disks have not been merged with install.zip, but
+if you copy the images to /cdrom/isolinux/ then you can just use "pcmcia"
+or "network" to load them, if needed.
+
+If you want to create your FAT filesystem under Linux, you can. But DOS
+won't recognize some of the possible partition types.  Even some of the
+more recent FAT types won't be understood by older DOS versions.  The
+sure way of making a partition DOS will recognize is to let DOS create
+it. (See FAQ A4 below for more).
+
+The Slackware setup will probably detect your FAT partition and ask if
+you want to mount it under Linux.  If it's just a temporary partition you
+might want to say no to this, but it doesn't matter.  You can use the
+line in /mnt/etc/fstab as a basis for your ultimate purpose for the
+partition: just change the mount point, filesystem type, and other
+fields as appropriate.
+
+If you're planning to use a partition which will be mounted as a Linux
+filesystem eventually, you need to be aware of what will be required.
+The vast majority of the files (and bytes) installed will go under /usr,
+so you would not want to use a /usr partition for this job.  If you're
+planning a separate /boot partition that might be a good choice; only a
+few small files are installed there.  Nothing would be installed to
+/usr/local, if you plan to separate it.  /home would be almost as easy,
+although if you install proftpd you will get a small /home/ftp directory
+with a few files.
+
+The most likely candidate for install.zip would be a future swap
+partition.  However, DO NOT allow setup to activate your swap partition!
+You can do this manually after setup is complete.  Note: if you require
+swap for booting a low-memory machine, you can do this before booting
+into your newly-installed Slackware.  While your new system is mounted at
+/mnt, you can create an 8MB swapfile as follows:
+
+  dd if=/dev/zero of=/mnt/root/swapfile bs=1M count=8
+  mkswap /mnt/root/swapfile
+  grep swap /etc/fstab >> /mnt/etc/fstab
+
+
+
+FREQUENTLY ASKED QUESTIONS:
+===========================
+
+Actually this is a collection of *anticipated* FAQ's.  Since this is a
+new feature of Slackware, as of this writing I have yet to have been
+asked any questions about install.zip. :-)
+
+Please also see the ZipSlack FAQ:
+  http://www.slackware.com/faq/do_faq.php?faq=zipslack
+which may cover the common problems with booting, etc.
+
+Q1: I have Windows ME/NT/2000/XP. How can I use loadlin.exe?
+
+A1: Make a DOS boot disk. Windows ME can do this just as 95/98 did.  For
+Windows NT and its successors, you could try FreeDOS:
+  http://www.freedos.org/
+which is an MS-DOS-compatible project being developed under the GNU GPL.
+Or, you could try shareware DOS products such as DR-DOS.
+
+Q2: But I don't want to have a FAT partition! Am I stuck with it?
+
+A2: Of course not.  What you can do is borrow a partition which can later
+be used in another way.  A typical choice would be to plan for a swap
+partition, but to make it as FAT instead.  Once you have Slackware
+installed you can change the partition type to 82 using fdisk, then
+mkswap(8) and add it to your /etc/fstab as a swap partition.
+
+Q3: All I have available is an 8MB partition on my tiny old hard drive.
+Is there a way I can I use install.zip?
+
+A3: Yes!  Tell your unzip utility to exclude "/linux/swapfile" when
+unzipping (change "/" to "\" in DOS, Windows or OS/2, of course).  If you
+have at least 8MB RAM it should work fine, but you will see an error
+about the missing swapfile when you boot.  You can ignore the error.
+
+Q4: I made a FAT partition and filesystem from Linux, but when I boot
+DOS, it's not recognized.  Why, and what can I do?
+
+A4: The Linux partitioning programs support a wide variety of partition
+types, but DOS does not.  If your partition is the wrong type, DOS will
+think it is a non-DOS partition.  Two likely solutions:  1. Use FDISK.EXE
+and FORMAT.COM in DOS to create and format your partition.  2. Put your
+kernel image and LOADLIN.EXE on your DOS boot disk and run loadlin from
+there -- DOS does not need to access the UMSDOS partition.
+
+Q5: Can I unzip install.zip on my NTFS partition?
+
+A5: No.  You can unzip it anywhere you like, but you can only use it as a
+root filesystem for Linux if it is on a FAT partition.
+
+CREDITS:
+
+Rob McGee, who spotted this idea somewhere on USENET, and helped test
+the original install.zip.  Rob also contributed this original draft of
+this documentation.  Thanks Rob!  :-)
+
